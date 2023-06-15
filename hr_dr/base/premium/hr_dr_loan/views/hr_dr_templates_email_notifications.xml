@@ -1,0 +1,272 @@
+<odoo>
+    <data noupdate="0">
+        <record id="email_template_confirm_loan_request" model="mail.template">
+            <field name="name">Email template confirm loan request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Loan request</field>
+            <field name="email_to">${object.employee_requests_id.work_email|object.employee_requests_id.private_email|safe}</field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(a) <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                    Su solicitud de préstamo está siendo procesada.<br/><br/>
+                    <strong>Datos de la solicitud</strong><br/>
+                    <strong>Código:</strong> ${(object.name)}<br/>
+                    <strong>Fecha de la solicitud:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha de confirmación:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha inicial de pago:</strong> ${(object.payment_date.strftime("%d/%m/%Y"))}<br/>
+                    <strong>Valor:</strong> ${(object.currency_id.symbol)} ${(object.loan_amount)}<br/>
+                    <strong>Cantidad de cuotas:</strong> ${(object.installment)}<br/>
+                    %if object.commentary:
+                    <strong>Comentario:</strong> ${(object.commentary)}<br/>
+                    %endif
+                    </p>
+                    <br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="20%" style="background-color: white;">Cuota</th>
+                            <th width="40%" style="background-color: white;">Fecha</th>
+                            <th width="40%" style="background-color: white;">Valor</th>
+                        </tr>
+                        %for line in object.loan_lines:
+                        <tr>
+                            <td>${line.installment}</td>
+                            <td>${line.date.strftime("%d/%m/%Y")}</td>
+                            <td>${(line.currency_id.symbol)} ${line.amount}</td>
+                        </tr>
+                        %endfor
+                    </table>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+        <record id="email_template_confirm_reject_loan_request" model="mail.template">
+            <field name="name">Email template confirm reject loan request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Loan request reject</field>
+            <field name="email_to">${object.employee_requests_id.work_email|object.employee_requests_id.private_email|safe}</field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(a) <strong>${(object.sudo().employee_requests_id.name)}</strong>,<br/><br/>
+                    Su solicitud de préstamo fue rechazada.<br/><br/>
+                    %if object.reason_reject:
+                    <strong>Motivo:</strong>
+                    ${(object.reason_reject)}
+                    %endif
+                    <br/><br/>
+                    <strong>Datos de la solicitud</strong><br/>
+                    <strong>Código:</strong> ${(object.name)}<br/>
+                    <strong>Fecha de la solicitud:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha de confirmación:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha inicial de pago:</strong> ${(object.payment_date.strftime("%d/%m/%Y"))}<br/>
+                    <strong>Valor:</strong> ${(object.currency_id.symbol)} ${(object.loan_amount)}<br/>
+                    <strong>Cantidad de cuotas:</strong> ${(object.installment)}<br/>
+                    %if object.commentary:
+                    <strong>Comentario:</strong> ${(object.commentary)}<br/>
+                    %endif
+                    </p>
+                    <br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="20%" style="background-color: white;">Cuota</th>
+                            <th width="40%" style="background-color: white;">Fecha</th>
+                            <th width="40%" style="background-color: white;">Valor</th>
+                        </tr>
+                        %for line in object.loan_lines:
+                        <tr>
+                            <td>${line.installment}</td>
+                            <td>${line.date.strftime("%d/%m/%Y")}</td>
+                            <td>${(line.currency_id.symbol)} ${line.amount}</td>
+                        </tr>
+                        %endfor
+                    </table>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+        <record id="email_template_confirm_approve_loan_request" model="mail.template">
+            <field name="name">Email template confirm approve loan request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Loan request approve</field>
+            <field name="email_to">${object.employee_requests_id.work_email|object.employee_requests_id.private_email|safe}</field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(a) <strong>${(object.sudo().employee_requests_id.name)}</strong>,<br/><br/>
+                    Su solicitud de préstamo fue aprobada.<br/><br/>
+                    <strong>Datos de la solicitud</strong><br/>
+                    <strong>Código:</strong> ${(object.name)}<br/>
+                    <strong>Fecha de la solicitud:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha de confirmación:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha inicial de pago:</strong> ${(object.payment_date.strftime("%d/%m/%Y"))}<br/>
+                    <strong>Valor:</strong> ${(object.currency_id.symbol)} ${(object.loan_amount)}<br/>
+                    <strong>Cantidad de cuotas:</strong> ${(object.installment)}<br/>
+                    %if object.commentary:
+                    <strong>Comentario:</strong> ${(object.commentary)}<br/>
+                    %endif
+                    </p>
+                    <br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="20%" style="background-color: white;">Cuota</th>
+                            <th width="40%" style="background-color: white;">Fecha</th>
+                            <th width="40%" style="background-color: white;">Valor</th>
+                        </tr>
+                        %for line in object.loan_lines:
+                        <tr>
+                            <td>${line.installment}</td>
+                            <td>${line.date.strftime("%d/%m/%Y")}</td>
+                            <td>${(line.currency_id.symbol)} ${line.amount}</td>
+                        </tr>
+                        %endfor
+                    </table>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+        <record id="email_template_confirm_cancelled_loan_request" model="mail.template">
+            <field name="name">Email template confirm cancelled loan request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Loan request cancelled</field>
+            <field name="email_to">${object.employee_requests_id.work_email|object.employee_requests_id.private_email|safe}</field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(a) <strong>${(object.sudo().employee_requests_id.name)}</strong>,<br/><br/>
+                    Su solicitud de préstamo fue cancelada.<br/><br/>
+                    <strong>Datos de la solicitud</strong><br/>
+                    <strong>Código:</strong> ${(object.name)}<br/>
+                    <strong>Fecha de la solicitud:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha de cancelación:</strong> ${format_datetime(object.date_cancellation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha inicial de pago:</strong> ${(object.payment_date.strftime("%d/%m/%Y"))}<br/>
+                    <strong>Valor:</strong> ${(object.currency_id.symbol)} ${(object.loan_amount)}<br/>
+                    <strong>Cantidad de cuotas:</strong> ${(object.installment)}<br/>
+                    %if object.commentary:
+                    <strong>Comentario:</strong> ${(object.commentary)}<br/>
+                    %endif
+                    </p>
+                    <br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="20%" style="background-color: white;">Cuota</th>
+                            <th width="40%" style="background-color: white;">Fecha</th>
+                            <th width="40%" style="background-color: white;">Valor</th>
+                        </tr>
+                        %for line in object.loan_lines:
+                        <tr>
+                            <td>${line.installment}</td>
+                            <td>${line.date.strftime("%d/%m/%Y")}</td>
+                            <td>${(line.currency_id.symbol)} ${line.amount}</td>
+                        </tr>
+                        %endfor
+                    </table>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+        <record id="email_template_notify_treasury_loan" model="mail.template">
+            <field name="name">Email template notify treasury</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Archivo cargado al cash management (Préstamo)</field>
+            <field name="email_to"></field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(s),<br/><br/>
+                    Por favor su aprobación del archivo referente al préstamo <strong>${(object.name)}</strong> del colaborador <strong>${(object.employee_requests_id.name)}</strong> por un valor de <strong>${(object.currency_id.symbol)} ${(object.loan_amount)}</strong>.
+                    </p>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+        <record id="email_template_paid_loan_request" model="mail.template">
+            <field name="name">Email template paid loan request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Loan request paid</field>
+            <field name="email_to">${object.employee_requests_id.work_email|object.employee_requests_id.private_email|safe}</field>
+<!--            <field name="lang">${object.user_employee_id.lang}</field>-->
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>
+                    Estimado(a) <strong>${(object.sudo().employee_requests_id.name)}</strong>,<br/><br/>
+                    Su solicitud de préstamo fue pagada.<br/><br/>
+                    <strong>Datos de la solicitud</strong><br/>
+                    <strong>Código:</strong> ${(object.name)}<br/>
+                    <strong>Fecha de la solicitud:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha de confirmación:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                    <strong>Fecha inicial de pago:</strong> ${(object.payment_date.strftime("%d/%m/%Y"))}<br/>
+                    <strong>Valor:</strong> ${(object.currency_id.symbol)} ${(object.loan_amount)}<br/>
+                    <strong>Cantidad de cuotas:</strong> ${(object.installment)}<br/>
+                    %if object.commentary:
+                    <strong>Comentario:</strong> ${(object.commentary)}<br/>
+                    %endif
+                    </p>
+                    <br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="20%" style="background-color: white;">Cuota</th>
+                            <th width="40%" style="background-color: white;">Fecha</th>
+                            <th width="40%" style="background-color: white;">Valor</th>
+                        </tr>
+                        %for line in object.loan_lines:
+                        <tr>
+                            <td>${line.installment}</td>
+                            <td>${line.date.strftime("%d/%m/%Y")}</td>
+                            <td>${(line.currency_id.symbol)} ${line.amount}</td>
+                        </tr>
+                        %endfor
+                    </table>
+                    <br/>
+
+                    Atentamente,<br/>
+                    ${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.<br/>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/><br/>
+                    Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

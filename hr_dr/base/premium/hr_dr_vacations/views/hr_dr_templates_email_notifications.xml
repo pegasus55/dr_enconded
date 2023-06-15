@@ -1,0 +1,345 @@
+<odoo>
+    <data noupdate="0">
+        <record id="email_template_confirm_vacation_planning_request" model="mail.template">
+            <field name="name">Email template confirm vacation planning request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation planning request</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_planning_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation planning request is being processed.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_reject_vacation_planning_request" model="mail.template">
+            <field name="name">Email template confirm reject vacation planning request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation planning request rejected</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_planning_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation planning request was rejected.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_approve_vacation_planning_request" model="mail.template">
+            <field name="name">Email template confirm approve vacation planning request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation planning request approved</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_planning_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation planning request was approved.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_cancel_vacation_planning_request" model="mail.template">
+            <field name="name">Email template confirm cancel vacation planning request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation planning request cancelled</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_planning_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation planning request was cancelled.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_direct_approve_vacations_planning_request" model="mail.template">
+            <field name="name">Email template confirm direct approve vacation planning request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Registered vacation planning request</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_planning_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        A vacation plan was registered for you.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+
+        <record id="email_template_confirm_vacation_execution_request" model="mail.template">
+            <field name="name">Email template confirm vacation execution request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation request</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_execution_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation request is being processed.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        <strong>Vacation days available:</strong> ${(object.employee_requests_id.total_vacations_available)}<br/>
+                        <strong>Available vacation days including the last period:</strong> ${(object.employee_requests_id.total_vacations_available_including_proportional_period)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_reject_vacation_execution_request" model="mail.template">
+            <field name="name">Email template confirm reject vacation execution request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation request rejected</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_execution_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation request was rejected.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        <strong>Vacation days available:</strong> ${(object.employee_requests_id.total_vacations_available)}<br/>
+                        <strong>Available vacation days including the last period:</strong> ${(object.employee_requests_id.total_vacations_available_including_proportional_period)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_approve_vacation_execution_request" model="mail.template">
+            <field name="name">Email template confirm approve vacation execution request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation request approved</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_execution_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation request was approved.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        <strong>Vacation days available:</strong> ${(object.employee_requests_id.total_vacations_available)}<br/>
+                        <strong>Available vacation days including the last period:</strong> ${(object.employee_requests_id.total_vacations_available_including_proportional_period)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_cancel_vacation_execution_request" model="mail.template">
+            <field name="name">Email template confirm cancel vacation execution request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Vacation request cancelled</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_execution_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        Your vacation request was canceled.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        <strong>Vacation days available:</strong> ${(object.employee_requests_id.total_vacations_available)}<br/>
+                        <strong>Available vacation days including the last period:</strong> ${(object.employee_requests_id.total_vacations_available_including_proportional_period)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+        <record id="email_template_confirm_direct_approve_vacations_execution_request" model="mail.template">
+            <field name="name">Email template confirm direct approve vacation execution request</field>
+            <field name="email_from">"${object.employee_requests_id.company_id.name|safe}" &lt;${object.employee_requests_id.company_id.email|safe}&gt;</field>
+            <field name="subject">Registered vacation request</field>
+            <field name="email_to">${object.employee_requests_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_requests_id.lang}</field>
+            <field name="model_id" ref="model_hr_vacation_execution_request"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>
+                        A vacation request was registered for you.<br/><br/>
+                        <strong>Request data</strong><br/>
+                        <strong>Request date:</strong> ${format_datetime(object.create_date, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Confirmation date:</strong> ${format_datetime(object.date_confirmation, tz=object.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')}<br/>
+                        <strong>Start date:</strong> ${(object.date_from.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Ending date:</strong> ${(object.date_to.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime("%d/%m/%Y"))}<br/>
+                        <strong>Number of days:</strong> ${(object.number_of_days)}<br/>
+                        <strong>Vacation days available:</strong> ${(object.employee_requests_id.total_vacations_available)}<br/>
+                        <strong>Available vacation days including the last period:</strong> ${(object.employee_requests_id.total_vacations_available_including_proportional_period)}<br/>
+                        %if object.commentary:
+                        <strong>Comment:</strong> ${(object.commentary)}<br/>
+                        %endif
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_requests_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

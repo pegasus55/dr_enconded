@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="delete_employee_shift_form">
+            <field name="name">Delete employee shift</field>
+            <field name="model">delete.employee.shift</field>
+            <field name="arch" type="xml">
+                <form id="delete.employee.shift.form">
+                    <sheet>
+                        <group>
+                            <field name="attendance_period_id"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date_from"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="input_mode" options="{'no_create_edit': True}"/>
+                            </group>
+                            <group>
+                                <field name="department_ids" widget="many2many_tags" attrs="{'invisible':[('input_mode','==','employee')]}"/>
+                            </group>
+                        </group>
+                        <field name="employee_ids" nolabel="nolabel=1">
+                            <tree>
+                                <field name="name" string="Nombre del colaborador"/>
+                                <field name="department_id"/>
+                            </tree>
+                        </field>
+                        <span>Si no selecciona colaboradores, se asume que es para todos.</span>
+                        <footer>
+                            <button name="action_delete_employee_shift" string="Aceptar" type="object"
+                                    class="btn-primary"/>
+                            <button special="cancel" string="Cancelar"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="delete_employee_shift_action">
+            <field name="name">Eliminar turnos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">delete.employee.shift</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Eliminar turnos.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_delete_employee_shift" name="Eliminar turnos" parent="menu_assigned_shifts" action="hr_dr_schedule.delete_employee_shift_action" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="40"/>
+    </data>
+</odoo>

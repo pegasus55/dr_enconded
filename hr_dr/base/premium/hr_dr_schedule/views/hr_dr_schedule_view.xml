@@ -1,0 +1,1628 @@
+<odoo>
+    <data>
+        <!--resource.calendar.attendance-->
+        <record model="ir.ui.view" id="view_resource_calendar_attendance_tree_inherit">
+            <field name="name">view_resource_calendar_attendance_tree_inherit</field>
+            <field name="model">resource.calendar.attendance</field>
+            <field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='dayofweek']" position="attributes">
+                    <attribute name="string">Day of week</attribute>
+                </xpath>
+                <xpath expr="//field[@name='day_period']" position="attributes">
+                    <attribute name="string">Day period</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_resource_calendar_attendance_form_inherit">
+            <field name="name">view_resource_calendar_attendance_form_inherit</field>
+            <field name="model">resource.calendar.attendance</field>
+            <field name="inherit_id" ref="resource.view_resource_calendar_attendance_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='dayofweek']" position="attributes">
+                    <attribute name="string">Day of week</attribute>
+                </xpath>
+                <xpath expr="//field[@name='day_period']" position="attributes">
+                    <attribute name="string">Day period</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="string">Date to</attribute>
+                </xpath>
+            </field>
+        </record>
+        <!--resource.calendar.attendance-->
+
+        <!--resource.calendar-->
+        <record model="ir.actions.act_window" id="schedule_action_all">
+            <field name="name">Horario</field>
+            <field name="res_model">resource.calendar</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Horario.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="resource_calendar_form_inherit">
+            <field name="name">resource_calendar_form_inherit</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.resource_calendar_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='working_hours']" position="attributes">
+                    <attribute name="string">Planificación diaria</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='switch_calendar_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='hours_per_day']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='tz']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='working_hours']" position="attributes">
+                    <attribute name="string">Working Hours</attribute>
+                </xpath>
+
+<!--                <xpath expr="//page[@name='global_leaves']" position="attributes">-->
+<!--                    <attribute name="invisible">1</attribute>-->
+<!--                </xpath>-->
+
+                <xpath expr="//form//sheet//h1" position="after">
+                    <group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="hours_per_day" required="True" string="Promedio de horas de trabajo por día"/>
+                            <field name="hours_per_week" required="True" widget="float_time"/>
+                            <field name="tz"/>
+                            <field name="consider_overtime_start_schedule"/>
+                            <field name="consider_overtime_end_schedule"/>
+                            <field name="consider_hour_night"/>
+                        </group>
+                        <group>
+                            <label for="courtesy_start"/>
+                            <div class="o_row" name="courtesy_start">
+                                <field name="courtesy_start" nolabel="1"/>
+                                <span>minuto(s)</span>
+                            </div>
+                            <label for="courtesy_end"/>
+                            <div class="o_row" name="courtesy_end">
+                                <field name="courtesy_end" nolabel="1"/>
+                                <span>minuto(s)</span>
+                            </div>
+                            <field name="max_hours_before_start"/>
+                            <field name="max_hours_after_end"/>
+                        </group>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_resource_calendar_tree_inherit">
+            <field name="name">view_resource_calendar_tree_inherit</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.view_resource_calendar_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="hours_per_day" string="Promedio de horas de trabajo por día"/>
+                    <field name="hours_per_week"/>
+                    <field name="tz"/>
+                    <field name="courtesy_start"/>
+                    <field name="courtesy_end"/>
+                </xpath>
+            </field>
+        </record>
+        <!--resource.calendar-->
+
+        <!--hr.employee.shift-->
+        <record model="ir.ui.view" id="hr_employee_shift_tree">
+            <field name="name">hr.employee.shift.tree</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                    <field name="year_planned_start"/>
+                    <field name="resource_calendar_id"/>
+                    <field name="dayofweek"/>
+
+                    <field name="planned_start"/>
+                    <field name="real_start"/>
+                    <field name="courtesy_start"/>
+                    <field name="late_start"/>
+                    <field name="difference_start"/>
+
+                    <field name="planned_end"/>
+                    <field name="real_end"/>
+                    <field name="courtesy_end"/>
+                    <field name="early_end"/>
+                    <field name="difference_end"/>
+
+                    <field name="breaks_count"/>
+                    <field name="breaks_early_start_count"/>
+                    <field name="breaks_late_end_count"/>
+                    <field name="breaks_total_time_planned_hms"/>
+                    <field name="breaks_total_time_real_hms"/>
+                    <field name="breaks_total_time_difference_hms"/>
+
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_shift_form">
+            <field name="name">hr.employee.shift.form</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>
+                            <field name="dayofweek" readonly="1" force_save="1"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                            </group>
+                            <group>
+                                <field name="department_employee_id" invisible="context.get('invisible_employee_id',False)" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="resource_calendar_id" required="1"/>
+                            </group>
+                            <group>
+                                <field name="year_planned_start"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="time_planned_hms"/>
+                            </group>
+                            <group>
+                                <field name="time_real_hms"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="start_from" readonly="1" force_save="1"/>
+                                <field name="planned_start" readonly="0" force_save="1"/>
+                                <field name="real_start" readonly="1" force_save="1"/>
+                                <label for="courtesy_start"/>
+                                <div class="o_row" name="courtesy_start">
+                                    <field name="courtesy_start" nolabel="1" readonly="1" force_save="1"/>
+                                    <span>minuto(s)</span>
+                                </div>
+                                <field name="late_start"/>
+                                <field name="difference_start"/>
+                            </group>
+                            <group>
+                                <field name="end_to" readonly = "1" force_save="1"/>
+                                <field name="planned_end" readonly = "0" force_save="1"/>
+                                <field name="real_end" readonly = "1" force_save="1"/>
+                                <label for="courtesy_end"/>
+                                <div class="o_row" name="courtesy_end">
+                                    <field name="courtesy_end" nolabel="1" readonly="1" force_save="1"/>
+                                    <span>minuto(s)</span>
+                                </div>
+                                <field name="early_end"/>
+                                <field name="difference_end"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="attendance_assigned" readonly = "1" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="attendance_computed" readonly = "1" force_save="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="difference_total_hms"/>
+                        </group>
+                        <notebook>
+                            <page string="Descansos">
+                                <field name="break_ids" nolabel="1">
+                                    <tree>
+                                        <field name="planned_start"/>
+                                        <field name="real_start"/>
+                                        <field name="early_start"/>
+                                        <field name="difference_start"/>
+
+                                        <field name="planned_end"/>
+                                        <field name="real_end"/>
+                                        <field name="late_end"/>
+                                        <field name="difference_end"/>
+
+                                        <field name="time_planned_hms"/>
+                                        <field name="time_real_hms"/>
+                                        <field name="difference_total_hms"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="employee_shift_id" readonly = "1"/>
+                                            </group>
+                                            <group>
+                                                <group>
+                                                    <field name="time_planned_hms"/>
+                                                </group>
+                                                <group>
+                                                    <field name="time_real_hms"/>
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <group>
+                                                    <field name="planned_start" readonly="0" force_save="1"/>
+                                                    <field name="real_start" readonly="1" force_save="1"/>
+                                                    <field name="early_start"/>
+                                                    <field name="difference_start"/>
+                                                </group>
+                                                <group>
+                                                    <field name="planned_end" readonly="0" force_save="1"/>
+                                                    <field name="real_end" readonly="1" force_save="1"/>
+                                                    <field name="late_end"/>
+                                                    <field name="difference_end"/>
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <field name="difference_total_hms"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_shift_calendar">
+            <field name="name">hr.employee.shift.calendar</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <calendar string="Turnos" date_start="planned_start" date_stop="planned_end" mode="month" quick_add="False" color="employee_id">
+                    <field name="display_name"/>
+                </calendar>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_shift_search">
+            <field name="name">hr.employee.shift.search</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+                    <field name="planned_start"/>
+
+                    <filter name="filter_this_month" string="Este mes" domain="[('planned_start', '&gt;=', datetime.datetime.now().replace(day=1, hour=0, minute=0, second=0)),('planned_start', '&lt;=', datetime.datetime.now().replace(day=1, hour=23, minute=59, second=59)+relativedelta(months=1)+datetime.timedelta(days=-1) )]"/>
+                    <filter name="filter_last_period" string="Último período"/>
+                    <filter name="filter_planned_start" string="Inicio planificado" date="planned_start"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+                        <filter name="group_year_planned_start" string="Año"
+                                context="{'group_by' : 'year_planned_start'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="assigned_shifts_action_my">
+            <field name="name">Mis turnos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.shift</field>
+            <field name="view_mode">tree,calendar,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_filter_last_period": 1,
+                "search_default_group_year_planned_start": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis turnos.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="assigned_shifts_action_from_my_department">
+            <field name="name">Turnos de mi departamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.shift</field>
+            <field name="view_mode">tree,calendar,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                "search_default_filter_last_period": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_year_planned_start": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Turnos de mi departamento.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="assigned_shifts_action_all">
+            <field name="name">Todos los turnos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.shift</field>
+            <field name="view_mode">tree,calendar,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_filter_last_period": 1,
+                "search_default_group_department_employee_id": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_year_planned_start": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Todos los turnos.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.shift-->
+
+        <!--attendance.activity-->
+        <record model="ir.ui.view" id="attendance_activity_tree_view">
+			<field name="name">attendance.activity.tree</field>
+			<field name="model">attendance.activity</field>
+            <field name="inherit_id" ref="to_attendance_device.attendance_activity_tree_view"/>
+			<field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="code" />
+                </xpath>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="attendance_activity_form_view">
+			<field name="name">attendance.activity.form</field>
+			<field name="model">attendance.activity</field>
+            <field name="inherit_id" ref="to_attendance_device.attendance_activity_form_view"/>
+			<field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="code" />
+                </xpath>
+			</field>
+		</record>
+        <!--attendance.activity-->
+
+        <!--user.attendance-->
+        <record model="ir.ui.view" id="view_attendance_data_form">
+			<field name="name">Attendance Data Form</field>
+			<field name="model">user.attendance</field>
+            <field name="priority">50</field>
+			<field name="arch" type="xml">
+                <form string="Marcaciones" create="false" edit="false" delete="false">
+					<sheet>
+						<group>
+							<group>
+                                <field name="timestamp" />
+								<field name="user_id" />
+								<field name="employee_id" />
+							</group>
+                            <group>
+                                <field name="status"/>
+                                <field name="attendance_state_id" />
+                                <field name="type"/>
+                                <field name="activity_id"/>
+                                <field name="mode"/>
+                                <field name="processed"/>
+                                <field name="assigned"/>
+                                <field name="device_id" />
+                            </group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_attendance_data_tree">
+			<field name="name">Attendance Data</field>
+			<field name="model">user.attendance</field>
+            <field name="priority">50</field>
+			<field name="arch" type="xml">
+                    <tree string="Marcaciones" create="false" edit="false" delete="false">
+					<field name="timestamp"/>
+					<field name="user_id"/>
+					<field name="employee_id"/>
+					<field name="status"/>
+					<field name="attendance_state_id"/>
+                    <field name="type"/>
+                    <field name="activity_id"/>
+                    <field name="mode"/>
+                    <field name="processed"/>
+                    <field name="assigned"/>
+					<field name="device_id"/>
+				</tree>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="user_attendance_data_search_view">
+			<field name="name">Attendance Data</field>
+			<field name="model">user.attendance</field>
+			<field name="arch" type="xml">
+				<search string="Buscar marcaciones">
+                    <field name="employee_id"/>
+					<field name="user_id"/>
+					<field name="device_id"/>
+                    <field name="processed"/>
+                    <field name="assigned"/>
+					<filter string="No procesadas" name="Not_processed" domain="[('processed','=',False)]"/>
+					<separator />
+                    <filter string="No signadas" name="Not_assigned" domain="[('assigned','=',False)]"/>
+					<separator />
+                    <filter name="filter_last_period" string="Último periodo"/>
+					<filter string="Hoy" name="today"
+						domain="[('timestamp', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('timestamp', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]"/>
+					<group expand="0" string="Group By">
+						<filter string="Colaborador" name="group_by_employee" context="{'group_by': 'employee_id'}" />
+                        <filter string="Fecha" name="group_by_day" context="{'group_by': 'timestamp:day'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="action_user_attendance_my">
+			<field name="name">Mis marcaciones</field>
+			<field name="res_model">user.attendance</field>
+			<field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'search_default_group_by_employee': True,
+                "search_default_filter_last_period": 1,
+                'search_default_group_by_day': True,
+                }
+            </field>
+            <field name="search_view_id" ref="hr_dr_schedule.user_attendance_data_search_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_dr_schedule.view_attendance_data_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('hr_dr_schedule.view_attendance_data_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">Aún no se registran marcaciones.</p>
+            </field>
+		</record>
+        <record model="ir.actions.act_window" id="action_user_attendance_from_my_department">
+			<field name="name">Marcaciones de mi departamento</field>
+			<field name="res_model">user.attendance</field>
+			<field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'search_default_group_by_employee': True,
+                "search_default_filter_last_period": 1,
+                'search_default_group_by_day': True
+                }
+            </field>
+            <field name="search_view_id" ref="hr_dr_schedule.user_attendance_data_search_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_dr_schedule.view_attendance_data_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('hr_dr_schedule.view_attendance_data_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">Aún no se registran marcaciones.</p>
+            </field>
+		</record>
+        <record model="ir.actions.act_window" id="action_user_attendance_all">
+			<field name="name">Todas las marcaciones</field>
+			<field name="res_model">user.attendance</field>
+			<field name="view_mode">tree,form</field>
+            <field name="context">{
+                'search_default_group_by_employee': True,
+                "search_default_filter_last_period": 1,
+                'search_default_group_by_day': True
+                }
+            </field>
+            <field name="search_view_id" ref="hr_dr_schedule.user_attendance_data_search_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_dr_schedule.view_attendance_data_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('hr_dr_schedule.view_attendance_data_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">Aún no se registran marcaciones.</p>
+            </field>
+		</record>
+        <!--user.attendance-->
+
+        <!--user.attendance.request-->
+        <record model="ir.ui.view" id="view_attendance_request_form">
+			<field name="name">User attendance request form</field>
+			<field name="model">user.attendance.request</field>
+            <field name="priority">1</field>
+			<field name="arch" type="xml">
+				<form string="Solicitud de aprobación de marcación">
+                    <header>
+                        <button string="Confirmar solicitud" type="object"
+                                name="confirm_request"
+                                confirm="¿Está seguro que desea confirmar esta solicitud de aprobación de marcación?"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+                        <button string="Cancelar solicitud" type="object"
+                                name="cancel_request"
+                                confirm="¿Está seguro que desea cancelar esta solicitud de aprobación de marcación?"
+                                attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,rejected"/>
+                    </header>
+					<sheet>
+						<group>
+							<group>
+                                <field name="can_modify_employee" invisible="1"/>
+								<field name="employee_requests_id"
+                                       invisible="context.get('invisible_employee_requests_id',False)"
+                                       attrs="{'readonly': ['|', ('state', '!=', 'draft'), ('can_modify_employee', '=', False)]}"/>
+                                <field name="has_attendance_activity" invisible="1"/>
+                                <field name="has_attendance_state" invisible="1"/>
+                                <field name="attendance_activity_id"
+                                       attrs="{'invisible': [('has_attendance_activity', '=', False)], 'required': [('has_attendance_activity', '=', True)],
+                                               'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True}"/>
+                                <field name="attendance_state_id"
+                                       attrs="{'invisible': [('has_attendance_state', '=', False)], 'required': [('has_attendance_state', '=', True)],
+                                               'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True}"/>
+							</group>
+                            <group>
+                                <field name="timestamp" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+						</group>
+                        <group>
+                            <field name="commentary" required="1" string="Motivo" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <notebook>
+                            <page string="Seguimiento">
+                                <field
+                                        name="notification_ids"
+                                        nolabel="1">
+                                    <tree>
+                                        <field name="level"/>
+                                        <field name="employee_approve_id"/>
+                                        <field name="commentary"/>
+                                        <field name="state" string="Estado"/>
+                                        <field name="send" string="Enviado"/>
+                                        <field name="processed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_attendance_request_tree">
+			<field name="name">User attendance request tree</field>
+			<field name="model">user.attendance.request</field>
+            <field name="priority">1</field>
+			<field name="arch" type="xml">
+				<tree decoration-danger="state == 'rejected'" decoration-success="state == 'approved'"
+                      decoration-muted="state in ['cancelled','draft']"
+                      decoration-primary="state == 'pending'" string="Solicitudes de aprobación de marcación" create="true" edit="true">
+
+                    <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)"/>
+					<field name="timestamp" />
+                    <field name="state" string="Estado"/>
+                    <!--<field name="has_attendance_activity" invisible="1"/>-->
+                    <!--<field name="has_attendance_state" invisible="1"/>-->
+                    <!--<field name="attendance_activity_id" attrs="{'column_invisible': [('parent.has_attendance_activity', '=', False)]}"/>-->
+                    <!--<field name="attendance_state_id" attrs="{'column_invisible': [('parent.has_attendance_state', '=', False)]}"/>-->
+                    <field name="attendance_activity_id"/>
+                    <field name="attendance_state_id"/>
+                    <field name="commentary"/>
+				</tree>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="user_attendance_request_search_view">
+			<field name="name">User attendance request search</field>
+			<field name="model">user.attendance.request</field>
+			<field name="arch" type="xml">
+				<search string="Buscar solicitudes de aprobación de marcación">
+					<field name="employee_requests_id"/>
+                    <field name="timestamp"/>
+
+					<separator />
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+					<filter string="Hoy" name="today"
+						domain="[('timestamp', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('timestamp', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
+
+					<group expand="0" string="Group By">
+						<filter string="Colaborador" name="group_by_employee" context="{'group_by': 'employee_requests_id'}" />
+                        <filter string="Fecha" name="group_by_day" context="{'group_by': 'timestamp:day'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="action_user_attendance_request_my">
+			<field name="name">Mis solicitudes de aprobación de marcación</field>
+			<field name="res_model">user.attendance.request</field>
+			<field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+            <field name="context">
+                {'search_default_group_by_employee': True, 'invisible_employee_requests_id': True}
+            </field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">No existen solicitudes de aprobación de marcaciones registradas.</p>
+            </field>
+            <!--<field name="search_view_id" ref="hr_dr_schedule.user_attendance_request_search_view"/>-->
+		</record>
+        <record model="ir.actions.act_window" id="action_user_attendance_request_from_my_department">
+			<field name="name">Solicitudes de aprobación de marcación de mi departamento</field>
+			<field name="res_model">user.attendance.request</field>
+			<field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_requests_id', '=',uid)]</field>
+            <field name="context">
+                {'search_default_group_by_employee': True, 'invisible_employee_requests_id': False, 'limit_employees':True}
+            </field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">No existen solicitudes de aprobación de marcaciones registradas.</p>
+            </field>
+            <!--<field name="search_view_id" ref="hr_dr_schedule.user_attendance_request_search_view"/>-->
+		</record>
+        <record model="ir.actions.act_window" id="action_user_attendance_request_all">
+			<field name="name">Todas las solicitudes de aprobación de marcación</field>
+			<field name="res_model">user.attendance.request</field>
+			<field name="view_mode">tree,form</field>
+            <field name="context">
+                {'search_default_group_by_employee': True, 'invisible_employee_requests_id': False}
+            </field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">No existen solicitudes de aprobación de marcaciones registradas.</p>
+            </field>
+            <!--<field name="search_view_id" ref="hr_dr_schedule.user_attendance_request_search_view"/>-->
+		</record>
+
+        <record model="ir.actions.act_window" id="action_user_attendance_request_notifications_to_process">
+            <field name="name">Notificaciones por procesar para solicitudes de aprobación de marcación</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'user.attendance.request'),
+                ('user_employee_approve_id', '=',uid),
+                ('send', '=',True),
+                ('state', '=','pending'),
+                ('processed', '=',False)
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    No existen notificaciones por procesar para solicitudes de aprobación de marcación.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_user_attendance_request_notifications_all">
+            <field name="name">Todas las notificaciones para solicitudes de aprobación de marcación</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'user.attendance.request')
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">No existen notificaciones para solicitudes de aprobación de marcación.
+                </p>
+            </field>
+        </record>
+        <!--user.attendance.request-->
+
+        <!--hr.employee.hour.extra-->
+        <record model="ir.ui.view" id="view_register_reason_employee_hour_extra">
+            <field name="name">register.reason.hr.employee.hour.extra.form</field>
+            <field name="model">register.reason.hr.employee.hour.extra</field>
+            <field name="arch" type="xml">
+                <form string="Registrar motivo">
+
+                    <field name="employee_hour_extra_id" invisible="1"/>
+                    <field name="employee_reason"/>
+
+                    <footer>
+                        <button name="action_register_reason" string="Registrar motivo" type="object" class="btn-primary"/>
+                        <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_register_reason">
+            <field name="name">Registrar motivo</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">register.reason.hr.employee.hour.extra</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_register_reason_employee_hour_extra"/>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_hour_extra_tree">
+            <field name="name">hr.employee.hour.extra.tree</field>
+            <field name="model">hr.employee.hour.extra</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                    <field name="attendance_period_id"/>
+                    <field name="department_employee_id"/>
+                    <field name="hour_extra_id"/>
+                    <field name="percentage_increase"/>
+                    <field name="date"/>
+                    <field name="amount_hd"/>
+                    <field name="amount_hms"/>
+                    <field name="amount_approved_hd"/>
+                    <field name="amount_approved_hms"/>
+                    <field name="state" string="Estado"/>
+                    <field name="employee_reason"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_hour_extra_form">
+            <field name="name">hr.employee.hour.extra.form</field>
+            <field name="model">hr.employee.hour.extra</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <header>
+                        <button name="%(hr_dr_schedule.action_register_reason)d"
+                                string="Registrar motivo"
+                                type="action"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                        </h1>
+                        <h1>
+                            <field name="attendance_period_id"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="department_employee_id"/>
+                                <field name="hour_extra_id"/>
+                                <field name="amount_hd"/>
+                                <field name="amount_hms"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="percentage_increase"/>
+                                <field name="amount_approved_hd"/>
+                                <field name="amount_approved_hms"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="employee_reason"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_hour_extra_search">
+            <field name="name">hr.employee.hour.extra.search</field>
+            <field name="model">hr.employee.hour.extra</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+                    <field name="date"/>
+                    <filter string="Fecha" name="filter_date" date="date"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_hour_extra_action_my">
+            <field name="name">Mis horas extras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.extra</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_group_attendance_period_id": 1,
+            }</field>
+
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis horas extras.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_hour_extra_action_from_my_department">
+            <field name="name">Horas extras de mi departamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.extra</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Horas extras de mi departamento.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_hour_extra_action_all">
+            <field name="name">Horas extras de todos los colaboradores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.extra</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_group_department_employee_id": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Horas extras de todos los colaboradores.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.hour.extra-->
+
+        <!--employee.hour.extra.approval.request-->
+        <report
+            id="action_export_employee_hour_extra_approval_request_report"
+            string="Exportar aprobación de horas extras"
+            model="employee.hour.extra.approval.request"
+            report_type="xlsx"
+            name="hr_dr_schedule.export_employee_h_e_a_r"
+            file="Aprobación de horas extras"
+            menu="False"
+        />
+        <record model="ir.ui.view" id="employee_hour_extra_approval_request_view_tree">
+            <field name="name">employee.hour.extra.approval.request.tree</field>
+            <field name="model">employee.hour.extra.approval.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'rejected'" decoration-success="state == 'approved'" decoration-muted="state in ['replanned','cancelled','draft']" decoration-primary="state == 'pending'">
+                    <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)"/>
+                    <field name="attendance_period_id"/>
+                    <field name="state" string="Estado"/>
+                    <field name="commentary"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="employee_hour_extra_approval_request_view_form">
+            <field name="name">employee.hour.extra.approval.request.form</field>
+            <field name="model">employee.hour.extra.approval.request</field>
+            <field name="arch" type="xml">
+                <form string="Solicitud de aprobación de horas extras">
+                    <header>
+                        <button string="Generar detalles" type="object" name="action_generate_details" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+                        <button string="Confirmar solicitud" type="object"
+                                name="confirm_hour_extra_approval_request"
+                                confirm="¿Está seguro que desea confirmar esta solicitud de aprobación de horas extras?"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+<!--                        <button string="Generar detalles (Todos los colaboradores)" type="object" name="action_generate_details_by_admin" attrs="{'invisible': [('state', '!=', 'draft')]}"/>-->
+
+                        <button string="Cancelar solicitud" type="object"
+                                name="cancel_hour_extra_approval_request"
+                                confirm="¿Está seguro que desea cancelar esta solicitud de aprobación de horas extras?"
+                                attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+                        <button name="action_export_employee_hour_extra_approval_request" string="Exportar aprobación de horas extras" type="object" class="oe_highlight"/>
+
+                        <button name="%(hr_dr_schedule.action_import_employee_hour_extra_approval_request)d" string="Importar aprobación de horas extras"
+                            type="action"
+                            class="oe_highlight"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="attendance_period_id" attrs="{'readonly': [('state', '!=', 'draft')]}" domain="[('state','in',['open'])]"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="commentary" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <notebook>
+                            <page string="Detalles">
+                                <field name="detail_ids" nolabel="1">
+                                    <tree editable="bottom" create="false">
+                                        <field name="readonly_amount" invisible="1"/>
+                                        <field name="approval_request_id" invisible="1"/>
+                                        <field name="employee_hour_extra_id" invisible="1"/>
+                                        <field name="employee_id"/>
+                                        <field name="department_employee_id"/>
+                                        <field name="date"/>
+                                        <field name="amount_hms"/>
+                                        <field name="hour_extra_id"/>
+                                        <field name="percentage_increase"/>
+                                        <field name="employee_reason"/>
+                                        <field name="amount_approved_hd" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                        <field name="amount_approved_h" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                        <field name="amount_approved_m" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                        <field name="amount_approved_s" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                        <field name="amount_approved_hms"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group string=''>
+                                                    <field name="readonly_amount" invisible="1"/>
+                                                    <field name="approval_request_id" invisible="1"/>
+                                                    <field name="employee_hour_extra_id" invisible="1"/>
+                                                    <field name="employee_id"/>
+                                                    <field name="department_employee_id"/>
+                                                    <field name="date"/>
+                                                    <field name="amount_hms"/>
+                                                    <field name="hour_extra_id"/>
+                                                    <field name="percentage_increase"/>
+                                                </group>
+                                                <group string=''>
+                                                    <field name="amount_approved_hd" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                                    <field name="amount_approved_h" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                                    <field name="amount_approved_m" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                                    <field name="amount_approved_s" attrs="{'readonly': [('readonly_amount', '=', True)]}"/>
+                                                    <field name="amount_approved_hms"/>
+                                                </group>
+                                            </group>
+                                            <group string=''>
+                                                <field name="employee_reason"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Seguimiento">
+                                <field name="notification_ids" nolabel="1">
+                                    <tree>
+                                        <field name="level"/>
+                                        <field name="employee_approve_id"/>
+                                        <field name="commentary"/>
+                                        <field name="state" string="Estado"/>
+                                        <field name="send" string="Enviado"/>
+                                        <field name="processed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="employee_hour_extra_approval_request_view_search">
+            <field name="name">employee.hour.extra.approval.request.search</field>
+            <field name="model">employee.hour.extra.approval.request</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_requests_id" string="Colaborador"/>
+                    <field name="department_employee_requests_id" string="Departamento"/>
+                    <field name="state" string="Estado"/>
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+                    <separator />
+                    <filter name="filter_draft" string="Borrador" domain="[('state', '=','draft')]"/>
+                    <filter name="filter_pending" string="Pendiente" domain="[('state', '=','pending')]"/>
+                    <filter name="filter_cancelled" string="Cancelado" domain="[('state', '=','cancelled')]"/>
+                    <filter name="filter_approved" string="Aprobado" domain="[('state', '=','approved')]"/>
+                    <filter name="filter_rejected" string="Rechazado" domain="[('state', '=','rejected')]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                        <filter name="group_department_employee_requests_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_requests_id'}"/>
+                        <filter name="group_employee_requests_id" string="Colaborador"
+                                context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_state" string="Estado" context="{'group_by' : 'state'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="employee_hour_extra_approval_request_action_my">
+            <field name="name">Mis solicitudes de aprobación de horas extras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.hour.extra.approval.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+            <field name="context">{
+                    'invisible_employee_requests_id': True,
+                    "search_default_group_state": 1,
+                    "create_edit_without_restrictions": False,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis solicitudes de aprobación de horas extras.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="employee_hour_extra_approval_request_action_all">
+            <field name="name">Todas las solicitudes de aprobación de horas extras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.hour.extra.approval.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                'invisible_employee_requests_id': False,
+                "search_default_group_attendance_period_id": 1,
+                "create_edit_without_restrictions": True,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Todas las solicitudes de aprobación de horas extras.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hour_extra_approval_request_action_notifications_to_process">
+            <field name="name">Notificaciones por procesar para solicitudes de aprobación de hora extra</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'employee.hour.extra.approval.request'),
+                ('user_employee_approve_id', '=',uid),
+                ('send', '=',True),
+                ('state', '=','pending'),
+                ('processed', '=',False)
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Notificaciones por procesar para solicitudes de aprobación de horas extras.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hour_extra_approval_request_action_notifications_all">
+            <field name="name">Todas las notificaciones para solicitudes de aprobación de hora extra</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'employee.hour.extra.approval.request')
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Todas las notificaciones para solicitudes de aprobación de horas extras.
+                </p>
+            </field>
+        </record>
+        <!--employee.hour.extra.approval.request-->
+
+        <!--hr.employee.hour.night-->
+        <record model="ir.ui.view" id="hr_employee_hour_night_tree">
+            <field name="name">hr.employee.hour.night.tree</field>
+            <field name="model">hr.employee.hour.night</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                    <field name="attendance_period_id"/>
+                    <field name="department_employee_id"/>
+                    <field name="hour_night_id"/>
+                    <field name="percentage_increase"/>
+                    <field name="date"/>
+                    <field name="amount_hd"/>
+                    <field name="amount_hms"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_hour_night_form">
+            <field name="name">hr.employee.hour.night.form</field>
+            <field name="model">hr.employee.hour.night</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <sheet>
+                        <h1>
+                            <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                        </h1>
+                        <h1>
+                            <field name="attendance_period_id"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="department_employee_id"/>
+                                <field name="hour_night_id"/>
+                                <field name="amount_hd"/>
+                                <field name="amount_hms"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="percentage_increase"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_hour_night_search">
+            <field name="name">hr.employee.hour.night.search</field>
+            <field name="model">hr.employee.hour.night</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+
+                    <field name="date"/>
+                    <filter name="filter_last_period" string="Último periodo"/>
+                    <separator />
+                    <filter string="Fecha" name="filter_date" date="date"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_hour_night_action_my">
+            <field name="name">Mis horas nocturnas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.night</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_group_attendance_period_id": 1,
+            }</field>
+
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis horas nocturnas.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_hour_night_action_from_my_department">
+            <field name="name">Horas nocturnas de mi departamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.night</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Horas nocturnas de mi departamento.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_hour_night_action_all">
+            <field name="name">Horas nocturnas de todos los colaboradores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.hour.night</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_group_department_employee_id": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Horas nocturnas de todos los colaboradores.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.hour.night-->
+
+        <!--hr.employee.absence-->
+        <record model="ir.ui.view" id="hr_employee_absence_tree">
+            <field name="name">hr.employee.absence.tree</field>
+            <field name="model">hr.employee.absence</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                    <field name="attendance_period_id"/>
+                    <field name="department_employee_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_absence_form">
+            <field name="name">hr.employee.absence.form</field>
+            <field name="model">hr.employee.absence</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                                <field name="department_employee_id"/>
+                            </group>
+                            <group>
+                                <field name="attendance_period_id"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_absence_search">
+            <field name="name">hr.employee.absence.search</field>
+            <field name="model">hr.employee.absence</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+                    <field name="date"/>
+                    <filter string="Fecha" name="filter_date" date="date"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_absence_action_my">
+            <field name="name">Mis ausencias</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.absence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_group_attendance_period_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis ausencias.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_absence_action_from_my_department">
+            <field name="name">Ausencias de mi departamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.absence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Ausencias de mi departamento.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_absence_action_all">
+            <field name="name">Ausencias de todos los colaboradores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.absence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_group_department_employee_id": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Ausencias de todos los colaboradores.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.absence-->
+
+        <!--hr.employee.delay-->
+        <record model="ir.ui.view" id="hr_employee_delay_tree">
+            <field name="name">hr.employee.delay.tree</field>
+            <field name="model">hr.employee.delay</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                    <field name="attendance_period_id"/>
+                    <field name="department_employee_id"/>
+                    <field name="date"/>
+                    <field name="event"/>
+                    <field name="amount_hd"/>
+                    <field name="amount_hms"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_delay_form">
+            <field name="name">hr.employee.delay.form</field>
+            <field name="model">hr.employee.delay</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" invisible="context.get('invisible_employee_id',False)"/>
+                                <field name="department_employee_id"/>
+                                <field name="attendance_period_id"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="event"/>
+                                <field name="amount_hd"/>
+                                <field name="amount_hms"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_delay_search">
+            <field name="name">hr.employee.delay.search</field>
+            <field name="model">hr.employee.delay</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+                    <field name="date"/>
+                    <filter string="Fecha" name="filter_date" date="date"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_delay_action_my">
+            <field name="name">Mis atrasos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.delay</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_id', '=',uid)]</field>
+            <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_group_attendance_period_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Mis atrasos.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_delay_action_from_my_department">
+            <field name="name">Atrasos de mi departamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.delay</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_manager_department_employee_id', '=',uid)]</field>
+            <field name="context">{
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Atrasos de mi departamento.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_employee_delay_action_all">
+            <field name="name">Atrasos de todos los colaboradores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.delay</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_group_department_employee_id": 1,
+                "search_default_group_employee_id": 1,
+                "search_default_group_attendance_period_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Atrasos de todos los colaboradores.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.delay-->
+
+        <!--hr.employee.period.summary-->
+        <record model="ir.ui.view" id="hr_employee_period_summary_tree">
+            <field name="name">hr.employee.period.summary.tree</field>
+            <field name="model">hr.employee.period.summary</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="attendance_period_id"/>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_period_summary_form">
+            <field name="name">hr.employee.period.summary.form</field>
+            <field name="model">hr.employee.period.summary</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <sheet>
+                        <h1>
+                            <field name="attendance_period_id"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                            </group>
+                            <group>
+                                <field name="department_employee_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Resumen de horas extras">
+                                <field
+                                        name="hour_extra_sumary_ids"
+                                        nolabel="1">
+                                    <tree editable="bottom" create="false">
+                                        <field name="period_summary_id" invisible="1"/>
+                                        <field name="hour_extra_id"/>
+                                        <field name="amount_hd"/>
+                                        <field name="amount_hms"/>
+                                        <field name="percentage"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Resumen de horas nocturnas">
+                                <field
+                                        name="hour_night_sumary_ids"
+                                        nolabel="1">
+                                    <tree editable="bottom" create="false">
+                                        <field name="period_summary_id" invisible="1"/>
+                                        <field name="hour_night_id"/>
+                                        <field name="amount_hd"/>
+                                        <field name="amount_hms"/>
+                                        <field name="percentage"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_period_summary_search">
+            <field name="name">hr.employee.period.summary.search</field>
+            <field name="model">hr.employee.period.summary</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="department_employee_id"/>
+
+                    <filter name="filter_last_period" string="Último periodo"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_attendance_period_id" string="Período"
+                                context="{'group_by' : 'attendance_period_id'}"/>
+                        <filter name="group_department_employee_id" string="Departamento"
+                                context="{'group_by' : 'department_employee_id'}"/>
+                        <filter name="group_employee_id" string="Colaborador"
+                                context="{'group_by' : 'employee_id'}"/>
+
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_period_summary">
+            <field name="name">Resumen del período</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.period.summary</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                "search_default_group_attendance_period_id": 1,
+                "search_default_group_department_employee_id": 1,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Resumen del período.
+                </p>
+            </field>
+        </record>
+        <!--hr.employee.period.summary-->
+
+        <!--employee.upload.wizard-->
+
+        <record model="ir.ui.view" id="wizard_form_view_inherit">
+            <field name="name">wizard_form_view_inherit</field>
+            <field name="model">employee.upload.wizard</field>
+            <field name="inherit_id" ref="to_attendance_device.wizard_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='device_ids']" position="replace">
+                    <field name="device_ids" domain="[('state', '!=', 'cancelled')]">
+                        <tree>
+                            <field name="state" invisible="1"/>
+                            <field name="name"/>
+                            <field name="location_id"/>
+                            <field name="ip"/>
+                            <field name="device_name"/>
+                            <field name="oem_vendor"/>
+                            <field name="tz"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="state" invisible="1"/>
+                                    <field name="name"/>
+                                    <field name="location_id"/>
+                                    <field name="ip"/>
+                                </group>
+                                <group>
+                                    <field name="device_name"/>
+                                    <field name="oem_vendor"/>
+                                    <field name="tz"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="action_employee_upload_hr_dr_schedule" model="ir.actions.act_window">
+			<field name="name">Upload to Attendance Machine</field>
+            <field name="type">ir.actions.act_window</field>
+			<field name="res_model">employee.upload.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="view_id" ref="to_attendance_device.wizard_form_view"/>
+        </record>
+        <!--employee.upload.wizard-->
+
+    </data>
+</odoo>

@@ -1,0 +1,130 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="date_value" eval="(DateTime.today() + relativedelta(year=1901,month=12,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation2"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="date_value" eval="(DateTime.today() + relativedelta(year=1901,month=12,day=31)).strftime('%Y-%m-%d')"/>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation3"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">15</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation3"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">15</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation4"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">30</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation4"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">30</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations13">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation5"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">30</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations15">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation6"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations17">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations19">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations21">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_planning_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations23">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_vacations.model_hr_vacation_execution_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations25">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation10"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">360</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations27">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">30</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations29">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation12"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">22</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations31">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation13"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">8</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations33">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations35">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation18"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">2</field>
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureVacations37">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_vacations.NomenclatureVacation19"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+        </record>
+    </data>
+</odoo>

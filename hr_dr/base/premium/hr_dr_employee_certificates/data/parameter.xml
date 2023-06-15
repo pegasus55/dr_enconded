@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="employee_certificates_signature_mode" model="ir.config_parameter">
+            <field name="key">employee.certificates.signature.mode</field>
+            <field name="value">without_signature</field>
+        </record>
+        <record id="certificate_with_income_based_on" model="ir.config_parameter">
+            <field name="key">certificate.with.income.based_on</field>
+            <field name="value">salary</field>
+        </record>
+        <record id="certificate_payroll_to_analyze" model="ir.config_parameter">
+            <field name="key">certificate.payroll.to.analyze</field>
+            <field name="value"/>
+        </record>
+        <record id="certificate_salary_rule_code_to_analyze" model="ir.config_parameter">
+            <field name="key">certificate.salary.rule.code.to.analyze</field>
+            <field name="value"/>
+        </record>
+    </data>
+</odoo>

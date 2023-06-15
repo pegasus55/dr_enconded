@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <menuitem id="menu_hr_schedule_main" name="Horarios" web_icon="hr_dr_schedule,static/description/icon.png" sequence="76" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+
+        <menuitem id="menu_hr_schedule" name="Horarios" parent="menu_hr_schedule_main" sequence="10" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor"/>
+            <menuitem id="menu_hr_schedule_all" name="Horarios" parent="menu_hr_schedule" sequence="10" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" action="hr_dr_schedule.schedule_action_all"/>
+
+        <menuitem id="menu_assigned_shifts" name="Turnos" parent="menu_hr_schedule_main" sequence="20" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_assigned_shifts" name="Mío" parent="menu_assigned_shifts" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.assigned_shifts_action_my"/>
+            <menuitem id="menu_assigned_shifts_from_my_department" name="De mi departamento" parent="menu_assigned_shifts" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.assigned_shifts_action_from_my_department"/>
+            <menuitem id="menu_all_assigned_shifts" name="Todo" parent="menu_assigned_shifts" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.assigned_shifts_action_all"/>
+
+        <menuitem id="menu_devices_root" name="Dispositivos" parent="menu_hr_schedule_main" sequence="25" groups="hr_dr_schedule.hr_dr_schedule_group_responsible"/>
+            <menuitem id="menu_devices" name="Dispositivos" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="10" action="to_attendance_device.attendance_device_list_action"/>
+            <menuitem id="menu_attendance_state" name="Estados de asistencia" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="20" action="to_attendance_device.attendance_state_tree_action"/>
+            <menuitem id="menu_attendance_activity" name="Actividades de asistencia" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="to_attendance_device.attendance_activity_tree_action"/>
+            <menuitem id="menu_finger_template" name="Huellas" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="40" action="to_attendance_device.action_finger_template"/>
+            <menuitem id="menu_attendance_device_user" name="Usuarios" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="50" action="to_attendance_device.device_user_list_action"/>
+            <menuitem id="menu_synchronize_data" name="Sincronizar" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="60" action="to_attendance_device.action_sync_device_attendance"/>
+            <menuitem id="menu_load_collaborators" name="Cargar colaboradores" parent="menu_devices_root" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="70" action="action_employee_upload_hr_dr_schedule"/>
+
+        <menuitem id="menu_attendance" name="Marcaciones" parent="menu_hr_schedule_main" sequence="30" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_attendance" name="Mío" parent="menu_attendance" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.action_user_attendance_my"/>
+            <menuitem id="menu_attendance_from_my_department" name="De mi departamento" parent="menu_attendance" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.action_user_attendance_from_my_department"/>
+            <menuitem id="menu_all_attendance" name="Todo" parent="menu_attendance" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.action_user_attendance_all"/>
+
+            <menuitem parent="menu_attendance" id="menu_attendance_request" name="Solicitud de aprobación" sequence="40"/>
+                <menuitem id="menu_my_attendance_request" name="Mío" parent="menu_attendance_request" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.action_user_attendance_request_my"/>
+                <menuitem id="menu_attendance_request_from_my_department" name="De mi departamento" parent="menu_attendance_request" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.action_user_attendance_request_from_my_department"/>
+                <menuitem id="menu_all_attendance_request" name="Todo" parent="menu_attendance_request" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.action_user_attendance_request_all"/>
+
+            <menuitem parent="menu_attendance" id="menu_attendance_request_notifications" name="Notificaciones" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="50"/>
+                <menuitem id="menu_attendance_request_notifications_to_process" name="Por procesar" parent="menu_attendance_request_notifications" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.action_user_attendance_request_notifications_to_process"/>
+                <menuitem id="menu_all_attendance_request_notifications" name="Todo" parent="menu_attendance_request_notifications" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="20" action="hr_dr_schedule.action_user_attendance_request_notifications_all"/>
+
+        <menuitem id="menu_hr_employee_absence" name="Ausencias" parent="menu_hr_schedule_main" sequence="40" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_absence" name="Mío" parent="menu_hr_employee_absence" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.hr_employee_absence_action_my"/>
+            <menuitem id="menu_absence_from_my_department" name="De mi departamento" parent="menu_hr_employee_absence" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.hr_employee_absence_action_from_my_department"/>
+            <menuitem id="menu_all_absence" name="Todo" parent="menu_hr_employee_absence" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.hr_employee_absence_action_all"/>
+
+        <menuitem id="menu_hr_employee_delay" name="Atrasos" parent="menu_hr_schedule_main" sequence="50" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_delay" name="Mío" parent="menu_hr_employee_delay" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.hr_employee_delay_action_my"/>
+            <menuitem id="menu_delay_from_my_department" name="De mi departamento" parent="menu_hr_employee_delay" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.hr_employee_delay_action_from_my_department"/>
+            <menuitem id="menu_all_delay" name="Todo" parent="menu_hr_employee_delay" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.hr_employee_delay_action_all"/>
+
+        <menuitem id="menu_hr_employee_hour_extra" name="Horas extras" parent="menu_hr_schedule_main" sequence="60" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_hour_extra" name="Mío" parent="menu_hr_employee_hour_extra" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.hr_employee_hour_extra_action_my"/>
+            <menuitem id="menu_hour_extra_from_my_department" name="De mi departamento" parent="menu_hr_employee_hour_extra" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.hr_employee_hour_extra_action_from_my_department"/>
+            <menuitem id="menu_all_hour_extra" name="Todo" parent="menu_hr_employee_hour_extra" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.hr_employee_hour_extra_action_all"/>
+
+            <menuitem parent="menu_hr_employee_hour_extra" id="menu_employee_hour_extra_approval_request" name="Solicitud de aprobación" sequence="40"/>
+                <menuitem id="menu_my_employee_hour_extra_approval_request" name="Mío" parent="menu_employee_hour_extra_approval_request" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="10" action="hr_dr_schedule.employee_hour_extra_approval_request_action_my"/>
+                <menuitem id="menu_all_employee_hour_extra_approval_request" name="Todo" parent="menu_employee_hour_extra_approval_request" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="20" action="hr_dr_schedule.employee_hour_extra_approval_request_action_all"/>
+
+            <menuitem parent="menu_hr_employee_hour_extra" id="menu_hour_extra_approval_request_notifications" name="Notificaciones" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="50"/>
+                <menuitem id="menu_hour_extra_approval_request_for_approve" name="Por procesar" parent="menu_hour_extra_approval_request_notifications" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.hour_extra_approval_request_action_notifications_to_process"/>
+                <menuitem id="menu_all_hour_extra_approval_request_for_approve" name="Todo" parent="menu_hour_extra_approval_request_notifications" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="20" action="hr_dr_schedule.hour_extra_approval_request_action_notifications_all"/>
+
+        <menuitem id="menu_hr_employee_hour_night" name="Horas nocturnas" parent="menu_hr_schedule_main" sequence="70" groups="hr_dr_schedule.hr_dr_schedule_group_employee"/>
+            <menuitem id="menu_my_hour_night" name="Mío" parent="menu_hr_employee_hour_night" groups="hr_dr_schedule.hr_dr_schedule_group_employee" sequence="10" action="hr_dr_schedule.hr_employee_hour_night_action_my"/>
+            <menuitem id="menu_hour_night_from_my_department" name="De mi departamento" parent="menu_hr_employee_hour_night" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="20" action="hr_dr_schedule.hr_employee_hour_night_action_from_my_department"/>
+            <menuitem id="menu_all_hour_night" name="Todo" parent="menu_hr_employee_hour_night" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="30" action="hr_dr_schedule.hr_employee_hour_night_action_all"/>
+
+        <menuitem id="menu_hr_employee_period_summary_root" name="Períodos de asistencia" parent="menu_hr_schedule_main" sequence="80" groups="hr_dr_schedule.hr_dr_schedule_group_responsible"/>
+            <menuitem id="menu_hr_employee_period" name="Períodos" parent="menu_hr_employee_period_summary_root" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="5" action="hr_dr_management.attendance_period_list_action"/>
+            <menuitem id="menu_hr_employee_period_summary" name="Resumen del período" parent="menu_hr_employee_period_summary_root" groups="hr_dr_schedule.hr_dr_schedule_group_responsible" sequence="10" action="hr_dr_schedule.hr_employee_period_summary"/>
+
+        <record id="schedule_configuration_settings_action" model="ir.actions.act_window">
+            <field name="name">Ajustes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'hr_dr_schedule'}</field>
+        </record>
+        <menuitem id="menu_schedule_configuration" name="Configuración" parent="menu_hr_schedule_main" groups="hr_dr_schedule.hr_dr_schedule_group_manager" sequence="90"/>
+            <menuitem id="menu_configuration_settings"
+                name="Ajustes"
+                parent="menu_schedule_configuration"
+                sequence="10"
+                action="schedule_configuration_settings_action"
+                groups="hr_dr_schedule.hr_dr_schedule_group_manager"/>
+
+            <record model="ir.actions.act_window" id="hr_normative_nomenclator_list_action_schedule">
+                <field name="name">Nomenclatures by regulations</field>
+                <field name="res_model">hr.normative.nomenclature</field>
+                <field name="view_mode">tree,form</field>
+                <field name="domain">[('nomenclature_id.module_name', '=', 'hr_dr_schedule')]</field>
+                <field name="help" type="html">
+                    <p class="oe_view_nocontent_smiling_face">Define the value of the nomenclators by regulations.
+                    </p>
+                </field>
+            </record>
+            <menuitem id="menu_configuration_normative_nomenclator_schedule" name="Nomenclatures by regulations" parent="menu_schedule_configuration" action="hr_normative_nomenclator_list_action_schedule" sequence="15" groups="hr_dr_schedule.hr_dr_schedule_group_manager"/>
+
+    </data>
+</odoo>

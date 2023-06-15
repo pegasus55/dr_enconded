@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<odoo>
+  <template id="report_vacation_execution_request_document">
+    <t t-call="web.external_layout">
+      <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
+      <div class="page">
+        <div class="oe_structure" />
+        <br/>
+        <br/>
+        <div class="container-fluid">
+          <h3 class="text-center mb-5">
+            <span>SOLICITUD DE VACACIONES</span><br/>
+          </h3>
+
+            <div class="col-12 text-right">
+              <t t-if="doc.employee_requests_id.company_id.city">
+                <span t-esc="doc.employee_requests_id.company_id.city"/>,
+              </t>
+              <span t-esc="doc.employee_requests_id.format_long_date_sp(datetime.date.today())"/><br/>
+            </div>
+
+            <div class="col-12">
+              <p>De mi consideración:</p>
+            </div>
+
+            <div class="col-12">
+              <p>Yo, <span t-field="doc.employee_requests_id.name"/> con cédula N° <span t-field="doc.employee_requests_id.identification_id"/> que desempeño el cargo de
+              <span t-field="doc.employee_requests_id.job_id.position_id.name"/> para el departamento <span t-esc="doc.employee_requests_id.department_id.name"/> en la empresa <span t-esc="res_company.name"/> desde
+              <span t-esc="doc.employee_requests_id.last_company_entry_date.strftime(doc.employee_requests_id.get_date_format())"/>.
+              </p><br/>
+              <p>
+                Solicito a usted se me conceda(n) <span t-field="doc.number_of_days"/> día(s) de mis vacaciones, correspondientes al(los) período(s) <span t-esc="doc.get_periods()"/>
+              </p><br/>
+
+              <p><strong>Las cuales las tomaré de acuerdo al siguiente detalle:</strong></p><br/>
+            </div>
+
+            <div class="col-12">
+              <div class="col-4 d-flex">
+                <strong>Fecha de inicio:</strong>
+                <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_from" t-options='{"widget": "date"}'/>
+              </div>
+              <div class="col-4 d-flex">
+                <strong>Fecha de fin:</strong>
+                <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_to" t-options='{"widget": "date"}'/>
+              </div>
+              <div class="col-4 d-flex">
+                <strong>Fecha de incorporación:</strong>
+                <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_incorporation" t-options='{"widget": "date"}'/>
+              </div>
+            </div>
+
+          <br/>
+
+
+
+            <div class="col-12">
+              <p>Por la atención a la presente, le anticipo mis agradecimientos.</p>
+            </div>
+
+          <br/>
+
+
+
+          <t t-set="hr_responsible" t-value="doc.employee_requests_id.get_hr_dr_management_responsible()"/>
+          <t t-set="has_hr_responsible" t-value="hr_responsible != False"/>
+
+          <div class="row mt-3">
+
+            <div class="col-4"></div>
+
+            <div class="col-4 text-center border-top border-dark">
+              <span t-field="doc.employee_requests_id.name"/><br/>
+              Colaborador
+            </div>
+
+            <div class="col-4"></div>
+
+          </div>
+
+
+            <div class="col-12">
+              <strong>
+                <p>APROBADO POR:</p>
+              </strong>
+            </div>
+
+          <div class="row mt-5">
+            <div class="col-4 text-center border-top border-dark">
+              <t t-if="doc.employee_requests_id.department_id">
+                <t t-if="doc.employee_requests_id != doc.employee_requests_id.department_id.manager_id">
+                  <div t-if="doc.employee_requests_id.get_vacations_signature_mode()=='uploaded_image'">
+                    <div class="col-12">
+                        <img t-if="doc.employee_requests_id.department_id.manager_id.signature" t-att-src="image_data_uri(doc.employee_requests_id.department_id.manager_id.signature)" style="max-height:80pt;max-width:100%" alt="Signature" class="mx-auto d-block"/>
+                    </div>
+                  </div>
+                  <hr/>
+                  <span t-field="doc.employee_requests_id.department_id.manager_id"/><br/>
+                </t>
+                <t t-else="">
+                  <t t-if="doc.employee_requests_id.department_id.parent_id">
+                    <div t-if="doc.employee_requests_id.get_vacations_signature_mode()=='uploaded_image'">
+                      <div class="col-12">
+                          <img t-if="doc.employee_requests_id.department_id.parent_id.manager_id.signature" t-att-src="image_data_uri(doc.employee_requests_id.department_id.parent_id.manager_id.signature)" style="max-height:80pt;max-width:100%" alt="Signature" class="mx-auto d-block"/>
+                      </div>
+                    </div>
+                    <hr/>
+                    <span t-field="doc.employee_requests_id.department_id.parent_id.manager_id"/><br/>
+                  </t>
+                </t>
+              </t>
+              Jefe Inmediato
+            </div>
+
+            <div class="col-4"></div>
+
+            <t t-if="has_hr_responsible">
+              <div class="col-4 text-center border-top border-dark">
+                <div t-if="doc.employee_requests_id.get_vacations_signature_mode()=='uploaded_image'" class="row">
+                  <div class="col-12">
+                      <img t-if="hr_responsible.signature" t-att-src="image_data_uri(hr_responsible.signature)" style="max-height:80pt;max-width:100%" alt="Signature" class="mx-auto d-block"/>
+                  </div>
+                </div>
+                  <hr/>
+                <span t-esc="hr_responsible.name"/><br/>
+                <span t-esc="hr_responsible.job_id.position_id.name"/><br/>
+                <span t-esc="hr_responsible.department_id.name"/><br/>
+              </div>
+            </t>
+            <t t-else="">
+              <div class="col-4 text-center border-top border-dark">
+                Dirección de Talento Humano
+              </div>
+            </t>
+
+          </div>
+
+
+
+
+
+
+<!--          <div class="row mb-1">-->
+<!--            <div class="col-12 font-weight-bold">SOLICITUD DE VACACIONES</div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-12 d-flex">-->
+<!--              <span>Fecha de la solicitud:</span>-->
+<!--&lt;!&ndash;              <span class="pl-3 text-muted flex-grow-1" t-esc="context_timestamp(doc.date_confirmation).strftime('%d/%m/%Y %H:%M:%S')"/>&ndash;&gt;-->
+<!--&lt;!&ndash;              <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>&ndash;&gt;-->
+<!--&lt;!&ndash;              <span class="pl-3 text-muted flex-grow-1" t-esc="format_datetime(doc.create_date, tz=doc.employee_requests_id.tz, dt_format='dd/MM/yyyy HH:mm:ss')"/>&ndash;&gt;-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-12 d-flex">-->
+<!--              <span>Nombre del colaborador:</span>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.name"/>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <span>Departamento:</span>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.department_id.name"></span>-->
+<!--            </div>-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <span>Identificación:</span>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.identification_id"/>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row mt-2 mb-1">-->
+<!--            <div class="col-12 font-weight-bold">PERÍODO DE VACACIONES</div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <strong>DESDE:</strong>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_from" t-options='{"widget": "date"}'/>-->
+<!--            </div>-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <strong>HASTA:</strong>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_to" t-options='{"widget": "date"}'/>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <span>Día de ingreso:</span>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.date_incorporation" t-options='{"widget": "date"}'/>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row mb-5">-->
+<!--            <div class="col-6 d-flex">-->
+<!--              <span>Nº de días:</span>-->
+<!--              <span class="pl-3 text-muted flex-grow-1" t-field="doc.number_of_days"/>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row mt-5">-->
+<!--            <div class="col-4 text-center border-top border-dark">-->
+<!--              <span t-field="doc.employee_requests_id.name"/><br/>-->
+<!--              Colaborador-->
+<!--            </div>-->
+<!--            <div class="col-4"></div>-->
+<!--            <div class="col-4 text-center border-top border-dark">-->
+<!--              <t t-if="doc.employee_requests_id.department_id">-->
+<!--                <t t-if="doc.employee_requests_id != doc.employee_requests_id.department_id.manager_id">-->
+<!--                  <span t-field="doc.employee_requests_id.department_id.manager_id"/><br/>-->
+<!--                </t>-->
+<!--                <t t-else="">-->
+<!--                  <t t-if="doc.employee_requests_id.department_id.parent_id">-->
+<!--                    <span t-field="doc.employee_requests_id.department_id.parent_id.manager_id"/><br/>-->
+<!--                  </t>-->
+<!--                </t>-->
+
+<!--              </t>-->
+<!--              Jefe Inmediato-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--          <div class="row mt-3">-->
+<!--            <div class="col-4"></div>-->
+<!--            <div class="col-4 text-center border-top border-dark">-->
+<!--              DESARROLLO ORGANIZACIONAL-->
+<!--            </div>-->
+<!--          </div>-->
+
+        </div>
+
+        <div class="oe_structure"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="report_vacation_execution_request">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_vacations.report_vacation_execution_request_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+  <record id="action_vacation_execution_request_report" model="ir.actions.report">
+    <field name="name">Vacation execution request</field>
+    <field name="model">hr.vacation.execution.request</field>
+    <field name="report_type">qweb-html</field>
+    <field name="report_name">hr_dr_vacations.report_vacation_execution_request</field>
+    <field name="report_file">hr_dr_vacations.report_vacation_execution_request</field>
+    <field name="print_report_name">'Solicitud de vacaciones %s' % (object.employee_requests_id.name)</field>
+  </record>
+
+  <report id="action_vacation_execution_request_report"
+    string="Vacation execution request"
+    model="hr.vacation.execution.request"
+    report_type="qweb-html"
+    name="hr_dr_vacations.report_vacation_execution_request"
+    file="hr_dr_vacations.report_vacation_execution_request"
+    print_report_name="'Vacation execution request %s' % (object.employee_requests_id.name)"
+    groups="hr_dr_vacations.hr_dr_vacations_group_employee"
+    menu="False"
+  />
+
+</odoo>
