@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="dr_license_customer.appList" owl="1">
+    <div>
+      <ul class="list-group" t-att-id="props.id" t-ref="list">
+        <t t-if="total > 0">
+          <t t-foreach="content" t-as="item" t-key="item">
+            <li class="list-group-item"><span class="fa fa-archive"/>&nbsp;&nbsp;<span class="px-2" t-esc="item"/></li>
+          </t>
+          <li class="list-group-item list-group-item-light font-weight-bold">
+            Total: <span t-esc="total"/>
+          </li>
+        </t>
+        <t t-else="">
+          <li class="list-group-item list-group-item-info">This license does not cover any application.</li>
+        </t>
+      </ul>
+    </div>
+  </t>
+</templates>

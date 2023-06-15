@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+        <menuitem id="menu_license_customer" name="License customer" sequence="4" groups="dr_license_customer.dr_license_customer_group_manager" web_icon="dr_license_customer,static/description/icon.png"/>
+
+        <record id="dr_license_customer_configuration_settings_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'dr_license_customer'}</field>
+        </record>
+
+        <menuitem id="menu_configuration" name="Configuration" parent="menu_license_customer" sequence="20" groups="dr_license_customer.dr_license_customer_group_manager"/>
+            <menuitem id="menu_configuration_settings" name="Settings" parent="menu_configuration" sequence="10" groups="dr_license_customer.dr_license_customer_group_manager" action="dr_license_customer_configuration_settings_action"/>
+
+    </data>
+</odoo>

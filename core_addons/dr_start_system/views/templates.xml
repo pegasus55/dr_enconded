@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <template id="login_inherit" inherit_id="web.login">
+            <xpath expr="//button[last()]" position="before">
+                <a t-if="not valid_license" href="/web/license" class="btn btn-secondary btn-block">
+                    <i class="fa fa-repeat"/>&amp;nbsp;Renew license
+                </a>
+            </xpath>
+        </template>
+
+        <template id="license_request">
+            <t t-call="web.html_container">
+                <t t-set="title">Renew license</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <div class="card w-50 text-white bg-dark" style="margin:50px auto;">
+                            <div class="card-header">
+                                <h4>Request license</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="oe_login_form" role="form" method="post" onsubmit="this.action = '/web/license'" action="/web/license">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="form-group">
+                                        <label for="id_number">Id. number</label>
+                                        <input type="text" placeholder="Id. number" name="id_number" id="id_number" required="required" autofocus="autofocus" autocapitalize="none" class="form-control"/>
+                                    </div>
+
+                                     <p class="alert alert-danger" t-if="error" role="alert" style="{max-height: 250px; overflow-y: scroll;}">
+                                        <t t-esc="error"/>
+                                    </p>
+
+                                    <div class="clearfix text-center mb-1 pt-3">
+                                        <button type="submit" class="btn btn-dark mx-2">Request</button>
+                                        <a class="btn btn-light mx-2" href="/web/login">Back</a>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
