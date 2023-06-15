@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="la_default_credit_account_id" model="ir.config_parameter">
+            <field name="key">la.default.credit.account</field>
+            <field name="value"></field>
+        </record>
+        <record id="la_default_debit_account_id" model="ir.config_parameter">
+            <field name="key">la.default.debit.account</field>
+            <field name="value"></field>
+        </record>
+        <record id="la_default_account_analytic_account_id" model="ir.config_parameter">
+            <field name="key">la.default.account.analytic.account</field>
+            <field name="value"></field>
+        </record>
+        <record id="la_default_journal_id" model="ir.config_parameter">
+            <field name="key">la.default.journal</field>
+            <field name="value"></field>
+        </record>
+    </data>
+</odoo>

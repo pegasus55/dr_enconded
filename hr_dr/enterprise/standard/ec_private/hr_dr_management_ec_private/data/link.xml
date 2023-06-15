@@ -1,0 +1,9 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.link" id="Link3">
+            <field name="name">http://www.trabajo.gob.ec/wp-content/uploads/downloads/2012/11/C%C3%B3digo-de-Tabajo-PDF.pdf</field>
+            <field name="description">Código del Trabajo.</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>
