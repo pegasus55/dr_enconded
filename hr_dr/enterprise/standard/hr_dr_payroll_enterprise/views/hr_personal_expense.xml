@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="personal_expense_view_form_inherit" model="ir.ui.view">
+		<field name="name">personal.expense.view.form.inherit</field>
+		<field name="model">hr.personal.expense</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.personal_expense_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form//header" position="inside">
+				<button name="action_validate" type="object" states="draft" string="Validate" class="oe_highlight" groups="hr_payroll.group_hr_payroll_manager"/>
+				<button name="action_draft" type="object" states="done" string="Send to draft" class="oe_highlight" groups="hr_payroll.group_hr_payroll_manager"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>
