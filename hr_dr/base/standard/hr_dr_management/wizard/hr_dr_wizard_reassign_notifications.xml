@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="reassign_notifications_form">
+            <field name="name">Reassign notifications form</field>
+            <field name="model">hr.reassign.notifications</field>
+            <field name="arch" type="xml">
+                <form id="form.hr.reassign.notifications">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="current_approver_id" options="{'no_create_edit': True}"/>
+                            </group>
+                            <group>
+                                <field name="new_approver_id" options="{'no_create_edit': True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="model_ids" widget="many2many_tags" attrs="{'invisible': [('current_approver_id', '=', False)]}"/>
+                        </group>
+
+                        <field name="notifications_ids" nolabel="nolabel=1" options="{'no_create': True}" editable="bottom">
+                            <tree>
+                                <field name="res_model_id"/>
+                                <field name="employee_requests_id"/>
+                                <field name="employee_approve_id"/>
+                                <field name="level"/>
+                                <field name="send"/>
+                                <field name="processed"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+
+                        <footer>
+                            <button name="action_reassign_notifications" string="Accept" type="object"
+                                    class="btn-primary"/>
+                            <button special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="reassign_notifications_action">
+            <field name="name">Reassign notifications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.reassign.notifications</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Reassign notifications.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_notification_reassign" name="Reassign notifications" parent="menu_notification" action="hr_dr_management.reassign_notifications_action" groups="hr_dr_management.hr_dr_management_group_supervisor" sequence="40"/>
+
+
+    </data>
+</odoo>

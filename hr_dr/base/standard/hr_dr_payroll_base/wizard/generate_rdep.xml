@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="generate_rdep_form" model="ir.ui.view">
+            <field name="name">Generate RDEP</field>
+            <field name="model">generate.rdep</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Generate RDEP">
+                    <field name="state" invisible="1"/>
+                    <separator string="The information of the collaborators of the company to which the current user belongs will be exported." colspan="4"/>
+                    <group states="choose" col="2">
+                        <field name="company_id" required="1" options="{'no_open': True}" groups="base.group_multi_company"/>
+                        <field name="year"/>
+                        <field name="validate"/>
+                        <field name="establishment_number"/>
+                    </group>
+                    <group states="export">
+                        <separator string="File generated successfully." colspan="4"/>
+                        <field name="xml_file_name" invisible="1"/>
+                        <field name="xml_file" filename="xml_file_name" widget="download_link" readonly="1"/>
+                    </group>
+                    <group states="export_error">
+                        <separator string="XML validation error." colspan="4"/>
+                        <field name="error_file_name" invisible="1"/>
+                        <field name="error_file" filename="error_file_name" widget="download_link" readonly="1"/>
+                        <field name="xml_file_name" invisible="1"/>
+                        <field name="xml_file" filename="xml_file_name" widget="download_link" readonly="1"/>
+                    </group>
+                    <footer class="oe_right">
+                        <button name="action_generate_rdep" states="choose" string="Generate REDP" type="object"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_generate_rdep" model="ir.actions.act_window">
+            <field name="name">Generate RDEP</field>
+            <field name="res_model">generate.rdep</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

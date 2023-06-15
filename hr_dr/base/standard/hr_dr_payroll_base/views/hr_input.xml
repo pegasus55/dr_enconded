@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <record id="hr_input_view_form" model="ir.ui.view">
+            <field name="name">hr.input.view.form</field>
+            <field name="model">hr.input</field>
+            <field name="arch" type="xml">
+                <form string="Input">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
+                                <field name="identification" attrs="{'readonly':[('state','=',False)]}"/>
+                                <field name="employee_id" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="amount" attrs="{'readonly':[('state','=',False)]}"/>
+                                <field name="company_id" groups="base.group_multi_company" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
+                                <field name="state" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_input_view_tree" model="ir.ui.view">
+            <field name="name">Input</field>
+            <field name="model">hr.input</field>
+            <field name="arch" type="xml">
+                <tree sample="1" editable="top" decoration-muted="state == False" decoration-info="state == True">
+                    <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
+                    <field name="employee_id" widget="many2one_avatar_employee" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"/>
+                    <field name="amount" widget='monetary' attrs="{'readonly':[('state','=',False)]}"/>
+                    <field name="company_id" groups="base.group_multi_company" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_input_view_search" model="ir.ui.view">
+            <field name="name">hr.input.view.search</field>
+            <field name="model">hr.input</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="identification"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_date" string="Date" domain="[]" context="{'group_by':'date:month'}"/>
+                        <filter name="group_by_employee_id" string="Collaborator" domain="[]" context="{'group_by':'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <act_window id="hr_input_action"
+            name="Input"
+            res_model="hr.input"
+            view_mode="tree,form"
+            />
+
+    </data>
+</odoo>

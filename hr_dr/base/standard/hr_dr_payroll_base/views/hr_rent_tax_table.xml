@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="rent_tax_table_view_form" model="ir.ui.view">
+		<field name="name">rent.tax.table.view.form</field>
+		<field name="model">hr.rent.tax.table</field>
+		<field name="arch" type="xml">
+			<form string="Rent tax table">
+				<header>
+					<button name="action_confirm" type="object" states="draft" string="Confirm"/>
+					<button name="action_draft" type="object" states="confirmed" string="Send to draft"/>
+					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,confirmed"/>
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="date_from" attrs="{'readonly': [('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<field name="date_to" attrs="{'readonly': [('state','!=','draft')]}"/>
+							<field name="fiscal_year" widget='integer' attrs="{'readonly': [('state','!=','draft')]}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Detail">
+							<group string="Galapagos space consumer price index">
+								<field name="galapagos_space_consumer_price_index" attrs="{'readonly': [('state','!=','draft')]}"/>
+							</group>
+							<group>
+								<group string="Basic family basket">
+									<field name="basic_family_basket" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="basic_family_basket_factor" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="bfb_total_value"/>
+								</group>
+								<group string="Basic fraction">
+									<field name="basic_fraction_factor" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="bf_total_value"/>
+								</group>
+							</group>
+							<group string="Total maximum deductibles">
+								<group>
+									<field name="basic_fraction" attrs="{'readonly': [('state','!=','draft')]}" widget='monetary'/>
+									<field name="maximum_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="maximum_deductible_fraction_g"/>
+								</group>
+								<group>
+									<field name="maximum_deductible_percentage" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="maximum_deductible_amount" widget='monetary'/>
+									<field name="maximum_deductible_amount_g" widget='monetary'/>
+								</group>
+							</group>
+							<group string="Maximum deductibles per category">
+								<group>
+									<field name="living_place_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="education_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="feeding_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="clothing_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="sightseeing_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="health_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="rare_catastrophic_orphan_diseases_deductible_fraction" attrs="{'readonly': [('state','!=','draft')]}"/>
+								</group>
+								<group>
+									<field name="living_place_deductible_amount" widget='monetary'/>
+									<field name="education_deductible_amount" widget='monetary'/>
+									<field name="feeding_deductible_amount" widget='monetary'/>
+									<field name="clothing_deductible_amount" widget='monetary'/>
+									<field name="sightseeing_deductible_amount" widget='monetary'/>
+									<field name="health_deductible_amount" widget='monetary'/>
+									<field name="rare_catastrophic_orphan_diseases_deductible_amount" widget='monetary'/>
+								</group>
+							</group>
+							<group string="Maximum deductibles per category (Galápagos)">
+								<group>
+									<field name="living_place_deductible_fraction_g"/>
+									<field name="education_deductible_fraction_g"/>
+									<field name="feeding_deductible_fraction_g"/>
+									<field name="clothing_deductible_fraction_g"/>
+									<field name="sightseeing_deductible_fraction_g"/>
+									<field name="health_deductible_fraction_g"/>
+									<field name="rare_catastrophic_orphan_diseases_deductible_fraction_g"/>
+								</group>
+								<group>
+									<field name="living_place_deductible_amount_g" widget='monetary'/>
+									<field name="education_deductible_amount_g" widget='monetary'/>
+									<field name="feeding_deductible_amount_g" widget='monetary'/>
+									<field name="clothing_deductible_amount_g" widget='monetary'/>
+									<field name="sightseeing_deductible_amount_g" widget='monetary'/>
+									<field name="health_deductible_amount_g" widget='monetary'/>
+									<field name="rare_catastrophic_orphan_diseases_deductible_amount_g" widget='monetary'/>
+								</group>
+							</group>
+							<field name="rate_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
+								<tree editable="bottom">
+									<field name="basic_fraction" widget='monetary'/>
+									<field name="excess_until" widget='monetary'/>
+									<field name="basic_fraction_tax" widget='monetary'/>
+									<field name="excess_fraction_tax"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Disability Benefit">
+							<field name="disability_benefit_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
+								<tree editable="bottom">
+									<field name="minimum_percentage"/>
+									<field name="maximum_percentage"/>
+									<field name="benefit_percentage"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="rent_tax_table_view_tree" model='ir.ui.view'>
+		<field name="name">rent.tax.table.view.tree</field>
+		<field name="model">hr.rent.tax.table</field>
+		<field name="arch" type="xml">
+			<tree string="Rent tax table">
+				<field name="fiscal_year"/>
+				<field name="basic_fraction" widget='monetary'/>
+				<field name="state"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_rent_tax_table" model="ir.actions.act_window">
+		<field name="name">Rent tax table</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.rent.tax.table</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>
