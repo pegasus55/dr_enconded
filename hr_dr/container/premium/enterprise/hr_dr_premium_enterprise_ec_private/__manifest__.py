@@ -28,7 +28,8 @@
         [
             'base',
             'dr_start_system',
-            'hr_dr_standard_ec_private',
+            # 'hr_dr_standard_ec_private',
+            'hr_dr_standard_enterprise_ec_private',
             'hr_dr_skills',
             'hr_dr_employee_certificates',
             'hr_dr_employee_notifications',
