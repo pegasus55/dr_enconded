@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="hr_rule_employee_credit" model="hr.salary.rule">
+            <field name="code">CRED_EMP_PROF</field>
+            <field name="name">Crédito Empleado Proforma</field>
+            <field name="category_id" ref="hr_rxr_payroll.salary_rule_category_02"/>
+            <field name="appears_on_additional_data">False</field>
+<!--            <field name="condition_select">has_account_move</field>-->
+<!--            <field name="amount_select">account_move</field>-->
+            <field name="condition_select">python</field>
+            <field name="condition_python">if inputs.CRED_EMP_PROF: result = sum([line.amount for line in inputs.CRED_EMP_PROF]) > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.CRED_EMP_PROF]) , 2)</field>
+            <field name="appears_on_payslip" eval="True"/>
+            <field name="sequence" eval="97"/>
+<!--            <field name="account_credit" search="[('code','=','101020701')]"/>-->
+            <field name="account_credit" search="[('code','=','101020707')]"/>
+        </record>
+
+        <record id="hr_rule_input_employee_credit" model="hr.rule.input">
+            <field name="code">CRED_EMP_PROF</field>
+            <field name="name">Crédito Empleado Proforma</field>
+            <field name="type">expense</field>
+            <field name="input_id" ref="hr_rule_employee_credit"/>
+        </record>
+
+        <record id="hr_rxr_payroll.payroll_structure_01" model="hr.payroll.structure">
+            <field name="rule_ids" eval="[(4, ref('hr_rule_employee_credit'))]"></field>
+        </record>
+
+        <record id="hr_rxr_payroll.payroll_structure_02" model="hr.payroll.structure">
+            <field name="rule_ids" eval="[(4, ref('hr_rule_employee_credit'))]"></field>
+        </record>
+
+
+	</data>
+</odoo>

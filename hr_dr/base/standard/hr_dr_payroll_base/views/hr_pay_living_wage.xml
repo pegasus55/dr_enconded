@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="pay_living_wage_view_form" model="ir.ui.view">
+		<field name="name">pay.living.wage.view.form</field>
+		<field name="model">pay.living.wage</field>
+		<field name="arch" type="xml">
+			<form string="Pay living wage">
+				<header>
+					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,calculated,recalculate,reviewed,pending,cancelled,approved,rejected,done"/>
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_payment" string="See wages" type="object" icon="fa-money" class="oe_stat_button"/>
+					</div>
+					<group>
+						<group>
+							<field name="period_start" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="fiscal_year" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="utility" attrs="{'required': True, 'readonly': [('state','not in',['draft','calculated','recalculate'])]}"/>
+						</group>
+						<group>
+							<field name="period_end" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="date" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Details">
+							<field name="pay_living_wage_line_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
+								<tree delete="false" create="false">
+									<field name="employee_id" readonly="1"/>
+									<field name="employee_state" readonly="1"/>
+									<field name="wage" readonly="1"/>
+									<field name="thirteenth_salary" readonly="1"/>
+									<field name="fourteenth_salary" readonly="1"/>
+									<field name="commissions" readonly="1"/>
+									<field name="utility" readonly="1"/>
+									<field name="other_income" readonly="1"/>
+									<field name="reserve_fund" readonly="1"/>
+									<field name="historical" readonly="1"/>
+									<field name="all_income" readonly="1"/>
+									<field name="worked_days" readonly="1"/>
+									<field name="total_living_wage" readonly="1"/>
+									<field name="proportional_living_wage" readonly="1"/>
+									<field name="value" readonly="1"/>
+									<field name="value_to_receive" readonly="1"/>
+									<field name="state" readonly="1"/>
+								</tree>
+								<form delete="false" create="false">
+									<sheet>
+										<group>
+											<group>
+												<field name="employee_id" readonly="1"/>
+												<field name="employee_state" readonly="1"/>
+												<field name="wage" readonly="1"/>
+												<field name="thirteenth_salary" readonly="1"/>
+												<field name="fourteenth_salary" readonly="1"/>
+												<field name="commissions" readonly="1"/>
+												<field name="utility" readonly="1"/>
+												<field name="other_income" readonly="1"/>
+												<field name="reserve_fund" readonly="1"/>
+												<field name="historical" readonly="1"/>
+												<field name="all_income" readonly="1"/>
+											</group>
+											<group>
+												<field name="worked_days" readonly="1"/>
+												<field name="total_living_wage" readonly="1"/>
+												<field name="proportional_living_wage" readonly="1"/>
+												<field name="value" readonly="1"/>
+												<field name="value_to_receive" readonly="1"/>
+												<field name="state" readonly="1"/>
+											</group>
+										</group>
+									</sheet>
+                            	</form>
+							</field>
+						</page>
+						<page string="Tracing">
+							<field name="notification_ids" nolabel="1">
+								<tree>
+									<field name="level"/>
+									<field name="employee_approve_id"/>
+									<field name="commentary"/>
+									<field name="state"/>
+									<field name="send"/>
+									<field name="processed"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Other information">
+							<group>
+								<group>
+									<field name="user_confirmation"/>
+									<field name="user_cancellation"/>
+								</group>
+								<group>
+									<field name="date_confirmation"/>
+									<field name="date_cancellation"/>
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="pay_living_wage_view_tree" model='ir.ui.view'>
+		<field name="name">pay.living.wage.view.tree</field>
+		<field name="model">pay.living.wage</field>
+		<field name="arch" type="xml">
+			<tree string="Pay living wage">
+				<field name="fiscal_year"/>
+				<field name="period_start"/>
+				<field name="period_end"/>
+				<field name="utility"/>
+				<field name="state"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+			</tree>
+		</field>
+	</record>
+	<record id="action_pay_living_wage" model="ir.actions.act_window">
+		<field name="name">Pay living wage</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">pay.living.wage</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="pay_living_wage_action_notifications_to_process">
+		<field name="name">Notifications to process for pay living wage</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'pay.living.wage'),
+			('user_employee_approve_id', '=',uid),
+			('send', '=',True),
+			('state', '=','pending'),
+			('processed', '=',False)
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">Notifications to process for pay living wage.
+			</p>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="pay_living_wage_action_notifications_all">
+		<field name="name">All notifications for pay living wage</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'pay.living.wage')
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">All notifications for pay living wage.
+			</p>
+		</field>
+	</record>
+
+	<record id="pay_living_wage_line_view_form" model="ir.ui.view">
+		<field name="name">pay.living.wage.line.view.form</field>
+		<field name="model">pay.living.wage.line</field>
+		<field name="arch" type="xml">
+			<form string="Pay living wage detail" create="false" edit="false" delete="false">
+				<header>
+					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,calculated,recalculate,reviewed,pending,cancelled,approved,rejected,done"/>
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="employee_id" readonly="1"/>
+							<field name="employee_state" readonly="1"/>
+							<field name="wage" readonly="1"/>
+							<field name="thirteenth_salary" readonly="1"/>
+							<field name="fourteenth_salary" readonly="1"/>
+							<field name="commissions" readonly="1"/>
+							<field name="utility" readonly="1"/>
+							<field name="other_income" readonly="1"/>
+							<field name="reserve_fund" readonly="1"/>
+							<field name="historical" readonly="1"/>
+							<field name="all_income" readonly="1"/>
+						</group>
+						<group>
+							<field name="worked_days" readonly="1"/>
+							<field name="total_living_wage" readonly="1"/>
+							<field name="proportional_living_wage" readonly="1"/>
+							<field name="value" readonly="1"/>
+							<field name="value_to_receive" readonly="1"/>
+							<field name="state" readonly="1"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="pay_living_wage_line_view_search">
+		<field name="name">pay.living.wage.line.search</field>
+		<field name="model">pay.living.wage.line</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="pay_living_wage_id"/>
+
+				<group expand="0" name="group_by" string="Group By">
+					<filter name="group_pay_living_wage_id" string="Pay living wage"
+							context="{'group_by' : 'pay_living_wage_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+	<record id="pay_living_wage_line_view_tree" model='ir.ui.view'>
+		<field name="name">pay.living.wage.line.view.tree</field>
+		<field name="model">pay.living.wage.line</field>
+		<field name="arch" type="xml">
+			<tree string="Pay living wage detail" create="false" edit="false" delete="false">
+				<field name="employee_id" readonly="1"/>
+				<field name="employee_state" readonly="1"/>
+				<field name="wage" readonly="1"/>
+				<field name="thirteenth_salary" readonly="1"/>
+				<field name="fourteenth_salary" readonly="1"/>
+				<field name="commissions" readonly="1"/>
+				<field name="utility" readonly="1"/>
+				<field name="other_income" readonly="1"/>
+				<field name="reserve_fund" readonly="1"/>
+				<field name="historical" readonly="1"/>
+				<field name="all_income" readonly="1"/>
+				<field name="worked_days" readonly="1"/>
+				<field name="total_living_wage" readonly="1"/>
+				<field name="proportional_living_wage" readonly="1"/>
+				<field name="value" readonly="1"/>
+				<field name="value_to_receive" readonly="1"/>
+				<field name="state" readonly="1"/>
+			</tree>
+		</field>
+	</record>
+	<record id="action_pay_living_wage_line" model="ir.actions.act_window">
+		<field name="name">Pay living wage detail</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">pay.living.wage.line</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{
+                "search_default_group_pay_living_wage_id": 1,
+            }</field>
+	</record>
+
+</odoo>

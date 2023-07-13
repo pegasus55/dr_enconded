@@ -1,0 +1,28 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.hour.extra" id="HourExtra1">
+            <field name="name">HORAS SUPLEMENTARIAS</field>
+            <field name="description">Artículo 267 del Reglamento a la LOSEP. Artículo 55 del Código del Trabajo.</field>
+            <field name="start">6</field>
+            <field name="end">24</field>
+            <field name="assigned_schedule">True</field>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.hour.extra" id="HourExtra2">
+            <field name="name">HORAS EXTRAORDINARIAS</field>
+            <field name="description">Artículo 268 del Reglamento a la LOSEP. Artículo 55 del Código del Trabajo.</field>
+            <field name="start">0</field>
+            <field name="end">6</field>
+            <field name="assigned_schedule">True</field>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.hour.extra" id="HourExtra3">
+            <field name="name">HORAS EXTRAORDINARIAS FERIADOS Y DESCANSOS</field>
+            <field name="description">Artículo 268 del Reglamento a la LOSEP. Artículo 55 del Código del Trabajo.</field>
+            <field name="start">0</field>
+            <field name="end">24</field>
+            <field name="assigned_schedule">False</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

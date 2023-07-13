@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <menuitem id="menu_hr_management" name="Management" sequence="5" groups="hr_dr_management.hr_dr_management_group_employee" web_icon="hr_dr_management,static/description/icon.png"/>
+
+            <menuitem id="menu_notification" name="Notifications" parent="menu_hr_management" sequence="10" groups="hr_dr_management.hr_dr_management_group_employee"/>
+                <menuitem id="menu_notification_notification" name="All" parent="menu_notification" action="hr_dr_management.notifications_list_action" groups="hr_dr_management.hr_dr_management_group_supervisor" sequence="10"/>
+                <menuitem id="menu_notification_notification_to_process" name="To process" parent="menu_notification" groups="hr_dr_management.hr_dr_management_group_employee" sequence="20" action="hr_dr_management.action_notifications_to_process"/>
+                <menuitem id="menu_notification_scheme" name="Scheme notifications" parent="menu_notification" action="hr_dr_management.scheme_notifications_list_action" groups="hr_dr_management.hr_dr_management_group_supervisor" sequence="30"/>
+
+            <record id="management_configuration_settings_action" model="ir.actions.act_window">
+                <field name="name">Settings</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">res.config.settings</field>
+                <field name="view_mode">form</field>
+                <field name="target">inline</field>
+                <field name="context">{'module' : 'hr_dr_management'}</field>
+            </record>
+
+            <menuitem id="menu_configuration" name="Configuration" parent="menu_hr_management" sequence="20" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_configuration_settings" name="Settings" parent="menu_configuration" sequence="10" groups="hr_dr_management.hr_dr_management_group_supervisor" action="management_configuration_settings_action"/>
+                <menuitem id="menu_configuration_normative" name="Regulations" parent="menu_configuration" action="hr_dr_management.normative_list_action" sequence="20" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_configuration_holiday" name="Holidays" parent="menu_configuration" action="hr_dr_management.holiday_list_action" sequence="30" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_hour_extra" name="Extra hours" parent="menu_configuration" action="hr_dr_management.hour_extra_list_action" sequence="40" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_hour_night" name="Night hours" parent="menu_configuration" action="hr_dr_management.hour_night_list_action" sequence="50" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_attendance_period" name="Attendance periods" parent="menu_configuration" action="hr_dr_management.attendance_period_list_action" sequence="60" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_hr_salary_rule_process" action="action_hr_salary_rule_process" parent="menu_configuration" sequence="70" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+
+                <menuitem id="menu_configuration_nomenclature" name="Nomenclatures" parent="menu_configuration" action="hr_dr_management.nomenclature_list_action" sequence="200" groups="hr_dr_management.hr_dr_management_group_manager"/>
+                <menuitem id="menu_configuration_normative_nomenclature" name="Nomenclatures by regulations" parent="menu_configuration" action="hr_dr_management.hr_normative_nomenclature_list_action" sequence="210" groups="hr_dr_management.hr_dr_management_group_manager"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_basic_family_basket_view_form" model="ir.ui.view">
+		<field name="name">hr.basic.family.basket.view.form</field>
+		<field name="model">hr.basic.family.basket</field>
+		<field name="arch" type="xml">
+			<form string="Basic family basket">
+				<sheet>
+					<group>
+						<group>
+							<field name="fiscal_year" widget='integer'/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+						</group>
+						<group>
+							<field name="value" widget='monetary'/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="basic_family_basket_view_tree" model='ir.ui.view'>
+		<field name="name">hr.basic.family.basket.view.tree</field>
+		<field name="model">hr.basic.family.basket</field>
+		<field name="arch" type="xml">
+			<tree string="Basic family basket">
+				<field name="fiscal_year"/>
+				<field name="value" widget='monetary'/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_basic_family_basket" model="ir.actions.act_window">
+		<field name="name">Basic family basket</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.basic.family.basket</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>

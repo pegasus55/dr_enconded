@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="correct_user_attendance_state_form">
+            <field name="name">Correct user attendance state form</field>
+            <field name="model">correct.user.attendance.state</field>
+            <field name="arch" type="xml">
+                <form id="correct.user.attendance.state.form">
+                    <header>
+<!--                        <button string="Buscar marcaciones" type="object" name="search_user_attendance"/>-->
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="attendance_period_id"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date_from"/>
+                                <field name="start" widget="float_time"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                                <field name="end" widget="float_time"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="attendance_state_id"/>
+                                <field name="activity_id"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="replace_attendance_state_id"/>
+                                <field name="replace_activity_id"/>
+                                <field name="replace_code"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="input_mode" options="{'no_create_edit': True}"/>
+                            </group>
+                            <group>
+                                <field name="department_ids" widget="many2many_tags" attrs="{'invisible':[('input_mode','==','employee')]}"/>
+                            </group>
+                        </group>
+                        <field name="employee_ids" nolabel="nolabel=1">
+                            <tree>
+                                <field name="name" string="Nombre del colaborador"/>
+                                <field name="department_id"/>
+                            </tree>
+                        </field>
+                        <span>Si no selecciona colaboradores, se asume que es para todos.</span>
+                        <field name="user_attendance_ids" nolabel="nolabel=1">
+                            <tree>
+                                <field name="employee_id" string="Nombre del colaborador"/>
+                                <field name="user_id"/>
+                                <field name="device_id"/>
+                                <field name="timestamp"/>
+                                <field name="mode"/>
+                                <field name="status"/>
+                                <field name="attendance_state_id"/>
+                                <field name="activity_id"/>
+                                <field name="assigned"/>
+                            </tree>
+                        </field>
+                        <footer>
+                            <button name="action_correct_user_attendance_state" string="Aceptar" type="object"
+                                    class="btn-primary"/>
+                            <button special="cancel" string="Cancelar"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="correct_user_attendance_state">
+            <field name="name">Corregir el estado de las marcaciones</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">correct.user.attendance.state</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Corregir el estado de las marcaciones.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_correct_user_attendance_state" name="Corregir marcaciones" parent="menu_attendance" action="hr_dr_schedule.correct_user_attendance_state" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="70"/>
+    </data>
+</odoo>

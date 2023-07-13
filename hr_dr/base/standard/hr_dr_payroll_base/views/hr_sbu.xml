@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="sbu_view_form" model="ir.ui.view">
+		<field name="name">hr.sbu.view.form</field>
+		<field name="model">hr.sbu</field>
+		<field name="arch" type="xml">
+			<form string="Unified basic salary">
+				<sheet>
+					<group>
+						<group>
+							<field name="fiscal_year" widget='integer'/>
+							<label for="percent_increase"/>
+                            <div class="o_row" name="percent_increase">
+                                <field name="percent_increase" nolabel="1"/>
+                                <span>%</span>
+                            </div>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+						</group>
+						<group>
+							<field name="currency_id" options="{'no_create': True}"/>
+							<field name="value" widget='monetary'/>
+							<field name="value_previous_fiscal_year" widget='monetary'/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="sbu_view_tree" model='ir.ui.view'>
+		<field name="name">hr.sbu.view.tree</field>
+		<field name="model">hr.sbu</field>
+		<field name="arch" type="xml">
+			<tree string="Unified basic salary">
+				<field name="fiscal_year"/>
+				<field name="percent_increase"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+				<field name="currency_id" options="{'no_create': True}"/>
+				<field name="value" widget='monetary'/>
+				<field name="value_previous_fiscal_year" widget='monetary'/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_sbu" model="ir.actions.act_window">
+		<field name="name">Unified basic salary</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.sbu</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>

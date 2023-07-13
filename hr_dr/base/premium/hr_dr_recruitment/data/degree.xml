@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'hr_recruitment'), ('name', '=', 'degree_graduate')]" />
+            </function>
+            <value eval="{'noupdate': False}" />
+        </function>
+
+        <record model="hr.recruitment.degree" id="hr_recruitment.degree_graduate">
+            <field name="sequence">2</field>
+        </record>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'hr_recruitment'), ('name', '=', 'degree_graduate')]" />
+            </function>
+            <value eval="{'noupdate': False}" />
+        </function>
+
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'hr_recruitment'), ('name', '=', 'degree_bachelor')]" />
+            </function>
+            <value eval="{'noupdate': False}" />
+        </function>
+
+        <record model="hr.recruitment.degree" id="hr_recruitment.degree_bachelor">
+            <field name="sequence">1</field>
+        </record>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'hr_recruitment'), ('name', '=', 'degree_bachelor')]" />
+            </function>
+            <value eval="{'noupdate': False}" />
+        </function>
+
+    </data>
+</odoo>

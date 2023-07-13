@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <menuitem
+            id="hr_menu_contract_settings_root"
+            name="Contract"
+            parent="hr.menu_human_resources_configuration"
+            sequence="3"/>
+        <menuitem
+            id="hr_menu_contract_type"
+            action="hr.hr_contract_type_action"
+            parent="hr_menu_contract_settings_root"
+            sequence="5"/>
+        <menuitem
+            id="hr_menu_hr_payroll_structure_type"
+            action="hr_payroll_structure_type_list_action"
+            parent="hr_menu_contract_settings_root"
+            sequence="10"/>
+    </data>
+</odoo>

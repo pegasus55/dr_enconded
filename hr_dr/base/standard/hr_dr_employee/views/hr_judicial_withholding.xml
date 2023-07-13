@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <record id="view_hr_judicial_withholding_form" model="ir.ui.view">
+            <field name="name">hr.judicial.withholding.form</field>
+            <field name="model">hr.judicial.withholding</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Judicial withholding">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="card_code"/>
+                                <field name="judicial_process_number"/>
+                                <field name="approval_identifier"/>
+                                <field name="value" widget='monetary'/>
+                            </group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="representative_name"/>
+                                <field name="representative_identification"/>
+                                <field name="backup_document"/>
+                                <field name="active"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_judicial_withholding_tree" model="ir.ui.view">
+            <field name="name">hr.judicial.withholding.tree</field>
+            <field name="model">hr.judicial.withholding</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Judicial withholding">
+                    <field name="employee_id"/>
+                    <field name="card_code"/>
+                    <field name="judicial_process_number"/>
+                    <field name="approval_identifier"/>
+                    <field name="value" widget='monetary'/>
+                    <field name="partner_id"/>
+                    <field name="representative_name"/>
+                    <field name="representative_identification"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_hr_judicial_withholding_search" model="ir.ui.view">
+            <field name="name">hr.judicial.withholding.search</field>
+            <field name="model">hr.judicial.withholding</field>
+            <field name="arch" type="xml">
+                <search string="Judicial withholding">
+                    <field name="employee_id"/>
+                    <field name="card_code"/>
+                    <field name="judicial_process_number"/>
+                    <group string="Group By">
+                        <filter name="groupby_employee_id" string="Collaborator" context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr_judicial_withholding_action" model="ir.actions.act_window">
+            <field name="name">Judicial withholding</field>
+            <field name="res_model">hr.judicial.withholding</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_hr_judicial_withholding_tree"/>
+            <field name="context">{
+                "search_default_groupby_employee_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new judicial withholding for employee.
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

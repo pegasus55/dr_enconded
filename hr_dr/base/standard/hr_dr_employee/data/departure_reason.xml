@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="1">
+        <record id="hr.departure_fired" model="hr.departure.reason">
+            <field name="code">FIR</field>
+        </record>
+        <record id="hr.departure_resigned" model="hr.departure.reason">
+            <field name="code">RES</field>
+        </record>
+        <record id="hr.departure_retired" model="hr.departure.reason">
+            <field name="code">RET</field>
+        </record>
+    </data>
+</odoo>

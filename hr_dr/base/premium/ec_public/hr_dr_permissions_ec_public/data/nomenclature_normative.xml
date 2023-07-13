@@ -1,0 +1,1647 @@
+<odoo>
+    <data noupdate="0">
+        <!--CONFIGURACIONES PARA PERMISOS-->
+        <!--LOSEP-->
+        <!--ESTUDIOS REGULARES-->
+        <record model="hr.normative.nomenclature" id="N1N1P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType1')" />
+        </record>
+        <!--ESTUDIOS REGULARES-->
+        <!--ATENCIÓN MÉDICA-->
+        <record model="hr.normative.nomenclature" id="N1N1P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')"/>
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')"/>
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType2')"/>
+        </record>
+        <!--ATENCIÓN MÉDICA-->
+        <!--VÍCTIMA DE VIOLENCIA CON (SIC) LA MUJER-->
+        <record model="hr.normative.nomenclature" id="N1N1P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType3')" />
+        </record>
+        <!--VÍCTIMA DE VIOLENCIA CON (SIC) LA MUJER-->
+        <!--CUIDADO DE RECIÉN NACIDO / PERIODO DE LACTANCIA-->
+        <record model="hr.normative.nomenclature" id="N1N1P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType4')" />
+        </record>
+        <!--CUIDADO DE RECIÉN NACIDO / PERIODO DE LACTANCIA-->
+        <!--CUIDADO DE FAMILIARES-->
+        <record model="hr.normative.nomenclature" id="N1N1P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType6')" />
+        </record>
+        <!--CUIDADO DE FAMILIARES-->
+        <!--MATRICULACIÓN DE HIJOS-->
+        <record model="hr.normative.nomenclature" id="N1N1P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType7')" />
+        </record>
+        <!--MATRICULACIÓN DE HIJOS-->
+        <!--IMPUTABLE A VACACIONES-->
+        <record model="hr.normative.nomenclature" id="N1N1P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType8')" />
+        </record>
+        <!--IMPUTABLE A VACACIONES-->
+        <!--ASUNTO PARTICULAR CON RECUPERACIÓN-->
+        <record model="hr.normative.nomenclature" id="N1N1P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P9">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType9')" />
+        </record>
+        <!--ASUNTO PARTICULAR CON RECUPERACIÓN-->
+        <!--REHABILITACIÓN-->
+        <record model="hr.normative.nomenclature" id="N1N1P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P10">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType10')" />
+        </record>
+        <!--REHABILITACIÓN-->
+        <!--SUFRAGIO-->
+        <record model="hr.normative.nomenclature" id="N1N1P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P11">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType11')" />
+        </record>
+        <!--SUFRAGIO-->
+        <!--NOTIFICACIONES JUDICIALES-->
+        <record model="hr.normative.nomenclature" id="N1N1P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P12">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType12')" />
+        </record>
+        <!--NOTIFICACIONES JUDICIALES-->
+        <!--CAPACITACIÓN-->
+        <record model="hr.normative.nomenclature" id="N1N1P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">48</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P14">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType14')" />
+        </record>
+        <!--CAPACITACIÓN-->
+        <!--PERMISO POR MUDANZA-->
+        <record model="hr.normative.nomenclature" id="N1N1P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17P16">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.PermissionType16')" />
+        </record>
+        <!--PERMISO POR MUDANZA-->
+        <!--LOSEP-->
+        <!--CONFIGURACIONES PARA PERMISOS-->
+
+
+        <!--CONFIGURACIONES PARA LICENCIAS CON REMUNERACIÓN-->
+        <!--LOSEP-->
+        <!--LICENCIA POR ENFERMEDAD-->
+        <record model="hr.normative.nomenclature" id="N1N1LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType1')" />
+        </record>
+        <!--LICENCIA POR ENFERMEDAD-->
+        <!--LICENCIA POR ENFERMEDAD CATASTRÓFICA-->
+        <record model="hr.normative.nomenclature" id="N1N1LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP2">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType2')" />
+        </record>
+        <!--LICENCIA POR ENFERMEDAD CATASTRÓFICA-->
+        <!--LICENCIA POR MATERNIDAD-->
+        <record model="hr.normative.nomenclature" id="N1N1LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP3">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType3')" />
+        </record>
+        <!--LICENCIA POR MATERNIDAD-->
+        <!--LICENCIA POR PATERNIDAD-->
+        <record model="hr.normative.nomenclature" id="N1N1LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP4">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType4')" />
+        </record>
+        <!--LICENCIA POR PATERNIDAD-->
+        <!--LICENCIA POR MATERNIDAD / PATERNIDAD (HIJOS ADOPTIVOS)-->
+        <record model="hr.normative.nomenclature" id="N1N1LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP5">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType5')" />
+        </record>
+        <!--LICENCIA POR MATERNIDAD / PATERNIDAD (HIJOS ADOPTIVOS)-->
+        <!--LICENCIA POR HIJOS HOSPITALIZADOS O CON PATOLOGÍAS DEGENERATIVAS-->
+        <record model="hr.normative.nomenclature" id="N1N1LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP6">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType6')" />
+        </record>
+        <!--LICENCIA POR HIJOS HOSPITALIZADOS O CON PATOLOGÍAS DEGENERATIVAS-->
+        <!--LICENCIA POR CALAMIDAD DOMÉSTICA-->
+        <record model="hr.normative.nomenclature" id="N1N1LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP7">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType7')" />
+        </record>
+        <!--LICENCIA POR CALAMIDAD DOMÉSTICA-->
+        <!--LICENCIA POR MATRIMONIO-->
+        <record model="hr.normative.nomenclature" id="N1N1LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LP8">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicensePaidType8')" />
+        </record>
+        <!--LICENCIA POR MATRIMONIO-->
+        <!--LOSEP-->
+        <!--CONFIGURACIONES PARA LICENCIAS CON REMUNERACIÓN-->
+
+        <!--CONFIGURACIONES PARA LICENCIAS SIN REMUNERACIÓN-->
+        <!--LOSEP-->
+        <!--LICENCIA SIN REMUNERACIÓN (MATERNIDAD / PATERNIDAD)-->
+        <record model="hr.normative.nomenclature" id="N1N1LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N7LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS7"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N8LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS8"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N9LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS9"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">True</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N11LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS11"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N14LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS14"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N15LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS15"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N17LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS17"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="boolean_value">False</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <record model="hr.normative.nomenclature" id="N1N16LU1">
+            <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
+            <field name="nomenclature_id" ref = "hr_dr_permissions.NomenclaturePLCS16"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">72</field>
+            <field name="res_model_id" ref="hr_dr_permissions.model_hr_permission_type"/>
+            <field name="res_id" eval="ref('hr_dr_permissions.LicenseUnpaidType6')" />
+        </record>
+        <!--LICENCIA SIN REMUNERACIÓN (MATERNIDAD / PATERNIDAD)-->
+        <!--LOSEP-->
+        <!--CONFIGURACIONES PARA LICENCIAS SIN REMUNERACIÓN-->
+    </data>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="attendance_mode" model="ir.config_parameter">
+            <field name="key">attendance.mode</field>
+            <field name="value">1</field>
+        </record>
+
+        <record id="attendance_state_ids" model="ir.config_parameter">
+            <field name="key">attendance.state.ids</field>
+            <field name="value" eval="','.join([str(i) for i in
+            [ref('hr_dr_schedule.attendance_device_state_code_0'),
+            ref('hr_dr_schedule.attendance_device_state_code_1'),
+            ref('hr_dr_schedule.attendance_device_state_code_2'),
+            ref('hr_dr_schedule.attendance_device_state_code_3'),
+            ref('hr_dr_schedule.attendance_device_state_code_4'),
+            ref('hr_dr_schedule.attendance_device_state_code_5')
+            ]])"/>
+        </record>
+
+    	<record id="hour_extra_approval_request_notifications_mode" model="ir.config_parameter">
+            <field name="key">hour.extra.approval.request.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="hour_extra_approval_request_administrator" model="ir.config_parameter">
+            <field name="key">hour.extra.approval.request.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="hour_extra_approval_request_second_administrator" model="ir.config_parameter">
+            <field name="key">hour.extra.approval.request.second.administrator</field>
+            <field name="value"/>
+        </record>
+
+        <record id="user_attendance_approval_request_notifications_mode" model="ir.config_parameter">
+            <field name="key">user.attendance.approval.request.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="user_attendance_approval_request_administrator" model="ir.config_parameter">
+            <field name="key">user.attendance.approval.request.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="user_attendance_approval_request_second_administrator" model="ir.config_parameter">
+            <field name="key">user.attendance.approval.request.second.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="max_time_in_past_to_request_for_attendance" model="ir.config_parameter">
+            <field name="key">max.time.in.past.to.request.for.attendance</field>
+            <field name="value">72</field>
+        </record>
+
+        <record id="amount_days_after_cdfr_to_HEAR" model="ir.config_parameter">
+            <field name="key">amount.days.after.cutoff.date.for.report.to.HEAR</field>
+            <field name="value">2</field>
+        </record>
+        <record id="include_holidays_amount_days_after_cdfr_to_HEAR" model="ir.config_parameter">
+            <field name="key">include.holidays.amount.days.after.cutoff.date.for.report.to.HEAR</field>
+            <field name="value">0</field>
+        </record>
+    </data>
+</odoo>

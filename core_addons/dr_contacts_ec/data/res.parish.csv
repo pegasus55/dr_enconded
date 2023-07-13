@@ -1,0 +1,1394 @@
+id,code,name,city_id/id,active
+res_parish_ec_01,1,Bellavista,res_city_1,True
+res_parish_ec_02,2,Cañaribamba,res_city_1,True
+res_parish_ec_03,3,El Batán,res_city_1,True
+res_parish_ec_04,4,El Sagrario,res_city_1,True
+res_parish_ec_05,5,El Vecino,res_city_1,True
+res_parish_ec_06,6,Gil Ramírez Dávalos,res_city_1,True
+res_parish_ec_07,7,Huaynacápac,res_city_1,True
+res_parish_ec_08,8,Machángara,res_city_1,True
+res_parish_ec_09,9,Monay,res_city_1,True
+res_parish_ec_10,10,San Blas,res_city_1,True
+res_parish_ec_11,11,San Sebastián,res_city_1,True
+res_parish_ec_12,12,Sucre,res_city_1,True
+res_parish_ec_13,13,Totoracocha,res_city_1,True
+res_parish_ec_14,14,Yanuncay,res_city_1,True
+res_parish_ec_15,15,Hermano Miguel,res_city_1,True
+res_parish_ec_16,16,Cuenca,res_city_1,True
+res_parish_ec_17,17,Baños,res_city_1,True
+res_parish_ec_18,18,Cumbe,res_city_1,True
+res_parish_ec_19,19,Chaucha,res_city_1,True
+res_parish_ec_20,20,Checa (Jidcay),res_city_1,True
+res_parish_ec_21,21,Chiquintad,res_city_1,True
+res_parish_ec_22,22,Llacao,res_city_1,True
+res_parish_ec_23,23,Molleturo,res_city_1,True
+res_parish_ec_24,24,Nulti,res_city_1,True
+res_parish_ec_25,25,Octavio Cordero Palacios (Santa Rosa),res_city_1,True
+res_parish_ec_26,26,Paccha,res_city_1,True
+res_parish_ec_27,27,Quingeo,res_city_1,True
+res_parish_ec_28,28,Ricaurte,res_city_1,True
+res_parish_ec_29,29,San Joaquín,res_city_1,True
+res_parish_ec_30,30,Santa Ana,res_city_1,True
+res_parish_ec_31,31,Sayausí,res_city_1,True
+res_parish_ec_32,32,Sidcay,res_city_1,True
+res_parish_ec_33,33,Sinincay,res_city_1,True
+res_parish_ec_34,34,Tarqui,res_city_1,True
+res_parish_ec_35,35,Turi,res_city_1,True
+res_parish_ec_36,36,Valle,res_city_1,True
+res_parish_ec_37,37,Victoria Del Portete (Irquis),res_city_1,True
+res_parish_ec_38,1,Girón,res_city_2,True
+res_parish_ec_39,2,Asunción,res_city_2,True
+res_parish_ec_40,3,San Gerardo,res_city_2,True
+res_parish_ec_41,1,Gualaceo,res_city_3,True
+res_parish_ec_42,2,Chordeleg,res_city_3,True
+res_parish_ec_43,3,Daniel Córdova Toral (El Oriente),res_city_3,True
+res_parish_ec_44,4,Jadán,res_city_3,True
+res_parish_ec_45,5,Mariano Moreno,res_city_3,True
+res_parish_ec_46,6,Principal,res_city_3,True
+res_parish_ec_47,7,Remigio Crespo Toral (Gúlag),res_city_3,True
+res_parish_ec_48,8,San Juan,res_city_3,True
+res_parish_ec_49,9,Zhidmad,res_city_3,True
+res_parish_ec_50,10,Luis Cordero Vega,res_city_3,True
+res_parish_ec_51,11,Simón Bolívar (Cab. En Gañanzol),res_city_3,True
+res_parish_ec_52,1,Nabón,res_city_4,True
+res_parish_ec_53,2,Cochapata,res_city_4,True
+res_parish_ec_54,3,El Progreso (Cab.En Zhota),res_city_4,True
+res_parish_ec_55,4,Las Nieves (Chaya),res_city_4,True
+res_parish_ec_56,5,Oña,res_city_4,True
+res_parish_ec_57,1,Paute,res_city_5,True
+res_parish_ec_58,2,Amaluza,res_city_5,True
+res_parish_ec_59,3,Bulán (José Víctor Izquierdo),res_city_5,True
+res_parish_ec_60,4,Chicán (Guillermo Ortega),res_city_5,True
+res_parish_ec_61,5,El Cabo,res_city_5,True
+res_parish_ec_62,6,Guachapala,res_city_5,True
+res_parish_ec_63,7,Guarainag,res_city_5,True
+res_parish_ec_64,8,Palmas,res_city_5,True
+res_parish_ec_65,9,Pan,res_city_5,True
+res_parish_ec_66,10,San Cristóbal (Carlos Ordóñez Lazo),res_city_5,True
+res_parish_ec_67,11,Sevilla De Oro,res_city_5,True
+res_parish_ec_68,12,Tomebamba,res_city_5,True
+res_parish_ec_69,13,Dug Dug,res_city_5,True
+res_parish_ec_70,1,Pucará,res_city_6,True
+res_parish_ec_71,2,Camilo Ponce Enríquez (Cab. En Río 7 De Mollepongo),res_city_6,True
+res_parish_ec_72,3,San Rafael De Sharug,res_city_6,True
+res_parish_ec_73,1,San Fernando,res_city_7,
+res_parish_ec_74,2,Chumblín,res_city_7,
+res_parish_ec_75,1,Santa Isabel (Chaguarurco),res_city_8,True
+res_parish_ec_76,2,Abdón Calderón (La Unión),res_city_8,True
+res_parish_ec_77,3,El Carmen De Pijilí,res_city_8,True
+res_parish_ec_78,4,Zhaglli (Shaglli),res_city_8,True
+res_parish_ec_79,5,San Salvador De Cañaribamba,res_city_8,True
+res_parish_ec_80,1,Sigsig,res_city_9,True
+res_parish_ec_81,2,Cuchil (Cutchil),res_city_9,True
+res_parish_ec_82,3,Gima,res_city_9,True
+res_parish_ec_83,4,Guel,res_city_9,True
+res_parish_ec_84,5,Ludo,res_city_9,True
+res_parish_ec_85,6,San Bartolomé,res_city_9,True
+res_parish_ec_86,7,San José De Raranga,res_city_9,True
+res_parish_ec_87,1,San Felipe De Oña Cabecera Cantonal,res_city_10,True
+res_parish_ec_88,2,Susudel,res_city_10,True
+res_parish_ec_89,1,Chordeleg,res_city_11,True
+res_parish_ec_90,2,Principal,res_city_11,True
+res_parish_ec_91,3,La Unión,res_city_11,True
+res_parish_ec_92,4,Luis Galarza Orellana (Cab.En Delegsol),res_city_11,True
+res_parish_ec_93,5,San Martín De Puzhio,res_city_11,True
+res_parish_ec_94,1,El Pan,res_city_12,True
+res_parish_ec_95,2,Amaluza,res_city_12,True
+res_parish_ec_96,3,Palmas,res_city_12,True
+res_parish_ec_97,4,San Vicente,res_city_12,True
+res_parish_ec_98,1,Sevilla De Oro,res_city_13,True
+res_parish_ec_99,2,Amaluza,res_city_13,True
+res_parish_ec_100,3,Palmas,res_city_13,True
+res_parish_ec_101,1,Guachapala,res_city_14,True
+res_parish_ec_102,1,Camilo Ponce Enríquez,res_city_15,True
+res_parish_ec_103,2,El Carmen De Pijilí,res_city_15,True
+res_parish_ec_104,1,Ángel Polibio Cháves,res_city_16,True
+res_parish_ec_105,2,Gabriel Ignacio Veintimilla,res_city_16,True
+res_parish_ec_106,3,Guanujo,res_city_16,True
+res_parish_ec_107,4,Guaranda,res_city_16,True
+res_parish_ec_108,5,Facundo Vela,res_city_16,True
+res_parish_ec_109,6,Guanujo,res_city_16,True
+res_parish_ec_110,7,Julio E. Moreno (Catanahuán Grande),res_city_16,True
+res_parish_ec_111,8,Las Naves,res_city_16,True
+res_parish_ec_112,9,Salinas,res_city_16,True
+res_parish_ec_113,10,San Lorenzo,res_city_16,True
+res_parish_ec_114,11,San Simón (Yacoto),res_city_16,True
+res_parish_ec_115,12,Santa Fé (Santa Fé),res_city_16,True
+res_parish_ec_116,13,Simiátug,res_city_16,True
+res_parish_ec_117,14,San Luis De Pambil,res_city_16,True
+res_parish_ec_118,1,Chillanes,res_city_17,True
+res_parish_ec_119,2,San José Del Tambo (Tambopamba),res_city_17,True
+res_parish_ec_120,1,San José De Chimbo,res_city_18,True
+res_parish_ec_121,2,Asunción (Asancoto),res_city_18,True
+res_parish_ec_122,3,Caluma,res_city_18,True
+res_parish_ec_123,4,Magdalena (Chapacoto),res_city_18,True
+res_parish_ec_124,5,San Sebastián,res_city_18,True
+res_parish_ec_125,6,Telimbela,res_city_18,True
+res_parish_ec_126,1,Echeandía,res_city_19,True
+res_parish_ec_127,1,San Miguel,res_city_20,True
+res_parish_ec_128,2,Balsapamba,res_city_20,True
+res_parish_ec_129,3,Bilován,res_city_20,True
+res_parish_ec_130,4,Régulo De Mora,res_city_20,True
+res_parish_ec_131,5,San Pablo (San Pablo De Atenas),res_city_20,True
+res_parish_ec_132,6,Santiago,res_city_20,True
+res_parish_ec_133,7,San Vicente,res_city_20,True
+res_parish_ec_134,1,Caluma,res_city_21,True
+res_parish_ec_135,1,Las Mercedes,res_city_22,True
+res_parish_ec_136,2,Las Naves,res_city_22,True
+res_parish_ec_137,3,Las Naves,res_city_22,True
+res_parish_ec_138,1,Aurelio Bayas Martínez,res_city_23,True
+res_parish_ec_139,2,Azogues,res_city_23,True
+res_parish_ec_140,3,Borrero,res_city_23,True
+res_parish_ec_141,4,San Francisco,res_city_23,True
+res_parish_ec_142,5,Azogues,res_city_23,True
+res_parish_ec_143,6,Cojitambo,res_city_23,True
+res_parish_ec_144,7,Déleg,res_city_23,True
+res_parish_ec_145,8,Guapán,res_city_23,True
+res_parish_ec_146,9,Javier Loyola (Chuquipata),res_city_23,True
+res_parish_ec_147,10,Luis Cordero,res_city_23,True
+res_parish_ec_148,11,Pindilig,res_city_23,True
+res_parish_ec_149,12,Rivera,res_city_23,True
+res_parish_ec_150,13,San Miguel,res_city_23,True
+res_parish_ec_151,14,Solano,res_city_23,True
+res_parish_ec_152,15,Taday,res_city_23,True
+res_parish_ec_153,1,Biblián,res_city_24,True
+res_parish_ec_154,2,Nazón (Cab. En Pampa De Domínguez),res_city_24,True
+res_parish_ec_155,3,San Francisco De Sageo,res_city_24,True
+res_parish_ec_156,4,Turupamba,res_city_24,True
+res_parish_ec_157,5,Jerusalén,res_city_24,True
+res_parish_ec_158,1,Cañar,res_city_25,True
+res_parish_ec_159,2,Chontamarca,res_city_25,True
+res_parish_ec_160,3,Chorocopte,res_city_25,True
+res_parish_ec_161,4,General Morales (Socarte),res_city_25,True
+res_parish_ec_162,5,Gualleturo,res_city_25,True
+res_parish_ec_163,6,Honorato Vásquez (Tambo Viejo),res_city_25,True
+res_parish_ec_164,7,Ingapirca,res_city_25,True
+res_parish_ec_165,8,Juncal,res_city_25,True
+res_parish_ec_166,9,San Antonio,res_city_25,True
+res_parish_ec_167,10,Suscal,res_city_25,True
+res_parish_ec_168,11,Tambo,res_city_25,True
+res_parish_ec_169,12,Zhud,res_city_25,True
+res_parish_ec_170,13,Ventura,res_city_25,True
+res_parish_ec_171,14,Ducur,res_city_25,True
+res_parish_ec_172,1,La Troncal,res_city_26,True
+res_parish_ec_173,2,Manuel J. Calle,res_city_26,True
+res_parish_ec_174,3,Pancho Negro,res_city_26,True
+res_parish_ec_175,1,El Tambo,res_city_27,True
+res_parish_ec_176,1,Déleg,res_city_28,True
+res_parish_ec_177,2,Solano,res_city_28,True
+res_parish_ec_178,1,Suscal,res_city_29,True
+res_parish_ec_179,1,González Suárez,res_city_30,True
+res_parish_ec_180,2,Tulcán,res_city_30,True
+res_parish_ec_181,3,Tulcán,res_city_30,True
+res_parish_ec_182,4,El Carmelo (El Pun),res_city_30,True
+res_parish_ec_183,5,Huaca,res_city_30,True
+res_parish_ec_184,6,Julio Andrade (Orejuela),res_city_30,True
+res_parish_ec_185,7,Maldonado,res_city_30,True
+res_parish_ec_186,8,Pioter,res_city_30,True
+res_parish_ec_187,9,Tobar Donoso (La Bocana De Camumbí),res_city_30,True
+res_parish_ec_188,10,Tufiño,res_city_30,True
+res_parish_ec_189,11,Urbina (Taya),res_city_30,True
+res_parish_ec_190,12,El Chical,res_city_30,True
+res_parish_ec_191,13,Mariscal Sucre,res_city_30,True
+res_parish_ec_192,14,Santa Martha De Cuba,res_city_30,True
+res_parish_ec_193,1,Bolívar,res_city_31,True
+res_parish_ec_194,2,García Moreno,res_city_31,True
+res_parish_ec_195,3,Los Andes,res_city_31,True
+res_parish_ec_196,4,Monte Olivo,res_city_31,True
+res_parish_ec_197,5,San Vicente De Pusir,res_city_31,True
+res_parish_ec_198,6,San Rafael,res_city_31,True
+res_parish_ec_199,1,El Ángel,res_city_32,True
+res_parish_ec_200,2,27 De Septiembre,res_city_32,True
+res_parish_ec_201,3,El Angel,res_city_32,True
+res_parish_ec_202,4,El Goaltal,res_city_32,True
+res_parish_ec_203,5,La Libertad (Alizo),res_city_32,True
+res_parish_ec_204,6,San Isidro,res_city_32,True
+res_parish_ec_205,1,Mira (Chontahuasi),res_city_33,True
+res_parish_ec_206,2,Concepción,res_city_33,True
+res_parish_ec_207,3,Jijón Y Caamaño (Cab. En Río Blanco),res_city_33,True
+res_parish_ec_208,4,Juan Montalvo (San Ignacio De Quil),res_city_33,True
+res_parish_ec_209,1,González Suárez,res_city_34,True
+res_parish_ec_210,2,San José,res_city_34,True
+res_parish_ec_211,3,San Gabriel,res_city_34,True
+res_parish_ec_212,4,Cristóbal Colón,res_city_34,True
+res_parish_ec_213,5,Chitán De Navarrete,res_city_34,True
+res_parish_ec_214,6,Fernández Salvador,res_city_34,True
+res_parish_ec_215,7,La Paz,res_city_34,True
+res_parish_ec_216,8,Piartal,res_city_34,True
+res_parish_ec_217,1,Huaca,res_city_35,True
+res_parish_ec_218,2,Mariscal Sucre,res_city_35,True
+res_parish_ec_219,1,Eloy Alfaro (San Felipe),res_city_36,True
+res_parish_ec_220,2,Ignacio Flores (Parque Flores),res_city_36,True
+res_parish_ec_221,3,Juan Montalvo (San Sebastián),res_city_36,True
+res_parish_ec_222,4,La Matriz,res_city_36,True
+res_parish_ec_223,5,San Buenaventura,res_city_36,True
+res_parish_ec_224,6,Latacunga,res_city_36,True
+res_parish_ec_225,7,Alaques (Aláquez),res_city_36,True
+res_parish_ec_226,8,Belisario Quevedo (Guanailín),res_city_36,True
+res_parish_ec_227,9,Guaitacama (Guaytacama),res_city_36,True
+res_parish_ec_228,10,Joseguango Bajo,res_city_36,True
+res_parish_ec_229,11,Las Pampas,res_city_36,True
+res_parish_ec_230,12,Mulaló,res_city_36,True
+res_parish_ec_231,13,11 De Noviembre (Ilinchisi),res_city_36,True
+res_parish_ec_232,14,Poaló,res_city_36,True
+res_parish_ec_233,15,San Juan De Pastocalle,res_city_36,True
+res_parish_ec_234,16,Sigchos,res_city_36,True
+res_parish_ec_235,17,Tanicuchí,res_city_36,True
+res_parish_ec_236,18,Toacaso,res_city_36,True
+res_parish_ec_237,19,Palo Quemado,res_city_36,True
+res_parish_ec_238,1,El Carmen,res_city_37,True
+res_parish_ec_239,2,La Maná,res_city_37,True
+res_parish_ec_240,3,El Triunfo,res_city_37,True
+res_parish_ec_241,4,La Maná,res_city_37,True
+res_parish_ec_242,5,Guasaganda (Cab.En Guasaganda,res_city_37,True
+res_parish_ec_243,6,Pucayacu,res_city_37,True
+res_parish_ec_244,1,El Corazón,res_city_38,True
+res_parish_ec_245,2,Moraspungo,res_city_38,True
+res_parish_ec_246,3,Pinllopata,res_city_38,True
+res_parish_ec_247,4,Ramón Campaña,res_city_38,True
+res_parish_ec_248,1,Pujilí,res_city_39,True
+res_parish_ec_249,2,Angamarca,res_city_39,True
+res_parish_ec_250,3,Chucchilán (Chugchilán),res_city_39,True
+res_parish_ec_251,4,Guangaje,res_city_39,True
+res_parish_ec_252,5,Isinlibí (Isinliví),res_city_39,True
+res_parish_ec_253,6,La Victoria,res_city_39,True
+res_parish_ec_254,7,Pilaló,res_city_39,True
+res_parish_ec_255,8,Tingo,res_city_39,True
+res_parish_ec_256,9,Zumbahua,res_city_39,True
+res_parish_ec_257,1,San Miguel,res_city_40,True
+res_parish_ec_258,2,Antonio José Holguín (Santa Lucía),res_city_40,True
+res_parish_ec_259,3,Cusubamba,res_city_40,True
+res_parish_ec_260,4,Mulalillo,res_city_40,True
+res_parish_ec_261,5,Mulliquindil (Santa Ana),res_city_40,True
+res_parish_ec_262,6,Pansaleo,res_city_40,True
+res_parish_ec_263,1,Saquisilí,res_city_41,True
+res_parish_ec_264,2,Canchagua,res_city_41,True
+res_parish_ec_265,3,Chantilín,res_city_41,True
+res_parish_ec_266,4,Cochapamba,res_city_41,True
+res_parish_ec_267,1,Sigchos,res_city_42,True
+res_parish_ec_268,2,Chugchillán,res_city_42,True
+res_parish_ec_269,3,Isinliví,res_city_42,True
+res_parish_ec_270,4,Las Pampas,res_city_42,True
+res_parish_ec_271,5,Palo Quemado,res_city_42,True
+res_parish_ec_272,1,Lizarzaburu,res_city_43,True
+res_parish_ec_273,2,Maldonado,res_city_43,True
+res_parish_ec_274,3,Velasco,res_city_43,True
+res_parish_ec_275,4,Veloz,res_city_43,True
+res_parish_ec_276,5,Yaruquíes,res_city_43,True
+res_parish_ec_277,6,Riobamba,res_city_43,True
+res_parish_ec_278,7,Cacha (Cab. En Machángara),res_city_43,True
+res_parish_ec_279,8,Calpi,res_city_43,True
+res_parish_ec_280,9,Cubijíes,res_city_43,True
+res_parish_ec_281,10,Flores,res_city_43,True
+res_parish_ec_282,11,Licán,res_city_43,True
+res_parish_ec_283,12,Licto,res_city_43,True
+res_parish_ec_284,13,Pungalá,res_city_43,True
+res_parish_ec_285,14,Punín,res_city_43,True
+res_parish_ec_286,15,Quimiag,res_city_43,True
+res_parish_ec_287,16,San Juan,res_city_43,True
+res_parish_ec_288,17,San Luis,res_city_43,True
+res_parish_ec_289,1,Alausí,res_city_44,True
+res_parish_ec_290,2,Achupallas,res_city_44,True
+res_parish_ec_291,3,Cumandá,res_city_44,True
+res_parish_ec_292,4,Guasuntos,res_city_44,True
+res_parish_ec_293,5,Huigra,res_city_44,True
+res_parish_ec_294,6,Multitud,res_city_44,True
+res_parish_ec_295,7,Pistishí (Nariz Del Diablo),res_city_44,True
+res_parish_ec_296,8,Pumallacta,res_city_44,True
+res_parish_ec_297,9,Sevilla,res_city_44,True
+res_parish_ec_298,10,Sibambe,res_city_44,True
+res_parish_ec_299,11,Tixán,res_city_44,True
+res_parish_ec_300,1,Cajabamba,res_city_45,True
+res_parish_ec_301,2,Sicalpa,res_city_45,True
+res_parish_ec_302,3,Villa La Unión (Cajabamba),res_city_45,True
+res_parish_ec_303,4,Cañi,res_city_45,True
+res_parish_ec_304,5,Columbe,res_city_45,True
+res_parish_ec_305,6,Juan De Velasco (Pangor),res_city_45,True
+res_parish_ec_306,7,Santiago De Quito (Cab. En San Antonio De Quito),res_city_45,True
+res_parish_ec_307,1,Chambo,res_city_46,True
+res_parish_ec_308,1,Chunchi,res_city_47,True
+res_parish_ec_309,2,Capzol,res_city_47,True
+res_parish_ec_310,3,Compud,res_city_47,True
+res_parish_ec_311,4,Gonzol,res_city_47,True
+res_parish_ec_312,5,Llagos,res_city_47,True
+res_parish_ec_313,1,Guamote,res_city_48,True
+res_parish_ec_314,2,Cebadas,res_city_48,True
+res_parish_ec_315,3,Palmira,res_city_48,True
+res_parish_ec_316,1,El Rosario,res_city_49,True
+res_parish_ec_317,2,La Matriz,res_city_49,True
+res_parish_ec_318,3,Guano,res_city_49,True
+res_parish_ec_319,4,Guanando,res_city_49,True
+res_parish_ec_320,5,Ilapo,res_city_49,True
+res_parish_ec_321,6,La Providencia,res_city_49,True
+res_parish_ec_322,7,San Andrés,res_city_49,True
+res_parish_ec_323,8,San Gerardo De Pacaicaguán,res_city_49,True
+res_parish_ec_324,9,San Isidro De Patulú,res_city_49,True
+res_parish_ec_325,10,San José Del Chazo,res_city_49,True
+res_parish_ec_326,11,Santa Fé De Galán,res_city_49,True
+res_parish_ec_327,12,Valparaíso,res_city_49,True
+res_parish_ec_328,,Pallatanga,res_city_50,True
+res_parish_ec_329,1,Penipe,res_city_51,True
+res_parish_ec_330,2,El Altar,res_city_51,True
+res_parish_ec_331,3,Matus,res_city_51,True
+res_parish_ec_332,4,Puela,res_city_51,True
+res_parish_ec_333,5,San Antonio De Bayushig,res_city_51,True
+res_parish_ec_334,6,La Candelaria,res_city_51,True
+res_parish_ec_335,7,Bilbao (Cab.En Quilluyacu),res_city_51,True
+res_parish_ec_336,,Cumandá,res_city_52,True
+res_parish_ec_337,1,La Providencia,res_city_53,True
+res_parish_ec_338,2,Machala,res_city_53,True
+res_parish_ec_339,3,Puerto Bolívar,res_city_53,True
+res_parish_ec_340,4,Nueve De Mayo,res_city_53,True
+res_parish_ec_341,5,El Cambio,res_city_53,True
+res_parish_ec_342,6,Machala,res_city_53,True
+res_parish_ec_343,7,El Cambio,res_city_53,True
+res_parish_ec_344,8,El Retiro,res_city_53,True
+res_parish_ec_345,1,Arenillas,res_city_54,True
+res_parish_ec_346,2,Chacras,res_city_54,True
+res_parish_ec_347,3,La Libertad,res_city_54,True
+res_parish_ec_348,4,Las Lajas (Cab. En La Victoria),res_city_54,True
+res_parish_ec_349,5,Palmales,res_city_54,True
+res_parish_ec_350,6,Carcabón,res_city_54,True
+res_parish_ec_351,1,Paccha,res_city_55,True
+res_parish_ec_352,2,Ayapamba,res_city_55,True
+res_parish_ec_353,3,Cordoncillo,res_city_55,True
+res_parish_ec_354,4,Milagro,res_city_55,True
+res_parish_ec_355,5,San José,res_city_55,True
+res_parish_ec_356,6,San Juan De Cerro Azul,res_city_55,True
+res_parish_ec_357,7,Balsas,res_city_56,True
+res_parish_ec_358,8,Bellamaría,res_city_56,True
+res_parish_ec_359,1,Chilla,res_city_57,True
+res_parish_ec_360,1,El Guabo,res_city_58,True
+res_parish_ec_361,2,Barbones (Sucre),res_city_58,True
+res_parish_ec_362,3,La Iberia,res_city_58,True
+res_parish_ec_363,4,Tendales (Cab.En Puerto Tendales),res_city_58,True
+res_parish_ec_364,5,Río Bonito,res_city_58,True
+res_parish_ec_365,1,Ecuador,res_city_59,True
+res_parish_ec_366,2,El Paraíso,res_city_59,True
+res_parish_ec_367,3,Hualtaco,res_city_59,True
+res_parish_ec_368,4,Milton Reyes,res_city_59,True
+res_parish_ec_369,5,Unión Lojana,res_city_59,True
+res_parish_ec_370,6,Huaquillas,res_city_59,True
+res_parish_ec_371,1,Marcabelí,res_city_60,True
+res_parish_ec_372,2,El Ingenio,res_city_60,True
+res_parish_ec_373,1,Bolívar,res_city_61,True
+res_parish_ec_374,2,Loma De Franco,res_city_61,True
+res_parish_ec_375,3,Ochoa León (Matriz),res_city_61,True
+res_parish_ec_376,4,Tres Cerritos,res_city_61,True
+res_parish_ec_377,5,Pasaje,res_city_61,True
+res_parish_ec_378,6,Buenavista,res_city_61,True
+res_parish_ec_379,7,Casacay,res_city_61,True
+res_parish_ec_380,8,La Peaña,res_city_61,True
+res_parish_ec_381,9,Progreso,res_city_61,True
+res_parish_ec_382,10,Uzhcurrumi,res_city_61,True
+res_parish_ec_383,11,Cañaquemada,res_city_61,True
+res_parish_ec_384,1,La Matriz,res_city_62,True
+res_parish_ec_385,2,La Susaya,res_city_62,True
+res_parish_ec_386,3,Piñas Grande,res_city_62,True
+res_parish_ec_387,4,Piñas,res_city_62,True
+res_parish_ec_388,5,Capiro (Cab. En La Capilla De Capiro),res_city_62,True
+res_parish_ec_389,6,La Bocana,res_city_62,True
+res_parish_ec_390,7,Moromoro (Cab. En El Vado),res_city_62,True
+res_parish_ec_391,8,Piedras,res_city_62,True
+res_parish_ec_392,9,San Roque (Ambrosio Maldonado),res_city_62,True
+res_parish_ec_393,10,Saracay,res_city_62,True
+res_parish_ec_394,12,Portovelo,res_city_63,True
+res_parish_ec_395,13,Curtincapa,res_city_63,True
+res_parish_ec_396,14,Morales,res_city_63,True
+res_parish_ec_397,15,Salatí,res_city_63,True
+res_parish_ec_398,1,Santa Rosa,res_city_64,True
+res_parish_ec_399,2,Puerto Jelí,res_city_64,True
+res_parish_ec_400,3,Balneario Jambelí (Satélite),res_city_64,True
+res_parish_ec_401,4,Jumón (Satélite),res_city_64,True
+res_parish_ec_402,5,Nuevo Santa Rosa,res_city_64,True
+res_parish_ec_403,6,Santa Rosa,res_city_64,True
+res_parish_ec_404,7,Bellavista,res_city_64,True
+res_parish_ec_405,8,Jambelí,res_city_64,True
+res_parish_ec_406,9,La Avanzada,res_city_64,True
+res_parish_ec_407,10,San Antonio,res_city_64,True
+res_parish_ec_408,11,Torata,res_city_64,True
+res_parish_ec_409,12,Victoria,res_city_64,True
+res_parish_ec_410,13,Bellamaría,res_city_64,True
+res_parish_ec_411,16,Zaruma,res_city_65,True
+res_parish_ec_412,17,Abañín,res_city_65,True
+res_parish_ec_413,18,Arcapamba,res_city_65,True
+res_parish_ec_414,19,Guanazán,res_city_65,True
+res_parish_ec_415,20,Guizhaguiña,res_city_65,True
+res_parish_ec_416,21,Huertas,res_city_65,True
+res_parish_ec_417,22,Malvas,res_city_65,True
+res_parish_ec_418,23,Muluncay Grande,res_city_65,True
+res_parish_ec_419,24,Sinsao,res_city_65,True
+res_parish_ec_420,25,Salvias,res_city_65,True
+res_parish_ec_421,1,La Victoria,res_city_66,True
+res_parish_ec_422,2,Platanillos,res_city_66,True
+res_parish_ec_423,3,Valle Hermoso,res_city_66,True
+res_parish_ec_424,4,La Victoria,res_city_66,True
+res_parish_ec_425,5,La Libertad,res_city_66,True
+res_parish_ec_426,6,El Paraíso,res_city_66,True
+res_parish_ec_427,7,San Isidro,res_city_66,True
+res_parish_ec_428,1,Bartolomé Ruiz (César Franco Carrión),res_city_67,True
+res_parish_ec_429,2,5 De Agosto,res_city_67,True
+res_parish_ec_430,3,Esmeraldas,res_city_67,True
+res_parish_ec_431,4,Luis Tello (Las Palmas),res_city_67,True
+res_parish_ec_432,5,Simón Plata Torres,res_city_67,True
+res_parish_ec_433,6,Esmeraldas,res_city_67,True
+res_parish_ec_434,7,Atacames,res_city_67,True
+res_parish_ec_435,8,Camarones (Cab. En San Vicente),res_city_67,True
+res_parish_ec_436,9,Crnel. Carlos Concha Torres (Cab.En Huele),res_city_67,True
+res_parish_ec_437,10,Chinca,res_city_67,True
+res_parish_ec_438,11,Chontaduro,res_city_67,True
+res_parish_ec_439,12,Chumundé,res_city_67,True
+res_parish_ec_440,13,Lagarto,res_city_67,True
+res_parish_ec_441,14,La Unión,res_city_67,True
+res_parish_ec_442,15,Majua,res_city_67,True
+res_parish_ec_443,16,Montalvo (Cab. En Horqueta),res_city_67,True
+res_parish_ec_444,17,Río Verde,res_city_67,True
+res_parish_ec_445,18,Rocafuerte,res_city_67,True
+res_parish_ec_446,19,San Mateo,res_city_67,True
+res_parish_ec_447,20,Súa (Cab. En La Bocana),res_city_67,True
+res_parish_ec_448,21,Tabiazo,res_city_67,True
+res_parish_ec_449,22,Tachina,res_city_67,True
+res_parish_ec_450,23,Tonchigüe,res_city_67,True
+res_parish_ec_451,24,Vuelta Larga,res_city_67,True
+res_parish_ec_452,1,Valdez (Limones),res_city_68,True
+res_parish_ec_453,2,Anchayacu,res_city_68,True
+res_parish_ec_454,3,Atahualpa (Cab. En Camarones),res_city_68,True
+res_parish_ec_455,4,Borbón,res_city_68,True
+res_parish_ec_456,5,La Tola,res_city_68,True
+res_parish_ec_457,6,Luis Vargas Torres (Cab. En Playa De Oro),res_city_68,True
+res_parish_ec_458,7,Maldonado,res_city_68,True
+res_parish_ec_459,8,Pampanal De Bolívar,res_city_68,True
+res_parish_ec_460,9,San Francisco De Onzole,res_city_68,True
+res_parish_ec_461,10,Santo Domingo De Onzole,res_city_68,True
+res_parish_ec_462,11,Selva Alegre,res_city_68,True
+res_parish_ec_463,12,Telembí,res_city_68,True
+res_parish_ec_464,13,Colón Eloy Del María,res_city_68,True
+res_parish_ec_465,14,San José De Cayapas,res_city_68,True
+res_parish_ec_466,15,Timbiré,res_city_68,True
+res_parish_ec_467,25,Muisne,res_city_69,True
+res_parish_ec_468,1,Bolívar,res_city_69,True
+res_parish_ec_469,2,Daule,res_city_69,True
+res_parish_ec_470,3,Galera,res_city_69,True
+res_parish_ec_471,4,Quingue (Olmedo Perdomo Franco),res_city_69,True
+res_parish_ec_472,5,Salima,res_city_69,True
+res_parish_ec_473,6,San Francisco,res_city_69,True
+res_parish_ec_474,7,San Gregorio,res_city_69,True
+res_parish_ec_475,8,San José De Chamanga (Cab.En Chamanga),res_city_69,True
+res_parish_ec_476,1,Rosa Zárate (Quinindé),res_city_70,True
+res_parish_ec_477,2,Cube,res_city_70,True
+res_parish_ec_478,3,Chura (Chancama) (Cab. En El Yerbero),res_city_70,True
+res_parish_ec_479,4,Malimpia,res_city_70,True
+res_parish_ec_480,5,Viche,res_city_70,True
+res_parish_ec_481,6,La Unión,res_city_70,True
+res_parish_ec_482,1,San Lorenzo,res_city_71,True
+res_parish_ec_483,2,Alto Tambo (Cab. En Guadual),res_city_71,True
+res_parish_ec_484,3,Ancón (Pichangal) (Cab. En Palma Real),res_city_71,True
+res_parish_ec_485,4,Calderón,res_city_71,True
+res_parish_ec_486,5,Carondelet,res_city_71,True
+res_parish_ec_487,6,5 De Junio (Cab. En Uimbi),res_city_71,True
+res_parish_ec_488,7,Concepción,res_city_71,True
+res_parish_ec_489,8,Mataje (Cab. En Santander),res_city_71,True
+res_parish_ec_490,9,San Javier De Cachaví (Cab. En San Javier),res_city_71,True
+res_parish_ec_491,10,Santa Rita,res_city_71,True
+res_parish_ec_492,11,Tambillo,res_city_71,True
+res_parish_ec_493,12,Tululbí (Cab. En Ricaurte),res_city_71,True
+res_parish_ec_494,13,Urbina,res_city_71,True
+res_parish_ec_495,1,Atacames,res_city_72,True
+res_parish_ec_496,2,La Unión,res_city_72,True
+res_parish_ec_497,3,Súa (Cab. En La Bocana),res_city_72,True
+res_parish_ec_498,4,Tonchigüe,res_city_72,True
+res_parish_ec_499,5,Tonsupa,res_city_72,True
+res_parish_ec_500,1,Rioverde,res_city_73,True
+res_parish_ec_501,2,Chontaduro,res_city_73,True
+res_parish_ec_502,3,Chumundé,res_city_73,True
+res_parish_ec_503,4,Lagarto,res_city_73,True
+res_parish_ec_504,5,Montalvo (Cab. En Horqueta),res_city_73,True
+res_parish_ec_505,6,Rocafuerte,res_city_73,True
+res_parish_ec_506,1,La Concordia,res_city_74,True
+res_parish_ec_507,2,Monterrey,res_city_74,True
+res_parish_ec_508,3,La Villegas,res_city_74,True
+res_parish_ec_509,4,Plan Piloto,res_city_74,True
+res_parish_ec_510,1,Ayacucho,res_city_75,True
+res_parish_ec_511,2,Bolívar (Sagrario),res_city_75,True
+res_parish_ec_512,3,Carbo (Concepción),res_city_75,True
+res_parish_ec_513,4,Febres Cordero,res_city_75,True
+res_parish_ec_514,5,García Moreno,res_city_75,True
+res_parish_ec_515,6,Letamendi,res_city_75,True
+res_parish_ec_516,7,Nueve De Octubre,res_city_75,True
+res_parish_ec_517,8,Olmedo (San Alejo),res_city_75,True
+res_parish_ec_518,9,Roca,res_city_75,True
+res_parish_ec_519,10,Rocafuerte,res_city_75,True
+res_parish_ec_520,11,Sucre,res_city_75,True
+res_parish_ec_521,12,Tarqui,res_city_75,True
+res_parish_ec_522,13,Urdaneta,res_city_75,True
+res_parish_ec_523,14,Ximena,res_city_75,True
+res_parish_ec_524,15,Pascuales,res_city_75,True
+res_parish_ec_525,16,Guayaquil,res_city_75,True
+res_parish_ec_526,17,Chongón,res_city_75,True
+res_parish_ec_527,18,Juan Gómez Rendón (Progreso),res_city_75,True
+res_parish_ec_528,19,Morro,res_city_75,True
+res_parish_ec_529,20,Pascuales,res_city_75,True
+res_parish_ec_530,21,Playas (Gral. Villamil),res_city_75,True
+res_parish_ec_531,22,Posorja,res_city_75,True
+res_parish_ec_532,23,Puná,res_city_75,True
+res_parish_ec_533,24,Tenguel,res_city_75,True
+res_parish_ec_534,1,Alfredo Baquerizo Moreno (Juján),res_city_76,True
+res_parish_ec_535,1,Balao,res_city_77,True
+res_parish_ec_536,1,Balzar,res_city_78,True
+res_parish_ec_537,1,Colimes,res_city_79,True
+res_parish_ec_538,2,San Jacinto,res_city_79,True
+res_parish_ec_539,1,Daule,res_city_80,True
+res_parish_ec_540,2,La Aurora (Satélite),res_city_80,True
+res_parish_ec_541,3,Banife,res_city_80,True
+res_parish_ec_542,4,Emiliano Caicedo Marcos,res_city_80,True
+res_parish_ec_543,5,Magro,res_city_80,True
+res_parish_ec_544,6,Padre Juan Bautista Aguirre,res_city_80,True
+res_parish_ec_545,7,Santa Clara,res_city_80,True
+res_parish_ec_546,8,Vicente Piedrahita,res_city_80,True
+res_parish_ec_547,9,Daule,res_city_80,True
+res_parish_ec_548,10,Isidro Ayora (Soledad),res_city_80,True
+res_parish_ec_549,11,Juan Bautista Aguirre (Los Tintos),res_city_80,True
+res_parish_ec_550,12,Laurel,res_city_80,True
+res_parish_ec_551,13,Limonal,res_city_80,True
+res_parish_ec_552,14,Lomas De Sargentillo,res_city_80,True
+res_parish_ec_553,15,Los Lojas (Enrique Baquerizo Moreno),res_city_80,True
+res_parish_ec_554,16,Piedrahita (Nobol),res_city_80,True
+res_parish_ec_555,1,Eloy Alfaro (Durán),res_city_81,True
+res_parish_ec_556,2,El Recreo,res_city_81,True
+res_parish_ec_557,3,Eloy Alfaro (Durán),res_city_81,True
+res_parish_ec_558,1,Velasco Ibarra (El Empalme),res_city_82,True
+res_parish_ec_559,2,Guayas (Pueblo Nuevo),res_city_82,True
+res_parish_ec_560,3,El Rosario,res_city_82,True
+res_parish_ec_561,1,El Triunfo,res_city_83,True
+res_parish_ec_562,1,Milagro,res_city_84,True
+res_parish_ec_563,2,Chobo,res_city_84,True
+res_parish_ec_564,3,General Elizalde (Bucay),res_city_84,True
+res_parish_ec_565,4,Mariscal Sucre (Huaques),res_city_84,True
+res_parish_ec_566,5,Roberto Astudillo (Cab. En Cruce De Venecia),res_city_84,True
+res_parish_ec_567,1,Naranjal,res_city_85,True
+res_parish_ec_568,2,Jesús María,res_city_85,True
+res_parish_ec_569,3,San Carlos,res_city_85,True
+res_parish_ec_570,4,Santa Rosa De Flandes,res_city_85,True
+res_parish_ec_571,5,Taura,res_city_85,True
+res_parish_ec_572,1,Naranjito,res_city_86,True
+res_parish_ec_573,1,Palestina,res_city_87,True
+res_parish_ec_574,1,Pedro Carbo,res_city_88,True
+res_parish_ec_575,2,Valle De La Virgen,res_city_88,True
+res_parish_ec_576,3,Sabanilla,res_city_88,True
+res_parish_ec_577,1,Samborondón,res_city_89,True
+res_parish_ec_578,2,La Puntilla (Satélite),res_city_89,True
+res_parish_ec_579,3,Samborondón,res_city_89,True
+res_parish_ec_580,4,Tarifa,res_city_89,True
+res_parish_ec_581,1,Santa Lucía,res_city_90,True
+res_parish_ec_582,1,Bocana,res_city_91,True
+res_parish_ec_583,2,Candilejos,res_city_91,True
+res_parish_ec_584,3,Central,res_city_91,True
+res_parish_ec_585,4,Paraíso,res_city_91,True
+res_parish_ec_586,5,San Mateo,res_city_91,True
+res_parish_ec_587,6,El Salitre (Las Ramas),res_city_91,True
+res_parish_ec_588,7,Gral. Vernaza (Dos Esteros),res_city_91,True
+res_parish_ec_589,8,La Victoria (Ñauza),res_city_91,True
+res_parish_ec_590,9,Junquillal,res_city_91,True
+res_parish_ec_591,1,San Jacinto De Yaguachi,res_city_92,True
+res_parish_ec_592,2,Crnel. Lorenzo De Garaicoa (Pedregal),res_city_92,True
+res_parish_ec_593,3,Crnel. Marcelino Maridueña (San Carlos),res_city_92,True
+res_parish_ec_594,4,Gral. Pedro J. Montero (Boliche),res_city_92,True
+res_parish_ec_595,5,Simón Bolívar,res_city_92,True
+res_parish_ec_596,6,Yaguachi Viejo (Cone),res_city_92,True
+res_parish_ec_597,7,Virgen De Fátima,res_city_92,True
+res_parish_ec_598,1,General Villamil (Playas),res_city_93,True
+res_parish_ec_599,1,Simón Bolívar,res_city_94,True
+res_parish_ec_600,2,Crnel.Lorenzo De Garaicoa (Pedregal),res_city_94,True
+res_parish_ec_601,1,Coronel Marcelino Maridueña (San Carlos),res_city_95,True
+res_parish_ec_602,1,Lomas De Sargentillo,res_city_96,True
+res_parish_ec_603,2,Isidro Ayora (Soledad),res_city_96,True
+res_parish_ec_604,1,Narcisa De Jesús,res_city_97,True
+res_parish_ec_605,1,General Antonio Elizalde (Bucay),res_city_98,True
+res_parish_ec_606,1,Isidro Ayora,res_city_99,True
+res_parish_ec_607,1,Caranqui,res_city_100,True
+res_parish_ec_608,2,Guayaquil De Alpachaca,res_city_100,True
+res_parish_ec_609,3,Sagrario,res_city_100,True
+res_parish_ec_610,4,San Francisco,res_city_100,True
+res_parish_ec_611,5,La Dolorosa Del Priorato,res_city_100,True
+res_parish_ec_612,6,San Miguel De Ibarra,res_city_100,True
+res_parish_ec_613,7,Ambuquí,res_city_100,True
+res_parish_ec_614,8,Angochagua,res_city_100,True
+res_parish_ec_615,9,Carolina,res_city_100,True
+res_parish_ec_616,10,La Esperanza,res_city_100,True
+res_parish_ec_617,11,Lita,res_city_100,True
+res_parish_ec_618,12,Salinas,res_city_100,True
+res_parish_ec_619,13,San Antonio,res_city_100,True
+res_parish_ec_620,1,Andrade Marín (Lourdes),res_city_101,True
+res_parish_ec_621,2,Atuntaqui,res_city_101,True
+res_parish_ec_622,3,Imbaya (San Luis De Cobuendo),res_city_101,True
+res_parish_ec_623,4,San Francisco De Natabuela,res_city_101,True
+res_parish_ec_624,5,San José De Chaltura,res_city_101,True
+res_parish_ec_625,6,San Roque,res_city_101,True
+res_parish_ec_626,1,Sagrario,res_city_102,True
+res_parish_ec_627,2,San Francisco,res_city_102,True
+res_parish_ec_628,3,Cotacachi,res_city_102,True
+res_parish_ec_629,4,Apuela,res_city_102,True
+res_parish_ec_630,5,García Moreno (Llurimagua),res_city_102,True
+res_parish_ec_631,6,Imantag,res_city_102,True
+res_parish_ec_632,7,Peñaherrera,res_city_102,True
+res_parish_ec_633,8,Plaza Gutiérrez (Calvario),res_city_102,True
+res_parish_ec_634,9,Quiroga,res_city_102,True
+res_parish_ec_635,10,6 De Julio De Cuellaje (Cab. En Cuellaje),res_city_102,True
+res_parish_ec_636,11,Vacas Galindo (El Churo) (Cab.En San Miguel Alto,res_city_102,True
+res_parish_ec_637,1,Jordán,res_city_103,True
+res_parish_ec_638,2,San Luis,res_city_103,True
+res_parish_ec_639,3,Otavalo,res_city_103,True
+res_parish_ec_640,4,Dr. Miguel Egas Cabezas (Peguche),res_city_103,True
+res_parish_ec_641,5,Eugenio Espejo (Calpaquí),res_city_103,True
+res_parish_ec_642,6,González Suárez,res_city_103,True
+res_parish_ec_643,7,Pataquí,res_city_103,True
+res_parish_ec_644,8,San José De Quichinche,res_city_103,True
+res_parish_ec_645,9,San Juan De Ilumán,res_city_103,True
+res_parish_ec_646,10,San Pablo,res_city_103,True
+res_parish_ec_647,11,San Rafael,res_city_103,True
+res_parish_ec_648,12,Selva Alegre (Cab.En San Miguel De Pamplona),res_city_103,True
+res_parish_ec_649,1,Pimampiro,res_city_104,True
+res_parish_ec_650,2,Chugá,res_city_104,True
+res_parish_ec_651,3,Mariano Acosta,res_city_104,True
+res_parish_ec_652,4,San Francisco De Sigsipamba,res_city_104,True
+res_parish_ec_653,1,Urcuquí Cabecera Cantonal,res_city_105,True
+res_parish_ec_654,2,Cahuasquí,res_city_105,True
+res_parish_ec_655,3,La Merced De Buenos Aires,res_city_105,True
+res_parish_ec_656,4,Pablo Arenas,res_city_105,True
+res_parish_ec_657,5,San Blas,res_city_105,True
+res_parish_ec_658,6,Tumbabiro,res_city_105,True
+res_parish_ec_659,1,El Sagrario,res_city_106,True
+res_parish_ec_660,2,San Sebastián,res_city_106,True
+res_parish_ec_661,3,Sucre,res_city_106,True
+res_parish_ec_662,4,Valle,res_city_106,True
+res_parish_ec_663,5,Loja,res_city_106,True
+res_parish_ec_664,6,Chantaco,res_city_106,True
+res_parish_ec_665,7,Chuquiribamba,res_city_106,True
+res_parish_ec_666,8,El Cisne,res_city_106,True
+res_parish_ec_667,9,Gualel,res_city_106,True
+res_parish_ec_668,10,Jimbilla,res_city_106,True
+res_parish_ec_669,11,Malacatos (Valladolid),res_city_106,True
+res_parish_ec_670,12,San Lucas,res_city_106,True
+res_parish_ec_671,13,San Pedro De Vilcabamba,res_city_106,True
+res_parish_ec_672,14,Santiago,res_city_106,True
+res_parish_ec_673,15,Taquil (Miguel Riofrío),res_city_106,True
+res_parish_ec_674,16,Vilcabamba (Victoria),res_city_106,True
+res_parish_ec_675,17,Yangana (Arsenio Castillo),res_city_106,True
+res_parish_ec_676,18,Quinara,res_city_106,True
+res_parish_ec_677,1,Cariamanga,res_city_107,True
+res_parish_ec_678,2,Chile,res_city_107,True
+res_parish_ec_679,3,San Vicente,res_city_107,True
+res_parish_ec_680,4,Cariamanga,res_city_107,True
+res_parish_ec_681,5,Colaisaca,res_city_107,True
+res_parish_ec_682,6,El Lucero,res_city_107,True
+res_parish_ec_683,7,Utuana,res_city_107,True
+res_parish_ec_684,8,Sanguillín,res_city_107,True
+res_parish_ec_685,1,Catamayo,res_city_108,True
+res_parish_ec_686,2,San José,res_city_108,True
+res_parish_ec_687,3,Catamayo (La Toma),res_city_108,True
+res_parish_ec_688,4,El Tambo,res_city_108,True
+res_parish_ec_689,5,Guayquichuma,res_city_108,True
+res_parish_ec_690,6,San Pedro De La Bendita,res_city_108,True
+res_parish_ec_691,7,Zambi,res_city_108,True
+res_parish_ec_692,1,Celica,res_city_109,True
+res_parish_ec_693,2,Cruzpamba (Cab. En Carlos Bustamante),res_city_109,True
+res_parish_ec_694,3,Chaquinal,res_city_109,True
+res_parish_ec_695,4,12 De Diciembre (Cab. En Achiotes),res_city_109,True
+res_parish_ec_696,5,Pindal (Federico Páez),res_city_109,True
+res_parish_ec_697,6,Pozul (San Juan De Pozul),res_city_109,True
+res_parish_ec_698,7,Sabanilla,res_city_109,True
+res_parish_ec_699,8,Tnte. Maximiliano Rodríguez Loaiza,res_city_109,True
+res_parish_ec_700,8,Chaguarpamba,res_city_110,True
+res_parish_ec_701,1,Buenavista,res_city_110,True
+res_parish_ec_702,2,El Rosario,res_city_110,True
+res_parish_ec_703,3,Santa Rufina,res_city_110,True
+res_parish_ec_704,4,Amarillos,res_city_110,True
+res_parish_ec_705,1,Amaluza,res_city_111,True
+res_parish_ec_706,2,Bellavista,res_city_111,True
+res_parish_ec_707,3,Jimbura,res_city_111,True
+res_parish_ec_708,4,Santa Teresita,res_city_111,True
+res_parish_ec_709,5,27 De Abril (Cab. En La Naranja),res_city_111,True
+res_parish_ec_710,6,El Ingenio,res_city_111,True
+res_parish_ec_711,7,El Airo,res_city_111,True
+res_parish_ec_712,1,Gonzanamá,res_city_112,True
+res_parish_ec_713,2,Changaimina (La Libertad),res_city_112,True
+res_parish_ec_714,3,Fundochamba,res_city_112,True
+res_parish_ec_715,4,Nambacola,res_city_112,True
+res_parish_ec_716,5,Purunuma (Eguiguren),res_city_112,True
+res_parish_ec_717,6,Quilanga (La Paz),res_city_112,True
+res_parish_ec_718,7,Sacapalca,res_city_112,True
+res_parish_ec_719,8,San Antonio De Las Aradas (Cab. En Las Aradas),res_city_112,True
+res_parish_ec_720,1,General Eloy Alfaro (San Sebastián),res_city_113,True
+res_parish_ec_721,2,Macará (Manuel Enrique Rengel Suquilanda),res_city_113,True
+res_parish_ec_722,3,Macará,res_city_113,True
+res_parish_ec_723,4,Larama,res_city_113,True
+res_parish_ec_724,5,La Victoria,res_city_113,True
+res_parish_ec_725,6,Sabiango (La Capilla),res_city_113,True
+res_parish_ec_726,1,Catacocha,res_city_114,True
+res_parish_ec_727,2,Lourdes,res_city_114,True
+res_parish_ec_728,3,Cangonamá,res_city_114,True
+res_parish_ec_729,4,Guachanamá,res_city_114,True
+res_parish_ec_730,5,La Tingue,res_city_114,True
+res_parish_ec_731,6,Lauro Guerrero,res_city_114,True
+res_parish_ec_732,7,Olmedo (Santa Bárbara),res_city_114,True
+res_parish_ec_733,8,Orianga,res_city_114,True
+res_parish_ec_734,9,San Antonio,res_city_114,True
+res_parish_ec_735,10,Casanga,res_city_114,True
+res_parish_ec_736,11,Yamana,res_city_114,True
+res_parish_ec_737,1,Alamor,res_city_115,True
+res_parish_ec_738,2,Ciano,res_city_115,True
+res_parish_ec_739,3,El Arenal,res_city_115,True
+res_parish_ec_740,4,El Limo (Mariana De Jesús),res_city_115,True
+res_parish_ec_741,5,Mercadillo,res_city_115,True
+res_parish_ec_742,6,Vicentino,res_city_115,True
+res_parish_ec_743,1,Saraguro,res_city_116,True
+res_parish_ec_744,2,El Paraíso De Celén,res_city_116,True
+res_parish_ec_745,3,El Tablón,res_city_116,True
+res_parish_ec_746,4,Lluzhapa,res_city_116,True
+res_parish_ec_747,5,Manú,res_city_116,True
+res_parish_ec_748,6,San Antonio De Qumbe (Cumbe),res_city_116,True
+res_parish_ec_749,7,San Pablo De Tenta,res_city_116,True
+res_parish_ec_750,8,San Sebastián De Yúluc,res_city_116,True
+res_parish_ec_751,9,Selva Alegre,res_city_116,True
+res_parish_ec_752,10,Urdaneta (Paquishapa),res_city_116,True
+res_parish_ec_753,11,Sumaypamba,res_city_116,True
+res_parish_ec_754,1,Sozoranga,res_city_117,True
+res_parish_ec_755,2,Nueva Fátima,res_city_117,True
+res_parish_ec_756,3,Tacamoros,res_city_117,True
+res_parish_ec_757,1,Zapotillo,res_city_118,True
+res_parish_ec_758,2,Mangahurco (Cazaderos),res_city_118,True
+res_parish_ec_759,3,Garzareal,res_city_118,True
+res_parish_ec_760,4,Limones,res_city_118,True
+res_parish_ec_761,5,Paletillas,res_city_118,True
+res_parish_ec_762,6,Bolaspamba,res_city_118,True
+res_parish_ec_763,1,Pindal,res_city_119,True
+res_parish_ec_764,2,Chaquinal,res_city_119,True
+res_parish_ec_765,3,12 De Diciembre (Cab.En Achiotes),res_city_119,True
+res_parish_ec_766,4,Milagros,res_city_119,True
+res_parish_ec_767,1,Quilanga,res_city_120,True
+res_parish_ec_768,2,Fundochamba,res_city_120,True
+res_parish_ec_769,3,San Antonio De Las Aradas (Cab. En Las Aradas),res_city_120,True
+res_parish_ec_770,1,Olmedo,res_city_121,True
+res_parish_ec_771,2,La Tingue,res_city_121,True
+res_parish_ec_772,1,Clemente Baquerizo,res_city_122,True
+res_parish_ec_773,2,Dr. Camilo Ponce,res_city_122,True
+res_parish_ec_774,3,Barreiro,res_city_122,True
+res_parish_ec_775,4,El Salto,res_city_122,True
+res_parish_ec_776,5,Babahoyo,res_city_122,True
+res_parish_ec_777,6,Barreiro (Santa Rita),res_city_122,True
+res_parish_ec_778,7,Caracol,res_city_122,True
+res_parish_ec_779,8,Febres Cordero (Las Juntas),res_city_122,True
+res_parish_ec_780,9,Pimocha,res_city_122,True
+res_parish_ec_781,10,La Unión,res_city_122,True
+res_parish_ec_782,1,Baba,res_city_123,True
+res_parish_ec_783,2,Guare,res_city_123,True
+res_parish_ec_784,3,Isla De Bejucal,res_city_123,True
+res_parish_ec_785,1,Montalvo,res_city_124,True
+res_parish_ec_786,1,Puebloviejo,res_city_125,True
+res_parish_ec_787,2,Puerto Pechiche,res_city_125,True
+res_parish_ec_788,3,San Juan,res_city_125,True
+res_parish_ec_789,1,Quevedo,res_city_126,True
+res_parish_ec_790,1,San Camilo,res_city_126,True
+res_parish_ec_791,2,San José,res_city_126,True
+res_parish_ec_792,3,Guayacán,res_city_126,True
+res_parish_ec_793,4,Nicolás Infante Díaz,res_city_126,True
+res_parish_ec_794,5,San Cristóbal,res_city_126,True
+res_parish_ec_795,6,Siete De Octubre,res_city_126,True
+res_parish_ec_796,7,24 De Mayo,res_city_126,True
+res_parish_ec_797,8,Venus Del Río Quevedo,res_city_126,True
+res_parish_ec_798,9,Viva Alfaro,res_city_126,True
+res_parish_ec_799,10,Quevedo,res_city_126,True
+res_parish_ec_800,11,Buena Fé,res_city_126,True
+res_parish_ec_801,12,Mocache,res_city_126,True
+res_parish_ec_802,13,San Carlos,res_city_126,True
+res_parish_ec_803,14,Valencia,res_city_126,True
+res_parish_ec_804,15,La Esperanza,res_city_126,True
+res_parish_ec_805,1,Catarama,res_city_127,True
+res_parish_ec_806,2,Ricaurte,res_city_127,True
+res_parish_ec_807,1,10 De Noviembre,res_city_128,True
+res_parish_ec_808,2,Ventanas,res_city_128,True
+res_parish_ec_809,3,Quinsaloma,res_city_128,True
+res_parish_ec_810,4,Zapotal,res_city_128,True
+res_parish_ec_811,5,Chacarita,res_city_128,True
+res_parish_ec_812,6,Los Ángeles,res_city_128,True
+res_parish_ec_813,1,Vinces,res_city_129,True
+res_parish_ec_814,2,Antonio Sotomayor (Cab. En Playas De Vinces),res_city_129,True
+res_parish_ec_815,3,Palenque,res_city_129,True
+res_parish_ec_816,1,Palenque,res_city_130,True
+res_parish_ec_817,1,San Jacinto De Buena Fé,res_city_131,True
+res_parish_ec_818,2,7 De Agosto,res_city_131,True
+res_parish_ec_819,3,11 De Octubre,res_city_131,True
+res_parish_ec_820,4,San Jacinto De Buena Fé,res_city_131,True
+res_parish_ec_821,5,Patricia Pilar,res_city_131,True
+res_parish_ec_822,1,Valencia,res_city_132,True
+res_parish_ec_823,1,Mocache,res_city_133,True
+res_parish_ec_824,1,Quinsaloma,res_city_134,True
+res_parish_ec_825,1,Portoviejo,res_city_135,True
+res_parish_ec_826,2,12 De Marzo,res_city_135,True
+res_parish_ec_827,3,Colón,res_city_135,True
+res_parish_ec_828,4,Picoazá,res_city_135,True
+res_parish_ec_829,5,San Pablo,res_city_135,True
+res_parish_ec_830,6,Andrés De Vera,res_city_135,True
+res_parish_ec_831,7,Francisco Pacheco,res_city_135,True
+res_parish_ec_832,8,18 De Octubre,res_city_135,True
+res_parish_ec_833,9,Simón Bolívar,res_city_135,True
+res_parish_ec_834,10,Portoviejo,res_city_135,True
+res_parish_ec_835,11,Abdón Calderón (San Francisco),res_city_135,True
+res_parish_ec_836,12,Alhajuela (Bajo Grande),res_city_135,True
+res_parish_ec_837,13,Crucita,res_city_135,True
+res_parish_ec_838,14,Pueblo Nuevo,res_city_135,True
+res_parish_ec_839,15,Riochico (Río Chico),res_city_135,True
+res_parish_ec_840,16,San Plácido,res_city_135,True
+res_parish_ec_841,17,Chirijos,res_city_135,True
+res_parish_ec_842,1,Calceta,res_city_136,True
+res_parish_ec_843,2,Membrillo,res_city_136,True
+res_parish_ec_844,3,Quiroga,res_city_136,True
+res_parish_ec_845,1,Chone,res_city_137,True
+res_parish_ec_846,2,Santa Rita,res_city_137,True
+res_parish_ec_847,3,Boyacá,res_city_137,True
+res_parish_ec_848,4,Canuto,res_city_137,True
+res_parish_ec_849,5,Convento,res_city_137,True
+res_parish_ec_850,6,Chibunga,res_city_137,True
+res_parish_ec_851,7,Eloy Alfaro,res_city_137,True
+res_parish_ec_852,8,Ricaurte,res_city_137,True
+res_parish_ec_853,9,San Antonio,res_city_137,True
+res_parish_ec_854,1,El Carmen,res_city_138,True
+res_parish_ec_855,2,4 De Diciembre,res_city_138,True
+res_parish_ec_856,3,El Carmen,res_city_138,True
+res_parish_ec_857,4,Wilfrido Loor Moreira (Maicito),res_city_138,True
+res_parish_ec_858,5,San Pedro De Suma,res_city_138,True
+res_parish_ec_859,1,Flavio Alfaro,res_city_139,True
+res_parish_ec_860,2,San Francisco De Novillo (Cab. En,res_city_139,True
+res_parish_ec_861,3,Zapallo,res_city_139,True
+res_parish_ec_862,1,Dr. Miguel Morán Lucio,res_city_140,True
+res_parish_ec_863,2,Manuel Inocencio Parrales Y Guale,res_city_140,True
+res_parish_ec_864,3,San Lorenzo De Jipijapa,res_city_140,True
+res_parish_ec_865,4,Jipijapa,res_city_140,True
+res_parish_ec_866,5,América,res_city_140,True
+res_parish_ec_867,6,El Anegado (Cab. En Eloy Alfaro),res_city_140,True
+res_parish_ec_868,7,Julcuy,res_city_140,True
+res_parish_ec_869,8,La Unión,res_city_140,True
+res_parish_ec_870,9,Machalilla,res_city_140,True
+res_parish_ec_871,10,Membrillal,res_city_140,True
+res_parish_ec_872,11,Pedro Pablo Gómez,res_city_140,True
+res_parish_ec_873,12,Puerto De Cayo,res_city_140,True
+res_parish_ec_874,13,Puerto López,res_city_140,True
+res_parish_ec_875,1,Junín,res_city_141,True
+res_parish_ec_876,1,Los Esteros,res_city_142,True
+res_parish_ec_877,2,Manta,res_city_142,True
+res_parish_ec_878,3,San Mateo,res_city_142,True
+res_parish_ec_879,4,Tarqui,res_city_142,True
+res_parish_ec_880,5,Eloy Alfaro,res_city_142,True
+res_parish_ec_881,6,Manta,res_city_142,True
+res_parish_ec_882,7,San Lorenzo,res_city_142,True
+res_parish_ec_883,8,Santa Marianita (Boca De Pacoche),res_city_142,True
+res_parish_ec_884,1,Anibal San Andrés,res_city_143,True
+res_parish_ec_885,2,Montecristi,res_city_143,True
+res_parish_ec_886,3,El Colorado,res_city_143,True
+res_parish_ec_887,4,General Eloy Alfaro,res_city_143,True
+res_parish_ec_888,5,Leonidas Proaño,res_city_143,True
+res_parish_ec_889,6,Montecristi,res_city_143,True
+res_parish_ec_890,7,Jaramijó,res_city_143,True
+res_parish_ec_891,8,La Pila,res_city_143,True
+res_parish_ec_892,1,Paján,res_city_144,True
+res_parish_ec_893,2,Campozano (La Palma De Paján),res_city_144,True
+res_parish_ec_894,3,Cascol,res_city_144,True
+res_parish_ec_895,4,Guale,res_city_144,True
+res_parish_ec_896,5,Lascano,res_city_144,True
+res_parish_ec_897,1,Pichincha,res_city_145,True
+res_parish_ec_898,2,Barraganete,res_city_145,True
+res_parish_ec_899,3,San Sebastián,res_city_145,True
+res_parish_ec_900,1,Rocafuerte,res_city_146,True
+res_parish_ec_901,1,Santa Ana,res_city_147,True
+res_parish_ec_902,2,Lodana,res_city_147,True
+res_parish_ec_903,3,Santa Ana De Vuelta Larga,res_city_147,True
+res_parish_ec_904,4,Ayacucho,res_city_147,True
+res_parish_ec_905,5,Honorato Vásquez (Cab. En Vásquez),res_city_147,True
+res_parish_ec_906,6,La Unión,res_city_147,True
+res_parish_ec_907,7,Olmedo,res_city_147,True
+res_parish_ec_908,8,San Pablo (Cab. En Pueblo Nuevo),res_city_147,True
+res_parish_ec_909,1,Bahía De Caráquez,res_city_148,True
+res_parish_ec_910,2,Leonidas Plaza Gutiérrez,res_city_148,True
+res_parish_ec_911,3,Bahía De Caráquez,res_city_148,True
+res_parish_ec_912,4,Canoa,res_city_148,True
+res_parish_ec_913,5,Cojimíes,res_city_148,True
+res_parish_ec_914,6,Charapotó,res_city_148,True
+res_parish_ec_915,7,10 De Agosto,res_city_148,True
+res_parish_ec_916,8,Jama,res_city_148,True
+res_parish_ec_917,9,Pedernales,res_city_148,True
+res_parish_ec_918,10,San Isidro,res_city_148,True
+res_parish_ec_919,11,San Vicente,res_city_148,True
+res_parish_ec_920,1,Tosagua,res_city_149,True
+res_parish_ec_921,2,Bachillero,res_city_149,True
+res_parish_ec_922,3,Angel Pedro Giler (La Estancilla),res_city_149,True
+res_parish_ec_923,1,Sucre,res_city_150,True
+res_parish_ec_924,2,Bellavista,res_city_150,True
+res_parish_ec_925,3,Noboa,res_city_150,True
+res_parish_ec_926,4,Arq. Sixto Durán Ballén,res_city_150,True
+res_parish_ec_927,1,Pedernales,res_city_151,True
+res_parish_ec_928,2,Cojimíes,res_city_151,True
+res_parish_ec_929,3,10 De Agosto,res_city_151,True
+res_parish_ec_930,4,Atahualpa,res_city_151,True
+res_parish_ec_931,1,Olmedo,res_city_152,True
+res_parish_ec_932,1,Puerto López,res_city_153,True
+res_parish_ec_933,2,Machalilla,res_city_153,True
+res_parish_ec_934,3,Salango,res_city_153,True
+res_parish_ec_935,1,Jama,res_city_154,True
+res_parish_ec_936,1,Jaramijó,res_city_155,True
+res_parish_ec_937,1,San Vicente,res_city_156,True
+res_parish_ec_938,2,Canoa,res_city_156,True
+res_parish_ec_939,1,Macas,res_city_157,True
+res_parish_ec_940,2,Alshi (Cab. En 9 De Octubre),res_city_157,True
+res_parish_ec_941,3,Chiguaza,res_city_157,True
+res_parish_ec_942,4,General Proaño,res_city_157,True
+res_parish_ec_943,5,Huasaga (Cab.En Wampuik),res_city_157,True
+res_parish_ec_944,6,Macuma,res_city_157,True
+res_parish_ec_945,7,San Isidro,res_city_157,True
+res_parish_ec_946,8,Sevilla Don Bosco,res_city_157,True
+res_parish_ec_947,9,Sinaí,res_city_157,True
+res_parish_ec_948,10,Taisha,res_city_157,True
+res_parish_ec_949,11,Zuña (Zúñac),res_city_157,True
+res_parish_ec_950,12,Tuutinentza,res_city_157,True
+res_parish_ec_951,13,Cuchaentza,res_city_157,True
+res_parish_ec_952,14,San José De Morona,res_city_157,True
+res_parish_ec_953,15,Río Blanco,res_city_157,True
+res_parish_ec_954,1,Gualaquiza,res_city_158,True
+res_parish_ec_955,2,Mercedes Molina,res_city_158,True
+res_parish_ec_956,3,Gualaquiza,res_city_158,True
+res_parish_ec_957,4,Amazonas (Rosario De Cuyes),res_city_158,True
+res_parish_ec_958,5,Bermejos,res_city_158,True
+res_parish_ec_959,6,Bomboiza,res_city_158,True
+res_parish_ec_960,7,Chigüinda,res_city_158,True
+res_parish_ec_961,8,El Rosario,res_city_158,True
+res_parish_ec_962,9,Nueva Tarqui,res_city_158,True
+res_parish_ec_963,10,San Miguel De Cuyes,res_city_158,True
+res_parish_ec_964,11,El Ideal,res_city_158,True
+res_parish_ec_965,1,General Leonidas Plaza Gutiérrez (Limón),res_city_159,True
+res_parish_ec_966,2,Indanza,res_city_159,True
+res_parish_ec_967,3,Pan De Azúcar,res_city_159,True
+res_parish_ec_968,4,San Antonio (Cab. En San Antonio Centro,res_city_159,True
+res_parish_ec_969,5,San Carlos De Limón (San Carlos Del,res_city_159,True
+res_parish_ec_970,6,San Juan Bosco,res_city_159,True
+res_parish_ec_971,7,San Miguel De Conchay,res_city_159,True
+res_parish_ec_972,8,Santa Susana De Chiviaza (Cab. En Chiviaza),res_city_159,True
+res_parish_ec_973,9,Yunganza (Cab. En El Rosario),res_city_159,True
+res_parish_ec_974,1,Palora (Metzera),res_city_160,True
+res_parish_ec_975,2,Arapicos,res_city_160,True
+res_parish_ec_976,3,Cumandá (Cab. En Colonia Agrícola Sevilla Del Oro),res_city_160,True
+res_parish_ec_977,4,Huamboya,res_city_160,True
+res_parish_ec_978,5,Sangay (Cab. En Nayamanaca),res_city_160,True
+res_parish_ec_979,1,Santiago De Méndez,res_city_161,True
+res_parish_ec_980,2,Copal,res_city_161,True
+res_parish_ec_981,3,Chupianza,res_city_161,True
+res_parish_ec_982,4,Patuca,res_city_161,True
+res_parish_ec_983,5,San Luis De El Acho (Cab. En El Acho),res_city_161,True
+res_parish_ec_984,6,Santiago,res_city_161,True
+res_parish_ec_985,7,Tayuza,res_city_161,True
+res_parish_ec_986,8,San Francisco De Chinimbimi,res_city_161,True
+res_parish_ec_987,1,Sucúa,res_city_162,True
+res_parish_ec_988,2,Asunción,res_city_162,True
+res_parish_ec_989,3,Huambi,res_city_162,True
+res_parish_ec_990,4,Logroño,res_city_162,True
+res_parish_ec_991,5,Yaupi,res_city_162,True
+res_parish_ec_992,6,Santa Marianita De Jesús,res_city_162,True
+res_parish_ec_993,1,Huamboya,res_city_163,True
+res_parish_ec_994,2,Chiguaza,res_city_163,True
+res_parish_ec_995,3,Pablo Sexto,res_city_163,True
+res_parish_ec_996,1,San Juan Bosco,res_city_164,True
+res_parish_ec_997,2,Pan De Azúcar,res_city_164,True
+res_parish_ec_998,3,San Carlos De Limón,res_city_164,True
+res_parish_ec_999,4,San Jacinto De Wakambeis,res_city_164,True
+res_parish_ec_1000,5,Santiago De Pananza,res_city_164,True
+res_parish_ec_1001,1,Taisha,res_city_165,True
+res_parish_ec_1002,2,Huasaga (Cab. En Wampuik),res_city_165,True
+res_parish_ec_1003,3,Macuma,res_city_165,True
+res_parish_ec_1004,4,Tuutinentza,res_city_165,True
+res_parish_ec_1005,5,Pumpuentsa,res_city_165,True
+res_parish_ec_1006,1,Logroño,res_city_166,True
+res_parish_ec_1007,2,Yaupi,res_city_166,True
+res_parish_ec_1008,3,Shimpis,res_city_166,True
+res_parish_ec_1009,1,Pablo Sexto,res_city_167,True
+res_parish_ec_1010,1,Santiago,res_city_168,True
+res_parish_ec_1011,2,San José De Morona,res_city_168,True
+res_parish_ec_1012,1,Tena,res_city_169,True
+res_parish_ec_1013,2,Ahuano,res_city_169,True
+res_parish_ec_1014,3,Carlos Julio Arosemena Tola (Zatza-Yacu),res_city_169,True
+res_parish_ec_1015,4,Chontapunta,res_city_169,True
+res_parish_ec_1016,5,Pano,res_city_169,True
+res_parish_ec_1017,6,Puerto Misahualli,res_city_169,True
+res_parish_ec_1018,7,Puerto Napo,res_city_169,True
+res_parish_ec_1019,8,Tálag,res_city_169,True
+res_parish_ec_1020,9,San Juan De Muyuna,res_city_169,True
+res_parish_ec_1021,1,Archidona,res_city_170,True
+res_parish_ec_1022,2,Avila,res_city_170,True
+res_parish_ec_1023,3,Cotundo,res_city_170,True
+res_parish_ec_1024,4,Loreto,res_city_170,True
+res_parish_ec_1025,5,San Pablo De Ushpayacu,res_city_170,True
+res_parish_ec_1026,6,Puerto Murialdo,res_city_170,True
+res_parish_ec_1027,1,El Chaco,res_city_171,True
+res_parish_ec_1028,2,Gonzalo Díaz De Pineda (El Bombón),res_city_171,True
+res_parish_ec_1029,3,Linares,res_city_171,True
+res_parish_ec_1030,4,Oyacachi,res_city_171,True
+res_parish_ec_1031,5,Santa Rosa,res_city_171,True
+res_parish_ec_1032,6,Sardinas,res_city_171,True
+res_parish_ec_1033,1,Baeza,res_city_172,True
+res_parish_ec_1034,2,Cosanga,res_city_172,True
+res_parish_ec_1035,3,Cuyuja,res_city_172,True
+res_parish_ec_1036,4,Papallacta,res_city_172,True
+res_parish_ec_1037,5,San Francisco De Borja (Virgilio Dávila),res_city_172,True
+res_parish_ec_1038,6,San José Del Payamino,res_city_172,True
+res_parish_ec_1039,7,Sumaco,res_city_172,True
+res_parish_ec_1040,1,Carlos Julio Arosemena Tola,res_city_173,True
+res_parish_ec_1041,1,Puyo,res_city_174,True
+res_parish_ec_1042,2,Arajuno,res_city_174,True
+res_parish_ec_1043,3,Canelos,res_city_174,True
+res_parish_ec_1044,4,Curaray,res_city_174,True
+res_parish_ec_1045,5,Diez De Agosto,res_city_174,True
+res_parish_ec_1046,6,Fátima,res_city_174,True
+res_parish_ec_1047,7,Montalvo (Andoas),res_city_174,True
+res_parish_ec_1048,8,Pomona,res_city_174,True
+res_parish_ec_1049,9,Río Corrientes,res_city_174,True
+res_parish_ec_1050,10,Río Tigre,res_city_174,True
+res_parish_ec_1051,11,Santa Clara,res_city_174,True
+res_parish_ec_1052,12,Sarayacu,res_city_174,True
+res_parish_ec_1053,13,Simón Bolívar (Cab. En Mushullacta),res_city_174,True
+res_parish_ec_1054,14,Tarqui,res_city_174,True
+res_parish_ec_1055,15,Teniente Hugo Ortiz,res_city_174,True
+res_parish_ec_1056,16,Veracruz (Indillama) (Cab. En Indillama),res_city_174,True
+res_parish_ec_1057,17,El Triunfo,res_city_174,True
+res_parish_ec_1058,1,Mera,res_city_175,True
+res_parish_ec_1059,2,Madre Tierra,res_city_175,True
+res_parish_ec_1060,3,Shell,res_city_175,True
+res_parish_ec_1061,1,Santa Clara,res_city_176,True
+res_parish_ec_1062,2,San José,res_city_176,True
+res_parish_ec_1063,1,Arajuno,res_city_177,True
+res_parish_ec_1064,2,Curaray,res_city_177,True
+res_parish_ec_1065,1,Belisario Quevedo,res_city_178,True
+res_parish_ec_1066,2,Carcelén,res_city_178,True
+res_parish_ec_1067,3,Centro Histórico,res_city_178,True
+res_parish_ec_1068,4,Cochapamba,res_city_178,True
+res_parish_ec_1069,5,Comité Del Pueblo,res_city_178,True
+res_parish_ec_1070,6,Cotocollao,res_city_178,True
+res_parish_ec_1071,7,Chilibulo,res_city_178,True
+res_parish_ec_1072,8,Chillogallo,res_city_178,True
+res_parish_ec_1073,9,Chimbacalle,res_city_178,True
+res_parish_ec_1074,10,El Condado,res_city_178,True
+res_parish_ec_1075,11,Guamaní,res_city_178,True
+res_parish_ec_1076,12,Iñaquito,res_city_178,True
+res_parish_ec_1077,13,Itchimbía,res_city_178,True
+res_parish_ec_1078,14,Jipijapa,res_city_178,True
+res_parish_ec_1079,15,Kennedy,res_city_178,True
+res_parish_ec_1080,16,La Argelia,res_city_178,True
+res_parish_ec_1081,17,La Concepción,res_city_178,True
+res_parish_ec_1082,18,La Ecuatoriana,res_city_178,True
+res_parish_ec_1083,19,La Ferroviaria,res_city_178,True
+res_parish_ec_1084,20,La Libertad,res_city_178,True
+res_parish_ec_1085,21,La Magdalena,res_city_178,True
+res_parish_ec_1086,22,La Mena,res_city_178,True
+res_parish_ec_1087,23,Mariscal Sucre,res_city_178,True
+res_parish_ec_1088,24,Ponceano,res_city_178,True
+res_parish_ec_1089,25,Puengasí,res_city_178,True
+res_parish_ec_1090,26,Quitumbe,res_city_178,True
+res_parish_ec_1091,27,Rumipamba,res_city_178,True
+res_parish_ec_1092,28,San Bartolo,res_city_178,True
+res_parish_ec_1093,29,San Isidro Del Inca,res_city_178,True
+res_parish_ec_1094,30,San Juan,res_city_178,True
+res_parish_ec_1095,31,Solanda,res_city_178,True
+res_parish_ec_1096,32,Turubamba,res_city_178,True
+res_parish_ec_1097,33,Quito Distrito Metropolitano,res_city_178,True
+res_parish_ec_1098,34,Alangasí,res_city_178,True
+res_parish_ec_1099,35,Amaguaña,res_city_178,True
+res_parish_ec_1100,36,Atahualpa,res_city_178,True
+res_parish_ec_1101,37,Calacalí,res_city_178,True
+res_parish_ec_1102,38,Calderón,res_city_178,True
+res_parish_ec_1103,39,Conocoto,res_city_178,True
+res_parish_ec_1104,40,Cumbayá,res_city_178,True
+res_parish_ec_1105,41,Chavezpamba,res_city_178,True
+res_parish_ec_1106,42,Checa,res_city_178,True
+res_parish_ec_1107,43,El Quinche,res_city_178,True
+res_parish_ec_1108,44,Gualea,res_city_178,True
+res_parish_ec_1109,45,Guangopolo,res_city_178,True
+res_parish_ec_1110,46,Guayllabamba,res_city_178,True
+res_parish_ec_1111,47,La Merced,res_city_178,True
+res_parish_ec_1112,48,Llano Chico,res_city_178,True
+res_parish_ec_1113,49,Lloa,res_city_178,True
+res_parish_ec_1114,50,Mindo,res_city_178,True
+res_parish_ec_1115,51,Nanegal,res_city_178,True
+res_parish_ec_1116,52,Nanegalito,res_city_178,True
+res_parish_ec_1117,53,Nayón,res_city_178,True
+res_parish_ec_1118,54,Nono,res_city_178,True
+res_parish_ec_1119,55,Pacto,res_city_178,True
+res_parish_ec_1120,56,Pedro Vicente Maldonado,res_city_178,True
+res_parish_ec_1121,57,Perucho,res_city_178,True
+res_parish_ec_1122,58,Pifo,res_city_178,True
+res_parish_ec_1123,59,Píntag,res_city_178,True
+res_parish_ec_1124,60,Pomasqui,res_city_178,True
+res_parish_ec_1125,61,Puéllaro,res_city_178,True
+res_parish_ec_1126,62,Puembo,res_city_178,True
+res_parish_ec_1127,63,San Antonio,res_city_178,True
+res_parish_ec_1128,64,San José De Minas,res_city_178,True
+res_parish_ec_1129,65,San Miguel De Los Bancos,res_city_178,True
+res_parish_ec_1130,66,Tababela,res_city_178,True
+res_parish_ec_1131,67,Tumbaco,res_city_178,True
+res_parish_ec_1132,68,Yaruquí,res_city_178,True
+res_parish_ec_1133,69,Zambiza,res_city_178,True
+res_parish_ec_1134,70,Puerto Quito,res_city_178,True
+res_parish_ec_1135,1,Ayora,res_city_179,True
+res_parish_ec_1136,2,Cayambe,res_city_179,True
+res_parish_ec_1137,3,Juan Montalvo,res_city_179,True
+res_parish_ec_1138,4,Cayambe,res_city_179,True
+res_parish_ec_1139,5,Ascázubi,res_city_179,True
+res_parish_ec_1140,6,Cangahua,res_city_179,True
+res_parish_ec_1141,7,Olmedo (Pesillo),res_city_179,True
+res_parish_ec_1142,8,Otón,res_city_179,True
+res_parish_ec_1143,9,Santa Rosa De Cuzubamba,res_city_179,True
+res_parish_ec_1144,1,Machachi,res_city_180,True
+res_parish_ec_1145,2,Alóag,res_city_180,True
+res_parish_ec_1146,3,Aloasí,res_city_180,True
+res_parish_ec_1147,4,Cutuglahua,res_city_180,True
+res_parish_ec_1148,5,El Chaupi,res_city_180,True
+res_parish_ec_1149,6,Manuel Cornejo Astorga (Tandapi),res_city_180,True
+res_parish_ec_1150,7,Tambillo,res_city_180,True
+res_parish_ec_1151,8,Uyumbicho,res_city_180,True
+res_parish_ec_1152,1,Tabacundo,res_city_181,True
+res_parish_ec_1153,2,La Esperanza,res_city_181,True
+res_parish_ec_1154,3,Malchinguí,res_city_181,True
+res_parish_ec_1155,4,Tocachi,res_city_181,True
+res_parish_ec_1156,5,Tupigachi,res_city_181,True
+res_parish_ec_1157,1,Sangolquí,res_city_182,True
+res_parish_ec_1158,2,San Pedro De Taboada,res_city_182,True
+res_parish_ec_1159,3,San Rafael,res_city_182,True
+res_parish_ec_1160,4,Sangolqui,res_city_182,True
+res_parish_ec_1161,5,Cotogchoa,res_city_182,True
+res_parish_ec_1162,6,Rumipamba,res_city_182,True
+res_parish_ec_1163,1,San Miguel De Los Bancos,res_city_183,True
+res_parish_ec_1164,2,Mindo,res_city_183,True
+res_parish_ec_1165,3,Pedro Vicente Maldonado,res_city_183,True
+res_parish_ec_1166,4,Puerto Quito,res_city_183,True
+res_parish_ec_1167,1,Pedro Vicente Maldonado,res_city_184,True
+res_parish_ec_1168,1,Puerto Quito,res_city_185,True
+res_parish_ec_1169,1,Atocha – Ficoa,res_city_186,True
+res_parish_ec_1170,2,Celiano Monge,res_city_186,True
+res_parish_ec_1171,3,Huachi Chico,res_city_186,True
+res_parish_ec_1172,4,Huachi Loreto,res_city_186,True
+res_parish_ec_1173,5,La Merced,res_city_186,True
+res_parish_ec_1174,6,La Península,res_city_186,True
+res_parish_ec_1175,7,Matriz,res_city_186,True
+res_parish_ec_1176,8,Pishilata,res_city_186,True
+res_parish_ec_1177,9,San Francisco,res_city_186,True
+res_parish_ec_1178,10,Ambato,res_city_186,True
+res_parish_ec_1179,11,Ambatillo,res_city_186,True
+res_parish_ec_1180,12,Atahualpa (Chisalata),res_city_186,True
+res_parish_ec_1181,13,Augusto N. Martínez (Mundugleo),res_city_186,True
+res_parish_ec_1182,14,Constantino Fernández (Cab. En Cullitahua),res_city_186,True
+res_parish_ec_1183,15,Huachi Grande,res_city_186,True
+res_parish_ec_1184,16,Izamba,res_city_186,True
+res_parish_ec_1185,17,Juan Benigno Vela,res_city_186,True
+res_parish_ec_1186,18,Montalvo,res_city_186,True
+res_parish_ec_1187,19,Pasa,res_city_186,True
+res_parish_ec_1188,20,Picaigua,res_city_186,True
+res_parish_ec_1189,21,Pilagüín (Pilahüín),res_city_186,True
+res_parish_ec_1190,22,Quisapincha (Quizapincha),res_city_186,True
+res_parish_ec_1191,23,San Bartolomé De Pinllog,res_city_186,True
+res_parish_ec_1192,24,San Fernando (Pasa San Fernando),res_city_186,True
+res_parish_ec_1193,25,Santa Rosa,res_city_186,True
+res_parish_ec_1194,26,Totoras,res_city_186,True
+res_parish_ec_1195,27,Cunchibamba,res_city_186,True
+res_parish_ec_1196,28,Unamuncho,res_city_186,True
+res_parish_ec_1197,1,Baños De Agua Santa,res_city_187,True
+res_parish_ec_1198,2,Lligua,res_city_187,True
+res_parish_ec_1199,3,Río Negro,res_city_187,True
+res_parish_ec_1200,4,Río Verde,res_city_187,True
+res_parish_ec_1201,5,Ulba,res_city_187,True
+res_parish_ec_1202,1,Cevallos,res_city_189,True
+res_parish_ec_1203,1,Mocha,res_city_189,True
+res_parish_ec_1204,2,Pinguilí,res_city_189,True
+res_parish_ec_1205,1,Patate,res_city_190,True
+res_parish_ec_1206,2,El Triunfo,res_city_190,True
+res_parish_ec_1207,3,Los Andes (Cab. En Poatug),res_city_190,True
+res_parish_ec_1208,4,Sucre (Cab. En Sucre-Patate Urcu),res_city_190,True
+res_parish_ec_1209,1,Quero,res_city_191,True
+res_parish_ec_1210,2,Rumipamba,res_city_191,True
+res_parish_ec_1211,3,Yanayacu - Mochapata (Cab. En Yanayacu),res_city_191,True
+res_parish_ec_1212,1,Pelileo,res_city_192,True
+res_parish_ec_1213,2,Pelileo Grande,res_city_192,True
+res_parish_ec_1214,3,Pelileo,res_city_192,True
+res_parish_ec_1215,4,Benítez (Pachanlica),res_city_192,True
+res_parish_ec_1216,5,Bolívar,res_city_192,True
+res_parish_ec_1217,6,Cotaló,res_city_192,True
+res_parish_ec_1218,7,Chiquicha (Cab. En Chiquicha Grande),res_city_192,True
+res_parish_ec_1219,8,El Rosario (Rumichaca),res_city_192,True
+res_parish_ec_1220,9,García Moreno (Chumaqui),res_city_192,True
+res_parish_ec_1221,10,Guambaló (Huambaló),res_city_192,True
+res_parish_ec_1222,11,Salasaca,res_city_192,True
+res_parish_ec_1223,1,Ciudad Nueva,res_city_193,True
+res_parish_ec_1224,2,Píllaro,res_city_193,True
+res_parish_ec_1225,3,Píllaro,res_city_193,True
+res_parish_ec_1226,4,Baquerizo Moreno,res_city_193,True
+res_parish_ec_1227,5,Emilio María Terán (Rumipamba),res_city_193,True
+res_parish_ec_1228,6,Marcos Espinel (Chacata),res_city_193,True
+res_parish_ec_1229,7,Presidente Urbina (Chagrapamba -Patzucul),res_city_193,True
+res_parish_ec_1230,8,San Andrés,res_city_193,True
+res_parish_ec_1231,9,San José De Poaló,res_city_193,True
+res_parish_ec_1232,10,San Miguelito,res_city_193,True
+res_parish_ec_1233,1,Tisaleo,res_city_194,True
+res_parish_ec_1234,2,Quinchicoto,res_city_194,True
+res_parish_ec_1235,1,El Limón,res_city_195,True
+res_parish_ec_1236,2,Zamora,res_city_195,True
+res_parish_ec_1237,3,Zamora,res_city_195,True
+res_parish_ec_1238,4,Cumbaratza,res_city_195,True
+res_parish_ec_1239,5,Guadalupe,res_city_195,True
+res_parish_ec_1240,6,Imbana (La Victoria De Imbana),res_city_195,True
+res_parish_ec_1241,7,Paquisha,res_city_195,True
+res_parish_ec_1242,8,Sabanilla,res_city_195,True
+res_parish_ec_1243,9,Timbara,res_city_195,True
+res_parish_ec_1244,10,Zumbi,res_city_195,True
+res_parish_ec_1245,11,San Carlos De Las Minas,res_city_195,True
+res_parish_ec_1246,1,Zumba,res_city_196,True
+res_parish_ec_1247,2,Chito,res_city_196,True
+res_parish_ec_1248,3,El Chorro,res_city_196,True
+res_parish_ec_1249,4,El Porvenir Del Carmen,res_city_196,True
+res_parish_ec_1250,5,La Chonta,res_city_196,True
+res_parish_ec_1251,6,Palanda,res_city_196,True
+res_parish_ec_1252,7,Pucapamba,res_city_196,True
+res_parish_ec_1253,8,San Francisco Del Vergel,res_city_196,True
+res_parish_ec_1254,9,Valladolid,res_city_196,True
+res_parish_ec_1255,10,San Andrés,res_city_196,True
+res_parish_ec_1256,1,Guayzimi,res_city_197,True
+res_parish_ec_1257,2,Zurmi,res_city_197,True
+res_parish_ec_1258,3,Nuevo Paraíso,res_city_197,True
+res_parish_ec_1259,1,28 De Mayo (San José De Yacuambi),res_city_198,True
+res_parish_ec_1260,2,La Paz,res_city_198,True
+res_parish_ec_1261,3,Tutupali,res_city_198,True
+res_parish_ec_1262,1,Yantzaza (Yanzatza),res_city_199,True
+res_parish_ec_1263,2,Chicaña,res_city_199,True
+res_parish_ec_1264,3,El Pangui,res_city_199,True
+res_parish_ec_1265,4,Los Encuentros,res_city_199,True
+res_parish_ec_1266,1,El Pangui,res_city_200,True
+res_parish_ec_1267,2,El Guisme,res_city_200,True
+res_parish_ec_1268,3,Pachicutza,res_city_200,True
+res_parish_ec_1269,4,Tundayme,res_city_200,True
+res_parish_ec_1270,1,Zumbi,res_city_201,True
+res_parish_ec_1271,2,Paquisha,res_city_201,True
+res_parish_ec_1272,3,Triunfo-Dorado,res_city_201,True
+res_parish_ec_1273,4,Panguintza,res_city_201,True
+res_parish_ec_1274,1,Palanda,res_city_202,True
+res_parish_ec_1275,2,El Porvenir Del Carmen,res_city_202,True
+res_parish_ec_1276,3,San Francisco Del Vergel,res_city_202,True
+res_parish_ec_1277,4,Valladolid,res_city_202,True
+res_parish_ec_1278,5,La Canela,res_city_202,True
+res_parish_ec_1279,1,Paquisha,res_city_203,True
+res_parish_ec_1280,2,Bellavista,res_city_203,True
+res_parish_ec_1281,3,Nuevo Quito,res_city_203,True
+res_parish_ec_1282,1,Puerto Baquerizo Moreno,res_city_204,True
+res_parish_ec_1283,2,El Progreso,res_city_204,True
+res_parish_ec_1284,3,La Santa María (Floreana) (Cab. En Pto. Velasco Ibarr,res_city_204,True
+res_parish_ec_1285,1,Puerto Villamil,res_city_205,True
+res_parish_ec_1286,2,Tomás De Berlanga (Santo Tomás),res_city_205,True
+res_parish_ec_1287,1,Puerto Ayora,res_city_206,True
+res_parish_ec_1288,2,Bellavista,res_city_206,True
+res_parish_ec_1289,3,Santa Rosa (Incluye La Isla Baltra),res_city_206,True
+res_parish_ec_1290,1,Nueva Loja,res_city_207,True
+res_parish_ec_1291,2,Cuyabeno,res_city_207,True
+res_parish_ec_1292,3,Dureno,res_city_207,True
+res_parish_ec_1293,4,General Farfán,res_city_207,True
+res_parish_ec_1294,5,Tarapoa,res_city_207,True
+res_parish_ec_1295,6,El Eno,res_city_207,True
+res_parish_ec_1296,7,Pacayacu,res_city_207,True
+res_parish_ec_1297,8,Jambelí,res_city_207,True
+res_parish_ec_1298,9,Santa Cecilia,res_city_207,True
+res_parish_ec_1299,10,Aguas Negras,res_city_207,True
+res_parish_ec_1300,1,El Dorado De Cascales,res_city_208,True
+res_parish_ec_1301,2,El Reventador,res_city_208,True
+res_parish_ec_1302,3,Gonzalo Pizarro,res_city_208,True
+res_parish_ec_1303,4,Lumbaquí,res_city_208,True
+res_parish_ec_1304,5,Puerto Libre,res_city_208,True
+res_parish_ec_1305,6,Santa Rosa De Sucumbíos,res_city_208,True
+res_parish_ec_1306,1,Puerto El Carmen Del Putumayo,res_city_209,True
+res_parish_ec_1307,2,Palma Roja,res_city_209,True
+res_parish_ec_1308,3,Puerto Bolívar (Puerto Montúfar),res_city_209,True
+res_parish_ec_1309,4,Puerto Rodríguez,res_city_209,True
+res_parish_ec_1310,5,Santa Elena,res_city_209,True
+res_parish_ec_1311,1,Shushufindi,res_city_210,True
+res_parish_ec_1312,2,Limoncocha,res_city_210,True
+res_parish_ec_1313,3,Pañacocha,res_city_210,True
+res_parish_ec_1314,4,San Roque (Cab. En San Vicente),res_city_210,True
+res_parish_ec_1315,5,San Pedro De Los Cofanes,res_city_210,True
+res_parish_ec_1316,6,Siete De Julio,res_city_210,True
+res_parish_ec_1317,1,La Bonita,res_city_211,True
+res_parish_ec_1318,2,El Playón De San Francisco,res_city_211,True
+res_parish_ec_1319,3,La Sofía,res_city_211,True
+res_parish_ec_1320,4,Rosa Florida,res_city_211,True
+res_parish_ec_1321,5,Santa Bárbara,res_city_211,True
+res_parish_ec_1322,1,El Dorado De Cascales,res_city_212,True
+res_parish_ec_1323,2,Santa Rosa De Sucumbíos,res_city_212,True
+res_parish_ec_1324,3,Sevilla,res_city_212,True
+res_parish_ec_1325,1,Tarapoa,res_city_213,True
+res_parish_ec_1326,2,Cuyabeno,res_city_213,True
+res_parish_ec_1327,3,Aguas Negras,res_city_213,True
+res_parish_ec_1328,1,Puerto Francisco De Orellana (El Coca),res_city_214,True
+res_parish_ec_1329,2,Dayuma,res_city_214,True
+res_parish_ec_1330,3,Taracoa (Nueva Esperanza: Yuca),res_city_214,True
+res_parish_ec_1331,4,Alejandro Labaka,res_city_214,True
+res_parish_ec_1332,5,El Dorado,res_city_214,True
+res_parish_ec_1333,6,El Edén,res_city_214,True
+res_parish_ec_1334,7,García Moreno,res_city_214,True
+res_parish_ec_1335,8,Inés Arango (Cab. En Western),res_city_214,True
+res_parish_ec_1336,9,La Belleza,res_city_214,True
+res_parish_ec_1337,10,Nuevo Paraíso (Cab. En Unión,res_city_214,True
+res_parish_ec_1338,11,San José De Guayusa,res_city_214,True
+res_parish_ec_1339,12,San Luis De Armenia,res_city_214,True
+res_parish_ec_1340,1,Tipitini,res_city_215,True
+res_parish_ec_1341,2,Nuevo Rocafuerte,res_city_215,True
+res_parish_ec_1342,3,Capitán Augusto Rivadeneyra,res_city_215,True
+res_parish_ec_1343,4,Cononaco,res_city_215,True
+res_parish_ec_1344,5,Santa María De Huiririma,res_city_215,True
+res_parish_ec_1345,6,Tiputini,res_city_215,True
+res_parish_ec_1346,1,Yasuní,res_city_216,True
+res_parish_ec_1347,2,La Joya De Los Sachas,res_city_216,True
+res_parish_ec_1348,3,Enokanqui,res_city_216,True
+res_parish_ec_1349,4,Pompeya,res_city_216,True
+res_parish_ec_1350,5,San Carlos,res_city_216,True
+res_parish_ec_1351,6,San Sebastián Del Coca,res_city_216,True
+res_parish_ec_1352,7,Lago San Pedro,res_city_216,True
+res_parish_ec_1353,8,Rumipamba,res_city_216,True
+res_parish_ec_1354,9,Tres De Noviembre,res_city_216,True
+res_parish_ec_1355,1,Unión Milagreña,res_city_217,True
+res_parish_ec_1356,2,Loreto,res_city_217,True
+res_parish_ec_1357,3,Avila (Cab. En Huiruno),res_city_217,True
+res_parish_ec_1358,4,Puerto Murialdo,res_city_217,True
+res_parish_ec_1359,5,San José De Payamino,res_city_217,True
+res_parish_ec_1360,6,San José De Dahuano,res_city_217,True
+res_parish_ec_1361,7,San Vicente De Huaticocha,res_city_217,True
+res_parish_ec_1362,1,Abraham Calazacón,res_city_218,True
+res_parish_ec_1363,2,Bombolí,res_city_218,True
+res_parish_ec_1364,3,Chiguilpe,res_city_218,True
+res_parish_ec_1365,4,Río Toachi,res_city_218,True
+res_parish_ec_1366,5,Río Verde,res_city_218,True
+res_parish_ec_1367,6,Santo Domingo De Los Colorados,res_city_218,True
+res_parish_ec_1368,7,Zaracay,res_city_218,True
+res_parish_ec_1369,8,Santo Domingo De Los Colorados,res_city_218,True
+res_parish_ec_1370,9,Alluriquín,res_city_218,True
+res_parish_ec_1371,10,Puerto Limón,res_city_218,True
+res_parish_ec_1372,11,Luz De América,res_city_218,True
+res_parish_ec_1373,12,San Jacinto Del Búa,res_city_218,True
+res_parish_ec_1374,13,Valle Hermoso,res_city_218,True
+res_parish_ec_1375,14,El Esfuerzo,res_city_218,True
+res_parish_ec_1376,15,Santa María Del Toachi,res_city_218,True
+res_parish_ec_1377,1,Ballenita,res_city_219,True
+res_parish_ec_1378,2,Santa Elena,res_city_219,True
+res_parish_ec_1379,3,Santa Elena,res_city_219,True
+res_parish_ec_1380,4,Atahualpa,res_city_219,True
+res_parish_ec_1381,5,Colonche,res_city_219,True
+res_parish_ec_1382,6,Chanduy,res_city_219,True
+res_parish_ec_1383,7,Manglaralto,res_city_219,True
+res_parish_ec_1384,8,Simón Bolívar (Julio Moreno),res_city_219,True
+res_parish_ec_1385,9,San José De Ancón,res_city_219,True
+res_parish_ec_1386,1,La Libertad,res_city_220,True
+res_parish_ec_1387,1,Carlos Espinoza Larrea,res_city_221,True
+res_parish_ec_1388,2,Gral. Alberto Enríquez Gallo,res_city_221,True
+res_parish_ec_1389,3,Vicente Rocafuerte,res_city_221,True
+res_parish_ec_1390,4,Santa Rosa,res_city_221,True
+res_parish_ec_1391,5,Salinas,res_city_221,True
+res_parish_ec_1392,6,Anconcito,res_city_221,True
+res_parish_ec_1393,7,José Luis Tamayo (Muey),res_city_221,True

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_departure_wizard_view_form_inherit">
+            <field name="name">hr.departure.wizard.view.form.inherit</field>
+            <field name="model">hr.departure.wizard</field>
+            <field name="inherit_id" ref="hr.hr_departure_wizard_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='departure_reason_id']" position="before">
+                    <field name="last_company_entry_date"/>
+                    <field name="actual_department_id"/>
+                    <field name="time_worked"/>
+                </xpath>
+                <xpath expr="//field[@name='departure_reason_id']" position="after">
+                    <field name="code" invisible="1"/>
+                    <field name="department_id" readonly="1" force_save="1"/>
+                    <field name="pension" attrs="{'invisible': [('code', '!=', 'RET')] , 'required': [('code', '==', 'RET')]}"/>
+                    <field name="retirement_certificate" attrs="{'invisible': [('code', '!=', 'RET')] , 'required': [('code', '==', 'RET')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='departure_reason_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//div[@id='info']" position="after">
+                    <div class="o_td_label" id="archive_user">
+                        <span class="o_form_label o_hr_form_label cursor-default">Archive user</span>
+                    </div>
+                    <div class="column" id="archive_user">
+                        <div><field name="archive_user"/><label for="archive_user"/></div>
+                    </div>
+
+<!--                    <div class="o_td_label" id="end_current_contract">-->
+<!--                        <span class="o_form_label o_hr_form_label cursor-default">End current contract</span>-->
+<!--                    </div>-->
+<!--                    <div class="column" id="end_current_contract">-->
+<!--                        <div><field name="end_current_contract"/><label for="end_current_contract"/></div>-->
+<!--                    </div>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

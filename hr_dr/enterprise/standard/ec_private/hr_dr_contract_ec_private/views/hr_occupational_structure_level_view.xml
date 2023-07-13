@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+        <!--Occupational structure level-->
+        <record model="ir.actions.act_window" id="occupational_structure_level_list_action">
+            <field name="name">Occupational structure level</field>
+            <field name="res_model">hr.occupational.structure.level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the occupational structure level.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="occupational_structure_level_list">
+            <field name="name">Occupational structure level list</field>
+            <field name="model">hr.occupational.structure.level</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="occupational_structure_level_search">
+            <field name="name">Occupational structure level search</field>
+            <field name="model">hr.occupational.structure.level</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="occupational_structure_level_form">
+            <field name="name">Occupational structure level form</field>
+            <field name="model">hr.occupational.structure.level</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <menuitem
+            id="menu_hr_occupational_structure_level"
+            action="occupational_structure_level_list_action"
+            parent="hr_dr_contract.hr_menu_contract_settings_root"
+            sequence="15"/>
+        <!--Occupational structure level-->
+  </data>
+</odoo>

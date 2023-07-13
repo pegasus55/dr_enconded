@@ -1,0 +1,220 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_config_settings_view_form_schedule">
+            <field name="name">res.config.settings.view.form.vacations</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Schedule" string="Horario" data-key="hr_dr_schedule" groups="hr_dr_schedule.hr_dr_schedule_group_manager">
+
+                        <h2>Notificaciones</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="hour_extra_approval_request_notifications_mode"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Modo de notificaciones para las solicitudes de aprobación de horas extras.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="hour_extra_approval_request_notifications_mode"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('hour_extra_approval_request_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                                <div class="o_setting_right_pane">
+                                    <label for="hour_extra_approval_request_administrator"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Primer administrador para aprobación / rechazo de notificaciones de solicitud de aprobación extra de horas.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="hour_extra_approval_request_administrator" attrs="{'required': [('hour_extra_approval_request_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('hour_extra_approval_request_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                                <div class="o_setting_right_pane">
+                                    <label for="hour_extra_approval_request_second_administrator"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Segundo administrador para aprobación / rechazo de notificaciones de solicitud de aprobación extra de horas.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="hour_extra_approval_request_second_administrator" attrs="{'required': [('hour_extra_approval_request_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="user_attendance_approval_request_notifications_mode"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Modo de notificaciones para las solicitudes de aprobación de marcaciones.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="user_attendance_approval_request_notifications_mode"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('user_attendance_approval_request_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                                <div class="o_setting_right_pane">
+                                    <label for="user_attendance_approval_request_administrator"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Primer administrador para aprobación / rechazo de notificaciones de solicitud de aprobación de marcaciones.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="user_attendance_approval_request_administrator" attrs="{'required': [('user_attendance_approval_request_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('user_attendance_approval_request_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                                <div class="o_setting_right_pane">
+                                    <label for="user_attendance_approval_request_second_administrator"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Segundo administrador para aprobación / rechazo de notificaciones de solicitud de aprobación de marcaciones.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="user_attendance_approval_request_second_administrator" attrs="{'required': [('user_attendance_approval_request_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Marcaciones</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="assistance_mode"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Define el modo de asignación de marcaciones utilizado al realizar el cálculo de asistencia.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="assistance_mode"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="max_time_in_past_to_request_for_attendance"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Número de horas previas permitidas para solicitar la marcación de un usuario.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="max_time_in_past_to_request_for_attendance"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="attendance_state_ids"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Estados de asistencia predeterminados.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="attendance_state_ids"
+                                                   class="o_light_label">
+                                                <tree>
+                                                    <field name="name"/>
+                                                    <field name="activity_id"/>
+                                                    <field name="code"/>
+                                                    <field name="type"/>
+                                                </tree>
+                                            </field>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <h2>Horas extras</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="amount_days_after_cdfr_to_HEAR"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Cantidad de días después de la fecha de corte donde es permitido reportar las horas extras.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="amount_days_after_cdfr_to_HEAR"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="include_holidays_amount_days_after_cdfr_to_HEAR"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Incluir feriados y fines de semana en la cantidad de días después de la fecha de corte donde es permitido reportar las horas extras.
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="include_holidays_amount_days_after_cdfr_to_HEAR"
+                                                class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

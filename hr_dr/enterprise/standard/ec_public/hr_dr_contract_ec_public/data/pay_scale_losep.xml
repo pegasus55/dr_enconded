@@ -1,0 +1,106 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.pay.scale.losep" id="SPS1">
+            <field name="name">Servidor Público de Servicios 1</field>
+            <field name="level">1</field>
+            <field name="remuneration">527</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SPS2">
+            <field name="name">Servidor Público de Servicios 2</field>
+            <field name="level">2</field>
+            <field name="remuneration">553</field>
+        </record>
+
+        <record model="hr.pay.scale.losep" id="SPA1">
+            <field name="name">Servidor Público de Apoyo 1</field>
+            <field name="level">3</field>
+            <field name="remuneration">585</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SPA2">
+            <field name="name">Servidor Público de Apoyo 2</field>
+            <field name="level">4</field>
+            <field name="remuneration">622</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SPA3">
+            <field name="name">Servidor Público de Apoyo 3</field>
+            <field name="level">5</field>
+            <field name="remuneration">675</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SPA4">
+            <field name="name">Servidor Público de Apoyo 4</field>
+            <field name="level">6</field>
+            <field name="remuneration">733</field>
+        </record>
+
+        <record model="hr.pay.scale.losep" id="SP1">
+            <field name="name">Servidor Público 1</field>
+            <field name="level">7</field>
+            <field name="remuneration">817</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP2">
+            <field name="name">Servidor Público 2</field>
+            <field name="level">8</field>
+            <field name="remuneration">901</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP3">
+            <field name="name">Servidor Público 3</field>
+            <field name="level">9</field>
+            <field name="remuneration">986</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP4">
+            <field name="name">Servidor Público 4</field>
+            <field name="level">10</field>
+            <field name="remuneration">1086</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP5">
+            <field name="name">Servidor Público 5</field>
+            <field name="level">11</field>
+            <field name="remuneration">1212</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP6">
+            <field name="name">Servidor Público 6</field>
+            <field name="level">12</field>
+            <field name="remuneration">1412</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP7">
+            <field name="name">Servidor Público 7</field>
+            <field name="level">13</field>
+            <field name="remuneration">1676</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP8">
+            <field name="name">Servidor Público 8</field>
+            <field name="level">14</field>
+            <field name="remuneration">1760</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP9">
+            <field name="name">Servidor Público 9</field>
+            <field name="level">15</field>
+            <field name="remuneration">2034</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP10">
+            <field name="name">Servidor Público 10</field>
+            <field name="level">16</field>
+            <field name="remuneration">2308</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP11">
+            <field name="name">Servidor Público 11</field>
+            <field name="level">17</field>
+            <field name="remuneration">2472</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP12">
+            <field name="name">Servidor Público 12</field>
+            <field name="level">18</field>
+            <field name="remuneration">2641</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP13">
+            <field name="name">Servidor Público 13</field>
+            <field name="level">19</field>
+            <field name="remuneration">2967</field>
+        </record>
+        <record model="hr.pay.scale.losep" id="SP14">
+            <field name="name">Servidor Público 14</field>
+            <field name="level">20</field>
+            <field name="remuneration">3542</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <act_window id="action_payment_utility_external_service_personnel"
+            res_model="res.partner"
+            name="External service personnel"
+            view_mode="tree,form"
+            domain="[('is_external_service_personnel','=',True)]"
+            context="{'default_is_external_service_personnel':1}"
+            />
+
+        <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">view_partner_form_inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page[last()]" position="after">
+                    <page name='external_service_personnel' string="External service">
+                        <group>
+                            <group>
+                                <field name="is_external_service_personnel"/>
+                                <field name="surnames"/>
+                                <field name="names"/>
+                            </group>
+                            <group>
+                                <field name="gender"/>
+                                <field name="occupation"/>
+                                <field name="disability"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

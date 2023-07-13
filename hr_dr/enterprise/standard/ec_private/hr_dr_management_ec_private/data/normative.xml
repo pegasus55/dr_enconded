@@ -1,0 +1,12 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.normative" id="Normative2">
+            <field name="name">CODIGO DEL TRABAJO</field>
+            <field name="acronym">CODIGOT</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="description">Normativa para el sector privado del Ecuador.</field>
+            <field name="link_ids" eval = "[(6,0,[ref('hr_dr_management_ec_private.Link3')])]"/>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

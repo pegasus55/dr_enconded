@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+    	<record id="retired_employee_salary_notifications_mode" model="ir.config_parameter">
+            <field name="key">retired.employee.salary.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="retired_employee_salary_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.salary.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="retired_employee_salary_second_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.salary.second.administrator</field>
+            <field name="value"/>
+        </record>
+
+        <record id="retired_employee_thirteenth_salary_notifications_mode" model="ir.config_parameter">
+            <field name="key">retired.employee.thirteenth.salary.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="retired_employee_thirteenth_salary_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.thirteenth.salary.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="retired_employee_thirteenth_salary_second_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.thirteenth.salary.second.administrator</field>
+            <field name="value"/>
+        </record>
+
+        <record id="retired_employee_fourteenth_salary_notifications_mode" model="ir.config_parameter">
+            <field name="key">retired.employee.fourteenth.salary.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="retired_employee_fourteenth_salary_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.fourteenth.salary.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="retired_employee_fourteenth_salary_second_administrator" model="ir.config_parameter">
+            <field name="key">retired.employee.fourteenth.salary.second.administrator</field>
+            <field name="value"/>
+        </record>
+
+        <record id="payment_utility_notifications_mode" model="ir.config_parameter">
+            <field name="key">payment.utility.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="payment_utility_administrator" model="ir.config_parameter">
+            <field name="key">payment.utility.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="payment_utility_second_administrator" model="ir.config_parameter">
+            <field name="key">payment.utility.second.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="profit_calculation_based_on" model="ir.config_parameter">
+            <field name="key">profit.calculation.based.on</field>
+            <field name="value">payroll</field>
+        </record>
+
+        <record id="pay_living_wage_notifications_mode" model="ir.config_parameter">
+            <field name="key">pay.living.wage.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="pay_living_wage_administrator" model="ir.config_parameter">
+            <field name="key">pay.living.wage.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="pay_living_wage_second_administrator" model="ir.config_parameter">
+            <field name="key">pay.living.wage.second.administrator</field>
+            <field name="value"/>
+        </record>
+
+        <record id="payment_tenth_notifications_mode" model="ir.config_parameter">
+            <field name="key">payment.tenth.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="payment_tenth_administrator" model="ir.config_parameter">
+            <field name="key">payment.tenth.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="payment_tenth_second_administrator" model="ir.config_parameter">
+            <field name="key">payment.tenth.second.administrator</field>
+            <field name="value"/>
+        </record>
+    </data>
+</odoo>

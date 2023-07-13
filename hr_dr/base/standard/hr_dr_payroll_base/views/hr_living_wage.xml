@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_living_wage_view_form" model="ir.ui.view">
+		<field name="name">hr.living.wage.view.form</field>
+		<field name="model">hr.living.wage</field>
+		<field name="arch" type="xml">
+			<form string="Living wage">
+				<sheet>
+					<group>
+						<group>
+							<field name="fiscal_year" widget='integer'/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+						</group>
+						<group>
+							<field name="value" widget='monetary'/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="living_wage_view_tree" model='ir.ui.view'>
+		<field name="name">hr.living.wage.view.tree</field>
+		<field name="model">hr.living.wage</field>
+		<field name="arch" type="xml">
+			<tree string="Living wage">
+				<field name="fiscal_year"/>
+				<field name="value" widget='monetary'/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_living_wage" model="ir.actions.act_window">
+		<field name="name">Living wage</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.living.wage</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>

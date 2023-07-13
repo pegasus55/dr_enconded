@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dr_license_customer_wizard,dr.license.customer.wizard,model_dr_license_customer_wizard,dr_license_customer.dr_license_customer_group_manager,1,1,1,1

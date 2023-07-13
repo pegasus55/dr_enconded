@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <template id="notification_error" name="notification_error">
+            <div id="wrap">
+                <div class="container">
+                    <t t-esc="error"/>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

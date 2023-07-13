@@ -1,0 +1,700 @@
+<odoo>
+  <data>
+    <!--Renew License-->
+    <record id="view_renew_license" model="ir.ui.view">
+        <field name="name">dr.renew.license.form</field>
+        <field name="model">dr.renew.license</field>
+        <field name="arch" type="xml">
+            <form string="Renew license">
+                <group>
+                    <group>
+                        <field name="license_id" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="period"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="description"/>
+                </group>
+                <footer>
+                    <button name="action_accept" string="Renew license" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_renew_license" model="ir.actions.act_window">
+        <field name="name">Renew license</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dr.renew.license</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_renew_license"/>
+        <field name="target">new</field>
+    </record>
+    <!--Renew License-->
+
+    <!--Start License-->
+    <record id="view_start_license" model="ir.ui.view">
+        <field name="name">dr.start.license.form</field>
+        <field name="model">dr.start.license</field>
+        <field name="arch" type="xml">
+            <form string="Start license">
+                <group>
+                    <group>
+                        <field name="license_id" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="expiration_date"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_accept" string="Start license" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_start_license" model="ir.actions.act_window">
+        <field name="name">Start license</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dr.start.license</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_start_license"/>
+        <field name="target">new</field>
+    </record>
+    <!--Start License-->
+
+    <!--License-->
+    <record model="ir.ui.view" id="license_list">
+      <field name="name">License list</field>
+      <field name="model">dr.license</field>
+      <field name="arch" type="xml">
+      <tree>
+        <field name="customer_id"/>
+        <field name="name"/>
+        <field name="vat"/>
+        <field name="environment"/>
+        <field name="expiration_date"/>
+        <field name="active_collaborators"/>
+        <field name="active"/>
+        <field name="company_id"/>
+      </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="license_search">
+      <field name="name">License search</field>
+      <field name="model">dr.license</field>
+      <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+        <field name="vat"/>
+      </search>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="license_form">
+    <field name="name">License form</field>
+    <field name="model">dr.license</field>
+    <field name="arch" type="xml">
+    <form>
+        <header>
+            <button name="%(dr_license.action_renew_license)d" string="Renew license"
+                        type="action"
+                        groups="dr_license.dr_license_group_user"/>
+            <button name="%(dr_license.action_start_license)d" string="Start license"
+                        type="action"
+                        groups="dr_license.dr_license_group_user"/>
+            <button string="Cancel license" type="object"
+                                name="cancel_license"
+                                confirm="Are you sure you want to cancel this license?"
+                                attrs="{'invisible': [('state', '=', 'cancelled')]}"/>
+
+            <field name="state" widget="statusbar" statusbar_visible="active,expired,cancelled"/>
+        </header>
+          <sheet>
+              <group>
+                  <group>
+                    <field name="customer_id"/>
+                    <field name="name"/>
+                    <field name="vat"/>
+                    <field name="environment"/>
+                    <field name="confirmed"/>
+                    <field name="plan"/>
+                  </group>
+                  <group>
+                    <field name="expiration_date" attrs="{'readonly': [('expiration_date', '!=', False)]}" force_save="1"/>
+                    <field name="active_collaborators"/>
+                    <field name="company_id"/>
+                    <field name="applications"/>
+                    <field name="active"/>
+                  </group>
+              </group>
+              <group>
+                <field name="description"/>
+              </group>
+              <notebook>
+                  <page name="apps" string="Apps">
+                      <field name="module_ids">
+                          <form>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="tradename"/>
+                                            <field name="shortdesc"/>
+                                            <field name="summary"/>
+                                        </group>
+                                        <group>
+                                            <field name="odoo"/>
+                                            <field name="package"/>
+                                            <field name="regulation"/>
+                                            <field name="country_id"/>
+                                            <field name="type"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                          </form>
+                          <tree>
+                              <field name="name"/>
+                              <field name="tradename"/>
+                              <field name="odoo"/>
+                              <field name="package"/>
+                              <field name="regulation"/>
+                              <field name="country_id"/>
+                              <field name="type"/>
+                          </tree>
+                      </field>
+                  </page>
+                  <page name="devices" string="Devices">
+                      <field name="device_ids">
+                          <form>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="serial_number"/>
+                                        </group>
+                                        <group>
+                                            <field name="brand_id"/>
+                                            <field name="model_id"/>
+                                            <field name="active"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                          </form>
+                          <tree>
+                                <field name="name"/>
+                                <field name="serial_number"/>
+                                <field name="brand_id"/>
+                                <field name="model_id"/>
+                                <field name="active"/>
+                          </tree>
+                      </field>
+                  </page>
+                  <page name="renew_details" string="Renew details">
+                      <field name="renew_detail_ids">
+                        <tree create="0" delete="0">
+                          <field name="actual_expiration_date"/>
+                          <field name="next_expiration_date"/>
+                            <field name="description"/>
+                        </tree>
+                        <form create="0" delete="0">
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="license_id" readonly="1" force_save="1"/>
+                                        <field name="actual_expiration_date" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group>
+                                      <field name="next_expiration_date" readonly="1" force_save="1"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <field name="description" readonly="1" force_save="1"/>
+                                </group>
+                                <notebook>
+                                    <page string="Evidences">
+                                        <field name="evidences" widget="many2many_binary" class="oe_inline"/>
+                                    </page>
+                                </notebook>
+                            </sheet>
+                            <div class="oe_chatter">
+                                <field name="message_follower_ids"/>
+                                <field name="message_ids"/>
+                            </div>
+                        </form>
+                      </field>
+                  </page>
+                  <page name="databases" string="Databases">
+                      <field name="databases"/>
+                  </page>
+                  <page name="file_locations" string="License file locations">
+                      <field name="path_ids">
+                          <tree editable="bottom">
+                              <field name="license_id" invisible="1"/>
+                              <field name="file"/>
+                              <field name="path"/>
+                          </tree>
+                      </field>
+                  </page>
+                  <page name="technical" string="Technical">
+                      <group>
+                          <group>
+                              <field name="os"/>
+                              <field name="odoo"/>
+                              <field name="odoo_version"/>
+                              <field name="country_id"/>
+                          </group>
+                          <group>
+                              <field name="python_version"/>
+                              <field name="package"/>
+                              <field name="regulation">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="acronym"/>
+                                </tree>
+							</field>
+                          </group>
+                      </group>
+                  </page>
+              </notebook>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids"/>
+              <field name="message_ids"/>
+          </div>
+    </form>
+    </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="license_list_action">
+      <field name="name">License</field>
+      <field name="res_model">dr.license</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+      <p
+        class="oe_view_nocontent_smiling_face">Create license.
+      </p>
+      </field>
+    </record>
+    <!--License-->
+
+    <!--Device-->
+    <record model="ir.ui.view" id="device_list">
+        <field name="name">Licence device list</field>
+        <field name="model">dr.device</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+              <field name="serial_number"/>
+              <field name="brand_id"/>
+              <field name="model_id"/>
+              <field name="license_id"/>
+              <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_search">
+        <field name="name">Licence device search</field>
+        <field name="model">dr.device</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="license_id"/>
+              <field name="serial_number"/>
+              <field name="brand_id"/>
+              <field name="model_id"/>
+
+                <group expand="0" name="group_by" string="Group By">
+					<filter name="group_license_id" string="License"
+							context="{'group_by' : 'license_id'}"/>
+				</group>
+
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_form">
+        <field name="name">Licence device form</field>
+        <field name="model">dr.device</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                          <field name="serial_number"/>
+                          <field name="brand_id"/>
+                        </group>
+                        <group>
+                          <field name="model_id"/>
+                          <field name="license_id"/>
+                          <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="license_device_list_action">
+        <field name="name">Licence device</field>
+        <field name="res_model">dr.device</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+                "search_default_group_license_id": 1,
+            }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">
+                Create license device.
+            </p>
+        </field>
+    </record>
+    <!--Device-->
+
+    <!--Licence renew detail-->
+    <record model="ir.ui.view" id="license_renew_detail_list">
+        <field name="name">Licence renew detail list</field>
+        <field name="model">dr.license.renew.detail</field>
+        <field name="arch" type="xml">
+            <tree>
+              <field name="actual_expiration_date"/>
+              <field name="next_expiration_date"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="license_renew_detail_form">
+        <field name="name">Licence renew detail form</field>
+        <field name="model">dr.license.renew.detail</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="license_id" readonly="1" force_save="1"/>
+                            <field name="actual_expiration_date" readonly="1" force_save="1"/>
+                        </group>
+                        <group>
+                          <field name="next_expiration_date" readonly="1" force_save="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Evidences">
+                            <field name="evidences" widget="many2many_binary" class="oe_inline"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="license_renew_detail_list_action">
+        <field name="name">Licence renew detail</field>
+        <field name="res_model">dr.license.renew.detail</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">
+                Create license renew detail.
+            </p>
+        </field>
+    </record>
+    <!--Licence renew detail-->
+
+    <!--Device brand model-->
+    <record model="ir.ui.view" id="device_brand_model_list">
+        <field name="name">Device brand model</field>
+        <field name="model">dr.device.brand.model</field>
+        <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="brand_id"/>
+              <field name="description"/>
+              <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_brand_model_search">
+        <field name="name">Device brand model search</field>
+        <field name="model">dr.device.brand.model</field>
+        <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+              <field name="brand_id"/>
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_brand_model_form">
+        <field name="name">Device brand model form</field>
+        <field name="model">dr.device.brand.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                          <field name="name"/>
+                        </group>
+                        <group>
+                          <field name="brand_id"/>
+                          <field name="active"/>
+                        </group>
+                    </group>
+                    <group>
+                      <field name="description"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="device_brand_model_list_action">
+        <field name="name">Device brand model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dr.device.brand.model</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">
+                Create device brand model.
+            </p>
+        </field>
+    </record>
+    <!--Device brand model-->
+
+    <!--Device brand-->
+    <record model="ir.ui.view" id="device_brand_list">
+        <field name="name">Device brand</field>
+        <field name="model">dr.device.brand</field>
+        <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="description"/>
+              <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_brand_search">
+        <field name="name">Device brand search</field>
+        <field name="model">dr.device.brand</field>
+        <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="device_brand_form">
+        <field name="name">Device brand form</field>
+        <field name="model">dr.device.brand</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                          <field name="name"/>
+                        </group>
+                        <group>
+                          <field name="active"/>
+                        </group>
+                    </group>
+                    <group>
+                      <field name="description"/>
+                    </group>
+                    <notebook>
+                      <page name="models" string="Models">
+                          <field name="model_ids">
+                              <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                              <field name="name"/>
+                                            </group>
+                                            <group>
+                                              <field name="active"/>
+                                            </group>
+                                        </group>
+                                        <group>
+                                          <field name="description"/>
+                                        </group>
+                                    </sheet>
+                              </form>
+                              <tree>
+                                  <field name="name"/>
+                                  <field name="description"/>
+                                  <field name="active"/>
+                              </tree>
+                          </field>
+                      </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="device_brand_list_action">
+        <field name="name">Device brand</field>
+        <field name="res_model">dr.device.brand</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">
+                Create device brand.
+            </p>
+        </field>
+    </record>
+    <!--Device brand-->
+
+    <!--Regulation-->
+        <record model="ir.actions.act_window" id="normative_license_list_action">
+            <field name="name">Regulations license</field>
+            <field name="res_model">normative.license</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the regulations license.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_license_list">
+            <field name="name">Regulations license list</field>
+            <field name="model">normative.license</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_license_search">
+            <field name="name">Regulations license search</field>
+            <field name="model">normative.license</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_license_form">
+            <field name="name">Regulations license form</field>
+            <field name="model">normative.license</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="acronym"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    <!--Regulation-->
+
+    <!--Salable module-->
+    <record model="ir.ui.view" id="salable_module_list">
+        <field name="name">Salable module</field>
+        <field name="model">dr.salable.module</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="tradename"/>
+                <field name="package"/>
+                <field name="regulation"/>
+                <field name="odoo"/>
+                <field name="country_id"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="salable_module_search">
+        <field name="name">Salable module search</field>
+        <field name="model">dr.salable.module</field>
+        <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+                <field name="tradename"/>
+                <field name="shortdesc"/>
+                <field name="package"/>
+                <field name="regulation"/>
+                <field name="odoo"/>
+                <field name="country_id"/>
+                <field name="type"/>
+                <group string="Group By">
+                    <filter name="groupby_package" string="Nukleo version" context="{'group_by': 'package'}"/>
+                    <filter name="groupby_regulation" string="Regulation" context="{'group_by': 'regulation'}"/>
+                    <filter name="groupby_country_id" string="Country" context="{'group_by': 'country_id'}"/>
+                    <filter name="groupby_type" string="Type" context="{'group_by': 'type'}"/>
+                    <filter name="groupby_odoo" string="Odoo" context="{'group_by': 'odoo'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="salable_module_form">
+        <field name="name">Salable module form</field>
+        <field name="model">dr.salable.module</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="tradename"/>
+                            <field name="shortdesc"/>
+                            <field name="summary"/>
+                        </group>
+                        <group>
+                            <field name="package"/>
+                            <field name="regulation"/>
+                            <field name="odoo"/>
+                            <field name="country_id"/>
+                            <field name="type"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="salable_module_list_action">
+        <field name="name">Salable module</field>
+        <field name="res_model">dr.salable.module</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">
+                Add salable module.
+            </p>
+        </field>
+    </record>
+    <!--Salable model-->
+  </data>
+</odoo>

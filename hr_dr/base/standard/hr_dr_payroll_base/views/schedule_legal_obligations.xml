@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="schedule_legal_obligations_view_form" model="ir.ui.view">
+		<field name="name">schedule.legal.obligations.view.form</field>
+		<field name="model">schedule.legal.obligations</field>
+		<field name="arch" type="xml">
+			<form string="Schedule legal obligations">
+				<header>
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+							<field name="start_date_calculation_period"/>
+							<field name="max_payment_date"/>
+						</group>
+						<group>
+							<field name="normative_id"/>
+							<field name="end_date_calculation_period"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Detail">
+							<field name="detail_ids" nolabel="1">
+								<tree editable="bottom">
+							 		<field name="ninth_digit_RUC"/>
+									<field name="registration_period_start_date"/>
+							 		<field name="registration_period_end_date"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="schedule_legal_obligations_view_tree" model='ir.ui.view'>
+		<field name="name">schedule.legal.obligations.view.tree</field>
+		<field name="model">schedule.legal.obligations</field>
+		<field name="arch" type="xml">
+			<tree string="Schedule legal obligations">
+				<field name="name"/>
+				<field name="normative_id"/>
+				<field name="start_date_calculation_period"/>
+				<field name="end_date_calculation_period"/>
+				<field name="max_payment_date"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_schedule_legal_obligations" model="ir.actions.act_window">
+		<field name="name">Schedule legal obligations</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">schedule.legal.obligations</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>

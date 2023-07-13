@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_employee_form_hr_dr_employee_certificates_inherit">
+            <field name="name">view_employee_form_hr_dr_employee_certificates_inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form//header" position="inside">
+                    <button string="Print work certificate" type="object" name="print_work_certificate" class="btn-primary"/>
+                    <button string="Print work certificate with income" type="object" name="print_work_certificate_with_income" class="btn-primary"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
