@@ -12,6 +12,7 @@
                         <group>
                             <group>
                                 <field name="employee_id"/>
+                                <field name="address_home_id_country_id" invisible="1"/>
                                 <field name="name"/>
                                 <field name="id_type"/>
                                 <field name="identification"/>
@@ -27,7 +28,7 @@
                                 <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                 <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                 <field name="insured"/>
-                                <field name="judicial_withholding_id" attrs="{'invisible': [('relationship','not in',['children','daughter','son'])]}"/>
+<!--                                <field name="judicial_withholding_id" attrs="{'invisible': [('relationship','not in',['children','daughter','son'])]}"/>-->
                             </group>
                         </group>
                         <notebook>
@@ -50,10 +51,13 @@
             <field name="arch" type="xml">
                 <tree string="Family load">
                     <field name="employee_id"/>
+                    <field name="address_home_id_country_id" invisible="1"/>
                     <field name="name"/>
+                    <field name="id_type"/>
                     <field name="identification"/>
                     <field name="relationship"/>
                     <field name="date_of_birth"/>
+                    <field name="age"/>
                     <field name="disability"/>
                     <field name="insured"/>
                 </tree>

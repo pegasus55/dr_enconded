@@ -46,8 +46,8 @@
         <menuitem id="hr_employee_backup_menu" action="hr_employee_backup_action" parent="hr.menu_config_employee" sequence="13"/>
         <menuitem id="hr_employee_allergies_menu" action="hr_employee_allergies_action" parent="hr.menu_config_employee" sequence="14"/>
         <menuitem id="hr_catastrophic_disease_menu" action="hr_catastrophic_disease_action" parent="hr.menu_config_employee" sequence="15"/>
-        <menuitem id="hr_judicial_withholding_menu" action="hr_judicial_withholding_action" parent="hr.menu_config_employee" sequence="16"/>
-        <menuitem id="hr_employee_family_load_menu" action="hr_employee_family_load_action" parent="hr.menu_config_employee" sequence="17"/>
+        <menuitem id="hr_employee_family_load_menu" action="hr_employee_family_load_action" parent="hr.menu_config_employee" sequence="16"/>
+        <menuitem id="hr_judicial_withholding_menu" action="hr_judicial_withholding_action" parent="hr.menu_config_employee" sequence="17"/>
         <menuitem id="hr_employee_food_preferences_menu" action="hr_employee_food_preferences_action" parent="hr.menu_config_employee" sequence="18"/>
     </data>
 </odoo>
