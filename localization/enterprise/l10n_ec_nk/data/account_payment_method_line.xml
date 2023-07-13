@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="account_payment_method_line_check_out" model="account.payment.method.line">
+            <field name="payment_method_id" ref="account_payment_method_check_out"/>
+        </record>
+
+        <record id="account_payment_method_line_transfer_in" model="account.payment.method.line">
+            <field name="payment_method_id" ref="account_payment_method_transfer_in"/>
+        </record>
+        <record id="account_payment_method_line_transfer_out" model="account.payment.method.line">
+            <field name="payment_method_id" ref="account_payment_method_transfer_out"/>
+        </record>
+    </data>
+</odoo>
