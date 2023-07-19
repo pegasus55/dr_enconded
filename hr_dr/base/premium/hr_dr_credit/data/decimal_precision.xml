@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data noupdate="1">
-        <record forcecreate="True" id="decimal_employee_credit" model="decimal.precision">
-            <field name="name">Employee credit</field>
-            <field name="digits">2</field>
-        </record>
-    </data>
-</odoo>

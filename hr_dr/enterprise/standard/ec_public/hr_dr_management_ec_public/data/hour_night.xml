@@ -1,7 +1,0 @@
-<odoo>
-    <data noupdate="1">
-        <record model="hr.hour.night" id="hr_dr_management.HourNight1">
-            <field name="normative_ids" eval="[( 4,ref('Normative1') )]" />
-        </record>
-    </data>
-</odoo>
