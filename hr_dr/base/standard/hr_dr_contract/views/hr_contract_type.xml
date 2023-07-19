@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="hr_contract_type_view_tree_inherit" model="ir.ui.view">
+            <field name="model">hr.contract.type</field>
+            <field name="inherit_id" ref="hr.hr_contract_type_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="description"/>
+                    <field name="normative_id"/>
+                    <field name="active"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_contract_type_view_form_inherit" model="ir.ui.view">
+            <field name="model">hr.contract.type</field>
+            <field name="inherit_id" ref="hr.hr_contract_type_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form//group//group" position="after">
+                    <group>
+                        <field name="normative_id"/>
+                        <field name="active"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form//group" position="after">
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

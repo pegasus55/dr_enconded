@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_dr_credit_payroll_enterprise_hr_dr_credit_payroll_enterprise,hr_dr_credit_payroll_enterprise.hr_dr_credit_payroll_enterprise,model_hr_dr_credit_payroll_enterprise_hr_dr_credit_payroll_enterprise,base.group_user,1,1,1,1

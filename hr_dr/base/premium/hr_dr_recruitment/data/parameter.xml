@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    	<record id="staff_requirement_request_notifications" model="ir.config_parameter">
+            <field name="key">staff.requirement.request.notifications.mode</field>
+            <field name="value">Without_notifications</field>
+        </record>
+        <record id="staff_requirement_request_administrator_id" model="ir.config_parameter">
+            <field name="key">staff.requirement.request.notifications.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="staff_requirement_request_second_administrator_id" model="ir.config_parameter">
+            <field name="key">staff.requirement.request.notifications.second.administrator</field>
+            <field name="value"/>
+        </record>
+        <record id="start_schedule_approval_day_of_staff_requirement_request" model="ir.config_parameter">
+            <field name="key">start.schedule.approval.day.of.staff.requirement.request</field>
+            <field name="value">False</field>
+        </record>
+        <record id="include_holidays_in_working_days_of_scheme_schedule" model="ir.config_parameter">
+            <field name="key">include.holidays.in.working.days.of.scheme.schedule</field>
+            <field name="value">True</field>
+        </record>
+        <record id="validate_anticipation_dynamically_in_staff_requirement_request" model="ir.config_parameter">
+            <field name="key">validate.anticipation.dynamically.in.staff.requirement.request</field>
+            <field name="value">True</field>
+        </record>
+        <record id="validate_anticipation_dynamically_in_staff_requirement_request_mode" model="ir.config_parameter">
+            <field name="key">validate.anticipation.dynamically.in.staff.requirement.request.mode</field>
+            <field name="value">by_position</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_aprove_reject_notification" model="mail.template">
+            <field name="name">Email template aprove/reject notification</field>
+            <field name="email_from">"${object.employee_approve_id.company_id.name|safe}" &lt;${object.employee_approve_id.company_id.email|safe}&gt;</field>
+            <field name="subject">${ctx['subject']}</field>
+            <field name="email_to">${object.employee_approve_id.work_email|safe}</field>
+            <field name="lang">${object.user_employee_approve_id.lang}</field>
+            <field name="model_id" ref="model_hr_notifications"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <strong>${object.employee_approve_id.name}</strong>,<br/><br/>
+                        The collaborator <strong>${object.employee_requests_id.name}</strong> ${ctx['request']}<br/><br/>
+                        <strong>Request details:</strong><br/>
+                        <p>${ctx['details']}</p><br/>
+                        %if ctx.get('commentary'):
+                        <strong>Comment: </strong> ${ctx['commentary']}<br/>
+                        %endif
+                        For more details of the notification click <a href="${ctx['view_url']}"><strong>here</strong></a><br/>
+                        <p><a href="/web/aprove_notification/${(object.id)}?db=${ctx['db']}&amp;model=${ctx['model']}&amp;id=${ctx['id']}&amp;action=${ctx['action']}&amp;menu_id=${ctx['menu_id']}" style="color:green">Approve</a> | <a href="/web/reject_notification/${(object.id)}?db=${ctx['db']}&amp;model=${ctx['model']}&amp;id=${ctx['id']}&amp;action=${ctx['action']}&amp;menu_id=${ctx['menu_id']}" style="color:red">Reject</a></p><br/>
+                    </p>
+                    <p>Sincerely,</p>
+                    <p>${object.employee_approve_id.company_id.name|safe} | ${ctx['department']}.</p>
+                    <img src="${'/logo.png?company=%s' % object.employee_approve_id.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.employee_approve_id.company_id.name}"/>
+                    <p>
+                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

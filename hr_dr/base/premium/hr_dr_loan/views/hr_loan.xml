@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--hr.loan-->
+    <record id="hr_loan_tree_view" model="ir.ui.view">
+        <field name="name">hr.loan.tree</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <tree string="Loan requests">
+                <field name="name"/>
+                <field name="employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)"/>
+                <field name="loan_amount" widget='monetary'/>
+                <field name="date"/>
+                <field name="state"/>
+                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hr_loan_form_view" model="ir.ui.view">
+        <field name="name">hr.loan.form</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <form string="Loan requests">
+                <header>
+
+                    <button string="Confirm request" type="object"
+                        name="confirm_request"
+                        confirm="Are you sure you want to confirm this loan request?"
+                        groups="hr_dr_loan.hr_dr_loan_group_employee"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+
+                    <button string="Cancel request" type="object"
+                        name="cancel_request"
+                        confirm="Are you sure you want to cancel this loan request?"
+                        groups="hr_dr_loan.hr_dr_loan_group_employee"
+                        attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+                    <button string="Print request" type="object"
+                        name="print_loan_request" class="btn-primary oe_read_only"
+                        groups="hr_dr_loan.hr_dr_loan_group_employee"
+                        attrs="{'invisible': [('state', 'not in', ['approved','paid'])]}"/>
+
+                    <button string="Print discount authorization" type="object"
+                        name="print_discount_authorization" class="btn-primary oe_read_only"
+                        groups="hr_dr_loan.hr_dr_loan_group_employee"
+                        attrs="{'invisible': [('state', 'not in', ['approved','paid'])]}"/>
+
+                    <button string="Generate archive" type="object"
+                        name="generate_archive" groups="hr_dr_loan.hr_dr_loan_group_supervisor"
+                        attrs="{'invisible': [('state', 'not in', ['approved','paid'])]}"/>
+
+                    <button string="Notify treasury" type="object"
+                        name="notify_treasury" groups="hr_dr_loan.hr_dr_loan_group_supervisor"
+                        attrs="{'invisible': [('state', 'not in', ['approved'])]}"/>
+
+                    <button string="Mark as paid" type="object"
+                        name="mark_as_paid" groups="hr_dr_loan.hr_dr_loan_group_supervisor"
+                        confirm="Are you sure you want to mark as paid this loan request?"
+                        attrs="{'invisible': [('state', '!=', 'approved')]}"/>
+
+                    <button string="Cancel request" type="object"
+                        name="cancel_request_by_admin" groups="hr_dr_loan.hr_dr_loan_group_supervisor"
+                        confirm="Are you sure you want to cancel this loan request?"
+                        attrs="{'invisible': [('state', 'not in', ['paid'])]}"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,rejected,paid"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="readonly_values" invisible="1"/>
+                            <field name="date"/>
+                            <field name="loan_amount" widget='monetary' attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                            <field name="percentage_of_salary" force_save="1"/>
+                            <field name="employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="consider" groups="hr_dr_loan.hr_dr_loan_group_supervisor" readonly="1" force_save="1"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                        </group>
+                        <group>
+                            <field name="payment_date" force_save="1"/>
+                            <field name="installment" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                            <field name="department_employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                            <field name="user_manager_department_employee_requests_id" readonly="1"/>
+                            <field name="job_position" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                            <field name="contract_id" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="files" widget="many2many_binary" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                    </group>
+
+                    <group>
+                        <field name="evidences" widget="many2many_binary" groups="hr_dr_loan.hr_dr_loan_group_supervisor" attrs="{'readonly': [('state', 'in',['approved'])]}"/>
+                    </group>
+
+                    <group id="commentary">
+                        <field name="commentary" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Details">
+                            <field name="loan_lines">
+                                <tree string="Installments" editable="bottom" create="false" delete="false">
+                                    <field name="installment"/>
+                                    <field name="date"/>
+                                    <field name="amount" widget='monetary'/>
+                                    <field name="paid" readonly="1"/>
+                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" >
+                                <field name="total_amount" widget="monetary"/>
+                                <field name="total_paid_amount" widget="monetary"/>
+                                <field name="balance_amount" class="oe_subtotal_footer_separator" widget="monetary"/>
+                            </group>
+                            <button type="object" name="compute_installment" string="Compute installment"  colspan="2" attrs="{'invisible': [('readonly_values', '=', True)]}"
+                            groups="hr_dr_loan.hr_dr_loan_group_employee" class="oe_stat_button"
+                            icon="fa-clock-o"/>
+                            <div class="oe_clear"/>
+                        </page>
+                        <page string="Tracing">
+                            <field name="notification_ids" nolabel="1">
+                                <tree>
+                                    <field name="level"/>
+                                    <field name="employee_approve_id"/>
+                                    <field name="commentary"/>
+                                    <field name="state"/>
+                                    <field name="send"/>
+                                    <field name="processed"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other information">
+                            <group>
+                                <group string="Confirmation">
+                                    <field name="date_confirmation"/>
+                                    <field name="user_confirmation"/>
+                                </group>
+                                <group string="Cancellation">
+                                    <field name="date_cancellation"/>
+                                    <field name="user_cancellation"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="hr_loan_search_view" model="ir.ui.view">
+        <field name="name">hr.loan.search</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+           <search string="Loan requests">
+                <field name="employee_requests_id" string="Employee"/>
+                <field name="department_employee_requests_id" string="Department"/>
+
+                    <filter string="Department" name="group_department_id" context="{'group_by':'department_employee_requests_id'}"/>
+                    <filter string="Employee" name="group_employee_id" context="{'group_by':'employee_requests_id'}"/>
+                    <filter string="State" name="group_state" context="{'group_by':'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="my_loan_request_action">
+        <field name="name">My loan requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+                'invisible_employee_requests_id': True,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": False,
+        }</field>
+
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">My loan requests.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="loan_request_from_my_department_action">
+        <field name="name">Loan requests from my department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_manager_department_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+            'invisible_employee_requests_id': False,
+            "search_default_group_employee_id": 1,
+            "search_default_group_state": 1,
+            "create_edit_without_restrictions": False,
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">Loan requests from my department.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="all_loan_request_action">
+        <field name="name">All loan requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{
+            'invisible_employee_requests_id': False,
+            "search_default_group_department_id": 1,
+            "search_default_group_employee_id": 1,
+            "search_default_group_state": 1,
+            "create_edit_without_restrictions": True,
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">All loan requests.
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="loan_request_action_notifications_to_process">
+        <field name="name">To process</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.notifications</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('res_model', '=', 'hr.loan'),
+            ('user_employee_approve_id', '=',uid),
+            ('send', '=',True),
+            ('state', '=','pending'),
+            ('processed', '=',False)
+            ]
+        </field>
+        <field name="context">{
+                'invisible_res_model_id': True,
+                'invisible_res_id': True,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">Notifications to process for loan requests.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="loan_request_action_notifications_all">
+        <field name="name">All</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.notifications</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('res_model', '=', 'hr.loan')
+            ]
+        </field>
+        <field name="context">{
+                'invisible_res_model_id': True,
+                'invisible_res_id': True,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">All notifications for loan requests.
+            </p>
+        </field>
+    </record>
+    <!--hr.loan-->
+
+
+    <!--hr.loan.line-->
+    <record id="hr_loan_line_tree_view" model="ir.ui.view">
+        <field name="name">hr.loan.line.tree</field>
+        <field name="model">hr.loan.line</field>
+        <field name="arch" type="xml">
+            <tree string="Loan request details" create="false" edit="false" delete="false">
+                <field name="employee_id" invisible = "context.get('invisible_employee_id',False)"/>
+                <field name="department_id"/>
+                <field name="installment"/>
+                <field name="date"/>
+                <field name="amount" widget='monetary'/>
+                <field name="paid"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="currency_id" groups="base.group_multi_currency"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hr_loan_line_form_view" model="ir.ui.view">
+        <field name="name">hr.loan.line.form</field>
+        <field name="model">hr.loan.line</field>
+        <field name="arch" type="xml">
+            <form string="Loan request details" create="false" edit="false" delete="false">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" invisible = "context.get('invisible_employee_id',False)"/>
+                            <field name="department_id"/>
+                        </group>
+                        <group>
+                            <field name="installment"/>
+                            <field name="date"/>
+                            <field name="amount" widget='monetary'/>
+                            <field name="paid"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="hr_loan_line_search_view" model="ir.ui.view">
+        <field name="name">hr.loan.line.search</field>
+        <field name="model">hr.loan.line</field>
+        <field name="arch" type="xml">
+           <search string="Loan request details">
+               <field name="employee_id" string="Employee"/>
+               <field name="department_id" string="Department"/>
+
+               <filter string="Department" name="group_department_id" context="{'group_by':'department_id'}"/>
+                <filter string="Employee" name="group_employee_id" context="{'group_by':'employee_id'}"/>
+                <filter string="Loan request" name="group_loan_id" context="{'group_by':'loan_id'}"/>
+                <filter string="Paid" name="group_paid" context="{'group_by':'paid'}"/>
+
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="my_loan_details_action">
+        <field name="name">My loan request details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+                'invisible_employee_id': True,
+                "search_default_group_loan_id": 1,
+                "search_default_group_paid": 1,
+        }</field>
+
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">My loan request details.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="loan_details_from_my_department_action">
+        <field name="name">Loan request details from my department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_manager_department_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+            'invisible_employee_id': False,
+            "search_default_group_employee_id": 1,
+            "search_default_group_loan_id": 1,
+            "search_default_group_paid": 1,
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face"> Loan request details from my department.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="all_loan_details_action">
+        <field name="name">All loan detail details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{
+            'invisible_employee_id': False,
+            "search_default_group_department_id": 1,
+            "search_default_group_employee_id": 1,
+            "search_default_group_loan_id": 1,
+            "search_default_group_paid": 1,
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">All loan request details.
+            </p>
+        </field>
+    </record>
+    <!--hr.loan.line-->
+
+    <!-- hr.employee -->
+    <record id="act_hr_employee_loan_request" model="ir.actions.act_window">
+        <field name="name">Loans</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.loan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+                'invisible_employee_requests_id': True,
+                'readonly_employee_requests_id': True,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": False,
+        }</field>
+    </record>
+    <record id="view_employee_form_loan_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.loan.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="%(act_hr_employee_loan_request)d"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-dollar"
+                    groups="hr.group_hr_manager,hr.group_hr_user">
+                    <field name="loan_count" widget="statinfo" string="Loans"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <!-- hr.employee -->
+
+    <!-- hr.loan.treasury.manager -->
+    <!--<record id="hr_loan_treasury_manager_tree_view" model="ir.ui.view">-->
+        <!--<field name="name">hr.loan.treasury.manager.tree</field>-->
+        <!--<field name="model">hr.loan.treasury.manager</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<tree string="Loan treasury manager">-->
+                <!--<field name="treasury_managers"/>-->
+            <!--</tree>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!--<record id="hr_loan_treasury_manager_form_view" model="ir.ui.view">-->
+        <!--<field name="name">hr.loan.treasury.manager.form</field>-->
+        <!--<field name="model">hr.loan.treasury.manager</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<form string="Loan treasury manager">-->
+                <!--<sheet>-->
+					<!--<group>-->
+						<!--<field name="treasury_managers" widget="many2many_tags"/>-->
+					<!--</group>-->
+				<!--</sheet>-->
+                <!--<div class="oe_chatter">-->
+                    <!--<field name="message_follower_ids"/>-->
+                    <!--<field name="message_ids"/>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!--<record model="ir.actions.act_window" id="loan_treasury_manager_action">-->
+        <!--<field name="name">Loan treasury manager</field>-->
+        <!--<field name="type">ir.actions.act_window</field>-->
+        <!--<field name="res_model">hr.loan.treasury.manager</field>-->
+        <!---->
+        <!--<field name="view_mode">tree,form</field>-->
+        <!--<field name="domain">[]</field>-->
+        <!--<field name="help" type="html">-->
+            <!--<p class="oe_view_nocontent_smiling_face">Loan treasury manager.-->
+            <!--</p>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!-- hr.loan.treasury.manager -->
+</odoo>

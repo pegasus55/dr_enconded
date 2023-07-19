@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="import_utility_external_service_form" model="ir.ui.view">
+    	<field name="name">import.utility.external.service.form</field>
+        <field name="model">import.utility.external.service</field>
+        <field name="arch" type="xml">
+        	<form string="Import outside service staff">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="get_template" string="Download template" type="object" icon="fa-download" class="oe_stat_button"/>
+                    </div>
+					<group>
+						<group>
+							<field type="binary" name="data" class="required" autofocus="autofocus"/>
+						</group>
+						<group>
+							<field type="binary" name="template" invisible="1" readonly="1"/>
+						</group>
+					</group>
+
+					<footer>
+						<button name="action_import_utility_external_service" string="Import" type="object" class="oe_highlight"/>
+						<button string="Cancel" special="cancel"/>
+					</footer>
+				</sheet>
+        	</form>
+    	</field>
+    </record>
+    
+     <record id="action_import_utility_external_service" model="ir.actions.act_window">
+		<field name="name">Import outside service staff</field>
+		<field name="res_model">import.utility.external.service</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="import_utility_external_service_form"/>
+		<field name="target">new</field>
+	</record>
+        
+</odoo>

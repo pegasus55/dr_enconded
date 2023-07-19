@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <record id="view_hr_employee_family_load_form" model="ir.ui.view">
+            <field name="name">hr.employee.family.load.form</field>
+            <field name="model">hr.employee.family.load</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Family load">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="address_home_id_country_id" invisible="1"/>
+                                <field name="name"/>
+                                <field name="id_type"/>
+                                <field name="identification"/>
+                                <field name="relationship"/>
+                                <field name="date_of_birth" attrs="{'required': [('relationship','in',['children','daughter','son'])]}"/>
+                                <field name="age"/>
+                                <field name="phone"/>
+                                <field name="address"/>
+                            </group>
+                            <group>
+                                <field name="disability"/>
+                                <field name="disability_conadis" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                <field name="insured"/>
+<!--                                <field name="judicial_withholding_id" attrs="{'invisible': [('relationship','not in',['children','daughter','son'])]}"/>-->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="backup_document" string="Backup documents">
+                                <field name="backup_document" widget="many2many_binary"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_employee_family_load_tree" model="ir.ui.view">
+            <field name="name">hr.employee.family.load.tree</field>
+            <field name="model">hr.employee.family.load</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Family load">
+                    <field name="employee_id"/>
+                    <field name="address_home_id_country_id" invisible="1"/>
+                    <field name="name"/>
+                    <field name="id_type"/>
+                    <field name="identification"/>
+                    <field name="relationship"/>
+                    <field name="date_of_birth"/>
+                    <field name="age"/>
+                    <field name="disability"/>
+                    <field name="insured"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_hr_employee_family_load_search" model="ir.ui.view">
+            <field name="name">hr.employee.family.load.search</field>
+            <field name="model">hr.employee.family.load</field>
+            <field name="arch" type="xml">
+                <search string="Family load">
+                    <field name="employee_id"/>
+                    <field name="name"/>
+                    <field name="identification"/>
+                    <group string="Group By">
+                        <filter name="groupby_employee_id" string="Collaborator" context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr_employee_family_load_action" model="ir.actions.act_window">
+            <field name="name">Family load</field>
+            <field name="res_model">hr.employee.family.load</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_hr_employee_family_load_tree"/>
+            <field name="context">{
+                "search_default_groupby_employee_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new family load for employee.
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

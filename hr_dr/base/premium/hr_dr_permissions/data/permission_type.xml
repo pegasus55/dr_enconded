@@ -1,0 +1,239 @@
+<odoo>
+    <data noupdate="0">
+        <!--PERMISOS-->
+        <record model="hr.permission.type" id="PermissionType1">
+            <field name="name">ESTUDIOS REGULARES</field>
+            <field name="acronym">ER</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType2">
+            <field name="name">ATENCIÓN MÉDICA</field>
+            <field name="acronym">AM</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType3">
+            <field name="name">VÍCTIMA DE VIOLENCIA CON (SIC) LA MUJER</field>
+            <field name="acronym">VDVCLM</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType4">
+            <field name="name">CUIDADO DE RECIÉN NACIDO / PERIODO DE LACTANCIA</field>
+            <field name="acronym">CDRNPDL</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType5">
+            <field name="name">ACTIVIDADES DE LOS DIRECTIVOS DE LAS ORGANIZACIONES DE SERVIDORES PUBLICOS</field>
+            <field name="acronym">ADLDDLODSP</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType6">
+            <field name="name">CUIDADO DE FAMILIARES</field>
+            <field name="acronym">CDF</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType7">
+            <field name="name">MATRICULACIÓN DE HIJOS</field>
+            <field name="acronym">MDH</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType8">
+            <field name="name">IMPUTABLE A VACACIONES</field>
+            <field name="acronym">IAV</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType9">
+            <field name="name">ASUNTO PARTICULAR CON RECUPERACIÓN</field>
+            <field name="acronym">APCR</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType10">
+            <field name="name">REHABILITACIÓN</field>
+            <field name="acronym">R</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType11">
+            <field name="name">SUFRAGIO</field>
+            <field name="acronym">S</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType12">
+            <field name="name">NOTIFICACIONES JUDICIALES</field>
+            <field name="acronym">NJ</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType13">
+            <field name="name">VACACIONES DESCONTADAS</field>
+            <field name="acronym">VD</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType14">
+            <field name="name">CAPACITACIÓN</field>
+            <field name="acronym">C</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType15">
+            <field name="name">ASUNTOS OFICIALES</field>
+            <field name="acronym">AO</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="PermissionType16">
+            <field name="name">PERMISO POR MUDANZA</field>
+            <field name="acronym">PPM</field>
+            <field name="type">permission</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <!--PERMISOS-->
+
+        <!--LICENCIAS CON REMUNERACIÓN-->
+        <record model="hr.permission.type" id="LicensePaidType1">
+            <field name="name">LICENCIA POR ENFERMEDAD</field>
+            <field name="acronym">LPE</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType2">
+            <field name="name">LICENCIA POR ENFERMEDAD CATASTRÓFICA</field>
+            <field name="acronym">LPEC</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType3">
+            <field name="name">LICENCIA POR MATERNIDAD</field>
+            <field name="acronym">LPMD</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType4">
+            <field name="name">LICENCIA POR PATERNIDAD</field>
+            <field name="acronym">LPP</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType5">
+            <field name="name">LICENCIA POR MATERNIDAD / PATERNIDAD (HIJOS ADOPTIVOS)</field>
+            <field name="acronym">LPMPHA</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType6">
+            <field name="name">LICENCIA POR HIJOS HOSPITALIZADOS O CON PATOLOGÍAS DEGENERATIVAS</field>
+            <field name="acronym">LPHHOCPD</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType7">
+            <field name="name">LICENCIA POR CALAMIDAD DOMÉSTICA</field>
+            <field name="acronym">LPCD</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicensePaidType8">
+            <field name="name">LICENCIA POR MATRIMONIO</field>
+            <field name="acronym">LPMO</field>
+            <field name="type">license_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <!--LICENCIAS CON REMUNERACIÓN-->
+
+        <!--LICENCIAS SIN REMUNERACIÓN-->
+        <record model="hr.permission.type" id="LicenseUnpaidType1">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (ASUNTO PARTICULAR)</field>
+            <field name="acronym">LSRAP</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicenseUnpaidType2">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (NECESIDADES INSTITUCIONALES)</field>
+            <field name="acronym">LSRNI</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicenseUnpaidType3">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (SERVICIO MILITAR)</field>
+            <field name="acronym">LSRSM</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicenseUnpaidType4">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (REMPLAZO TEMPORAL DIGNATARIO)</field>
+            <field name="acronym">LSRRTD</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicenseUnpaidType5">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (CANDIDATURA)</field>
+            <field name="acronym">LSRC</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="LicenseUnpaidType6">
+            <field name="name">LICENCIA SIN REMUNERACIÓN (MATERNIDAD / PATERNIDAD)</field>
+            <field name="acronym">LSRMP</field>
+            <field name="type">license_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <!--LICENCIAS SIN REMUNERACIÓN-->
+
+        <!--COMISIÓN DE SERVICIOS-->
+        <record model="hr.permission.type" id="ServiceCommissionPaidType1">
+            <field name="name">COMISIÓN DE SERVICIOS CON REMUNERACIÓN</field>
+            <field name="acronym">CDSCR</field>
+            <field name="type">sevice_commission_paid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <record model="hr.permission.type" id="ServiceCommissionUnpaidType2">
+            <field name="name">COMISIÓN DE SERVICIOS SIN REMUNERACIÓN</field>
+            <field name="acronym">CDSSR</field>
+            <field name="type">sevice_commission_unpaid</field>
+            <field name="description"/>
+            <field name="active">True</field>
+        </record>
+        <!--COMISIÓN DE SERVICIOS-->
+    </data>
+</odoo>

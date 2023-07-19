@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+        <record id="view_hr_employee_backup_form" model="ir.ui.view">
+            <field name="name">hr.employee.backup.form</field>
+            <field name="model">hr.employee.backup</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Backups">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" domain="[('id','!=',employee_backup_id)]"/>
+                                <field name="employee_backup_id" domain="[('id','!=',employee_id)]"/>
+                            </group>
+                            <group>
+                                <field name="department_id"/>
+                                <field name="job_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_employee_backup_tree" model="ir.ui.view">
+            <field name="name">hr.employee.backup.tree</field>
+            <field name="model">hr.employee.backup</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Backups">
+                    <field name="employee_id"/>
+                    <field name="employee_backup_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_hr_employee_backup_search" model="ir.ui.view">
+            <field name="name">hr.employee.backup.search</field>
+            <field name="model">hr.employee.backup</field>
+            <field name="arch" type="xml">
+                <search string="Backups">
+                    <field name="employee_id"/>
+                    <field name="employee_backup_id"/>
+                    <group string="Group By">
+                        <filter name="groupby_employee_id" string="Collaborator" context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr_employee_backup_action" model="ir.actions.act_window">
+            <field name="name">Backups</field>
+            <field name="res_model">hr.employee.backup</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_hr_employee_backup_tree"/>
+            <field name="context">{
+                "search_default_groupby_employee_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new backup for collaborator.
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

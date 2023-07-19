@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_hr_tenth_form" model="ir.ui.view">
+		<field name="name">view.hr.tenth.form</field>
+		<field name="model">hr.tenth</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Tenths">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_payment" string="See wages" type="object" icon="fa-money" class="oe_stat_button"/>
+					</div>
+					<group>
+						<group>
+							<field name="type_tenth" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+							<field name="fiscal_year" readonly="1" force_save="1"/>
+							<field name="date" required="0" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+						</group>
+						<group>
+							<field name="date_from" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+							<field name="date_to" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+							<field name="total_payment"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+						</group>
+					</group>
+					<notebook>
+						<page name="employee" string="Details">
+							<field name="tenth_line_ids" nolabel="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}">
+								<tree editable="top" create="false" default_order="employee_id">
+									<field name="employee_id" readonly="1" required="1"/>
+									<field name="worked_days" readonly="1" required="1" sum="Total"/>
+									<field name="amount" readonly="1" sum="Total"/>
+									<field name="provisioned_amount" readonly="1" sum="Total"/>
+									<field name="monthly_amount" readonly="1" sum="Total"/>
+									<field name="judicial_withholding" sum="Total"/>
+									<field name="advance_amount" sum="Total"/>
+									<field name="amount_to_receive" readonly="1" sum="Total"/>
+									<field name="payment_method" readonly="0"/>
+<!--									<field name="move_id" readonly="1"/>-->
+<!--									<button type="object" name="action_view_account_form_lines"-->
+<!--											string="View account provision form lines" icon="fa-search-plus"-->
+<!--											groups="account.group_account_user"/>-->
+								</tree>
+							</field>
+						</page>
+						<page string="Tracing">
+							<field name="notification_ids" nolabel="1">
+								<tree>
+									<field name="level"/>
+									<field name="employee_approve_id"/>
+									<field name="commentary"/>
+									<field name="state"/>
+									<field name="send"/>
+									<field name="processed"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Other information">
+							<group>
+								<group>
+									<field name="user_confirmation"/>
+									<field name="user_cancellation"/>
+								</group>
+								<group>
+									<field name="date_confirmation"/>
+									<field name="date_cancellation"/>
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="view_hr_tenth_list" model="ir.ui.view">
+		<field name="name">view.hr.tenth.list</field>
+		<field name="model">hr.tenth</field>
+		<field name="arch" type="xml">
+			<tree string="Tenths">
+				<field name="type_tenth"/>
+				<field name="fiscal_year"/>
+				<field name="date_from"/>
+				<field name="date_to"/>
+				<field name="total_payment"/>
+				<field name="state"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+			</tree>
+		</field>
+	</record>
+	<record id="action_tenths_form" model="ir.actions.act_window">
+		<field name="name">Tenths</field>
+		<field name="res_model">hr.tenth</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="view_hr_tenth_list"/>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to create a tenth.
+			</p>
+		</field>
+	</record>
+
+	<record id="view_hr_tenth_line_form" model="ir.ui.view">
+		<field name="name">view.hr.tenth.line.form</field>
+		<field name="model">hr.tenth.line</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Tenth details">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="employee_id" readonly="1" required="1"/>
+							<field name="worked_days" readonly="1" required="1" sum="Total"/>
+							<field name="amount" readonly="1" sum="Total"/>
+							<field name="provisioned_amount" readonly="1" sum="Total"/>
+							<field name="monthly_amount" readonly="1" sum="Total"/>
+							<field name="judicial_withholding" sum="Total"/>
+							<field name="advance_amount" sum="Total"/>
+							<field name="amount_to_receive" readonly="1" sum="Total"/>
+							<field name="payment_method" readonly="0"/>
+							<field name="move_id" readonly="1"/>
+						</group>
+						<group>
+						</group>
+					</group>
+
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="view_hr_tenth_line_list" model="ir.ui.view">
+		<field name="name">view.hr.tenth.line.list</field>
+		<field name="model">hr.tenth.line</field>
+		<field name="arch" type="xml">
+			<tree string="Tenth details">
+				<field name="employee_id" readonly="1" required="1"/>
+				<field name="worked_days" readonly="1" required="1" sum="Total"/>
+				<field name="amount" readonly="1" sum="Total"/>
+				<field name="provisioned_amount" readonly="1" sum="Total"/>
+				<field name="monthly_amount" readonly="1" sum="Total"/>
+				<field name="judicial_withholding" sum="Total"/>
+				<field name="advance_amount" sum="Total"/>
+				<field name="amount_to_receive" readonly="1" sum="Total"/>
+				<field name="payment_method" readonly="0"/>
+				<field name="move_id" readonly="1"/>
+			</tree>
+		</field>
+	</record>
+	<record id="action_tenths_line_form" model="ir.actions.act_window">
+		<field name="name">Tenth details</field>
+		<field name="res_model">hr.tenth.line</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="view_hr_tenth_line_list"/>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to see the detail of a tenth.
+			</p>
+		</field>
+	</record>
+
+<!--	<record model="ir.actions.server" id="action_download_csv">-->
+<!--		<field name="name">Generar CSV</field>-->
+<!--		<field name="condition">True</field>-->
+<!--		<field name="type">ir.actions.server</field>-->
+<!--		<field name="model_id" ref="hr_dr_payroll.model_hr_tenth"/>-->
+<!--		<field name="state">code</field>-->
+<!--		<field name="code">-->
+<!--		if records:-->
+<!--		action = records.get_provision_CSV()-->
+<!--		</field>-->
+<!--	</record>-->
+
+<!--	<record model="ir.values" id="action_download_tenths_csv">-->
+<!--		<field name="model_id" ref="hr_dr_payroll.model_hr_tenth"/>-->
+<!--		<field name="name">Generar CSV</field>-->
+<!--		<field name="key">action</field>-->
+<!--		<field name="key2">client_action_multi</field>-->
+<!--		<field name="value" eval="'ir.actions.server,' + str(ref('action_download_csv'))"/>-->
+<!--		<field name="model">hr.tenth</field>-->
+<!--	</record>-->
+
+
+</odoo>

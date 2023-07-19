@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_payroll_structure_type_list_action">
+            <field name="name">Payroll structure type</field>
+            <field name="res_model">hr.payroll.structure.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create payroll structure type.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_payroll_structure_type_list">
+            <field name="name">Payroll structure type</field>
+            <field name="model">hr.payroll.structure.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="country_id"/>
+                    <field name="default_resource_calendar_id"/>
+                    <field name="normative_id"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_payroll_structure_type_form">
+            <field name="name">Payroll structure type</field>
+            <field name="model">hr.payroll.structure.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="default_resource_calendar_id"/>
+                            </group>
+                            <group>
+                                <field name="country_id"/>
+                                <field name="normative_id"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

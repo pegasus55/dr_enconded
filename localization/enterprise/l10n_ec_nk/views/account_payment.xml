@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="view_account_payment_form_inherit" model="ir.ui.view">
+            <field name="name">account.payment.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_draft']" position="after">
+                    <button name="get_cash_management" string="Cash management" type="object" class="oe_highlight"/>
+                </xpath>
+                <field name="ref" position="after">
+                    <field name="cash_management" filename="cash_management_name" attrs="{'invisible':[('cash_management_name','=',False)]}"/>
+                    <field name="cash_management_name" invisible="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

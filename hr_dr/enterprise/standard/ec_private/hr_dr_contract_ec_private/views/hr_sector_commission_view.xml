@@ -1,0 +1,64 @@
+<odoo>
+  <data>
+        <!--Sector commission-->
+        <record model="ir.actions.act_window" id="sector_commission_list_action">
+            <field name="name">Sector commission</field>
+            <field name="res_model">hr.sector.commission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the sector commission.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_commission_list">
+            <field name="name">Sector commission list</field>
+            <field name="model">hr.sector.commission</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="number"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_commission_search">
+            <field name="name">Sector commission search</field>
+            <field name="model">hr.sector.commission</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_commission_form">
+            <field name="name">Sector commission form</field>
+            <field name="model">hr.sector.commission</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <menuitem
+            id="menu_hr_sector_commission"
+            action="sector_commission_list_action"
+            parent="hr_dr_contract.hr_menu_contract_settings_root"
+            sequence="25"/>
+        <!--Sector commission-->
+  </data>
+</odoo>

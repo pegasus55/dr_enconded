@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="res_config_settings_view_form_license">
+      <field name="name">res.config.settings.view.form.license</field>
+      <field name="model">res.config.settings</field>
+      <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+          <div class="app_settings_block" data-string="License customer" string="License customer"
+               data-key="dr_license_customer" groups="dr_license_customer.dr_license_customer_group_user">
+            <h2>Information</h2>
+            <div class="row mt16 o_settings_container">
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_right_pane">
+                  <label for="license_package"/>
+                  <div class="row">
+                    <div class="text-muted col-lg-8">
+                      System version.
+                    </div>
+                  </div>
+                  <div class="content-group">
+                    <div class="mt16">
+                      <field name="license_package" readonly="1" class="o_light_label"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_right_pane">
+                  <label for="max_active_employees"/>
+                  <div class="row">
+                    <div class="text-muted col-lg-8">
+                      Maximum number of active collaborators.
+                    </div>
+                  </div>
+                  <div class="content-group">
+                    <div class="mt16">
+                      <field name="max_active_employees" readonly="1" class="o_light_label"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_right_pane">
+                  <label for="license_expiring_date"/>
+                  <div class="row">
+                    <div class="text-muted col-lg-8">
+                      Date of license expiration.
+                    </div>
+                  </div>
+                  <div class="content-group">
+                    <div class="mt16">
+                      <field name="license_expiring_date" readonly="1" class="o_light_label"
+                             widget="remaining_days"/>
+                    </div>
+                    <button type="action"
+                            name="%(dr_license_customer.request_license_wizard_act_window)d"
+                            groups="dr_license_customer.dr_license_customer_group_manager"
+                            class="btn btn-link">
+                      <i class="fa fa-fw fa-repeat o_button_icon"/>Renew license
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2>Apps and devices</h2>
+            <div class="row mt16 o_settings_container">
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_right_pane">
+                  <div class="content-group mt16">
+                    <label for="licensed_devices"/>
+                    <div class="row">
+                      <div class="text-muted col-lg-8">
+                        List of biometric devices covered by this license.
+                      </div>
+                    </div>
+                    <div class="content-group">
+                      <div class="mt16">
+                        <field name="licensed_devices" class="o_light_label"
+                               widget="device-list"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_right_pane">
+                  <div class="content-group mt16">
+                    <label for="licensed_apps"/>
+                    <div class="row">
+                      <div class="text-muted col-lg-8">
+                        List of modules covered by this license.
+                      </div>
+                    </div>
+                    <div class="content-group">
+                      <div class="mt16">
+                        <field name="licensed_apps" class="o_light_label" widget="app-list"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

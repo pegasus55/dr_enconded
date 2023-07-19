@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="hr_dr_credit">
+            <field name="parent_id" ref="base.module_category_human_resources"/>
+            <field name="name">Credit</field>
+            <field name="description">Credit</field>
+            <field name="sequence">3</field>
+        </record>
+    </data>
+</odoo>

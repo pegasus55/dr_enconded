@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureRecruitment2">
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="nomenclature_id" ref = "hr_dr_recruitment.NomenclatureRecruitment1"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">15</field>
+            <field name="res_model_id" ref="hr_dr_recruitment.model_hr_staff_requirement_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureRecruitment4">
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="nomenclature_id" ref = "hr_dr_recruitment.NomenclatureRecruitment2"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_recruitment.model_hr_staff_requirement_request" />
+        </record>
+        <record model="hr.normative.nomenclature" id="NormativeNomenclatureRecruitment6">
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="nomenclature_id" ref = "hr_dr_recruitment.NomenclatureRecruitment3"/>
+            <field name="valid_from" eval="(DateTime.today() + relativedelta(year=2020,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="integer_value">0</field>
+            <field name="res_model_id" ref="hr_dr_recruitment.model_hr_staff_requirement_request" />
+        </record>
+    </data>
+</odoo>

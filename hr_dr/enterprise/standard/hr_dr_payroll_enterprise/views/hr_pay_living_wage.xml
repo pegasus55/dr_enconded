@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="pay_living_wage_view_form_inherit" model="ir.ui.view">
+		<field name="name">pay.living.wage.view.form.inherit</field>
+		<field name="model">pay.living.wage</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.pay_living_wage_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form//header" position="inside">
+				<button name="action_create_update_lines"
+					string="Calculate" type="object"
+					states="draft,calculated" class="oe_highlight"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="action_recalculate_based_on_utility"
+					string="Recalculate based on utility" type="object"
+					states="calculated,recalculate" class="oe_highlight"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="mark_as_reviewed"
+					string="Mark as reviewed" type="object"
+					states="recalculate"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the living wage payment as reviewed?"/>
+
+				<button name="mark_as_draft"
+					string="Mark as draft" type="object"
+					states="reviewed,cancelled,approved,rejected,calculated,recalculate"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the living wage payment as draft?"/>
+
+				<button name="confirm_request"
+					string="Confirm request" type="object"
+					states="reviewed"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to confirm this living wage payment request?"/>
+
+				<button name="confirm_request_direct"
+					string="Register request" type="object"
+					states="reviewed"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to register this living wage payment request?"/>
+
+				<button name="cancel_request"
+					string="Cancel request" type="object"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to cancel this living wage payment request?"
+					attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+				<button name="mark_as_done"
+					string="Mark as done" type="object"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the living wage payment as done?"
+					states="approved"/>
+
+				<button name="%(hr_dr_payroll_enterprise.action_register_account_payment)d"
+					string="Register payment" type="action"
+					states="done"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="notify_treasury"
+					string="Notify treasury" type="object"
+					groups="hr_payroll.group_hr_payroll_manager"
+					states="done"/>
+
+<!--				TODO Regresar a borrador desde estado done, tener en cuenta que pueden existir pagos generados-->
+			</xpath>
+		</field>
+	</record>
+</odoo>

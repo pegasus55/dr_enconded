@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="request_license_form">
+      <field name="name">Request license form</field>
+      <field name="model">dr.license.customer.wizard</field>
+      <field name="arch" type="xml">
+        <form>
+          <group col="2">
+            <field name="id_number"/>
+          </group>
+          <footer>
+            <button name="get_license" string="Request" type="object" class="btn-primary"/>
+            <button string="Cancel" class="btn-secondary" special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="request_license_wizard_act_window">
+      <field name="name">Request license</field>
+      <field name="res_model">dr.license.customer.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="dr_license_customer.request_license_form"/>
+      <!--<field name="binding_model_id" ref="model_sdd_movement"/>-->
+      <!--<field name="binding_view_types">list</field>-->
+    </record>
+
+    <!--<record id="launch_the_wizard" model="ir.actions.act_window">-->
+        <!--<field name="name">Launch the Wizard</field>-->
+        <!--<field name="res_model">wizard.model.name</field>-->
+        <!--<field name="view_mode">form</field>-->
+        <!--<field name="target">new</field>-->
+        <!--<field name="binding_model_id" ref="model_context_model_ref"/>-->
+    <!--</record>-->
+</odoo>

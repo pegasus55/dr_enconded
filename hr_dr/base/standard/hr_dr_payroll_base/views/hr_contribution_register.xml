@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contribution_register_tree" model="ir.ui.view">
+        <field name="name">hr.contribution.register.tree</field>
+        <field name="model">hr.contribution.register</field>
+        <field name="arch" type="xml">
+            <tree string="Contribution register">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_contribution_register_filter" model="ir.ui.view">
+        <field name="name">hr.contribution.register.search</field>
+        <field name="model">hr.contribution.register</field>
+        <field name="arch" type="xml">
+            <search string="Contribution register">
+                <field name="name" string="Contribution register"/>
+                <field name="partner_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_contribution_register_form" model="ir.ui.view">
+        <field name="name">hr.contribution.register.form</field>
+        <field name="model">hr.contribution.register</field>
+        <field name="arch" type="xml">
+            <form string="Contribution register">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_contribution_register_form" model="ir.actions.act_window">
+        <field name="name">Contribution register</field>
+        <field name="res_model">hr.contribution.register</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new contribution register
+            </p>
+            <p>
+                A contribution register is a third party involved in the salary
+                payment of the employees. It can be the social security, the
+                state or anyone that collect or inject money on payslips.
+            </p>
+        </field>
+    </record>
+
+</odoo>

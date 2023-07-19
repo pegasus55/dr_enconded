@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+
+        <menuitem name="Loans" id="menu_hr_loans_root" web_icon="hr_dr_loan,static/description/icon.png" sequence="77"/>
+
+            <menuitem name="Requests" id="menu_base_hr_loan_request" parent = "menu_hr_loans_root" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="10"/>
+
+                <menuitem id="menu_my_loan_request" name="My" parent="menu_base_hr_loan_request" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="10" action="my_loan_request_action"/>
+                <menuitem id="menu_loan_request_from_my_department" name="From my department" parent="menu_base_hr_loan_request" groups="hr_dr_loan.hr_dr_loan_group_responsible" sequence="20" action="hr_dr_loan.loan_request_from_my_department_action"/>
+                <menuitem id="menu_all_loan_request" name="All" parent="menu_base_hr_loan_request" groups="hr_dr_loan.hr_dr_loan_group_supervisor" sequence="30" action="all_loan_request_action"/>
+
+                <menuitem parent="menu_base_hr_loan_request" id="menu_loan_request_notifications" name="Notifications" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="40"/>
+                    <menuitem id="menu_loan_request_for_approve" name="To process" parent="menu_loan_request_notifications" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="10" action="hr_dr_loan.loan_request_action_notifications_to_process"/>
+                    <menuitem id="menu_all_loan_request_for_approve" name="All" parent="menu_loan_request_notifications" groups="hr_dr_loan.hr_dr_loan_group_supervisor" sequence="20" action="hr_dr_loan.loan_request_action_notifications_all"/>
+
+            <menuitem name="Request details" id="menu_base_hr_loan_details" parent = "menu_hr_loans_root" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="20"/>
+
+                <menuitem id="menu_my_loan_details" name="My" parent="menu_base_hr_loan_details" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="10" action="my_loan_details_action"/>
+                <menuitem id="menu_loan_details_from_my_department" name="From my department" parent="menu_base_hr_loan_details" groups="hr_dr_loan.hr_dr_loan_group_responsible" sequence="20" action="hr_dr_loan.loan_details_from_my_department_action"/>
+                <menuitem id="menu_all_loan_details" name="All" parent="menu_base_hr_loan_details" groups="hr_dr_loan.hr_dr_loan_group_supervisor" sequence="30" action="all_loan_details_action"/>
+
+        <record id="loan_configuration_settings_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'hr_dr_loan'}</field>
+        </record>
+        <menuitem id="menu_loan_configuration" name="Configuration" parent="menu_hr_loans_root" groups="hr_dr_loan.hr_dr_loan_group_manager" sequence="100"/>
+        <menuitem id="menu_configuration_settings"
+            name="Settings"
+            parent="menu_loan_configuration"
+            sequence="10"
+            action="loan_configuration_settings_action"
+            groups="hr_dr_loan.hr_dr_loan_group_manager"/>
+    </data>
+</odoo>
