@@ -299,35 +299,35 @@
         <record id="hr_payslip_input_type_PALIMENTOS_1" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_1</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_1,D_D14_M_PALIMENTOS_1</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_1,D_D14_M_PALIMENTOS_1,DP_D13_A_PALIMENTOS_1,DP_D14_A_PALIMENTOS_1</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_2" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_2</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_2,D_D14_M_PALIMENTOS_2</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_2,D_D14_M_PALIMENTOS_2,DP_D13_A_PALIMENTOS_2,DP_D14_A_PALIMENTOS_2</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_3" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_3</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_3,D_D14_M_PALIMENTOS_3</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_3,D_D14_M_PALIMENTOS_3,DP_D13_A_PALIMENTOS_3,DP_D14_A_PALIMENTOS_3</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_4" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_4</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_4,D_D14_M_PALIMENTOS_4</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_4,D_D14_M_PALIMENTOS_4,DP_D13_A_PALIMENTOS_4,DP_D14_A_PALIMENTOS_4</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_5" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_5</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_5,D_D14_M_PALIMENTOS_5</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_5,D_D14_M_PALIMENTOS_5,DP_D13_A_PALIMENTOS_5,DP_D14_A_PALIMENTOS_5</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>

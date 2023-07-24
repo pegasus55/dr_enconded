@@ -21,6 +21,8 @@
                 <field name="total_value" widget='monetary'/>
                 <field name="total_working_days"/>
 
+                <field name="partner_id"/>
+
                 <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
                 <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
                 <field name="active"/>
