@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Payroll for odoo community (EC Private)",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage the payroll of collaborators.
     """,

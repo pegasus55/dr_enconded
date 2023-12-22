@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-07 20:31+0000\n"
-"PO-Revision-Date: 2022-08-07 20:31+0000\n"
+"POT-Creation-Date: 2023-10-30 14:39+0000\n"
+"PO-Revision-Date: 2023-10-30 14:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #. module: dr_license_customer
 #: model_terms:ir.ui.view,arch_db:dr_license_customer.res_config_settings_view_form_license
-msgid "<i class=\"fa fa-repeat\"/>&amp;nbsp;Renew license"
+msgid "<i class=\"fa fa-fw fa-repeat o_button_icon\"/>Renew license"
 msgstr ""
 
 #. module: dr_license_customer
@@ -26,30 +26,18 @@ msgid "Active collaborators"
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/js/device_list.js:0
-#, python-format
-msgid ""
-"An error has occurred with the information stored about your applications!"
-msgstr ""
-
-#. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/js/device_list.js:0
-#, python-format
-msgid ""
-"An error has occurred with the information stored about your biometric "
-"devices!"
-msgstr ""
-
-#. module: dr_license_customer
 #: model:ir.model.fields,field_description:dr_license_customer.field_res_config_settings__licensed_apps
 msgid "Apps"
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/xml/website_backend.xml:0
+#: model_terms:ir.ui.view,arch_db:dr_license_customer.res_config_settings_view_form_license
+msgid "Apps and devices"
+msgstr ""
+
+#. module: dr_license_customer
+#. odoo-javascript
+#: code:addons/dr_license_customer/static/src/xml/device_list.xml:0
 #, python-format
 msgid "Brand"
 msgstr ""
@@ -90,10 +78,7 @@ msgid "Devices"
 msgstr ""
 
 #. module: dr_license_customer
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_base__display_name
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_device__display_name
 #: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_wizard__display_name
-#: model:ir.model.fields,field_description:dr_license_customer.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -103,10 +88,7 @@ msgid "Expiring date"
 msgstr ""
 
 #. module: dr_license_customer
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_base__id
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_device__id
 #: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_wizard__id
-#: model:ir.model.fields,field_description:dr_license_customer.field_res_config_settings__id
 msgid "ID"
 msgstr ""
 
@@ -127,10 +109,7 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_base____last_update
-#: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_device____last_update
 #: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_wizard____last_update
-#: model:ir.model.fields,field_description:dr_license_customer.field_res_config_settings____last_update
 msgid "Last Modified on"
 msgstr ""
 
@@ -150,24 +129,11 @@ msgid "License Request Wizard"
 msgstr ""
 
 #. module: dr_license_customer
-#: model:ir.model,name:dr_license_customer.model_dr_license_base
-msgid "License base model"
-msgstr ""
-
-#. module: dr_license_customer
 #: model:ir.module.category,description:dr_license_customer.module_category_dr_license_customer
 #: model:ir.module.category,name:dr_license_customer.module_category_dr_license_customer
 #: model:ir.ui.menu,name:dr_license_customer.menu_license_customer
 #: model_terms:ir.ui.view,arch_db:dr_license_customer.res_config_settings_view_form_license
 msgid "License customer"
-msgstr ""
-
-#. module: dr_license_customer
-#: code:addons/dr_license_customer/models/models.py:0
-#, python-format
-msgid ""
-"License customer [dr_license_customer] module must be installed in the "
-"system."
 msgstr ""
 
 #. module: dr_license_customer
@@ -206,22 +172,15 @@ msgid "Maximum number of active collaborators."
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/xml/website_backend.xml:0
+#. odoo-javascript
+#: code:addons/dr_license_customer/static/src/xml/device_list.xml:0
 #: model:ir.model.fields,field_description:dr_license_customer.field_dr_license_customer_device__model
 #, python-format
 msgid "Model"
 msgstr ""
 
 #. module: dr_license_customer
-#: code:addons/dr_license_customer/models/models.py:0
-#, python-format
-msgid ""
-"Module installation control [dr_module_installation_control] module must be "
-"installed in the system."
-msgstr ""
-
-#. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid "No license update found."
@@ -243,8 +202,8 @@ msgid "SN"
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/xml/website_backend.xml:0
+#. odoo-javascript
+#: code:addons/dr_license_customer/static/src/xml/device_list.xml:0
 #, python-format
 msgid "Serial number"
 msgstr ""
@@ -256,17 +215,12 @@ msgid "Settings"
 msgstr ""
 
 #. module: dr_license_customer
-#: code:addons/dr_license_customer/models/models.py:0
-#, python-format
-msgid "Start system [dr_start_system] module must be installed in the system."
-msgstr ""
-
-#. module: dr_license_customer
 #: model_terms:ir.ui.view,arch_db:dr_license_customer.res_config_settings_view_form_license
 msgid "System version."
 msgstr ""
 
 #. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid ""
@@ -275,22 +229,15 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/js/device_list.js:0
-#, python-format
-msgid "This license does not cover any application."
-msgstr ""
-
-#. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/js/device_list.js:0
+#. odoo-javascript
+#: code:addons/dr_license_customer/static/src/xml/device_list.xml:0
 #, python-format
 msgid "This license does not cover any biometric devices."
 msgstr ""
 
 #. module: dr_license_customer
-#. openerp-web
-#: code:addons/dr_license_customer/static/src/xml/website_backend.xml:0
+#. odoo-javascript
+#: code:addons/dr_license_customer/static/src/xml/device_list.xml:0
 #, python-format
 msgid "Total:"
 msgstr ""
@@ -306,6 +253,7 @@ msgid "Version"
 msgstr ""
 
 #. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid ""
@@ -313,13 +261,7 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
-#: code:addons/dr_license_customer/models/models.py:0
-#, python-format
-msgid ""
-"You have no license installed or there is a problem with your license file."
-msgstr ""
-
-#. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #: code:addons/dr_license_customer/models/models.py:0
 #: code:addons/dr_license_customer/models/models.py:0
@@ -335,6 +277,7 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid ""
@@ -342,6 +285,7 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid ""
@@ -350,6 +294,7 @@ msgid ""
 msgstr ""
 
 #. module: dr_license_customer
+#. odoo-python
 #: code:addons/dr_license_customer/models/models.py:0
 #, python-format
 msgid ""

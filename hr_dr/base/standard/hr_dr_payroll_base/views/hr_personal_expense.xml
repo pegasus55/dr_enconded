@@ -9,93 +9,75 @@
 				<header>
 					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,done"/>
 				</header>
+				<field name="calculation_method" invisible="1"/>
 				<sheet>
 					<group>
 						<group>
-							<field name="employee_id" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+							<field name="work_region"/>
+							<field name="calculation_method"/>
+							<field name="presents_catastrophic_disease"/>
+							<field name="family_load"/>
+							<field name="any_family_load_with_catastrophic_diseases"/>
+							<field name="max_deductible"/>
 							<field name="user_id" invisible="1"/>
-							<field name="rent_tax_table_id" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
 						</group>
 						<group>
-							<field name="calculation_method" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="rent_tax_table_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+							<field name="fiscal_year"/>
+							<field name="income_tax_withholding_percentage" attrs="{'readonly': [('state','!=','draft')]}"/>
+							<field name="total_expenses" widget='monetary'/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 					<notebook>
-						<page string="Incomes">
+						<page string="This employer">
 							<group>
-								<group string="Taxed">
-									<field name="wage" attrs="{'required': True, 'readonly': True}"/>
-									<field name="commission" attrs="{'required': True, 'readonly': True}"/>
-									<field name="utility" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									<field name="income_other_employers" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-<!--									<field name="profit_tax_employer" attrs="{'required': True, 'readonly': ['|', ('calculation_method','in',['withhold_employee', 'assumption_total']), ('state','!=','draft')]}"/>-->
+								<group>
+									<field name="wage" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="other_taxable_income" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="utility" attrs="{'readonly': [('state','!=','draft')]}"/>
+									<field name="profit_tax_employer" attrs="{'readonly': [('state','!=','draft')]}"/>
 								</group>
-								<group string="Exempt">
-									<field name="thirteenth_salary" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									<field name="fourteenth_salary" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									<field name="reserve_fund" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									<field name="compensation" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									<field name="other_income" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-<!--									<field name="taxable_income" attrs="{'required': True, 'readonly': True}"/>-->
-<!--									<field name="max_deductible" attrs="{'required': True, 'readonly': True}"/>-->
+								<group>
+									<field name="IESS_this_employer" attrs="{'readonly': [('state','!=','draft')]}"/>
 								</group>								
 							</group>
 						</page>
-						<page string="Expenses, Deductions and Exonerations">
+						<page string="Other employers">
 							<group>
-								<group string="Expenses">
-									<label for="living_place" style="width: 280px;"/>
-									<div>
-										<field name="living_place" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_living_place" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="education"/>
-									<div>
-										<field name="education" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_education" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="feeding"/>
-									<div>
-										<field name="feeding" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_feeding" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="clothing"/>
-									<div>
-										<field name="clothing" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_clothing" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="sightseeing"/>
-									<div>
-										<field name="sightseeing" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_sightseeing" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="health"/>
-									<div>
-										<field name="health" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
-										<field name="max_health" readonly="1" class="oe_inline"/>
-									</div>
-									<label for="total_expenses"/>
-									<div>
-										<field name="total_expenses" class="oe_inline"/>
-									</div>
-									<label for="discount_percent"/>
-									<div>
-										<field name="discount_percent" class="oe_inline" widget="percentage"/>
-									</div>
+								<group>
+									<field name="income_other_employers" attrs="{'readonly': [('state','!=','draft')]}"/>
 								</group>
 								<group>
-									<group string="Deductions">
-										<field name="IESS_this_employer" attrs="{'required': True, 'readonly': True}"/>
-										<field name="IESS_other_employer" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-									</group>
-									<group string="Exonerations">
-										<field name="disability" attrs="{'required': True, 'readonly': True}"/>
-										<field name="third_age" attrs="{'required': True, 'readonly': True}"/>
-									</group>
+									<field name="IESS_other_employer" attrs="{'readonly': [('state','!=','draft')]}"/>
 								</group>
 							</group>
 						</page>
-						<page string="Summary Tax">
+						<page string="Expenses">
+							<field name="expenses_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
+								<tree editable="bottom">
+									<field name="personal_expenses_category_id" options="{'no_open': True, 'no_create_edit': True}"/>
+									<field name="amount" widget='monetary'/>
+									<field name="max_amount" widget='monetary'/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Deductions">
+							<group>
+								<group>
+									<field name="disability_deduction"/>
+									<field name="third_age_deduction"/>
+								</group>
+								<group>
+									<field name="total_deduction"/>
+								</group>
+							</group>
+						</page>
+						<page string="Tax summary">
 							<table>
 								<tbody>
 									<tr>

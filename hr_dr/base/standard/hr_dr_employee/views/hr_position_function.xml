@@ -40,7 +40,7 @@
             <field name="name">hr.position.function.search</field>
             <field name="model">hr.position.function</field>
             <field name="arch" type="xml">
-                <search string="Position function">
+                <search string="Position functions">
                     <field name="name"/>
                 </search>
             </field>
@@ -53,8 +53,6 @@
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new position function.
-                </p>
-                <p>
                 </p>
             </field>
         </record>

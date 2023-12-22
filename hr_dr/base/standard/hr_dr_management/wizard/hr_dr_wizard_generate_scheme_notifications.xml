@@ -91,6 +91,5 @@
 
         <menuitem id="menu_notification_generate_echeme" name="Generate scheme notifications" parent="menu_notification" action="hr_dr_management.generate_scheme_notifications_action" groups="hr_dr_management.hr_dr_management_group_supervisor" sequence="30"/>
 
-
     </data>
 </odoo>

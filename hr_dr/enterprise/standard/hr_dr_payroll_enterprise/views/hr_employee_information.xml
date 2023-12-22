@@ -89,9 +89,9 @@
 										</div>
 									</group>
 									<group string="Exonerations">
-										<label for="disability" style="width: 280px;"/>
-										<field name="disability" attrs="{'required': True, 'readonly': True}" nolabel="1"/>
-										<field name="third_age" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+										<label for="disability_deduction" style="width: 280px;"/>
+										<field name="disability_deduction" attrs="{'required': True, 'readonly': True}" nolabel="1"/>
+										<field name="third_age_deduction" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
 									</group>
 								</group>
 							</group>

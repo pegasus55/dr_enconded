@@ -6,6 +6,24 @@
         <field name="model">hr.payslip</field>
         <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_payslip_done']" position="after">
+                <field name="is_liquidation_payslip" invisible="1"/>
+                <button string="Print" name="action_print_assets_liquidation" type="object"
+                        attrs="{'invisible': ['|', ('is_liquidation_payslip', '=', False), ('state', 'in', ['draft', 'cancel'])]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_payslip_done']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('is_liquidation_payslip', '=', True), ('state', 'not in', ['verify'])]}</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_payslip_paid']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('is_liquidation_payslip', '=', True), ('state', 'not in', ['done'])]}</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_print_payslip']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('is_liquidation_payslip', '=', True), ('state', 'in', ['draft', 'cancel'])]}</attribute>
+            </xpath>
+
             <xpath expr="//field[@name='input_line_ids']//tree//field[@name='input_type_id']" position="after">
                 <field name="code"/>
                 <field name="type"/>

@@ -1182,7 +1182,7 @@ msgstr "El módulo 'Control de instalación' [dr_module_installation_control] de
 #: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_process_staff_requirement_my
 #: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_my
 msgid "My"
-msgstr "Míos"
+msgstr "Mío"
 
 #. module: hr_dr_recruitment
 #: model:ir.actions.act_window,name:hr_dr_recruitment.hr_process_staff_requirement_action_my

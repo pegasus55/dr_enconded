@@ -4,7 +4,7 @@
 		<record id="ir_seq_hr_loan" model="ir.sequence">
 			<field name="name">Loan request</field>
 			<field name="code">hr.loan.seq</field>
-			<field name="prefix">PRESTAMO/</field>
+			<field name="prefix">PRESTAMO - </field>
 			<field name="padding">4</field>
 			<field name="number_increment">1</field>
 			<field name="number_next_actual">1</field>

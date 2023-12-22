@@ -116,15 +116,17 @@
         <field name="report_name">hr_dr_employee_certificates.report_work_certificate</field>
         <field name="report_file">hr_dr_employee_certificates.report_work_certificate</field>
         <field name="print_report_name">'Certificado laboral %s' % (object.name)</field>
+        <field name="add_signature">True</field>
     </record>
 
     <record id="action_work_certificate_report_public" model="ir.actions.report">
         <field name="name">Work certificate public</field>
-        <field name="model">hr.employee.public</field>
+        <field name="model">hr.employee</field>
         <field name="report_type">qweb-html</field>
         <field name="report_name">hr_dr_employee_certificates.report_work_certificate</field>
         <field name="report_file">hr_dr_employee_certificates.report_work_certificate</field>
         <field name="print_report_name">'Certificado laboral %s' % (object.name)</field>
+        <field name="add_signature">True</field>
     </record>
 
   <template id="report_work_certificate_with_income_document"
@@ -178,19 +180,23 @@
     <record id="action_work_certificate_with_income_report" model="ir.actions.report">
         <field name="name">Work certificate with income</field>
         <field name="model">hr.employee</field>
-        <field name="report_type">qweb-html</field>
+        <field name="report_type">qweb-pdf</field>
         <field name="report_name">hr_dr_employee_certificates.report_work_certificate_with_income</field>
         <field name="report_file">hr_dr_employee_certificates.report_work_certificate_with_income</field>
         <field name="print_report_name">'Certificado laboral con ingreso %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+        <field name="y_coordinate">300</field>
     </record>
 
     <record id="action_work_certificate_with_income_report_public" model="ir.actions.report">
         <field name="name">Work certificate with income public</field>
-        <field name="model">hr.employee.public</field>
-        <field name="report_type">qweb-html</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
         <field name="report_name">hr_dr_employee_certificates.report_work_certificate_with_income</field>
         <field name="report_file">hr_dr_employee_certificates.report_work_certificate_with_income</field>
         <field name="print_report_name">'Certificado laboral con ingreso %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+        <field name="y_coordinate">300</field>
     </record>
 
 </odoo>

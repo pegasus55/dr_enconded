@@ -58,11 +58,11 @@
                                     </div>
                                     <div class="content-group">
                                         <div class="mt16">
-                                            <field name="treasury_managers_ids"
-                                                   class="o_light_label">
+                                            <field name="treasury_managers_ids" class="o_light_label">
                                                 <tree>
                                                     <field name="name" string="Collaborator name"/>
                                                     <field name="department_id"/>
+                                                    <field name="job_id"/>
                                                 </tree>
                                             </field>
                                         </div>

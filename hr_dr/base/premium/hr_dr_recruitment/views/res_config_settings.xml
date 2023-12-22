@@ -75,7 +75,6 @@
                             <label for="validate_anticipation_dynamically"/>
                             <div class="text-muted">
                                 It is used to define whether the number of days in advance with which a staff requirement request is made is dynamic or fixed based on the duration of the stages defined for the position or job.
-<!--                                Se utiliza para definir si la cantidad de días de anticipación con que se realiza una solicitud de requerimiento de personal es dinámica o fija en función de la duración de las etapas definidas para el cargo o el puesto de trabajo.-->
                             </div>
                         </div>
                     </div>
@@ -108,7 +107,6 @@
                             <label for="start_schedule_approval_day_of_staff_requirement_request"/>
                             <div class="text-muted">
                                 It is used to define if the process staff requirement starts the day the request is approved or the next day. If it is marked as true, it means that the process starts the day it is approved, otherwise it starts the next day.
-<!--                                Se utiliza para definir si el proceso de requerimiento de personal inicia el día en que se aprueba la solicitud o al siguiente día. Si está marcado como verdadero significa que el proceso inicia el día en que se aprueba, de lo contrario inicia el siguiente día.-->
                             </div>
                         </div>
                     </div>
@@ -121,7 +119,6 @@
                             <label for="include_holidays_in_working_days_of_scheme_schedule"/>
                             <div class="text-muted">
                                 It is used to define whether Saturdays, Sundays, and holidays are counted as working days within the staffing process schedule. If it is marked as true it means yes, otherwise no.
-<!--                                Se utiliza para definir si los sábados, domingos y feriados se cuentan como días de trabajo dentro del cronograma del proceso de requerimiento de personal. Si está marcado como verdadero significa que si, de lo contrario no.-->
                             </div>
                         </div>
                     </div>

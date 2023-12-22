@@ -35,11 +35,11 @@
         <menuitem id="hr_position_function_menu" action="hr_position_function_action" parent="hr.menu_config_recruitment" sequence="1"/>
         <menuitem id="hr_profession_menu" action="hr_profession_action" parent="hr.menu_config_recruitment" sequence="1"/>
 
-        <menuitem id="menu_affiliates" name="Affiliates" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.affiliates_action"/>
-        <menuitem id="menu_temporary" name="Temporary" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.temporary_action"/>
-        <menuitem id="menu_interns" name="Interns" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.interns_action"/>
-        <menuitem id="menu_unemployed" name="Unemployed" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.unemployed_action"/>
-        <menuitem id="menu_retired" name="Retired" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.retired_action"/>
+        <menuitem id="menu_affiliate" name="Affiliate collaborators" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.affiliate_action"/>
+        <menuitem id="menu_temporary" name="Temporary collaborators" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.temporary_action"/>
+        <menuitem id="menu_intern" name="Interns collaborators" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.intern_action"/>
+        <menuitem id="menu_unemployed" name="Unemployed collaborators" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.unemployed_action"/>
+        <menuitem id="menu_retired" name="Retired collaborators" parent="hr.menu_hr_employee_payroll" sequence="2" action="hr_dr_employee.retired_action"/>
 
         <menuitem id="hr_employee_department_history_menu" action="hr_employee_department_history_action" parent="hr.menu_config_employee" sequence="11"/>
         <menuitem id="hr_employee_company_history_menu" action="hr_employee_company_history_action" parent="hr.menu_config_employee" sequence="12"/>

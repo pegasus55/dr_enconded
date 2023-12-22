@@ -16,7 +16,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Create user when creating collaborator.
-<!--                                        Crear usuario al crear el colaborador.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -34,7 +33,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Validate identification when creating and editing collaborators.
-<!--                                        Validar identificación al crear y editar colaboradores.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -52,7 +50,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Default country when creating the private addresses of the collaborators.
-<!--                                        País predeterminado al crear las direcciones privadas de los colaboradores.-->
                                     </div>
                                 </div>
                                 <div class="content-group">

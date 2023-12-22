@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
 	<record id="view_hr_tenth_form" model="ir.ui.view">
 		<field name="name">view.hr.tenth.form</field>
 		<field name="model">hr.tenth</field>
@@ -16,35 +15,115 @@
 					</div>
 					<group>
 						<group>
-							<field name="type_tenth" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+							<field name="name" readonly="1" force_save="1"/>
+							<field name="employee_requests_id" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}" domain="[('employee_admin', '=', False), ('company_id', '=', company_id), ('state', 'in', ['affiliate'])]"/>
+							<field name="type_tenth" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}"/>
 							<field name="fiscal_year" readonly="1" force_save="1"/>
-							<field name="date" required="0" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
+							<field name="value_sbu" readonly="1" force_save="1" attrs="{'invisible': [('type_tenth', '=', 'thirteenth_salary')]}"/>
+							<field name="value_sbu_previous_fiscal_year" readonly="1" force_save="1" attrs="{'invisible': [('type_tenth', '=', 'thirteenth_salary')]}"/>
+							<field name="percent_increase_sbu" readonly="1" force_save="1" attrs="{'invisible': [('type_tenth', '=', 'thirteenth_salary')]}"/>
+							<field name="date" required="0" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}"/>
 						</group>
 						<group>
-							<field name="date_from" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
-							<field name="date_to" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}"/>
-							<field name="total_payment"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="date_from" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}"/>
+							<field name="date_to" required="1" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}"/>
+							<field name="total_payment_employee"/>
+							<field name="total_payment_beneficiary"/>
+							<field name="company_id" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
 							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 					<notebook>
 						<page name="employee" string="Details">
-							<field name="tenth_line_ids" nolabel="1" attrs="{'readonly': [('state', 'in', ('reviewed','done','cancel'))]}">
-								<tree editable="top" create="false" default_order="employee_id">
+							<field name="tenth_line_ids" nolabel="1" attrs="{'readonly': [('state', 'in', ('reviewed','approved','done','cancel'))]}">
+								<tree create="false" edit="false" delete="false" default_order="employee_id">
+									<field name="type_tenth" invisible="1"/>
 									<field name="employee_id" readonly="1" required="1"/>
 									<field name="worked_days" readonly="1" required="1" sum="Total"/>
 									<field name="amount" readonly="1" sum="Total"/>
 									<field name="provisioned_amount" readonly="1" sum="Total"/>
 									<field name="monthly_amount" readonly="1" sum="Total"/>
-									<field name="judicial_withholding" sum="Total"/>
-									<field name="advance_amount" sum="Total"/>
+									<field name="by_increment_sbu" readonly="1" sum="Total" attrs="{'invisible':[('type_tenth','=','thirteenth_salary')]}"/>
+									<field name="judicial_withholding" readonly="1" sum="Total"/>
+									<field name="retained_judicial_withholding" readonly="1" sum="Total"/>
+									<field name="discounted_judicial_withholding" readonly="1" sum="Total"/>
+									<field name="advance_amount" readonly="1" sum="Total"/>
 									<field name="amount_to_receive" readonly="1" sum="Total"/>
 									<field name="payment_method" readonly="0"/>
 <!--									<field name="move_id" readonly="1"/>-->
 <!--									<button type="object" name="action_view_account_form_lines"-->
 <!--											string="View account provision form lines" icon="fa-search-plus"-->
 <!--											groups="account.group_account_user"/>-->
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+								</tree>
+								<form create="false" edit="false" delete="false">
+									<header>
+										<field name="state" widget="statusbar" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
+									</header>
+									<sheet>
+										<group>
+											<group>
+												<field name="type_tenth" invisible="1"/>
+												<field name="employee_id" readonly="1"/>
+												<field name="employee_state" readonly="1"/>
+												<field name="payment_method_employee" readonly="1"/>
+												<field name="worked_days" readonly="1"/>
+												<field name="amount" readonly="1"/>
+												<field name="provisioned_amount" readonly="1"/>
+												<field name="monthly_amount" readonly="1"/>
+												<field name="by_increment_sbu" readonly="1" force_save="1" attrs="{'invisible':[('type_tenth','=','thirteenth_salary')]}"/>
+											</group>
+											<group>
+												<field name="judicial_withholding" readonly="1"/>
+												<field name="retained_judicial_withholding" readonly="1"/>
+												<field name="discounted_judicial_withholding" readonly="1"/>
+												<field name="advance_amount" readonly="1"/>
+												<field name="amount_to_receive" readonly="1"/>
+												<field name="payment_method" readonly="1"/>
+												<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+												<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+											</group>
+										</group>
+										<notebook>
+											<page string="Judicial Withholding">
+												<field name="judicial_withholding_ids" nolabel="1">
+													<tree create="false" edit="false" delete="false">
+														<field name="origin"/>
+														<field name="retained_judicial_withholding" sum="Total"/>
+														<field name="discounted_judicial_withholding" sum="Total"/>
+														<field name="judicial_withholding_id"/>
+														<field name="family_load_id"/>
+														<field name="partner_id"/>
+														<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+														<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+													</tree>
+												</field>
+											</page>
+											<page string="Judicial withholding summary">
+												<field name="judicial_withholding_summary_ids" nolabel="1">
+													<tree create="false" edit="false" delete="false">
+														<field name="retained_judicial_withholding" sum="Total"/>
+														<field name="discounted_judicial_withholding" sum="Total"/>
+														<field name="partner_id"/>
+														<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+														<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+													</tree>
+												</field>
+											</page>
+										</notebook>
+									</sheet>
+								</form>
+							</field>
+						</page>
+						<page string="Judicial withholding summary">
+							<field name="judicial_withholding_summary_ids" nolabel="1">
+								<tree create="false" edit="false" delete="false">
+									<field name="retained_judicial_withholding" sum="Total"/>
+									<field name="discounted_judicial_withholding" sum="Total"/>
+									<field name="partner_id"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 								</tree>
 							</field>
 						</page>
@@ -86,18 +165,20 @@
 		<field name="model">hr.tenth</field>
 		<field name="arch" type="xml">
 			<tree string="Tenths">
+				<field name="name"/>
 				<field name="type_tenth"/>
 				<field name="fiscal_year"/>
 				<field name="date_from"/>
 				<field name="date_to"/>
-				<field name="total_payment"/>
+				<field name="total_payment_employee"/>
+				<field name="total_payment_beneficiary"/>
 				<field name="state"/>
 				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
 				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
-	<record id="action_tenths_form" model="ir.actions.act_window">
+	<record id="action_tenths" model="ir.actions.act_window">
 		<field name="name">Tenths</field>
 		<field name="res_model">hr.tenth</field>
 		<field name="view_mode">tree,form</field>
@@ -109,33 +190,81 @@
 		</field>
 	</record>
 
+	<record id="view_hr_tenth_line_search" model="ir.ui.view">
+		<field name="name">view.hr.tenth.line.search</field>
+		<field name="model">hr.tenth.line</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="employee_id"/>
+
+				<group expand="0" name="group_by" string="Group By">
+					<filter name="group_tenth_id" string="Tenth" context="{'group_by' : 'tenth_id'}"/>
+					<filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+					<filter name="group_employee_id" string="Collaborator" context="{'group_by' : 'employee_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
 	<record id="view_hr_tenth_line_form" model="ir.ui.view">
 		<field name="name">view.hr.tenth.line.form</field>
 		<field name="model">hr.tenth.line</field>
 		<field name="type">form</field>
 		<field name="arch" type="xml">
-			<form string="Tenth details">
+			<form string="Tenth details" create="false" edit="false" delete="false">
 				<header>
 					<field name="state" widget="statusbar" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
 				</header>
 				<sheet>
 					<group>
 						<group>
-							<field name="employee_id" readonly="1" required="1"/>
-							<field name="worked_days" readonly="1" required="1" sum="Total"/>
-							<field name="amount" readonly="1" sum="Total"/>
-							<field name="provisioned_amount" readonly="1" sum="Total"/>
-							<field name="monthly_amount" readonly="1" sum="Total"/>
-							<field name="judicial_withholding" sum="Total"/>
-							<field name="advance_amount" sum="Total"/>
-							<field name="amount_to_receive" readonly="1" sum="Total"/>
-							<field name="payment_method" readonly="0"/>
-							<field name="move_id" readonly="1"/>
+							<field name="type_tenth" invisible="1"/>
+							<field name="employee_id" readonly="1"/>
+							<field name="employee_state" readonly="1"/>
+							<field name="payment_method_employee" readonly="1"/>
+							<field name="worked_days" readonly="1"/>
+							<field name="amount" readonly="1"/>
+							<field name="provisioned_amount" readonly="1"/>
+							<field name="monthly_amount" readonly="1"/>
+							<field name="by_increment_sbu" readonly="1" force_save="1" attrs="{'invisible':[('type_tenth','=','thirteenth_salary')]}"/>
 						</group>
 						<group>
+							<field name="judicial_withholding" readonly="1"/>
+							<field name="retained_judicial_withholding" readonly="1"/>
+							<field name="discounted_judicial_withholding" readonly="1"/>
+							<field name="advance_amount" readonly="1"/>
+							<field name="amount_to_receive" readonly="1"/>
+							<field name="payment_method" readonly="1"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
-
+					<notebook>
+						<page string="Judicial Withholding">
+							<field name="judicial_withholding_ids" nolabel="1">
+								<tree create="false" edit="false" delete="false">
+									<field name="origin"/>
+									<field name="retained_judicial_withholding" sum="Total"/>
+									<field name="discounted_judicial_withholding" sum="Total"/>
+									<field name="judicial_withholding_id"/>
+									<field name="family_load_id"/>
+									<field name="partner_id"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Judicial withholding summary">
+							<field name="judicial_withholding_summary_ids" nolabel="1">
+								<tree create="false" edit="false" delete="false">
+									<field name="retained_judicial_withholding" sum="Total"/>
+									<field name="discounted_judicial_withholding" sum="Total"/>
+									<field name="partner_id"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
 				</sheet>
 				<div class="oe_chatter">
 					<field name="message_follower_ids"/>
@@ -148,21 +277,29 @@
 		<field name="name">view.hr.tenth.line.list</field>
 		<field name="model">hr.tenth.line</field>
 		<field name="arch" type="xml">
-			<tree string="Tenth details">
+			<tree string="Tenth details" create="false" edit="false" delete="false" default_order="employee_id">
 				<field name="employee_id" readonly="1" required="1"/>
 				<field name="worked_days" readonly="1" required="1" sum="Total"/>
 				<field name="amount" readonly="1" sum="Total"/>
 				<field name="provisioned_amount" readonly="1" sum="Total"/>
 				<field name="monthly_amount" readonly="1" sum="Total"/>
-				<field name="judicial_withholding" sum="Total"/>
-				<field name="advance_amount" sum="Total"/>
+				<field name="by_increment_sbu" readonly="1" sum="Total"/>
+				<field name="judicial_withholding" readonly="1" sum="Total"/>
+				<field name="retained_judicial_withholding" readonly="1" sum="Total"/>
+				<field name="discounted_judicial_withholding" readonly="1" sum="Total"/>
+				<field name="advance_amount" readonly="1" sum="Total"/>
 				<field name="amount_to_receive" readonly="1" sum="Total"/>
 				<field name="payment_method" readonly="0"/>
-				<field name="move_id" readonly="1"/>
+<!--									<field name="move_id" readonly="1"/>-->
+<!--									<button type="object" name="action_view_account_form_lines"-->
+<!--											string="View account provision form lines" icon="fa-search-plus"-->
+<!--											groups="account.group_account_user"/>-->
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
-	<record id="action_tenths_line_form" model="ir.actions.act_window">
+	<record id="action_tenths_line" model="ir.actions.act_window">
 		<field name="name">Tenth details</field>
 		<field name="res_model">hr.tenth.line</field>
 		<field name="view_mode">tree,form</field>
@@ -174,26 +311,44 @@
 		</field>
 	</record>
 
-<!--	<record model="ir.actions.server" id="action_download_csv">-->
-<!--		<field name="name">Generar CSV</field>-->
-<!--		<field name="condition">True</field>-->
-<!--		<field name="type">ir.actions.server</field>-->
-<!--		<field name="model_id" ref="hr_dr_payroll.model_hr_tenth"/>-->
-<!--		<field name="state">code</field>-->
-<!--		<field name="code">-->
-<!--		if records:-->
-<!--		action = records.get_provision_CSV()-->
-<!--		</field>-->
-<!--	</record>-->
-
-<!--	<record model="ir.values" id="action_download_tenths_csv">-->
-<!--		<field name="model_id" ref="hr_dr_payroll.model_hr_tenth"/>-->
-<!--		<field name="name">Generar CSV</field>-->
-<!--		<field name="key">action</field>-->
-<!--		<field name="key2">client_action_multi</field>-->
-<!--		<field name="value" eval="'ir.actions.server,' + str(ref('action_download_csv'))"/>-->
-<!--		<field name="model">hr.tenth</field>-->
-<!--	</record>-->
-
-
+	<record model="ir.actions.act_window" id="hr_tenth_action_notifications_to_process">
+		<field name="name">Notifications to process for tenths</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'hr.tenth'),
+			('user_employee_approve_id', '=',uid),
+			('send', '=',True),
+			('state', '=','pending'),
+			('processed', '=',False)
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">Notifications to process for tenths.
+			</p>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="hr_tenth_action_notifications_all">
+		<field name="name">All notifications for tenths</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'hr.tenth')
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">All notifications for tenths.
+			</p>
+		</field>
+	</record>
 </odoo>

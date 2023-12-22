@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
 	<record id="hr_salary_rule_process_view_form" model="ir.ui.view">
 		<field name="name">hr.salary.rule.process.view.form</field>
 		<field name="model">hr.salary.rule.process</field>
@@ -29,7 +28,6 @@
 			</form>
 		</field>
 	</record>
-
 	<record id="hr_salary_rule_process_view_tree" model='ir.ui.view'>
 		<field name="name">hr.salary.rule.process.view.tree</field>
 		<field name="model">hr.salary.rule.process</field>
@@ -46,7 +44,6 @@
 			</tree>
 		</field>
 	</record>
-
 	<record id="hr_salary_rule_process_view_search" model="ir.ui.view">
 		<field name="name">hr.salary.rule.process.view.search</field>
 		<field name="model">hr.salary.rule.process</field>
@@ -61,9 +58,8 @@
 			</search>
 		</field>
 	</record>
-
 	<record id="action_hr_salary_rule_process" model="ir.actions.act_window">
-		<field name="name">Salary rule by process</field>
+		<field name="name">Salary rules by process</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">hr.salary.rule.process</field>
 		<field name="view_mode">tree,form</field>
@@ -71,5 +67,4 @@
                 "search_default_group_process": 1,
         }</field>
 	</record>
-
 </odoo>

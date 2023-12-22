@@ -2,13 +2,11 @@
 <rdep>
     <numRuc>{{ company.ruc }}</numRuc>
     <anio>{{ company.year }}</anio>
-
 <retRelDep>
 {% for employee in employees %}
 <datRetRelDep>
     <empleado>
         <benGalpg>{{ employee.benGalpg }}</benGalpg>
-        <enfcatastro>{{ employee.enfcatastro }}</enfcatastro>
         <tipIdRet>{{ employee.tipIdRet }}</tipIdRet>
         <idRet>{{ employee.idRet }}</idRet>
         <apellidoTrab>{{ employee.apellidoTrab }}</apellidoTrab>
@@ -41,6 +39,7 @@
     <deducEducartcult>{{ employee.deducEducartcult }}</deducEducartcult>
     <deducAliement>{{ employee.deducAliement }}</deducAliement>
     <deducVestim>{{ employee.deducVestim }}</deducVestim>
+    <deduccionTurismo>{{ employee.deduccionTurismo }}</deduccionTurismo>
     <exoDiscap>{{ employee.exoDiscap }}</exoDiscap>
     <exoTerEd>{{ employee.exoTerEd }}</exoTerEd>
     <basImp>{{ employee.basImp }}</basImp>
@@ -50,6 +49,5 @@
     <valRet>{{ employee.valRet }}</valRet>
 </datRetRelDep>
 {% endfor %}
-
 </retRelDep>
 </rdep>

@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-04 21:24+0000\n"
-"PO-Revision-Date: 2021-04-04 21:24+0000\n"
+"POT-Creation-Date: 2023-11-05 04:00+0000\n"
+"PO-Revision-Date: 2023-11-05 04:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,7 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_needaction
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_needaction
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_needaction
 msgid "Action Needed"
 msgstr ""
 
@@ -25,30 +26,35 @@ msgstr ""
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__active
 #: model:ir.model.fields,field_description:dr_contacts.field_res_country_state__active
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__active
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__active
 msgid "Active"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_ids
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_ids
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_ids
 msgid "Activities"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_exception_decoration
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_exception_decoration
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_state
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_state
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_state
 msgid "Activity State"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_type_icon
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_type_icon
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_type_icon
 msgid "Activity Type Icon"
 msgstr ""
 
@@ -63,7 +69,10 @@ msgid "Administrative divisions of the state."
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_partner.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_partner__interception_type__and
+#, python-format
 msgid "And"
 msgstr ""
 
@@ -78,11 +87,15 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_attachment_count
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_attachment_count
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_partner.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_partner__interception_type__between
+#, python-format
 msgid "Between"
 msgstr ""
 
@@ -136,7 +149,15 @@ msgid "Click to define a new parish."
 msgstr ""
 
 #. module: dr_contacts
+#: model_terms:ir.actions.act_window,help:dr_contacts.res_zone_action
+msgid "Click to define a new zone."
+msgstr ""
+
+#. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_country_state.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_country_state__region__coast
+#, python-format
 msgid "Coast"
 msgstr ""
 
@@ -181,49 +202,56 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__create_uid
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__create_uid
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__create_date
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__create_date
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__display_name
-#: model:ir.model.fields,field_description:dr_contacts.field_res_country_state__display_name
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__display_name
-#: model:ir.model.fields,field_description:dr_contacts.field_res_partner__display_name
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_country_state.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_country_state__region__eastern
+#, python-format
 msgid "Eastern"
+msgstr ""
+
+#. module: dr_contacts
+#: model_terms:ir.ui.view,arch_db:dr_contacts.res_partner_view_form_private_inherit
+#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_partner_form_inherit
+msgid "First street"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_follower_ids
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_follower_ids
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_follower_ids
 msgid "Followers"
-msgstr ""
-
-#. module: dr_contacts
-#: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_channel_ids
-#: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_channel_ids
-msgid "Followers (Channels)"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_partner_ids
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_partner_ids
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__activity_type_icon
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__activity_type_icon
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
@@ -234,36 +262,44 @@ msgid "Group By"
 msgstr ""
 
 #. module: dr_contacts
+#: model:ir.model.fields,field_description:dr_contacts.field_res_city__has_message
+#: model:ir.model.fields,field_description:dr_contacts.field_res_parish__has_message
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__id
-#: model:ir.model.fields,field_description:dr_contacts.field_res_country_state__id
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__id
-#: model:ir.model.fields,field_description:dr_contacts.field_res_partner__id
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__id
 msgid "ID"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_exception_icon
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_exception_icon
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_exception_icon
 msgid "Icon"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__activity_exception_icon
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__activity_exception_icon
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__message_needaction
-#: model:ir.model.fields,help:dr_contacts.field_res_city__message_unread
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__message_needaction
-#: model:ir.model.fields,help:dr_contacts.field_res_parish__message_unread
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__message_needaction
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__message_has_error
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__message_has_error
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
@@ -306,73 +342,93 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_is_follower
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_is_follower
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_is_follower
 msgid "Is Follower"
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_country_state.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_country_state__region__island
+#, python-format
 msgid "Island"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city____last_update
-#: model:ir.model.fields,field_description:dr_contacts.field_res_country_state____last_update
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish____last_update
-#: model:ir.model.fields,field_description:dr_contacts.field_res_partner____last_update
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__write_uid
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__write_uid
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__write_date
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__write_date
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_main_attachment_id
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_main_attachment_id
 msgid "Main Attachment"
-msgstr ""
-
-#. module: dr_contacts
-#: model_terms:ir.ui.view,arch_db:dr_contacts.res_partner_view_form_private_inherit
-#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_partner_form_inherit
-msgid "Main street"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_has_error
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_has_error
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_has_error
 msgid "Message Delivery error"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_ids
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_ids
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_ids
 msgid "Messages"
+msgstr ""
+
+#. module: dr_contacts
+#: model:ir.model.fields,field_description:dr_contacts.field_res_city__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dr_contacts.field_res_parish__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:dr_contacts.selection__res_partner__interception_type__na
+#, python-format
+msgid "N/A"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_date_deadline
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_date_deadline
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_summary
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_summary
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_summary
 msgid "Next Activity Summary"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_type_id
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_type_id
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_type_id
 msgid "Next Activity Type"
 msgstr ""
 
@@ -387,31 +443,29 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_needaction_counter
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_has_error_counter
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__message_needaction_counter
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__message_needaction_counter
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__message_has_error_counter
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__message_has_error_counter
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
-
-#. module: dr_contacts
-#: model:ir.model.fields,help:dr_contacts.field_res_city__message_unread_counter
-#: model:ir.model.fields,help:dr_contacts.field_res_parish__message_unread_counter
-msgid "Number of unread messages"
 msgstr ""
 
 #. module: dr_contacts
@@ -474,15 +528,21 @@ msgid "Res Parish"
 msgstr ""
 
 #. module: dr_contacts
+#: model:ir.model,name:dr_contacts.model_res_zone
+msgid "Res Zone"
+msgstr ""
+
+#. module: dr_contacts
 #: model:ir.model.fields,field_description:dr_contacts.field_res_city__activity_user_id
 #: model:ir.model.fields,field_description:dr_contacts.field_res_parish__activity_user_id
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__activity_user_id
 msgid "Responsible User"
 msgstr ""
 
 #. module: dr_contacts
 #: model_terms:ir.ui.view,arch_db:dr_contacts.res_partner_view_form_private_inherit
 #: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_partner_form_inherit
-msgid "Secondary street"
+msgid "Second street"
 msgstr ""
 
 #. module: dr_contacts
@@ -497,7 +557,10 @@ msgid "Select the state associated to the city."
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_country_state.py:0
 #: model:ir.model.fields.selection,name:dr_contacts.selection__res_country_state__region__sierra
+#, python-format
 msgid "Sierra"
 msgstr ""
 
@@ -514,6 +577,7 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__activity_state
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__activity_state
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__activity_state
 msgid ""
 "Status based on activities\n"
 "Overdue: Due date is already passed\n"
@@ -542,22 +606,12 @@ msgstr ""
 #. module: dr_contacts
 #: model:ir.model.fields,help:dr_contacts.field_res_city__activity_exception_decoration
 #: model:ir.model.fields,help:dr_contacts.field_res_parish__activity_exception_decoration
+#: model:ir.model.fields,help:dr_contacts.field_res_zone__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr ""
 
 #. module: dr_contacts
-#: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_unread
-#: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_unread
-msgid "Unread Messages"
-msgstr ""
-
-#. module: dr_contacts
-#: model:ir.model.fields,field_description:dr_contacts.field_res_city__message_unread_counter
-#: model:ir.model.fields,field_description:dr_contacts.field_res_parish__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr ""
-
-#. module: dr_contacts
+#. odoo-python
 #: code:addons/dr_contacts/models/res_city.py:0
 #, python-format
 msgid ""
@@ -566,19 +620,63 @@ msgid ""
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
 #: code:addons/dr_contacts/models/res_parish.py:0
 #, python-format
 msgid "You cannot delete this parish. There are clients associated with it."
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_zone.py:0
+#, python-format
+msgid "You cannot delete this zone. There are clients associated with it."
+msgstr ""
+
+#. module: dr_contacts
+#. odoo-python
 #: code:addons/dr_contacts/models/res_city.py:0
 #, python-format
 msgid "You cannot duplicate a city."
 msgstr ""
 
 #. module: dr_contacts
+#. odoo-python
 #: code:addons/dr_contacts/models/res_parish.py:0
 #, python-format
 msgid "You cannot duplicate a parish."
+msgstr ""
+
+#. module: dr_contacts
+#. odoo-python
+#: code:addons/dr_contacts/models/res_zone.py:0
+#, python-format
+msgid "You cannot duplicate a zone."
+msgstr ""
+
+#. module: dr_contacts
+#: model:ir.model.fields,field_description:dr_contacts.field_res_partner__zone_id
+#: model:ir.model.fields,field_description:dr_contacts.field_res_users__zone_id
+#: model_terms:ir.ui.view,arch_db:dr_contacts.res_partner_view_form_private_inherit
+#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_partner_form_inherit
+#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_zone_form
+#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_zone_search
+#: model_terms:ir.ui.view,arch_db:dr_contacts.view_res_zone_tree
+msgid "Zone"
+msgstr ""
+
+#. module: dr_contacts
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__code
+msgid "Zone code"
+msgstr ""
+
+#. module: dr_contacts
+#: model:ir.model.fields,field_description:dr_contacts.field_res_zone__name
+msgid "Zone name"
+msgstr ""
+
+#. module: dr_contacts
+#: model:ir.actions.act_window,name:dr_contacts.res_zone_action
+#: model:ir.ui.menu,name:dr_contacts.res_zone_menu
+msgid "Zones"
 msgstr ""

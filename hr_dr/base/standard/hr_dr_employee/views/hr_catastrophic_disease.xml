@@ -43,15 +43,13 @@
             </field>
         </record>
         <record id="hr_catastrophic_disease_action" model="ir.actions.act_window">
-            <field name="name">Catastrophic disease</field>
+            <field name="name">Catastrophic diseases</field>
             <field name="res_model">hr.catastrophic.disease</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_hr_catastrophic_disease_tree"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new catastrophic disease.
-                </p>
-                <p>
                 </p>
             </field>
         </record>

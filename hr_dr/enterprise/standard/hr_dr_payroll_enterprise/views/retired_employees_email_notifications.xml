@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <record id="email_template_confirm_retired_employee_salary" model="mail.template">
             <field name="name">Email template confirm retired employee salary</field>
             <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>

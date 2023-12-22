@@ -18,7 +18,7 @@ msgstr ""
 #. module: hr_dr_department_additional_manager
 #: model_terms:ir.ui.view,arch_db:hr_dr_department_additional_manager.view_department_form_view_inherit
 msgid "Additional Managers"
-msgstr "Administradores Adicionales"
+msgstr "Administradores adicionales"
 
 #. module: hr_dr_department_additional_manager
 #: model:ir.model.fields,field_description:hr_dr_department_additional_manager.field_hr_employee__additional_manager_in

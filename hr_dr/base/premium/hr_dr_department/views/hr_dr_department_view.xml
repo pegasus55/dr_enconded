@@ -11,6 +11,9 @@
                 <xpath expr="//field[@name='parent_id']" position="after">
                     <field name="address_id" context="{'show_address': 1,'default_type':'hr_department_address','default_parent_id':company_id,'default_company_type':'person'}"/>
                 </xpath>
+                <xpath expr="//field[@name='total_employee']" position="attributes">
+                    <attribute name="string">Collaborators</attribute>
+                </xpath>
             </field>
         </record>
         <record model="ir.ui.view" id="view_department_tree_inherit">
@@ -26,6 +29,9 @@
                 </xpath>
                 <xpath expr="//field[@name='display_name']" position="attributes">
                     <attribute name="string">Display name</attribute>
+                </xpath>
+                <xpath expr="//field[@name='total_employee']" position="attributes">
+                    <attribute name="string">Collaborators</attribute>
                 </xpath>
             </field>
         </record>

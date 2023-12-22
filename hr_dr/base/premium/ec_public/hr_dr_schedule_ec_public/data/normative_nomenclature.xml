@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <record model="hr.normative.nomenclature" id="NormativeNomenclatureSchedule1">
             <field name="normative_id" ref = "hr_dr_management_ec_public.Normative1"/>
             <field name="nomenclature_id" ref = "hr_dr_schedule.NomenclatureSchedule1"/>

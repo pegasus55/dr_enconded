@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <record id="email_template_confirm_pay_living_wage" model="mail.template">
             <field name="name">Email template confirm pay living wage request</field>
             <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
@@ -698,138 +698,132 @@
 
         <record id="email_template_confirm_payment_tenth" model="mail.template">
             <field name="name">Email template confirm tenth request</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Tenth request</field>
-            <field name="email_to">{{object.employee_requests_id.work_email or object.employee_requests_id.private_email}}</field>
-            <field name="lang">{{object.user_employee_requests_id.lang}}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Solicitud de pago de décimo</field>
+            <field name="email_to">{{object.employee_requests_id.work_email | object.employee_requests_id.private_email}}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
-                        Your <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> request of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> is being processed.<br/><br/>
+                        Estimado(a) <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
+                        Su solicitud de pago del <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> está siendo procesada.<br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
         </record>
         <record id="email_template_confirm_direct_approve_payment_tenth" model="mail.template">
             <field name="name">Email template confirm direct tenth request</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Registered tenth request</field>
-            <field name="email_to">{{object.employee_requests_id.work_email or object.employee_requests_id.private_email}}</field>
-            <field name="lang">{{object.user_employee_requests_id.lang}}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Solicitud de pago de décimo registrada</field>
+            <field name="email_to">{{object.employee_requests_id.work_email | object.employee_requests_id.private_email}}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
-                        A <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> request of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> was registered for you.<br/><br/>
+                        Estimado(a) <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
+                        Una solicitud de pago del <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> fue registrada para usted.<br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
         </record>
         <record id="email_template_confirm_approve_payment_tenth" model="mail.template">
             <field name="name">Email template confirm approve tenth request</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Tenth request approved</field>
-            <field name="email_to">{{object.employee_requests_id.work_email or object.employee_requests_id.private_email}}</field>
-            <field name="lang">{{object.user_employee_requests_id.lang}}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Solicitud de pago de décimo aprobada</field>
+            <field name="email_to">{{object.employee_requests_id.work_email | object.employee_requests_id.private_email}}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
-                        Your <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> request of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> was approved.<br/><br/>
+                        Estimado(a) <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
+                        Su solicitud de pago del <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> fue aprobada.<br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
         </record>
         <record id="email_template_confirm_reject_payment_tenth" model="mail.template">
             <field name="name">Email template confirm reject tenth request</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Tenth request rejected</field>
-            <field name="email_to">{{object.employee_requests_id.work_email or object.employee_requests_id.private_email}}</field>
-            <field name="lang">{{object.user_employee_requests_id.lang}}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Solicitud de pago de décimo rechazada</field>
+            <field name="email_to">{{object.employee_requests_id.work_email | object.employee_requests_id.private_email}}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
-                        Your <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> request of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> was rejected.<br/><br/>
+                        Estimado(a) <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
+                        Su solicitud de pago del <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> fue rechazada.<br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
         </record>
         <record id="email_template_confirm_cancelled_payment_tenth" model="mail.template">
             <field name="name">Email template confirm cancel tenth request</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Tenth request cancelled</field>
-            <field name="email_to">{{object.employee_requests_id.work_email or object.employee_requests_id.private_email}}</field>
-            <field name="lang">{{object.user_employee_requests_id.lang}}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Solicitud de pago de décimo cancelada</field>
+            <field name="email_to">{{object.employee_requests_id.work_email | object.employee_requests_id.private_email}}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
-                        Your <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> request of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> was cancelled.<br/><br/>
+                        Estimado(a) <span style="font-weight:bold;" t-out="object.employee_requests_id.name"/>,<br/><br/>
+                        Su solicitud de pago del <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/> fue cancelada.<br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
         </record>
         <record id="email_template_tenths_notify_treasury" model="mail.template">
             <field name="name">Email template tenth notify treasury</field>
-            <field name="email_from">"{{object.employee_requests_id.company_id.name}}" &lt;{{object.employee_requests_id.company_id.email or user.email}}&gt;</field>
-            <field name="subject">Cash management (Payment of tenths)</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Cash management (Pago de décimo)</field>
             <field name="email_to"/>
-            <field name="lang">${object.user_employee_id.lang}</field>
             <field name="model_id" ref="model_hr_tenth"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear(s),<br/><br/>
-                        Please your approval of the file regarding the <span style="font-weight:bold;" t-out="ctx['type_tenth']"/> of the period from <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> to <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/>.
+                        Estimado(s),<br/><br/>
+                        Por favor su aprobación del pago referente al <span style="font-weight:bold;" t-out="ctx.get('type_tenth')"/> del período desde <span style="font-weight:bold;" t-out="object.date_from.strftime('%d/%m/%Y')"/> hasta <span style="font-weight:bold;" t-out="object.date_to.strftime('%d/%m/%Y')"/>.
                     </p>
-                    <p>Sincerely,</p>
-                    <p> <t t-out="object.employee_requests_id.company_id.name or ''"/> | <t t-out="ctx['department'] or ''"/>.</p>
-                    <img t-attf-src="/logo.png?company={{object.employee_requests_id.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.employee_requests_id.company_id.name"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out="ctx['department'] or ''"/>.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>

@@ -1,6 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_rxr_contacts_res_city_u,rxr_contacts.res_city,model_res_city,base.group_user,1,0,0,0
-access_rxr_contacts_res_city_m,rxr_contacts.res_city,model_res_city,base.group_erp_manager,1,1,1,1
+access_dr_contacts_res_city_u,dr_contacts.res_city,model_res_city,base.group_user,1,0,0,0
+access_dr_contacts_res_city_m,dr_contacts.res_city,model_res_city,base.group_erp_manager,1,1,1,1
 
-access_rxr_contacts_res_parish_u,rxr_contacts.res_parish,model_res_parish,base.group_user,1,0,0,0
-access_rxr_contacts_res_parish_m,rxr_contacts.res_parish,model_res_parish,base.group_erp_manager,1,1,1,1
+access_dr_contacts_res_parish_u,dr_contacts.res_parish,model_res_parish,base.group_user,1,0,0,0
+access_dr_contacts_res_parish_m,dr_contacts.res_parish,model_res_parish,base.group_erp_manager,1,1,1,1
+
+access_dr_contacts_res_zone_u,dr_contacts.res_zone,model_res_zone,base.group_user,1,0,0,0
+access_dr_contacts_res_zone_m,dr_contacts.res_zone,model_res_zone,base.group_erp_manager,1,1,1,1

@@ -46,15 +46,13 @@
             </field>
         </record>
         <record id="hr_profession_action" model="ir.actions.act_window">
-            <field name="name">Profession</field>
+            <field name="name">Professions</field>
             <field name="res_model">hr.profession</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="hr_profession_view_tree"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new profession.
-                </p>
-                <p>
                 </p>
             </field>
         </record>

@@ -2,7 +2,7 @@
 {
     'name': "Start system",
 
-    'version': '14.0.1.0.0',
+    'version': '1.0',
     'summary': """Module to control the start of the system.
         """,
     'description': """Module to control the start of the system.

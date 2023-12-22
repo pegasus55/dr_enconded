@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <!--Salario digno-->
         <record id="hr_salary_rule_process_SD_01" model="hr.salary.rule.process">
             <field name="code">SD-S</field>
@@ -92,7 +92,7 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="salary_rule_code">N/A</field>
         </record>
         <record id="hr_salary_rule_process_RDEP_04" model="hr.salary.rule.process">
-            <field name="code">RDEP-IGOE</field>
+            <field name="code">RDEP-IGGOE</field>
             <field name="process">RDEP</field>
             <field name="subprocess">Ingresos gravados generados con otros empleadores.</field>
             <field name="description"/>
@@ -100,7 +100,7 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="salary_rule_code">N/A</field>
         </record>
         <record id="hr_salary_rule_process_RDEP_05" model="hr.salary.rule.process">
-            <field name="code">RDEP-IRAPEE</field>
+            <field name="code">RDEP-IRAPEE-1</field>
             <field name="process">RDEP</field>
             <field name="subprocess">Impuesto a la Renta asumido por este empleador.</field>
             <field name="description"/>
@@ -140,7 +140,7 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="salary_rule_code">N/A</field>
         </record>
         <record id="hr_salary_rule_process_RDEP_10" model="hr.salary.rule.process">
-            <field name="code">RDEP-OING</field>
+            <field name="code">RDEP-OIRDNCRG</field>
             <field name="process">RDEP</field>
             <field name="subprocess">Otros ingresos en relación de dependencia que no constituyen renta gravada.</field>
             <field name="description"/>
@@ -150,10 +150,146 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
         <record id="hr_salary_rule_process_RDEP_11" model="hr.salary.rule.process">
             <field name="code">RDEP-IGCEE</field>
             <field name="process">RDEP</field>
-            <field name="subprocess">Ingresos gravados con este empleador (informativo).</field>
+            <field name="subprocess">Ingresos gravados con el empleador.</field>
             <field name="description"/>
             <field name="mode">by_rules</field>
             <field name="salary_rule_code">SUBT_INGRESOS_GBS</field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_12" model="hr.salary.rule.process">
+            <field name="code">RDEP-APIESSEE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Aporte personal al IESS con este empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_13" model="hr.salary.rule.process">
+            <field name="code">RDEP-APIESSOE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Aporte personal al IESS con otros empleadores.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_14" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPVI</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por vivienda.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_15" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPSA</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por salud.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_16" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPEAC</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por educación arte y cultura.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_17" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPAL</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por alimentación.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_18" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPVE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por vestimenta.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_19" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPTU</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por turismo.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_20" model="hr.salary.rule.process">
+            <field name="code">RDEP-ED</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Exoneración por discapacidad.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_21" model="hr.salary.rule.process">
+            <field name="code">RDEP-ETE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Exoneración por tercera edad.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_22" model="hr.salary.rule.process">
+            <field name="code">RDEP-BIG</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Base imponible gravada.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_23" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRC</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Impuesto a la Renta causado.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_24" model="hr.salary.rule.process">
+            <field name="code">RDEP-RGP</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Rebaja por gastos personales.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_25" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRDRGP</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Impuesto a la renta despues de la rebaja de gastos personales.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_26" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRRAOE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta retenido y asumido por otros empleadores.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_27" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRAPEE-2</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta asumido por este empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_28" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRRT</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta retenido al trabajador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
         </record>
         <!--RDEP-->
 
@@ -175,6 +311,14 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL,PROV_DCUARTO_ACUMULADO</field>
         </record>
         <record id="hr_salary_rule_process_U_03" model="hr.salary.rule.process">
+            <field name="code">U-S</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Salario</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SALARIO_NOMINAL</field>
+        </record>
+        <record id="hr_salary_rule_process_U_04" model="hr.salary.rule.process">
             <field name="code">U-FR</field>
             <field name="process">Utilidades</field>
             <field name="subprocess">Fondos de reserva</field>
@@ -182,7 +326,31 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="mode">by_rules</field>
             <field name="salary_rule_code">FONDO_RESERVA_MENSUAL,PROV_FOND_RESERV_ACUMULADO</field>
         </record>
-        <record id="hr_salary_rule_process_U_04" model="hr.salary.rule.process">
+        <record id="hr_salary_rule_process_U_05" model="hr.salary.rule.process">
+            <field name="code">U-C</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Comisiones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">COMISIONES</field>
+        </record>
+        <record id="hr_salary_rule_process_U_06" model="hr.salary.rule.process">
+            <field name="code">U-BAE</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Beneficios adicionales en efectivo</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">BONIFICACIONES_POR_CUMPLIMIENTO,BONOS,BONO_DE_VENTAS,BONO_VARIABLE_RENTABILIDAD,OTROS_INGRESOS_APORTABLES</field>
+        </record>
+        <record id="hr_salary_rule_process_U_07" model="hr.salary.rule.process">
+            <field name="code">U-SG</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Sobresueldo / Gratificaciones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+        </record>
+        <record id="hr_salary_rule_process_U_08" model="hr.salary.rule.process">
             <field name="code">U-IGBS</field>
             <field name="process">Utilidades</field>
             <field name="subprocess">Ingresos que generan beneficios sociales</field>
@@ -191,21 +359,13 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="category_code">INGRESOS</field>
             <field name="salary_rule_code_excluded">SALARIO_NOMINAL</field>
         </record>
-        <record id="hr_salary_rule_process_U_05" model="hr.salary.rule.process">
+        <record id="hr_salary_rule_process_U_09" model="hr.salary.rule.process">
             <field name="code">U-INGBS</field>
             <field name="process">Utilidades</field>
             <field name="subprocess">Ingresos que no generan beneficios sociales</field>
             <field name="description"/>
             <field name="mode">by_categories</field>
             <field name="category_code">INGRESOS_NGBS</field>
-        </record>
-        <record id="hr_salary_rule_process_U_06" model="hr.salary.rule.process">
-            <field name="code">U-S</field>
-            <field name="process">Utilidades</field>
-            <field name="subprocess">Salario</field>
-            <field name="description"/>
-            <field name="mode">by_rules</field>
-            <field name="salary_rule_code">SALARIO_NOMINAL</field>
         </record>
         <!--Utilidades-->
 
@@ -292,30 +452,6 @@ Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
             <field name="description"/>
             <field name="mode">by_rules</field>
             <field name="salary_rule_code">SALARIO_NOMINAL</field>
-        </record>
-        <record id="hr_salary_rule_process_IT_02" model="hr.salary.rule.process">
-            <field name="code">IT-FR</field>
-            <field name="process">Impuesto a la renta</field>
-            <field name="subprocess">Fondos de reserva</field>
-            <field name="description"/>
-            <field name="mode">by_rules</field>
-            <field name="salary_rule_code">FONDO_RESERVA_MENSUAL,PROV_FOND_RESERV_ACUMULADO</field>
-        </record>
-        <record id="hr_salary_rule_process_IT_03" model="hr.salary.rule.process">
-            <field name="code">IT-D13</field>
-            <field name="process">Impuesto a la renta</field>
-            <field name="subprocess">Décimo tercer sueldo</field>
-            <field name="description"/>
-            <field name="mode">by_rules</field>
-            <field name="salary_rule_code">DECIMO_TERCERO_MENSUAL,PROV_DTERCERO_ACUMULADO</field>
-        </record>
-        <record id="hr_salary_rule_process_IT_04" model="hr.salary.rule.process">
-            <field name="code">IT-D14</field>
-            <field name="process">Impuesto a la renta</field>
-            <field name="subprocess">Décimo cuarto sueldo</field>
-            <field name="description"/>
-            <field name="mode">by_rules</field>
-            <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL,PROV_DCUARTO_ACUMULADO</field>
         </record>
         <record id="hr_salary_rule_process_IT_05" model="hr.salary.rule.process">
             <field name="code">IT-IESS-P</field>

@@ -10,12 +10,17 @@
                             <group>
                                 <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
                                 <field name="identification" attrs="{'readonly':[('state','=',False)]}"/>
-                                <field name="employee_id" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"/>
+                                <field name="employee_id" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"
+                                    domain="[
+                                       ('company_id','=',company_id),
+                                       ('state','in',['affiliate', 'temporary', 'intern']),
+                                       ('active','=',True),
+                                       ('employee_admin','=',False)]"/>
                             </group>
                             <group>
                                 <field name="amount" attrs="{'readonly':[('state','=',False)]}"/>
-                                <field name="company_id" groups="base.group_multi_company" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
-                                <field name="state" invisible="1"/>
+                                <field name="company_id" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
+                                <field name="state" optional="hide"/>
                             </group>
                         </group>
                     </sheet>
@@ -33,10 +38,15 @@
             <field name="arch" type="xml">
                 <tree sample="1" editable="top" decoration-muted="state == False" decoration-info="state == True">
                     <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
-                    <field name="employee_id" widget="many2one_avatar_employee" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"/>
+                    <field name="employee_id" widget="many2one_avatar_employee" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"
+                        domain="[
+                           ('company_id','=',company_id),
+                           ('state','in',['affiliate', 'temporary', 'intern']),
+                           ('active','=',True),
+                           ('employee_admin','=',False)]"/>
                     <field name="amount" widget='monetary' attrs="{'readonly':[('state','=',False)]}"/>
-                    <field name="company_id" groups="base.group_multi_company" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
-                    <field name="state" invisible="1"/>
+                    <field name="company_id" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>
+                    <field name="state" optional="hide"/>
                 </tree>
             </field>
         </record>
@@ -57,11 +67,13 @@
             </field>
         </record>
 
-        <act_window id="hr_input_action"
-            name="Input"
-            res_model="hr.input"
-            view_mode="tree,form"
-            />
+        <act_window id="hr_input_action" name="Inputs" res_model="hr.input" view_mode="tree,form"/>
+
+        <record model="ir.actions.act_window" id="hr_processed_inputs_action">
+            <field name="name">Processed inputs</field>
+            <field name="res_model">hr.input</field>
+            <field name="domain">[('state','=','processed')]</field>
+        </record>
 
     </data>
 </odoo>

@@ -1,7 +1,7 @@
 <odoo>
     <data>
         <menuitem id="menu_hr_department" name="Departments" sequence="80" web_icon="hr_dr_department,static/description/icon.png"
-                  groups="hr.group_hr_manager,hr.group_hr_user,base.group_user"/>
+            groups="hr.group_hr_manager,hr.group_hr_user,base.group_user"/>
 
         <menuitem
             action="hr.hr_department_tree_action"
@@ -19,13 +19,12 @@
         </record>
 <!--        Quitar los menú de departamentos del módulo de colaboradores.-->
 
-
         <menuitem
-                id="menu_hr_department_configuration"
-                name="Configuration"
-                parent="menu_hr_department"
-                groups="hr.group_hr_manager"
-                sequence="100"/>
+            id="menu_hr_department_configuration"
+            name="Configuration"
+            parent="menu_hr_department"
+            groups="hr.group_hr_manager"
+            sequence="100"/>
         <record id="department_config_settings_action" model="ir.actions.act_window">
             <field name="name">Settings</field>
             <field name="type">ir.actions.act_window</field>
@@ -35,10 +34,10 @@
             <field name="context">{'module': 'hr_dr_department'}</field>
         </record>
         <menuitem id="menu_hr_department_configuration_settings"
-                  name="Settings"
-                  parent="menu_hr_department_configuration"
-                  sequence="10"
-                  action="department_config_settings_action"
-                  groups="hr.group_hr_manager"/>
+            name="Settings"
+            parent="menu_hr_department_configuration"
+            sequence="10"
+            action="department_config_settings_action"
+            groups="hr.group_hr_manager"/>
     </data>
 </odoo>

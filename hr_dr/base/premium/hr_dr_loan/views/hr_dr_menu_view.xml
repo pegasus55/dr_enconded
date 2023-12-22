@@ -1,6 +1,5 @@
 <odoo>
     <data>
-
         <menuitem name="Loans" id="menu_hr_loans_root" web_icon="hr_dr_loan,static/description/icon.png" sequence="77"/>
 
             <menuitem name="Requests" id="menu_base_hr_loan_request" parent = "menu_hr_loans_root" groups="hr_dr_loan.hr_dr_loan_group_employee" sequence="10"/>

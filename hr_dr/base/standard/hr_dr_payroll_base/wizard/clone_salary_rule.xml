@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="clone_salary_rule_form" model="ir.ui.view">
+    	<field name="name">clone.salary.rule.form</field>
+        <field name="model">clone.salary.rule</field>
+        <field name="arch" type="xml">
+        	<form string="Clone salary rules">
+				<sheet>
+					<group>
+						<group name="column_1">
+						</group>
+						<group name="column_2">
+						</group>
+					</group>
+					<footer>
+						<button name="action_clone_salary_rule" string="Clone" type="object" class="oe_highlight"/>
+						<button string="Cancel" special="cancel"/>
+					</footer>
+				</sheet>
+        	</form>
+    	</field>
+    </record>
+    
+     <record id="action_clone_salary_rule" model="ir.actions.act_window">
+		<field name="name">Clone salary rules</field>
+		<field name="res_model">clone.salary.rule</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="clone_salary_rule_form"/>
+		<field name="target">new</field>
+	</record>
+</odoo>

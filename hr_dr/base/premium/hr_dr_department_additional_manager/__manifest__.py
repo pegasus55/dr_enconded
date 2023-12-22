@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Additional managers by department",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Allows you to configure additional managers for each department.
     """,

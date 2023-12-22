@@ -53,11 +53,11 @@
                 </xpath>
 
                 <xpath expr="//button[last()]" position="after">
-                    <button string="Create/Update vacation period" type="object" name="action_create_update_vacation_period" states="affiliate,temporal,passant"/>
-                    <button name="%(hr_dr_vacations.action_register_vacation_initial_balance)d" string="Register vacation initial balance" type="action" states="affiliate,temporal,passant"/>
+                    <button string="Create/Update vacation period" type="object" name="action_create_update_vacation_period" states="affiliate,temporal,intern"/>
+                    <button name="%(hr_dr_vacations.action_register_vacation_initial_balance)d" string="Register vacation initial balance" type="action" states="affiliate,temporal,intern"/>
                 </xpath>
 
-                <xpath expr="//notebook//page[@name='judicial_withholding']" position="after">
+                <xpath expr="//notebook//page[@name='family_load']" position="after">
                     <page name = "vacations" string="Vacations">
                         <group>
                             <group string="Previous periods">

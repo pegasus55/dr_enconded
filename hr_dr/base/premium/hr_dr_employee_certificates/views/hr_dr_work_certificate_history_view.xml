@@ -1,6 +1,5 @@
 <odoo>
     <data>
-        <!--hr.work.certificate.history-->
         <record model="ir.actions.act_window" id="work_certificate_history_list_action">
             <field name="name">Work certificate history</field>
             <field name="res_model">hr.work.certificate.history</field>
@@ -44,8 +43,6 @@
                 </form>
             </field>
         </record>
-
         <menuitem id="menu_work_certificate_history" name="Work certificate history" parent="hr.menu_config_employee" action="work_certificate_history_list_action" groups="hr.group_hr_manager" sequence="16"/>
-        <!--hr.work.certificate.history-->
   </data>
 </odoo>

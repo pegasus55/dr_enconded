@@ -65,8 +65,6 @@
                 <p class="oe_view_nocontent_create">
                     Click to define a new backup for collaborator.
                 </p>
-                <p>
-                </p>
             </field>
         </record>
     </data>

@@ -16,7 +16,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Days in advance for notification of the end of the trial period.
-<!--                                        Días de anticipación para notificación de fin de período de prueba.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -33,7 +32,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         List of administrators who will receive the notification of the end of the trial period.
-<!--                                        Lista de administradores que recibirán la notificación de fin de período de prueba. -->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -41,6 +39,7 @@
                                         <field name="contract_administrators_ids" class="o_light_label">
                                             <tree>
                                                 <field name="name" string="Collaborator name"/>
+                                                <field name="department_id"/>
                                                 <field name="job_id"/>
                                             </tree>
                                         </field>

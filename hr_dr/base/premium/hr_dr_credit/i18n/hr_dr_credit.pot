@@ -1,0 +1,1638 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dr_credit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-04 03:45+0000\n"
+"PO-Revision-Date: 2023-11-04 03:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dr_credit
+#: model:ir.actions.report,print_report_name:hr_dr_credit.action_discount_authorization_ec_report
+msgid "'Discount authorization %s' % (object.employee_requests_id.name)"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.report,print_report_name:hr_dr_credit.action_employee_credit_request_report
+msgid "'Employee credit request %s' % (object.employee_requests_id.name)"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__10
+msgid "10"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__11
+msgid "11"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__12
+msgid "12"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__13
+msgid "13"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__14
+msgid "14"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__15
+msgid "15"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__16
+msgid "16"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__17
+msgid "17"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__18
+msgid "18"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__19
+msgid "19"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__20
+msgid "20"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__21
+msgid "21"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__22
+msgid "22"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__23
+msgid "23"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__24
+msgid "24"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__25
+msgid "25"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__26
+msgid "26"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__27
+msgid "27"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__28
+msgid "28"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__29
+msgid "29"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__30
+msgid "30"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__31
+msgid "31"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__32
+msgid "32"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__33
+msgid "33"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__34
+msgid "34"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__35
+msgid "35"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__installment__36
+msgid "36"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid ""
+"<br/>\n"
+"              Colaborador"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid ""
+"<br/>\n"
+"            <span>AUTORIZACIÓN DE DESCUENTO POR ROL DE PAGOS Y LIQUIDACIÓN DE HABERES</span><br/>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid ""
+"<br/>\n"
+"            <span>FORMULARIO DE SOLICITUD DE CRÉDITO DIRECTO</span><br/>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,body_html:hr_dr_credit.email_template_confirm_employee_credit_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(a) <span style=\"font-weight:bold;\" t-out=\"object.employee_requests_id.name\"></span>,<br><br>\n"
+"                        Su solicitud de crédito está siendo procesada.<br><br>\n"
+"                        <strong>Datos de la solicitud</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Código:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.create_date\">\n"
+"                            <strong>Fecha de la solicitud:</strong> <span t-out=\"object.create_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.date_confirmation\">\n"
+"                            <strong>Fecha de confirmación:</strong> <span t-out=\"object.date_confirmation.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.payment_date\">\n"
+"                            <strong>Fecha inicial de pago:</strong> <span t-out=\"object.payment_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.credit_amount\">\n"
+"                            <strong>Valor:</strong> <span t-out=\"object.currency_id.symbol\"></span> <span t-out=\"object.credit_amount\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.installment\">\n"
+"                            <strong>Cantidad de cuotas:</strong> <span t-out=\"object.installment\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.commentary\">\n"
+"                            <strong>Comentario:</strong> <span t-out=\"object.commentary\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"20%\" style=\"background-color: white;\">Cuota</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Fecha</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Valor</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"object.credit_lines\" t-as=\"line\">\n"
+"                            <td><span t-out=\"line.installment\"></span></td>\n"
+"                            <td><span t-out=\"line.date.strftime('%d/%m/%Y')\"></span></td>\n"
+"                            <td><span t-out=\"line.currency_id.symbol\"></span><span t-out=\"line.amount\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br>\n"
+"                    <p> Para ver su solicitud haga click\n"
+"                        <a t-attf-href=\"{{ object.env['ir.config_parameter'].sudo().get_param('web.base.url') }}/web#id={{ object.id }}&amp;model=hr.credit&amp;view_type=form&amp;menu_id={{ object.env.ref('hr_dr_credit.menu_hr_employee_credit_root').id }}\">\n"
+"                            <strong>aquí</strong>\n"
+"                        </a>.\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,body_html:hr_dr_credit.email_template_confirm_approve_employee_credit_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(a) <span style=\"font-weight:bold;\" t-out=\"object.employee_requests_id.name\"></span>,<br><br>\n"
+"                        Su solicitud de crédito fue aprobada.<br><br>\n"
+"                        <strong>Datos de la solicitud</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Código:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.create_date\">\n"
+"                            <strong>Fecha de la solicitud:</strong> <span t-out=\"object.create_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.date_confirmation\">\n"
+"                            <strong>Fecha de confirmación:</strong> <span t-out=\"object.date_confirmation.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.payment_date\">\n"
+"                            <strong>Fecha inicial de pago:</strong> <span t-out=\"object.payment_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.credit_amount\">\n"
+"                            <strong>Valor:</strong> <span t-out=\"object.currency_id.symbol\"></span> <span t-out=\"object.credit_amount\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.installment\">\n"
+"                            <strong>Cantidad de cuotas:</strong> <span t-out=\"object.installment\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.commentary\">\n"
+"                            <strong>Comentario:</strong> <span t-out=\"object.commentary\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"20%\" style=\"background-color: white;\">Cuota</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Fecha</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Valor</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"object.credit_lines\" t-as=\"line\">\n"
+"                            <td><span t-out=\"line.installment\"></span></td>\n"
+"                            <td><span t-out=\"line.date.strftime('%d/%m/%Y')\"></span></td>\n"
+"                            <td><span t-out=\"line.currency_id.symbol\"></span><span t-out=\"line.amount\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br>\n"
+"                    <p> Para ver su solicitud haga click\n"
+"                        <a t-attf-href=\"{{ object.env['ir.config_parameter'].sudo().get_param('web.base.url') }}/web#id={{ object.id }}&amp;model=hr.credit&amp;view_type=form&amp;menu_id={{ object.env.ref('hr_dr_credit.menu_hr_employee_credit_root').id }}\">\n"
+"                            <strong>aquí</strong>\n"
+"                        </a>.\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,body_html:hr_dr_credit.email_template_confirm_cancel_employee_credit_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(a) <span style=\"font-weight:bold;\" t-out=\"object.employee_requests_id.name\"></span>,<br><br>\n"
+"                        Su solicitud de crédito fue cancelada.<br><br>\n"
+"                        <strong>Datos de la solicitud</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Código:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.create_date\">\n"
+"                            <strong>Fecha de la solicitud:</strong> <span t-out=\"object.create_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.date_confirmation\">\n"
+"                            <strong>Fecha de confirmación:</strong> <span t-out=\"object.date_confirmation.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.payment_date\">\n"
+"                            <strong>Fecha inicial de pago:</strong> <span t-out=\"object.payment_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.credit_amount\">\n"
+"                            <strong>Valor:</strong> <span t-out=\"object.currency_id.symbol\"></span> <span t-out=\"object.credit_amount\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.installment\">\n"
+"                            <strong>Cantidad de cuotas:</strong> <span t-out=\"object.installment\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.commentary\">\n"
+"                            <strong>Comentario:</strong> <span t-out=\"object.commentary\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"20%\" style=\"background-color: white;\">Cuota</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Fecha</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Valor</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"object.credit_lines\" t-as=\"line\">\n"
+"                            <td><span t-out=\"line.installment\"></span></td>\n"
+"                            <td><span t-out=\"line.date.strftime('%d/%m/%Y')\"></span></td>\n"
+"                            <td><span t-out=\"line.currency_id.symbol\"></span><span t-out=\"line.amount\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br>\n"
+"                    <p> Para ver su solicitud haga click\n"
+"                        <a t-attf-href=\"{{ object.env['ir.config_parameter'].sudo().get_param('web.base.url') }}/web#id={{ object.id }}&amp;model=hr.credit&amp;view_type=form&amp;menu_id={{ object.env.ref('hr_dr_credit.menu_hr_employee_credit_root').id }}\">\n"
+"                            <strong>aquí</strong>\n"
+"                        </a>.\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,body_html:hr_dr_credit.email_template_confirm_reject_employee_credit_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(a) <span style=\"font-weight:bold;\" t-out=\"object.employee_requests_id.name\"></span>,<br><br>\n"
+"                        Su solicitud de crédito fue rechazada.<br><br>\n"
+"                        <t t-if=\"object.reason_reject\">\n"
+"                            <strong>Motivo:</strong> <span t-out=\"object.reason_reject\"></span>\n"
+"                            <br><br>\n"
+"                        </t>\n"
+"                        <strong>Datos de la solicitud</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Código:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.create_date\">\n"
+"                            <strong>Fecha de la solicitud:</strong> <span t-out=\"object.create_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.date_confirmation\">\n"
+"                            <strong>Fecha de confirmación:</strong> <span t-out=\"object.date_confirmation.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.payment_date\">\n"
+"                            <strong>Fecha inicial de pago:</strong> <span t-out=\"object.payment_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.credit_amount\">\n"
+"                            <strong>Valor:</strong> <span t-out=\"object.currency_id.symbol\"></span> <span t-out=\"object.credit_amount\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.installment\">\n"
+"                            <strong>Cantidad de cuotas:</strong> <span t-out=\"object.installment\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.commentary\">\n"
+"                            <strong>Comentario:</strong> <span t-out=\"object.commentary\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"20%\" style=\"background-color: white;\">Cuota</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Fecha</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Valor</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"object.credit_lines\" t-as=\"line\">\n"
+"                            <td><span t-out=\"line.installment\"></span></td>\n"
+"                            <td><span t-out=\"line.date.strftime('%d/%m/%Y')\"></span></td>\n"
+"                            <td><span t-out=\"line.currency_id.symbol\"></span><span t-out=\"line.amount\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br>\n"
+"                    <p> Para ver su solicitud haga click\n"
+"                        <a t-attf-href=\"{{ object.env['ir.config_parameter'].sudo().get_param('web.base.url') }}/web#id={{ object.id }}&amp;model=hr.credit&amp;view_type=form&amp;menu_id={{ object.env.ref('hr_dr_credit.menu_hr_employee_credit_root').id }}\">\n"
+"                            <strong>aquí</strong>\n"
+"                        </a>.\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,body_html:hr_dr_credit.email_template_confirm_direct_approve_credit_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(a) <span style=\"font-weight:bold;\" t-out=\"object.employee_requests_id.name\"></span>,<br><br>\n"
+"                        Una solicitud de crédito fue registrada para usted.<br><br>\n"
+"                        <strong>Datos de la solicitud</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Código:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.create_date\">\n"
+"                            <strong>Fecha de la solicitud:</strong> <span t-out=\"object.create_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.date_confirmation\">\n"
+"                            <strong>Fecha de confirmación:</strong> <span t-out=\"object.date_confirmation.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.payment_date\">\n"
+"                            <strong>Fecha inicial de pago:</strong> <span t-out=\"object.payment_date.strftime('%d/%m/%Y')\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.credit_amount\">\n"
+"                            <strong>Valor:</strong> <span t-out=\"object.currency_id.symbol\"></span> <span t-out=\"object.credit_amount\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.installment\">\n"
+"                            <strong>Cantidad de cuotas:</strong> <span t-out=\"object.installment\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.commentary\">\n"
+"                            <strong>Comentario:</strong> <span t-out=\"object.commentary\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"20%\" style=\"background-color: white;\">Cuota</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Fecha</th>\n"
+"                            <th width=\"40%\" style=\"background-color: white;\">Valor</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"object.credit_lines\" t-as=\"line\">\n"
+"                            <td><span t-out=\"line.installment\"></span></td>\n"
+"                            <td><span t-out=\"line.date.strftime('%d/%m/%Y')\"></span></td>\n"
+"                            <td><span t-out=\"line.currency_id.symbol\"></span><span t-out=\"line.amount\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br>\n"
+"                    <p> Para ver su solicitud haga click\n"
+"                        <a t-attf-href=\"{{ object.env['ir.config_parameter'].sudo().get_param('web.base.url') }}/web#id={{ object.id }}&amp;model=hr.credit&amp;view_type=form&amp;menu_id={{ object.env.ref('hr_dr_credit.menu_hr_employee_credit_root').id }}\">\n"
+"                            <strong>aquí</strong>\n"
+"                        </a>.\n"
+"                    </p>\n"
+"                    <br>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span class=\"small\">DETALLE DE CUOTAS</span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "<span>Autorizado por: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Cantidad de cuotas: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Cantidad solicitada: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Cargo: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Colaborador: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Departamento: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "<span>Dirección: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid ""
+"<span>Estado de la solicitud: </span>\n"
+"              <span class=\"pl-3 text-muted flex-grow-1\">APROBADA</span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Fecha de la solicitud: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Fecha inicial de pago: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "<span>Fecha: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid ""
+"<span>Firma del colaborador: </span>\n"
+"              <span class=\"pl-3 text-muted flex-grow-1\">______________________________</span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "<span>Identificación: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "<span>Motivo: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "<span>Teléfono: </span>"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__active
+msgid "Active"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:res.groups,name:hr_dr_credit.hr_dr_credit_group_manager
+msgid "Administrador"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__administrator
+msgid "Administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_all_credit_details
+#: model:ir.ui.menu,name:hr_dr_credit.menu_all_employee_credit_request
+#: model:ir.ui.menu,name:hr_dr_credit.menu_all_employee_credit_request_for_approve
+msgid "All"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.all_credit_details_action
+msgid "All credit request details"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.all_credit_details_action
+msgid "All credit request details."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.all_credit_request_action
+msgid "All credit requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.all_credit_request_action
+msgid "All credit requests."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__all_levels_bd
+msgid "All levels based on department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__all_levels_bd_and_administrator
+msgid "All levels based on department and administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.credit_request_action_notifications_all
+msgid "All notifications for credit requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.credit_request_action_notifications_all
+msgid "All notifications for credit requests."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credit_payroll_to_analyze__all_payroll
+msgid "All payroll"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__amount
+msgid "Amount"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__approval_date
+msgid "Approval date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Are you sure you want to cancel this credit request?"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Are you sure you want to confirm this credit request?"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Are you sure you want to register this credit request?"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Are you sure you want to transfer this credit request to payroll?"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__balance_amount
+msgid "Balance amount"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Cancel request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Cancellation"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__date_cancellation
+msgid "Cancellation date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__user_cancellation
+msgid "Cancellation user"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:res.groups,name:hr_dr_credit.hr_dr_credit_group_employee
+msgid "Colaborador"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_search_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_search_view
+msgid "Collaborator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__commentary
+msgid "Commentary"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__company_id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Compute installment"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model,name:hr_dr_credit.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_employee_credit_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Confirm request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Confirmation"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__date_confirmation
+msgid "Confirmation date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__user_confirmation
+msgid "Confirmation user"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__consider
+msgid "Consider"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__contract_id
+msgid "Contract"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__create_uid
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__create_date
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__credit_id
+#: model:ir.module.category,description:hr_dr_credit.hr_dr_credit
+#: model:ir.module.category,name:hr_dr_credit.hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_search_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Credit"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__credit_amount
+msgid "Credit amount"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_employee__credit_count
+msgid "Credit count"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model,name:hr_dr_credit.model_hr_credit_line
+msgid "Credit detail"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__credit_lines
+msgid "Credit details"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model,name:hr_dr_credit.model_hr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_search_view
+msgid "Credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__employee_credit_request_administrator
+msgid "Credit request administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_form_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_search_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_tree_view
+msgid "Credit request details"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.credit_details_from_my_department_action
+msgid "Credit request details from my department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.credit_details_from_my_department_action
+msgid "Credit request details from my department."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__employee_credit_request_notifications_mode
+msgid "Credit request notifications mode"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Credit request notifications mode."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__employee_credit_request_second_administrator
+msgid "Credit request second administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_tree_view
+msgid "Credit requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.credit_request_from_my_department_action
+msgid "Credit requests from my department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.credit_request_from_my_department_action
+msgid "Credit requests from my department."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.act_hr_employee_credit_request
+#: model:ir.ui.menu,name:hr_dr_credit.menu_hr_employee_credit_root
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.view_employee_form_credit_inherit
+msgid "Credits"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "Cuota"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__currency_id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__date
+msgid "Date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__department_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__department_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_search_view
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_search_view
+msgid "Department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__department_employee_requests_id
+msgid ""
+"Department to which the collaborator belonged at the time of making the "
+"request."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.report,name:hr_dr_credit.action_discount_authorization_ec_report
+msgid "Discount authorization"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__display_name
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credits_signature_mode__electronic_signature
+msgid "Electronic signature"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,name:hr_dr_credit.email_template_confirm_approve_employee_credit_request
+msgid "Email template confirm approve employee credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,name:hr_dr_credit.email_template_confirm_cancel_employee_credit_request
+msgid "Email template confirm cancel employee credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,name:hr_dr_credit.email_template_confirm_direct_approve_credit_request
+msgid "Email template confirm direct approve credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,name:hr_dr_credit.email_template_confirm_employee_credit_request
+msgid "Email template confirm employee credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,name:hr_dr_credit.email_template_confirm_reject_employee_credit_request
+msgid "Email template confirm reject employee credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model,name:hr_dr_credit.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.report,name:hr_dr_credit.action_employee_credit_request_report
+msgid "Employee credit request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__evidences
+msgid "Evidences"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.server,name:hr_dr_credit.ir_cron_expire_credits_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_credit.ir_cron_expire_credits
+msgid "Expire collaborator credit"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__state__expired
+msgid "Expired"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "Fecha de pago"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid ""
+"First administrator for approval / rejection of credit request "
+"notifications."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_credit_details_from_my_department
+#: model:ir.ui.menu,name:hr_dr_credit.menu_employee_credit_request_from_my_department
+msgid "From my department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Go to payroll"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__date_go_to_payroll
+msgid "Go to payroll date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__user_go_to_payroll
+msgid "Go to payroll user"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__has_message
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__message_needaction
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__message_has_error
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__message_has_error
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__hr_credit__state__in_payroll
+msgid "In payroll"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__installment
+msgid "Installment"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Installments"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "Jefe Inmediato"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__job_position
+msgid "Job position"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__job_position
+msgid ""
+"Job position assigned to the collaborator at the time of making the request."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit____last_update
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__write_uid
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__write_date
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credit_payroll_to_analyze__last_nine_payrolls
+msgid "Last nine payrolls"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credit_payroll_to_analyze__last_six_payrolls
+msgid "Last six payrolls"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credit_payroll_to_analyze__last_three_payrolls
+msgid "Last three payrolls"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credit_payroll_to_analyze__last_twelve_payrolls
+msgid "Last twelve payrolls"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__files
+msgid "Load files"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__user_manager_department_employee_requests_id
+msgid "Manager"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Maximum number of active credits that the collaborator can have."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__maximum_number_of_credits
+msgid "Maximum number of credits"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__credit_maximum_number_of_installments
+msgid "Maximum number of installments"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Maximum number of installments that the collaborator can choose."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__maximum_credit_percentage
+msgid "Maximum percentage of indebtedness"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__maximum_credit_percentage_based_on
+msgid "Maximum percentage of indebtedness based on"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Maximum percentage of indebtedness based on."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Maximum percentage of indebtedness."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_ids
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__credit_months_in_the_company
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Minimum number of months in the company to apply for a credit."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_my_credit_details
+#: model:ir.ui.menu,name:hr_dr_credit.menu_my_employee_credit_request
+msgid "My"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.my_credit_details_action
+msgid "My credit request details"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.my_credit_details_action
+msgid "My credit request details."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.my_credit_request_action
+msgid "My credit requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.my_credit_request_action
+msgid "My credit requests."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__installment
+msgid "No of installments"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__notification_ids
+#: model:ir.ui.menu,name:hr_dr_credit.menu_employee_credit_request_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Notifications"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.credit_request_action_notifications_to_process
+msgid "Notifications to process for credit requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.actions.act_window,help:hr_dr_credit.credit_request_action_notifications_to_process
+msgid "Notifications to process for credit requests."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_bc
+msgid "One level based on coach"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_bc_and_administrator
+msgid "One level based on coach and administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_bd
+msgid "One level based on department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_bd_and_administrator
+msgid "One level based on department and administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_bd_and_two_administrator
+msgid "One level based on department and two administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_br
+msgid "One level based on responsible"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__one_level_br_and_administrator
+msgid "One level based on responsible and administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Other information"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__paid
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_line_search_view
+msgid "Paid"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__date
+msgid "Payment date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__payment_date
+msgid "Payment start date"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__maximum_credit_percentage_based_on__payroll
+msgid "Payroll"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__credit_payroll_to_analyze
+msgid "Payroll to analyze"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Payroll to analyze."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__percentage_of_salary
+msgid "Percentage of salary"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__personalized
+msgid "Personalized"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "Por medio del presente documento autorizo a la compañía"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Print discount authorization"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Print request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__readonly_values
+msgid "Readonly values"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__reason_reject
+msgid "Reason reject"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Register request"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__user_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__user_employee_requests_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_base_hr_credit_details
+msgid "Request details"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_base_hr_employee_credit_request
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Requests"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:res.groups,name:hr_dr_credit.hr_dr_credit_group_responsible
+msgid "Responsable"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__maximum_credit_percentage_based_on__salary
+msgid "Salary"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__credit_salary_rule_code
+msgid "Salary rule code"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Salary rule code to analyze."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid ""
+"Second administrator for approval / rejection of credit request "
+"notifications."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.actions.act_window,name:hr_dr_credit.employee_credit_configuration_settings_action
+#: model:ir.ui.menu,name:hr_dr_credit.menu_configuration_settings
+msgid "Settings"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "Signature"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Signature mode"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_res_config_settings__credits_signature_mode
+msgid "Signature mode for credits"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.res_config_settings_view_form_ec
+msgid "Signature mode for credits."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,subject:hr_dr_credit.email_template_confirm_employee_credit_request
+msgid "Solicitud de crédito"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,subject:hr_dr_credit.email_template_confirm_approve_employee_credit_request
+msgid "Solicitud de crédito aprobada"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,subject:hr_dr_credit.email_template_confirm_cancel_employee_credit_request
+msgid "Solicitud de crédito cancelada"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,subject:hr_dr_credit.email_template_confirm_reject_employee_credit_request
+msgid "Solicitud de crédito rechazada"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:mail.template,subject:hr_dr_credit.email_template_confirm_direct_approve_credit_request
+msgid "Solicitud de crédito registrada"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__state
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__state
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_search_view
+msgid "Status"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:res.groups,name:hr_dr_credit.hr_dr_credit_group_supervisor
+msgid "Supervisor"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.ui.menu,name:hr_dr_credit.menu_employee_credit_request_for_approve
+msgid "To process"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__total_amount
+msgid "Total amount"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__total_paid_amount
+msgid "Total paid amount"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.hr_credit_form_view
+msgid "Tracing"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__two_levels_bd
+msgid "Two levels based on department"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__two_levels_bd_and_administrator
+msgid "Two levels based on department and administrator"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credits_signature_mode__uploaded_image
+msgid "Uploaded image"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__user_employee_requests_id
+msgid "User"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__user_manager_department_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__user_manager_department_employee_requests_id
+msgid "User manager department collaborator requesting"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__user_employee_requests_id
+msgid "User requesting"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_employee_credit_request_document
+msgid "Valor"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_credit.field_hr_credit_line__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit__website_message_ids
+#: model:ir.model.fields,help:hr_dr_credit.field_hr_credit_line__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__employee_credit_request_notifications_mode__without_notifications
+msgid "Without notifications"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model:ir.model.fields.selection,name:hr_dr_credit.selection__res_config_settings__credits_signature_mode__without_signature
+msgid "Without signature"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "a descontar de mi rol de pagos la cantidad total de:"
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid ""
+"cuota(s) por concepto de <strong>CRÉDITO DIRECTO</strong>. En caso de "
+"desvinculación de la empresa autorizo que el saldo o valor total se "
+"descuente de mi liquidación de haberes."
+msgstr ""
+
+#. module: hr_dr_credit
+#: model_terms:ir.ui.view,arch_db:hr_dr_credit.report_discount_authorization_ec_document
+msgid "en"
+msgstr ""

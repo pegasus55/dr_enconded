@@ -46,7 +46,7 @@
             </xpath>
 
             <xpath expr="//field[@name='company_id']" position="after">
-                <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
             </xpath>
 
 <!--            <xpath expr="//button[@name='refund_sheet']" position="replace"/>-->
@@ -205,7 +205,7 @@
             </xpath>
 
             <xpath expr="//field[@name='company_id']" position="after">
-                <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
             </xpath>
         </field>
     </record>

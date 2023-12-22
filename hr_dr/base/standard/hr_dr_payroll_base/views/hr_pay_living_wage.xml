@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
 	<record id="pay_living_wage_view_form" model="ir.ui.view">
 		<field name="name">pay.living.wage.view.form</field>
 		<field name="model">pay.living.wage</field>
@@ -15,6 +14,7 @@
 					</div>
 					<group>
 						<group>
+							<field name="employee_requests_id" attrs="{'readonly': [('state', 'not in', ('draft'))]}" domain="[('employee_admin', '=', False), ('company_id', '=', company_id), ('state', 'in', ['affiliate'])]"/>
 							<field name="period_start" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
 							<field name="fiscal_year" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
 							<field name="utility" attrs="{'required': True, 'readonly': [('state','not in',['draft','calculated','recalculate'])]}"/>
@@ -22,33 +22,35 @@
 						<group>
 							<field name="period_end" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
 							<field name="date" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+							<field name="company_id" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 					<notebook>
 						<page string="Details">
 							<field name="pay_living_wage_line_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
-								<tree delete="false" create="false">
+								<tree create="false" edit="false" delete="false" default_order="employee_id">
 									<field name="employee_id" readonly="1"/>
 									<field name="employee_state" readonly="1"/>
-									<field name="wage" readonly="1"/>
-									<field name="thirteenth_salary" readonly="1"/>
-									<field name="fourteenth_salary" readonly="1"/>
-									<field name="commissions" readonly="1"/>
-									<field name="utility" readonly="1"/>
-									<field name="other_income" readonly="1"/>
-									<field name="reserve_fund" readonly="1"/>
-									<field name="historical" readonly="1"/>
-									<field name="all_income" readonly="1"/>
-									<field name="worked_days" readonly="1"/>
-									<field name="total_living_wage" readonly="1"/>
-									<field name="proportional_living_wage" readonly="1"/>
-									<field name="value" readonly="1"/>
-									<field name="value_to_receive" readonly="1"/>
+									<field name="wage" readonly="1" sum="Total"/>
+									<field name="thirteenth_salary" readonly="1" sum="Total"/>
+									<field name="fourteenth_salary" readonly="1" sum="Total"/>
+									<field name="commissions" readonly="1" sum="Total"/>
+									<field name="utility" readonly="1" sum="Total"/>
+									<field name="other_income" readonly="1" sum="Total"/>
+									<field name="reserve_fund" readonly="1" sum="Total"/>
+									<field name="historical" readonly="1" sum="Total"/>
+									<field name="all_income" readonly="1" sum="Total"/>
+									<field name="worked_days" readonly="1" sum="Total"/>
+									<field name="total_living_wage" readonly="1" sum="Total"/>
+									<field name="proportional_living_wage" readonly="1" sum="Total"/>
+									<field name="value" readonly="1" sum="Total"/>
+									<field name="value_to_receive" readonly="1" sum="Total"/>
 									<field name="state" readonly="1"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 								</tree>
-								<form delete="false" create="false">
+								<form create="false" edit="false" delete="false">
 									<sheet>
 										<group>
 											<group>
@@ -71,6 +73,8 @@
 												<field name="value" readonly="1"/>
 												<field name="value_to_receive" readonly="1"/>
 												<field name="state" readonly="1"/>
+												<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+												<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 											</group>
 										</group>
 									</sheet>
@@ -120,8 +124,8 @@
 				<field name="period_end"/>
 				<field name="utility"/>
 				<field name="state"/>
-				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
-				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
@@ -203,6 +207,8 @@
 							<field name="value" readonly="1"/>
 							<field name="value_to_receive" readonly="1"/>
 							<field name="state" readonly="1"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 				</sheet>
@@ -218,11 +224,12 @@
 		<field name="model">pay.living.wage.line</field>
 		<field name="arch" type="xml">
 			<search>
-				<field name="pay_living_wage_id"/>
+				<field name="employee_id"/>
 
 				<group expand="0" name="group_by" string="Group By">
-					<filter name="group_pay_living_wage_id" string="Pay living wage"
-							context="{'group_by' : 'pay_living_wage_id'}"/>
+					<filter name="group_pay_living_wage_id" string="Pay living wage" context="{'group_by' : 'pay_living_wage_id'}"/>
+					<filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+					<filter name="group_employee_id" string="Collaborator" context="{'group_by' : 'employee_id'}"/>
 				</group>
 			</search>
 		</field>
@@ -234,21 +241,23 @@
 			<tree string="Pay living wage detail" create="false" edit="false" delete="false">
 				<field name="employee_id" readonly="1"/>
 				<field name="employee_state" readonly="1"/>
-				<field name="wage" readonly="1"/>
-				<field name="thirteenth_salary" readonly="1"/>
-				<field name="fourteenth_salary" readonly="1"/>
-				<field name="commissions" readonly="1"/>
-				<field name="utility" readonly="1"/>
-				<field name="other_income" readonly="1"/>
-				<field name="reserve_fund" readonly="1"/>
-				<field name="historical" readonly="1"/>
-				<field name="all_income" readonly="1"/>
-				<field name="worked_days" readonly="1"/>
-				<field name="total_living_wage" readonly="1"/>
-				<field name="proportional_living_wage" readonly="1"/>
-				<field name="value" readonly="1"/>
-				<field name="value_to_receive" readonly="1"/>
+				<field name="wage" readonly="1" sum="Total"/>
+				<field name="thirteenth_salary" readonly="1" sum="Total"/>
+				<field name="fourteenth_salary" readonly="1" sum="Total"/>
+				<field name="commissions" readonly="1" sum="Total"/>
+				<field name="utility" readonly="1" sum="Total"/>
+				<field name="other_income" readonly="1" sum="Total"/>
+				<field name="reserve_fund" readonly="1" sum="Total"/>
+				<field name="historical" readonly="1" sum="Total"/>
+				<field name="all_income" readonly="1" sum="Total"/>
+				<field name="worked_days" readonly="1" sum="Total"/>
+				<field name="total_living_wage" readonly="1" sum="Total"/>
+				<field name="proportional_living_wage" readonly="1" sum="Total"/>
+				<field name="value" readonly="1" sum="Total"/>
+				<field name="value_to_receive" readonly="1" sum="Total"/>
 				<field name="state" readonly="1"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
@@ -261,5 +270,4 @@
                 "search_default_group_pay_living_wage_id": 1,
             }</field>
 	</record>
-
 </odoo>

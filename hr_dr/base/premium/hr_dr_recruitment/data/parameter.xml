@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
     	<record id="staff_requirement_request_notifications" model="ir.config_parameter">
             <field name="key">staff.requirement.request.notifications.mode</field>
             <field name="value">Without_notifications</field>

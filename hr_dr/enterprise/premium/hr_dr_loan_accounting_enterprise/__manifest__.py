@@ -10,16 +10,19 @@
     'author': "Dainovy Rodriguez Marrero",
     'company': 'Dainovy Rodriguez Marrero',
     'maintainer': 'Dainovy Rodriguez Marrero',
-    'website': "https://www.drm.com",
-    'depends': [
-        'base', 'dr_start_system', 'hr_payroll', 'hr', 'account', 'hr_dr_loan',
-    ],
+    'website': "https://www.nukleosolutions.com",
+    'depends':
+        [
+            'base',
+            'dr_start_system',
+            'hr_payroll',
+            'hr',
+            'account',
+            'hr_dr_loan',
+        ],
     'data': [
-        'views/hr_loan_acc.xml',
-        'views/res_config_settings.xml',
-
-        'data/parameter.xml',
-
+        'views/hr_loan.xml',
+        'views/res_company.xml',
     ],
     'demo': [],
     'images': ["static/description/icon.png"],

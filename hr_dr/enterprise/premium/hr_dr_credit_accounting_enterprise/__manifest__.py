@@ -1,25 +1,28 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Contabilidad Crédito Empleados',
+    'name': 'Collaborators credit accounting',
     'version': '1.0.0',
-    'summary': 'Contabilidad Crédito Empleados',
+    'summary': 'Accounting entries for collaborators credit.',
     'description': """
-        Incorpora las entradas contables a los créditos de los empleados.
+        Module to incorporate the accounting entries to the credits of the collaborators.
         """,
     'category': 'Generic Modules/Human Resources',
     'author': "Dainovy Rodriguez Marrero",
     'company': 'Dainovy Rodriguez Marrero',
     'maintainer': 'Dainovy Rodriguez Marrero',
-    'website': "https://www.drm.com",
-    'depends': [
-        'base', 'dr_start_system', 'hr_payroll', 'hr', 'account', 'hr_dr_employee_credit',
-    ],
+    'website': "https://www.nukleosolutions.com",
+    'depends':
+        [
+            'base',
+            'dr_start_system',
+            'hr_payroll',
+            'hr',
+            'account',
+            'hr_dr_credit',
+        ],
     'data': [
-        'views/res_config_settings.xml',
-        'views/hr_credit_acc.xml',
-
-        'data/parameter.xml',
-
+        'views/hr_credit.xml',
+        'views/res_company.xml',
     ],
     'demo': [],
     'images': ["static/description/icon.png"],

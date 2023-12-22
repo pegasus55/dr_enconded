@@ -2,7 +2,7 @@
 {
     'name': "License customer",
 
-    'version': '14.0.1.0.0',
+    'version': '1.0',
     'summary': """Module to activate the license on clients.
         """,
     'description': """Module to activate the license on clients.

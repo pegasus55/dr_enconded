@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--Ingresos que generan beneficios sociales 1-40 -->
+        <!--Salario nominal -->
+        <record id="salary_rule_liq_SALARIO_NOMINAL" model="hr.salary.rule">
+            <field name="name">Salario nominal (proporcional)</field>
+            <field name="note">
+Multiplica el salario definido en el contrato por la cantidad de días trabajados dividido para 30.
+En caso de que el colaborador presente reducción de jornada se incorpora a la fórmula
+(100 menos el porcentaje de reducción de jornada) dividido para 100.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">SALARIO_NOMINAL</field>
+            <field name="sequence">1</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if contract.reduction_of_working_hours:
+    result = round(contract.wage * payslip.worked_days / 30.0 * ((100 - contract.percentage_reduction_of_working_hours) / 100), 2)
+else:
+    result = round(contract.wage * payslip.worked_days / 30.0, 2)
+            </field>
+        </record>
+
+        <!--Horas nocturnas (25%) -->
+        <record id="salary_rule_liq_HORA_NOCTURNA" model="hr.salary.rule">
+            <field name="name">Horas nocturnas (25%)</field>
+            <field name="note">
+Recibe la cantidad de horas nocturnas, mismas que son multiplicadas por el valor hora del colaborador
+(salario definido en el contrato dividido para las horas mensuales) multiplicado por 1.25.
+En caso de que el colaborador presente reducción de jornada se incorpora a la fórmula
+(100 menos el porcentaje de reducción de jornada) dividido para 100.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">HORA_NOCTURNA</field>
+            <field name="sequence">2</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+if inputs.HORA_NOCTURNA: result = contract.receives_night_hours and sum([line.amount for line in inputs.HORA_NOCTURNA]) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if contract.reduction_of_working_hours:
+    result = round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 1.25), 2)
+else:
+    result = round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * 1.25), 2)
+            </field>
+        </record>
+
+        <!--Horas extras suplementarias (50%) -->
+        <record id="salary_rule_liq_HORA_EXTRA_SUPLEMENTARIA" model="hr.salary.rule">
+            <field name="name">Horas extras suplementarias (50%)</field>
+            <field name="note">
+Recibe la cantidad de horas suplementarias, mismas que son multiplicadas por el valor hora del colaborador
+(salario definido en el contrato dividido para las horas mensuales) multiplicado por 1.5.
+En caso de que el colaborador presente reducción de jornada se incorpora a la fórmula
+(100 menos el porcentaje de reducción de jornada) dividido para 100.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">HORA_EXTRA_SUPLEMENTARIA</field>
+            <field name="sequence">3</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+if inputs.HORA_EXTRA_SUPLEMENTARIA: result = contract.receives_hours_supplementary and sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if contract.reduction_of_working_hours:
+    result = round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 1.5), 2)
+else:
+    result = round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * 1.5), 2)
+            </field>
+        </record>
+
+        <!--Horas extras extraordinarias (100%) -->
+        <record id="salary_rule_liq_HORA_EXTRA_EXTRAORDINARIA" model="hr.salary.rule">
+            <field name="name">Horas extras extraordinarias (100%)</field>
+            <field name="note">
+Recibe la cantidad de horas extraordinarias, mismas que son multiplicadas por el valor hora del colaborador
+(salario definido en el contrato dividido para las horas mensuales) multiplicado por 2.
+En caso de que el colaborador presente reducción de jornada se incorpora a la fórmula
+(100 menos el porcentaje de reducción de jornada) dividido para 100.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">HORA_EXTRA_EXTRAORDINARIA</field>
+            <field name="sequence">4</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+if inputs.HORA_EXTRA_EXTRAORDINARIA: result = contract.receives_hours_extraordinary and sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if contract.reduction_of_working_hours:
+    result = round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 2), 2)
+else:
+    result = round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * 2), 2)
+            </field>
+        </record>
+
+        <!--Vacaciones pagadas -->
+        <record id="salary_rule_liq_VACATIONS" model="hr.salary.rule">
+            <field name="name">Vacaciones (Proporcional))</field>
+            <field name="note">
+Recibe un valor monetario.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">PAY_VACATIONS</field>
+            <field name="sequence">17</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = round(payslip.vacations_liquidation, 2)</field>
+        </record>
+
+        <!--Ingresos que no generan beneficios sociales 41-80 -->
+        <!--Décimo tercer sueldo (Mensual) -->
+        <record id="salary_rule_liq_DECIMO_TERCERO" model="hr.salary.rule">
+            <field name="name">Décimo tercer sueldo (Proporcional)</field>
+            <field name="note">
+Esta regla solo se aplica cuando el pago del décimo tercer sueldo está establecido como mensual en la configuración del contrato.
+Es la suma de todos los rubros o reglas que pertenecen a la categoría: Ingresos que generan beneficios sociales dividido para 12.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">DECIMO_TERCERO_MENSUAL</field>
+            <field name="sequence">48</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = round(payslip.xiii_liquidation, 2)</field>
+        </record>
+
+        <!--Décimo cuarto sueldo (Mensual) -->
+        <record id="salary_rule_liq_DECIMO_CUARTO" model="hr.salary.rule">
+            <field name="name">Décimo cuarto sueldo (Proporcional)</field>
+            <field name="note">
+Esta regla solo se aplica cuando el pago del décimo cuarto sueldo está establecido como mensual en la configuración
+del contrato del colaborador. Es el resultado de dividir el salario básico unificado vigente para 12,
+multiplicado por la división de las horas diarias para las horas diarias estándar (ambas definidas en el contrato),
+multiplicado por la división de la cantidad de días trabajados en la nómina en curso para 30.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">DECIMO_CUARTO_MENSUAL</field>
+            <field name="sequence">49</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+			      <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+           <field name="amount_python_compute">result = round(payslip.xiii_liquidation, 2)</field>
+        </record>
+
+        <!--Indemnización de mutuo acuerdo-->
+        <record id="salary_rule_inde_01" model="hr.salary.rule">
+            <field name="name">Indemnización de mutuo acuerdo</field>
+            <field name="note">Indemnizaciones de mutuo acuerdo entre el empleador y el colaborador</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE]) if inputs.INDE else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE]) if inputs.INDE else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización por desahucio-->
+        <record id="salary_rule_inde_02" model="hr.salary.rule">
+            <field name="name">Indemnización por desahucio</field>
+            <field name="note">Indemnización por desahucio</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DESAHUCIO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_EVICTION]) if inputs.INDE_EVICTION else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_EVICTION]) if inputs.INDE_EVICTION else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización por despido intempestivo-->
+        <record id="salary_rule_inde_03" model="hr.salary.rule">
+            <field name="name">Indemnización despido intempestivo</field>
+            <field name="note">Indemnización por despido intempestivo</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DESPIDO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_TERMINATION]) if inputs.INDE_TERMINATION else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_TERMINATION]) if inputs.INDE_TERMINATION else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización líder sindical-->
+        <record id="salary_rule_inde_04" model="hr.salary.rule">
+            <field name="name">Indemnización líder sindical</field>
+            <field name="note">Indemnización por despido intempestivo a líder sindical</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_LIDER</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_LEADER]) if inputs.INDE_LEADER else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_LEADER]) if inputs.INDE_LEADER else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización mujer embarazada-->
+        <record id="salary_rule_inde_05" model="hr.salary.rule">
+            <field name="name">Indemnización mujer embarazada</field>
+            <field name="note">Indemnización por despido intempestivo a mujer embarazada</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_EMBARAZO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_PREGNANCY]) if inputs.INDE_PREGNANCY else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_PREGNANCY]) if inputs.INDE_PREGNANCY else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización discapacidad-->
+        <record id="salary_rule_inde_06" model="hr.salary.rule">
+            <field name="name">Indemnización por discapacidad</field>
+            <field name="note">Indemnizaciones por despido intempestivo a discapacitado</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DISCAPACIDAD</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_DISABILITY]) if inputs.INDE_DISABILITY else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_DISABILITY]) if inputs.INDE_DISABILITY else 0, 2)
+            </field>
+        </record>
+      
+      <!--Subtotales-->
+        <!--Subtotal: Subtotal: Ingresos (Generan beneficios sociales) -->
+        <record id="salary_rule_liq_SUBT_INGRESOS_GBS" model="hr.salary.rule">
+            <field name="name">Subtotal (Ingresos que generan beneficios sociales)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_INGRESOS_GBS</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS</field>
+        </record>
+
+        <!--Subtotal: Ingresos (No generan beneficios sociales) -->
+        <record id="salary_rule_liq_SUBT_INGRESOS_NGBS" model="hr.salary.rule">
+            <field name="name">Subtotal (Ingresos que no generan beneficios sociales)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_INGRESOS_NGBS</field>
+            <field name="sequence">79</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS_NGBS</field>
+        </record>
+
+        <!--Subtotal: Total ingresos -->
+        <record id="salary_rule_liq_SUBT_TOTAL_INGRESOS" model="hr.salary.rule">
+            <field name="name">Subtotal (Total ingresos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_TOTAL_INGRESOS</field>
+            <field name="sequence">80</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS</field>
+        </record>
+
+        <!--Subtotal: Egresos -->
+        <record id="salary_rule_liq_SUBT_EGRESOS" model="hr.salary.rule">
+        	<field name="name">Subtotal (Egresos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_EGRESOS</field>
+            <field name="sequence">140</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.EGRESOS</field>
+        </record>
+
+        <!--Subtotal: Egresos pasivos -->
+        <record id="salary_rule_liq_SUBT_EGRESOS_PASIVOS" model="hr.salary.rule">
+        	<field name="name">Subtotal (Egresos pasivos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_EGRESOS_PASIVOS</field>
+            <field name="sequence">150</field>
+            <field name="appears_on_payslip">False</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.EGRESOS_PASIVOS</field>
+        </record>
+
+        <!--Subtotal: Salario neto a recibir -->
+        <record id="salary_rule_liq_SUBT_NETO" model="hr.salary.rule">
+        	<field name="name">Subtotal (Salario neto a recibir)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_NETO</field>
+            <field name="sequence">181</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="appears_on_employee_cost_dashboard">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS - categories.EGRESOS</field>
+        </record>
+        <!--Subtotales-->
+    </data>
+</odoo>

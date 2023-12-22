@@ -23,8 +23,8 @@
 		<menuitem id="menu_payment_utility_hr_dr_payroll_community_line" action="hr_dr_payroll_base.action_payment_utility_line" parent="menu_payment_utility_hr_dr_payroll_community_root" sequence="20" groups="om_hr_payroll.group_hr_payroll_manager"/>
 
 	<menuitem id="menu_tenths_hr_dr_payroll_community_root" name="Tenths" parent="om_hr_payroll.menu_hr_payroll_root" sequence="16" groups="om_hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_action_tenths_hr_dr_payroll_community" action="hr_dr_payroll_base.action_tenths_form" parent="menu_tenths_hr_dr_payroll_community_root" sequence="10" groups="om_hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_action_tenths_hr_dr_payroll_community_line" action="hr_dr_payroll_base.action_tenths_line_form" parent="menu_tenths_hr_dr_payroll_community_root" sequence="20" groups="om_hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_action_tenths_hr_dr_payroll_community" action="hr_dr_payroll_base.action_tenths" parent="menu_tenths_hr_dr_payroll_community_root" sequence="10" groups="om_hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_action_tenths_hr_dr_payroll_community_line" action="hr_dr_payroll_base.action_tenths_line" parent="menu_tenths_hr_dr_payroll_community_root" sequence="20" groups="om_hr_payroll.group_hr_payroll_manager"/>
 
 	<menuitem id="menu_retired_employees_hr_dr_payroll_community_root" name="Retired collaborators" parent="om_hr_payroll.menu_hr_payroll_root" sequence="40" groups="om_hr_payroll.group_hr_payroll_manager"/>
 		<menuitem id="menu_retired_employees_salary_hr_dr_payroll_community" action="hr_dr_payroll_base.action_retired_employees_salary" parent="menu_retired_employees_hr_dr_payroll_community_root" sequence="10" groups="om_hr_payroll.group_hr_payroll_manager"/>

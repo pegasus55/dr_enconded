@@ -1,10 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <odoo>
+    <record id="historical_provision_form_view" model="ir.ui.view">
+            <field name="name">hr.historical.provision.view.form</field>
+            <field name="model">hr.historical.provision</field>
+            <field name="arch" type="xml">
+                <form string="Historical provision">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="fiscal_year"/>
+                                <field name="period_start"/>
+                                <field name="period_end"/>
+                                <field name="employee_id"/>
+                                <field name="type"/>
+                                <field name="payment_type"/>
+                            </group>
+                            <group>
+                                <field name="value_actual_fiscal_year" widget='monetary'/>
+                                <field name="working_days_actual_fiscal_year"/>
+
+                                <field name="value_previous_fiscal_year" widget='monetary'/>
+                                <field name="working_days_previous_fiscal_year"/>
+
+                                <field name="total_value" widget='monetary'/>
+                                <field name="total_working_days"/>
+
+                                <field name="partner_id"/>
+
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
     <record id="historical_provision_tree_view" model="ir.ui.view">
         <field name="name">hr.historical.provision.view.tree</field>
         <field name="model">hr.historical.provision</field>
         <field name="arch" type="xml">
-            <tree string="Historical provision" editable="bottom">
+            <tree string="Historical provision">
                 <field name="fiscal_year"/>
                 <field name="period_start"/>
                 <field name="period_end"/>
@@ -21,16 +62,40 @@
                 <field name="total_value" widget='monetary'/>
                 <field name="total_working_days"/>
 
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-                <field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                <field name="partner_id"/>
+
+                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
                 <field name="active"/>
             </tree>
         </field>
     </record>
 
+    <record id="historical_provision_view_search" model="ir.ui.view">
+            <field name="name">hr.historical.provision.view.search</field>
+            <field name="model">hr.historical.provision</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="fiscal_year"/>
+                    <field name="employee_id"/>
+                    <field name="type"/>
+                    <field name="payment_type"/>
+                    <field name="partner_id"/>
+
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_fiscal_year" string="Fiscal year" domain="[]" context="{'group_by':'fiscal_year'}"/>
+                        <filter name="group_by_employee_id" string="Collaborator" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter name="group_by_type" string="Type" domain="[]" context="{'group_by':'type'}"/>
+                        <filter name="group_by_payment_type" string="Payment type" domain="[]" context="{'group_by':'payment_type'}"/>
+                        <filter name="group_by_partner_id" string="Beneficiary" domain="[]" context="{'group_by':'partner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
     <record id="action_historical_provision" model="ir.actions.act_window">
         <field name="name">Historical provision</field>
         <field name="res_model">hr.historical.provision</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
 </odoo>

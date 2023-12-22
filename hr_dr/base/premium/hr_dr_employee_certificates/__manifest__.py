@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Collaborators certificates",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to generate the work certificates of the collaborators.""",
     'description': """
@@ -26,8 +26,9 @@
             'base',
             'dr_start_system',
             'hr_contract',
+            'dr_signature',
             'hr',
-            'hr_dr_employee'
+            'hr_dr_employee',
         ],
 
     # always loaded

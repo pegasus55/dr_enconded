@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Payroll for odoo enterprise (EC Private)",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage the payroll of collaborators.
     """,
@@ -32,6 +32,7 @@
         'data/hr_payroll_structure.xml',
         'data/hr_salary_rule.xml',
         'data/hr_salary_rule_intern.xml',
+        'data/hr_salary_rule_liquidation.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

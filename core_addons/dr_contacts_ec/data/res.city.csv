@@ -1,222 +1,222 @@
 id,code,name,state_id/id,active
-res_city_1,1,Cuenca,state_ec_01,True
-res_city_2,2,Girón,state_ec_01,True
-res_city_3,3,Gualaceo,state_ec_01,True
-res_city_4,4,Nabón,state_ec_01,True
-res_city_5,5,Paute,state_ec_01,True
-res_city_6,6,Pucará,state_ec_01,True
-res_city_7,7,San Fernando,state_ec_01,True
-res_city_8,8,Santa Isabel,state_ec_01,True
-res_city_9,9,Sígsig,state_ec_01,True
-res_city_10,10,Oña,state_ec_01,True
-res_city_11,11,Chordeleg,state_ec_01,True
-res_city_12,12,El Pan,state_ec_01,True
-res_city_13,13,Sevilla De Oro,state_ec_01,True
-res_city_14,14,Guachapala,state_ec_01,True
-res_city_15,15,Camilo Ponce Enríquez,state_ec_01,True
-res_city_16,1,Guaranda,state_ec_02,True
-res_city_17,2,Chillanes,state_ec_02,True
-res_city_18,3,Chimbo,state_ec_02,True
-res_city_19,4,Echeandía,state_ec_02,True
-res_city_20,5,San Miguel,state_ec_02,True
-res_city_21,6,Caluma,state_ec_02,True
-res_city_22,7,Las Naves,state_ec_02,True
-res_city_23,1,Azogues,state_ec_03,True
-res_city_24,2,Biblián,state_ec_03,True
-res_city_25,3,Cañar,state_ec_03,True
-res_city_26,4,La Troncal,state_ec_03,True
-res_city_27,5,El Tambo,state_ec_03,True
-res_city_28,6,Déleg,state_ec_03,True
-res_city_29,7,Suscal,state_ec_03,True
-res_city_30,1,Tulcán,state_ec_04,True
-res_city_31,2,Bolívar,state_ec_04,True
-res_city_32,3,Espejo,state_ec_04,True
-res_city_33,4,Mira,state_ec_04,True
-res_city_34,5,Montúfar,state_ec_04,True
-res_city_35,6,San Pedro de Huaca,state_ec_04,True
-res_city_36,1,Latacunga,state_ec_05,True
-res_city_37,2,La Maná,state_ec_05,True
-res_city_38,3,Pangua,state_ec_05,True
-res_city_39,4,Pujilí,state_ec_05,True
-res_city_40,5,Salcedo,state_ec_05,True
-res_city_41,6,Saquisilí,state_ec_05,True
-res_city_42,7,Sigchos,state_ec_05,True
-res_city_43,1,Riobamba,state_ec_06,True
-res_city_44,2,Alausí,state_ec_06,True
-res_city_45,3,Colta,state_ec_06,True
-res_city_46,4,Chambo,state_ec_06,True
-res_city_47,5,Chunchi,state_ec_06,True
-res_city_48,6,Guamote,state_ec_06,True
-res_city_49,7,Guano,state_ec_06,True
-res_city_50,8,Pallatanga,state_ec_06,True
-res_city_51,9,Penipe,state_ec_06,True
-res_city_52,10,Cumandá,state_ec_06,True
-res_city_53,1,Machala,state_ec_07,True
-res_city_54,2,Arenillas,state_ec_07,True
-res_city_55,3,Atahualpa,state_ec_07,True
-res_city_56,4,Balsas,state_ec_07,True
-res_city_57,5,Chilla,state_ec_07,True
-res_city_58,6,El Guabo,state_ec_07,True
-res_city_59,7,Huaquillas,state_ec_07,True
-res_city_60,8,Marcabelí,state_ec_07,True
-res_city_61,9,Pasaje,state_ec_07,True
-res_city_62,10,Piñas,state_ec_07,True
-res_city_63,11,Portovelo,state_ec_07,True
-res_city_64,12,Santa Rosa,state_ec_07,True
-res_city_65,13,Zaruma,state_ec_07,True
-res_city_66,14,Las Lajas,state_ec_07,True
-res_city_67,1,Esmeraldas,state_ec_08,True
-res_city_68,2,Eloy Alfaro,state_ec_08,True
-res_city_69,3,Muisne,state_ec_08,True
-res_city_70,4,Quinindé,state_ec_08,True
-res_city_71,5,San Lorenzo,state_ec_08,True
-res_city_72,6,Atacames,state_ec_08,True
-res_city_73,7,Río Verde,state_ec_08,True
-res_city_74,8,La Concordia,state_ec_08,True
-res_city_75,1,Guayaquil,state_ec_09,True
-res_city_76,2,Alfredo Baquerizo Moreno (Juján),state_ec_09,True
-res_city_77,3,Balao,state_ec_09,True
-res_city_78,4,Balzar,state_ec_09,True
-res_city_79,5,Colimes,state_ec_09,True
-res_city_80,6,Daule,state_ec_09,True
-res_city_81,7,Durán,state_ec_09,True
-res_city_82,8,El Empalme,state_ec_09,True
-res_city_83,9,El Triunfo,state_ec_09,True
-res_city_84,10,Milagro,state_ec_09,True
-res_city_85,11,Naranjal,state_ec_09,True
-res_city_86,12,Naranjito,state_ec_09,True
-res_city_87,13,Palestina,state_ec_09,True
-res_city_88,14,Pedro Carbo,state_ec_09,True
-res_city_89,16,Samborondón,state_ec_09,True
-res_city_90,18,Santa Lucía,state_ec_09,True
-res_city_91,19,Salitre (Urbina Jado),state_ec_09,True
-res_city_92,20,San Jacinto de Yaguachi,state_ec_09,True
-res_city_93,21,Playas,state_ec_09,True
-res_city_94,22,Simón Bolívar,state_ec_09,True
-res_city_95,23,Coronel Marcelino Maridueña,state_ec_09,True
-res_city_96,24,Lomas de Sargentillo,state_ec_09,True
-res_city_97,25,Nobol,state_ec_09,True
-res_city_98,27,General Antonio Elizalde (BUCAY),state_ec_09,True
-res_city_99,28,Isidro Ayora,state_ec_09,True
-res_city_100,1,Ibarra,state_ec_10,True
-res_city_101,2,Antonio Ante,state_ec_10,True
-res_city_102,3,Cotacachi,state_ec_10,True
-res_city_103,4,Otavalo,state_ec_10,True
-res_city_104,5,Pimampiro,state_ec_10,True
-res_city_105,6,San Miguel de Urcuqui,state_ec_10,True
-res_city_106,1,Loja ,state_ec_11,True
-res_city_107,2,Calvas,state_ec_11,True
-res_city_108,3,Catamayo,state_ec_11,True
-res_city_109,4,Celica,state_ec_11,True
-res_city_110,5,Chaguarpamba,state_ec_11,True
-res_city_111,6,Espíndola,state_ec_11,True
-res_city_112,7,Gonzanama,state_ec_11,True
-res_city_113,8,Macará,state_ec_11,True
-res_city_114,9,Paltas,state_ec_11,True
-res_city_115,10,Puyango,state_ec_11,True
-res_city_116,11,Saraguro,state_ec_11,True
-res_city_117,12,Sozoranga,state_ec_11,True
-res_city_118,13,Zapotillo,state_ec_11,True
-res_city_119,14,Pindal,state_ec_11,True
-res_city_120,15,Quilanga,state_ec_11,True
-res_city_121,16,Olmedo,state_ec_11,True
-res_city_122,1,Babahoyo,state_ec_12,True
-res_city_123,2,Baba,state_ec_12,True
-res_city_124,3,Montalvo,state_ec_12,True
-res_city_125,4,Puebloviejo,state_ec_12,True
-res_city_126,5,Quevedo,state_ec_12,True
-res_city_127,6,Urdaneta,state_ec_12,True
-res_city_128,7,Ventanas,state_ec_12,True
-res_city_129,8,Vínces,state_ec_12,True
-res_city_130,9,Palenque,state_ec_12,True
-res_city_131,10,Buena Fé,state_ec_12,True 
-res_city_132,11,Valencia,state_ec_12,True
-res_city_133,12,Mocache,state_ec_12,True 
-res_city_134,13,Quinsaloma,state_ec_12,True
-res_city_135,1,Portoviejo,state_ec_13,True 
-res_city_136,2,Bolívar,state_ec_13,True 
-res_city_137,3,Chone,state_ec_13,True
-res_city_138,4,El Carmen,state_ec_13,True
-res_city_139,5,Flavio Alfaro,state_ec_13,True
-res_city_140,6,Jipijapa,state_ec_13,True
-res_city_141,7,Junín,state_ec_13,True
-res_city_142,8,Manta,state_ec_13,True
-res_city_143,9,Montecristi,state_ec_13,True
-res_city_144,10,Paján,state_ec_13,True
-res_city_145,11,Pichincha,state_ec_13,True
-res_city_146,12,Rocafuerte,state_ec_13,True
-res_city_147,13,Santa Ana,state_ec_13,True
-res_city_148,14,Sucre,state_ec_13,True
-res_city_149,15,Tosagua,state_ec_13,True
-res_city_150,16,24 De Mayo,state_ec_13,True
-res_city_151,17,Pedernales,state_ec_13,True
-res_city_152,18,Olmedo,state_ec_13,True
-res_city_153,19,Puerto López,state_ec_13,True
-res_city_154,20,Jama,state_ec_13,True
-res_city_155,21,Jaramijó,state_ec_13,True
-res_city_156,22,San Vicente,state_ec_13,True
-res_city_157,1,Morona,state_ec_14,True
-res_city_158,2,Gualaquiza,state_ec_14,True
-res_city_159,3,Limón Indanza,state_ec_14,True
-res_city_160,4,Palora,state_ec_14,True
-res_city_161,5,Santiago,state_ec_14,True
-res_city_162,6,Sucúa,state_ec_14,True
-res_city_163,7,Huamboya,state_ec_14,True
-res_city_164,8,San Juan Bosco,state_ec_14,True 
-res_city_165,9,Taisha,state_ec_14,True
-res_city_166,10,Logroño,state_ec_14,True
-res_city_167,11,Pablo Sexto,state_ec_14,True
-res_city_168,12,Tiwintza,state_ec_14,True
-res_city_169,1,Tena,state_ec_15,True
-res_city_170,3,Archidona,state_ec_15,True
-res_city_171,4,El Chaco,state_ec_15,True
-res_city_172,7,Quijos,state_ec_15,True
-res_city_173,9,Carlos Julio Arosemena Tola,state_ec_15,True
-res_city_174,1,Pastaza,state_ec_16,True
-res_city_175,2,Mera,state_ec_16,True
-res_city_176,3,Santa Clara,state_ec_16,True
-res_city_177,4,Arajuno,state_ec_16,True
-res_city_178,1,Quito,state_ec_17,True 
-res_city_179,2,Cayambe,state_ec_17,True
-res_city_180,3,Mejia,state_ec_17,True
-res_city_181,4,Pedro Moncayo,state_ec_17,True
-res_city_182,5,Rumiñahui,state_ec_17,True
-res_city_183,7,San Miguel de Los Bancos,state_ec_17,True
-res_city_184,8,Pedro Vicente Maldonado,state_ec_17,True
-res_city_185,9,Puerto Quito,state_ec_17,True
-res_city_186,1,Ambato,state_ec_18,True
-res_city_187,2,Baños de Agua Santa,state_ec_18,True
-res_city_188,3,Cevallos,state_ec_18,True
-res_city_189,4,Mocha,state_ec_18,True
-res_city_190,5,Patate,state_ec_18,True
-res_city_191,6,Quero,state_ec_18,True
-res_city_192,7,San Pedro De Pelileo,state_ec_18,True
-res_city_193,8,Santiago de Píllaro,state_ec_18,True
-res_city_194,9,Tisaleo,state_ec_18,True
-res_city_195,1,Zamora,state_ec_19,True
-res_city_196,2,Chinchipe,state_ec_19,True
-res_city_197,3,Nangaritza,state_ec_19,True
-res_city_198,4,Yacuambi,state_ec_19,True
-res_city_199,5,Yantzaza,state_ec_19,True
-res_city_200,6,El Pangui,state_ec_19,True
-res_city_201,7,Centinela Del Cóndor,state_ec_19,True
-res_city_202,8,Palanda,state_ec_19,True
-res_city_203,9,Paquisha,state_ec_19,True
-res_city_204,1,San Cristóbal,state_ec_20,True
-res_city_205,2,Isabela,state_ec_20,True
-res_city_206,3,Santa Cruz,state_ec_20,True
-res_city_207,1,Lago Agrio,state_ec_21,True
-res_city_208,2,Gonzalo Pizarro,state_ec_21,True
-res_city_209,3,Putumayo,state_ec_21,True
-res_city_210,4,Shushufindi,state_ec_21,True
-res_city_211,5,Sucumbíos,state_ec_21,True
-res_city_212,6,Cascales,state_ec_21,True
-res_city_213,7,Cuyabeno,state_ec_21,True
-res_city_214,1,Orellana,state_ec_22,True
-res_city_215,2,Aguarico,state_ec_22,True
-res_city_216,3,La Joya de Los Sachas,state_ec_22,True
-res_city_217,4,Loreto,state_ec_22,True
-res_city_218,1,Santo Domingo,state_ec_23,True
-res_city_219,1,Santa Elena,state_ec_24,True
-res_city_220,2,La Libertad,state_ec_24,True
-res_city_221,3,Salinas,state_ec_24,True
+res_city_1,1,Cuenca,base.state_ec_01,True
+res_city_2,2,Girón,base.state_ec_01,True
+res_city_3,3,Gualaceo,base.state_ec_01,True
+res_city_4,4,Nabón,base.state_ec_01,True
+res_city_5,5,Paute,base.state_ec_01,True
+res_city_6,6,Pucará,base.state_ec_01,True
+res_city_7,7,San Fernando,base.state_ec_01,True
+res_city_8,8,Santa Isabel,base.state_ec_01,True
+res_city_9,9,Sígsig,base.state_ec_01,True
+res_city_10,10,Oña,base.state_ec_01,True
+res_city_11,11,Chordeleg,base.state_ec_01,True
+res_city_12,12,El Pan,base.state_ec_01,True
+res_city_13,13,Sevilla De Oro,base.state_ec_01,True
+res_city_14,14,Guachapala,base.state_ec_01,True
+res_city_15,15,Camilo Ponce Enríquez,base.state_ec_01,True
+res_city_16,1,Guaranda,base.state_ec_02,True
+res_city_17,2,Chillanes,base.state_ec_02,True
+res_city_18,3,Chimbo,base.state_ec_02,True
+res_city_19,4,Echeandía,base.state_ec_02,True
+res_city_20,5,San Miguel,base.state_ec_02,True
+res_city_21,6,Caluma,base.state_ec_02,True
+res_city_22,7,Las Naves,base.state_ec_02,True
+res_city_23,1,Azogues,base.state_ec_03,True
+res_city_24,2,Biblián,base.state_ec_03,True
+res_city_25,3,Cañar,base.state_ec_03,True
+res_city_26,4,La Troncal,base.state_ec_03,True
+res_city_27,5,El Tambo,base.state_ec_03,True
+res_city_28,6,Déleg,base.state_ec_03,True
+res_city_29,7,Suscal,base.state_ec_03,True
+res_city_30,1,Tulcán,base.state_ec_04,True
+res_city_31,2,Bolívar,base.state_ec_04,True
+res_city_32,3,Espejo,base.state_ec_04,True
+res_city_33,4,Mira,base.state_ec_04,True
+res_city_34,5,Montúfar,base.state_ec_04,True
+res_city_35,6,San Pedro de Huaca,base.state_ec_04,True
+res_city_36,1,Latacunga,base.state_ec_05,True
+res_city_37,2,La Maná,base.state_ec_05,True
+res_city_38,3,Pangua,base.state_ec_05,True
+res_city_39,4,Pujilí,base.state_ec_05,True
+res_city_40,5,Salcedo,base.state_ec_05,True
+res_city_41,6,Saquisilí,base.state_ec_05,True
+res_city_42,7,Sigchos,base.state_ec_05,True
+res_city_43,1,Riobamba,base.state_ec_06,True
+res_city_44,2,Alausí,base.state_ec_06,True
+res_city_45,3,Colta,base.state_ec_06,True
+res_city_46,4,Chambo,base.state_ec_06,True
+res_city_47,5,Chunchi,base.state_ec_06,True
+res_city_48,6,Guamote,base.state_ec_06,True
+res_city_49,7,Guano,base.state_ec_06,True
+res_city_50,8,Pallatanga,base.state_ec_06,True
+res_city_51,9,Penipe,base.state_ec_06,True
+res_city_52,10,Cumandá,base.state_ec_06,True
+res_city_53,1,Machala,base.state_ec_07,True
+res_city_54,2,Arenillas,base.state_ec_07,True
+res_city_55,3,Atahualpa,base.state_ec_07,True
+res_city_56,4,Balsas,base.state_ec_07,True
+res_city_57,5,Chilla,base.state_ec_07,True
+res_city_58,6,El Guabo,base.state_ec_07,True
+res_city_59,7,Huaquillas,base.state_ec_07,True
+res_city_60,8,Marcabelí,base.state_ec_07,True
+res_city_61,9,Pasaje,base.state_ec_07,True
+res_city_62,10,Piñas,base.state_ec_07,True
+res_city_63,11,Portovelo,base.state_ec_07,True
+res_city_64,12,Santa Rosa,base.state_ec_07,True
+res_city_65,13,Zaruma,base.state_ec_07,True
+res_city_66,14,Las Lajas,base.state_ec_07,True
+res_city_67,1,Esmeraldas,base.state_ec_08,True
+res_city_68,2,Eloy Alfaro,base.state_ec_08,True
+res_city_69,3,Muisne,base.state_ec_08,True
+res_city_70,4,Quinindé,base.state_ec_08,True
+res_city_71,5,San Lorenzo,base.state_ec_08,True
+res_city_72,6,Atacames,base.state_ec_08,True
+res_city_73,7,Río Verde,base.state_ec_08,True
+res_city_74,8,La Concordia,base.state_ec_08,True
+res_city_75,1,Guayaquil,base.state_ec_09,True
+res_city_76,2,Alfredo Baquerizo Moreno (Juján),base.state_ec_09,True
+res_city_77,3,Balao,base.state_ec_09,True
+res_city_78,4,Balzar,base.state_ec_09,True
+res_city_79,5,Colimes,base.state_ec_09,True
+res_city_80,6,Daule,base.state_ec_09,True
+res_city_81,7,Durán,base.state_ec_09,True
+res_city_82,8,El Empalme,base.state_ec_09,True
+res_city_83,9,El Triunfo,base.state_ec_09,True
+res_city_84,10,Milagro,base.state_ec_09,True
+res_city_85,11,Naranjal,base.state_ec_09,True
+res_city_86,12,Naranjito,base.state_ec_09,True
+res_city_87,13,Palestina,base.state_ec_09,True
+res_city_88,14,Pedro Carbo,base.state_ec_09,True
+res_city_89,16,Samborondón,base.state_ec_09,True
+res_city_90,18,Santa Lucía,base.state_ec_09,True
+res_city_91,19,Salitre (Urbina Jado),base.state_ec_09,True
+res_city_92,20,San Jacinto de Yaguachi,base.state_ec_09,True
+res_city_93,21,Playas,base.state_ec_09,True
+res_city_94,22,Simón Bolívar,base.state_ec_09,True
+res_city_95,23,Coronel Marcelino Maridueña,base.state_ec_09,True
+res_city_96,24,Lomas de Sargentillo,base.state_ec_09,True
+res_city_97,25,Nobol,base.state_ec_09,True
+res_city_98,27,General Antonio Elizalde (BUCAY),base.state_ec_09,True
+res_city_99,28,Isidro Ayora,base.state_ec_09,True
+res_city_100,1,Ibarra,base.state_ec_10,True
+res_city_101,2,Antonio Ante,base.state_ec_10,True
+res_city_102,3,Cotacachi,base.state_ec_10,True
+res_city_103,4,Otavalo,base.state_ec_10,True
+res_city_104,5,Pimampiro,base.state_ec_10,True
+res_city_105,6,San Miguel de Urcuqui,base.state_ec_10,True
+res_city_106,1,Loja ,base.state_ec_11,True
+res_city_107,2,Calvas,base.state_ec_11,True
+res_city_108,3,Catamayo,base.state_ec_11,True
+res_city_109,4,Celica,base.state_ec_11,True
+res_city_110,5,Chaguarpamba,base.state_ec_11,True
+res_city_111,6,Espíndola,base.state_ec_11,True
+res_city_112,7,Gonzanama,base.state_ec_11,True
+res_city_113,8,Macará,base.state_ec_11,True
+res_city_114,9,Paltas,base.state_ec_11,True
+res_city_115,10,Puyango,base.state_ec_11,True
+res_city_116,11,Saraguro,base.state_ec_11,True
+res_city_117,12,Sozoranga,base.state_ec_11,True
+res_city_118,13,Zapotillo,base.state_ec_11,True
+res_city_119,14,Pindal,base.state_ec_11,True
+res_city_120,15,Quilanga,base.state_ec_11,True
+res_city_121,16,Olmedo,base.state_ec_11,True
+res_city_122,1,Babahoyo,base.state_ec_12,True
+res_city_123,2,Baba,base.state_ec_12,True
+res_city_124,3,Montalvo,base.state_ec_12,True
+res_city_125,4,Puebloviejo,base.state_ec_12,True
+res_city_126,5,Quevedo,base.state_ec_12,True
+res_city_127,6,Urdaneta,base.state_ec_12,True
+res_city_128,7,Ventanas,base.state_ec_12,True
+res_city_129,8,Vínces,base.state_ec_12,True
+res_city_130,9,Palenque,base.state_ec_12,True
+res_city_131,10,Buena Fé,base.state_ec_12,True
+res_city_132,11,Valencia,base.state_ec_12,True
+res_city_133,12,Mocache,base.state_ec_12,True
+res_city_134,13,Quinsaloma,base.state_ec_12,True
+res_city_135,1,Portoviejo,base.state_ec_13,True
+res_city_136,2,Bolívar,base.state_ec_13,True
+res_city_137,3,Chone,base.state_ec_13,True
+res_city_138,4,El Carmen,base.state_ec_13,True
+res_city_139,5,Flavio Alfaro,base.state_ec_13,True
+res_city_140,6,Jipijapa,base.state_ec_13,True
+res_city_141,7,Junín,base.state_ec_13,True
+res_city_142,8,Manta,base.state_ec_13,True
+res_city_143,9,Montecristi,base.state_ec_13,True
+res_city_144,10,Paján,base.state_ec_13,True
+res_city_145,11,Pichincha,base.state_ec_13,True
+res_city_146,12,Rocafuerte,base.state_ec_13,True
+res_city_147,13,Santa Ana,base.state_ec_13,True
+res_city_148,14,Sucre,base.state_ec_13,True
+res_city_149,15,Tosagua,base.state_ec_13,True
+res_city_150,16,24 De Mayo,base.state_ec_13,True
+res_city_151,17,Pedernales,base.state_ec_13,True
+res_city_152,18,Olmedo,base.state_ec_13,True
+res_city_153,19,Puerto López,base.state_ec_13,True
+res_city_154,20,Jama,base.state_ec_13,True
+res_city_155,21,Jaramijó,base.state_ec_13,True
+res_city_156,22,San Vicente,base.state_ec_13,True
+res_city_157,1,Morona,base.state_ec_14,True
+res_city_158,2,Gualaquiza,base.state_ec_14,True
+res_city_159,3,Limón Indanza,base.state_ec_14,True
+res_city_160,4,Palora,base.state_ec_14,True
+res_city_161,5,Santiago,base.state_ec_14,True
+res_city_162,6,Sucúa,base.state_ec_14,True
+res_city_163,7,Huamboya,base.state_ec_14,True
+res_city_164,8,San Juan Bosco,base.state_ec_14,True
+res_city_165,9,Taisha,base.state_ec_14,True
+res_city_166,10,Logroño,base.state_ec_14,True
+res_city_167,11,Pablo Sexto,base.state_ec_14,True
+res_city_168,12,Tiwintza,base.state_ec_14,True
+res_city_169,1,Tena,base.state_ec_15,True
+res_city_170,3,Archidona,base.state_ec_15,True
+res_city_171,4,El Chaco,base.state_ec_15,True
+res_city_172,7,Quijos,base.state_ec_15,True
+res_city_173,9,Carlos Julio Arosemena Tola,base.state_ec_15,True
+res_city_174,1,Pastaza,base.state_ec_16,True
+res_city_175,2,Mera,base.state_ec_16,True
+res_city_176,3,Santa Clara,base.state_ec_16,True
+res_city_177,4,Arajuno,base.state_ec_16,True
+res_city_178,1,Quito,base.state_ec_17,True
+res_city_179,2,Cayambe,base.state_ec_17,True
+res_city_180,3,Mejia,base.state_ec_17,True
+res_city_181,4,Pedro Moncayo,base.state_ec_17,True
+res_city_182,5,Rumiñahui,base.state_ec_17,True
+res_city_183,7,San Miguel de Los Bancos,base.state_ec_17,True
+res_city_184,8,Pedro Vicente Maldonado,base.state_ec_17,True
+res_city_185,9,Puerto Quito,base.state_ec_17,True
+res_city_186,1,Ambato,base.state_ec_18,True
+res_city_187,2,Baños de Agua Santa,base.state_ec_18,True
+res_city_188,3,Cevallos,base.state_ec_18,True
+res_city_189,4,Mocha,base.state_ec_18,True
+res_city_190,5,Patate,base.state_ec_18,True
+res_city_191,6,Quero,base.state_ec_18,True
+res_city_192,7,San Pedro De Pelileo,base.state_ec_18,True
+res_city_193,8,Santiago de Píllaro,base.state_ec_18,True
+res_city_194,9,Tisaleo,base.state_ec_18,True
+res_city_195,1,Zamora,base.state_ec_19,True
+res_city_196,2,Chinchipe,base.state_ec_19,True
+res_city_197,3,Nangaritza,base.state_ec_19,True
+res_city_198,4,Yacuambi,base.state_ec_19,True
+res_city_199,5,Yantzaza,base.state_ec_19,True
+res_city_200,6,El Pangui,base.state_ec_19,True
+res_city_201,7,Centinela Del Cóndor,base.state_ec_19,True
+res_city_202,8,Palanda,base.state_ec_19,True
+res_city_203,9,Paquisha,base.state_ec_19,True
+res_city_204,1,San Cristóbal,base.state_ec_20,True
+res_city_205,2,Isabela,base.state_ec_20,True
+res_city_206,3,Santa Cruz,base.state_ec_20,True
+res_city_207,1,Lago Agrio,base.state_ec_21,True
+res_city_208,2,Gonzalo Pizarro,base.state_ec_21,True
+res_city_209,3,Putumayo,base.state_ec_21,True
+res_city_210,4,Shushufindi,base.state_ec_21,True
+res_city_211,5,Sucumbíos,base.state_ec_21,True
+res_city_212,6,Cascales,base.state_ec_21,True
+res_city_213,7,Cuyabeno,base.state_ec_21,True
+res_city_214,1,Orellana,base.state_ec_22,True
+res_city_215,2,Aguarico,base.state_ec_22,True
+res_city_216,3,La Joya de Los Sachas,base.state_ec_22,True
+res_city_217,4,Loreto,base.state_ec_22,True
+res_city_218,1,Santo Domingo,base.state_ec_23,True
+res_city_219,1,Santa Elena,base.state_ec_24,True
+res_city_220,2,La Libertad,base.state_ec_24,True
+res_city_221,3,Salinas,base.state_ec_24,True

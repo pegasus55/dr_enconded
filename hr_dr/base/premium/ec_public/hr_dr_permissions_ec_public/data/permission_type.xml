@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <!--PERMISOS-->
         <record model="permission.type.legal.detail" id="permission_type_legal_detail_PermissionType1_01">
             <field name="permission_type_id" eval="ref('hr_dr_permissions.PermissionType1')"/>

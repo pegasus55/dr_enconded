@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Collaborators",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """        
         Module to manage the information of the collaborators.""",
     'description': """
@@ -24,12 +24,15 @@
     'depends':
         [
             'base',
+            'hr',
+
             'l10n_latam_base',
             'l10n_ec',
+
             'dr_start_system',
-            'hr',
+
             'hr_dr_management',
-            'dr_contacts',
+            'dr_contacts_ec',
         ],
 
     # always loaded
@@ -56,6 +59,7 @@
         'views/hr_catastrophic_disease.xml',
         'views/hr_employee_allergies.xml',
         'views/hr_employee_food_preferences.xml',
+        'views/res_partner_view.xml',
 
         'views/res_config_settings.xml',
         'views/mail_template.xml',
@@ -67,6 +71,7 @@
         'data/employee_admin.xml',
         'data/decimal_precision.xml',
         'data/departure_reason.xml',
+        'data/resource_data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

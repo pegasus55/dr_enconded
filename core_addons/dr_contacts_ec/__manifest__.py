@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Contacts EC",
-    'version': '14.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage contacts.
         """,
@@ -30,9 +30,11 @@
 
     # always loaded
     'data': [
-        'data/res.country.state.csv',
+        'data/res_country_state.xml',
         'data/res.city.csv',
-        'data/res.parish.csv'
+        'data/res.parish.csv',
+        'data/res_zone.xml',
+        'data/l10n_latam_identification_type_data.xml',
     ],
     'demo': [],
     # 'images': ['static/description/banner.jpg'],

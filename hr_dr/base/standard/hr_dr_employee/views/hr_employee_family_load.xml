@@ -28,7 +28,8 @@
                                 <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                 <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                 <field name="insured"/>
-<!--                                <field name="judicial_withholding_id" attrs="{'invisible': [('relationship','not in',['children','daughter','son'])]}"/>-->
+                                <field name="receive_taxed_income"/>
+                                <field name="employee_dependent"/>
                             </group>
                         </group>
                         <notebook>
@@ -60,6 +61,8 @@
                     <field name="age"/>
                     <field name="disability"/>
                     <field name="insured"/>
+                    <field name="receive_taxed_income"/>
+                    <field name="employee_dependent"/>
                 </tree>
             </field>
         </record>
@@ -78,7 +81,7 @@
             </field>
         </record>
         <record id="hr_employee_family_load_action" model="ir.actions.act_window">
-            <field name="name">Family load</field>
+            <field name="name">Family loads</field>
             <field name="res_model">hr.employee.family.load</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_hr_employee_family_load_tree"/>
@@ -88,8 +91,6 @@
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new family load for employee.
-                </p>
-                <p>
                 </p>
             </field>
         </record>

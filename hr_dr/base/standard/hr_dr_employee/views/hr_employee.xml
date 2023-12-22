@@ -7,6 +7,10 @@
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
 
+                <xpath expr="//field[@name='mobile_phone']" position="attributes">
+                    <attribute name="string">Work mobile</attribute>
+                </xpath>
+
                 <xpath expr="//field[@name='work_phone']" position="attributes">
                     <attribute name="string">Work phone</attribute>
                 </xpath>
@@ -74,6 +78,10 @@
                     <attribute name="required">1</attribute>
                 </xpath>
 
+                <xpath expr="//field[@name='gender']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+
                 <xpath expr="//field[@name='study_field']" position="before">
                     <field name="profession_id"/>
                 </xpath>
@@ -90,8 +98,12 @@
                     <attribute name="string">User</attribute>
                 </xpath>
 
+                <xpath expr="//page[@name='personal_information']//group" position="attributes">
+                    <attribute name="string">Personal Information</attribute>
+                </xpath>
+
                 <xpath expr="//page[@name='personal_information']//group" position="inside">
-                    <group string="Signature">
+                    <group string="Signature" name="signature">
                         <field name="signature_mode"/>
                         <field name="signature" widget="image" attrs="{'invisible': [('signature_mode','!=','uploaded_image')],'required': [('signature_mode','=','uploaded_image')]}"/>
                     </group>
@@ -121,24 +133,27 @@
                     <attribute name="string">Schedule</attribute>
                 </xpath>
 
-                <xpath expr="//field[@name='pin']" position="before">
-                    <field name="record_attendance_from_system"/>
-                </xpath>
+<!--                <xpath expr="//field[@name='pin']" position="before">-->
+<!--                    <field name="record_attendance_from_system"/>-->
+<!--                    <field name="allow_attendance_web"/>-->
+<!--                </xpath>-->
 
-                <xpath expr="//field[@name='job_id']" position="after">
-                    <field name="payment_method"/>
-                    <field name="receives_profits"/>
+                <xpath expr="//field[@name='user_id']" position="after">
                     <field name="employee_admin"/>
                 </xpath>
 
+                <xpath expr="//field[@name='bank_account_id']" position="before">
+                    <field name="payment_method"/>
+                </xpath>
+
                 <xpath expr="//group[@name='identification_group']" position="after">
-                    <group string="" name="entry_group">
+                    <group string="Entry" name="entry_group">
                         <field name="last_company_entry_date" required="1"/>
                         <field name="normative_id" required="1"/>
-
                         <field name="state"/>
                         <field name="unemployed_type" attrs="{'invisible': [('state', 'not in', ['unemployed'])] , 'required': [('state', 'in', ['unemployed'])]}"/>
-<!--                        <field name="end_date" attrs="{'invisible': [('state', 'not in', ['unemployed', 'retired'])] , 'required': [('state', 'in', ['unemployed', 'retired'])]}"/>-->
+                    </group>
+                    <group string="Retired" name="retired" attrs="{'invisible': [('state', '!=', 'retired')]}">
                         <field name="pension" widget='monetary' attrs="{'invisible': [('state', '!=', 'retired')] , 'required': [('state', '==', 'retired')]}"/>
                         <field name="retirement_certificate" attrs="{'invisible': [('state', '!=', 'retired')] , 'required': [('state', '==', 'retired')]}"/>
                         <field name="date_of_death" attrs="{'invisible': [('state', '!=', 'retired')]}"/>
@@ -148,8 +163,14 @@
                         <field name="single_payment_after_death" attrs="{'invisible': [('date_of_death', '=', False)], 'required': [('date_of_death', '!=', False)]}"/>
                         <field name="single_payment_after_death_document" attrs="{'invisible': [('single_payment_after_death', '=', False)], 'required': [('single_payment_after_death', '!=', False)]}"/>
                     </group>
-                    <group string="Attendance web" name="attendance_web">
-                        <field name="allow_attendance_web"/>
+                </xpath>
+
+                <xpath expr="//group[@name='payroll_group']" position="after">
+                    <group string="RDEP" name="rdep">
+                        <field name="residence"/>
+                        <field name="country_of_residence"/>
+                        <field name="agreement_applies"/>
+                        <field name="type_net_salary_system"/>
                     </group>
                 </xpath>
 
@@ -159,6 +180,7 @@
 
                 <xpath expr="//notebook//page[last()]" position="after">
                     <page name="utilities" string="Utilities">
+                        <separator string="Backups"/>
                         <field name="backups_ids" context="{'default_employee_id': active_id}">
                             <tree editable="bottom">
                                 <field name="employee_id" invisible="1"/>
@@ -182,7 +204,8 @@
                             </form>
                         </field>
 
-                        <field name="food_preferences_ids" nolabel="1">
+                        <separator string="Food preferences"/>
+                        <field name="food_preferences_ids" readonly="0" nolabel="0">
                             <tree>
                                 <field name="name"/>
                                 <field name="description"/>
@@ -201,7 +224,8 @@
                             </form>
                         </field>
 
-                        <field name="department_history_ids" readonly="0">
+                        <separator string="Department history"/>
+                        <field name="department_history_ids" readonly="0" nolabel="0">
                             <tree>
                                 <field name="employee_id" invisible="1"/>
                                 <field name="department_id"/>
@@ -226,7 +250,8 @@
                             </form>
                         </field>
 
-                        <field name="company_history_ids" readonly="0">
+                        <separator string="Company history"/>
+                        <field name="company_history_ids" readonly="0" nolabel="0">
                             <tree>
                                 <field name="employee_id" invisible="1"/>
                                 <field name="date_from"/>
@@ -248,10 +273,7 @@
                                 </sheet>
                             </form>
                         </field>
-                        <group name="summary_time_company">
-                            <field name="total_time_in_company"/>
-                        </group>
-
+                        <field name="total_time_in_company"/>
                     </page>
                     <page name="health" string="Health">
                         <group>
@@ -312,7 +334,7 @@
                                     </form>
                                 </field>
                             </page>
-                            <page string="Catastrophic Disease" name="catastrophic_disease" attrs="{'invisible': [('presents_catastrophic_disease','=',False)]}">
+                            <page string="Catastrophic Diseases" name="catastrophic_disease" attrs="{'invisible': [('presents_catastrophic_disease','=',False)]}">
                                 <field name="catastrophic_disease_ids" nolabel="1">
                                     <tree>
                                         <field name="name"/>
@@ -358,7 +380,8 @@
                             </page>
                         </notebook>
                     </page>
-                    <page name="family_load" string="Family Load">
+                    <page name="family_load" string="Family Loads">
+                        <separator string="Family loads"/>
                         <field name="family_load_ids">
                             <tree>
                                 <field name="employee_id" invisible="1"/>
@@ -371,6 +394,9 @@
                                 <field name="age"/>
                                 <field name="disability"/>
                                 <field name="insured"/>
+                                <field name="receive_taxed_income"/>
+                                <field name="employee_dependent"/>
+                                <field name="presents_catastrophic_diseases"/>
                             </tree>
                             <form string="Family load">
                                 <sheet>
@@ -393,7 +419,9 @@
                                             <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                             <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
                                             <field name="insured"/>
-<!--                                            <field name="judicial_withholding_id" attrs="{'invisible': [('relationship','not in',['children','daughter','son'])]}"/>-->
+                                            <field name="receive_taxed_income"/>
+                                            <field name="employee_dependent"/>
+                                            <field name="presents_catastrophic_diseases"/>
                                             <field name="active"/>
                                         </group>
                                     </group>
@@ -405,6 +433,8 @@
                                 </sheet>
                             </form>
                         </field>
+
+                        <separator string="Judicial withholdings"/>
                         <field name="judicial_withholding_ids" context="{'default_employee_id': active_id}">
                             <tree>
                                 <field name="employee_id" invisible="1"/>
@@ -462,8 +492,8 @@
         <!--Colaborador-->
 
         <!--Colaboradores por estado-->
-        <record id="affiliates_action" model="ir.actions.act_window">
-            <field name="name">Affiliates</field>
+        <record id="affiliate_action" model="ir.actions.act_window">
+            <field name="name">Affiliate collaborators</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">kanban,tree,form</field>
@@ -473,42 +503,39 @@
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
                 Affiliate collaborators.
-              </p><p>
               </p>
             </field>
         </record>
         <record id="temporary_action" model="ir.actions.act_window">
-            <field name="name">Temporary</field>
+            <field name="name">Temporary collaborators</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="context">{'chat_icon': True}</field>
             <field name="search_view_id" ref="hr.view_employee_filter"/>
-            <field name="domain">[('state', '=','temporal'),('active', '=',True)]</field>
+            <field name="domain">[('state', '=','temporary'),('active', '=',True)]</field>
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
                 Temporary collaborators.
-              </p><p>
               </p>
             </field>
         </record>
-        <record id="interns_action" model="ir.actions.act_window">
-            <field name="name">Interns</field>
+        <record id="intern_action" model="ir.actions.act_window">
+            <field name="name">Interns collaborators</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="context">{'chat_icon': True}</field>
             <field name="search_view_id" ref="hr.view_employee_filter"/>
-            <field name="domain">[('state', '=','passant'),('active', '=',True)]</field>
+            <field name="domain">[('state', '=','intern'),('active', '=',True)]</field>
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
                 Interns collaborators.
-              </p><p>
               </p>
             </field>
         </record>
         <record id="unemployed_action" model="ir.actions.act_window">
-            <field name="name">Unemployed</field>
+            <field name="name">Unemployed collaborators</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">kanban,tree,form</field>
@@ -516,12 +543,13 @@
             <field name="search_view_id" ref="hr.view_employee_filter"/>
             <field name="domain">[('state', 'in',['unemployed']),('active', '=',False)]</field>
             <field name="help" type="html">
-                <p class="oe_view_nocontent_smiling_face">Unemployed collaborators.
+                <p class="oe_view_nocontent_smiling_face">
+                    Unemployed collaborators.
                 </p>
             </field>
         </record>
         <record id="retired_action" model="ir.actions.act_window">
-            <field name="name">Retired</field>
+            <field name="name">Retired collaborators</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">kanban,tree,form</field>
@@ -529,7 +557,8 @@
             <field name="search_view_id" ref="hr.view_employee_filter"/>
             <field name="domain">[('state', '=','retired'),('active', '=',False)]</field>
             <field name="help" type="html">
-                <p class="oe_view_nocontent_smiling_face">Retired collaborators.
+                <p class="oe_view_nocontent_smiling_face">
+                    Retired collaborators.
                 </p>
             </field>
         </record>

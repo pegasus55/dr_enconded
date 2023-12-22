@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Payroll for odoo enterprise",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage the payroll of collaborators in odoo enterprise.
     """,
@@ -30,6 +30,7 @@
             'account',
             'account_accountant',
             'account_batch_payment',
+            'dr_signature',
         ],
 
     # always loaded
@@ -42,6 +43,7 @@
         'data/hr_payroll_structure_inactive.xml',
         'data/hr_payslip_input_type_inactive.xml',
         'data/hr_payslip_input_type.xml',
+        'data/hr_assets_liquidation_cause.xml',
 
         'wizard/register_account_payment.xml',
         'wizard/register_res_payment.xml',
@@ -63,30 +65,24 @@
         'views/hr_personal_expense.xml',
         'views/res_config_settings.xml',
 
+        'views/report_payslip_templates.xml',
+
+        'reports/hr_liquidation_report.xml',
+
         'wizard/generate_hr_fortnight.xml',
+        'wizard/clone_salary_rule.xml',
 
         'views/hr_dr_payroll_enterprise_menu.xml',
-
-
-        # 'views/hr_salary_rule.xml',
-        # 'views/hr_payroll_structure.xml',
-        # 'views/hr_employee_information.xml',
-        # 'views/hr_rent_tax_table.xml',
-        # 'views/retired_employees.xml',
-        # 'views/hr_payment_utility.xml',
-        # 'views/hr_tenths.xml',
-        #
-        # 'views/hr_assets_liquidation_view.xml',
-        #
-        # 'views/retired_employees_email_notifications.xml',
-
-
-
+        'views/hr_assets_liquidation_view.xml',
 
     ],
-    # only loaded in demonstration mode
-    'demo': [
-    ],
+
+    'assets': {
+        'web.assets_backend': [
+            'hr_dr_payroll_enterprise/static/src/js/payslip_list.js',
+        ],
+    },
+
     'images': ["static/description/icon.png"],
     'license': 'AGPL-3',
     'installable': True,

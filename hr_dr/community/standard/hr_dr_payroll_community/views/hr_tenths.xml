@@ -99,7 +99,7 @@
 			</tree>
 		</field>
 	</record>
-	<record id="action_tenths_form" model="ir.actions.act_window">
+	<record id="action_tenths" model="ir.actions.act_window">
 		<field name="name">Tenths</field>
 		<field name="res_model">hr.tenth</field>
 		<field name="view_mode">tree,form</field>
@@ -209,7 +209,7 @@
 			</tree>
 		</field>
 	</record>
-	<record id="action_tenths_line_form" model="ir.actions.act_window">
+	<record id="action_tenths_line" model="ir.actions.act_window">
 		<field name="name">Tenth details</field>
 		<field name="res_model">hr.tenth.line</field>
 		<field name="view_mode">tree,form</field>
@@ -243,7 +243,7 @@
 <!--	</record>-->
  	
 	<menuitem id="menu_action_tenths_root" name="Tenths" parent="om_hr_payroll.menu_hr_payroll_root" sequence="39" groups="om_hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_action_tenths" action="action_tenths_form" parent="menu_action_tenths_root" sequence="10" groups="om_hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_action_tenths_line" action="action_tenths_line_form" parent="menu_action_tenths_root" sequence="20" groups="om_hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_action_tenths" action="action_tenths" parent="menu_action_tenths_root" sequence="10" groups="om_hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_action_tenths_line" action="action_tenths_line" parent="menu_action_tenths_root" sequence="20" groups="om_hr_payroll.group_hr_payroll_manager"/>
 
 </odoo>

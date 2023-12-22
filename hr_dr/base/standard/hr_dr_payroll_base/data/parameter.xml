@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
 
     	<record id="retired_employee_salary_notifications_mode" model="ir.config_parameter">
             <field name="key">retired.employee.salary.notifications.mode</field>
@@ -57,6 +57,10 @@
             <field name="key">profit.calculation.based.on</field>
             <field name="value">payroll</field>
         </record>
+        <record id="include_external_services_in_csv_file" model="ir.config_parameter">
+            <field name="key">include.external.services.in.csv.file</field>
+            <field name="value">1</field>
+        </record>
 
         <record id="pay_living_wage_notifications_mode" model="ir.config_parameter">
             <field name="key">pay.living.wage.notifications.mode</field>
@@ -82,6 +86,11 @@
         <record id="payment_tenth_second_administrator" model="ir.config_parameter">
             <field name="key">payment.tenth.second.administrator</field>
             <field name="value"/>
+        </record>
+
+        <record id="discount_percentage_for_personal_expenses" model="ir.config_parameter">
+            <field name="key">discount.percentage.for.personal.expenses</field>
+            <field name="value">18</field>
         </record>
     </data>
 </odoo>

@@ -14,57 +14,57 @@
           </h3>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Código:</span>
+              <span>Código: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Estado de la solicitud:</span>
+              <span>Estado de la solicitud: </span>
               <span class="pl-3 text-muted flex-grow-1">APROBADA</span>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Fecha de la solicitud:</span>
+              <span>Fecha de la solicitud: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.date" t-options='{"widget": "date"}'/>
             </div>
             <div class="col-6 d-flex">
-              <span>Fecha inicial de pago:</span>
+              <span>Fecha inicial de pago: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.payment_date" t-options='{"widget": "date"}'/>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Nombre del colaborador:</span>
+              <span>Colaborador: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Cédula:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.identification_id"></span>
+              <span>Identificación: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.identification_id"/>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Cantidad solicitada:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.loan_amount" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"></span>
+              <span>Cantidad solicitada: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.loan_amount" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Cantidad de cuotas:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.installment"></span>
+              <span>Cantidad de cuotas: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.installment"/>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Cargo:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"></span>
+              <span>Cargo: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Departamento:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"></span>
+              <span>Departamento: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"/>
             </div>
           </div>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Motivo:</span>
+              <span>Motivo: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.commentary"/>
             </div>
           </div>
@@ -101,7 +101,7 @@
               <span t-field="doc.employee_requests_id.name"/><br/>
               Colaborador
             </div>
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div class="col-4 text-center border-top border-dark">
               <t t-if="doc.employee_requests_id.sudo().department_id">
                 <t t-if="doc.employee_requests_id != doc.employee_requests_id.sudo().department_id.manager_id">
@@ -118,31 +118,31 @@
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div t-if="doc.get_signature_mode()=='uploaded_image'" class="col-4 text-center">
               <img t-if="doc._get_last_approver().signature_mode=='uploaded_image'" t-att-src="image_data_uri(doc._get_last_approver().signature)" style="max-height:80pt;max-width:100%" alt="Signature"/>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div class="col-4 text-center border-top border-dark">
               <span t-if="doc._get_last_approver()" t-field="doc._get_last_approver().name"/>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div class="col-4 text-center">
               <span t-if="doc._get_last_approver()" t-field="doc._get_last_approver().job_id.position_id.name"/>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div class="col-4 text-center">
               <span t-if="doc._get_last_approver()" t-field="doc._get_last_approver().department_id.name"/>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-4"></div>
+            <div class="col-4"/>
             <div class="col-4 text-center">
               <span t-field="res_company.name"/>
             </div>
@@ -175,7 +175,6 @@
   />
 
 
-
   <template id="report_discount_authorization_document">
     <t t-call="web.external_layout">
       <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
@@ -191,39 +190,39 @@
           </h3>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Código:</span>
+              <span>Código: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Fecha:</span>
+              <span>Fecha: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.date" t-options='{"widget": "date"}'/>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Nombre del colaborador:</span>
+              <span>Colaborador: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Identificación:</span>
+              <span>Identificación: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.sudo().identification_id"/>
             </div>
           </div>
           <div class="row">
             <div class="col-6 d-flex">
-              <span>Cargo:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"></span>
+              <span>Cargo: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"/>
             </div>
             <div class="col-6 d-flex">
-              <span>Departamento:</span>
-              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"></span>
+              <span>Departamento: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"/>
             </div>
           </div>
           <br/>
           <div class="row">
             <div class="col-12 d-flex">
               <p align="justify">
-                Por medio del presente documento autorizo a la compañía <strong><t t-esc="res_company.partner_id.name"/></strong> a descontar de mi rol de pagos la cantidad total de: <strong><span t-field="doc.loan_amount" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"></span></strong> en <strong><span t-field="doc.installment"></span></strong> cuota(s) por concepto de <strong>PRÉSTAMO EMPRESA</strong>. En caso de desvinculación de la empresa autorizo que el saldo o valor total se descuente de mi liquidación de haberes.
+                Por medio del presente documento autorizo a la compañía <strong><t t-esc="res_company.partner_id.name"/></strong> a descontar de mi rol de pagos la cantidad total de: <strong><span t-field="doc.loan_amount" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"></span></strong> en <strong><span t-field="doc.installment"></span></strong> cuota(s) por concepto de <strong>PRÉSTAMO A COLABORADORES</strong>. En caso de desvinculación de la empresa autorizo que el saldo o valor total se descuente de mi liquidación de haberes.
               </p>
             </div>
           </div>
@@ -257,7 +256,7 @@
           <br/>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Firma del colaborador:</span>
+              <span>Firma del colaborador: </span>
             </div>
           </div>
           <div class="row">
@@ -267,21 +266,21 @@
           </div>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Identificación:</span>
+              <span>Identificación: </span>
               <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.sudo().identification_id"/>
             </div>
           </div>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Dirección:</span>
+              <span>Dirección: </span>
               <span class="pl-3 text-muted flex-grow-1">
-                <t t-esc="complete_address"></t>
+                <t t-esc="complete_address"/>
               </span>
             </div>
           </div>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Teléfono:</span>
+              <span>Teléfono: </span>
               <t t-if="doc.employee_requests_id.personal_mobile_phone != ''">
                 <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.personal_mobile_phone"/><br/>
               </t>
@@ -295,7 +294,7 @@
           <br/>
           <div class="row">
             <div class="col-12 d-flex">
-              <span>Autorizado por:</span>
+              <span>Autorizado por: </span>
             </div>
           </div>
           <div class="row" t-if="doc.get_signature_mode()=='without_signature'">
@@ -352,5 +351,4 @@
     groups="hr_dr_loan.hr_dr_loan_group_employee"
     menu="False"
   />
-
 </odoo>

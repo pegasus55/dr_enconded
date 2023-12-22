@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_credit_payroll_enterprise_form_view" model="ir.ui.view">
+        <field name="name">hr_credit_payroll_enterprise_form_view</field>
+        <field name="model">hr.credit</field>
+        <field name="inherit_id" ref="hr_dr_credit.hr_credit_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='credit_lines']//tree//field[@name='paid']" position="after">
+                <field name="payslip_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

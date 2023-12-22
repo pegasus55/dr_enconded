@@ -126,6 +126,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="include_external_services_in_csv_file"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Include external services personnel in the utility legalization file.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="include_external_services_in_csv_file"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <h2>Pay living wage</h2>
@@ -329,6 +345,26 @@
                                 <div class="content-group">
                                     <div class="mt16">
                                         <field name="retired_employee_fourteenth_salary_second_administrator" attrs="{'required': [('retired_employee_fourteenth_salary_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Income tax</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="percentage_for_personal_expenses"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Discount percentage for personal expenses.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="percentage_for_personal_expenses"
                                             class="o_light_label"/>
                                     </div>
                                 </div>

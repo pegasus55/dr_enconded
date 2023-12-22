@@ -49,8 +49,6 @@
                 <p class="oe_view_nocontent_create">
                     Click to define a new food preference.
                 </p>
-                <p>
-                </p>
             </field>
         </record>
     </data>

@@ -64,9 +64,7 @@
             }</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-                    Click to define a new company history for employee.
-                </p>
-                <p>
+                    Click to add a new record to the employee's history based on their return to the company.
                 </p>
             </field>
         </record>

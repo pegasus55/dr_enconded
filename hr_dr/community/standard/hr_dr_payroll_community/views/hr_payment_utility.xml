@@ -63,8 +63,8 @@
 							<field name="end_date" readonly="1" force_save="1"/>
 							<field name="fiscal_year" readonly="1" force_save="1"/>
 							<field name="date" attrs="{'required': True, 'readonly': [('state','not in',['draft','calculated'])]}"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly': [('state','not in',['draft','calculated'])]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly': [('state','not in',['draft','calculated'])]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 						<group>
 							<field name="utility_value" attrs="{'required': True, 'readonly': [('state','not in',['draft','calculated'])]}" widget='monetary'/>
@@ -180,8 +180,8 @@
 				<field name="total_worked_days"/>
 				<field name="total_family_loads"/>
 				<field name="state"/>
-				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>

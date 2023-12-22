@@ -14,8 +14,8 @@
                     <field name="type"/>
                 </field>
                 <field name="amount" position="after">
-                    <field name="judicial_withholding_id" attrs="{'required':[('type','=','expense_with_beneficiary')]}" domain="[('employee_id','=',employee_id)]"/>
-                    <field name="beneficiary_id" attrs="{'required':[('type','=','expense_with_beneficiary')]}"/>
+                    <field name="judicial_withholding_id" optional="hide" attrs="{'required':[('type','=','expense_with_beneficiary')]}" domain="[('employee_id','=',employee_id)]"/>
+                    <field name="beneficiary_id" optional="hide" attrs="{'required':[('type','=','expense_with_beneficiary')]}"/>
                 </field>
             </field>
         </record>
@@ -34,8 +34,8 @@
                     <field name="type"/>
                 </field>
                 <field name="amount" position="after">
-                    <field name="judicial_withholding_id" attrs="{'required':[('type','=','expense_with_beneficiary')]}" domain="[('employee_id','=',employee_id)]"/>
-                    <field name="beneficiary_id" attrs="{'required':[('type','=','expense_with_beneficiary')]}"/>
+                    <field name="judicial_withholding_id" optional="hide" attrs="{'required':[('type','=','expense_with_beneficiary')]}" domain="[('employee_id','=',employee_id)]"/>
+                    <field name="beneficiary_id" optional="hide" attrs="{'required':[('type','=','expense_with_beneficiary')]}"/>
                 </field>
             </field>
         </record>

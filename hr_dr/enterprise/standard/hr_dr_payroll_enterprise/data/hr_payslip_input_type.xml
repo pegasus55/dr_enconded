@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
 		<!--Ingresos que generan beneficios sociales-->
         <record id="hr_payslip_input_type_HORA_NOCTURNA" model="hr.payslip.input.type">
             <field name="name">Horas nocturnas (25%)</field>
@@ -155,9 +155,9 @@
             <field name="country_id" ref="base.ec"/>
             <field name="type">income</field>
         </record>
-        <record id="hr_payslip_input_type_DEV_IMP_RENTA_PREVIOUS_YEAR" model="hr.payslip.input.type">
-            <field name="name">Devolución del impuesto a la renta (Año anterior)</field>
-            <field name="code">DEV_IMP_RENTA_PREVIOUS_YEAR</field>
+        <record id="hr_payslip_input_type_IT_ABE" model="hr.payslip.input.type">
+            <field name="name">Impuesto a la renta asumido por el empleador</field>
+            <field name="code">IT_ABE</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">income</field>
         </record>
@@ -278,6 +278,12 @@
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense</field>
         </record>
+        <record id="hr_payslip_input_type_RETENCION_IMPUESTO_RENTA" model="hr.payslip.input.type">
+            <field name="name">Retención del impuesto a la renta</field>
+            <field name="code">RETENCION_IMPUESTO_RENTA</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="type">expense</field>
+        </record>
         <record id="hr_payslip_input_type_IMP_RENTA_PREVIOUS_YEAR" model="hr.payslip.input.type">
             <field name="name">Impuesto a la renta (Año anterior)</field>
             <field name="code">IMP_RENTA_PREVIOUS_YEAR</field>
@@ -299,35 +305,35 @@
         <record id="hr_payslip_input_type_PALIMENTOS_1" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_1</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_1,D_D14_M_PALIMENTOS_1</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_1,D_D14_M_PALIMENTOS_1,DP_D13_A_PALIMENTOS_1,DP_D14_A_PALIMENTOS_1</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_2" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_2</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_2,D_D14_M_PALIMENTOS_2</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_2,D_D14_M_PALIMENTOS_2,DP_D13_A_PALIMENTOS_2,DP_D14_A_PALIMENTOS_2</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_3" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_3</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_3,D_D14_M_PALIMENTOS_3</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_3,D_D14_M_PALIMENTOS_3,DP_D13_A_PALIMENTOS_3,DP_D14_A_PALIMENTOS_3</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_4" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_4</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_4,D_D14_M_PALIMENTOS_4</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_4,D_D14_M_PALIMENTOS_4,DP_D13_A_PALIMENTOS_4,DP_D14_A_PALIMENTOS_4</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
         <record id="hr_payslip_input_type_PALIMENTOS_5" model="hr.payslip.input.type">
             <field name="name">Pensión alimenticia</field>
             <field name="code">PALIMENTOS_5</field>
-            <field name="associated_rules">D_D13_M_PALIMENTOS_5,D_D14_M_PALIMENTOS_5</field>
+            <field name="associated_rules">D_D13_M_PALIMENTOS_5,D_D14_M_PALIMENTOS_5,DP_D13_A_PALIMENTOS_5,DP_D14_A_PALIMENTOS_5</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense_with_beneficiary</field>
         </record>
@@ -387,11 +393,66 @@
         </record>
         <!--Egresos-->
 
+        <!--Provisiones-->
+        <record id="hr_payslip_input_type_PROV_VACA" model="hr.payslip.input.type">
+            <field name="name">Provisión de vacaciones</field>
+            <field name="code">PROV_VACA</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="type">provision</field>
+        </record>
+        <!--Provisiones-->
+
+        <!--Cruce de provisiones-->
         <record id="hr_payslip_input_type_VACATIONS_TAKEN" model="hr.payslip.input.type">
             <field name="name">Vacaciones tomadas</field>
             <field name="code">VACATIONS_TAKEN</field>
             <field name="country_id" ref="base.ec"/>
+            <field name="type">provision_crossing</field>
+        </record>
+        <!--Cruce de provisiones-->
+
+        <!--Indemnizaciones-->
+        <record id="hr_payslip_input_type_compensation" model="hr.payslip.input.type">
+            <field name="name">Indemnización</field>
+            <field name="code">INDE</field>
+            <field name="country_id" ref="base.ec"/>
             <field name="type">income</field>
         </record>
+
+        <record id="hr_payslip_input_type_eviction_compensation" model="hr.payslip.input.type">
+            <field name="name">Indemnización desahucio</field>
+            <field name="code">INDE_EVICTION</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="type">income</field>
+        </record>
+
+        <record id="hr_payslip_input_type_union_leader_compensation" model="hr.payslip.input.type">
+          <field name="name">Indemnización DI dirigente sindical</field>
+          <field name="code">INDE_LEADER</field>
+            <field name="country_id" ref="base.ec"/>
+          <field name="type">income</field>
+        </record>
+
+        <record id="hr_payslip_input_type_untimely_termination_compensation" model="hr.payslip.input.type">
+          <field name="name">Indemnización despido intempestivo</field>
+          <field name="code">INDE_TERMINATION</field>
+            <field name="country_id" ref="base.ec"/>
+          <field name="type">income</field>
+        </record>
+
+        <record id="hr_payslip_input_type_pregnancy_compensation" model="hr.payslip.input.type">
+          <field name="name">Indemnización DI embarazada</field>
+          <field name="code">INDE_PREGNANCY</field>
+          <field name="country_id" ref="base.ec"/>
+          <field name="type">income</field>
+        </record>
+
+        <record id="hr_payslip_input_type_disability_compensation" model="hr.payslip.input.type">
+          <field name="name">Indemnización DI discapacidad</field>
+          <field name="code">INDE_DISABILITY</field>
+          <field name="country_id" ref="base.ec"/>
+          <field name="type">income</field>
+        </record>
+        <!--FIN Indemnizaciones-->
     </data>
 </odoo>

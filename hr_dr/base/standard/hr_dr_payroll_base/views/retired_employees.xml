@@ -20,8 +20,8 @@
 							<field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
 						</group>
 						<group>
-                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 					<field name="commentary" attrs="{'readonly':[('state','!=','draft')]}"/>
@@ -116,7 +116,7 @@
 		</field>
 	</record>
 	<record id="action_retired_employees_salary" model="ir.actions.act_window">
-		<field name="name">Retired collaborator salary</field>
+		<field name="name">Retired collaborator salary action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.salary</field>
 		<field name="view_mode">tree,form</field>
@@ -232,7 +232,7 @@
 	</record>
 
 	<record id="action_retired_employees_salary_line" model="ir.actions.act_window">
-		<field name="name">Retired collaborator salary detail</field>
+		<field name="name">Retired collaborator salary detail action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.salary.line</field>
 		<field name="view_mode">tree,form</field>
@@ -258,8 +258,8 @@
 					<group>
 						<group>
                             <field name="year" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 						<group>
 							<field name="period_start" readonly = "1" force_save="1"/>
@@ -362,7 +362,7 @@
 		</field>
 	</record>
 	<record id="action_retired_employees_thirteenth_salary" model="ir.actions.act_window">
-		<field name="name">Retired collaborator thirteenth salary</field>
+		<field name="name">Retired collaborator thirteenth salary action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.thirteenth.salary</field>
 		<field name="view_mode">tree,form</field>
@@ -478,7 +478,7 @@
 	</record>
 
 	<record id="action_retired_employees_thirteenth_salary_line" model="ir.actions.act_window">
-		<field name="name">Retired collaborator thirteenth salary detail</field>
+		<field name="name">Retired collaborator thirteenth salary detail action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.thirteenth.salary.line</field>
 		<field name="view_mode">tree,form</field>
@@ -505,8 +505,8 @@
 						<group>
                             <field name="year" attrs="{'readonly':[('state','!=','draft')]}"/>
 							<field name="region" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 						<group>
 							<field name="period_start" readonly = "1" force_save="1"/>
@@ -611,7 +611,7 @@
 		</field>
 	</record>
 	<record id="action_retired_employees_fourteenth_salary" model="ir.actions.act_window">
-		<field name="name">Retired collaborator fourteenth salary</field>
+		<field name="name">Retired collaborator fourteenth salary action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.fourteenth.salary</field>
 		<field name="view_mode">tree,form</field>
@@ -728,7 +728,7 @@
 	</record>
 
 	<record id="action_retired_employees_fourteenth_salary_line" model="ir.actions.act_window">
-		<field name="name">Retired collaborator fourteenth salary detail</field>
+		<field name="name">Retired collaborator fourteenth salary detail action</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">retired.employee.fourteenth.salary.line</field>
 		<field name="view_mode">tree,form</field>

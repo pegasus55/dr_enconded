@@ -1,0 +1,545 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dr_contract_ec_private
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-20 14:47+0000\n"
+"PO-Revision-Date: 2023-10-20 14:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__active
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__active
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__active
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__active
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__active
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__active
+msgid "Active"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_form
+msgid "Branch economic activities"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.branch_economic_activity_list_action
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__branch_economic_activity_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__branch_economic_activity_id
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_branch_economic_activity
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.subbranch_economic_activity_search
+msgid "Branch economic activity"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__branch_economic_activity_ids
+msgid "Branch of economic activities"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_branch_economic_activity
+msgid "Branch of economic activity"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__comment
+msgid "Comment"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__company_id
+msgid "Company"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.branch_economic_activity_list_action
+msgid "Create the branch economic activity."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.occupational_structure_level_list_action
+msgid "Create the occupational structure level."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.occupational_structure_list_action
+msgid "Create the occupational structure."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.sector_commission_list_action
+msgid "Create the sector commission."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.sector_table_list_action
+msgid "Create the sector table."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.actions.act_window,help:hr_dr_contract_ec_private.subbranch_economic_activity_list_action
+msgid "Create the subbranch economic activity."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__create_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__create_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_contract__IESS_sector_code
+msgid ""
+"Defines the number assigned by the IESS according to the position it "
+"occupies in the company."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.hr_contract_hr_contract_view_form_inherit
+msgid "Detail"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__display_name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.branch_economic_activity_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.subbranch_economic_activity_search
+msgid "Group By"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__has_message
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__IESS_code
+msgid "IESS code"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_contract__IESS_sector_code
+msgid "IESS sector code"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_needaction
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+msgid "Inactive"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year____last_update
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__write_uid
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__write_date
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_contract__last_minimum_fee
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__last_minimum_fee
+msgid "Last minimum fee"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_contract__last_minimum_salary
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__last_minimum_salary
+msgid "Last minimum salary"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_contract__last_year
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__last_year
+msgid "Last year"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__minimum_fee
+#: model:ir.model.fields.selection,name:hr_dr_contract_ec_private.selection__hr_sector_table__mode__minimum_fee
+msgid "Minimum fee"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__minimum_salary
+#: model:ir.model.fields.selection,name:hr_dr_contract_ec_private.selection__hr_sector_table__mode__minimum_salary
+msgid "Minimum salary"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_contract__mode
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__mode
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__mode
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+msgid "Mode"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__name
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__number
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__number
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__number
+msgid "Number"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.occupational_structure_list_action
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_occupational_structure
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__occupational_structure_id
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_occupational_structure
+msgid "Occupational structure"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.occupational_structure_level_list_action
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_occupational_structure_level
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__occupational_structure_level_id
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_occupational_structure_level
+msgid "Occupational structure level"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__position_id
+msgid "Position / Activity"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.sector_commission_list_action
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_sector_commission
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__sector_commission_id
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__sector_commission_id
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_sector_commission
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.branch_economic_activity_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+msgid "Sector commission"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.sector_table_list_action
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_sector_table
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__sector_table_id
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_sector_table
+msgid "Sector table"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_sector_table_year
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_form
+msgid "Sector table by year"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__sector_table_year_ids
+msgid "Sector table by years"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_form
+msgid "Subbranch economic activities"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.actions.act_window,name:hr_dr_contract_ec_private.subbranch_economic_activity_list_action
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__subbranch_economic_activity_ids
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_subbranch_economic_activity
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.sector_table_search
+msgid "Subbranch economic activity"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model,name:hr_dr_contract_ec_private.model_hr_subbranch_economic_activity
+msgid "Subbranch of economic activity"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_occupational_structure_level__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_commission__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_branch_economic_activity__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_occupational_structure_level__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_commission__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__website_message_ids
+#: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_dr_contract_ec_private
+#: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__year
+msgid "Year"
+msgstr ""

@@ -16,7 +16,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it means that the notification configuration will be applied in personal income. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
-<!--                                        Si esta opción está marcada significa que la configuración de notificaciones será aplicada al ingreso de personal. Caso contrario solo se le notificará al responsable de talento humano definido en el módulo de administración de talento humano.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -34,7 +33,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it means that the notification configuration will be applied in personal exit. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
-<!--                                        Si esta opción está marcada significa que la configuración de notificaciones será aplicada a la salida de personal. Caso contrario solo se le notificará al responsable de talento humano definido en el módulo de administración de talento humano.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -52,7 +50,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it means that the notification configuration will be applied in personal birthday. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
-<!--                                        Si esta opción está marcada significa que la configuración de notificaciones será aplicada a los cumpleaños. Caso contrario solo se le notificará al responsable de talento humano definido en el módulo de administración de talento humano.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -70,7 +67,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it means that the notification configuration will be applied in personal anniversary. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
-<!--                                        Si esta opción está marcada significa que la configuración de notificaciones será aplicada a los aniversarios. Caso contrario solo se le notificará al responsable de talento humano definido en el módulo de administración de talento humano.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -88,7 +84,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it means that the notification settings will be applied on the dates of the celebration of the charges. Otherwise, only the head of human talent defined in the human talent administration module will be notified.
-<!--                                        Si esta opción está marcada, significa que la configuración de notificación se aplicará en las fechas de celebaración de los cargos. En caso contrario, solo se notificará al responsable de talento humano definido en el módulo de administración de talento humano.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -106,7 +101,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         If this option is checked, it only notifies the following administrators. Otherwise, it notifies the email defined for mass notifications if it exists; otherwise notify all collaborators.
-<!--                                        Si esta opción está marcada, solo notifica a los siguientes administradores. En caso contrario notifica al correo definido para notificaciones masivas si es que existe; caso contrario notifica a todos los colaboradores.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -124,7 +118,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Days in advance with which the notification is sent.
-<!--                                        Días de anticipación con que se envía la notificación.-->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -141,7 +134,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         List of administrators who will receive the notification.
-<!--                                        Listado de administradores que recibirán la notificación. -->
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -149,6 +141,7 @@
                                         <field name="administrators_ids" class="o_light_label">
                                             <tree>
                                                 <field name="name"/>
+                                                <field name="department_id"/>
                                                 <field name="job_id"/>
                                             </tree>
                                         </field>
@@ -163,7 +156,6 @@
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
                                         Mail for mass notifications.
-<!--                                        Correo para notificaciones masivas.-->
                                     </div>
                                 </div>
                                 <div class="content-group">

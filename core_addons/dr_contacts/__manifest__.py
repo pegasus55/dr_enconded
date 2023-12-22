@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Contacts",
-    'version': '14.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage contacts.
         """,
@@ -26,7 +26,9 @@
         [
             'base',
             'contacts',
-            'base_geolocalize'
+            'base_geolocalize',
+            'l10n_latam_base',
+            'l10n_ec'
         ],
 
     # always loaded
@@ -36,7 +38,9 @@
         'views/res_country_state_view.xml',
         'views/res_city_view.xml',
         'views/res_parish_view.xml',
+        'views/res_zone_view.xml',
         'views/res_partner_view.xml',
+        'views/l10n_latam_identification_type_view.xml',
     ],
     'demo': [],
     # 'images': ['static/description/banner.jpg'],

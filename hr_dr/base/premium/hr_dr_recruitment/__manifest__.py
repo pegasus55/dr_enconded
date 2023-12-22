@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Recruitment",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """
         Module to manage the collaborators recruitment process.""",
     'description': """

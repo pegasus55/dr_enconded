@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="0">
-        <!--Skill Level-->
+    <data noupdate="1">
         <record id="hr_skill_level_a1" model="hr.skill.level">
             <field name="name">A1 - Principiante</field>
             <field name="level_progress">10</field>
@@ -32,6 +31,5 @@
             <field name="level_progress">100</field>
             <field name="skill_type_id" ref="hr_skill_type_lang"/>
         </record>
-        <!--Skill Level-->
     </data>
 </odoo>

@@ -69,9 +69,7 @@
             }</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-                    Click to define a new department history for employee.
-                </p>
-                <p>
+                    Click to add a new record to the collaborator's history based on their department transfers.
                 </p>
             </field>
         </record>

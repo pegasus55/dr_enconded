@@ -155,5 +155,4 @@
     print_report_name="'%s profile' % (object.name)"
   />
 
-
 </odoo>

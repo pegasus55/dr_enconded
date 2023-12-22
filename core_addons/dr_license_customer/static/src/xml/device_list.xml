@@ -12,19 +12,15 @@
           </tr>
         </thead>
         <tbody id="dr_device_list_table_body">
-          <t t-if="total > 0">
-            <t t-foreach="content" t-as="item" t-key="item.sn">
+          <t t-if="state.total > 0">
+            <t t-foreach="state.content" t-as="item" t-key="item.sn">
               <tr class="o_data_row">
                 <th><span class="fa fa-clock-o"/></th>
                 <td t-esc="item.brand"/>
                 <td t-esc="item.model"/>
                 <td t-esc="item.sn"/>
               </tr>
-              <li class="list-group-item"><span class="fa fa-archive"/>&nbsp;&nbsp;<span t-esc="item"/></li>
             </t>
-            <li class="list-group-item list-group-item-light font-weight-bold">
-              Total: <span class="px-2" t-esc="total"/>
-            </li>
           </t>
           <t t-else="">
             <tr class="o_data_row table-info">
@@ -34,7 +30,7 @@
         </tbody>
         <tfoot t-if="total > 0">
           <tr class="table-secondary">
-            <th colspan="4">Total: <t t-esc="total"/></th>
+            <th colspan="4">Total: <t t-esc="state.total"/></th>
           </tr>
         </tfoot>
       </table>

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Contracts",
+    'version': '1.0',
     'summary': """
         Module to manage the contract information of the collaborators.
     """,

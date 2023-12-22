@@ -9,9 +9,6 @@
             <page name="cv" string="Curriculum Vitae">
                 <div class="row">
                     <div class="o_hr_skills_group o_group_resume col-lg-7 d-flex">
-                        <!-- This field uses a custom tree view rendered by the 'hr_resume' widget.
-                            Adding fields in the tree arch below makes them accessible to the widget
-                        -->
                         <field mode="tree" nolabel="1" name="resume_line_ids" widget="hr_resume">
                             <tree>
                                 <field name="line_type_id"/>
@@ -48,9 +45,6 @@
               <page name="cv" string="Curriculum Vitae">
                 <div class="row">
                     <div class="o_hr_skills_group o_group_resume col-lg-7 d-flex">
-                        <!-- This field uses a custom tree view rendered by the 'hr_resume' widget.
-                            Adding fields in the tree arch below makes them accessible to the widget
-                        -->
                         <field mode="tree" nolabel="1" name="resume_line_ids" widget="hr_resume">
                             <tree>
                                 <field name="line_type_id"/>
@@ -304,7 +298,5 @@
                 </xpath>
             </field>
         </record>
-
-
   </data>
 </odoo>

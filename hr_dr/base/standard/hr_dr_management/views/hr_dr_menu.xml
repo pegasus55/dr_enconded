@@ -23,10 +23,9 @@
                 <menuitem id="menu_hour_extra" name="Extra hours" parent="menu_configuration" action="hr_dr_management.hour_extra_list_action" sequence="40" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
                 <menuitem id="menu_hour_night" name="Night hours" parent="menu_configuration" action="hr_dr_management.hour_night_list_action" sequence="50" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
                 <menuitem id="menu_attendance_period" name="Attendance periods" parent="menu_configuration" action="hr_dr_management.attendance_period_list_action" sequence="60" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
-                <menuitem id="menu_hr_salary_rule_process" action="action_hr_salary_rule_process" parent="menu_configuration" sequence="70" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                <menuitem id="menu_hr_salary_rule_process" name="Salary rules by process" action="action_hr_salary_rule_process" parent="menu_configuration" sequence="70" groups="hr_dr_management.hr_dr_management_group_supervisor"/>
 
                 <menuitem id="menu_configuration_nomenclature" name="Nomenclatures" parent="menu_configuration" action="hr_dr_management.nomenclature_list_action" sequence="200" groups="hr_dr_management.hr_dr_management_group_manager"/>
                 <menuitem id="menu_configuration_normative_nomenclature" name="Nomenclatures by regulations" parent="menu_configuration" action="hr_dr_management.hr_normative_nomenclature_list_action" sequence="210" groups="hr_dr_management.hr_dr_management_group_manager"/>
-
     </data>
 </odoo>

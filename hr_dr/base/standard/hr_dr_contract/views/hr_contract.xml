@@ -76,6 +76,7 @@
 
                 <xpath expr="//field[@name='date_end']" position="attributes">
                     <attribute name="attrs">{'readonly':[('state','in', ['close', 'cancel'])]}</attribute>
+                    <attribute name="string">Contract end date</attribute>
                 </xpath>
 
                 <xpath expr="//field[@name='resource_calendar_id'][1]" position="attributes">
@@ -109,6 +110,10 @@
 
                 <xpath expr="//field[@name='wage']" position="attributes">
                     <attribute name="attrs">{'readonly': [('state','!=','draft')]}</attribute>
+                </xpath>
+
+                <xpath expr="//form//notebook//page[@name='information']" position="attributes">
+                    <attribute name="string">Salary</attribute>
                 </xpath>
 
                 <xpath expr="//form//notebook//page[@name='information']//group[@name='salary_info']//group[@name='salary']//div[@name='wage']" position="after">

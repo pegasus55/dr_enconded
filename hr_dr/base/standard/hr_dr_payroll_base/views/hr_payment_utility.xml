@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
 	<record id="payment_utility_view_form" model="ir.ui.view">
 		<field name="name">payment.utility.view.form</field>
 		<field name="model">hr.payment.utility</field>
@@ -15,16 +14,17 @@
                     </div>
 					<group name="header_utility">
 						<group>
+							<field name="employee_requests_id" attrs="{'readonly': [('state', 'not in', ('draft'))]}" domain="[('employee_admin', '=', False), ('company_id', '=', company_id), ('state', 'in', ['affiliate'])]"/>
 							<field name="start_date" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}"/>
 							<field name="end_date" readonly="1" force_save="1"/>
 							<field name="fiscal_year" readonly="1" force_save="1"/>
 							<field name="date" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}"/>
-							<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly': [('state','not in',['draft'])]}"/>
-							<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+							<field name="company_id" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 						<group>
-							<field name="utility_value" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}" widget='monetary'/>
-							<field name="utility_value_to_distribute" readonly="1" force_save="1" widget='monetary'/>
+							<field name="utility_value" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}"/>
+							<field name="utility_value_to_distribute" readonly="1" force_save="1"/>
 							<field name="percent_employee" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}"/>
 							<field name="percent_family" attrs="{'required': True, 'readonly': [('state','not in',['draft'])]}"/>
 							<field name="total_worked_days" attrs="{'required': True, 'readonly': True}"/>
@@ -36,7 +36,7 @@
 							<field name="line_ids" nolabel="1" attrs="{'readonly': [('state','!=','draft')]}">
 								<tree delete="false" create="false" default_order="employee_id">
 							 		<field name="employee_id" readonly="1"/>
-									<field name="state" readonly="1"/>
+									<field name="employee_state" readonly="1"/>
 							 		<field name="family_loads" readonly="1"/>
 									<field name="judicial_withholding" readonly="1"/>
 							 		<field name="worked_days" readonly="1" sum="Total worked days"/>
@@ -44,37 +44,45 @@
 							 		<field name="amount_5_percent" readonly="1" sum="Total 5 percent"/>
 							 		<field name="total_utility" readonly="1" sum="Total utility"/>
 							 		<field name="amount_judicial_withholding" readonly="1" sum="Total jutidial withholding"/>
-									<field name="advance_utility" sum="Total advance utilities"/>
+									<field name="advance_utility" readonly="1" sum="Total advance utilities"/>
 							 		<field name="total_receive" readonly="1" sum ="Total received"/>
+									<field name="state_utility" readonly="1"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 								</tree>
 								<form delete="false" create="false">
 									<sheet>
 										<group>
 											<group>
 												<field name="employee_id" readonly="1"/>
-												<field name="state" readonly="1"/>
+												<field name="employee_state" readonly="1"/>
 												<field name="family_loads" readonly="1"/>
 												<field name="judicial_withholding" readonly="1"/>
 												<field name="worked_days" readonly="1"/>
-												<field name="state_utility" readonly="1"/>
 											</group>
 											<group>
 												<field name="amount_10_percent" readonly="1"/>
 												<field name="amount_5_percent" readonly="1"/>
 												<field name="total_utility" readonly="1"/>
 												<field name="amount_judicial_withholding" readonly="1"/>
-												<field name="advance_utility"/>
+												<field name="advance_utility" readonly="1"/>
 												<field name="total_receive" readonly="1"/>
 												<field name="move_id" readonly="1"/>
+												<field name="state_utility" readonly="1"/>
+												<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+												<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 											</group>
 										</group>
 										<notebook>
 											<page name = "judicial_withholding" string="Retenciones Judiciales">
 												<field name="judicial_withholding_ids">
 													<tree delete="false" create="false">
-														<field name="family_load_id" readonly="1"/>
 														<field name="judicial_withholding_id" readonly="1"/>
-														<field name="amount" readonly="1"/>
+														<field name="family_load_id" readonly="1"/>
+														<field name="partner_id" readonly="1"/>
+														<field name="amount" readonly="1" sum="Total"/>
+														<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+														<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 													</tree>
 												</field>
 											</page>
@@ -124,6 +132,7 @@
 												<field name="reserve_funds"/>
 												<field name="commissions"/>
 												<field name="additional_cash_benefits"/>
+												<field name="bonus_and_perks"/>
 												<field name="utility_advance"/>
 												<field name="payment_mode"/>
 												<field name="payment_mode_living_wage"/>
@@ -175,15 +184,15 @@
 				<field name="end_date"/>
 				<field name="fiscal_year"/>
 				<field name="date"/>
-				<field name="utility_value" widget='monetary'/>
-				<field name="utility_value_to_distribute" widget='monetary'/>
+				<field name="utility_value"/>
+				<field name="utility_value_to_distribute"/>
 				<field name="percent_employee"/>
 				<field name="percent_family"/>
 				<field name="total_worked_days"/>
 				<field name="total_worked_days_x_family_loads"/>
 				<field name="state"/>
-				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-				<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
@@ -200,13 +209,13 @@
 		<field name="arch" type="xml">
 			<form string="Payment utility detail" create="false" edit="false" delete="false">
 				<header>
-					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
+					<field name="state_utility" widget="statusbar" nolabel="1" statusbar_visible="draft,calculated,reviewed,pending,cancelled,approved,rejected,done"/>
 				</header>
 				<sheet>
 					<group>
 						<group>
 							<field name="employee_id" readonly="1"/>
-							<field name="state" readonly="1"/>
+							<field name="state_utility" readonly="1"/>
 							<field name="family_loads" readonly="1" sum="Total number of family loads"/>
 							<field name="judicial_withholding" readonly="1" sum="Total number of judicial withholding"/>
 							<field name="worked_days" readonly="1" sum="Total worked days"/>
@@ -221,15 +230,20 @@
 							<field name="state_utility" readonly="1"/>
 							<field name="move_id" readonly="1"/>
 							<field name="active" force_save="1" attrs="{'readonly': [('state_utility', 'in', ['done'])]}"/>
+							<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+							<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 						</group>
 					</group>
 					<notebook>
 						<page name="judicial_withholding" string="Judicial Withholding">
 							<field name="judicial_withholding_ids">
 								<tree>
-									<field name="family_load_id" readonly="1"/>
 									<field name="judicial_withholding_id" readonly="1"/>
-									<field name="amount" readonly="1"/>
+									<field name="family_load_id" readonly="1"/>
+									<field name="partner_id" readonly="1"/>
+									<field name="amount" readonly="1" sum="Total"/>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+									<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 								</tree>
 							</field>
 						</page>
@@ -247,10 +261,11 @@
 		<field name="model">hr.payment.utility.line</field>
 		<field name="arch" type="xml">
 			<search>
-				<field name="payment_utility_id"/>
+				<field name="employee_id"/>
 				<group expand="0" name="group_by" string="Group By">
-					<filter name="group_payment_utility_id" string="Payment utility"
-							context="{'group_by' : 'payment_utility_id'}"/>
+					<filter name="group_payment_utility_id" string="Payment utility" context="{'group_by' : 'payment_utility_id'}"/>
+					<filter name="group_state_utility" string="Status" context="{'group_by' : 'state_utility'}"/>
+					<filter name="group_employee_id" string="Collaborator" context="{'group_by' : 'employee_id'}"/>
 				</group>
 			</search>
 		</field>
@@ -261,7 +276,7 @@
 		<field name="arch" type="xml">
 			<tree string="Payment utility detail" create="false" edit="false" delete="false">
 				<field name="employee_id" readonly="1"/>
-				<field name="state" readonly="1"/>
+				<field name="state_utility" readonly="1"/>
 				<field name="family_loads" readonly="1" sum="Total number of family loads"/>
 				<field name="judicial_withholding" readonly="1" sum="Total number of judicial withholding"/>
 				<field name="worked_days" readonly="1" sum="Total worked days"/>
@@ -273,7 +288,8 @@
 				<field name="total_receive" readonly="1" sum ="Total to receive"/>
 				<field name="state_utility" readonly="1"/>
 				<field name="move_id" readonly="1"/>
-				<field name="active" readonly="1"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}" readonly="1"/>
+				<field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
 			</tree>
 		</field>
 	</record>
@@ -321,6 +337,7 @@
 							<field name="reserve_funds"/>
 							<field name="commissions"/>
 							<field name="additional_cash_benefits"/>
+							<field name="bonus_and_perks"/>
 							<field name="utility_advance"/>
 							<field name="payment_mode"/>
 							<field name="payment_mode_living_wage"/>
@@ -339,10 +356,11 @@
 		<field name="model">hr.payment.utility.external.service</field>
 		<field name="arch" type="xml">
 			<search>
-				<field name="payment_utility_id"/>
+				<field name="partner_id"/>
 				<group expand="0" name="group_by" string="Group By">
-					<filter name="group_payment_utility_id" string="Payment utility"
-							context="{'group_by' : 'payment_utility_id'}"/>
+					<filter name="group_payment_utility_id" string="Payment utility" context="{'group_by' : 'payment_utility_id'}"/>
+					<filter name="group_state_utility" string="Status" context="{'group_by' : 'state_utility'}"/>
+					<filter name="group_partner_id" string="Partner" context="{'group_by' : 'partner_id'}"/>
 				</group>
 			</search>
 		</field>
@@ -377,4 +395,44 @@
             }</field>
 	</record>
 
+	<record model="ir.actions.act_window" id="payment_utility_action_notifications_to_process">
+		<field name="name">Notifications to process for payment utility</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'hr.payment.utility'),
+			('user_employee_approve_id', '=',uid),
+			('send', '=',True),
+			('state', '=','pending'),
+			('processed', '=',False)
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">Notifications to process for payment utility.
+			</p>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="payment_utility_action_notifications_all">
+		<field name="name">All notifications for payment utility</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.notifications</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[
+			('res_model', '=', 'hr.payment.utility')
+			]
+		</field>
+		<field name="context">{
+				'invisible_res_model_id': True,
+				'invisible_res_id': True,
+		}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_smiling_face">All notifications for payment utility.
+			</p>
+		</field>
+	</record>
 </odoo>
