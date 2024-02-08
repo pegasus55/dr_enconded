@@ -20,6 +20,21 @@
                 ]"
             />
         </record>
+        <record id="resource_calendar_intern_std" model="resource.calendar">
+            <field name="name">Pasante (30 horas por semana)</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="hours_per_day">6.0</field>
+            <field name="tz">America/Guayaquil</field>
+            <field name="attendance_ids"
+                eval="[(5, 0, 0),
+                    (0, 0, {'name': 'Lunes en la mañana', 'dayofweek': '0', 'hour_from': 8, 'hour_to': 14, 'day_period': 'morning'}),
+                    (0, 0, {'name': 'Martes en la mañana', 'dayofweek': '1', 'hour_from': 8, 'hour_to': 14, 'day_period': 'morning'}),
+                    (0, 0, {'name': 'Miércoles en la mañana', 'dayofweek': '2', 'hour_from': 8, 'hour_to': 14, 'day_period': 'morning'}),
+                    (0, 0, {'name': 'Jueves en la mañana', 'dayofweek': '3', 'hour_from': 8, 'hour_to': 14, 'day_period': 'morning'}),
+                    (0, 0, {'name': 'Viernes en la mañana', 'dayofweek': '4', 'hour_from': 8, 'hour_to': 14, 'day_period': 'morning'}),
+                ]"
+            />
+        </record>
 
         <!--08:00 - 17:00-->
         <record id="resource_calendar_std_8_00-12_00_13_00-17_00" model="resource.calendar">

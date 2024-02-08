@@ -10,7 +10,8 @@ class Contract(models.Model):
     @api.constrains('wage', 'mode', 'last_minimum_salary')
     def _constrain_wage(self):
         if self.mode == 'minimum_salary':
-            if self.wage < self.last_minimum_salary:
+
+            if self.wage < self.last_minimum_salary * (self.daily_hours / self.standard_daily_hours):
                 raise ValidationError('The salary defined in the contract must be greater than or equal '
                                       'to the established sectoral minimum.')
 
