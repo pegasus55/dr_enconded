@@ -62,8 +62,10 @@
         'views/retired_employees.xml',
         'views/account_payment.xml',
         'views/account_batch_payment.xml',
-        'views/hr_personal_expense.xml',
         'views/res_config_settings.xml',
+        'views/hr_payroll_structure_type.xml',
+        'views/hr_salary_rule_views.xml',
+        'views/hr_payslip_run.xml',
 
         'views/report_payslip_templates.xml',
 
