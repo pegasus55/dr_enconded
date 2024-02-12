@@ -27,11 +27,9 @@
         'security/ir.model.access.csv',
 
         'views/hr_contract_type.xml',
-        'views/hr_payroll_structure_type.xml',
         'views/hr_contract.xml',
         'views/res_config_settings.xml',
         'views/mail_template.xml',
-        'views/menu.xml',
 
         'data/hr_payroll_structure_type.xml',
         'data/cron_data.xml',

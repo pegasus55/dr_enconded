@@ -22,7 +22,7 @@
 ###################################################################################
 {
     'name': "Open HRMS Employee Appraisal",
-    'version': '16.0.1.0.0',
+    'version': '1.0',
     'summary': """Roll out appraisal plans and get the best of your workforce""",
     'description': """Roll out appraisal plans and get the best of your workforce""",
     'live_test_url': 'https://www.youtube.com/watch?v=cw4Bs8-SXdY&feature=youtu.be',

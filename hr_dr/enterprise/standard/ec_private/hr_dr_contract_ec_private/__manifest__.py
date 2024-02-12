@@ -29,6 +29,8 @@
 
         'data/hr_contract_type.xml',
 
+        'views/menu.xml',
+
         'views/hr_occupational_structure_level_view.xml',
         'views/hr_occupational_structure_view.xml',
         'views/hr_sector_commission_view.xml',

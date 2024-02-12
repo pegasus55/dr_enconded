@@ -476,7 +476,7 @@
                     <field name="sequence"/>
                     <field name="stage_id"/>
                     <field name="working_days"/>
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </tree>
             </field>
         </record>
@@ -496,7 +496,7 @@
                             <group>
                                 <field name="stage_id"/>
                                 <field name="working_days"/>
-                                <field name="active"/>
+                                <field name="active" widget="boolean_toggle"/>
                             </group>
                         </group>
                         <notebook>
@@ -567,7 +567,7 @@
             <field name="inherit_id" ref="hr_recruitment.hr_recruitment_degree_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </xpath>
             </field>
         </record>
@@ -577,7 +577,7 @@
             <field name="inherit_id" ref="hr_recruitment.hr_recruitment_degree_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </xpath>
             </field>
         </record>

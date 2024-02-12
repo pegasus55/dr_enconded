@@ -9,16 +9,18 @@
 
                 <xpath expr="//field[@name='work_email']" position="after">
                     <field name="notified_income"/>
-                </xpath>
-
-                <xpath expr="//field[@name='coach_id']" position="after">
                     <field name="notified_exit"/>
                 </xpath>
 
+<!--                <xpath expr="//field[@name='coach_id']" position="after">-->
+<!--                    <field name="notified_exit"/>-->
+<!--                </xpath>-->
+
                 <xpath expr="//header" position="inside">
+                    <field name="state" invisible="1"/>
                     <button string="Notify personal income" type="object" name="action_notify_personal_income" attrs="{'invisible': [('notified_income','=',True)]}"/>
-                    <button string="Notify personal exit" type="object" name="action_notify_personal_exit" attrs="{'invisible': [('notified_exit','=',True)]}"/>
-                    <button string="Notify personal retired" type="object" name="action_notify_personal_retired" attrs="{'invisible': [('notified_exit','=',True)]}"/>
+                    <button string="Notify personal exit" type="object" name="action_notify_personal_exit" attrs="{'invisible': ['|' ,('notified_exit','=',True), ('state','!=','unemployed')]}"/>
+                    <button string="Notify personal retired" type="object" name="action_notify_personal_retired" attrs="{'invisible': ['|' ,('notified_exit','=',True), ('state','!=','retired')]}"/>
                 </xpath>
 
             </field>

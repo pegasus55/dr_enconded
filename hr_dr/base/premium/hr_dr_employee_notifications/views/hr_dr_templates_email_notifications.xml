@@ -2,25 +2,27 @@
     <data noupdate="1">
         <record id="email_template_report_bug" model="mail.template">
             <field name="name">Email template report bug</field>
-            <field name="email_from">"${object.company_id.name|safe}" &lt;${object.company_id.email|safe}&gt;</field>
-            <field name="subject">Bug report</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Reporte de error</field>
             <field name="email_to">drodriguez@nukleosolutions.com</field>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p>
-                        Dear(s),<br/><br/>
-                        The following error is reported.<br/><br/>
-                        <strong>Error detail:</strong><br/><br/>
-                        <strong>${ctx['technical_message']}</strong><br/><br/>
+                        Estimado(s),<br/><br/>
+                        Se reporta el siguiente error.<br/><br/>
+                        <strong>Detalle del error:</strong><br/><br/>
+                        <strong>
+                            <t t-out="ctx.get('technical_message')"/>
+                        </strong><br/><br/>
                     </p>
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)}</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda.</i>
                     </p>
                 </div>
             </field>
@@ -28,47 +30,47 @@
 
         <record id="email_template_notify_personal_income" model="mail.template">
             <field name="name">Email template notify personal income</field>
-            <field name="email_from">"${object.company_id.name|safe}" &lt;${object.company_id.email|safe}&gt;</field>
-            <field name="subject">Personal income</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Ingreso de personal</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
-
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Estimado(s),<br/><br/>
+                        Se informa que el colaborador <strong><span t-out="object.name"/></strong> comienza a ser parte del equipo de <strong><span t-out="object.company_id.name"/></strong>.<br/><br/>
+                    </p>
 
                     <table style="width:243pt; height:153pt; margin:5pt">
                         <td style="width:33%;" valign="center">
                             <table style="width:77pt; height:150pt">
                                 <tr style="height:70%;">
                                     <td align="center" valign="center">
-                                        <img t-if="employee.image_1920" t-att-src="image_data_uri(employee.image_1920)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                        <img t-if="object.image_1920" t-att-src="image_data_uri(object.image_1920)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                         <td style="width:67%" valign="center">
                             <table style="width:155pt; height:85pt">
-
                                 <tr style="height:70%;">
-                                    <strong>Name:</strong> ${(object.name)}<br/>
-                                    %if object.job_id.position_id:
-                                    <strong>Position:</strong> ${(object.job_id.position_id.name)}<br/>
-                                    %endif
+                                    <t t-if="object.name">
+                                        <strong>Nombre:</strong> <span t-out="object.name"/><br/>
+                                    </t>
+                                    <t t-if="object.job_id.position_id.name">
+                                        <strong>Cargo:</strong> <span t-out="object.job_id.position_id.name"/><br/>
+                                    </t>
                                 </tr>
-
                             </table>
                         </td>
                     </table>
 
-
-
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
@@ -76,26 +78,33 @@
 
         <record id="email_template_notify_personal_exit" model="mail.template">
             <field name="name">Email template notify personal exit</field>
-            <field name="email_from">"${object.company_id.name|safe}" &lt;${object.company_id.email|safe}&gt;</field>
-            <field name="subject">Personal exit</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Salida de personal</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear(s),<br/><br/>
-                        It is reported that the collaborator <strong>${(object.name)}</strong> is no longer part of the <strong>${(object.company_id.name)}</strong> team.<br/><br/>
-                        <strong>Collaborator data</strong><br/>
-                        <strong>Name:</strong> ${(object.name)}<br/>
-                        <strong>Position:</strong> ${(object.job_id.position_id.name)}<br/>
+                        Estimado(s),<br/><br/>
+                        Se informa que el colaborador <strong><span t-out="object.name"/></strong> ya no forma parte del equipo <strong><span t-out="object.company_id.name"/></strong>.<br/><br/>
+
+                        <strong>Datos del colaborador</strong><br/>
+                        <t t-if="object.name">
+                            <strong>Nombre:</strong> <span t-out="object.name"/>
+                            <br/>
+                        </t>
+                        <t t-if="object.job_id.position_id.name">
+                            <strong>Cargo:</strong> <span t-out="object.job_id.position_id.name"/>
+                            <br/>
+                        </t>
                     </p>
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
@@ -103,26 +112,33 @@
 
         <record id="email_template_notify_personal_retired" model="mail.template">
             <field name="name">Email template notify personal retired</field>
-            <field name="email_from">"${object.company_id.name|safe}" &lt;${object.company_id.email|safe}&gt;</field>
-            <field name="subject">Personal retirement</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Jubilación de personal</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear(s),<br/><br/>
-                        It is reported that the collaborator <strong>${(object.name)}</strong> is no longer part of the <strong>${(object.company_id.name)}</strong> team.<br/><br/>
-                        <strong>Collaborator data</strong><br/>
-                        <strong>Name:</strong> ${(object.name)}<br/>
-                        <strong>Position:</strong> ${(object.job_id.position_id.name)}<br/>
+                        Estimado(s),<br/><br/>
+                        Se informa que el colaborador <strong><span t-out="object.name"/></strong> ya no forma parte del equipo <strong><span t-out="object.company_id.name"/></strong> debido a su jubilación.<br/><br/>
+
+                        <strong>Datos del colaborador</strong><br/>
+                        <t t-if="object.name">
+                            <strong>Nombre:</strong> <span t-out="object.name"/>
+                            <br/>
+                        </t>
+                        <t t-if="object.job_id.position_id.name">
+                            <strong>Cargo:</strong> <span t-out="object.job_id.position_id.name"/>
+                            <br/>
+                        </t>
                     </p>
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
@@ -130,64 +146,38 @@
 
         <record id="email_template_notify_birthdays" model="mail.template">
             <field name="name">Email template notify birthdays</field>
-            <field name="email_from">"${ctx['birthdays'][0].company_id.name|safe}" &lt;${ctx['birthdays'][0].company_id.email|safe}&gt;</field>
-            <field name="subject">Happy birthday</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Feliz cumpleaños</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear(s),<br/><br/>
-                        The following collaborators are notified that their birthdays are:
+                        Estimado(s),<br/><br/>
+                        Se notifica que los siguientes colaboradores están de cumpleaños:
                     </p>
-
-                    <table border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                    % for employee in ctx['birthdays']:
+                    <br/><br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
                         <tr>
-                            <td align="center">
-
-                                <td align="center">
-                                    <img src="/hr_dr_employee_notifications/static/img/birthday.jpeg" style="padding: 0px; margin: 0px; height: auto; width: 400px;">
-                                        <strong>${employee.name|safe}</strong><br></br>
-                                        <strong>${employee.job_id.position_id.name|safe}</strong><br></br>
-                                        <strong>${employee.department_id.name|safe}</strong><br></br>
-                                        <strong>${(object.get_birthday_in_format_day_month())}</strong><br></br>
-                                    </img>
-                                </td>
-
-
-                                <img src="/logo.png?company=${object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;"/>
-
-                            </td>
-
-                            <td align="center">
-
-                                <img src="/logo.png?company=${object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;"/>
-
-                            </td>
-
-                            <td align="center">
-
-                                <div style="background-image:url(/hr_dr_employee_notifications/static/img/birthday.jpeg); padding: 16px; height: 100%; width: 100%;">
-                                    <strong>${employee.name|safe}</strong><br></br>
-                                    <strong>${employee.job_id.position_id.name|safe}</strong><br></br>
-                                    <strong>${employee.department_id.name|safe}</strong><br></br>
-                                    <strong>${(object.get_birthday_in_format_day_month())}</strong><br></br>
-                                </div>
-                            </td>
+                            <th width="25%" style="background-color: white;">Colaborador</th>
+                            <th width="25%" style="background-color: white;">Cargo</th>
+                            <th width="25%" style="background-color: white;">Departamento</th>
+                            <th width="25%" style="background-color: white;">Cumpleaños</th>
                         </tr>
-                    % endfor
-                    </tbody>
+                        <tr t-foreach="ctx.get('birthdays')" t-as="employee">
+                            <td><span t-out="employee.name"/></td>
+                            <td><span t-out="employee.job_id.position_id.name"/></td>
+                            <td><span t-out="employee.department_id.name"/></td>
+                            <td><span t-out="employee.get_birthday_in_format_day_month()"/></td>
+                        </tr>
                     </table>
 
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
@@ -195,30 +185,38 @@
 
         <record id="email_template_notify_anniversary" model="mail.template">
             <field name="name">Email template notify anniversary</field>
-            <field name="email_from">"${ctx['anniversary'][0].company_id.name|safe}" &lt;${ctx['anniversary'][0].company_id.email|safe}&gt;</field>
-            <field name="subject">Anniversaries</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Aniversarios</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear(s),<br/><br/>
-                        It is reported that the collaborators are fulfilling another year of work in the institution:
+                        Estimado(s),<br/><br/>
+                        Se informa que los siguientes colaboradores se encuentran cumpliendo un año más de trabajo en la compañía:
                     </p>
-                    <ul>
-                    % for employee in ctx['anniversary']:
-                    <li>
-                        <strong>${employee.name|safe}</strong> de ${employee.department_id.name|safe} el ${(object.last_company_entry_date.strftime(object.get_date_format()))}
-                    </li>
-                    % endfor
-                    </ul>
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+                    <br/><br/>
+                    <table border="1" cellspacing="0" cellpadding="5" width="80%" height="85%">
+                        <tr>
+                            <th width="25%" style="background-color: white;">Colaborador</th>
+                            <th width="25%" style="background-color: white;">Cargo</th>
+                            <th width="25%" style="background-color: white;">Departamento</th>
+                            <th width="25%" style="background-color: white;">Fecha de ingreso</th>
+                        </tr>
+                        <tr t-foreach="ctx.get('anniversary')" t-as="employee">
+                            <td><span t-out="employee.name"/></td>
+                            <td><span t-out="employee.job_id.position_id.name"/></td>
+                            <td><span t-out="employee.department_id.name"/></td>
+                            <td><span t-out="employee.last_company_entry_date.strftime(object.get_date_format())"/></td>
+                        </tr>
+                    </table>
+
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>
@@ -226,28 +224,25 @@
 
         <record id="email_template_notify_profession_celebration_date" model="mail.template">
             <field name="name">Email template notify profession celebration date</field>
-            <field name="email_from">"${object.company_id.name|safe}" &lt;${object.company_id.email|safe}&gt;</field>
-            <field name="subject">Happy day of ${object.name|safe}</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ object.company_id.email }}&gt;</field>
+            <field name="subject">Feliz día del {{object.name}}</field>
             <field name="email_to"/>
-            <field name="lang">${object.lang}</field>
             <field name="model_id" ref="model_hr_profession"/>
             <field name="auto_delete" eval="True"/>
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px; font-size: 13px;">
                     <p>
-                    Dear(s),<br/><br/>
-                    Our most sincere congratulations.
-                    <strong>${(object.get_celebration_date_in_format_day_month())}</strong>
-                    World day of
-                    ${object.name|safe}
-                    ¡HAPPY DAY!
+                    Estimado(s),<br/><br/>
+                    Nuestras más sinceras felicitaciones.<br/>
+                    <strong><span t-out="object.get_celebration_date_in_format_day_month()"/></strong> día del <span t-out="object.name"/>.<br/>
+                    ¡FELIZ DÍA!
                     </p>
 
-                    <p>Sincerely,</p>
-                    <p>${(object.company_id.name)} | ${ctx['department']}.</p>
-                    <img src="${'/logo.png?company=%s' % object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${'%s' % object.company_id.name}"/>
+                    <p>Atentamente,</p>
+                    <p t-out="object.company_id.name"/>
+                    <img t-attf-src="/logo.png?company={{object.company_id.id}}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="object.company_id.name"/>
                     <p>
-                        <i>Note: This email is sent automatically, please do not reply to it. If you have any concerns please contact ${ctx['department']}.</i>
+                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out="ctx.get('department')"/>.</i>
                     </p>
                 </div>
             </field>

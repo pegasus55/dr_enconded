@@ -34,7 +34,6 @@
         'security/ir.model.access.csv',
         'views/views.xml',
 
-
         'data/hr_skill_category.xml',
         'data/hr_skill_type.xml',
         'data/hr_skill_level.xml',
@@ -44,7 +43,6 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        #'demo/demo.xml',
     ],
     'images': ["static/description/icon.png"],
     'license': 'AGPL-3',

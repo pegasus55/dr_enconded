@@ -1,12 +1,12 @@
 <odoo>
     <data>
-        <!--<template id="login_inherit" inherit_id="web.login">
-            <xpath expr="//button[last()]" position="before">
+        <template id="login_inherit" inherit_id="auth_signup.login">
+            <xpath expr="//div" position="before">
                 <a t-if="not valid_license" href="/web/license" class="btn btn-secondary btn-block">
                     <i class="fa fa-repeat"/>&amp;nbsp;Renew license
                 </a>
             </xpath>
-        </template>-->
+        </template>
 
         <template id="license_request">
             <t t-call="web.html_container">

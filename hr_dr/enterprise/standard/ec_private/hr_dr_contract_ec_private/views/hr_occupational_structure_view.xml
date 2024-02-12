@@ -1,5 +1,5 @@
 <odoo>
-  <data>
+    <data>
         <!--Occupational structure-->
         <record model="ir.actions.act_window" id="occupational_structure_list_action">
             <field name="name">Occupational structure</field>
@@ -18,7 +18,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="occupational_structure_level_id"/>
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </tree>
             </field>
         </record>
@@ -44,7 +44,7 @@
                             </group>
                             <group>
                                 <field name="occupational_structure_level_id"/>
-                                <field name="active"/>
+                                <field name="active" widget="boolean_toggle"/>
                             </group>
                         </group>
                     </sheet>
@@ -58,8 +58,8 @@
         <menuitem
             id="menu_hr_occupational_structure"
             action="occupational_structure_list_action"
-            parent="hr_dr_contract.hr_menu_contract_settings_root"
+            parent="menu_hr_sector_table_root"
             sequence="20"/>
         <!--Occupational structure-->
-  </data>
+    </data>
 </odoo>

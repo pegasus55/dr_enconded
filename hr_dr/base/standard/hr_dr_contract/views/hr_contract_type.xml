@@ -7,7 +7,7 @@
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="description"/>
                     <field name="normative_id"/>
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </xpath>
             </field>
         </record>
@@ -19,7 +19,7 @@
                 <xpath expr="//form//group//group" position="after">
                     <group>
                         <field name="normative_id"/>
-                        <field name="active"/>
+                        <field name="active" widget="boolean_toggle"/>
                     </group>
                 </xpath>
                 <xpath expr="//form//group" position="after">

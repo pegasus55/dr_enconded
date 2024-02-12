@@ -1,0 +1,512 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dr_employee_notifications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20231219\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-28 17:19+0000\n"
+"PO-Revision-Date: 2023-12-28 17:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_personal_income
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que el colaborador <strong><span t-out=\"object.name\"></span></strong> comienza a ser parte del equipo <strong><span t-out=\"object.company_id.name\"></span></strong>.<br><br>\n"
+"                    </p>\n"
+"\n"
+"                    <table style=\"width:243pt; height:153pt; margin:5pt\">\n"
+"                        <td style=\"width:33%;\" valign=\"center\">\n"
+"                            <table style=\"width:77pt; height:150pt\">\n"
+"                                <tr style=\"height:70%;\">\n"
+"                                    <td align=\"center\" valign=\"center\">\n"
+"                                        <img t-if=\"object.image_1920\" t-att-src=\"image_data_uri(object.image_1920)\" style=\"max-height:85pt;max-width:90%\" alt=\"Employee Image\">\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                        <td style=\"width:67%\" valign=\"center\">\n"
+"                            <table style=\"width:155pt; height:85pt\">\n"
+"                                <tr style=\"height:70%;\">\n"
+"                                    <t t-if=\"object.name\">\n"
+"                                        <strong>Nombre:</strong> <span t-out=\"object.name\"></span><br>\n"
+"                                    </t>\n"
+"                                    <t t-if=\"object.job_id.position_id.name\">\n"
+"                                        <strong>Cargo:</strong> <span t-out=\"object.job_id.position_id.name\"></span><br>\n"
+"                                    </t>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </table>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_personal_retired
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que el colaborador <strong><span t-out=\"object.name\"></span></strong> ya no forma parte del equipo <strong><span t-out=\"object.company_id.name\"></span></strong> debido a su jubilación.<br><br>\n"
+"\n"
+"                        <strong>Datos del colaborador</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Nombre:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.job_id.position_id.name\">\n"
+"                            <strong>Cargo:</strong> <span t-out=\"object.job_id.position_id.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_personal_exit
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que el colaborador <strong><span t-out=\"object.name\"></span></strong> ya no forma parte del equipo <strong><span t-out=\"object.company_id.name\"></span></strong>.<br><br>\n"
+"\n"
+"                        <strong>Datos del colaborador</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Nombre:</strong> <span t-out=\"object.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.job_id.position_id.name\">\n"
+"                            <strong>Cargo:</strong> <span t-out=\"object.job_id.position_id.name\"></span>\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_anniversary
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que los siguientes colaboradores se encuentran cumpliendo un año más de trabajo en la compañía:\n"
+"                    </p>\n"
+"                    <br><br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Colaborador</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Cargo</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Departamento</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Fecha de ingreso</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"ctx.get('anniversary')\" t-as=\"employee\">\n"
+"                            <td><span t-out=\"employee.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.job_id.position_id.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.department_id.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.last_company_entry_date.strftime(object.get_date_format())\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_birthdays
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se notifica que los siguientes colaboradores están de cumpleaños:\n"
+"                    </p>\n"
+"                    <br><br>\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" width=\"80%\" height=\"85%\">\n"
+"                        <tr>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Colaborador</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Cargo</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Departamento</th>\n"
+"                            <th width=\"25%\" style=\"background-color: white;\">Cumpleaños</th>\n"
+"                        </tr>\n"
+"                        <tr t-foreach=\"ctx.get('birthdays')\" t-as=\"employee\">\n"
+"                            <td><span t-out=\"employee.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.job_id.position_id.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.department_id.name\"></span></td>\n"
+"                            <td><span t-out=\"employee.get_birthday_in_format_day_month()\"></span></td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_report_bug
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se reporta el siguiente error.<br><br>\n"
+"                        <strong>Detalle del error:</strong><br><br>\n"
+"                        <strong>\n"
+"                            <t t-out=\"ctx.get('technical_message')\"></t>\n"
+"                        </strong><br><br>\n"
+"                    </p>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,body_html:hr_dr_employee_notifications.email_template_notify_profession_celebration_date
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>\n"
+"                    Estimado(s),<br><br>\n"
+"                    Nuestras más sinceras felicitaciones.<br>\n"
+"                    <strong><span t-out=\"object.get_celebration_date_in_format_day_month()\"></span></strong> día mundial del <span t-out=\"object.name\"></span>.<br>\n"
+"                    ¡FELIZ DÍA!\n"
+"                    </p>\n"
+"\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con <t t-out=\"ctx.get('department')\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__administrators_ids
+msgid "Administrators"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_anniversary
+msgid "Aniversarios"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__anticipation_days
+msgid "Anticipation days"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__apply_in_anniversary
+msgid "Apply in anniversary"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__apply_in_birthday
+msgid "Apply in birthday"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__apply_in_personal_exit
+msgid "Apply in personal exit"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__apply_in_personal_income
+msgid "Apply in personal income"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__apply_in_profession_celebration_date
+msgid "Apply in profession celebration date"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_hr_profession__celebration_date
+msgid "Celebration date"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_hr_profession__email_template_id
+msgid "Celebration date email template"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model,name:hr_dr_employee_notifications.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid "Days in advance with which the notification is sent."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model,name:hr_dr_employee_notifications.model_hr_departure_wizard
+msgid "Departure Wizard"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__email_for_mass_notifications
+msgid "Email for mass notifications"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_anniversary
+msgid "Email template notify anniversary"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_birthdays
+msgid "Email template notify birthdays"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_personal_exit
+msgid "Email template notify personal exit"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_personal_income
+msgid "Email template notify personal income"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_personal_retired
+msgid "Email template notify personal retired"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_notify_profession_celebration_date
+msgid "Email template notify profession celebration date"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,name:hr_dr_employee_notifications.email_template_report_bug
+msgid "Email template report bug"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model,name:hr_dr_employee_notifications.model_hr_employee
+msgid "Employee extension table"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_birthdays
+msgid "Feliz cumpleaños"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_profession_celebration_date
+msgid "Feliz día del {{object.name}}"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,help:hr_dr_employee_notifications.field_hr_employee__notified_income
+msgid ""
+"If this option is checked, it means that the entry of this collaborator has "
+"already been notified."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,help:hr_dr_employee_notifications.field_hr_employee__notified_exit
+msgid ""
+"If this option is checked, it means that the exit of this collaborator has "
+"already been notified."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it means that the notification configuration will"
+" be applied in personal anniversary."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it means that the notification configuration will"
+" be applied in personal birthday."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it means that the notification configuration will"
+" be applied in personal exit."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it means that the notification configuration will"
+" be applied in personal income."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it means that the notification settings will be "
+"applied on the dates of the celebration of the charges."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid ""
+"If this option is checked, it only notifies the following administrators. "
+"Otherwise, it notifies the email defined for mass notifications if it "
+"exists; otherwise notify all collaborators."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_personal_income
+msgid "Ingreso de personal"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_personal_retired
+msgid "Jubilación de personal"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid "List of administrators who will receive the notification."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid "Mail for mass notifications."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.actions.server,name:hr_dr_employee_notifications.ir_cron_mark_all_personal_as_notified_income_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_employee_notifications.ir_cron_mark_all_personal_as_notified_income
+msgid "Mark all personal as notified income"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.res_config_settings_hr_dr_employee_notifications
+msgid "Notifications"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_hr_employee__notified_exit
+msgid "Notified exit"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_hr_employee__notified_income
+msgid "Notified income"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,field_description:hr_dr_employee_notifications.field_res_config_settings__notify_administrators
+msgid "Notify administrators"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.actions.server,name:hr_dr_employee_notifications.ir_cron_notify_anniversarys_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_employee_notifications.ir_cron_notify_anniversarys
+msgid "Notify anniversary"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.actions.server,name:hr_dr_employee_notifications.ir_cron_notify_birthdays_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_employee_notifications.ir_cron_notify_birthdays
+msgid "Notify birthdays"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.view_employee_form_hr_dr_employee_notifications_inherit
+msgid "Notify personal exit"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.actions.server,name:hr_dr_employee_notifications.ir_cron_notify_personal_income_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_employee_notifications.ir_cron_notify_personal_income
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.view_employee_form_hr_dr_employee_notifications_inherit
+msgid "Notify personal income"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_employee_notifications.view_employee_form_hr_dr_employee_notifications_inherit
+msgid "Notify personal retired"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.actions.server,name:hr_dr_employee_notifications.ir_cron_notify_profession_celebration_date_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_employee_notifications.ir_cron_notify_profession_celebration_date
+msgid "Notify profession celebration date"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model.fields,help:hr_dr_employee_notifications.field_res_config_settings__anticipation_days
+msgid "Number of days in advance for sending notifications."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model,name:hr_dr_employee_notifications.model_hr_profession
+msgid "Profession"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:ir.model,name:hr_dr_employee_notifications.model_hr_reentry_employee
+msgid "Reenter collaborator."
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_report_bug
+msgid "Reporte de error"
+msgstr ""
+
+#. module: hr_dr_employee_notifications
+#: model:mail.template,subject:hr_dr_employee_notifications.email_template_notify_personal_exit
+msgid "Salida de personal"
+msgstr ""

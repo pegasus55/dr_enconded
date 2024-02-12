@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e\n"
+"Project-Id-Version: Odoo Server 16.0+e-20231219\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-20 14:47+0000\n"
-"PO-Revision-Date: 2023-10-20 14:47+0000\n"
+"POT-Creation-Date: 2023-12-28 22:42+0000\n"
+"PO-Revision-Date: 2023-12-28 22:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -145,8 +145,8 @@ msgid ""
 "Defines the number assigned by the IESS according to the position it "
 "occupies in the company."
 msgstr ""
-"Define el número que le asigna el IESS según el cargo que ocupa "
-"ocupa en la compañía."
+"Define el número que le asigna el IESS según el cargo que ocupa ocupa en la "
+"compañía."
 
 #. module: hr_dr_contract_ec_private
 #: model_terms:ir.ui.view,arch_db:hr_dr_contract_ec_private.hr_contract_hr_contract_view_form_inherit
@@ -167,7 +167,7 @@ msgstr ""
 #. module: hr_dr_contract_ec_private
 #: model:ir.model,name:hr_dr_contract_ec_private.model_hr_contract
 msgid "Employee Contract"
-msgstr "Contrato de empleado"
+msgstr "Contrato del empleado"
 
 #. module: hr_dr_contract_ec_private
 #: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_branch_economic_activity__message_follower_ids
@@ -425,7 +425,7 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_sector_table_year__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_contract_ec_private.field_hr_subbranch_economic_activity__message_needaction_counter
-msgid "Number of messages which requires an action"
+msgid "Number of messages requiring action"
 msgstr ""
 
 #. module: hr_dr_contract_ec_private
@@ -487,6 +487,7 @@ msgstr "Comisión sectorial"
 #: model:ir.model,name:hr_dr_contract_ec_private.model_hr_sector_table
 #: model:ir.model.fields,field_description:hr_dr_contract_ec_private.field_hr_sector_table_year__sector_table_id
 #: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_sector_table
+#: model:ir.ui.menu,name:hr_dr_contract_ec_private.menu_hr_sector_table_root
 msgid "Sector table"
 msgstr "Tabla sectorial"
 

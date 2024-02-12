@@ -10,7 +10,7 @@
                 <field name="name"/>
                 <field name="code"/>
                 <field name="rule_ids"/>
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
             </tree>
         </field>
     </record>
@@ -52,7 +52,7 @@
             <tree string="Salary Structure">
                 <field name="name"/>
                 <field name="code"/>
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
             </tree>
         </field>
     </record>
@@ -77,7 +77,7 @@
                     <field name="name"/>
                     <field name="code"/>
                     <field name="parent_id"/>
-                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
                 </group>
                 <notebook colspan="4">
                     <page string="Salary Rules">
@@ -173,7 +173,7 @@
         <field name="arch" type="xml">
             <tree string="Contribution Registers">
                 <field name="name"/>
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
             </tree>
         </field>
     </record>
@@ -219,7 +219,7 @@
                 <group>
                     <field name="name"/>
                     <field name="partner_id"/>
-                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"
                            class="oe_inline"/>
                 </group>
                 <newline/>
@@ -315,7 +315,7 @@
                 <field name="name"/>
                 <field name="code"/>
                 <field name="category_id" invisible="True"/>
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
             </tree>
         </field>
     </record>

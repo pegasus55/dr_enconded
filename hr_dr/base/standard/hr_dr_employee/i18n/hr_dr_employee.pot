@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e-20231219\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-20 23:02+0000\n"
-"PO-Revision-Date: 2023-12-20 23:02+0000\n"
+"POT-Creation-Date: 2023-12-29 05:23+0000\n"
+"PO-Revision-Date: 2023-12-29 05:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -308,7 +308,6 @@ msgid "Catastrophic Diseases"
 msgstr ""
 
 #. module: hr_dr_employee
-#: model:ir.model,name:hr_dr_employee.model_hr_catastrophic_disease
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.view_hr_catastrophic_disease_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.view_hr_catastrophic_disease_tree
 msgid "Catastrophic disease"
@@ -734,11 +733,6 @@ msgid "Employee admin"
 msgstr ""
 
 #. module: hr_dr_employee
-#: model:ir.model,name:hr_dr_employee.model_hr_employee_allergies
-msgid "Employee allergies"
-msgstr ""
-
-#. module: hr_dr_employee
 #: model:ir.model,name:hr_dr_employee.model_hr_employee_backup
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.view_employee_form_inherit
 msgid "Employee backup"
@@ -767,11 +761,6 @@ msgstr ""
 #. module: hr_dr_employee
 #: model:ir.model,name:hr_dr_employee.model_hr_employee_family_load
 msgid "Employee family load"
-msgstr ""
-
-#. module: hr_dr_employee
-#: model:ir.model,name:hr_dr_employee.model_hr_employee_food_preferences
-msgid "Employee food preferences"
 msgstr ""
 
 #. module: hr_dr_employee
@@ -944,6 +933,36 @@ msgstr ""
 #. module: hr_dr_employee
 #: model:ir.model.fields,field_description:hr_dr_employee.field_hr_medical_exam__height
 msgid "Height (cm)"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_catastrophic_disease
+msgid "Hr catastrophic diseases"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_employee_allergies
+msgid "Hr employee allergies"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_employee_food_preferences
+msgid "Hr employee food preferences"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_position_function
+msgid "Hr position functions"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_position
+msgid "Hr positions"
+msgstr ""
+
+#. module: hr_dr_employee
+#: model:ir.model,name:hr_dr_employee.model_hr_profession
+msgid "Hr professions"
 msgstr ""
 
 #. module: hr_dr_employee
@@ -1469,7 +1488,6 @@ msgid "Phone"
 msgstr ""
 
 #. module: hr_dr_employee
-#: model:ir.model,name:hr_dr_employee.model_hr_position
 #: model:ir.model.fields,field_description:hr_dr_employee.field_hr_job__position_id
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.hr_position_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.hr_position_view_search
@@ -1478,7 +1496,6 @@ msgstr ""
 
 #. module: hr_dr_employee
 #: model:ir.actions.act_window,name:hr_dr_employee.hr_position_function_action
-#: model:ir.model,name:hr_dr_employee.model_hr_position_function
 #: model:ir.ui.menu,name:hr_dr_employee.hr_position_function_menu
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.hr_position_function_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_employee.hr_position_view_form
@@ -1509,7 +1526,6 @@ msgid "Presents catastrophic, rare, or orphan diseases"
 msgstr ""
 
 #. module: hr_dr_employee
-#: model:ir.model,name:hr_dr_employee.model_hr_profession
 #: model:ir.model.fields,field_description:hr_dr_employee.field_hr_employee__profession_id
 #: model:ir.model.fields,field_description:hr_dr_employee.field_hr_employee_base__profession_id
 #: model:ir.model.fields,field_description:hr_dr_employee.field_hr_employee_public__profession_id

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_personal_expenses_category_01" model="hr.personal.expenses.category">
+            <field name="name">Vivienda</field>
+            <field name="code">V</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_02" model="hr.personal.expenses.category">
+            <field name="name">Educación (Incluye Arte y Cultura)</field>
+            <field name="code">E</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_03" model="hr.personal.expenses.category">
+            <field name="name">Alimentación (Incluye pensiones alimenticias)</field>
+            <field name="code">A</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_04" model="hr.personal.expenses.category">
+            <field name="name">Salud</field>
+            <field name="code">S</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_05" model="hr.personal.expenses.category">
+            <field name="name">Vestimenta</field>
+            <field name="code">VE</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_06" model="hr.personal.expenses.category">
+            <field name="name">Turismo local</field>
+            <field name="code">TL</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_personal_expenses_category_07" model="hr.personal.expenses.category">
+            <field name="name">Cuidado de mascotas</field>
+            <field name="code">CM</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

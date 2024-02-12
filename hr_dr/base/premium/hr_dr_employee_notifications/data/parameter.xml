@@ -31,7 +31,7 @@
         </record>
         <record id="en_email_for_mass_notifications" model="ir.config_parameter">
             <field name="key">en.email.for.mass.notifications</field>
-            <field name="value"></field>
+            <field name="value"/>
         </record>
     </data>
 </odoo>

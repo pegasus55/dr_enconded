@@ -33,12 +33,21 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+
+        'data/bfb_per_fl.xml',
+        'data/hr_personal_expenses_category.xml',
+
+        'views/bfb_per_fl.xml',
+        'views/hr_personal_expenses_category.xml',
+        'views/hr_personal_expense.xml',
+        'views/hr_rent_tax_table.xml',
+
+        'wizard/generate_rdep.xml',
+
+
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
     ],
     'license': 'AGPL-3',
     'installable': True,

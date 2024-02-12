@@ -34,7 +34,7 @@ else:
             <field name="note">
 Es el 17.6 porciento del mayor valor entre el salario basico unificado vigente y el salario definido en el contrato.
             </field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_04"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
             <field name="code">IESSPATRONAL_P1760</field>
             <field name="sequence">141</field>
             <field name="appears_on_payslip">False</field>
@@ -56,7 +56,7 @@ else:
         <!--Subtotal: Subtotal: Ingresos (Generan beneficios sociales) -->
         <record id="salary_rule_SUBT_INGRESOS_GBS_P" model="hr.salary.rule">
             <field name="name">Subtotal: Ingresos (Generan beneficios sociales)</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_INGRESOS_GBS</field>
             <field name="sequence">40</field>
             <field name="appears_on_payslip">True</field>
@@ -69,7 +69,7 @@ else:
         <!--Subtotal: Ingresos (No generan beneficios sociales) -->
         <record id="salary_rule_SUBT_INGRESOS_NGBS_P" model="hr.salary.rule">
             <field name="name">Subtotal: Ingresos (No generan beneficios sociales)</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_INGRESOS_NGBS</field>
             <field name="sequence">79</field>
             <field name="appears_on_payslip">True</field>
@@ -82,7 +82,7 @@ else:
         <!--Subtotal: Total ingresos -->
         <record id="salary_rule_SUBT_TOTAL_INGRESOS_P" model="hr.salary.rule">
             <field name="name">Subtotal: Total ingresos</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_TOTAL_INGRESOS</field>
             <field name="sequence">80</field>
             <field name="appears_on_payslip">True</field>
@@ -95,7 +95,7 @@ else:
         <!--Subtotal: Egresos -->
         <record id="salary_rule_SUBT_EGRESOS_P" model="hr.salary.rule">
         	<field name="name">Subtotal: Egresos</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_EGRESOS</field>
             <field name="sequence">140</field>
             <field name="appears_on_payslip">True</field>
@@ -108,7 +108,7 @@ else:
         <!--Subtotal: Salario neto a recibir -->
         <record id="salary_rule_SUBT_NETO_P" model="hr.salary.rule">
         	<field name="name">Subtotal: Salario neto a recibir</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_NETO</field>
             <field name="sequence">181</field>
             <field name="appears_on_payslip">True</field>
@@ -121,7 +121,7 @@ else:
         <!--Subtotal: Costo total interno del colaborador -->
         <record id="salary_rule_SUBT_COSTO_TOTAL_P" model="hr.salary.rule">
         	<field name="name">Subtotal: Costo total interno del colaborador</field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_05"/>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
             <field name="code">SUBT_COSTO_TOTAL</field>
             <field name="sequence">182</field>
             <field name="appears_on_payslip">False</field>

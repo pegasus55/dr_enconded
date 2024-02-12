@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="view_re-planning_vacation_planning_request" model="ir.ui.view">
+            <field name="name">hr.replanning.vacation.planning.request.form</field>
+            <field name="model">hr.replanning.vacation.planning.request</field>
+            <field name="arch" type="xml">
+                <form string="Re-planning vacation planning request">
+                    <group>
+                        <group string="Current planning">
+                            <field name="actual_vacation_planning_request_id" invisible="1"/>
+                            <field name="employee_requests_id"/>
+                            <field name="department_employee_requests_id"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="date_incorporation"/>
+                            <field name="number_of_days"/>
+                        </group>
+                        <group string="Re-planning">
+                            <field name="date_from_new"/>
+                            <field name="date_to_new"/>
+                            <field name="commentary_new"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_replanning" string="Re-planning" type="object" class="btn-primary"/>
+                        <button name="action_replanning_direct" string="Re-planning direct" type="object"
+                                class="btn-primary"
+                                groups="hr_dr_vacations.hr_dr_vacations_group_supervisor"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_re-planning_vacation_planning_request" model="ir.actions.act_window">
+            <field name="name">Re-planning vacation planning request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.replanning.vacation.planning.request</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_re-planning_vacation_planning_request"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
