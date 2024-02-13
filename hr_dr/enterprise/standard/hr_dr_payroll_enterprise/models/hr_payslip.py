@@ -399,29 +399,31 @@ class HrPayslip(models.Model):
         - Para un empleado que ingreso un 29 de abril 2017 retornará 02 días
         - Para un empleado que ingreso un 30 de abril 2017 retornará 01 días
         """
-        if self.number_service_months < 13:
-            days_to_pay_reserve_fund = 0
-        elif self.number_service_months == 13:
-            # Los días que me sobran del último mes, pero máximo 30 días ya que la formula en la regla salarial
-            # de fondo de reserva la divide para 30 días.
-            date_end = self.date_to
-            days_in_service = self.days_in_service
-            if self.days_in_service == 0:
-                # En este caso si son 13 meses entonces es 1 año y 1 mes, osea 30 dÍas
-                days_in_service = 30
-            elif date_end.month == 2:  # febrero
-                if date_end.year % 4:
-                    # tiene 28 dias
-                    days_in_service += 2
-                else:  # Año bisiesto, tiene 29 días
-                    days_in_service += 1
-            elif date_end.day == 31:
-                days_in_service = max(1, days_in_service - 1)
-            days_to_pay_reserve_fund = min(30, days_in_service)
-        else:  # Mayor que 13 meses
-            days_to_pay_reserve_fund = 30
+        for rec in self:
 
-        self.days_to_pay_reserve_fund = days_to_pay_reserve_fund
+            if rec.number_service_months < 13:
+                days_to_pay_reserve_fund = 0
+            elif rec.number_service_months == 13:
+                # Los días que me sobran del último mes, pero máximo 30 días ya que la formula en la regla salarial
+                # de fondo de reserva la divide para 30 días.
+                date_end = rec.date_to
+                days_in_service = rec.days_in_service
+                if rec.days_in_service == 0:
+                    # En este caso si son 13 meses entonces es 1 año y 1 mes, osea 30 dÍas
+                    days_in_service = 30
+                elif date_end.month == 2:  # febrero
+                    if date_end.year % 4:
+                        # tiene 28 dias
+                        days_in_service += 2
+                    else:  # Año bisiesto, tiene 29 días
+                        days_in_service += 1
+                elif date_end.day == 31:
+                    days_in_service = max(1, days_in_service - 1)
+                days_to_pay_reserve_fund = min(30, days_in_service)
+            else:  # Mayor que 13 meses
+                days_to_pay_reserve_fund = 30
+
+            rec.days_to_pay_reserve_fund = days_to_pay_reserve_fund
 
     # @api.onchange('date_to')
     # def onchange_date_to(self):
