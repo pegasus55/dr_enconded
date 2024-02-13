@@ -14,7 +14,7 @@
                                 <field name="name"/>
                             </group>
                             <group>
-                                <field name="active" widget="boolean_toggle"/>
+                                <field name="active"/>
                             </group>
                         </group>
                         <group>
@@ -36,7 +36,7 @@
                 <tree string="Food preferences">
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="active" widget="boolean_toggle"/>
+                    <field name="active"/>
                 </tree>
             </field>
         </record>

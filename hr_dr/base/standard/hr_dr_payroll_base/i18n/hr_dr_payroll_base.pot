@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e-20231219\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 15:20+0000\n"
-"PO-Revision-Date: 2023-12-29 15:20+0000\n"
+"POT-Creation-Date: 2023-12-05 04:02+0000\n"
+"PO-Revision-Date: 2023-12-05 04:02+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -709,9 +709,11 @@ msgid "Acreditación en Cuenta"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_needaction
@@ -719,6 +721,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_needaction
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_needaction
@@ -742,6 +750,7 @@ msgid "Action Needed"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__active
@@ -750,6 +759,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__active
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__active
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__active
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__active
@@ -864,13 +875,21 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__amount
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__amount
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__amount
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__amount
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__amount
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_utility_line_judicial_withholding__amount
 msgid "Amount"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__any_family_load_with_catastrophic_diseases
+msgid "Any family load with catastrophic diseases"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__approval_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__approval_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__approval_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__approval_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__approval_date
@@ -891,9 +910,11 @@ msgid "Archivo"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_attachment_count
@@ -901,6 +922,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_attachment_count
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_attachment_count
@@ -943,9 +970,29 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.actions.act_window,name:hr_dr_payroll_base.action_basic_family_basket
 #: model:ir.model,name:hr_dr_payroll_base.model_hr_basic_family_basket
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__basic_family_basket
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.basic_family_basket_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_basic_family_basket_view_form
 msgid "Basic family basket"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_bfb_per_fl
+#: model:ir.model,name:hr_dr_payroll_base.model_bfb_per_fl
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.bfb_per_fl_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.bfb_per_fl_view_tree
+msgid "Basic family basket per family load"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__basic_fraction
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__basic_fraction
+msgid "Basic fraction"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__basic_fraction_tax
+msgid "Basic fraction tax"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -963,8 +1010,8 @@ msgid "Beneficiary"
 msgstr ""
 
 #. module: hr_dr_payroll_base
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__bonus_and_perks
-msgid "Bonus and perks"
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__benefit_percentage
+msgid "Benefit percentage"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -988,14 +1035,24 @@ msgid "Calculated"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Calculated Value"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage_line__value
 msgid "Calculated compensation"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__calculation_method
+msgid "Calculation method"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.base_file_report_view_form
-#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.clone_salary_rule_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_hr_fortnight_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.import_input_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.import_utility_external_service_form
 msgid "Cancel"
@@ -1010,6 +1067,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__date_cancellation
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__date_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__date_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__date_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__date_cancellation
@@ -1020,6 +1078,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__user_cancellation
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__user_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__user_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__user_cancellation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_cancellation
@@ -1064,6 +1123,12 @@ msgid "Cash management (Payment of utilities)"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__personal_expenses_category_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__personal_expenses_category_id
+msgid "Category"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__res_partner_family_load__relationship__children
 msgid "Children"
 msgstr ""
@@ -1079,22 +1144,7 @@ msgid "Click to see the detail of a tenth."
 msgstr ""
 
 #. module: hr_dr_payroll_base
-#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.clone_salary_rule_form
-msgid "Clone"
-msgstr ""
-
-#. module: hr_dr_payroll_base
-#: model:ir.model,name:hr_dr_payroll_base.model_clone_salary_rule
-msgid "Clone salary rule"
-msgstr ""
-
-#. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_clone_salary_rule
-#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.clone_salary_rule_form
-msgid "Clone salary rules"
-msgstr ""
-
-#. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table_expense__region__coast
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary__region__coast
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary_line__region__coast
 msgid "Coast"
@@ -1117,6 +1167,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__employee_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__employee_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__employee_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__employee_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__employee_requests_id
@@ -1155,6 +1207,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__commentary
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__commentary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__commentary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__commentary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__commentary
@@ -1170,7 +1223,9 @@ msgid "Commissions"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__company_id
@@ -1181,6 +1236,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__company_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__company_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__company_id
@@ -1203,6 +1263,11 @@ msgid "Compensation to receive"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.payment_utility_view_form
@@ -1211,6 +1276,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__date_confirmation
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__date_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__date_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__date_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__date_confirmation
@@ -1221,12 +1287,23 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__user_confirmation
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__user_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__user_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__user_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_salary__user_confirmation
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_thirteenth_salary__user_confirmation
 msgid "Confirmation user"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table__state__confirmed
+msgid "Confirmed"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__consumer_price_index
+msgid "Consumer price index"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -1268,12 +1345,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__create_uid
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__create_uid
@@ -1281,6 +1360,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__create_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__create_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__create_uid
@@ -1307,12 +1392,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__create_date
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__create_date
@@ -1320,6 +1407,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__create_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__create_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__create_date
@@ -1345,6 +1438,7 @@ msgid "Created on"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__currency_id
@@ -1355,6 +1449,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__currency_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__currency_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__currency_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__currency_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__currency_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__currency_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__currency_id
@@ -1419,7 +1518,13 @@ msgid "Death date"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Deductions"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__department_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__department_employee_requests_id
@@ -1430,6 +1535,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__department_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_pay_living_wage__department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__department_employee_requests_id
@@ -1485,13 +1591,38 @@ msgid "Disability"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
+msgid "Disability Benefit"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__disability_benefit_ids
+msgid "Disability benefit"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_disability_benefit_table
+msgid "Disability benefit table"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_family_load__disability_conadis
 msgid "Disability conadis"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__disability_deduction
+msgid "Disability deduction"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_family_load__disability_description
 msgid "Disability description"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Discount Value"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -1504,12 +1635,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__display_name
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__display_name
@@ -1517,6 +1650,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__display_name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__display_name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__display_name
@@ -1543,6 +1682,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_payment_utility__state__done
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_personal_expense__state__done
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_tenth__state__done
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__pay_living_wage__state__done
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary__state__done
@@ -1558,9 +1698,28 @@ msgid "Download template"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_personal_expense__state__draft
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary__region__eastern
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary_line__region__eastern
 msgid "East"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table_expense__region__eastern
+msgid "Eastern"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__profit_tax
+msgid ""
+"El impuesto sobre beneficios causados se obtiene al sumar el impuesto a la fracción básica según el rango correspondiente a la base fiscal gravable en la tabla de impuesto a la renta y el porcentaje aplicado al exceso de esta base.\n"
+"Si el empleador asume parte o la totalidad del impuesto, el valor asumido por el empleador se incluye en la base fiscal gravable.\n"
+"ISBC = (BFG - fracción básica) * exceso de fracción de impuesto + impuesto fracción básica"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -1768,13 +1927,53 @@ msgid "End of period"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__error_file
+msgid "Error file"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__error_file_name
+msgid "Error file name"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__establishment_number
+msgid "Establishment number"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__excess_until
+msgid "Excess until"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__expense_ids
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_additional_income_expense__type__expense
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
 msgid "Expense"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_rent_tax_table_expense__unique_expense_category_by_region_rtt
+msgid ""
+"Expense categories cannot be repeated for the same region and income tax "
+"table."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_personal_expense_detail__unique_personal_expense_by_category
+msgid "Expense categories cannot be repeated."
 msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_additional_income_expense__type__expense_with_beneficiary
 msgid "Expense with beneficiary"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__expenses_ids
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Expenses"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -1806,6 +2005,8 @@ msgid "Family Load"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__family_load
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__family_load
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line_judicial_withholding__family_load_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_judicial_withholding__family_load_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_utility_line_judicial_withholding__family_load_id
@@ -1840,17 +2041,42 @@ msgid "File"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
+msgid "File generated successfully."
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__filename
 msgid "File name"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "First Calculation"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__first_expenses_discount
+msgid "First personal expenses discount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__first_rent_tax
+msgid "First rent tax"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__fiscal_year
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_living_wage__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__fiscal_year
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__fiscal_year
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__fiscal_year
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__fiscal_year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__fiscal_year
@@ -1860,9 +2086,11 @@ msgid "Fiscal year"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_follower_ids
@@ -1870,6 +2098,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_follower_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_follower_ids
@@ -1893,9 +2127,11 @@ msgid "Followers"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_partner_ids
@@ -1903,6 +2139,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_partner_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_partner_ids
@@ -1926,6 +2168,11 @@ msgid "Followers (Partners)"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_bfb_per_fl__unique_fiscal_year_family_load
+msgid "For the same fiscal year you cannot repeat the amount of family loads."
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.actions.act_window,name:hr_dr_payroll_base.action_hr_fortnight
 #: model:ir.model,name:hr_dr_payroll_base.model_hr_fortnight
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_fortnight_view_form
@@ -1940,8 +2187,30 @@ msgid "Fourteenth salary"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__fraction
+msgid "Fraction"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__date_from
+msgid "From"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner__gender
 msgid "Gender"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_generate_rdep
+#: model:ir.model,name:hr_dr_payroll_base.model_generate_rdep
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
+msgid "Generate RDEP"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
+msgid "Generate REDP"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -1967,9 +2236,11 @@ msgid "Group By"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__has_message
@@ -1977,6 +2248,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__has_message
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__has_message
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__has_message
@@ -2019,12 +2296,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__id
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__id
@@ -2032,6 +2311,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__id
@@ -2068,9 +2353,11 @@ msgid "Identification type"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_historical_provision__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_input__message_needaction
@@ -2078,6 +2365,12 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_needaction
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__message_needaction
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_needaction
@@ -2101,12 +2394,16 @@ msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_historical_provision__message_has_error
@@ -2121,6 +2418,18 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_error
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__message_has_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__message_has_sms_error
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__message_has_error
@@ -2192,6 +2501,29 @@ msgid "Income"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__profit_tax_employer
+msgid "Income tax assumed by this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__income_tax_withholding_percentage
+msgid "Income tax withholding percentage"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__taxable_income
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__taxable_income_posted
+msgid "Income taxed with this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__taxable_income_posted
+msgid ""
+"Income taxed with this employer (Recorded). Useful for reporting on the "
+"RDEP."
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model,name:hr_dr_payroll_base.model_hr_input
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_input_view_form
 msgid "Input"
@@ -2215,9 +2547,11 @@ msgid "Intern"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_is_follower
@@ -2225,6 +2559,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_is_follower
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_is_follower
@@ -2254,6 +2594,11 @@ msgid "Is external service personnel"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table_expense__region__island
+msgid "Island"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary__region__island
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary_line__region__island
 msgid "Island / Galapagos"
@@ -2268,6 +2613,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__job_position
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__job_position
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__job_position
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__job_position
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__job_position
@@ -2278,6 +2624,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__job_position
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__job_position
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__job_position
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_pay_living_wage__job_position
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__job_position
@@ -2328,13 +2675,27 @@ msgid "Judicial withholdings"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__tax_base_posted
+msgid "La \"Base Imponible Gravada\" a ser reportada en el RDEP"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__tax_base
+msgid ""
+"La base fiscal gravable se obtiene de la diferencia entre ingresos (sueldos, comisiones, utilidades e ingresos generados con otros empleadores) y gastos (Contribuciones al IESS, deducciones de gastos personales y exoneraciones).\n"
+"Si el empleador asume parte o la totalidad del impuesto, el valor asumido por el empleador se incluye en los ingresos."
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report____last_update
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input____last_update
@@ -2342,6 +2703,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense____last_update
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth____last_update
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary____last_update
@@ -2368,12 +2735,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__write_uid
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__write_uid
@@ -2381,6 +2750,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__write_uid
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__write_uid
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__write_uid
@@ -2407,12 +2782,14 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_base_file_report__write_date
-#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_clone_salary_rule__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_hr_fortnight__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contract_input__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__write_date
@@ -2420,6 +2797,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__write_date
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__write_date
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__write_date
@@ -2459,9 +2842,11 @@ msgid "Living wage payment detail"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_main_attachment_id
@@ -2469,6 +2854,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_main_attachment_id
@@ -2498,6 +2889,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__user_manager_department_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__user_manager_department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__user_manager_department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__user_manager_department_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_manager_department_employee_requests_id
@@ -2507,14 +2899,36 @@ msgid "Manager"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__max_amount
+msgid "Max amount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__max_deductible
+msgid "Maximum deductible"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__maximum_deductible_expense
+msgid "Maximum deductible expense"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_schedule_legal_obligations__max_payment_date
 msgid "Maximum payment date"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__maximum_percentage
+msgid "Maximum percentage"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_has_error
@@ -2522,6 +2936,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_has_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_has_error
@@ -2545,9 +2965,11 @@ msgid "Message Delivery error"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_ids
@@ -2555,6 +2977,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_ids
@@ -2584,6 +3012,11 @@ msgid "Method to receive payments."
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__minimum_percentage
+msgid "Minimum percentage"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__monthly_amount
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_historical_provision__payment_type__monthly
 msgid "Monthly"
@@ -2610,6 +3043,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__rule_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__name
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_family_load__name
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_schedule_legal_obligations__name
@@ -2634,6 +3068,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__notification_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__notification_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__notification_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__notification_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__notification_ids
@@ -2703,9 +3138,11 @@ msgid "Notifications to process for tenths."
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_needaction_counter
@@ -2713,6 +3150,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_needaction_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_needaction_counter
@@ -2736,9 +3179,11 @@ msgid "Number of Actions"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_has_error_counter
@@ -2746,6 +3191,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_has_error_counter
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_has_error_counter
@@ -2781,9 +3232,11 @@ msgid "Number of judicial withholding"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_historical_provision__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_input__message_needaction_counter
@@ -2791,6 +3244,12 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_needaction_counter
@@ -2810,13 +3269,15 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_schedule_legal_obligations__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_schedule_legal_obligations_detail__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_utility_line_judicial_withholding__message_needaction_counter
-msgid "Number of messages requiring action"
+msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_historical_provision__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_input__message_has_error_counter
@@ -2824,6 +3285,12 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__message_has_error_counter
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_has_error_counter
@@ -2874,6 +3341,11 @@ msgid "Other"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Other employers"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_view_form
@@ -2881,6 +3353,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.payment_utility_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.view_hr_tenth_form
 msgid "Other information"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__other_taxable_income
+msgid "Other taxable income"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -2900,6 +3377,11 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__res_partner_family_load__relationship__parent
 msgid "Parent"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_personal_expense__calculation_method__assumption_partial
+msgid "Partial assumption (50%) of the income tax by the employer"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3092,8 +3574,54 @@ msgid "Permanent part-time"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__IESS_other_employer
+msgid "Personal contribution to IESS with other employers"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__IESS_this_employer
+msgid "Personal contribution to IESS with this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_personal_expense
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__hr_personal_expense_id
+msgid "Personal expense"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_personal_expense_detail
+msgid "Personal expense detail"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_personal_expense
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_tree
+msgid "Personal expenses"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_personal_expenses_category
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_personal_expenses_category
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.view_personal_expenses_category_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.view_personal_expenses_category_tree
+msgid "Personal expenses category"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__expenses_discount
+msgid "Personal expenses discount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_family_load__phone
 msgid "Phone"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Posted Value"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3107,6 +3635,11 @@ msgid "Posting date"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__presents_catastrophic_disease
+msgid "Presents catastrophic disease"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_input__state__processed
 msgid "Processed"
 msgstr ""
@@ -3114,6 +3647,16 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.actions.act_window,name:hr_dr_payroll_base.hr_processed_inputs_action
 msgid "Processed inputs"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__profit_tax
+msgid "Profit tax caused"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__profit_tax_first_calculation
+msgid "Profit tax caused first calculation"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3137,7 +3680,14 @@ msgid "RUC complementary services company"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__rate_ids
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
+msgid "Rate"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__readonly_values
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__readonly_values
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__readonly_values
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__readonly_values
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__readonly_values
@@ -3155,6 +3705,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__reason_reject
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__reason_reject
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__reason_reject
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__reason_reject
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__reason_reject
@@ -3169,6 +3720,7 @@ msgid "Recalculate"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__region
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__region
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary_line__region
 msgid "Region"
@@ -3216,6 +3768,7 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__user_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__user_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__user_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_pay_living_wage__user_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_employee_requests_id
@@ -3227,6 +3780,33 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_res_partner_family_load__relationship
 msgid "Relationship"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__rent_tax
+msgid "Rent tax"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_rent_tax_table
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_rent_tax_table
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__rent_tax_table_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__rent_tax_table_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__rent_tax_table_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__rent_tax_table_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_tree
+msgid "Rent tax table"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_rent_tax_table_expense
+msgid "Rent tax table expense"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model,name:hr_dr_payroll_base.model_hr_rent_tax_table_rate
+msgid "Rent tax table rate"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3301,6 +3881,7 @@ msgid "Retired"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_fourteenth_salary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary_line__retired_employee_fourteenth_salary_id
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_line_view_search
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form
@@ -3309,22 +3890,13 @@ msgid "Retired collaborator fourteenth salary"
 msgstr ""
 
 #. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_fourteenth_salary
-msgid "Retired collaborator fourteenth salary action"
-msgstr ""
-
-#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_fourteenth_salary_line
 #: model:ir.model,name:hr_dr_payroll_base.model_retired_employee_fourteenth_salary_line
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__retired_employee_fourteenth_salary_line_ids
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_line_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_line_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form
 msgid "Retired collaborator fourteenth salary detail"
-msgstr ""
-
-#. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_fourteenth_salary_line
-msgid "Retired collaborator fourteenth salary detail action"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3348,6 +3920,7 @@ msgid "Retired collaborator fourteenth salary request rejected"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_salary
 #: model:ir.model,name:hr_dr_payroll_base.model_retired_employee_salary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_salary_line__retired_employee_salary_id
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_line_view_search
@@ -3357,22 +3930,13 @@ msgid "Retired collaborator salary"
 msgstr ""
 
 #. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_salary
-msgid "Retired collaborator salary action"
-msgstr ""
-
-#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_salary_line
 #: model:ir.model,name:hr_dr_payroll_base.model_retired_employee_salary_line
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_salary__retired_employee_salary_line_ids
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_line_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_line_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_view_form
 msgid "Retired collaborator salary detail"
-msgstr ""
-
-#. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_salary_line
-msgid "Retired collaborator salary detail action"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3396,6 +3960,7 @@ msgid "Retired collaborator salary request rejected"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_thirteenth_salary
 #: model:ir.model,name:hr_dr_payroll_base.model_retired_employee_thirteenth_salary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_thirteenth_salary_line__retired_employee_thirteenth_salary_id
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_line_view_search
@@ -3405,22 +3970,13 @@ msgid "Retired collaborator thirteenth salary"
 msgstr ""
 
 #. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_thirteenth_salary
-msgid "Retired collaborator thirteenth salary action"
-msgstr ""
-
-#. module: hr_dr_payroll_base
+#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_thirteenth_salary_line
 #: model:ir.model,name:hr_dr_payroll_base.model_retired_employee_thirteenth_salary_line
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_thirteenth_salary__retired_employee_thirteenth_salary_line_ids
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_line_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_line_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_view_form
 msgid "Retired collaborator thirteenth salary detail"
-msgstr ""
-
-#. module: hr_dr_payroll_base
-#: model:ir.actions.act_window,name:hr_dr_payroll_base.action_retired_employees_thirteenth_salary_line
-msgid "Retired collaborator thirteenth salary detail action"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3471,9 +4027,11 @@ msgid "SBU"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__message_has_sms_error
@@ -3481,6 +4039,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__message_has_sms_error
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__message_has_sms_error
@@ -3522,6 +4086,21 @@ msgid "Schedule of legal obligations detail"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer
+msgid "Second value of the tax assumed by this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer_discount
+msgid "Second value of the tax assumed by this employer discount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer_posted
+msgid "Second value of the tax assumed by this employer posted"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_salary_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_view_form
@@ -3542,6 +4121,11 @@ msgid "Select the input file."
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.rent_tax_table_view_form
+msgid "Send to draft"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth_line__move_id
 msgid "Settlement entry"
 msgstr ""
@@ -3552,6 +4136,7 @@ msgid "Siblings"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_rent_tax_table_expense__region__sierra
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary__region__sierra
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__retired_employee_fourteenth_salary_line__region__sierra
 msgid "Sierra"
@@ -3593,6 +4178,20 @@ msgid "Solicitud de pago de décimo registrada"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__tax_base_first_calculation
+msgid ""
+"Solo aplica cuando el empleador asume parte o la totalidad del impuesto.\n"
+"Este primer cálculo no incluye el valor del impuesto asumido por el empleador."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__profit_tax_first_calculation
+msgid ""
+"Solo aplica cuando el empleador asume parte o la totalidad del impuesto.\n"
+"Este primer cálculo realizado no incluye el valor del impuesto asumido por el empleador."
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__res_partner_family_load__relationship__son
 msgid "Son"
 msgstr ""
@@ -3614,10 +4213,13 @@ msgid "Start of period"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__state_utility
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__state_utility
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__state
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__state
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__state
@@ -3642,9 +4244,45 @@ msgid "Surnames"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__tax_caused
+msgid "Tax caused"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__excess_fraction_tax
+msgid "Tax fraction excess (%)"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "Tax summary"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__taxable_income
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_historical_provision__type__taxable_income
 msgid "Taxable income"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__taxable_income
+msgid "Taxable income with this employer (Calculated)."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__tax_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__tax_base_posted
+msgid "Taxable tax base"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__tax_base_first_calculation
+msgid "Taxable tax base first calculation"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__income_other_employers
+msgid "Taxed income generated with other employers"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3751,6 +4389,7 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_basic_family_basket_unique_fiscal_year
 #: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_living_wage_fiscal_year_uniq
+#: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_rent_tax_table_fiscal_year_uniq
 #: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_sbu_fiscal_year_uniq
 msgid "The fiscal year must be unique."
 msgstr ""
@@ -3760,6 +4399,13 @@ msgstr ""
 msgid ""
 "The fourteenth remuneration corresponding to the proportional value of the "
 "time worked in the previous fiscal year."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
+msgid ""
+"The information of the collaborators of the company to which the current "
+"user belongs will be exported."
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3805,11 +4451,33 @@ msgid ""
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.constraint,message:hr_dr_payroll_base.constraint_hr_personal_expense_employee_id_fiscal_year_uniq
+msgid ""
+"There can only be one projection of personal expenses per employee and "
+"fiscal year."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__third_age_deduction
+msgid "Third age deduction"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__thirteenth_salary
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage_line__thirteenth_salary
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_historical_provision__type__d13
 #: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_tenth__type_tenth__thirteenth_salary
 msgid "Thirteenth salary"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.personal_expense_view_form
+msgid "This employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__date_to
+msgid "To"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3872,6 +4540,26 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.payment_utility_view_form
 msgid "Total advance utilities"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_personal_expense__calculation_method__assumption_total
+msgid "Total assumption of income tax by the employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__total_deduction
+msgid "Total deduction"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__total_expenses
+msgid "Total expense"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__total_income
+msgid "Total income"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -3971,6 +4659,11 @@ msgid "Total value"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields.selection,name:hr_dr_payroll_base.selection__hr_personal_expense__calculation_method__withhold_employee
+msgid "Total withholding of income tax to the collaborator"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__total_worked_days
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_payment_utility_external_service_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.hr_payment_utility_external_service_tree
@@ -4034,6 +4727,8 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__user_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__user_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__user_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__user_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage__user_employee_requests_id
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_employee_requests_id
@@ -4044,12 +4739,18 @@ msgstr ""
 
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__user_manager_department_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__user_manager_department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__user_manager_department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_pay_living_wage__user_manager_department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__user_manager_department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_salary__user_manager_department_employee_requests_id
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_retired_employee_thirteenth_salary__user_manager_department_employee_requests_id
 msgid "User manager department collaborator requesting"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__utility
+msgid "Utilities"
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -4086,6 +4787,46 @@ msgstr ""
 #. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__utility_value_to_distribute
 msgid "Utility to distribute"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__validate
+msgid "Validate"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer
+msgid ""
+"Valor asumido por el empleador sobre el impuesto generado por el valor "
+"asumido por el empleador sobre la base fiscal gravable."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer
+msgid ""
+"Valor asumido por el empleador sobre el primer cálculo de la base fiscal "
+"gravable."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee_discount
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer_discount
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer_discount
+msgid "Valor mensual a descontar."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee_posted
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer_posted
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__second_amount_this_employer_posted
+msgid "Valor publicado hasta la fecha."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee
+msgid ""
+"Valor retenido al colaborador por el empleador.\n"
+" Si el empleador asume el impuesto de forma parcial, se incluye el impuesto generado por el valor asumido."
 msgstr ""
 
 #. module: hr_dr_payroll_base
@@ -4127,15 +4868,55 @@ msgid "Value for the previous fiscal year"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer
+msgid "Value of the tax assumed by this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer_discount
+msgid "Value of the tax assumed by this employer discount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_this_employer_posted
+msgid "Value of the tax assumed by this employer posted"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_other_employer
+msgid ""
+"Value of the tax withhold and assumed by other employers during the declared"
+" period"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee
+msgid "Value of the tax withhold from the worker by this employer"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee_discount
+msgid "Value of the tax withhold from the worker by this employer discount"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__amount_detained_employee_posted
+msgid "Value of the tax withhold from the worker by this employer posted"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__wage
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__wage
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_pay_living_wage_line__wage
 msgid "Wage"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_bfb_per_fl__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_additional_income_expense__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_basic_family_basket__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_contribution_register__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_disability_benefit_table__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_fortnight__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_historical_provision__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_input__website_message_ids
@@ -4143,6 +4924,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense_detail__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expenses_category__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_expense__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_rent_tax_table_rate__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_sbu__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth__website_message_ids
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__website_message_ids
@@ -4166,9 +4953,11 @@ msgid "Website Messages"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_bfb_per_fl__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_additional_income_expense__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_basic_family_basket__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_contribution_register__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_disability_benefit_table__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_fortnight__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_historical_provision__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_input__website_message_ids
@@ -4176,6 +4965,12 @@ msgstr ""
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_external_service__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_payment_utility_line__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expense_detail__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_personal_expenses_category__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_expense__website_message_ids
+#: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_rent_tax_table_rate__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_sbu__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth__website_message_ids
 #: model:ir.model.fields,help:hr_dr_payroll_base.field_hr_tenth_judicial_withholding_summary__website_message_ids
@@ -4209,6 +5004,11 @@ msgid "Withholding tax"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_personal_expense__work_region
+msgid "Work region"
+msgstr ""
+
+#. module: hr_dr_payroll_base
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_external_service__worked_days
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_payment_utility_line__worked_days
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_hr_tenth_line__worked_days
@@ -4227,6 +5027,22 @@ msgid "Working days (Previous fiscal year)"
 msgstr ""
 
 #. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__xml_file
+msgid "XML file"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__xml_file_name
+msgid "XML file name"
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_dr_payroll_base.generate_rdep_form
+msgid "XML validation error."
+msgstr ""
+
+#. module: hr_dr_payroll_base
+#: model:ir.model.fields,field_description:hr_dr_payroll_base.field_generate_rdep__year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_fourteenth_salary__year
 #: model:ir.model.fields,field_description:hr_dr_payroll_base.field_retired_employee_thirteenth_salary__year
 msgid "Year"

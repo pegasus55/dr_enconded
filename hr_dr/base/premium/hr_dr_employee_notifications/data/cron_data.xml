@@ -24,6 +24,7 @@
 	        <field name="doall" eval="False"/>
 			<field name="model_id" ref="model_hr_employee"/>
 			<field name="state">code</field>
+            <field name="active" eval="False"/>
             <field name="code">model.cron_notify_personal_income()</field>
         </record>
         <record id="ir_cron_notify_birthdays" model="ir.cron">

@@ -1,1 +1,65 @@
-__pyarmor__(__name__, __file__, b'\x50\x59\x41\x52\x4d\x4f\x52\x00\x00\x03\x0a\x00\x6f\x0d\x0d\x0a\x08\x2d\xa0\x01\x00\x00\x00\x00\x01\x00\x00\x00\x40\x00\x00\x00\x67\x01\x00\x00\x00\x00\x00\x00\x9b\x6f\xbf\x9d\x05\x55\x3e\x8f\xad\xad\xaf\x5e\x64\x32\x9f\x76\x00\x00\x00\x00\x00\x00\x00\x00\xd7\x53\xa3\x25\x8d\xd2\xae\xc6\xf2\x34\x91\x44\xc4\xe1\x03\x49\x76\xe9\x51\x53\x6c\x93\x52\x8c\x31\xf4\x45\x54\xc3\x2b\xfa\x5d\x43\x77\x23\x7a\xb1\xe7\x07\x9b\x9a\xda\xec\xbb\x25\xf3\x29\x03\x06\x6d\x33\x93\x46\x7a\x7a\x74\x6c\x5a\x12\x04\xfd\x77\x1d\xf5\xe4\x36\x30\x34\xe0\x79\x4b\xdc\x81\x08\x9b\xa8\x6e\xc4\x22\xec\x4c\x02\xe8\x7c\x97\xaf\x36\xa7\x42\x38\xe8\x10\xa1\x6d\xf3\x38\x80\x02\xc5\xad\x51\x79\x13\xe3\x7d\xa1\xd6\xd5\x86\xcc\x26\x7e\xe7\xea\xba\xcb\x0b\xe3\x06\x04\x07\x34\xd2\x14\xd4\x7c\xdc\x55\xd0\xce\xc9\xfc\x83\x3c\x58\x7d\xf6\x8b\xd5\x38\xa3\x04\xdc\x30\x54\xf0\x08\xdc\x79\xe7\xa1\xa9\x7d\xf8\x45\xd7\x75\xb8\x6b\x1a\xcf\x3b\x83\x9d\xc2\x84\x72\x40\x84\xed\x51\xca\x4b\xa5\xb9\x8f\x2e\x60\x13\x7f\xf7\x78\xab\x86\x5e\xf7\xd8\xa0\x6d\x66\xee\x0c\x45\xa9\xa3\x62\x62\x75\xfc\x43\x8f\xc3\x57\x9a\xd8\x3a\x0e\x03\x05\xe6\x43\x44\x6f\xb0\x30\x8e\x8e\x11\x36\x5e\xf0\xb9\x79\x24\x29\x57\x02\xe3\xbf\xa9\x08\xb7\x7a\x9b\x68\x68\xa7\x27\xfe\xf0\xa6\x31\x71\x8d\x0d\x26\xea\x7e\x46\xb0\x95\x5f\xb8\x48\xa8\x8a\x6b\xc9\x66\x15\x55\xa2\x60\x1e\xd7\x41\x00\xc7\x1c\xf0\x4e\xcf\xab\xc6\x35\x2c\x2d\x03\x7a\x4e\xff\x1c\x87\x63\x5a\xd7\x70\x79\x8a\xde\x47\x51\x65\x05\x28\xbd\xed\xf6\x73\x63\x99\xe5\xe1\xe8\xb0\xaf\x6f\x50\x12\xdd\x62\xcd\xfd\xa0\x64\xe4\xbe\x9d\x1f\xa2\x11\x40\xeb\xae\xeb\xca\x8f\xde\xb7\xab\xdf\x51\xa3\xc9\x17\x24\x79\x4d\x8a\x00\x5a\x47\xa5\x57\xb9\xed\x21\x79\x93\xd7\xaa\x51\x5a\x48\xa6\x03\xea\x27\xa6', 2)
+# -*- coding: utf-8 -*-
+from odoo import http
+from odoo.http import request, Controller, route
+
+# class VacationNotification(http.Controller):
+#
+#     @http.route('/web/aprove_vacation_planning/<int:id>', type='http', auth='public', website=True)
+#     def aproveVacationPlanning(self, id, **kwargs):
+#         notification = request.env['hr.notification.employee'].sudo().search([('id','=',id)])
+#
+#         if notification.state == 'cancelled':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error': 'Esta notificación fue cancelada.'})
+#         elif notification.state == 'reassigned':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error': 'Esta notificación fue reasignada.'})
+#         elif notification.state != 'pending':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error':'Esta notificacion ya fue procesada.'})
+#         else:
+#             notification.approve_vacation_planning()
+#             return request.render("hr_dr_vacations.vacations_planning_aprove", {})
+#
+#     @http.route('/web/aprove_vacation_execution/<int:id>', type='http', auth='public', website=True)
+#     def aproveVacationExecution(self, id, **kwargs):
+#         notification = request.env['hr.notification.employee'].sudo().search([('id','=',id)])
+#
+#         if notification.state == 'cancelled':
+#             return request.render("hr_dr_vacations.vacations_execution_error", {'error': 'Esta notificación fue cancelada.'})
+#         elif notification.state == 'reassigned':
+#             return request.render("hr_dr_vacations.vacations_execution_error", {'error': 'Esta notificación fue reasignada.'})
+#         elif notification.state != 'pending':
+#             return request.render("hr_dr_vacations.vacations_execution_error", {'error':'Esta notificacion ya fue procesada.'})
+#         else:
+#             notification.approve_vacation_execution()
+#             return request.render("hr_dr_vacations.vacations_request_aprove", {})
+#
+#
+#
+#     @http.route('/web/reject_vacation_planning/<int:id>', type='http', auth='public', website=True)
+#     def rejectVacationPlanning(self, id, **kwargs):
+#         notification = request.env['hr.notification.employee'].sudo().search([('id', '=', id)])
+#
+#         if notification.state == 'cancelled':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error': 'Esta notificación fue cancelada.'})
+#         elif notification.state == 'reassigned':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error': 'Esta notificación fue reasignada.'})
+#         elif notification.state != 'pending':
+#             return request.render("hr_dr_vacations.vacations_planning_error", {'error':'Esta notificacion ya fue procesada.'})
+#         else:
+#             notification.reject_vacation_planning()
+#             return request.render("hr_dr_vacations.vacations_planning_rejected", {})
+#
+#     @http.route('/web/reject_vacation_execution/<int:id>', type='http', auth='public', website=True)
+#     def rejectVacationExecution(self, id, **kwargs):
+#         notification = request.env['hr.notification.employee'].sudo().search([('id', '=', id)])
+#
+#         if notification.state == 'cancelled':
+#             return request.render("hr_dr_vacations.vacations_execution_error", {'error': 'Esta notificación fue cancelada.'})
+#         elif notification.state == 'reassigned':
+#             return request.render("hr_dr_vacations.vacations_execution_error",
+#                                   {'error': 'Esta notificación fue reasignada.'})
+#         elif notification.state != 'pending':
+#             return request.render("hr_dr_vacations.vacations_execution_error",
+#                                   {'error': 'Esta notificacion ya fue procesada.'})
+#         else:
+#             notification.reject_vacation_execution()
+#             return request.render("hr_dr_vacations.vacations_request_rejected", {})

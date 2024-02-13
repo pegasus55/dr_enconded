@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e-20231219\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 03:37+0000\n"
-"PO-Revision-Date: 2023-12-29 03:37+0000\n"
+"POT-Creation-Date: 2023-10-27 21:44+0000\n"
+"PO-Revision-Date: 2023-10-27 21:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -167,15 +167,15 @@ msgid "Messages"
 msgstr ""
 
 #. module: hr_dr_skills
+#: model:ir.actions.act_window,name:hr_dr_skills.hr_minimal_skill_action
+#: model:ir.ui.menu,name:hr_dr_skills.hr_minimal_skill_menu
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_minimal_skill_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_minimal_skill_view_search
 msgid "Minimal skill"
 msgstr ""
 
 #. module: hr_dr_skills
-#: model:ir.actions.act_window,name:hr_dr_skills.hr_minimal_skill_action
 #: model:ir.model.fields,field_description:hr_dr_skills.field_hr_position__minimal_skill_ids
-#: model:ir.ui.menu,name:hr_dr_skills.hr_minimal_skill_menu
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_position_view_form_inherit
 msgid "Minimal skills"
 msgstr ""
@@ -200,7 +200,7 @@ msgstr ""
 #. module: hr_dr_skills
 #: model:ir.model.fields,help:hr_dr_skills.field_hr_minimal_skill__message_needaction_counter
 #: model:ir.model.fields,help:hr_dr_skills.field_hr_skill_category__message_needaction_counter
-msgid "Number of messages requiring action"
+msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: hr_dr_skills
@@ -244,14 +244,10 @@ msgstr ""
 
 #. module: hr_dr_skills
 #: model:ir.actions.act_window,name:hr_dr_skills.hr_skill_category_action
-#: model:ir.ui.menu,name:hr_dr_skills.hr_skill_category_menu
-msgid "Skill categories"
-msgstr ""
-
-#. module: hr_dr_skills
 #: model:ir.model.fields,field_description:hr_dr_skills.field_hr_employee_skill__skill_category_id
 #: model:ir.model.fields,field_description:hr_dr_skills.field_hr_minimal_skill__skill_category_id
 #: model:ir.model.fields,field_description:hr_dr_skills.field_hr_skill_type__skill_category_id
+#: model:ir.ui.menu,name:hr_dr_skills.hr_skill_category_menu
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_minimal_skill_view_search
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_skill_category_view_form
 #: model_terms:ir.ui.view,arch_db:hr_dr_skills.hr_skill_category_view_search

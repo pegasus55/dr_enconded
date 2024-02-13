@@ -1,10 +1,12 @@
 <odoo>
     <data>
+
         <record model="ir.ui.view" id="hr_contract_hr_contract_view_form_inherit">
             <field name="name">hr_contract_hr_contract_view_form_inherit</field>
             <field name="model">hr.contract</field>
             <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
             <field name="arch" type="xml">
+
                 <xpath expr="//field[@name='hr_responsible_id']" position="before">
                     <field name="IESS_sector_code" attrs="{'readonly':[('state','!=','draft')]}"/>
                     <label for="mode" string="Detail"/>
@@ -14,8 +16,12 @@
                         <field name="last_minimum_salary" class="oe_inline" style="width: 33%" attrs="{'invisible':[('mode','=','minimum_fee')]}"/>
                         <field name="last_minimum_fee" class="oe_inline" style="width: 33%" attrs="{'invisible':[('mode','=','minimum_salary')]}"/>
                     </div>
+
+
                 </xpath>
+
             </field>
         </record>
+
     </data>
 </odoo>

@@ -34,7 +34,9 @@
         'data/parameter.xml',
         # 'data/res_partner.xml',
         'data/hr_contribution_register.xml',
+        'data/bfb_per_fl.xml',
         'data/hr_basic_family_basket.xml',
+        'data/hr_personal_expenses_category.xml',
 
         'wizard/import_utility_external_service.xml',
         'wizard/import_input.xml',
@@ -42,6 +44,8 @@
 
         'views/hr_sbu.xml',
         'views/hr_living_wage.xml',
+        'views/hr_personal_expense.xml',
+        'views/hr_rent_tax_table.xml',
         'views/schedule_legal_obligations.xml',
         'views/retired_employees.xml',
         'views/hr_payment_utility.xml',
@@ -53,10 +57,15 @@
         'views/hr_input.xml',
         'views/hr_fortnight.xml',
         'views/hr_contribution_register.xml',
+        # 'views/hr_assets_liquidation_view.xml',
         'views/hr_basic_family_basket.xml',
+        'views/bfb_per_fl.xml',
+        'views/hr_personal_expenses_category.xml',
         'views/base_file_report_view.xml',
 
         'wizard/generate_hr_fortnight.xml',
+        'wizard/generate_rdep.xml',
+
 
     ],
     # only loaded in demonstration mode

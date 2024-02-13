@@ -46,12 +46,6 @@
         'wizard/register_vacations_lost.xml',
         'wizard/register_vacations_paid.xml',
 
-        'wizard/hr_print_vacation_planning_request.xml',
-        'wizard/hr_print_vacation_planning_request_all.xml',
-        'wizard/hr_register_vacation_initial_balance.xml',
-        'wizard/hr_replanning_vacation_planning_request.xml',
-
-
         'data/nomenclature_vacations.xml',
         'data/parameter.xml',
         'data/decimal_precision.xml',

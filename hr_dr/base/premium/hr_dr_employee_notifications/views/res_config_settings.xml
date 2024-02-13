@@ -15,7 +15,7 @@
                                 <label for="apply_in_personal_income"/>
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
-                                        If this option is checked, it means that the notification configuration will be applied in personal income.
+                                        If this option is checked, it means that the notification configuration will be applied in personal income. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -32,7 +32,7 @@
                                 <label for="apply_in_personal_exit"/>
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
-                                        If this option is checked, it means that the notification configuration will be applied in personal exit.
+                                        If this option is checked, it means that the notification configuration will be applied in personal exit. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -49,7 +49,7 @@
                                 <label for="apply_in_birthday"/>
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
-                                        If this option is checked, it means that the notification configuration will be applied in personal birthday.
+                                        If this option is checked, it means that the notification configuration will be applied in personal birthday. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -66,7 +66,7 @@
                                 <label for="apply_in_anniversary"/>
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
-                                        If this option is checked, it means that the notification configuration will be applied in personal anniversary.
+                                        If this option is checked, it means that the notification configuration will be applied in personal anniversary. Otherwise, only the human talent responsible defined in the human talent administration module will be notified.
                                     </div>
                                 </div>
                                 <div class="content-group">
@@ -83,7 +83,7 @@
                                 <label for="apply_in_profession_celebration_date"/>
                                 <div class="row">
                                     <div class="text-muted col-lg-8">
-                                        If this option is checked, it means that the notification settings will be applied on the dates of the celebration of the charges.
+                                        If this option is checked, it means that the notification settings will be applied on the dates of the celebration of the charges. Otherwise, only the head of human talent defined in the human talent administration module will be notified.
                                     </div>
                                 </div>
                                 <div class="content-group">

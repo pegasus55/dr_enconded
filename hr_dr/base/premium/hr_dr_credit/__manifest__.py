@@ -19,7 +19,6 @@
             'base',
             'dr_start_system',
             'hr_dr_employee',
-            'dr_signature',
         ],
     'data': [
         'security/category.xml',

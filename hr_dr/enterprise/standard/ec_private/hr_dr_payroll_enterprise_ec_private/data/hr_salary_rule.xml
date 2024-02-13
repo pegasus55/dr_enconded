@@ -421,27 +421,6 @@ if inputs.EXTRA_FOR_VACATIONS: result = sum([line.amount for line in inputs.EXTR
 result = round(sum([line.amount for line in inputs.EXTRA_FOR_VACATIONS]) , 2)
             </field>
         </record>
-        <!--Viáticos a pagar -->
-        <record id="salary_rule_VIATICOS_A_PAGAR" model="hr.salary.rule">
-            <field name="name">Viáticos a pagar</field>
-            <field name="note">
-Recibe un valor monetario.
-            </field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
-            <field name="code">VIATICOS_A_PAGAR</field>
-            <field name="sequence">19</field>
-            <field name="appears_on_payslip">True</field>
-            <field name="appears_on_payroll_report">True</field>
-            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
-            <field name="condition_select">python</field>
-            <field name="condition_python">
-if inputs.VIATICOS_A_PAGAR: result = sum([line.amount for line in inputs.VIATICOS_A_PAGAR]) > 0
-            </field>
-            <field name="amount_select">code</field>
-            <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.VIATICOS_A_PAGAR]) , 2)
-            </field>
-        </record>
         <!--Ingresos que generan beneficios sociales 1-40 -->
 
 
@@ -694,27 +673,6 @@ if inputs.IT_ABE: result = sum([line.amount for line in inputs.IT_ABE]) > 0
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 result = round(sum([line.amount for line in inputs.IT_ABE]) , 2)
-            </field>
-        </record>
-        <!--Fondos de reserva retroactivo -->
-        <record id="salary_rule_FONDO_RESERVA_RETROACTIVO" model="hr.salary.rule">
-            <field name="name">Fondos de reserva (Retroactivo)</field>
-            <field name="note">
-Recibe un valor monetario.
-            </field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
-            <field name="code">FONDO_RESERVA_RETROACTIVO</field>
-            <field name="sequence">53</field>
-            <field name="appears_on_payslip">True</field>
-            <field name="appears_on_payroll_report">True</field>
-            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
-            <field name="condition_select">python</field>
-            <field name="condition_python">
-if inputs.FONDO_RESERVA_RETROACTIVO: result = sum([line.amount for line in inputs.FONDO_RESERVA_RETROACTIVO]) > 0
-            </field>
-            <field name="amount_select">code</field>
-            <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.FONDO_RESERVA_RETROACTIVO]) , 2)
             </field>
         </record>
         <!--Ingresos que no generan beneficios sociales 41-80 -->
@@ -1752,23 +1710,6 @@ Recibe un valor monetario.
             <field name="condition_python">if inputs.SUBSIDIO_MATERNIDAD: result = sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) * ((contract.wage / 30) * 0.75) , 2)</field>
-        </record>
-        <!--Viáticos a descontar -->
-        <record id="salary_rule_VIATICOS_A_DESCONTAR" model="hr.salary.rule">
-            <field name="name">Viáticos a descontar</field>
-            <field name="note">
-Recibe un valor monetario.
-            </field>
-            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_03"/>
-            <field name="code">VIATICOS_A_DESCONTAR</field>
-            <field name="sequence">118</field>
-            <field name="appears_on_payslip">True</field>
-            <field name="appears_on_payroll_report">True</field>
-            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
-            <field name="condition_select">python</field>
-            <field name="condition_python">if inputs.VIATICOS_A_DESCONTAR: result = sum([line.amount for line in inputs.VIATICOS_A_DESCONTAR]) > 0</field>
-            <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.VIATICOS_A_DESCONTAR]) , 2)</field>
         </record>
         <!--Egresos 81-140 -->
 

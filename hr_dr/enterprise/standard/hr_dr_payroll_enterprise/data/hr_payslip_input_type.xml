@@ -116,12 +116,6 @@
             <field name="country_id" ref="base.ec"/>
             <field name="type">income</field>
         </record>
-        <record id="hr_payslip_input_type_VIATICOS_A_PAGAR" model="hr.payslip.input.type">
-            <field name="name">Viáticos a pagar</field>
-            <field name="code">VIATICOS_A_PAGAR</field>
-            <field name="country_id" ref="base.ec"/>
-            <field name="type">income</field>
-        </record>
         <!--Ingresos que generan beneficios sociales-->
 
         <!--Ingresos que no generan beneficios sociales-->
@@ -164,12 +158,6 @@
         <record id="hr_payslip_input_type_IT_ABE" model="hr.payslip.input.type">
             <field name="name">Impuesto a la renta asumido por el empleador</field>
             <field name="code">IT_ABE</field>
-            <field name="country_id" ref="base.ec"/>
-            <field name="type">income</field>
-        </record>
-        <record id="hr_payslip_input_type_FONDO_RESERVA_RETROACTIVO" model="hr.payslip.input.type">
-            <field name="name">Fondos de reserva (Retroactivo)</field>
-            <field name="code">FONDO_RESERVA_RETROACTIVO</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">income</field>
         </record>
@@ -400,12 +388,6 @@
         <record id="hr_payslip_input_type_D14_VS_PALIMENTOS" model="hr.payslip.input.type">
             <field name="name">Décimo cuarto salario vs pensión alimenticia</field>
             <field name="code">D14_VS_PALIMENTOS</field>
-            <field name="country_id" ref="base.ec"/>
-            <field name="type">expense</field>
-        </record>
-        <record id="hr_payslip_input_type_VIATICOS_A_DESCONTAR" model="hr.payslip.input.type">
-            <field name="name">Viáticos a descontar</field>
-            <field name="code">VIATICOS_A_DESCONTAR</field>
             <field name="country_id" ref="base.ec"/>
             <field name="type">expense</field>
         </record>
