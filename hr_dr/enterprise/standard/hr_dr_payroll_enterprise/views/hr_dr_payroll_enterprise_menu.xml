@@ -36,15 +36,6 @@
 			<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_payment_utility_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.payment_utility_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
 			<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_payment_utility_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.payment_utility_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
 
-	<menuitem id="menu_income_tax" name="Income tax" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="120" groups="hr_payroll.group_hr_payroll_user"/>
-		<menuitem id="menu_basic_family_basket_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_basic_family_basket" parent="menu_income_tax" sequence="10" groups="hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_bfb_per_fl" action="hr_dr_payroll_base.action_bfb_per_fl" parent="menu_income_tax" sequence="20" groups="hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_personal_expenses_category" action="hr_dr_payroll_base.action_personal_expenses_category" parent="menu_income_tax" sequence="30" groups="hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_rent_tax_table_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_rent_tax_table" parent="menu_income_tax" sequence="40" groups="hr_payroll.group_hr_payroll_manager"/>
-		<menuitem id="menu_personal_expense" action="hr_dr_payroll_base.action_personal_expense" parent="menu_income_tax" sequence="50" groups="hr_payroll.group_hr_payroll_user"/>
-		<menuitem id="menu_generate_form_107" action="" parent="menu_income_tax" sequence="60" groups="hr_payroll.group_hr_payroll_user"/>
-		<menuitem id="menu_generate_rdep" action="hr_dr_payroll_base.action_generate_rdep" parent="menu_income_tax" sequence="70" groups="hr_payroll.group_hr_payroll_user"/>
-
 	<menuitem id="menu_retired_employees_hr_dr_payroll_enterprise_root" name="Retired collaborators" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="130" groups="hr_payroll.group_hr_payroll_user"/>
 		<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" name="Salary" parent="menu_retired_employees_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
 			<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise" name="Salary" action="hr_dr_payroll_base.action_retired_employees_salary" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
