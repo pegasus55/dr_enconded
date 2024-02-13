@@ -1,1 +1,2001 @@
-__pyarmor__(__name__, __file__, b'\x50\x59\x41\x52\x4d\x4f\x52\x00\x00\x03\x0a\x00\x6f\x0d\x0d\x0a\x08\x2d\xa0\x01\x00\x00\x00\x00\x01\x00\x00\x00\x40\x00\x00\x00\x34\x3f\x00\x00\x00\x00\x00\x00\x60\x24\x3f\x19\x80\xe8\xf1\x95\x29\x5b\xd8\x8b\x1d\xfb\x86\x9f\x00\x00\x00\x00\x00\x00\x00\x00\x62\x9b\xea\x48\x8e\x82\x58\x3d\x52\xa3\xc4\x29\x18\xdc\x9a\xa6\xa4\x60\xf0\xa7\xa9\x1a\x6b\x9b\x27\x37\x3d\xf4\x27\xd9\xd5\xed\x43\x83\x3e\xc8\x35\x3f\x37\x7f\x53\xc7\x54\x10\x10\x6c\xb9\x33\xe0\x35\x91\xa2\x56\xd2\x80\xd8\x62\x6b\xc1\x05\xd7\xe0\x35\xb2\x8b\x0e\xe4\x64\x6b\x4e\xdb\x7a\x60\xd1\x98\x89\xea\xee\xd8\x01\x66\x5d\xdb\x81\x2d\x20\x0a\x24\x43\x1a\x62\x81\x54\xfb\xad\xb2\xf5\xa0\x84\x10\xcd\x73\x91\x32\xff\xa0\x1a\x0e\xab\xef\xaf\x51\x48\xc6\x40\x04\x19\x0c\x80\x90\xc0\xb2\x99\x1e\x17\x33\xbe\x74\xc0\xc6\x0f\xd3\x7b\x85\xc1\xb7\xaf\x3d\xc0\x25\x85\x69\x81\xa2\x84\x99\xbf\x11\xbf\x17\xee\xa6\xb2\xd7\x72\xcc\x20\xd0\xb1\x98\x4e\xa0\xf1\x64\x8f\xc9\x84\x36\xc8\x82\x06\x89\x87\x31\xa8\xed\xa4\x3e\x3f\xeb\xe2\x25\x9d\x9a\x14\x3a\xf2\x01\xa0\x0d\xe2\x8c\xb5\xca\x03\xb0\x5a\x05\x19\xea\x79\x9c\x82\xed\xd0\x4b\x61\x6d\x34\x71\x23\xf9\xf8\xd3\x23\x35\xac\xec\xd1\x3a\x90\x5a\xfd\x85\x90\xf8\xfd\x98\xe5\xed\xe1\xcd\x39\x5d\x60\x28\x90\xb0\xcb\x41\x40\x0c\x3c\x80\x72\x91\xf2\x13\xee\x20\x2d\x9d\x95\x09\x20\x9b\x61\x15\x1a\x41\x17\xdb\x2f\x5a\x3b\x4a\xc7\x05\x82\xf2\x0c\xa4\xd2\xee\x74\x53\xd1\x81\x5d\xb8\x3a\x5c\x5c\xb4\x84\x21\x55\x61\xfd\x90\xdd\x3b\xe1\xd1\xd8\xf2\xe6\x17\xc6\x1c\x13\xbd\x96\xdb\xa0\x19\x68\x92\x44\x44\xf3\x3a\x39\x37\x7b\x55\xe4\x72\xf2\x24\x36\xd0\x38\x00\x14\xa5\x11\x6b\x86\x62\x4e\xf0\xd2\x60\x89\x30\x90\x2c\xbb\x35\x38\xcb\xad\x0a\x36\x65\xae\x27\x44\x91\xa3\x40\x3f\x32\x1f\xb5\x23\x01\x0a\xf4\x01\xdf\xc2\xa7\x18\x92\x5f\x83\xab\x29\x3b\xcc\x2d\x2e\x88\xd6\x4a\xb2\x33\x2f\xe9\xbc\x25\x64\xf7\xa0\xcc\xc1\xa3\x52\xd8\xa4\x8a\xda\x77\x8f\xb1\x37\x19\x3d\x9b\xb8\xa4\x42\x2e\x3d\x12\x7b\xd2\xf4\xd1\xd3\x7c\x04\xca\x6f\xa6\x61\x6d\xa9\xa3\xfe\x87\xe4\xd9\xce\xca\xe8\x98\xbd\x40\x73\x81\xb2\x8a\xda\xb1\xcb\xd0\x17\x46\x65\xf3\x06\x9d\x8c\xb1\x6d\x8e\xa7\x7d\x56\x9b\xbc\xf5\x5b\xa3\xab\x8c\x05\x7a\x31\x53\xc3\xd2\x49\x8c\xa7\xa3\x26\x46\xd4\xd4\x4e\xe3\x67\xdb\x32\xc7\x86\xcb\x4d\x62\x87\xf0\xad\x40\x3d\x17\x28\x5e\x4c\x11\x5f\x76\xbc\xf7\x54\x56\xa8\xb9\x70\x89\x59\x30\xea\x0b\x68\xbb\x6f\x1c\xc6\xef\x2e\x1c\xac\xd5\xe3\x06\x40\xd4\x9c\x08\xb3\xcc\x12\xdf\x1c\x82\x67\x53\xc0\x41\x32\x63\xc6\xd0\xcb\x0a\x99\xb7\x2d\x27\x6f\x35\xf4\x3d\x72\xd7\xf1\xf3\x28\x4a\x9c\xab\x2b\x85\x0b\x57\x3e\x19\xf1\x18\x28\xd8\xf9\xee\x0e\x56\x1d\xc6\x5e\x3d\x82\xcb\x5c\xd5\xf5\xce\x3a\xd4\x11\x5b\x99\xe5\x8a\x34\x85\x3f\x3f\x2b\xce\x16\xb0\x4d\xf9\x91\x9f\xa5\xc6\xae\x23\x63\xef\xd9\xcb\xfe\xd8\x58\x7d\x45\x9c\x2e\xf6\xb0\xe1\x2a\x95\xa2\xce\xad\x27\x30\x52\x6c\x14\x8a\x37\x1f\xa4\x4e\xf5\x96\xb5\xbf\xdc\x4c\xfa\xf7\x7f\x41\x45\x23\x98\x2e\x90\xb7\xc3\x3c\xba\x61\x68\xaa\x97\xf2\x9b\x6c\x6f\xf6\xf4\x13\x25\x90\x89\x30\x73\x75\xa4\x7e\x71\x11\xb9\x60\x93\xeb\xf9\x7a\xa5\xb4\xd4\x79\x26\x24\x96\xfa\x7c\x99\x5d\xe9\xa5\xac\x77\x5f\x80\xdb\xde\x14\xd0\x63\xe3\xb6\x55\x22\xa8\x6e\x05\x2f\xb2\xa6\x18\xc8\x69\xac\xb4\x0a\x91\x7c\xbe\xc5\xb2\x02\x54\xef\xc4\xc4\x4b\xe2\xf3\xf6\x50\x6d\xc9\x87\x48\x79\x50\xa0\xc7\x05\xb0\xf4\x99\xc8\xd7\xcf\x3e\x64\x6a\x4f\xd6\x11\x67\x96\x55\x21\x5c\xba\x4f\x66\xf8\x6e\x4a\xc7\xdb\x08\x1f\x20\x2a\xbe\x09\xa2\x16\x33\x03\xee\xcf\x09\x01\xc5\x30\xd8\x3c\x72\x70\xa9\xc4\x12\x1b\x76\xfc\xb3\xf4\xea\x93\xb4\xe2\x1c\xdf\x42\x63\x25\x52\x29\xce\x3f\x43\xdd\x4f\x30\x5a\x58\xc8\x80\xe8\xae\x95\x3f\xa6\xb0\x8a\x5f\x53\x4d\xf3\xfe\x22\x21\xdc\xc0\x67\x38\x6c\xa5\xff\xbd\x7c\x28\xef\x5d\xe5\x81\x79\x78\xcb\xb6\xe8\x6a\x62\xc2\xf3\x1b\x9c\xd3\x60\x38\x34\x98\x53\x1f\x30\x1f\x69\x82\x63\x32\x9d\xc4\x44\xfd\x06\xb5\x61\x06\x25\x0b\x7f\xed\x22\x86\xdb\x5e\x71\x86\xdf\x1a\x78\xf8\x5b\x02\x6d\x38\xc4\x7c\x34\x7c\xca\x1a\xd9\x0e\x1e\xcc\x31\x62\x5a\xc1\xfc\x37\x8d\x93\xf1\x54\x54\x4f\x85\x2c\x38\xd9\x46\xca\x3e\x6e\x10\xbb\xfc\x01\x87\x5e\x7c\x74\x37\x89\xab\x42\x8a\x30\xa8\x82\x02\x0d\x99\x81\x71\xda\xbe\x33\x2c\x75\x9e\x55\xc0\xde\x98\x32\x08\xe5\xce\x3c\xcf\xc6\xb8\xe3\x9a\x9e\x57\x83\xaf\xce\x48\x66\x9a\xfb\x1a\x41\x15\x6b\x47\x50\x3c\xa8\x4b\xf7\x74\xf3\x14\x97\xa5\x07\x25\xd0\xe0\x02\x07\x8c\x10\x94\xb4\x8f\x67\x08\x37\xde\x19\x03\xae\x10\xb1\x4d\x7b\x76\xfd\x3e\x30\xff\xbb\xcf\x00\xdc\x55\xd5\x77\x2a\xce\x41\xbb\x5d\x6d\x99\x5d\xbe\xe1\x1c\xe7\x91\x6a\xc5\xff\x38\x2b\xe1\x50\x67\x51\x03\xe3\xc4\x75\x0a\x1c\x58\xbe\x02\x36\x0d\x6d\x41\x2b\x86\xc5\x82\x32\xbb\x3c\x76\x51\xb1\x23\x4d\xc2\x04\x7c\x82\x42\xc4\x2b\x07\xb0\xf1\x47\x58\xb3\x3d\x9d\xa0\x59\xd5\x6e\x59\xcd\x42\x19\xd3\x03\x1f\xf9\xae\xbf\x2e\x20\x7e\x75\xf7\x7c\x17\x81\x56\xc6\x78\xde\x71\x8a\x0d\x32\x85\x3c\xe6\x44\x9c\xb7\xd7\x19\x46\x8e\xfe\x65\x83\xc1\x57\x71\x64\xbb\x19\x9b\x45\x50\x14\x42\x7d\xfc\x47\xa1\xdf\xac\xcd\x05\xc3\x08\x8a\x34\xdb\x0f\x99\xdf\x68\xb3\x5d\xed\x3f\xb5\x7c\x0e\xfe\x3b\x24\xb4\xb1\x03\xfc\x18\xbc\xb4\xa7\x85\x8d\xcc\xc8\xed\x44\x4b\x87\x25\xa2\x19\xa0\x3a\x08\xda\x2a\x8b\xb0\x47\x60\xba\x0f\x94\x03\x5e\xa5\x36\xe1\x85\x03\x2f\x44\x89\x25\x3e\x58\x82\xa4\xa5\x56\xc6\x6c\x94\xd7\x40\x94\xe8\xbf\xdc\x1e\x7a\x49\x27\x64\x9a\xdf\x39\xe1\x44\x0c\x4b\xfd\x8a\x0e\x99\x66\xc6\xb6\xc4\x01\x70\xdc\x5e\x4e\xd4\x84\x7a\x63\x99\x0c\x62\x63\x8f\x0c\xcc\x75\xc2\xe2\x7e\x0e\x48\xd1\x69\x3d\x19\x97\xc8\xbe\x7c\xf2\x49\x9b\xe6\x08\xd1\xb8\xd5\x7e\xdd\x7e\xf6\xcd\x7d\x5b\x5a\x33\x6f\x84\x99\xa9\xb9\x9f\x7e\x8b\x65\xa8\x6a\x3b\x6b\xf6\x5c\x16\x62\x80\x85\x23\x42\xe4\xcd\xac\x21\x22\xc7\xc8\x00\xfe\x34\x48\x07\x03\x83\x42\x62\xea\xf6\x42\x4e\x26\x0b\x66\xfc\x39\xc1\xa0\x55\xa4\x28\xcb\x87\x66\x01\xac\x41\xb5\x2a\x72\xc9\x20\x0c\xd3\xcd\x4a\xa6\xed\x81\x5b\x70\x19\xc8\xba\xea\x17\x5d\x91\x29\xba\x3f\xdf\xb2\x72\x21\x5c\xfa\x97\xd5\xfb\xf6\xb0\x80\xbf\x24\xd5\x1d\xeb\x19\x97\x95\x83\x6c\x20\x6c\xb2\xec\x62\x6d\xd4\xb9\x48\x33\xeb\x98\x35\x12\xcc\xe3\x66\xa0\x67\xe2\xa6\x6e\x1b\xc7\x92\xeb\x2e\xf8\x59\xfb\x4f\xc7\x49\x6a\x53\x87\xfe\x2e\x68\x37\x41\x66\xd9\x6b\x1a\x5d\x1c\x83\x79\x32\xa0\x34\xcf\x17\x77\xf2\xd1\x25\x44\xcd\x5d\x3f\xdc\x9a\x10\x28\xda\x2a\x74\xb3\x32\xaa\x04\x4a\x46\xcd\x6e\xd7\xc0\x1e\x9e\x4e\xfe\x2e\x9d\x8d\xe7\x63\x75\xac\x79\xb8\x5b\x88\x0c\x8c\x28\xcc\x86\x7a\x66\x48\x19\x50\x2b\x7b\xf6\xf6\x8f\xa8\xe7\xa1\x2a\x67\x3e\xa5\xe4\x31\x4f\xd6\x18\x44\xa7\x44\x0b\xf4\xa9\xf2\x07\x22\x17\xb9\xa1\xb7\x41\x5f\xf6\x93\x9b\xe9\xb3\xdd\x35\x4d\x23\x49\xbd\x16\x48\x8a\xb4\x22\x31\x72\x56\x51\xa9\xb8\xcb\x93\x35\x70\xfb\x81\x52\xad\xc6\xaa\xf0\xae\x73\x9d\xf5\x98\x1d\xe3\x39\xfb\x80\x34\xc1\x98\x38\xde\x4a\x25\x65\x49\xee\x02\x57\xbf\x32\x29\x0d\x13\x2c\xd5\x61\x02\xde\x64\x16\xae\x60\xe0\xe6\x03\x05\x57\xb2\xb2\xbe\xfa\x56\x27\xff\x84\xe5\xe4\xf5\x2a\x52\xcb\x6a\xb1\xda\xf4\x20\xe7\xed\x09\xa7\xf0\x33\xd4\x63\x8e\x38\x34\x07\x3e\xa9\x41\x8b\x2a\x35\x41\x61\x78\xf3\xbe\x4d\xed\x0c\xc4\xbe\xd3\xf0\x4a\x78\x4e\x65\x52\x67\xab\xb2\x86\x1c\xa1\x2a\x4c\xcc\x40\x70\x43\x9b\xbb\x3f\x10\x87\x76\x61\xa3\xc1\x32\xc4\x8b\xfa\x26\x54\x7b\x0f\x86\x4a\x53\x87\x17\x22\x88\xae\x01\xd4\x41\x15\x02\x5a\x16\x7a\x05\xdb\x65\xb8\x68\xac\xbe\x63\xc1\x35\xce\xd8\xee\xec\x7a\x44\x1e\x6b\x52\x5f\x0e\x10\x34\x9a\x76\xbc\xdc\xbd\xef\x64\x06\x70\xc4\x8b\x8d\x04\x19\x5c\xb1\xd8\xe1\x95\xb9\x8a\x5a\x5a\x7c\xee\xc7\x31\x7f\x50\x32\xd6\x8f\x33\xfd\x2b\x1d\x21\xb4\xe3\xdc\x99\xee\x5c\xf1\x64\x7f\x66\x9c\xc6\xc0\x56\xb8\xf3\x92\xa2\x8a\x10\x02\x52\xd7\x10\xf9\x38\xaf\x04\x2a\x61\x41\x6a\xc0\x4e\xa8\x27\xb2\x9c\x92\x07\xaf\xf7\xbd\x3a\xb1\x36\x27\x0c\xa7\x42\xff\xca\x10\xa3\xce\x16\x1a\xc7\xfa\x8c\x5e\xe2\x27\xa0\x18\x10\x65\xb7\xbd\x85\x40\xdd\x99\xcb\x96\xcc\x60\x80\x69\x58\x46\x49\x7e\x1c\xd4\x6b\xd4\x14\x1b\x35\xb3\x15\xb4\x9c\x23\x7f\x0b\xf7\xc9\x81\xc0\x69\xde\x1a\x0b\xc7\x8f\x6d\x6b\x1d\xe6\xce\x7e\xd8\x36\xbc\xc7\x15\x96\x01\xf3\x3a\xb4\xac\x9e\xf7\x78\xab\xd3\x0d\xb2\x77\x2b\x74\x76\xb3\xa1\x4b\x98\x78\x69\x03\x5e\x20\x06\xd0\xf9\xbd\x4f\x9d\x8e\x0f\xbe\x12\x9b\xdd\x38\xfd\xe9\x3e\xb5\x4b\x7f\xaa\x62\x4f\x99\x97\xe7\x91\x9e\xae\x02\x14\xb2\x2d\xd5\x94\x35\x99\x2b\x21\x4a\x73\x4c\xbd\xf8\x0a\x7e\x58\x47\x4e\x5d\xaf\x95\x74\xb0\xaf\x52\x44\x77\xce\x12\x18\x26\xd8\xf1\xa7\x95\xfc\x7c\xb9\x62\xa0\xb9\x52\x6a\xc2\xcc\x7d\x8d\x66\x05\xeb\x8c\xf3\x35\x95\xae\xbd\x67\x0f\x7c\x19\xdd\x4a\x34\xe8\xe7\xb8\xeb\x8c\x8a\xdd\xdb\x3b\xa4\xb1\x19\x2b\xfb\x5d\x61\x6d\x15\x5a\x68\x98\xad\xae\xa4\xeb\x96\x6e\x17\x61\xa4\x67\xc6\xb5\xd8\x51\xb8\xaa\x6f\xa1\x93\x9b\x63\x0d\x0b\xc2\x2a\x8d\xed\x91\x5c\x8f\xaf\x54\xb0\xfc\x95\xde\xb1\x04\xa3\x07\xab\x94\xea\x51\x4c\xd9\x99\x29\x83\x83\x54\x13\x31\x02\x46\x50\x97\xdb\xdf\xc9\x6a\xce\x88\xcf\x4e\x3e\x38\x11\x6a\x7c\x68\xf5\xff\xb1\x6d\x3b\xfa\x4a\x65\x04\x06\x14\x32\x78\x77\x70\x62\x0a\x1d\xb1\xcb\x5d\x0e\xd4\x6a\x68\xa4\xbf\xca\x97\xc5\xf5\x03\x7d\x37\xac\x53\x65\x8d\xe5\xa3\x25\x9f\x34\xfd\xe7\x89\xb3\x3d\xf7\x22\x31\x49\x0c\xa2\xb5\x28\x8c\xb9\xda\x56\xf9\x96\x2f\xff\xd8\xef\x95\x9c\xab\x28\x8f\x48\xc8\xe8\xd4\xe1\x07\x76\xed\x41\x22\x4f\xa8\xcd\xff\xe1\xc4\xa5\x82\x60\x46\xaa\x1c\xf8\x4c\x94\xc7\x65\x2d\x93\x78\x94\x01\x49\xf6\x88\x7a\xfe\x5e\x0e\xe1\xcd\x94\x54\x0f\x09\x51\x32\x6c\x50\x3b\x11\xed\xc1\xb4\x56\x5c\x5e\xd8\xc6\xb2\xd9\x40\x0b\x1f\xe3\x0c\x7a\x0b\xfb\x34\xe6\x26\xd3\xef\xff\x39\x94\x01\x37\xb4\xf8\x27\x85\x85\x80\xf7\xb2\xb9\x55\xa0\xb9\x78\x8d\xf4\x26\x52\x2c\x6b\x00\xbd\x0d\xde\xb6\x87\x0f\x31\xbc\x27\xcb\xe9\x48\x22\x20\xc0\xee\x94\xa6\xef\xad\xdc\x57\xb3\x1c\x04\x5f\x8d\x9b\x5e\x2d\x36\x44\x3e\xb6\xec\xcc\xae\xb5\xc7\xf9\x47\x30\x80\xac\xad\x0d\xb7\x23\x80\x37\xf4\xfb\x65\x2b\x0f\x27\x40\xc0\x00\x1c\x83\xa1\x81\xaa\xca\xf6\xb7\x31\xb2\x68\xc4\x2b\xc2\xae\xe8\xf3\xd1\x5e\xf7\x20\x84\x0a\xc4\x5f\x86\x7d\xc6\x23\x67\x27\x46\x0c\x03\xc7\x7b\x03\x8e\xdf\x24\xa1\x2a\xe1\x20\x59\x69\xff\x1d\x19\x3e\xca\x36\x48\x42\xf6\xae\x96\x1e\x19\x58\x30\xbd\x37\x5a\x01\xeb\xb7\x72\xad\x43\x6b\x71\x1b\xb5\xfc\x55\x19\xbb\xef\xe7\x43\xf2\x4f\x67\xb3\xcf\x45\xb4\xc0\x4e\x88\x7b\x55\x27\x5b\x6d\x5b\x79\x60\x14\x69\x29\x79\x61\x3d\x2e\x3b\x76\x9b\xe1\x47\x23\x31\x4e\x84\x9f\xa6\xfb\x05\xe0\x1f\xa5\x4b\x99\x85\x6f\x26\x37\x66\x56\x9e\xc7\x6d\x12\x7a\xe0\xd4\x33\xf3\x94\xe7\xfe\x46\xb5\x7d\xc5\xb5\x23\x1b\xc0\xdb\x95\xca\xbd\x7a\x70\xa3\xca\xc0\x20\x19\xd8\xa1\x1c\x4f\x7e\xcc\x4e\xd5\x38\xe2\xb8\x47\xc3\x2b\xb4\x84\x86\xf7\x17\xc5\x79\x72\x9a\xa4\xdb\x8e\x30\xb4\x65\x75\x8d\x08\xda\x2b\xb3\x42\xae\x77\xf5\xd6\x0e\xe7\x0f\x97\x68\x6b\x8a\x99\x86\x74\xaf\x54\x9a\x98\x54\x23\x02\xea\x04\xcf\xc5\x9d\x25\x2c\xc9\x22\x33\x96\x82\x99\xf9\xde\x1b\x33\x18\xc9\x3f\xeb\xa5\xd1\xc4\x25\xe4\x36\x1d\xcb\x72\xaa\x85\xe6\xcf\xe3\xc6\x8f\xfe\xf7\x71\x0f\x7d\xec\x58\xcc\x7a\xec\x48\x61\xfa\x35\xba\x61\x0f\xf4\x07\xe4\xf4\x8a\x29\xed\x3f\x49\xde\xda\x84\x16\x9c\x32\xd8\x26\xfa\x9b\x43\x02\x4f\x5f\xaf\x4c\x8a\xe5\xe7\x15\xa4\x29\x11\xd3\xfb\xf5\x1a\x8b\x11\xa1\x44\x08\x0b\x3e\x92\x8a\xf5\xca\x5d\x46\xc5\x28\x3a\xa2\x0c\x5c\xf0\x9a\xd8\xad\x4e\x7e\x17\xee\xfd\xb2\xf6\xa1\x9c\xed\xb1\x08\xb3\xf4\xb5\x36\xe4\x6e\xd9\x53\xba\x4d\xdf\x2d\x31\x6b\x92\xaa\xfa\x5c\x97\x09\x07\xbd\xf8\x59\xb8\x64\x35\x75\xb4\xcb\x4d\xcb\x4e\x45\x8b\x7c\x66\xcc\xe4\xc9\xb3\x64\xb1\x17\x08\xc3\x28\xb8\xf1\x73\x9c\xe1\x69\x58\x89\x74\x66\x12\x53\xb4\x6b\x60\xa3\x75\xe4\x83\xc8\xf5\xb9\x1a\xf0\xea\x6c\x16\xc6\x73\x2b\x24\x6a\x72\x02\xe0\x58\x0c\xa7\xd4\xf1\xe4\x0a\x92\xdd\xe6\xac\xfb\xa1\xef\x52\xfe\xd3\x35\x30\x97\x1a\xf7\x1c\x0f\x83\x99\xa6\x0c\xea\xa4\xa1\xae\x9c\x67\xae\xea\x4c\x55\x3b\x58\x22\x45\x49\x86\xc4\x3a\xb7\x44\x72\x01\x52\x49\xea\x45\x18\x4e\x40\xf2\x0d\x18\x7f\xa8\x53\x59\x89\x9c\x53\x34\x77\x6a\x83\xc4\xbd\xc6\xff\x4c\x50\x7e\x21\x1e\x37\x84\x15\x46\x0a\x8d\x0b\x36\x80\x40\xae\x7b\x95\x6f\x98\x87\x11\xaa\xd9\x83\xbb\x79\x9a\x21\xde\x71\x87\x6e\x99\x1f\x61\x90\xd1\x4d\x62\x9e\x98\x9b\xf0\x2a\x81\x0b\x63\x69\x06\x23\x91\x63\x5f\x17\x52\x46\x28\x88\x60\x44\xc1\x4c\x70\x01\xf2\x19\xab\x25\x97\x1d\x44\xd0\xb9\x34\x9e\x04\xcb\x80\xb6\xd3\xd2\x2d\xbf\xdd\x00\x13\x57\x15\x5c\x43\xd5\x94\x0e\x8d\xfb\x1a\x9e\x3f\xd1\x18\x6e\x7b\xad\x91\xc7\xef\x37\x08\x7a\x03\xa6\xfe\x40\xc9\x8f\x68\x33\x4a\xe2\x0f\x09\x81\x95\xc1\x20\x2c\x3a\x27\x44\x1f\x16\xa6\x77\x69\xb9\x92\x72\xfa\x66\xeb\x1a\x27\xd8\xe8\x5d\x22\x62\xbd\x1e\x7b\x3b\xba\xc9\xea\x1b\x9f\xf1\xab\x8a\x46\x55\xd9\x87\xb3\x9a\x52\x38\x43\x85\x77\xde\x21\x08\xec\x4f\x70\xec\x96\xba\xb8\x49\x02\x95\x67\x86\x4d\xda\x66\xd2\x3f\x6a\x65\xba\x02\x67\xf6\x9d\x34\xc1\x30\xf0\x9f\xe5\xb4\xf3\x96\xf1\xd8\xe0\xd9\xd9\x1a\x5f\x50\xd3\x9a\x17\xde\x50\x40\xb6\xaf\x3a\xfa\xd9\xee\x0a\xc0\x1d\x39\xab\x6a\x7a\x7c\x19\xe4\x8b\x8d\xcf\x86\xee\x6a\x32\x09\x22\x7d\x6f\x35\x11\xcc\x91\x4d\x5d\x0a\x2f\xd5\x2e\x24\x06\xf2\xa8\x3a\x4a\x67\xd6\xbd\xf6\x5b\x49\x66\x88\x03\xa5\xcf\xa2\x26\xc5\xd6\x99\x82\x3e\x67\x1a\x9a\x12\x7e\xcc\xbf\xb1\xe0\xe6\x96\x99\x25\xc0\x2a\x80\x38\xc4\x80\x34\xce\x99\x98\xbe\x67\x29\xb0\x9e\xe2\x31\x3e\x10\x23\x45\x0d\x5f\xa1\x8d\xdc\x6d\x01\xa5\x4e\x9b\x9a\x1e\x95\xc8\x63\x39\x18\x61\xdd\x6a\xf7\xd6\xf4\x60\xfe\xee\x2c\x5e\x19\xd0\x9b\xc5\x10\x0a\xe1\x0c\x69\xb1\x58\xe3\xee\xf7\xea\x6d\x0a\x02\x0d\xd3\xe1\x88\x25\x45\xad\x98\x65\xb3\x9d\x7e\x73\xc1\x7a\x17\x99\xde\xd3\xa3\x63\x69\x6d\x5f\x02\x4d\xa2\xa3\x62\x76\x17\xae\x4b\x31\xcc\xe0\xf2\x58\xed\x81\x02\xa4\xb7\x24\xc5\x9a\x9c\x64\xf7\x8f\x81\x02\xd5\xc1\xfc\x3d\x28\x54\xf4\xf8\xcd\x83\xfc\x21\x41\x8d\x44\x98\xa7\x93\xbd\x49\xa0\xe1\xf2\x3e\x27\x51\x38\xd1\xcb\xc7\x21\x03\xf3\x50\x05\xac\x97\x12\x07\x54\xa9\xc3\xa6\x89\x9b\xb9\xd1\x4e\xc8\x81\x65\xfd\xcd\x40\x22\x47\xdb\x5b\x46\xea\xcd\x45\x9c\x6b\x9f\x7f\xe1\xbc\x6d\xd6\x01\x9c\x5c\xcb\x52\x55\x4f\x13\x49\xd2\x09\xd6\xc3\xe9\xcc\x66\x1a\x9f\x3e\xda\x28\xe6\xfc\xe1\xfd\x0f\x6a\xf0\xaa\x70\xfd\x28\x59\xbe\x0a\x9f\x73\xc9\xa0\x1d\x3e\x5f\x64\x05\x3b\x30\xe8\x79\xcd\x99\x88\x56\xdf\xd4\x6e\x13\x4f\x99\x86\xf9\x79\x48\x8a\xd8\x41\x88\xb9\xb7\x72\x38\xf6\x15\xcf\x9a\xe4\x1f\xc6\x15\xd8\x68\x84\x58\xaf\xba\x90\xf2\x00\x30\x6a\x51\x2a\x5d\x58\x8e\xdd\x6c\xa9\x8c\x42\x40\x58\xe7\xb2\xc6\xd9\xce\x8f\x5a\xc4\xa9\xf9\x66\x72\xab\x70\x5d\xf9\xae\x5a\xf1\xdd\xc5\x2f\x51\x99\x1c\x6a\xae\xa0\xea\x2e\x14\x51\x85\x36\xc1\x31\x1e\xa0\x10\x33\xf8\xd8\x6b\x61\x0c\x36\xd5\x1c\xa7\x60\xa5\x61\x3f\x79\xc2\x15\x15\x09\x87\xe7\x50\x07\x49\xeb\x99\x61\x43\x36\x5e\x4d\x0c\xff\xc5\x63\x43\x59\x69\x16\x63\xaf\xa4\x66\xa7\x9b\x4a\xe7\xdd\xf3\x99\x6a\xac\x37\x98\xe9\x9a\x82\x95\x2b\x57\x20\xba\x93\xbe\x4d\x6b\xf0\x46\x0a\x9b\xa8\x88\xc6\x3a\x17\xa8\x04\xd5\xa7\x13\x2a\xa9\x32\x99\xda\x0a\x6e\x72\x20\xdf\x4c\xd8\x0c\x29\x80\x30\xb6\x6a\x98\xfa\x3e\xb9\x75\x58\xc7\x28\xdf\xf7\x11\xa7\xc8\x7c\x04\xcf\x00\x37\x5f\xb0\x4c\xb4\x17\x8d\x4f\xd0\x64\x02\x6c\xc4\x19\x09\x1d\x9a\xa2\xd0\x8d\x42\x3c\x9f\x89\x7a\x96\x99\x06\x90\x2b\xea\x8a\xfa\x00\x3b\x01\x92\x89\x1c\x42\xde\xe2\x9c\xc1\x92\x48\xbf\x7f\x85\xaa\x72\x54\x4e\x1f\x01\x3f\x21\x03\xd9\xeb\xcd\x3f\xd9\xd3\xe3\x19\x04\x64\x66\x1d\x8e\xb5\x62\x5f\x7e\x2a\xfa\xba\xc3\x6b\xd5\xbd\x64\xc4\xd0\xdb\x3b\x26\x28\x75\x6c\x4e\x76\x8a\xc9\x12\xed\x68\xf3\x94\x6e\x15\x24\x92\xb7\x14\xaf\xb7\x42\xa6\x44\x9f\xcc\x02\xc7\xe1\x46\x62\xbe\x19\x8f\xac\x25\x68\xa5\x04\x3b\x22\x92\xa5\x3f\xce\x00\xcb\xbb\xdb\x47\x53\x8b\x85\x1a\xb6\x64\xe7\xf6\xbf\x3e\x25\xea\xe8\x04\x12\xce\x55\x7d\xbc\xf2\xb4\xf8\x84\xdd\xce\xfa\x3c\xd7\x0b\xb9\xbb\xc6\x86\x3a\xe8\x97\x50\xda\x5b\x0b\x03\x94\xc1\x85\x20\x3f\xc4\xe0\x24\xb4\x59\xb1\x7a\x20\xfe\x3b\xce\xe1\x3a\xf0\x37\x80\x93\xfd\x4f\xa8\x3d\x85\x6f\xc7\xae\xf1\x67\x1b\xce\xb4\x36\x0e\xd9\xbc\x79\xf3\x2b\xeb\x26\x71\x3e\x82\xaf\x83\xc4\x33\x09\xa5\xcf\x1e\x5f\xbb\x73\x91\x8d\x2d\x4a\x96\x1d\x9f\x1c\x3c\x59\x9a\xed\xd5\x54\x8b\x78\x48\xd2\x48\x1f\xe5\xbc\x95\xaa\xa0\xaa\x8c\x05\x17\x3a\x2c\x5d\x86\xb3\x37\x16\xc2\xe2\x55\xc7\x26\x24\xfa\xf1\x8d\x54\x8f\x30\x42\x9d\xf8\xa3\xcd\x5b\xc0\x19\x7e\xdf\x22\xc1\xfe\x45\x9b\xaf\xa5\x4c\x0b\x8b\x75\x7e\x91\xbc\x12\x3c\x2e\x83\x61\xca\x57\xf4\x06\x14\x52\x9f\x20\x37\xbb\x5d\xd2\x96\xa7\x36\x34\x34\x68\x2e\x98\xf9\xbd\x9a\xa8\xf9\xbe\xf8\x47\x49\x74\x8f\xf0\x6b\xb1\xf7\xc8\x62\x3b\x39\xb9\x85\x9f\x1d\x03\xa8\x2c\x9f\x70\x9c\x42\x83\xe3\x9c\x73\x46\x31\x9e\x03\x5c\x4b\x0e\xe4\x52\xec\xd7\x98\x53\xe3\x02\x73\x82\x19\x5e\x1a\x9d\x8b\x73\x19\xba\xaf\x2d\x2d\x71\x01\x92\x9c\xed\x68\x6f\xe4\x8c\xd5\x69\x8e\x7f\x78\x9b\x7b\x9b\xf7\x2a\x35\xbc\x0d\xa0\x12\x0e\xe7\xb6\xb2\xcd\xa3\xca\x45\x3d\x39\x63\xe6\x61\x0a\xb2\xb0\x5d\xf2\x1d\x76\x70\xc7\xa7\xec\x77\xa6\x57\xa5\x35\x47\x0f\xbf\x8a\xf1\x34\x6c\x14\xf0\x7d\xf9\x62\x07\x73\xf4\x02\x51\xa5\x2d\x2e\x99\xc9\x15\x11\xdc\x4a\x0f\x2f\xe3\x0e\x47\x26\x51\xce\xc0\x31\xd8\x11\x2a\x9d\xa7\x86\x95\x47\x3d\x7a\xae\x57\xa6\x5a\x59\x8d\x46\xee\xc8\x8a\x2a\xd2\x02\xa6\x8b\x0a\xca\x1e\xca\x1e\xa4\xa3\x6d\x50\x94\xa5\xfa\xb0\xaa\xf4\x62\x77\x2f\xbd\x21\xe8\xd1\x2b\x87\x2f\x70\x8f\x59\xe6\xd4\x42\xbc\x31\x76\x7f\x87\xbc\xea\x9b\x8f\xae\xbf\xb2\x0e\x88\xbd\x8e\x43\x61\xc2\xad\xb1\x51\x41\xab\xaa\x7b\x1b\x01\x65\x0b\x75\x97\x6f\x96\x00\x7b\x7c\x0c\x41\x0f\x84\xea\x2c\xc1\xe8\x61\x5d\x7e\x27\xd6\x23\x02\x7a\x4c\x71\x3f\x03\xcc\x5d\x0f\xbf\xd1\xed\x31\x8b\x25\xa9\xc2\xf3\x80\x15\xb4\x83\x3b\x75\xda\x98\x17\x85\xb9\x22\xc9\x08\x50\x01\x28\xea\x43\x01\x2f\xc4\x65\x1a\x71\x10\xc4\xcc\xfa\x4c\x7e\x8b\x34\x36\x24\x7a\x10\x29\xee\xf6\xe3\x6d\x2d\x8e\x12\xa1\xb7\x06\x02\x24\xf5\xcb\xee\xc1\x4a\xd9\xcb\xde\x32\x71\xc1\x9d\x1b\x46\x7d\x59\xf5\x40\x01\x0a\x4d\x2e\x3d\x40\xb9\xbb\x70\x39\x7a\x34\x2e\x11\x35\x82\xdf\x65\x8b\x07\xe4\xc7\xc5\xf6\xd7\xe7\x77\x8a\x9c\x10\x4e\xfc\x8b\x2e\x69\xd0\x74\xd4\x42\x39\xc0\x08\x13\xb8\x20\x65\xcd\x6f\xf0\xe8\xfa\x1c\x0a\x71\x91\x4d\x89\x44\xd4\x62\xf0\xe5\x20\x25\xa2\x3a\x3a\x64\xbe\x96\x96\x3a\xdc\x02\x09\xa4\x1b\x9e\x89\xa0\x10\x13\x0e\xfb\x72\xe6\xf6\x87\xe1\x2a\x94\x9a\xad\x4c\x42\xc8\x64\x47\x57\x97\xf3\x09\xaa\xc6\xcc\x53\x18\xf2\xe8\x84\xf0\x6e\x7b\x80\x0d\xcc\x69\x92\xc7\x57\xcd\x3a\x6c\x19\x1a\xc0\x5d\x89\x33\x8c\x85\x1e\x87\x56\xb9\xb3\x36\x84\xc4\x98\xa5\x5f\x4b\xb9\x96\x23\x95\x7b\xb1\x46\xe8\xa4\xf2\xe5\xea\x5c\xed\xe3\x99\xbb\x4c\xd0\x19\xec\x0c\x00\xd6\xdb\xcb\x2e\xff\x28\x20\x0b\xc0\xe6\x63\xcd\xbc\xc3\x98\x4c\xc9\x6e\x2f\x68\xc1\x4d\xe3\x83\x96\x9f\x3a\x7f\xaf\xfc\xbe\x72\x3b\xe0\x8b\x9e\x09\x0b\xc5\xad\x8e\xa0\xf6\xd2\x3c\xea\xad\x18\x3a\x74\xe1\xb1\xf4\x6c\xb9\xe5\x07\xda\x98\x85\x79\x4d\x2d\xd3\x4a\xb0\xc1\x49\xcb\x65\xb8\x1c\x75\xc2\xf8\xce\x66\x9c\x94\x6b\xd4\xaf\x8b\xc0\x9c\x5c\xe4\xe5\x62\x52\x50\xe1\xc8\x45\x14\xdd\xf3\x89\xd4\x64\x88\x33\xa8\x56\x84\x5a\x5e\x19\xed\x56\xb1\x07\xb8\x0b\x95\x0f\xf3\x23\x92\xa1\x2b\xc1\x61\xda\xe6\x3a\x66\x78\x5a\xf5\xbd\x73\xd2\xfc\x34\x0b\x90\x40\xe8\x1d\x83\x8e\x00\x89\x7e\xb6\x6d\x45\xc3\xca\x1b\xe5\x6b\x2f\x0b\x9d\xba\xa3\x83\x97\xb8\xe7\xbc\x92\x66\x7f\x5c\x85\x90\x23\x51\x3c\x95\x29\x9f\xfe\x87\x6a\xb3\x52\x21\x5a\xa4\x3f\x01\x41\xc3\xaf\x10\x41\x77\x11\x34\x61\x6a\xcf\x54\xd6\x2b\xa8\xcf\x97\x2e\x77\x6d\xa5\x7c\xe6\xf9\x7b\x68\x6f\xfb\xeb\xa4\xeb\xfd\x80\x04\xd6\x8f\xb5\x25\x42\x94\x7d\x55\x7e\xed\x33\x92\xc8\xe3\x81\xff\xbe\x03\x6c\x68\x5d\x99\xf6\xdc\x75\xf6\x32\x35\x61\x6a\x67\x66\xbf\x1e\x2b\x05\x1b\x4d\x5e\x7b\xe6\x38\x7c\x00\x6e\xac\xf6\x95\xbf\xa3\x6e\xce\x09\x4c\x77\xcb\xee\x90\x4d\x4b\x90\x93\x2c\xf9\x7d\x57\x09\x05\xcb\x56\xef\xda\xce\x2c\xc7\xf2\xfc\x6d\x4f\xc1\x2d\x06\x23\x1e\x73\x0a\xe4\xdb\x4f\x6d\x9a\xc1\x2d\x67\x10\x97\xd2\x25\xe0\x8c\xb3\xe5\xc0\xda\x3b\x68\x0d\x55\x46\x69\xe7\x93\x17\xdb\x84\xb4\xb6\x59\x21\xdf\x42\x98\x7a\xf9\xc6\x89\xc8\x7d\x44\x7e\x08\x7f\xd6\x14\xec\x6a\xf3\x35\xe6\x4d\x56\x98\x05\xce\xd4\x89\x8d\xf6\xdd\x15\x3e\x54\xe5\x30\xbb\xd6\x9d\xb2\xfe\xc5\x2d\x1d\x9e\xbb\x8d\xb3\x9b\xf1\xe3\x04\x76\x86\x57\xc6\x36\xe7\x9f\x4b\x66\xb9\x77\x71\x5c\xfb\x37\x32\x60\x5c\x70\xd4\x3f\xe2\x49\xcf\xbc\x8a\xd2\xdb\xf9\x1e\xde\x05\x36\x66\xdd\x51\xc0\x79\x5f\xb3\x59\xad\x13\x87\x54\x85\x1b\x2c\x90\xf9\xb6\x3e\x5d\xaf\x57\xa2\x53\x06\x79\x47\xa8\xb6\xe6\xef\xe9\xf5\x7c\x6e\xaf\x2e\x97\x2e\xd0\x08\x68\xdd\x99\xc4\xc5\x27\x29\xe8\xcb\xe1\xeb\x73\x4c\x8b\xd0\x48\x82\xa5\x30\xb8\xd7\xd2\x70\xea\xe8\xe2\xef\x63\x01\xaa\x85\x80\x5b\x9b\x29\xae\xff\x4c\xb7\x2c\x4d\xcb\x91\xbc\x11\x0a\x52\x86\x60\x0a\x9f\x7b\x76\x76\x34\xe9\xba\xe4\xad\x27\xc0\x4c\xfa\xfc\xbe\x14\x1e\xf4\xc1\x96\xb0\x8a\x88\x2a\xfd\xd1\xac\x99\x30\x6f\xf1\x80\xc5\x5e\xe0\x64\xe7\xa5\xd9\xd7\x2c\x33\xff\xa8\xc2\x0b\x4f\x73\x85\x3c\xbe\xac\x9f\x49\xca\x76\x0e\x20\xe8\xc4\x73\xd6\x56\x85\x54\xa1\xb9\x65\xbf\x0f\x39\x50\xcb\xd6\xb0\xdc\x9c\xe4\x57\x22\x07\xe1\x1b\x0d\x45\x8c\xa5\x18\x08\x90\xb2\x68\x19\x63\xdb\x73\xd9\xc3\xe0\xcb\xd4\xba\x2d\xb6\x71\x0f\xf0\x77\x2b\x11\x43\x4b\x41\x94\xfd\x19\xf3\x4b\xc6\xfc\x8f\xd0\xc9\xdd\x3a\xaa\xb5\x33\x45\x19\x19\x51\xf9\x1b\xc8\x99\xa5\x4a\xa1\x3f\xdc\x95\x44\xb0\x8f\x56\x6a\x09\xda\x11\x89\x14\x48\xfd\x60\xa3\x0a\xfc\x8c\x03\xe8\xda\xb1\xe2\x62\x1e\xd7\xb7\xe1\x8c\xe1\x16\x0f\x37\x24\x15\x11\xfa\x2d\x1a\xa7\xa3\x48\x7c\xec\x08\x91\xa9\x44\xd3\x6a\xdf\xcb\xbb\x8d\x2e\x69\xc9\x93\x96\x7d\x23\x7d\x26\x7e\x48\x38\xd3\xcc\xe1\xc8\x99\xad\xb5\xad\xd6\xcf\x01\x9e\xf5\xe2\x39\x8b\xa0\xe0\x7f\x1a\xf2\xb9\x3d\x9c\x56\x45\x08\xe1\x4d\x60\xaa\xb2\xff\xdf\x48\xd4\x51\x53\x54\x5f\x4d\xe4\x61\x86\x20\xab\xb2\x26\x16\x8b\xb5\x34\xba\x8d\xbc\x77\xca\x11\x7b\xc5\x13\x63\xc2\x63\x29\x91\x5e\xb1\xc8\xd4\x2e\x63\xff\x59\x53\x13\xc1\x39\x15\x8c\xac\x4a\x4f\x37\xc2\x2c\x9f\xad\xe5\xbd\xaf\xf7\x43\xb4\xdf\x15\xf3\xaf\x2a\x67\x4a\xff\xbc\x3b\x9a\xa8\x85\x7a\x6c\xb3\x23\x4f\xd0\x47\x41\x21\xdb\x5a\xdd\x3e\xc8\x60\x6a\xe2\x87\x4c\xeb\xbf\x44\x69\x40\x6e\x5e\x7b\x5a\x16\xca\x4f\xa1\xc4\xc4\x03\x50\xed\x26\x8f\x6d\xdc\x33\xe1\x8c\x09\x38\xda\x8e\xd5\x09\x6c\xde\x94\x41\xe7\x7e\xa3\x36\x2b\xd1\x17\x1f\xc8\xeb\x6a\x85\x72\x4a\x30\x83\xe1\xeb\x3f\xf3\x3e\xec\xb1\xc5\xcf\xc9\x00\x7d\xb0\x1f\x5b\x4d\xa7\x70\x33\x60\xb9\x7e\xba\xd4\x69\x54\x2b\xdd\x6b\x34\x72\x25\xfb\x05\x51\xf5\xc0\x14\xe9\xe9\x3b\x4c\xd0\x84\xee\x47\x47\x2b\xf9\xa3\xa8\xd8\x23\xc4\xed\x7f\xaf\x8d\xab\x62\xf2\x5a\xf2\x0c\x3c\xd8\xdc\x76\xc1\x32\xd5\xa8\xf6\xa9\x55\x2f\xad\xa5\x11\xe0\x86\x07\x29\x75\xc7\x59\xf8\xe6\x07\xe1\xa2\x72\x19\xfc\x2d\x2c\xfd\x72\x38\x0e\x3e\xdd\x9c\x48\x5c\x46\xc7\x28\x3d\xce\xdc\x3a\xc0\x7c\x14\x7e\xfd\xec\xe4\xdf\x38\xe2\xd8\x6f\x79\x73\x52\xdb\xc4\x38\x6c\xb0\x91\xfa\xd8\x96\xae\x7f\xec\x89\xa9\x74\xbc\xc8\x3d\x63\x31\x7a\xf2\x0b\x6d\x27\x9a\xa4\xb8\x19\x4d\x8b\xa7\x90\xc6\xa6\x59\xfe\x1e\xdf\xb2\x9b\x73\xea\x03\x6a\xdb\x56\xcf\x11\xb9\x21\x94\xc3\x64\x44\x33\x00\xde\x77\x63\xbc\xa6\xbb\x48\x4b\x75\xb3\x73\x25\x27\xe8\x60\x1d\x9e\x40\x08\x07\xb7\xd3\x41\x4d\xa7\x1e\x82\xea\xd1\x26\x15\xf3\x4a\x28\x7f\x95\xa9\x85\xd1\xc0\x1c\x59\xf2\x8a\x7b\x24\x1a\xea\xc8\xcb\x17\x5a\x2d\x7d\x74\x4f\x0c\x36\x81\x64\xf5\xe6\x0e\x44\xe5\x7e\xe0\x1f\x74\x4a\x07\x2f\x3d\x36\xc6\x42\xb9\xdf\x42\xd5\x47\x3e\x27\x86\xd8\x01\x94\x91\xa4\xfb\x38\x32\x09\xd7\x3d\xf7\xf1\x40\x94\xe7\xde\x33\x24\xec\x3b\x77\xf9\xd9\xa7\xf7\x5e\xc9\x88\xa8\xd5\x78\xfe\x2b\x10\x2f\x1b\x61\x5f\xc0\x62\x4a\x6f\x22\x27\xd3\x36\x4f\x71\xca\xc1\x83\xbe\x0f\xd2\x95\x6e\xbf\xb7\xfc\xea\xd7\xf3\x5f\xa5\x26\x40\xb3\x96\x81\xb1\xf3\x19\x5d\x62\xd1\x92\xa1\x85\xc2\x44\x17\xff\xe5\xf5\x78\x7c\x97\x60\x23\x40\x9b\xde\xc3\xdb\x5f\x99\xfe\xa1\x13\x86\x49\xe7\xd1\xb5\xad\x32\x76\x4a\xa3\x5e\x26\xda\xc3\x7e\x10\x31\xf9\x9f\xd9\xaa\x9c\x14\x9d\x80\xb7\x2f\xad\x26\xd5\xbb\x34\x81\xe7\x6d\xba\x11\x02\xb7\x8e\x50\x1c\x49\xde\xbe\xdb\x8b\x28\x0a\x43\xaa\x63\x30\x2b\x0b\xa0\xd1\xcd\x80\x2f\xdc\xac\xff\x12\xcd\x5a\x53\xcb\x47\x07\x2e\x78\x33\xe6\xba\x42\x76\xf5\x44\x6b\xf9\x16\x93\x45\x09\xd3\xa9\x12\xcb\x66\x2c\xb4\xc8\x24\x97\xfc\x2d\xf7\x7b\x1e\x44\x3e\x97\xde\xb7\x21\x84\xd2\x6a\x0a\x52\x28\x15\x38\xce\x3a\xe2\x26\xae\xaa\xa3\x0a\x93\x56\x5c\x50\x7a\xcf\x43\xce\x5d\xfc\x05\x41\xf1\xa1\x19\x3f\xa3\x00\x29\x3b\xe3\x7d\x0b\xd1\x9a\x40\xb3\xfc\x29\xe0\xd6\xa5\xf3\xe9\x4d\xd1\xff\xcc\xce\xd1\x9f\x6b\x43\x9d\xd0\xc4\xae\xf8\xd7\xa3\xc8\x3e\x5a\x7a\xe1\xb5\x07\x4e\xc3\x98\xc7\xca\x02\x2c\x13\xf8\x55\x20\xf0\x9b\x20\x1f\x32\x7e\x24\x52\xff\x5f\x26\xb3\xd3\x68\x5c\xb4\x19\x73\xb7\x51\xde\xe8\x98\x38\x4e\x50\x1a\x66\x35\x8a\x63\x27\x1a\xe1\xc8\x89\x51\xf4\x0d\xe5\xc8\x02\x27\xd9\xfb\x13\xf1\x96\x65\xc5\xa1\x57\x4c\x22\x4f\x92\xd2\xa2\xf8\x1f\xc2\x30\xef\xb4\x22\x1b\xe4\x30\x8b\x5e\xe0\x14\x4e\x04\x2d\x20\x90\x3a\xfd\x8f\x15\x7f\xd7\xa3\x80\x2c\xa9\x76\x80\xd4\xa3\xe2\xf6\xd5\xbd\x94\x73\xa8\xda\x9c\x32\x8f\xaf\x49\x11\x90\xdd\xf1\xd8\x5e\xd6\x75\x53\x0f\x87\xd3\xa3\x41\xba\xd4\x99\x86\xa0\x5f\x34\x20\xc2\x71\xf4\x49\xcb\xf2\x72\x36\x3a\xa5\x9c\x45\xb3\x29\x34\x2d\x6b\x5b\xe2\x9a\x45\x65\x8b\xcb\x10\x27\x0a\xe6\x9d\xde\x43\x09\x9f\x62\x9d\x16\xb2\xfd\x12\x69\xd1\xcd\x62\x34\x82\x1d\x66\x80\xc3\x70\x4a\x1a\x1f\xf5\x32\x90\x99\x5d\x1f\xe6\x5b\xfb\xd6\x21\x2f\x32\x6f\xfc\x70\xb7\xde\xfa\xc6\x54\x97\xa1\x18\xbc\x13\xd9\xbc\x2f\x83\x75\x9a\x30\x35\xaf\xc3\x35\x2e\x03\x9b\x0c\x66\x4d\x87\xe7\x96\x99\xfe\xf9\x32\xcd\x3f\x4b\x10\x24\x2c\x16\xcb\xf6\x53\xd1\x4a\x9c\x99\x5d\xa5\xaf\x6e\x27\x86\x69\xe1\xdb\x66\xfc\x53\x7a\xe6\xf4\xed\xdf\x4a\xbb\xa1\xf2\x76\xc4\x34\xad\x3a\xf5\x3f\x4f\x7d\xc6\x4c\xa1\x39\x84\x5a\xde\xc9\x3d\xea\x1a\x0b\x1f\x32\xd6\xa0\x24\x52\xb3\xa2\xe7\xec\xca\xed\xd2\x3b\xc6\x31\x6f\xd0\x45\x53\x72\xd7\x98\xa1\xdf\xff\x00\xc4\x8b\xb5\x9e\xcd\x84\xab\x73\x20\x99\xbe\x22\x03\x9d\xf4\xd9\x8e\x93\xea\x74\xf4\x1b\xd8\x64\x9b\x21\xfb\xcb\x2b\x7f\x84\x7e\x9a\xf0\x6d\xaf\x9e\xd8\x44\xb2\xf7\x8a\xa2\x1f\xca\x28\x9e\x18\x89\x40\x24\x15\x60\x59\x3f\x32\xa1\xff\x23\xe6\x10\x27\xac\xce\x4f\x6f\xad\xa0\x5b\x28\x2a\xf6\x2c\xe2\xe1\xd2\x70\x45\xa9\x57\xe7\xc2\xea\x2b\xc7\xb5\xbf\xd7\x7f\xb3\xf8\x11\xe1\x2a\x7c\x5f\x1f\xcd\x98\x83\x8f\xfa\xad\x2a\xea\x73\x87\x2a\xa2\x5b\xfc\x74\x36\xd1\xc4\x9e\x95\x5d\xd1\x37\xd0\xec\x2a\x63\x46\x85\xaa\x1a\x44\xf7\xa9\xb5\xad\xb9\x58\x68\x31\xcb\x47\x2f\x56\x08\x0e\xa3\x2c\xa4\x87\x75\x68\xe7\xb9\x46\x7a\x0d\x93\x98\x1f\x8c\x35\xd6\xf0\x7a\x84\x99\x14\x6f\xc5\x83\xee\x73\xa3\x60\x6c\xd6\x8c\xb7\x61\x89\xba\xd2\x1a\x9a\x73\x76\xf1\xdf\xa9\x32\x7d\xa0\xcb\xcf\x8e\xd9\xcb\x9f\xab\xfc\x41\xe3\x17\x0c\xf4\x42\x59\xb2\x50\xe9\x58\xd6\x0a\x15\xf7\xcb\x62\x35\x58\x42\xb0\xd6\x8c\xfa\x3e\x83\x6f\x54\x56\xbf\x67\x47\x5d\x4e\xec\x20\xb5\x89\xea\x85\x80\x6b\x76\x4d\x07\x62\xd5\x4d\xc2\x3f\xb2\x0c\x56\x80\x6d\xd2\xb4\x45\x89\x9b\x79\xe4\x8e\xb6\xed\xa3\x23\x84\x2d\xa6\x40\x5e\x53\xa2\x96\x0a\x2f\x91\x0e\xc6\x42\xcb\xdb\x90\xe5\x5c\xce\xa3\xa4\x41\xf3\x12\x1d\x23\xab\x85\xdf\x27\xc8\x94\x19\x27\xd8\x37\x50\xfd\xe6\xca\xb7\x96\x3a\xb6\xd9\x73\x6b\x7e\xb5\x4e\x00\x6d\x3c\x61\x19\xcc\xf8\x61\xbf\x60\x0e\x12\xaa\xea\x8e\x32\x1d\x7e\x8e\x0d\xf2\xdf\x9a\x10\x8e\xff\xd0\xb4\xa4\x84\xcc\x2e\x79\xfd\x38\x64\x49\x29\x28\x9b\x8c\x6a\xbf\x9c\x10\xe7\xde\x5b\x6a\x9e\x09\x01\x1c\xbe\xcd\x3d\x7a\xfe\x1f\x66\xed\x36\xc9\x2b\x8e\x24\x94\x80\x1b\x45\xcc\xf0\xc3\xf8\x1c\x50\x37\xb3\x0a\x42\x9c\xd0\x9c\x1d\x05\xa2\xe4\x2b\x44\xba\xf2\xe9\x8c\x1f\xe4\xda\xe2\xf6\x68\x9c\x87\x76\x05\x82\x27\x4a\xf0\x47\xc2\x35\x43\x6f\x7a\xe3\x4b\xa8\xf0\x3f\xe3\x49\x36\x99\x1a\x89\xf8\x7a\x89\xe2\xe9\x23\x99\xad\x30\x1d\x7a\xce\xfa\xf2\x19\xec\xd9\x5a\x4b\xd7\x2f\x73\x7a\xea\x67\x0c\x6d\x7c\x2f\xbe\xdf\xce\x60\xb1\x3a\xe7\x96\x76\x6a\x05\x7f\xbb\xdd\x0d\xc5\x87\xea\x49\x3f\x5a\x19\x36\xb4\x55\x2f\x58\x76\xe5\x64\x71\x46\xa3\x7c\x4f\xa8\xce\x37\xef\xa4\x0d\xa9\xf3\x33\x39\x11\x47\x74\xc5\xa1\x1a\xae\x14\xa1\x26\x34\x63\x3a\xad\x9f\x45\x4e\x4f\xec\x46\x5a\x4b\xe8\x35\x5a\xcf\x02\x64\xaa\x7a\xec\xfa\xfa\x52\xcc\x94\x86\x63\x6a\x2e\x02\x29\x9d\x2a\xcb\x26\x42\x24\x58\x3f\x7e\xc9\xae\xce\x92\x90\x34\xd3\x75\x72\xa1\x2a\xce\xca\x9a\x99\xa7\x2b\x6c\xb6\x95\xe1\x6f\x09\x50\x47\x1b\x42\xff\x58\xcf\x0e\x24\xfc\xd9\x58\xe8\x08\xfa\x39\x18\xe0\x83\xe3\x2e\xce\x50\xbb\x0d\xfc\x45\xe1\x50\xce\x99\x6e\x67\x73\x44\xe8\x42\x80\x2d\x36\x0e\xe1\xc4\x24\x84\x4e\xad\x48\xd3\x04\x9d\x79\x8c\x9e\x2a\xda\x63\xca\xb8\xe6\x71\x2f\xb0\xf7\x5b\xa7\xe2\x4c\xd2\xe1\xfd\x35\xba\x2a\x5d\x81\x89\xc6\x32\x35\x0d\x07\x2b\x3f\x27\x78\xc6\x20\x04\x77\xe0\xa5\x63\x2c\xa7\xdc\x58\x62\xfe\xd5\x1e\x89\x78\x16\xe2\xa2\xd3\x2c\x22\xd8\xba\xb8\x18\xc5\x5b\x50\x5b\x36\x1c\x03\x86\x7d\x71\x47\x8d\xec\x29\x0a\x47\x05\x43\x92\xef\x3c\x0f\xef\x17\x6f\x3a\xa3\x28\x2b\xde\x61\x68\xc7\x3b\xe1\x90\x1e\x6b\x0f\x5f\x2e\x75\x5b\x9c\x8e\x02\xfc\x71\xa7\x92\x16\x3b\x3a\x0a\x03\x2c\x8e\x7c\x9e\xc3\x5e\x40\x50\x12\x81\x52\x8f\xc9\x21\x81\xb3\x20\xe2\xae\x9c\xbf\x02\xd1\x09\xbe\x10\x0e\x44\x3c\x06\xe0\xa0\x82\x81\x45\xd7\xc1\x91\xa2\xbb\x40\xbd\x3c\xcf\x64\xab\x0b\xf2\x79\x73\x77\x56\x01\xc3\x96\x8b\x12\xf4\x4a\xf1\x38\xf5\xda\x0c\x55\x78\x64\x18\xdd\xb3\xad\x38\xf5\x11\x74\xb6\x08\xfa\x79\x4d\x6d\x17\xea\x3d\x95\xa3\xe4\x07\x80\x15\xbe\xf1\x93\x0f\x1c\xea\x51\x08\x64\xb6\x2a\xca\x07\xe9\x2b\xbe\xa0\x3f\x55\x8e\x83\x59\x20\x7c\xf2\xb5\x10\x6a\xf0\xf9\x48\x2f\x4e\x52\xdf\x59\xc6\xe2\x8c\xb5\x6b\xa7\x10\x41\x0f\x1b\x22\x9a\x1e\x74\x44\x0b\x98\x33\x98\x04\x13\x89\x64\x17\xa2\x66\x97\x0b\xf3\x28\x78\xab\xc3\x4f\x4f\xa4\xb8\x7a\x67\x23\x3b\x65\x0b\x4e\xc4\x4b\x98\xfb\x6d\x1d\xe3\x2c\x35\xa8\x7f\x2e\x03\x8b\x96\xb8\xd1\x85\xe3\x18\x7f\xb5\x09\x97\x31\xf5\x20\xc0\x1b\x8d\x2c\x07\x26\x39\x68\x10\x9f\x1a\xfa\x79\xb5\xeb\x2d\x9b\xdb\x69\xda\xf4\x2c\x7f\xb0\x60\xf9\x23\x93\x94\x03\xea\xb8\xbc\x52\x38\x64\x3a\x26\x67\x04\x0b\x36\x56\xca\x93\x23\x3d\x16\x29\x6e\xca\xc7\x0d\xe3\xaa\xef\xa5\x35\x73\xb0\x99\x19\x09\xdb\x3f\x3e\xfc\xb5\xf4\x5f\x75\x1e\xba\x7b\x23\x80\xe9\x1c\x4c\x20\xfd\xdf\x3b\xc3\x08\xe5\x2d\xf7\xb8\x52\xc7\x76\x16\xa2\x36\x44\x11\x1c\x32\x19\xac\xa6\xbd\x96\xa5\x36\x21\xb5\x26\x8e\x61\x4b\x11\xb3\x14\xdd\xd2\x4a\xaa\x02\x63\xe5\x69\xaf\x2b\x15\xfe\xfa\x33\xa2\x95\xa5\xe6\x77\x68\x6c\x2d\xdf\xe6\x3f\xfb\x2d\x17\xce\xf1\xd0\x58\xa6\xa9\x98\x26\xcc\xfb\x63\x13\x74\xc3\xff\xa0\x5a\x32\xd8\x06\x81\x18\x68\x4f\x6b\x12\x03\x84\x2b\xf3\x8c\x80\x5f\xd4\xb1\xdf\x03\xd5\x8d\x86\xe1\xd0\x79\x71\xde\x9c\x8c\xbe\x56\x47\xca\x16\x69\xd8\xbf\xe7\x90\x81\xe7\x43\xa7\x70\x37\x38\x83\x4d\x97\xa2\x9a\x57\x9d\x96\xbb\x26\x81\xd4\x35\x34\x3f\xd5\x34\x35\x8f\xce\xfd\x12\x37\xf4\xc0\x42\x5c\x0d\x9e\xd4\xf1\xae\xc1\xcc\xc1\x7a\x3a\x65\xc8\x4c\x96\xb4\x56\x79\x15\x40\xa6\x45\x1a\x75\x00\x7f\x17\x01\xd0\xbf\x09\x01\x18\x0b\xd2\x42\x29\x66\xcc\xab\x8f\x22\x82\x85\x60\xce\x40\x37\xc2\x7e\x77\xee\x83\x08\xc6\xc1\x0b\x49\xfe\x06\x2a\x50\x32\xf2\x0d\x78\xac\x66\x3d\x95\xdd\x7c\xcb\x78\x44\x2d\xb7\x78\x4a\x47\xba\xd5\xf2\xb0\x69\x27\x4a\x40\x42\x55\xec\x07\x60\xca\x41\x78\x58\x92\x78\xfd\x6a\x5b\x30\x63\x07\x43\x95\xc3\xc3\x7d\x22\xba\x58\xcf\xce\x46\x57\x44\xbe\xcc\x84\x51\xa6\x78\x71\xb9\xfe\x9c\x91\x26\xf5\x81\x12\x3b\x5e\x60\x8b\x24\x44\x3a\xf4\x27\xe6\x8a\x23\x40\x4a\xf2\xc4\x28\x28\x2e\x70\x8f\x24\x55\xf8\x7e\x1a\x35\x7d\x3a\x6b\xcf\x1b\x6d\x77\x17\x75\xfd\x9b\x70\x15\x0f\xc6\x63\x3b\xf4\x69\x21\x7f\xf0\x31\x6a\x9c\x32\x62\x6a\xbe\x57\x41\x58\x0a\xf6\xf9\xec\x76\xa2\xeb\xad\x2a\x2e\x31\x79\x9b\xa3\x51\x75\xac\x80\x7e\xd3\xdf\x74\x21\xdf\x77\x73\xcb\x92\x58\xfd\x54\xe7\x64\xc7\x24\x50\xad\x5b\xe2\xc1\x46\xa5\x5e\xad\x74\xfa\xe6\xf1\x62\x8b\x07\x3f\x3c\x5c\xae\xc5\x40\xea\xb6\xbd\x73\xe1\x97\xcd\x65\x7a\xe3\x3d\x26\x02\x79\x39\xbb\x79\x51\x3f\xfe\xac\xa1\xb1\x14\x49\x7a\xe1\x22\x09\x0d\x4e\xcf\x8e\x5a\x69\x4c\x79\x65\xb7\x7e\xa5\x63\xc1\x10\x57\xc7\xc5\x6f\xa6\xa7\xf9\x0a\x05\xee\xf4\x38\x38\x22\xff\xa9\xbe\x9b\x64\x7c\x4d\xe3\xc5\xe4\xe9\x07\xd7\xfa\x55\x16\x16\xf5\x72\x24\xfa\x87\x6d\xf3\x12\x74\xc5\xce\x45\x27\xdf\x6a\x1a\xa9\xe2\xae\x27\xf1\x8d\x68\xc1\x17\x67\xba\x8e\xe2\xf0\x59\x52\xe7\x9d\x16\x15\xf5\x23\xe7\x54\xfd\xbb\x32\x72\xac\x96\xf4\x43\x9f\xca\x91\x54\xda\x41\x80\x32\x83\x39\xc7\x43\x67\x1a\x87\x44\x09\xb0\x17\x4d\x3a\xc5\x57\x68\xb8\x71\x01\x56\x2c\x55\x7d\x6b\x11\x86\xb8\xf6\x32\x26\xd3\x6c\x04\xce\x85\x30\xe7\x54\x2b\x5e\x17\xcc\xe1\x3d\x0d\x34\x1c\xf6\x19\x8f\x93\x93\x52\xca\x21\xe5\x6b\x96\x3e\xbf\x8d\xe1\x19\xc5\x84\x0b\x2a\x19\x92\x8c\x54\x4c\xda\x0f\x8f\xf3\x6f\x2a\x62\x0b\x5d\x9f\x02\xaa\x61\x1b\x0c\xff\xd2\x57\x42\xd4\xd5\x86\x4b\xf5\x7f\x71\x90\xb8\xeb\x69\x53\x28\x11\x68\x1b\x0e\xbf\xbc\x76\x97\x14\xc9\x1e\x28\x85\xe5\xbe\x17\x07\x5c\x6d\x0b\xc3\xb2\x7f\xb0\x2b\x45\x2f\xc8\xd9\x1f\x41\x0d\x47\x91\x7a\x52\x6e\x4f\x82\x67\x0e\x43\xe9\x05\x13\x40\xea\xa0\x6c\xa4\x31\xc4\xe9\x42\x9d\x57\xa4\x22\x41\x1b\xe9\x9d\x96\x05\x8b\xbe\x18\x0c\xce\x2a\xac\x58\xc3\x3a\xb1\x48\x75\x72\xd1\x5b\x56\x1a\xbb\xb2\xef\xfe\xb1\x0a\xf1\xd6\x12\xea\x2d\xb5\x90\xa2\xe1\xc3\x34\x25\xd8\x0a\x13\x91\xd3\x78\x2e\x1a\xb9\xba\xb7\x3c\xe7\x3a\x5e\x71\xff\xeb\x68\xd1\x6f\x4a\x2f\xa3\xd0\x5d\x95\x45\x32\xd2\xee\x3c\x71\xdf\x4a\x62\xbf\x46\x3f\x74\x0f\x70\x1c\x7a\x7f\xc0\x97\x32\xaa\xf2\x40\xdb\x4c\x5a\x1f\x34\x54\x50\x16\xa8\x8b\x6f\xa6\x3c\xf6\x82\x36\xb1\xd1\x95\x2e\x7c\x4f\x26\x37\xcc\x7b\xce\x02\x89\x32\x57\xe4\x32\x76\x10\x9d\x06\xe8\x30\xb5\xcf\x78\x9d\xfd\x8b\x3b\x8e\x23\x00\x34\x92\x49\xa6\xab\x44\xd9\x7b\xe1\x14\x90\xe3\x06\x8b\x07\x60\xc5\x14\x26\xf3\xff\x31\xef\x31\x37\xfc\xb0\xfc\x1e\x85\xe5\x4b\xa3\x57\x83\x51\x7f\x83\xc6\x48\x04\x56\xff\x45\xdf\x4f\x20\x23\x52\x3a\xa7\x89\x8b\x10\x77\xf2\xff\x14\xdc\x2f\xc9\x7a\x4a\xa1\xce\x57\xa2\x53\x49\x76\x3f\xf7\x2a\x93\x32\xa2\xe4\x72\xc1\x4c\x91\x71\x0b\xfe\x07\x2a\xb5\x95\x40\x30\x06\xa4\x44\x8b\x59\x6a\x78\xc4\x17\x34\x93\x49\xa5\x84\x9b\x0a\x85\x36\x66\x47\x68\x5b\xe9\xb8\x61\x97\xf3\xb0\x3a\x84\x29\x49\x78\x8d\xd6\xa9\x2f\x29\xa9\x77\xe1\x0f\x7f\x6e\x9a\x09\x44\x67\x4e\x87\x4f\x50\x4a\x12\x38\x4f\x71\x3a\xd2\x4d\xd5\x4a\x22\x2a\xa3\xed\xbc\x01\x96\x5e\x94\x31\x5f\x29\x9a\xf4\xeb\x36\x4b\xa2\x12\x95\xba\x0b\x9e\x50\x27\x06\xba\xfb\x2b\xc8\xe3\xd5\x44\x3b\x50\x1a\x52\x88\x7b\x5c\xbf\xb6\xa3\xba\xc4\xe0\x45\xde\x32\x0f\xc9\x30\x9a\x3d\xf7\x56\xc8\x7d\x0f\x96\x89\x86\xff\x51\xe5\x43\x7f\xf4\x7b\x1e\x8c\x40\x0b\xd3\x1f\xf5\xa4\x17\x12\x9d\x66\xfb\x66\x51\x8a\xf6\x6c\x7e\x96\x06\xf7\x9b\x5d\x2c\xb3\x57\x66\xce\x9a\xb0\xb1\x84\x95\xed\xb1\xe1\x39\x5a\x35\xc9\x57\x05\x02\x9f\x54\x9d\xfe\x5d\x13\xe2\x9a\xba\x77\x18\x7f\x31\xa8\x4a\xba\x9e\x14\x1a\xb2\x2c\x42\x90\x6c\x9f\xb8\x70\x4e\xf1\x35\x59\xc3\x4f\xd0\x09\x84\x2d\x40\xaf\xb8\x4a\xa3\x0e\x6a\xdb\x7e\x3a\xc3\x9e\xff\x43\x82\x55\x22\xb3\x6d\x58\x95\x00\x51\x3d\x0c\xa7\x5f\x7e\xbc\xc7\x7e\x7e\x1a\xa8\x4d\x45\xad\x22\x24\x98\x13\x79\x63\x0e\x8e\xde\x26\xc2\xfe\xbb\x02\x9e\x46\xc3\x83\xdd\xc8\x08\x58\x2c\x5d\xb5\x18\x4f\x18\xa4\x4a\x31\x48\x83\xc5\xb7\x8e\x69\xfa\xc8\xfc\x3d\x5b\xcd\x4e\x37\xe6\xf8\xa2\x00\x71\xcc\xe2\xfd\x54\x32\x7d\x7d\x44\x80\x91\x9d\xbc\x46\x25\x41\xbf\x9c\x54\x83\x7e\xce\x15\x98\x86\x42\xf0\x6f\xf9\x2a\x88\xc6\xf7\xa1\x47\xa3\xf3\x0b\xb4\xe1\xab\x22\x09\xac\xa2\xa6\x7d\x61\xcd\x54\x1a\x4b\x48\x9c\x16\x56\x10\xb4\xf7\xd2\x09\x27\x67\x56\x53\xc4\xa2\x85\x57\xc9\x48\xb1\x58\xab\x0b\x29\xcc\x3d\x33\x52\x00\xf7\x66\x82\x36\xae\x14\xa1\x75\xdb\x3f\xee\x9f\xea\xc3\x6b\xde\xc4\xa2\x8d\x32\x8f\x9b\x06\x3d\x8b\x16\xf9\x8c\xa3\x8e\x82\xdd\xa5\x32\x71\x1f\x41\xf0\x26\x89\x0f\x84\x30\xc6\x6c\xbc\xb6\x80\x71\x7a\xc8\x15\x88\x70\x8a\xb4\xd4\xbb\x3d\x04\x86\x75\x70\x57\xe0\x08\xe6\x77\x3a\x57\x28\xb5\x45\x03\xfa\xe6\x19\x23\x22\x46\xf4\xd6\xfd\xbf\x7f\x0c\xd8\xa5\xe9\x10\xe8\x1b\x32\x15\x8d\x95\x96\xe3\xc7\xf7\xdd\xaa\x30\x22\xa0\x48\xc8\xd7\x5f\x28\xf6\xd2\x35\x93\x1c\xd8\x74\xf4\xc1\x94\xbd\x03\x5a\xff\xd4\x2e\x02\xe0\x81\x6d\x9d\x37\x92\xef\xe9\xf0\x8b\xa7\x65\x3b\xb3\x8d\x4d\x30\xef\xdd\x59\x06\x5c\x62\xac\xe2\x95\x1f\x30\x8c\x2a\x12\xaf\x9b\xcd\xb4\xb9\xf8\xf2\x5a\xc9\x55\xe6\x4d\x36\x34\x29\x14\x71\x5f\xa2\x77\xad\xe3\x34\xe5\x50\x72\xb2\xd4\xf5\xf7\x35\xe9\x1f\x75\xd5\xfe\xd9\x5a\x73\x59\x1f\xbd\x9a\xd1\xf5\xd6\x46\xbc\x05\x2a\xe8\xe2\x5b\x29\x62\x14\x26\x81\x70\xf4\x0f\x66\x08\xd0\x65\x50\x1f\x75\x0a\x92\xa6\x62\x97\x91\x14\xcb\x64\xa7\xa6\xf9\x20\xda\x39\x81\x8b\xdd\xe0\x8c\x86\x79\x53\x11\x9f\x64\x8e\x7f\x9b\x55\x6d\x9f\x0e\x2c\xe5\x38\xe5\x84\x01\x5e\x3c\x7a\x77\xf3\x69\xa1\xdd\x69\x68\x63\x8e\x84\xdb\xfb\xeb\x00\x31\x74\xfe\x63\xf8\x95\xd4\x64\x0d\xd0\xd2\x52\xf2\x0e\x0b\x0a\x19\xfd\x2c\x2b\xca\xda\x22\x9e\xe9\x39\x7a\x8f\x62\x61\xa2\x85\x21\xd6\xb3\x4b\xac\xb2\x82\xf5\x96\x5d\x14\x58\x7e\xee\x0c\x8e\x54\x5c\x46\x15\x54\x79\xd5\xef\x80\xa1\x8a\x6e\xc9\xb8\xed\xf6\x28\x44\xd5\x53\xad\x30\x74\xd5\x1b\x29\xf2\x68\x92\x2c\x96\x3e\x5c\x9c\xaa\x2f\x22\xb5\xb8\xdf\x79\xd6\x0a\xf8\x1a\xea\x06\xda\x6b\x8d\x6a\x9f\x26\x4b\x98\x1c\xda\x6b\x06\xa3\xaa\x20\xcc\xba\x67\x88\x99\x89\xdf\xad\xb1\x67\x8a\x89\xf3\x62\x14\x16\xff\x9b\x39\x3c\xfe\xc0\xd3\xf7\x77\x3d\x7a\x35\x56\xcc\x01\xdd\xdc\x2f\xda\x62\x74\x8e\x97\x9e\x99\x35\x7e\x9c\x24\xec\xd0\x3e\x4f\xbe\x34\x06\xdf\x55\x2d\x49\x8c\xf0\xd8\xde\xf4\x00\x04\xff\x84\x6f\xf8\x91\x4b\xc0\xa7\xd8\x8a\x48\x85\xfa\x12\x58\x46\x2c\x99\xab\x86\xd6\x91\xe2\x8b\x1d\x2c\x3b\xbc\x42\xc1\xa6\xee\x64\x7a\x50\xa7\xc3\x95\xf7\xe2\xff\x6d\x46\xd9\x3b\x48\x67\x25\x3b\x98\xce\x3a\x83\x99\x9c\x43\xa9\x05\x59\xe3\xb1\x86\xa4\xfc\xe5\x06\x85\xca\x89\x90\xad\xe8\xf8\x12\xb0\x92\x71\x6d\x93\xdf\x17\x8b\x6e\x7d\x95\xe2\xe0\xe3\x66\xd2\x8a\xe8\x13\xa3\x1c\xe2\xe6\xc6\xe3\x42\x87\x93\x42\x2b\x87\x80\x87\xf7\x34\x7d\x60\xd2\x40\x13\xf6\x58\x5f\x27\x59\x84\xb2\x70\xe2\x8f\xad\xa7\x3b\x8b\xd1\xcb\xa1\x92\xe9\xa0\xb4\x33\x09\x0f\x98\x44\xbb\xd2\xfa\x4e\x49\x0a\xac\x9b\x10\x4f\x28\x67\x9f\xbc\x93\xbc\x59\xe8\x49\x01\x0b\xc4\xe8\xce\x82\x59\xfa\xe2\xbd\x48\xbd\xb0\x8e\x5d\x76\xe7\x62\x22\x4f\xdc\xc7\x6d\x54\x1e\x81\xcb\xd5\x52\x13\xa9\xd0\x6a\x19\x08\x3c\x47\x8a\xdb\xfe\x5d\xc7\x17\xc2\x35\x0b\xf1\xfb\x81\x39\x29\x5b\xc4\x43\x1c\xb8\x0f\x22\x6d\x4a\x19\x17\x55\xe7\xb0\x2e\xa4\x5d\xa8\xf8\xda\xfa\x97\xeb\xe4\x11\xd1\x6c\x2c\x15\x2b\xc0\x3c\x5f\xf0\x21\x91\x03\xa6\xaa\x6e\x82\x5c\xf0\x54\x4b\xb9\x2f\x66\x56\x5a\xc2\x84\x65\x54\xd2\x7f\xc6\x41\x2e\xa1\xf3\xb9\x22\xa5\x7c\x4c\x98\x74\xc3\xa8\xff\x1e\x5b\xa7\x9b\x55\xa5\x04\xda\x8f\xde\x9a\x2f\xfd\xef\x71\x66\xa9\x92\x76\x2c\x25\xe6\x94\x33\xad\x86\xc2\x6d\xd7\x07\xae\x69\x69\x92\x6d\x36\x3f\xe1\x13\xed\x51\x89\xef\xe8\xef\x58\xf6\x61\xd7\x6c\xeb\x9e\x05\x85\x7b\x4d\x02\xfe\x51\x4e\x88\xc6\x85\x09\x28\xad\x71\xcd\x73\x4a\xa6\xdb\x29\xb7\x03\x20\xf1\xb2\x57\xe3\x15\x47\x23\x25\x69\x6d\x42\xf1\xdf\xac\xb9\xee\x19\xdd\x8a\x08\x60\xf6\xee\xfd\x3c\x5e\xba\x01\xb9\xb5\xf4\x53\x3e\x0e\x5e\x1f\xdf\xb3\x9e\xf4\xba\x29\x7b\x2d\xf2\x29\x01\xa9\x2c\x5b\x2a\x44\xfe\x29\x6a\xd2\xb1\x51\xa7\x8f\x3f\x17\x5b\x74\x73\x72\x84\x78\xf5\x80\x98\x93\xfb\x4a\x56\x32\x8c\xa1\xc2\x98\x9b\x51\x8c\x3c\xbc\xa3\xa8\x72\xcf\xd5\xe2\x15\x71\x10\x39\x66\xb3\xc3\xe0\xe9\x16\xef\xe7\x63\x19\x4e\xd2\xa3\x86\x55\xba\x8d\x2a\x58\x1a\x36\x9a\x1e\x70\xd2\x11\x3a\x0e\x2e\xab\x4a\x5e\x8c\x85\xb8\x62\xfc\x65\x44\x99\x19\x8e\x1f\x3b\x43\x9d\x6f\xf3\x79\x08\xe0\x5a\xc6\x65\xef\x44\x07\xb6\x21\x44\x9d\xa4\x45\x41\x75\xb1\x64\x14\xfe\x06\xc0\x13\xc5\x71\x9e\x7b\xff\xcf\xe8\xa8\xf2\xc4\xc8\x2a\x96\x56\x2c\xce\xdb\x13\xdc\xa3\xa5\x7a\x2d\x80\x56\xe4\x75\x0d\xd8\x2e\xb2\x53\x05\x2d\x04\x42\x8e\x17\xb7\x71\x50\x76\x67\x52\x7b\x18\x10\x64\x5d\x42\xb9\xbf\x74\x77\xba\x3d\x3c\x05\xe2\x31\x50\xbd\x5e\x06\x6c\x48\x2f\x73\x35\x51\x57\x59\xe0\xed\xf2\x9c\x1c\x7f\x0e\x56\xf0\xa6\xd3\xda\x99\x36\x72\xf4\x3c\x0f\x32\xc8\xa5\xf3\x5e\x65\x04\xde\x5b\x3e\x10\x16\xca\x17\x68\x02\x11\x43\x4e\x53\x0b\x16\x08\x14\x31\xa3\xef\x41\x0b\xd7\xae\x74\x2d\x56\x1b\xff\xd6\x6f\x69\x75\x63\x52\xbc\xe9\x59\x79\x85\x97\xf3\xe7\x26\x95\x27\xa1\x3c\xe5\x94\x8f\x69\xa3\xa8\x57\x9a\x9c\xd7\xcf\x8e\xf7\x24\x25\x81\xab\xdf\x9d\xb9\x9e\xd3\x6e\x0b\x5b\x4c\x24\x62\x6b\x13\x42\x9f\x06\x9d\x99\xac\x10\x85\x96\x1f\x6a\x27\x64\xcd\xfa\xf0\xc8\x27\x6a\xbf\x6a\xe0\xc8\xde\xc6\xb9\x2e\xd1\x69\x6b\x55\x26\x2f\x9c\xe2\x75\xfd\xb9\x07\x7e\x6c\x74\x98\x2e\x38\xc4\x67\x92\x10\xc1\x52\x69\xbd\xf8\x15\x1e\x6d\x59\x0b\xb3\xe4\x29\x3c\xde\x59\xa3\x67\x4e\x8a\x41\xde\x24\xfc\xc7\xc6\x14\x6b\x84\x6a\xff\xcf\xb8\x60\x87\xca\x4b\xee\x64\xc6\xc7\x71\x14\x0b\x7c\x37\xbe\x39\x54\xf5\xee\x3f\x3f\x0c\xc6\x51\x3f\x9e\x37\xe6\x76\x21\x52\x63\x35\x4f\x81\x8c\x1b\x7a\x8a\x93\x09\x6d\x06\x92\x10\x89\x60\x49\x23\x3a\x89\xc7\x3b\xf9\x70\x50\x40\xe1\xca\x85\x0d\xd3\x15\x0b\xf6\x7a\xee\x8c\xf0\xf8\x5b\xa7\xfc\x9e\xfc\xeb\x29\xd7\x12\x7c\xab\xac\x66\xe4\x52\x30\xcb\xbf\x65\x3e\x75\x8b\x67\xfc\x34\x9c\xfa\xbe\x9d\x7d\x34\x76\xb8\xcf\x93\x4b\x40\x5a\x79\x4e\xd4\x29\x75\x4f\x8e\x0b\x5a\x2e\x44\x79\xdb\xe0\xda\x08\x6c\x7f\xc5\x26\xb3\x32\xcb\xe7\x49\x1f\x40\xbb\x89\x5e\xeb\x7d\x67\x9e\x30\xbc\x49\xda\x9b\x24\xdd\x72\x11\x46\x8c\xed\xa3\xdb\xe0\x36\x7a\xe4\x7b\xe6\x5b\xe6\x68\x8a\x7b\x2d\x78\xb9\x92\x96\xb1\x55\x92\xea\x9f\xee\x95\xd7\xf4\x79\x29\xea\x0f\xde\xc8\xfc\x68\xe0\x95\x51\x0b\x7f\xc9\x1d\xe8\xb7\xee\x56\xde\x8e\x96\xca\x35\x4c\x78\x97\x31\x12\xc5\x30\xf9\x0e\xf6\xf5\xd1\x51\xeb\xf2\x3a\x90\x8b\x1d\xd5\x3e\x30\xe1\xd1\x3e\x9c\xd8\xdc\x05\xb7\x4e\x18\x49\x1f\x68\xda\xe2\xa0\x28\x50\xf2\x44\xea\x94\x63\x50\x61\x8a\x29\x37\x25\x02\x14\x58\x7a\x16\x26\xef\xee\x96\x09\xee\x68\xe1\xbf\xaf\xe7\x31\xac\x13\x6c\x57\xf4\xd9\xe1\x17\x3f\xdd\xa4\xdc\xd0\x40\xa0\x88\x71\x83\x79\xcc\x61\xf0\xba\x6b\x9d\x4c\xd8\x07\x96\xcd\xc9\x60\x89\x37\x25\x33\x69\xda\xc5\xde\x70\xd8\xfa\x97\xa6\xb9\x72\x44\x43\xcd\x70\x3c\x2f\xe6\xde\x9c\x0b\x43\x31\x73\xd4\x05\x08\xd9\x1f\x1f\x62\x09\x51\x92\xef\x85\x2a\x58\x41\x55\xa5\x59\xba\x91\x29\xa6\xe1\x35\x70\x1d\xee\xb5\x71\x21\x43\xe3\xc6\x9f\xba\x71\xff\xde\xe0\xb5\x79\x13\xb0\x60\x23\x60\x02\x88\x32\x28\x32\x38\x71\xa7\x15\x83\xbe\xc8\x58\x13\x51\xe2\x5c\x1d\xd4\x18\x2f\x81\x60\xa9\x49\x41\xa0\x1a\xca\x5d\x28\x6a\x49\x50\x3c\x85\xcf\x51\x0c\xc2\x15\x79\xd2\xe2\x7a\x22\x65\x69\xf3\x3f\x80\xc2\x47\x3a\x69\xd4\x2e\xd2\x3c\x82\x40\x0a\xe5\xcf\xcc\xa0\x2d\xaf\x69\xd2\x7e\x3d\xb5\x46\xc8\xad\xe6\x68\xd3\x8c\xa6\x18\x3f\xdb\x82\x2b\xa6\x53\x85\xae\x40\xdc\xf9\xb6\x49\xc7\x28\x1e\x82\x97\x34\xd1\x6c\xe9\xbd\x8e\xfa\x92\xb5\xfb\x81\xb0\xa9\xa8\x18\x62\x1d\xdd\xe0\xa5\x7f\xac\x0e\x0c\x6e\x93\x4f\x42\x93\xfc\xfd\x0b\x11\xb1\x78\x39\xa0\xcf\x02\x82\x79\xfb\x24\xe0\xfa\x43\x7b\x1b\xae\xf1\xf7\x0d\x79\x78\x7e\xe2\xd2\x05\x4e\xcc\x8a\x54\xd4\x63\x84\x50\xfd\x19\x27\xc2\xc4\x9f\x63\x47\x6b\x76\xf5\x64\xc4\x33\xcf\xcb\x49\x20\x6e\x0d\xcd\x00\x10\x71\xad\x1d\x46\xcc\x0e\xad\x90\x81\x96\xec\x47\x0a\x92\xbb\x77\x35\xf2\x85\x2c\x66\x01\x19\xc4\x89\xe7\x44\xdb\x45\xe3\x96\x8f\x79\x4d\x3c\x5c\x7f\x95\xbb\xe0\x73\xf9\xf3\xf4\x41\x1b\xfa\x65\x0f\x23\x7c\x07\x60\xf9\x42\xfc\xd4\xf6\x1e\x06\x6a\x5b\xca\xa1\x00\x22\x0d\x82\xfc\xa1\xf3\x9a\x54\x4a\x5a\x10\x6e\x87\xd2\xc4\x38\xc1\x04\x41\x69\x4f\x45\xd7\x34\x8a\x79\x52\x7a\xc4\x90\x1d\xf3\xf9\x0c\xa2\x41\x82\x5e\x35\x03\x25\x6a\xd6\x56\xc8\xd4\x41\x0f\xc9\x17\x7a\x91\x1a\x19\x3a\xb5\xde\x56\x6b\x94\x8a\x95\x34\xc2\x4d\x1c\x8a\x85\x5a\xdf\x6c\xf5\xe0\x9d\x16\x71\x23\x61\xcd\x9b\xe1\xdf\xa8\x10\x1d\x4b\xd6\xa2\x89\x2c\x63\xab\x63\x6f\x76\xbd\x05\x1a\x72\x49\xd6\x77\x8b\x4a\xb4\x57\xf0\xfd\xe6\x6a\xf0\xa4\xbe\xe1\xc9\x09\xb8\x0a\x92\x2b\x1b\x79\xd9\xd3\xaf\xdc\x4d\x0d\xab\x83\xc8\x2c\x59\xcd\xa7\xed\xf7\xc0\x6e\xfd\x67\x71\x70\xaf\x80\xa8\xa7\x04\x41\xa2\x93\x9d\x72\x07\x81\xb3\xbf\x9e\x57\x3e\xe8\x2f\x8e\x3a\x1c\xed\x93\x4c\x8c\x5f\x87\xf9\xde\xa2\xd3\xa9\x40\x03\x16\xee\xf0\x69\xbc\xbd\x1d\x01\x79\x6c\x9c\x8e\xe2\xd0\x85\xdc\x13\x7d\xc6\x78\xbe\x03\xcf\xeb\x83\x12\x86\x2e\x3e\xe2\xeb\x8d\x64\xf6\x3a\x1b\x0a\x73\x96\xbe\x3f\x3f\x25\x50\xb5\xe0\x63\xf9\xea\x42\x1c\xc6\xc9\x15\x46\x10\x17\xd5\xd4\xb8\xbd\x5b\xcb\x3b\x77\x8e\xfa\x99\xa8\x40\xd4\x35\x41\x6b\x16\xed\x66\x47\x4b\x8b\xff\x7f\xd0\x42\xee\xdd\x5a\x8f\x4b\x2a\x2b\xf9\xcf\x28\x4d\x43\x03\x91\x08\x79\x12\x40\x52\xc2\x45\xbc\xc3\xba\x50\x76\xf0\x4a\x8a\xfe\x5d\x33\xa0\xbf\xb2\x7a\x5d\x36\x10\x50\x4c\x24\x6b\x1d\x4f\x27\x28\xd2\x47\xe0\x7c\xf8\x48\x8d\xe9\x63\xcd\x39\x2d\x16\x81\x2a\xe0\x5d\x2a\x71\x4d\x8a\x13\xf5\x6f\x1e\x58\xc4\xf7\xba\x92\x98\x5e\x33\x24\xcc\x2c\x52\xe3\x2d\xd9\xee\x5a\x29\xa4\x26\x47\xc3\x24\x87\x6f\x1b\x48\x6a\xdd\xb0\xd7\xfe\xa3\x5d\x46\x64\x6b\xdc\xe4\x5a\xb4\xcd\x8c\xf1\xdd\xbd\xfa\x97\x9d\x5d\xe9\x83\x76\x7d\x8d\xdc\x2a\x00\x4c\x92\x3f\x06\xb3\x27\xc3\xaf\xa4\x7c\x5e\x87\x3f\xa3\xaa\xee\x3b\x96\x9c\x0a\xd0\xf6\xcc\x5f\xc3\x25\x84\x90\x7e\x0a\x9a\x08\x83\xf1\x4a\xba\x8c\x22\xe7\x80\x22\xbe\xab\xc2\xef\xc6\x75\xff\x95\xb2\x9f\xd9\x11\xa2\xea\xdb\x75\x07\xad\x94\x26\x74\xff\x83\x8c\xf8\x31\x45\xd1\x7f\xc3\xcf\xaf\xfd\xb4\x22\x95\x06\x23\x05\x73\x2c\x09\xe0\x7a\xa1\xaf\x42\x7d\x09\xa0\xb6\x45\x6e\x93\xb5\xdb\x5a\x10\xe3\x07\x9d\x3e\x8c\x9a\x35\x3d\xad\x0b\x41\x9a\xa7\xe3\x76\x5b\xc9\x25\xf7\xed\x7d\xee\x8c\xc9\xa1\xab\x3d\x36\x27\x73\x4f\x65\x19\x77\x0b\x68\xce\x83\xea\x7d\x46\x99\x17\x6e\x7b\xbc\x0e\x13\x0d\x92\x6a\xe0\x1e\x40\x65\x98\x5e\x2f\xdc\x30\xea\x83\x76\x6b\x68\xd7\x01\x16\xea\x24\x3f\x79\xc4\x62\xc5\x53\x8f\x6d\xa5\x17\xc5\xac\xd7\xc2\xa9\x68\x1c\x57\x32\x78\x7a\x08\x18\xfd\x53\x60\x43\x63\xd4\xd3\x32\x2e\x2f\x39\x7d\x0f\x5b\x71\x3f\x4a\x6a\x41\x2a\xaa\x70\xab\xcd\xdc\x9c\xf4\x1d\x35\x0c\xe1\x81\xa1\xb8\x2f\x52\x6c\x0a\x06\x5d\x26\x15\x27\x6d\x15\x3c\x6e\xdc\xe5\x09\x8f\x9a\x95\x4c\x6c\x56\x2f\xf3\x39\x9f\x6e\x85\xb6\x57\x12\xa0\xa1\x01\xfc\x88\x0b\xd2\x09\xed\xd1\xe3\x03\xaa\xa8\x57\xdc\x2c\xe0\x9a\x3a\xa9\x07\xa9\x2f\x06\xc9\xeb\xb0\x0e\x67\xd8\x9c\xb9\xf2\x5b\x47\x0b\xd6\x86\xfb\x3c\x31\xd0\x0b\xc8\x35\xaa\x77\x66\xe7\x00\xa1\x70\xce\x5b\x25\x44\x54\x53\x11\x31\x98\x52\x8c\xa6\x12\xc4\x72\x7b\x6b\x34\x82\x64\xcb\xbf\x55\x56\x3b\x1b\xba\x2c\xec\x8f\xc4\x6b\xea\x61\x32\xca\xc1\x14\xfd\x6e\xbf\x05\x5b\xdc\xda\x4a\x66\x5d\x63\xad\x37\xfe\x3e\x33\xdd\x08\xd0\xa7\x4f\xa2\x71\x9a\x35\xdf\x22\x00\xf0\xb0\x66\x1a\x62\xa0\x62\x50\x1b\x9e\xdd\x0d\x19\x45\x20\xe6\x85\x85\xdb\xfa\xaf\x43\xda\xcd\xb5\xaa\x89\x92\xf1\xf6\x50\xa6\x1f\xd6\xdf\x4e\xfc\x24\x79\xb4\x68\x22\xed\xf5\x46\x19\x23\xb7\xf8\x47\x26\x8f\x4e\x24\x7b\xbf\x10\x9c\x57\x0b\xdf\x9d\xb7\x44\x6c\xb7\x78\x90\x25\x0c\xf1\xb1\xe8\x79\x53\x19\xf6\x86\x0a\xe3\x63\xd6\xe0\x4a\x58\x9b\xab\xc0\xf0\x65\x3f\x9f\xfb\x38\x89\x3a\x78\xd8\xb2\x25\xfa\xeb\x95\x90\x2c\x96\xd3\xdc\xcb\x40\x9e\x22\x19\x62\x3a\xe5\x15\x8a\x50\xcf\x14\x3f\xa5\xc6\xcc\xd1\xf1\x17\x60\x98\xde\x1e\x49\x35\x19\xa4\x48\x28\x88\x14\xa4\x97\xf3\x7e\x44\x43\x5a\x94\xb4\xce\x86\xe6\xa9\xf6\x2e\x03\x75\x54\x8d\xeb\xda\x13\x95\x9e\x0a\xf0\xb6\xe9\x60\x33\xd5\x60\x50\x02\xb5\xf7\x55\xc3\x7f\x89\xa6\x47\x3c\xbe\xbf\x05\x89\x9e\xfc\x77\xee\x02\x2c\x92\xce\xd2\xd5\x1d\xe7\x45\x9d\xde\xba\xf8\xd9\xd8\x45\xc9\x56\x3e\x52\x67\x54\x4e\x9f\x94\x67\x3c\x64\xce\x07\xc8\x2e\xa0\xc1\x36\x8e\xcd\x97\xd8\x5a\x65\x37\x61\x84\xfc\x0a\x04\x21\x91\xd1\x92\x78\xde\xaf\xec\xf5\x5d\x5c\x85\xd6\xe4\xc8\x33\xe1\x3d\x10\x6d\x62\xac\x7f\x4c\x85\xaf\x17\xf6\x15\x5c\xda\x41\xab\x2e\x32\x49\x76\xb5\xc9\xc6\xbd\x13\x33\x2c\x50\x26\x2c\xe1\xe1\x2e\x6b\xa8\x8d\xab\x15\xa8\x48\x86\x45\x6e\xc8\x5f\x1e\x37\x5f\x54\x52\x8e\x95\x59\x84\x70\x98\xd9\x5f\x14\x88\x47\xf3\x4e\xca\x74\x1a\x4e\xbe\x9d\xa4\xec\x67\x5b\xfa\x4e\xea\xdb\x69\x81\x07\xb3\xd0\xd8\x04\xee\x28\x1a\xb6\x2e\x54\x3e\x2e\xd8\xa8\x19\xd0\xa5\x20\x46\xf6\x84\x11\xdd\x63\x45\x10\x84\x20\x48\x55\xa7\xea\x0e\x22\x68\x54\xf0\x2e\x0b\x90\xd8\x10\xbd\x03\x7d\xc4\xdb\xb4\xdb\x67\xa9\x2d\x44\x3b\xbc\x69\x23\x48\x2b\xb2\xe0\x3b\xf5\xbd\x97\x00\xbb\x0a\x39\x02\x01\xf2\x0e\xdf\x75\x1a\x2a\xc5\x0c\xbf\xf2\xf5\x9c\xcd\x62\x93\xcd\x61\x99\xe0\x3a\xb9\xa8\x03\x57\xda\x9e\x6d\x4d\x38\x21\xb9\x4d\x59\x12\x0e\x78\x73\x3e\xa1\x0f\x46\x55\x56\xa3\x0c\x0b\x6d\xe8\x99\x6c\xd0\xd0\x43\x2a\xb8\xce\xd1\xa8\x4a\x6c\x72\xa3\xf7\x2c\x3e\xa9\xc4\x59\xcb\x02\xb5\x27\xef\x5c\x8e\x3c\xaf\x05\xd9\x47\x85\x01\x64\x96\xd9\x51\x10\x2c\xcd\x5d\x4c\xd5\xaa\xd1\x49\x4e\x1d\xc3\x75\xec\xa7\xdf\xdb\x3c\x66\x8d\x42\x6e\x7a\x04\xde\xff\xf5\x28\x55\xca\x95\x66\x15\xae\x45\x3d\x1f\x25\x61\x20\x1e\xe6\x62\x1b\xd8\xa5\x78\xe4\xc7\xa2\x6b\x87\x3d\x6f\xf5\xa0\x84\xb0\xec\xf4\x3f\xbc\x14\x7c\x50\x12\x99\x37\x83\xe1\x14\xab\xc5\x0f\x43\x12\x71\x72\x1f\xad\x69\x33\x91\x20\x08\xfb\x36\x0f\x30\xd9\xab\x10\x22\xcc\xe0\xbf\x30\xa6\xb1\x09\xc3\xef\x17\x73\x0b\xf5\x05\x1b\x48\x30\x3c\x25\x6c\xce\x27\xe4\xc2\x75\xab\x90\xfa\xcd\xcf\xa5\x2b\xcb\xca\x16\x4e\x0c\x81\xad\xbb\x65\xd5\xdc\x50\x15\x4c\x3c\xc5\x99\x72\xc0\x9b\x27\xf6\x2c\x2b\x4e\x53\xfb\xa1\x4f\xfc\x6d\x15\xec\xfb\x99\x9c\xa7\x4d\xb0\x41\x39\x18\x06\xc3\x18\x40\xa2\xd7\x84\x53\x4c\xbf\x63\x3b\x21\x9c\x1e\x9f\xdf\x97\x91\xf2\x26\x2f\x35\xb9\xde\xed\x19\xf3\xb0\xbf\xbb\xf0\xc3\x6d\x10\x84\xb7\x10\xd4\x30\x9f\xbd\xe7\x92\x7e\x47\xc8\x50\x38\xb2\xdf\x88\x86\x03\xad\x8a\x76\x0b\x7b\xb1\x7a\xfa\xe1\x48\xe9\xf1\x0f\x51\x0e\x1d\xff\x13\x16\x27\x76\x51\x61\xc6\x44\x49\x64\xd2\x92\x26\x21\x7e\x50\x10\x9c\x74\xa5\x54\xae\xbc\x42\x3a\x4d\x77\x8d\x85\xc3\x33\x21\xa0\xae\xa1\xba\x05\x09\x0a\x73\xed\xda\x9f\xc1\xa5\x42\xf7\xe6\xe1\x36\x66\xa7\x2a\x2f\x69\xdd\x4e\x0c\x6f\x89\xcd\xc4\x03\xf0\x93\x7a\xa9\xfe\xad\xbb\x19\xdc\x2b\xf1\xbb\x40\x96\x6e\x07\xa2\x12\x52\x69\x9f\xda\x3d\x20\xbd\x0a\xc8\x8c\x2c\x0b\xec\x4d\x96\x80\xcb\xdc\xbe\xce\x1a\x3a\xce\x69\x9f\xe8\xc6\x35\x28\x5b\x27\x7d\x16\x04\x05\x56\xd6\x50\x96\x8a\x0c\x12\x08\x00\x87\xa0\x18\x21\x2e\x3d\xae\xfc\x33\x17\x35\xb9\xbd\xdc\x05\x01\xa7\x45\x61\x49\x28\x4e\x66\x7d\x92\xfb\xa6\x85\x0e\xbd\xad\x9a\xc2\xc5\xa8\x8f\xdc\x5d\x81\x41\x85\x9b\xb7\x93\xd2\x34\xa2\x63\xef\x69\xf0\x1f\x23\x7e\x04\xb8\x9e\x56\x19\x9c\x0a\x0b\x79\x74\xd9\xfa\x2a\xb1\xf0\x4a\x22\x8b\x10\x3a\x7f\x9a\xbb\x0b\xb0\x56\xea\xb9\x1a\xa8\x70\x06\x28\xf4\xc3\xa6\x06\x3a\xa8\x97\x2c\x73\x1f\xac\x0b\xb1\x64\x89\xae\xe3\xe9\x7a\xb3\x81\xb9\xe7\x3b\x2b\x75\x82\x87\x91\xc8\x6c\x91\xd0\xd0\xff\xc8\x04\x9e\xc9\xfa\x22\x14\x64\xff\x2f\xd2\x1f\x1c\x07\x04\xa4\x3b\xa5\x1b\x6f\xcc\xd1\x50\xa7\xd8\x59\xf7\xdc\x76\xbc\xac\xd7\x85\x0f\x70\x94\xde\x68\x29\x3f\x44\xc1\x9f\x2e\x2b\xbd\x0d\xd6\x98\x0a\x0e\xdd\x92\xdc\x82\x8d\xe4\x27\xc5\xe3\xc5\xc7\xcb\xe8\x65\xca\xf3\x7f\x80\xe6\x40\xd6\xa9\xd7\x16\x03\x13\x98\x99\xe3\xf8\x66\xda\xd1\x56\xde\x27\xc7\x9c\xf4\x77\x25\x70\xeb\x72\x25\x1a\x2b\x4f\x58\xed\x9d\x50\xc0\xe7\x9b\x88\x8b\x31\x18\x91\xaf\xcd\x35\xd7\xe5\xf7\x20\x51\xe3\x0b\x71\xb5\x29\x54\x26\x87\x70\x56\xc0\x46\xbd\x26\x3f\xe7\xe1\x36\xc5\xd4\x78\x4a\xa6\x00\x2c\xe3\xb9\xda\x15\x26\xf6\x63\x3e\xa0\xdf\xf4\x1c\x05\x44\x6b\x4e\x64\xb3\x84\x96\x78\xb6\x5a\xf0\x52\xb6\x82\x33\x67\x97\xc1\x8a\xfb\x83\xe0\x9a\x17\x51\x17\x44\x6c\xc7\xee\xa7\x5a\xd7\x38\x06\x4e\xd2\xa1\x45\x1c\x6f\x33\x95\x33\xf1\x69\x2f\x46\xd1\x9f\xae\xe8\x48\x5e\x77\x0f\x81\x63\x7e\x60\xad\xcf\x92\xb0\x81\xc5\x4a\xdf\x25\x12\x10\x3b\x5b\x8f\xd2\xac\x0a\x4e\x2b\xcb\x1e\xaa\xd7\x89\x23\x01\x50\x8d\x22\x83\xa3\xa8\xbc\x4d\x38\xc6\x59\x56\x71\x70\x3d\xf5\xb3\x96\x59\x94\x15\xf9\xd1\xd8\xc1\x6a\xdd\x59\xde\x85\xb0\x91\xed\x8f\xe1\x07\x14\x6e\x8e\xdc\xb0\x5d\x1e\x28\xe3\x48\xef\x0f\x17\x9d\xf3\xe8\x13\x3f\x01\x5a\x13\x16\x17\x49\xcf\x4e\xb6\x3c\x60\x07\xd7\x00\x30\x04\x6d\x98\x6c\x73\xea\x93\x86\x7c\xf8\x9a\x55\x77\x7c\x31\xc4\x18\xdd\xc3\xe5\x0b\x31\xa0\x3e\xfa\x7c\xce\x02\x79\xf7\x0e\x43\x28\x4f\x2f\x43\xd4\xb5\x2b\x36\x79\xac\x3b\x8d\xcd\xe8\xcc\x1c\x38\x8b\xdf\x40\xab\x4a\x20\xf3\xd8\xb3\x30\x2a\x59\xad\x1e\xe3\x64\x03\xd8\xb1\x57\xc6\xb3\x4e\x76\xa4\x4b\x6c\xaf\x52\x37\xb1\xa5\xa9\xf4\xbf\x81\x8a\x57\xc4\x00\x25\xf0\xae\x82\xb0\x85\xd3\xca\xd6\x6e\x82\x2e\x93\x0b\xf6\x8a\x11\xc3\x45\xc2\xe5\x82\x77\x0a\x0c\xb1\xe2\x99\x85\x7b\x6f\xa1\xdb\x7b\x76\xb4\xd8\xc8\xa5\x24\x1b\x2b\x84\x5e\x47\xe2\x08\x9d\x40\x2f\xa1\xa8\xe0\x92\x84\x6a\xe7\xf3\x6e\xd4\x77\x57\x30\xac\x82\x9e\xc4\xc6\x53\x64\x54\x86\xc8\x50\x8b\xa8\xe9\x1a\x7e\xed\xf7\xdb\x92\x04\x50\xc6\x0c\x85\x29\xf1\xb5\x9d\x2b\x3a\x2c\x6d\x54\xea\xe3\x7d\x97\xc0\x11\x94\xfa\x2d\x36\x33\xdb\xd4\xc4\xf1\x75\xca\x36\x5f\x77\x2e\xc9\xb0\x06\x6b\x6e\x17\x1f\xd4\xf2\x2b\x2f\x97\xcc\x1a\xa8\x02\x7d\xe3\x49\xe2\xe6\x56\xa1\xf1\xe6\x03\xec\x6c\x78\xa6\x58\xa1\x47\xaf\xb7\x70\x64\x91\x7c\x6e\x1d\x2c\x8c\x65\xae\x8a\x17\x9b\x7b\x9a\xb8\x62\x6c\x0e\x35\x27\x07\x47\x5b\x31\x19\xc4\x2f\x0b\x1e\xc3\x98\xb3\x9f\xb4\x91\xfa\x19\xb7\x3f\x12\x21\x6a\xba\xb1\xdc\x4c\xec\xc6\x10\x66\x93\x09\xc3\x2e\x5d\xa6\x64\x2b\x5c\xdb\x28\x37\x5f\xd1\x43\x0e\xd0\xfa\x61\x3e\xf9\x7f\xcb\xff\xb6\x63\xb0\x2d\x62\x35\xaa\xf6\xc0\x0c\x29\x0e\x4b\x5d\xc0\x80\x94\x5f\x0d\xca\x6d\x83\x83\x34\xc8\x96\x1f\x27\x95\x02\x01\xde\x58\x02\x28\x1b\x42\x5c\x3a\x30\xcd\x9f\x57\xf1\x3b\x78\xd4\x90\x09\x5f\xf0\xfc\x81\x08\x69\x76\xf5\xa7\x96\x20\xc9\x42\xd4\x90\x6d\x98\x55\x41\x56\xef\xca\xd4\x80\x0e\x2d\xe8\xba\x9b\x0d\x17\x72\x00\x2e\x59\x2e\xfa\x1e\x7c\x3c\xde\x24\x66\xb6\x25\xba\xa8\x6b\x2f\x1e\xae\x84\xdc\x49\xe2\x46\x17\x5b\x68\x33\x02\x35\x1e\x92\x73\x54\x42\x58\xa1\xfe\x6e\xbe\x16\x95\x54\x55\xc5\x63\x1b\x78\xa4\xf0\x1b\x46\xfc\xa2\x5f\xd6\x5a\x9e\x4a\x94\xbc\x71\x37\xe5\xa8\x06\xa7\x1b\x73\x2e\xd8\xd9\xc4\x9d\x78\xa6\x9f\x03\x6b\x29\xba\xa5\xbc\x68\x90\xfc\x13\xfc\x0b\x3a\xa2\xa7\xfb\xa8\x9d\xe9\xf4\x4d\x44\xba\xe7\x6e\x52\x85\xa6\xba\x0f\x7d\x64\x2c\x27\x3f\x16\x6f\xb9\x0a\xa0\x5e\x88\x16\x9f\xa8\x63\x57\xdb\xdd\x53\x6d\x66\xad\xce\xa3\x9b\xfa\x47\x0c\x1d\x4c\x01\x2c\xf8\x68\xda\xd8\x1a\xa9\xe4\xb1\x89\x94\x45\x77\xce\x6b\xfd\xb9\x4f\xda\x9e\x07\x87\x74\xc8\x10\xda\x15\xa7\x19\x19\xd7\xcf\xb7\x1b\x27\xd6\x2f\x28\x6b\x85\x5b\xb1\xdb\x2e\xca\x24\xf5\x4f\xa5\x80\x99\x08\x98\xdc\x8e\x4e\xe2\x2a\xf1\xdc\xf0\x63\xe8\x9f\xad\x96\x5d\xca\x17\x7a\x34\x39\x43\x05\xb2\xc6\x76\x94\x55\x3e\x54\xad\xcb\x5d\x19\x1f\x3c\x1c\x2e\x02\x57\xa8\x9d\x1f\xb6\x8f\x54\x05\x39\x8f\xfa\xa6\x2a\x4d\x99\x96\x12\x83\x74\x76\xf8\xd1\xef\xf2\xd0\xc2\xdb\x76\xbf\xe7\x52\x02\x1e\xdb\x5c\x37\x94\x0a\xe0\x1f\xf2\xc0\xc0\x70\x9b\x1a\xa1\x13\x95\x50\x07\x9c\x64\xa2\xd6\xc6\xcd\x50\x10\xa2\x8f\x0a\x67\xdf\x93\x6e\x30\xb4\x3e\xaa\x6e\x15\x29\x99\x61\x97\xc0\x5a\x04\x16\x58\x42\x69\x6b\x20\xad\x4d\x51\x76\x82\xef\x1b\x33\x3b\xe5\xbd\x3e\x88\x67\xc6\x03\xfa\x14\x1a\xa5\x78\x25\x6b\xdd\x71\x88\xf6\x8e\x97\xae\x5b\xf5\xf8\x33\x11\xcc\x66\x29\x4b\x54\xf0\x83\xcf\xc1\x64\xcc\x31\x1e\x1f\xed\x19\x38\xd5\x77\xbd\xa7\x49\x8e\xf1\x86\x06\xc6\xef\x5a\x0c\x65\x0b\xfc\xc7\xb7\x4f\xe7\xd1\x73\x83\x35\x97\xef\x08\x32\x3f\x56\x4c\xa3\xc6\xcb\x1c\xee\x69\xbb\x25\x0e\x6e\xd5\x6c\x0e\xcd\x42\x02\x16\xc3\xaa\xfb\x2c\xf9\xf0\x99\xc2\x7c\x96\xaf\x0f\xe3\x39\x74\xdf\x86\xf2\xee\x07\xf4\x5e\xa9\x9b\xa0\x83\x8b\x58\x17\x30\xd0\x01\xc7\x1b\xbc\x6d\xe4\x73\x78\x33\x1d\x69\xab\x7e\x4b\x8e\x8c\x11\xc7\xc3\x65\x79\x55\x20\x8d\x85\x81\x10\x4e\x29\xaa\xa0\x69\x4b\xe2\x04\xdb\x89\xcb\x5f\xcc\x17\x44\xbb\x54\xa8\x6e\xf1\xac\x75\xef\xe9\xf8\x9b\xaf\xee\xa6\x6e\x91\x5b\x69\xdf\x27\x54\x7f\x8f\x65\xfc\x81\x2a\xb7\xc1\x04\x44\x1e\x5f\x09\x58\xa9\x84\x0c\x89\x6f\x28\x4c\xd5\xb2\xab\x6e\x17\x0a\x46\x19\x2b\x54\xc7\xdd\x27\x9d\x84\xb7\x6e\xc1\x01\x39\xa2\x9c\x9c\xbd\xf8\xb5\x03\xbf\xec\xc2\xa8\x47\x4a\xfb\xf0\xa3\x7d\x5a\x52\xd5\x73\x1e\x9a\x89\x13\xbb\xa7\x74\x0d\x57\xb1\x43\x29\x5d\xc0\x7f\x5b\x3c\x12\xa5\x1a\x2c\x34\x90\x5d\x65\xc1\xa4\xa4\xb9\xb4\x65\x16\xb3\x00\x44\x19\x28\x42\x85\x80\x16\x25\x96\xba\xdb\x42\x01\x8b\x43\xd7\x97\x2b\xd1\xcc\xe6\xa9\x9b\x74\x98\xd9\x85\xe7\x1d\x28\x46\x58\xd0\x5c\x0a\x7b\x40\x66\xe4\x81\x29\x22\x56\x03\x54\x60\xb4\x2c\x54\x2a\xc0\x50\x0b\x04\x23\x62\xf0\x73\xcd\xfa\x84\x9d\x99\x4d\x15\xfb\x6e\xd5\xcc\x06\x56\xab\x6f\x37\x81\x38\x68\xfe\x01\x74\x2b\xff\x3f\xe6\x5f\xeb\xb7\xff\x46\x83\xde\x8e\x73\xea\xb6\xc7\xa7\x47\xb9\x6c\x24\x9a\x15\x77\x09\x4a\x02\xff\x18\xb4\xe0\x4d\x03\xd9\xf9\x1d\x9c\x89\x6a\xe0\xbe\x53\xb4\x01\xbd\xb5\x51\xe4\x05\x61\x95\x20\xa4\xb0\x08\xfe\xa9\x19\x37\xf5\x8c\xaf\x30\x5f\xcc\x48\xd3\xdc\xf5\xda\xa5\x54\xab\xfc\xdf\x8b\x2f\xe6\x17\x3c\xa5\xda\x55\x8b\xd3\x7a\x66\x11\xf4\x1c\xcc\x47\x33\x69\x52\xcf\x3f\xdb\xe0\xbc\x2f\xac\x5c\xac\xeb\x4d\xa1\x71\xac\x9f\xdc\x25\x6b\xab\x15\x0c\xac\x78\x9d\x16\x7c\xea\x3b\x36\x13\x3a\x65\xe3\x5e\xfe\xe9\xd1\xd0\x16\x78\xff\xc0\x47\x1b\x57\xbc\xb7\xe5\xa1\x69\xed\xa4\x6d\x9c\x09\x94\xed\x85\xa3\x56\x64\xab\x37\x5d\x25\x50\x6c\xa0\x02\x9a\x7d\x18\x7d\x66\x6a\x8f\x66\x36\x33\x4e\xcd\xb7\x86\x08\x0c\xe6\xc4\xc4\x6f\x52\x4a\x75\xa4\x4e\x5e\x87\x97\x17\x90\x10\xb7\xfb\xcd\x6b\xec\xc9\xb0\x2e\xcd\x1d\x77\xb2\xf6\x88\x0c\x3a\xdb\x06\x34\x10\x44\x7f\x42\x6d\x8e\x6a\x07\x04\x70\x84\x8e\x57\x79\xee\x37\x61\x1d\x4c\xd0\x9b\x10\x06\x37\x06\xe7\x6d\x86\x54\x72\x18\xa8\x04\x4d\xa4\x37\xb5\x73\x20\x06\x79\x9c\x39\x6d\xb8\x28\x64\x9e\x50\xf7\xf7\x7a\x9e\x33\x16\x6b\xfb\x17\x0a\x16\x1c\xaf\xcf\x81\x3b\x4b\x9d\x85\x51\x3d\x00\xb9\xf9\xdc\x2c\x96\x53\x7e\xcb\xf2\x37\x39\xdc\x0b\xbb\x2b\x81\x9f\x57\x36\x72\x3b\x69\xc1\xe4\x88\xc5\xb7\x2f\x4a\xa1\x58\xf0\xf6\xd5\x2e\x12\x6a\x94\x6e\x12\x74\x15\x48\x89\x9c\x9b\x9b\x60\xc6\x44\x05\x5d\x73\x6a\x38\xaf\xda\x2a\x31\x8e\xf4\xd3\xee\x9b\x72\x2c\xdd\x14\x85\x17\x73\x23\x04\x2c\xaa\x12\x5c\xd9\x9b\x60\xfa\xef\x9e\xcf\x2c\x2b\xde\x9d\x56\x17\x3f\x90\x1b\x8d\xc9\xe5\x22\x8a\x19\xba\x52\x88\xf1\xf4\xf1\x62\x2a\xef\x03\x0f\x6c\xb1\x39\x73\x1e\x9c\xff\x7e\x76\xaa\xca\x56\x3a\x74\xf7\xbd\xb7\x6b\xc4\xf7\x8a\x4b\x0c\xa8\x80\xbb\xf0\xaa\x94\x0e\x83\x32\x82\x77\x41\xbe\x63\x8c\x9f\x60\x4f\x7f\x8e\x38\xb8\x93\x69\xb9\x9d\x3e\x42\x7c\x52\x69\x79\x2c\x59\x34\xb5\x90\x32\xde\xbb\x2a\xc8\xf0\xa3\xe5\x30\x3f\xf1\xec\x21\xa0\x29\x40\x2b\xca\x1c\x04\x5c\xd6\x5c\x4a\xa4\x80\xa9\x42\x81\x1d\x73\xbc\xab\x9c\xf2\x2a\xed\x93\x8d\xbf\x58\xfa\xfe\x90\xea\x8b\xe7\x8a\xf2\xe3\xe1\x20\x6c\x5c\x79\x64\xd9\x4e\x23\xdc\xe6\x1a\x34\x5f\xa0\x5f\x4c\xc6\x77\x66\xeb\x3c\xdf\x4f\x65\x23\xe7\xae\x1d\xdb\xf2\x22\xf4\x41\xd2\xf3\xb1\x14\x28\xea\xc9\xcd\xe9\xc3\xf2\x39\x4e\x7e\x0d\x05\x61\x11\xc4\xc8\x04\x7e\xb1\xeb\xc5\x08\xb5\xb8\xb1\x89\xf7\x18\x4c\x8f\x7f\x7c\xa0\x47\x22\x49\xc3\x84\xe6\x64\x8f\xb4\x18\x23\x35\x2c\x40\xe2\xbf\x09\x17\xaa\xe1\x58\x93\x55\xb0\xec\xd0\xed\x91\xdf\x21\xa6\xfb\x03\x94\x99\x92\x92\x91\xaf\x0f\xfc\xb2\x85\x36\x03\x89\x57\x65\x67\xe6\x76\xcd\x08\x3c\x1b\x6e\xd2\xa1\x9e\x79\xe1\x58\x8f\xf4\xc9\x46\xc1\x5b\xcf\xd2\xc6\x25\xb7\xfd\xe5\xea\x1c\x40\x45\x4d\xaf\x2c\x8e\x37\x3a\x04\xc1\xc7\x35\x9b\xae\x14\x38\x08\xb7\xa5\x56\x80\x27\x18\xdf\x93\x02\xf7\xd7\xe0\x93\xa0\xf0\x0a\x5a\x2a\xf9\x3c\x3d\x6d\xce\xfd\xa0\x71\x9f\x7c\x3f\xea\x5e\xa9\xfd\x70\x98\x4e\xcf\x8c\xf7\x0f\xb8\xf0\xea\x3a\xca\xdb\x0e\x69\xef\xac\x52\x06\x1b\x8e\xcf\xec\x95\xca\xca\xb8\x7f\xa5\xa4\x23\xd2\x28\x99\xec\x39\x30\x80\x89\x84\xf6\x07\x50\x5d\xc4\xdf\x68\x40\x85\x9f\x8d\x60\xdd\xec\x42\x5c\xe8\xe5\x2d\xc4\x19\x19\xf6\xc9\xc1\x9b\x1b\x3f\x8a\xd0\x60\x6a\x78\xd9\x7f\x1f\xac\x9b\x73\xea\x61\xac\xb0\x42\x6c\xad\x91\x7f\x62\x3b\xc4\xab\x0b\x93\xb6\xfc\x90\x27\x8b\x2b\x43\x59\xb7\x2f\x65\xc6\xc7\x69\x65\x91\x5b\xe9\x87\x49\x6c\xe0\x5b\x0c\x28\x11\x5a\xa4\x2d\x89\xb7\x27\x48\x87\xaa\xbe\xeb\x25\x2e\xb3\x61\x35\x47\xe4\xf5\x45\x23\x77\x88\xed\x32\x05\x06\x49\xac\xc0\xc7\xf5\x43\x03\x97\x3f\xae\x22\x96\xc7\x68\x1f\xa5\x7a\x95\x03\x80\xe1\x90\x0e\xfc\x87\xd5\xb4\x39\xd7\xdf\x65\xe6\xd1\x54\x09\xfb\x5b\xbf\x7e\x05\x2d\x92\x97\x3e\x47\xeb\x15\x95\xc3\x16\x43\x3e\x89\x80\xd3\x68\xb8\x8a\x95\x9c\x64\xe9\xb9\x69\x7f\xfd\x60\x46\x59\xe6\xbe\x22\xaf\xae\xb1\x99\xf0\xeb\xd9\xa9\x48\x14\x98\xfc\x0f\x8a\x8d\xae\xf2\xc9\xa8\x40\x12\x5f\x52\x82\x91\x88\xd1\xc3\x41\x2b\xf9\x71\x59\x1a\xb1\x85\xe5\x16\x95\xf3\x9c\x12\x69\xaa\x3c\x12\x01\x80\x3f\x97\xda\xc4\x93\x93\xec\xcb\x99\xaa\x2c\x33\x14\xd4\x49\xc9\x15\xa8\x17\xb0\x19\x5d\x7e\xe3\xd4\x53\x3b\xde\x52\x74\x6b\x36\x66\x6e\x8d\x6b\xa8\xd1\x47\xc6\x1c\xfc\x01\x0f\x6d\x3d\x6b\xf9\x1f\x12\x25\xc2\x6d\x3e\x5d\xa3\x7d\x83\x75\xee\xea\xab\x62\xe0\x28\x14\xf5\x9e\xec\x32\x50\x8e\xdd\x49\xf6\x15\x8f\xf6\x3d\x37\x68\x34\x69\x8b\x6c\x5c\x61\x32\x46\xbb\x6d\x03\x98\x99\xcf\xbb\xdf\xe0\xf0\xda\x68\xa1\x29\x2e\x38\xa9\x99\x1d\x8a\x5c\x15\x90\x74\xe8\x1a\xbb\x31\xfa\x65\x75\x1a\xc9\xb7\x25\x73\x1a\xc1\x7d\x30\x39\x45\x27\x30\x4e\x02\xd2\xeb\xca\x3d\xe9\xd7\x9c\x5c\xe3\xba\x82\xa6\x7a\xfb\x0b\xba\x9b\xe5\xf4\x9b\xd2\xc0\x0d\xf0\xa2\x09\xd5\x28\x58\xbc\x5d\xaa\x5b\xb5\x44\x24\xf1\x66\xe7\x4b\x48\xe1\x71\x92\x73\x47\xa8\x2c\xd1\x9e\xa1\x6c\x30\xd1\x70\x52\x1f\x18\xf6\x48\x92\xc6\xa9\xc7\x49\x2b\xa7\x4a\xf3\x35\x2c\x4a\x65\x7c\x04\x71\x06\xbb\x9f\x72\xe3\xab\xc8\xa6\x78\x86\x28\xf1\x09\x62\x38\x34\x5c\xfb\x94\x69\xac\x3f\x18\x7e\xd1\x81\x2b\x22\x24\x66\x3f\xff\x08\x49\x0e\xf1\xf6\xaa\x90\xa4\x92\x3a\x8f\xe5\x5c\x89\x54\x49\xce\xf5\x9a\xfb\x22\x40\x4a\x81\x73\xe0\xbc\xb1\x41\xc2\x20\x85\xbb\xbc\x83\xde\xbd\x43\x79\x44\xb0\x2f\x17\x42\x9e\x80\xe1\xca\x8e\x89\x40\x47\x87\x21\x1a\x27\xf7\x8f\x9a\x80\xa9\x62\x92\x7d\x16\x0d\x83\x05\x6c\x8d\x2d\xea\xc9\xb7\x88\x5e\x4e\xc8\xca\x2f\xab\xc3\x61\xcc\x23\x48\x5c\xb7\x25\x5a\xb2\xe7\x41\x92\x09\x82\xbd\x96\x3c\x8d\x63\x1b\xb4\xf9\xf2\x6a\x2f\xde\x17\x92\x4e\xbb\xb9\x47\xfa\x30\x9f\x4b\x04\xc5\xb5\x17\x04\x9a\x99\x61\x7d\x60\xfa\x82\xed\x09\xba\x32\x2d\xce\xf6\x7c\xf1\x81\x7f\x40\x31\x96\xf7\x30\x03\xde\xa0\x85\xa4\xc3\x03\x45\x5b\xaa\xfa\xae\xf1\x07\x33\x82\xe1\xfc\x67\x62\x39\x45\xc9\x8b\x25\xd1\xff\x46\x5f\x6e\xfb\x02\x0f\x2f\xd6\x07\x8a\xde\xdd\x1b\x35\x82\x38\xd6\xf3\x77\xf4\x62\x3c\x59\x2c\xdd\x3d\xa2\x77\xec\xbe\xe2\x03\x08\xb2\x92\xf7\x40\x71\xcb\x61\x0e\x87\x9f\x4f\x58\xa2\x0d\xe6\x69\x21\x9e\x40\x1e\x37\x00\x57\x98\x7d\xea\x45\x4c\x64\x4a\x4f\xb8\x19\x34\x35\xf6\x6d\x93\xc0\x7d\x51\xcc\x88\xa1\xe4\x57\xa1\xae\x74\x6e\x8c\xba\x93\x52\xe6\xb1\x34\x40\x56\xbf\x8f\xde\xad\xb5\x7e\x2e\x64\x3f\xdb\x0e\x08\x31\x63\x4a\x2e\x39\xd9\xfc\x47\xe3\x67\x8a\xc6\x81\x90\x98\x55\xb6\x4c\x74\x8b\x32\x89\xf2\x63\x11\xe0\x31\x27\x4e\x0a\x18\x57\xc1\x04\x0b\x48\xec\xa7\xda\xe4\x4d\xc8\xd7\x4c\xa0\x48\xe3\x74\x3b\x0b\x69\xf8\x6b\x80\x99\x6d\x3f\x21\x43\xa3\x54\x60\x6a\xb4\xc9\x2e\x12\x7d\xe1\xc5\xf7\x89\x08\x34\x11\x7c\x38\x6d\xe2\xb8\x41\xc5\xcb\x89\x7a\x1d\x83\x18\xb9\xcc\x41\x84\x0d\x18\x12\xef\xe5\xc3\xc7\x54\x53\xc0\x4c\x93\xcc\x21\x28\x5d\x85\xb9\x7a\xbc\xd1\x4e\x0e\x15\x8c\x6c\xb3\x0f\x15\x5d\xf0\xba\x4a\xe8\x24\x83\x39\x58\xe9\x65\xff\x92\x1f\x67\x94\xf1\x9c\x53\x79\x93\x91\x40\xa8\x60\x5b\x67\xf6\xb5\x73\xb9\xff\x06\xf4\x1e\x01\x7d\x89\x2b\x66\x00\xc8\xae\x39\x53\x62\x1b\x00\x44\xb9\x1b\x97\x9c\xdc\xc2\xee\xbd\xf6\xf5\x2f\x12\xd9\xf4\x92\x75\xf7\x18\x54\x1e\x8e\xd1\xf1\x29\x1a\xa8\x52\xfe\xab\x4b\x94\xf4\x89\x02\x1b\x24\xc1\x81\x8a\x02\x31\x1f\x57\xaf\x7a\xc7\x34\x01\xce\x8e\x63\xe4\x61\x2e\x39\x6f\x8c\x24\x20\x0d\x75\x64\x19\x35\x62\x9a\x50\xdb\xc1\xe5\x61\x19\x1c\x7b\x23\x5f\xa4\x61\xf7\x34\x12\x52\xc1\x86\x17\x51\xe3\xc7\x5c\x54\x82\x64\x2a\x18\x89\x43\x5d\xde\xdf\x82\x4f\xdf\xec\xc2\xa0\x71\x69\xb3\x73\xe4\xe4\x9d\xc8\x3f\x6d\xc9\x53\xb6\x9a\x3e\xc1\x51\xc6\x98\x34\xa7\x0d\x07\x0e\x3e\x78\x7f\x9f\xf4\xa2\xf8\xc9\x6c\x3b\xd4\xa4\xcf\xf4\xc7\x49\xd7\xb8\xfd\x05\x6a\xe1\x6a\xb7\x8e\xef\x2b\x3d\xba\x35\xab\x13\xa4\x0a\x8f\x99\x3a\x5d\xab\x58\xcd\x91\x67\x6c\xc2\xbe\x8e\x9f\xc7\xe2\xb6\x79\x4d\x4d\x62\xd1\xd3\x11\xae\x2c\x4d\x05\x22\x3f\x5a\x3a\x62\x52\xc0\x43\xe2\x7a\xa2\x98\x62\xd9\xca\x5e\x8d\xdb\x41\xa0\xd8\x57\x52\xb3\x32\x8a\x16\x20\xdc\xfa\xf5\x56\x59\x36\x1f\x45\x68\x35\x86\x53\x7d\x0e\x15\xb9\x1b\xc5\xc2\x81\x30\xe1\x7c\x2c\xdc\x0b\xd3\xba\xbe\x5c\x60\x0f\x91\xc8\xdd\x5f\x0c\x19\x78\x0d\x9a\x4f\xb1\xa6\xba\xdb\x60\x52\xef\x17\xbd\xa8\xa2\x9f\x84\x85\x0b\x9c\x09\xfd\xc9\x8f\x94\xc3\x32\xe6\x85\xff\x18\xbd\x72\xc4\x95\xe8\x02\xc8\x5a\xb4\xe1\x2a\x96\x69\x2b\xf0\x7a\x6b\x56\xde\xf7\x98\xa0\xef\x40\x65\x54\x74\x75\x90\x31\xc3\x62\xe0\x57\x12\x8e\xe7\x27\xd0\x00\x33\xc3\xce\x19\x27\xe7\xb9\x11\x87\x99\xc0\x3a\xb7\xc0\x47\xbe\x41\x43\x6d\x5b\x6d\x1c\x02\xcb\xdb\x1c\xa5\x31\x82\xab\xba\x0f\xa1\xda\x1d\x2c\x93\x10\x1e\xe3\x82\xcb\xbd\xbe\x69\x19\x55\xe1\xc2\x67\xf7\x43\x74\xf8\xcb\xe8\xb2\x86\x91\x9c\xff\x73\xe3\x01\x5a\xb6\x2b\x25\x8d\x37\xc2\xde\x8a\x4e\xf0\x30\x36\x0f\xdc\x48\x4c\x3f\x3a\xab\xd8\x90\x4a\xaa\x94\xf4\xdc\x12\xcb\x6c\x16\x51\x71\x59\x42\xfb\xbb\xf8\x08\x5b\x93\xc1\x59\x47\x25\x11\x7e\xd7\xbb\x5a\x59\xeb\x1b\x07\x21\x91\xdc\xd2\xc5\xd3\xd7\x4e\xa7\xb0\x5c\x50\xd9\x45\x87\x2e\xf4\x15\x56\x55\x3a\x18\x2f\xbd\x88\x75\x11\xc8\x39\x2b\xa2\x65\xec\xdb\x0f\xcf\xc0\x16\xa4\x04\x8d\xd8\xab\x88\x8b\x38\x5e\x96\xde\x07\x19\x24\x7a\xc4\x84\x9b\xf6\x45\x9f\x89\xbf\x1d\x28\x92\xd2\x3b\x22\x33\xb8\x93\x52\xac\xb0\xcc\xfb\x9d\xae\x88\xe9\xa4\x02\x9b\x9d\xf1\x6c\x66\xf8\xbd\xa3\x99\xc5\xba\x5e\x3b\x6f\x19\xb1\x14\x46\x21\x8c\x7a\xaf\x1f\x63\x96\x69\x8d\x58\xe5\xe3\x6d\x8f\xff\x05\x54\x01\x68\x1c\x5f\x12\xb3\xdc\x94\x60\x80\x61\x94\x83\xcf\x45\x84\x7a\x05\xac\x1b\x85\xf9\x8f\x30\x6f\x51\x49\x19\xaa\xed\x0a\xd9\xe1\xd5\x48\x5c\xc2\xce\xdd\xf2\x55\xf1\x7c\x1a\x9b\x52\x35\x9e\x47\x37\x49\xe2\x3d\xd4\x29\x57\x2b\xbd\x6c\x3e\x17\x56\x42\x7b\xa9\xf1\xb6\xe6\x64\x52\xc9\xd0\x2b\x3c\x98\xa2\x13\x5f\x8c\xeb\x64\x04\x38\x7f\xd6\x54\xeb\x5f\x7f\x63\xdc\x18\x5e\x93\xcf\xa2\x89\x69\xd8\x7c\x6c\xd4\x28\x66\x96\x21\x54\x52\x23\x78\x3b\x45\x35\x16\x1b\x6f\x76\x74\x88\x95\x12\xf7\x29\xbb\x2d\xdf\x55\x50\x62\x34\x4e\x58\x44\xbc\xa7\x8d\xd1\x7b\x69\x8b\xab\xa3\xf2\x7e\xf3\x1a\xd4\x0a\xc6\x7c\xcb\x0a\xf5\x6a\x4a\x72\x88\x78\xd4\xf4\x4b\x3e\xf2\xe9\xe1\xbc\xb1\x01\xc2\x7c\x8b\x4d\x2f\xcb\x6d\x6f\xe9\x42\xb7\xfd\x87\x33\x66\xec\x66\xbc\x1d\x74\xc2\x84\x97\x56\x5a\xe8\x58\x83\x87\x16\xa9\xaf\xec\xeb\xae\x8c\x3d\x07\x52\xf8\x77\xa3\xed\x1d\x58\x28\x76\x4d\x58\x34\x8b\xad\x68\xca\x0c\x51\x5a\xf1\xe3\x48\x5f\xf9\xdc\xd0\xcf\x07\xa0\x94\xda\xd8\xa6\x33\x3e\x39\xb0\xa6\x23\xb4\x58\x02\x7c\x36\x49\x52\x8f\xff\xe8\xa4\xfc\x42\xd9\x7a\xbf\x6c\x23\x83\x76\xfe\xb4\x78\x65\x8b\xa7\x60\x38\xae\xe3\x27\x5b\xf5\xb8\xb6\x53\xe2\x62\x24\xda\x64\x21\x31\xa4\x5f\xcd\x6b\xc4\xc5\x3b\x3e\xec\x70\xf7\x5c\x68\x23\xd0\x2c\x96\x14\xf1\x2b\x3c\x60\x34\xc0\x59\x06\x04\xd3\x49\x43\x56\x15\x57\x0e\xe0\xfa\xef\x75\xa3\x70\x1e\x5d\xe0\xec\xbf\x1a\xda\x7d\x08\x10\xc5\x41\x2a\x0b\x0c\xcd\x57\x18\xd0\x25\xc2\x37\xad\x5e\xc2\xab\x1b\xcd\x56\xcf\x08\x45\xe6\xb9\xe0\xea\x5d\xcb\x9f\x00\xa0\x18\x32\x85\xa0\xc1\xcc\x33\xb0\x65\x19\x96\x3e\xf7\x41\x09\x9d\x76\xef\xeb\xc1\xfc\xdf\x65\x79\x1e\xee\x7f\x15\xd3\x58\x8e\x3b\xa8\x2a\x49\x3a\x56\x0c\xde\xf1\x7b\x9e\xeb\xc6\xc5\xca\x5d\x4e\x16\xcf\xcd\x04\x5a\x82\x23\x4f\xdc\xba\x2e\x5a\x8e\x01\xb6\x7e\xae\x28\x5a\x49\xb7\x5e\xf6\x0c\xae\xd0\x37\x16\x05', 2)
+# -*- coding: utf-8 -*-
+
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import float_round, float_compare, float_is_zero
+from datetime import date, datetime, timedelta
+from dateutil.relativedelta import relativedelta
+from math import ceil, floor
+import re
+from calendar import isleap, monthrange
+
+CAUSES = [
+    ('C01', _('Por terminación del contrato.')),
+    ('C02', _('Por acuerdo de las partes (Renuncia voluntaria).')),
+    # ('C02', _('Por la conclusión de la obra, período de labor o servicios objeto del contrato.')),
+    # ('C03', _('Por muerte o incapacidad del empleador o extinción de la persona jurídica contratante.')),
+    # ('C04', _('Por muerte del trabajador o incapacidad permanente y total para el trabajo.')),
+    # ('C05', _('Por caso fortuito o fuerza mayor que imposibiliten el trabajo, como incendio, terremoto, tempestad, '
+    #           'explosión, plagas del campo, guerra y, en general, cualquier otro acontecimiento extraordinario que los '
+    #           'contratantes no pudieron prever o que previsto no lo pudieron evitar.')),
+    # ('C06', _('Por voluntad del empleador previo visto bueno.')),
+    ('C07', _('Visto bueno.')),
+    # ('C07', _('Por voluntad del trabajador previo visto bueno.')),
+    ('C08', _('Por desahucio.')),
+    ('C09', _('Por despido intempestivo.')),
+    # ('C10', _('Por terminación del contrato antes del plazo convenido.')),
+    ('C11', _('No pasa periodo de prueba')),
+    # ('C11', _('Por Terminación dentro del periodo de prueba')),
+    # ('C12', _('Por las causas legalmente previstas en el contrato')),
+    # ('C13', _('Por disposición general quinta del Acuerdo MDT-2018-0073')),
+    # ('C14', _('Por disposición general quinta del Acuerdo MDT-2018-0074')),
+    # ('C15', _('Por disposición general quinta del Acuerdo MDT-2018-0075')),
+    # ('C16', _('Por disposición general quinta del Acuerdo MDT-2018-0096')),
+    # ('C17', _('Por disposición general quinta del Acuerdo MDT-2018-0097')),
+]
+
+_STATES = [
+        ('draft', 'Draft'),
+        ('computed', 'Computed'),
+        ('done', 'Done'),
+        ('cancel', 'Canceled'),
+    ]
+
+APROVED_STATES = ['open', 'pending', 'close']
+
+_REGIONS = [
+    # ('sierra', _('Región Sierra')),
+    # ('coast', _('Región Costa')),
+    # ('eastern', _('Región Oriente')),
+    # ('island', _('Región Galápagos')),
+    ('sierra_oriente_fourteenth_salary', 'Sierra - Oriente'),
+    ('costa_fourteenth_salary', 'Costa - Galápagos')
+]
+
+
+class AssetsLiquidationCause(models.Model):
+    _name = 'hr.assets.liquidation.cause'
+    _description = 'Assets liquidation cause table'
+
+    name = fields.Char(string='Description')
+    code = fields.Char(string='Code')
+    active = fields.Boolean(default=True)
+
+class HrAssetsLiquidation(models.Model):
+    _name = 'hr.assets.liquidation'
+    _description = 'Liquidation of assets table'
+    _rec_name = 'employee_id'
+
+    @api.model
+    def get_journal_wage_id(self):
+        """
+        Este método setea el diario del contrato con el diario configurado en la compañia como "Diario de salarios"
+        en caso que no este seteado, buscamos por xml_id el "Diario de Sueldos", que normalmente deben coincidir
+        """
+        journal_wage = self.env.ref('ecua_invoice_type.journal_wage', False)
+        if journal_wage:
+            journal_wage = journal_wage.id
+        if self.env.user.company_id.journal_wage_id:
+            journal_wage = self.env.user.company_id.journal_wage_id.id
+        return journal_wage
+
+    employee_id = fields.Many2one('hr.employee', string='Collaborator', required=True, ondelete='cascade',
+                                  context={'active_test': False})
+    cause_id = fields.Many2one('hr.assets.liquidation.cause', string='Cause', required=True,
+                            help='Grounds for Termination of the Individual Contract.')
+    cause_code = fields.Char(related='cause_id.code')
+    # causes = fields.Selection(selection=CAUSES, string=_('Causes'), required=True,
+    #                           help=_('Grounds for Termination of the Individual Contract.'))
+    # first_contract_date_start = fields.Date(string='Fecha de (última) entrada', required=True,
+    #                                         compute='_compute_first_contract_date_start')
+    date_from = fields.Date(string='Contract date start', required=True)
+    date_to = fields.Date(string='Contract date end', required=True)
+    contract_id = fields.Many2one('hr.contract', string='Contrato')
+    region = fields.Selection(_REGIONS, string='Region', related='contract_id.payment_period_fourteenth', required=True, tracking=True)
+    payslip_id = fields.Many2one('hr.payslip', string='Rol de Pago')
+    pay_provision = fields.Boolean(string="Include historical provision", default=False)
+    #
+    # worked_days = fields.Float(string='Worked Days', tracking=True, default=30.0,
+    #                            digits='Payroll', help='')
+    # # disease = fields.Float(string='Disease', tracking=True, default=0.0,
+    # #                        digits='Payroll', help='')
+    # line_ids = fields.One2many('hr.assets.liquidation.line', 'slip_id', string='Assets Liquidation Lines',
+    #                            readonly=True, states={'draft': [('readonly', False)]})
+    # input_line_ids = fields.One2many('hr.assets.liquidation.input', 'assets_liquidation_id',
+    #                                  string='Assets Liquidation Inputs', readonly=True,
+    #                                  states={'draft': [('readonly', False)]})
+    # worked_days_line_ids = fields.One2many('hr.assets.liquidation.worked_days', 'assets_liquidation_id',
+    #                                        string='Assets Liquidation Worked Days', copy=True, readonly=True,
+    #                                        states={'draft': [('readonly', False)]})
+    # unified_basic_salary = fields.Float(compute='_get_unified_basic_salary',
+    #                         string='Unified Basic Salary',  store=True,
+    #                         help='The unified basic salary used to calculate the provision of the fourteenth salary')
+    # employee_information = fields.Many2one('hr.personal.expense', compute='_get_employee_information',
+    #                                        string='Employee Information',  store=False,
+    #                                        help='')
+    # journal_id = fields.Many2one('account.journal', 'Salary Journal', readonly=True, required=True,
+    #                              states={'draft': [('readonly', False)]}, default=get_journal_wage_id)
+    # move_id = fields.Many2one('account.move', 'Accounting Entry', readonly=True, copy=False)
+    # provision_move_id = fields.Many2one('account.move', 'Provision Entry', readonly=True, copy=False,
+    #     help='Contiene los asientos correspondientes a las reglas salariales marcadas '
+    #          'como Invisibles, es decir que no se muestran en la nomina impresa.')
+    # credit_note = fields.Boolean(string='Credit Note', readonly=True,
+    #                      states={'draft': [('readonly', False)]},
+    #                      help="If its checked, indicates that all payslips generated from here are refund payslips.")
+    # details_by_salary_rule_category = fields.One2many('hr.assets.liquidation.line',
+    #                                                   compute='_compute_details_by_salary_rule_category',
+    #                                                   string='Details by Salary Rule Category')
+    # employee_age = fields.Integer(string='Age', compute='_compute_age', help='Employee\'s current age')
+    # years_in_service = fields.Integer(string="Years of service", compute="_get_time_in_service",
+    #     store=False, help='Years of service since employee\'s first contract, up to the payroll cut-off date\n'
+    #                       'Used for computing benefits such as the reserve fund and vacations provision')
+    # months_in_service = fields.Integer(string="Months of service", compute="_get_time_in_service",
+    #     store=False, help='Months of service since employee\'s first contract,up to the payroll cut-off date\n'
+    #                       'Used for computing benefits such as the reserve fund and vacations provision'
+    # )
+    # days_in_service = fields.Integer(string="Days of Service", compute="_get_time_in_service",
+    #     store=False, help='Days of service since employee\'s first contract,up to the payroll cut-off date\n'
+    #                       'Used for computing benefits such as the reserve fund and vacations provision'
+    # )
+    # company_id = fields.Many2one('res.company', string='Company', readonly=True, copy=False,
+    #                              default=lambda self: self.env['res.company']._company_default_get(),
+    #                              states={'draft': [('readonly', False)]})
+    # net_salary = fields.Float(compute='_get_net_salary', string='Net salary',  store=True,
+    #                           help='The net salary')
+    #
+    # last_payment = fields.Float(string='Last payment received', required=True)
+    # best_payment = fields.Float(string='Best payment received', required=True)
+    amount = fields.Float('Mutually agreed compensation')
+    last_wage = fields.Float('Last payment received', required=True, default=0.00)
+    best_wage = fields.Float('Best payment received', required=True, default=0.00)
+    # payment_thirteenth_salary = fields.Selection([('monthly', _('Monthly')), ('accumulated', 'Accumulated')],
+    #                                              string='Payment thirteenth salary', default='accumulated')
+    # payment_fourteenth_salary = fields.Selection([('monthly', _('Monthly')), ('accumulated', 'Accumulated')],
+    #                                              string='Payment fourteenth salary', default='accumulated')
+    # # vacations = fields.Integer(string='Non spent vacations')
+    pregnant_woman = fields.Boolean(string='Pregnant woman', default=False)
+    union_leader = fields.Boolean(string='Union leader', default=False)
+    non_occupational_disease = fields.Boolean(string='Non-occupational disease', default=False)
+    disability_deduction = fields.Boolean(string='Disability', default=False)
+    discrimination = fields.Boolean(string='Discrimination', default=False)
+    # unfair_dismissal = fields.Boolean(string='Unfair dismissal', compute='_compute_unfair_dismissal')
+    eviction = fields.Boolean(string='Eviction', default=False)
+    #
+    # show_bonus = fields.Boolean(string='Show bounus', compute='_compute_show_bonus')
+    # retirement_bonus = fields.Boolean(string='Retirement bonus', default=False)
+    # retirement_bonus_percent = fields.Integer(string='Percent', help='Percent of basic salary to pay.', default=35)
+    # retirement_bonus_years = fields.Float(string='Years', digits='Payroll', help='Years in the company.')
+    #
+    # income_ids = fields.One2many('hr.assets.liquidation.input', 'assets_liquidation_id', string='Additional Income',
+    #                              tracking=True, domain=[('type', '=', 'income')], help='')
+    # expense_ids = fields.One2many('hr.assets.liquidation.input', 'assets_liquidation_id', string='Additional Expense',
+    #                               tracking=True, domain=[('type', '=', 'expense')], help='')
+    # other_expense_ids = fields.One2many('hr.assets.liquidation.input', 'assets_liquidation_id',
+    #                                     string='Other Additional Expense', tracking=True,
+    #                                     domain=[('type', '=', 'other_expense')], help='')
+    state = fields.Selection(_STATES, string='Estado', default='draft', readonly=True, help='',
+                             tracking=True)
+    #
+    #
+    # def action_compute(self):
+    #     for rec in self:
+    #         if not rec.employee_id.id:
+    #             raise ValidationError(_('There is no employee selected.'))
+    #         if not rec.employee_id.contract_id.id:
+    #             raise ValidationError(_('{} has no current contract defined.'.format(rec.employee_id.display_name)))
+    #         if not rec.employee_id.contract_id.struct_id.id:
+    #             raise ValidationError(_('{}\'s current contract has no structure defined.'
+    #                                     .format(rec.employee_id.display_name)))
+    #
+    #         # Busco el diario y la cuenta contable a utilizar en el contrato, si no están definidos, tomo los de la
+    #         # compañía
+    #         journal_id = False
+    #         if rec.employee_id.contract_id.id and hasattr(rec.employee_id.contract_id, 'journal_id'):
+    #             journal_id = rec.employee_id.contract_id.journal_id.id
+    #         if not journal_id:
+    #             journal_id = rec.employee_id.company_id.journal_wage_id.id
+    #         account_payable_payslip_id = False
+    #         if rec.employee_id.contract_id.id and hasattr(rec.employee_id.contract_id, 'account_payable_payroll'):
+    #             account_payable_payslip_id = rec.employee_id.contract_id.account_payable_payroll.id
+    #         if not account_payable_payslip_id:
+    #             account_payable_payslip_id = rec.employee_id.company_id.account_payable_payslip_id.id
+    #
+    #         # delete old payslip lines
+    #         rec.line_ids.unlink()
+    #
+    #         contract_ids = rec.get_contract(rec.employee_id, rec.date_from, rec.date_to)
+    #         lines = [(0, 0, line) for line in rec._get_assets_liquidation_lines(contract_ids, rec.id)]
+    #         rec.write({'line_ids': lines})
+    #
+    #         # Una vez calculadas las líneas obtengo los valores necesarios para la liquidación y recalculo
+    #         liquidation_amounts = rec._get_liquidation_amounts(rec)
+    #         rec.line_ids.unlink()
+    #         lines = [(0, 0, line) for line in rec._get_assets_liquidation_lines(contract_ids, rec.id,
+    #                                             add_liquidation_rules=True, liquidation_amounts=liquidation_amounts)]
+    #         rec.write({'line_ids': lines, 'state': 'computed'})
+    #
+    # def _get_liquidation_amounts(self, assets_liquidation):
+    #     """
+    #     Obteniendo los valores correspondientes a vacaciones y décimos.
+    #     """
+    #
+    #     # Obtengo los valores de los décimos y vacaciones
+    #     fourteenth = assets_liquidation._get_fourteenth()
+    #     thirteenth = assets_liquidation._get_thirteenth()
+    #     vacations = assets_liquidation._get_vacations()
+    #     # new_lines = []
+    #     contract = assets_liquidation.employee_id.contract_id
+    #     amounts = {}
+    #
+    #     # Adiciono los valores de la nómina de liquidación a los acumulados
+    #     for line in assets_liquidation.line_ids:
+    #         if line.code == 'PROV_DCUARTO_ACUMULADO':
+    #             fourteenth += line.total
+    #         if line.code == 'PROV_DTERCERO_ACUMULADO':
+    #             thirteenth += line.total
+    #         if line.code == 'PROV_VACA':
+    #             vacations += line.total
+    #         if line.code == 'VACACIONES_TOMADAS' or line.code == 'VACACIONES_PAGADAS':
+    #             vacations -= line.total
+    #
+    #     # Devuelvo diccionario con los valores obtenidos
+    #     if fourteenth > 0:
+    #         rule_id = self.env.ref('hr_dr_payroll.salary_rule_36', False)
+    #         if rule_id:
+    #             amounts[rule_id.id] = fourteenth
+    #     if thirteenth > 0:
+    #         rule_id = self.env.ref('hr_dr_payroll.salary_rule_35', False)
+    #         if rule_id:
+    #             amounts[rule_id.id] = thirteenth
+    #     if vacations > 0:
+    #         rule_id = self.env.ref('hr_dr_payroll.salary_rule_37', False)
+    #         if rule_id:
+    #             amounts[rule_id.id] = vacations
+    #     return amounts
+    #
+    #
+    # def action_mark_as_draft(self):
+    #     self.state = 'draft'
+    #
+    #
+    # def action_assets_liquidation_done(self):
+    #
+    #     # Buscando si el colaborador tiene créditos o préstamos este código inicial es el mismo que en get_inputs para
+    #     # marcar como pagados los mismos plazos de créditos y préstamos que se utilizaron para calcular la deuda.
+    #     contract_ids = self.get_contract(self.employee_id, self.date_from, self.date_to)
+    #     contracts = self.env['hr.contract'].browse(contract_ids)
+    #     structure_ids = contracts.get_all_structures()
+    #     rule_ids = self.env['hr.payroll.structure'].browse(structure_ids).get_all_rules()
+    #
+    #     # Obtengo solo un listado de ids de la lista de tuplas con id y orden
+    #     rule_ids_only = [x[0] for x in rule_ids]
+    #
+    #     inputs = self.env['hr.salary.rule'].browse(rule_ids_only).mapped('input_ids')
+    #
+    #     for contract in contracts:
+    #         for input in inputs:
+    #             # Condición para el módulo de préstamos
+    #             if input.code == 'PREST_EMP':
+    #                 # Marcando todos los préstamos como hechos.
+    #                 loan_obj = self.env['hr.loan'].search([
+    #                     ('employee_id', '=', self.employee_id.id), ('state', '=', 'approved')])
+    #                 for loan in loan_obj:
+    #                     for loan_line in loan.loan_lines:
+    #                         if not loan_line.paid:
+    #                             loan_line.paid = True
+    #                             loan_line.loan_id._compute_loan_amount()
+    #                             # loan_line._compute_loan_amount()
+    #             # Condición para el módulo de créditos a empleados
+    #             elif input.code == 'CRED_EMP_PROF':
+    #                 # Marcando todos los créditos de empleados como hechos.
+    #                 employee_credit = self.env['hr.employee.credit'].search(
+    #                     [('employee_id', '=', self.employee_id.id), ('state', '=', 'in_payroll')])
+    #                 for ec in employee_credit:
+    #                     for ecl in ec.credit_lines:
+    #                         if not ecl.paid:
+    #                             ecl.paid = True
+    #                             ecl.employee_credit_id._compute_credit_amount()
+    #                             # ecl._compute_credit_amount()
+    #
+    #     # primero recalculamos las lineas nuevamente asegurando integridad
+    #     ctx = self.env.context.copy()
+    #     ctx.update({'bypass_core_accounting_move': True})
+    #     # valida que el campo analytic_account_id exista y tenga un valor.
+    #     if self.employee_id.contract_id._fields.get('analytic_account_id', False):
+    #         if self.employee_id.contract_id.analytic_account_id:
+    #             ctx.update({'analytic_account_id': self.employee_id.contract_id.analytic_account_id.id})
+    #
+    #     self.with_context(ctx).action_compute()
+    #
+    #     assets_liquidation_ids = self.search([
+    #         ('employee_id', '=', self.employee_id.id),
+    #         ('date_from', '>=', self.date_from),
+    #         ('date_to', '<=', self.date_to),
+    #         ('state', 'in', ['done', 'paid']),
+    #         ('id', '!=', self.id),
+    #     ])
+    #     if assets_liquidation_ids:
+    #         list1 = '\n'.join('* ' + liquidation.employee_id.display_name for liquidation in assets_liquidation_ids)
+    #         raise UserError(_('The following employees have confirmed or paid liquidations in the selected period: '
+    #                           '\n%s') % list1)
+    #     if self.employee_id.contract_id.state != 'open':
+    #         #TODO poner alguna validacion para contratos viejos cerrados que requieren reprocesamiento de nomina
+    #         raise ValidationError(_('You can only approve payroll when the contract is ongoing.'))
+    #     for line in self.line_ids:
+    #         if line.salary_rule_id.code == 'SUBT_NET' and float_compare(line.total, 0.0, precision_rounding=2) == -1:
+    #             raise ValidationError(_('Payroll whose net salary to be received is less than 0 cannot be validated. '
+    #                                     'Employee %s') % self.employee_id.name)
+    #     for liquidation in self:
+    #         if liquidation.employee_information and liquidation.employee_information.rent_tax_table_id.state != 'confirmed':
+    #             raise ValidationError(_('In "%s" the income tax table does not exist or is in draft state.')
+    #                                   % liquidation.name)
+    #         if not liquidation.employee_information and self.env.user.company_id.required_personal_expenses == 'required':
+    #             raise ValidationError(_('You cannot complete the operation, in %s the projection of personal expenses '
+    #                                     'does not exist or it is in draft state.') % liquidation.employee_id.display_name)
+    #         contract_ids = liquidation.get_contract(liquidation.employee_id, liquidation.date_from, liquidation.date_to)
+    #         if liquidation.employee_id.contract_id.id not in contract_ids:
+    #             raise ValidationError(_('In the assets liquidation "%s" the effective date of the selected contract is '
+    #                                     'not consistent with the date of the assets liquidation. Check contract dates '
+    #                                     'or delete and rebuild the payroll.') % (liquidation.employee_id.display_name))
+    #         if hasattr(liquidation.employee_id.address_home_id,
+    #                    'type_vat') and liquidation.employee_id.address_home_id.type_vat == 'RUC':
+    #             raise ValidationError(_('Employee %s is registered with RUC, only employees with ID or PASSPORT')
+    #                                   % liquidation.employee_id.address_home_id.name)
+    #         # invocamos en el for ambos asientos para que tengan secuencias contiguas
+    #         liquidation.with_context(ctx).make_move_payslip()
+    #         liquidation.with_context(ctx).make_move_payslip_provision()
+    #         liquidation.with_context(ctx)._reconcile_receivables_vs_payslip()
+    #         if liquidation.employee_information and liquidation.employee_information.calculation_method == 'assumption_total':
+    #             liquidation.employee_information._compute_amount()
+    #             liquidation.employee_information.profit_tax_employer = liquidation.employee_information.profit_tax_firt_calculation
+    #
+    #     return self.write({'state': 'done'})
+    #
+    # def action_assets_liquidation_cancel(self):
+    #     """
+    #     Aplicamos la misma logica que para el move_id
+    #     """
+    #     # desconciliamos los asientos de la nomina que pagan facturas
+    #     lines_to_unreconcile = self.details_by_salary_rule_category.filtered(
+    #         lambda r: r.amount_select == 'account_move')
+    #     lines_to_unreconcile.mapped('move_line_ids').remove_move_reconcile()
+    #     # removemos el asiento de la provision
+    #     moves = self.mapped('provision_move_id')
+    #     moves.filtered(lambda x: x.state == 'posted').button_cancel()
+    #     moves.unlink()
+    #
+    #     # remueve el asiento principal, entre otras cosas
+    #     if self.filtered(lambda slip: slip.state == 'done'):
+    #         raise UserError(_("Cannot cancel a payslip that is done."))
+    #     return self.write({'state': 'cancel'})
+    #
+    #
+    #     for payslip in self:
+    #         if payslip.employee_information and payslip.employee_information.calculation_method == 'assumption_total':
+    #             # TODO JOSE: Deberia removerse el compute amount, deberia ser disparado de forma automatica
+    #             payslip.employee_information._compute_amount()
+    #             payslip.employee_information.profit_tax_employer = payslip.employee_information.profit_tax_firt_calculation
+    #     return res
+    #
+    # @api.onchange('date_to')
+    # def onchange_date_to(self):
+    #     '''
+    #     Invocamos el método onchange_date_to para validar los dias trabajados.
+    #     campo de solo lectura
+    #     '''
+    #     vals = {'value': {}}
+    #     vals['value'].update(
+    #         self._get_worked_days(self.date_from, self.date_to, self.employee_id.contract_id.id))
+    #     return vals
+    #
+    # @api.onchange('employee_id', 'date_from', 'date_to')
+    # def _onchange_employee(self):
+    #     vals = {'value': {}, 'warning': {}, 'domain': {}}
+    #
+    #     contract_ids = []
+    #     if self.employee_id.id:
+    #         if not self.employee_id.contract_id.id:
+    #             raise ValidationError(_('{} has no current contract defined.'.format(self.employee_id.display_name)))
+    #
+    #         self._compute_first_contract_date_start()
+    #         self.payment_thirteenth_salary = self.employee_id.contract_id.payment_thirteenth_salary
+    #         self.payment_fourteenth_salary = self.employee_id.contract_id.payment_fourteenth_salary
+    #         if self.employee_id.contract_id.payment_period_fourteenth:
+    #             if self.employee_id.contract_id.payment_period_fourteenth == 'sierra_oriente_fourteenth_salary':
+    #                 self.region = 'sierra_oriente_fourteenth_salary'
+    #             if self.employee_id.contract_id.payment_period_fourteenth == 'costa_fourteenth_salary':
+    #                 self.region = 'costa_fourteenth_salary'
+    #         self.disability_deduction = self.employee_id.disability_deduction
+    #
+    #         # Tiempo en la compañía para calcular bonificación de jubilación (máximo valor 25 años)
+    #         self.retirement_bonus_years = min(25, self.years_in_service if (
+    #                 self.months_in_service == 0 and self.days_in_service == 0) else self.years_in_service + 1)
+    #
+    #         self._get_last_payment()
+    #         self._get_best_payment()
+    #
+    #
+    #         if self.date_from <= self.date_to:
+    #             contract_ids = self.get_contract(self.employee_id, self.date_from, self.date_to)
+    #             if not contract_ids or len(contract_ids) == 0:
+    #                 raise ValidationError(_('There are no current contracts for the selected employee and period.'))
+    #             else:
+    #                 vals['value'].update(
+    #                     self._get_worked_days(self.date_from, self.date_to, contract_ids))
+    #                 income_ids = [(5,)]
+    #                 expense_ids = [(5,)]
+    #                 other_expense_ids = [(5,)]
+    #                 inputs = self.get_inputs(contract_ids, self.date_from, self.date_to)
+    #                 for input in inputs:
+    #                     # Ingresos adicionales
+    #                     if input.get('type') == 'income':
+    #                         # income_ids += income_ids.new(input)
+    #                         income_ids.append((0, 0, input))
+    #                     # Egresos adicionales
+    #                     elif input.get('type') == 'expense':
+    #                         expense_ids.append((0, 0, input))
+    #                     # Egresos adicionales con beneficiario
+    #                     elif input.get('type') == 'other_expense':
+    #                         other_expense_ids.append((0, 0, input))
+    #                 self.income_ids = income_ids
+    #                 self.expense_ids = expense_ids
+    #                 self.other_expense_ids = other_expense_ids
+    #         else:
+    #             raise ValidationError(_('The end date must be greater than or equal to the start date.'))
+    #     return vals
+    #
+    # @api.onchange('causes')
+    # def _onchange_causes(self):
+    #     if self.causes in ['C02', 'C07', 'C08', 'C09']:
+    #         self.eviction = True
+    #     else:
+    #         self.eviction = False
+    #
+    # @api.depends('date_from')
+    # def _get_unified_basic_salary(self):
+    #     """
+    #     Este método devuelve el salario basico unificado en base a la fecha final de la nómina
+    #     """
+    #     for rec in self:
+    #         rec.unified_basic_salary = self.get_sbu_by_year(rec.date_to.year)
+    #     return True
+    #
+    # @api.model
+    # def get_sbu_by_year(self, year):
+    #     sbu = self.env['hr.sbu'].sudo().search([
+    #         ('fiscal_year', '=', year),
+    #     ], limit=1)
+    #     if sbu:
+    #         return sbu.value
+    #     else:
+    #         raise ValidationError(_('You must set the unified base salary for the year {}.').format(str(year)))
+    #
+    # def _get_last_payment(self):
+    #     last_payslip = self.env['hr.payslip'].sudo().search([
+    #         ('employee_id', '=', self.employee_id.id),
+    #         ('state', 'in', ['done', 'paid'])
+    #     ], order='date_from DESC', limit=1)
+    #     self.last_payment = 0
+    #
+    #     if last_payslip.id:
+    #         for line in last_payslip.line_ids:
+    #             if line.code == 'SUBT_INGRESOS':
+    #                 self.last_payment += line.total
+    #
+    # def _get_best_payment(self):
+    #     payslips = self.env['hr.payslip'].sudo().search([
+    #         ('employee_id', '=', self.employee_id.id),
+    #         ('state', 'in', ['done', 'paid'])
+    #     ])
+    #
+    #     self.best_payment = 0
+    #
+    #     for payslip in payslips:
+    #         for line in payslip.line_ids:
+    #             if line.code == 'SUBT_INGRESOS':
+    #                 self.best_payment = max(self.best_payment, line.total)
+    #
+    # def _get_fourteenth(self):
+    #     # Mes en que inicia el periodo de acumulación para el decimocuarto según la región.
+    #     # period_start_month = {'coast': 3, 'island': 3, 'sierra': 8, 'eastern': 8}
+    #     period_start_month = {'costa_fourteenth_salary': 3, 'sierra_oriente_fourteenth_salary': 8}
+    #     period_start_date = None
+    #
+    #     if self.date_to.month >= period_start_month[self.region]:
+    #         period_start_date = self.date_to.replace(
+    #             day=1, month=period_start_month[self.region])
+    #     else:
+    #         period_start_date = self.date_to.replace(
+    #             day=1, month=period_start_month[self.region], year=self.date_to.year - 1)
+    #
+    #     if self.first_contract_date_start > period_start_date:
+    #         period_start_date = self.first_contract_date_start
+    #
+    #     period_end_date = self.date_to
+    #
+    #     fourteenth_salary = 0
+    #     if self.payment_fourteenth_salary == 'accumulated':
+    #         payslip_ids = self.env['hr.payslip'].sudo().search([
+    #             ('employee_id', '=', self.employee_id.id),
+    #             ('date_from', '>=', period_start_date),
+    #             ('date_to', '<=', period_end_date),
+    #             ('state', 'in', ['done', 'paid'])
+    #         ], order='date_from')
+    #
+    #         for payslip in payslip_ids:
+    #             for line in payslip.line_ids:
+    #                 if line.code == 'PROV_DCUARTO_ACUMULADO':
+    #                     fourteenth_salary += line.total
+    #     return fourteenth_salary
+    #
+    # def _get_thirteenth(self):
+    #     period_start_date = self.date_to.replace(day=1, month=12, year=self.date_to.year - 1)
+    #     period_end_date = self.date_to
+    #
+    #     if self.first_contract_date_start > period_start_date:
+    #         period_start_date = self.first_contract_date_start
+    #
+    #     thirteenth_salary = 0
+    #     if self.payment_thirteenth_salary == 'accumulated':
+    #         payslip_ids = self.env['hr.payslip'].sudo().search([
+    #             ('employee_id', '=', self.employee_id.id),
+    #             ('date_from', '>=', period_start_date),
+    #             ('date_to', '<=', period_end_date),
+    #             ('state', 'in', ['done', 'paid'])
+    #         ], order='date_from')
+    #
+    #         for payslip in payslip_ids:
+    #             for line in payslip.line_ids:
+    #                 if line.code == 'PROV_DTERCERO_ACUMULADO':
+    #                     thirteenth_salary += line.total
+    #     return thirteenth_salary
+    #
+    # def _get_vacations(self):
+    #     #TODO: crear un campo para inicio y fin del periodo anual en la configuración general.
+    #     # Se asume inicio del periodo 1-sep y fin 31-ago.
+    #
+    #     # if self.date_to.month >= 9:
+    #     #     period_start_date = self.date_to.replace(day=1, month=9)
+    #     #     period_end_date = self.date_to.replace(day=31,month=8,year=self.date_to.year + 1)
+    #     # else:
+    #     #     period_start_date = self.date_to.replace(day=1, month=9, year=self.date_to.year - 1)
+    #     #     period_end_date = self.date_to.replace(day=31, month=8)
+    #
+    #     period_start_date = self.date_to.replace(day=1, month=1)
+    #     period_end_date = self.date_to.replace(day=31,month=12,year=self.date_to.year)
+    #
+    #     payslip_ids = self.env['hr.payslip'].sudo().search([
+    #         ('employee_id', '=', self.employee_id.id),
+    #         ('state', 'in', ['done', 'paid'])
+    #     ], order='date_from')
+    #
+    #     accumulated = 0.0
+    #     spent = 0.0
+    #     for payslip in payslip_ids:
+    #         for line in payslip.line_ids:
+    #             if line.code == 'PROV_VACA':
+    #                 accumulated += line.total
+    #             if line.code == 'VACACIONES_TOMADAS' or line.code == 'VACACIONES_PAGADAS':
+    #                 spent += line.total
+    #
+    #     # period_0 = {'start': period_start_date,
+    #     #             'end': period_end_date,
+    #     #             'accumulated':{9: 0.0, 10 : 0.0, 11 : 0.0, 12 : 0.0,
+    #     #                            1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0},
+    #     #             'spent':0}
+    #     # period_1 = {'start': period_start_date.replace(year=period_start_date.year - 1),
+    #     #             'end': period_end_date.replace(year=period_end_date.year - 1),
+    #     #             'accumulated':{9: 0.0, 10 : 0.0, 11 : 0.0, 12 : 0.0,
+    #     #                            1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0},
+    #     #             'spent':0}
+    #     # period_2 = {'start': period_start_date.replace(year=period_start_date.year - 2),
+    #     #             'end': period_end_date.replace(year=period_end_date.year - 2),
+    #     #             'accumulated':{9: 0.0, 10 : 0.0, 11 : 0.0, 12 : 0.0,
+    #     #                            1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0},
+    #     #             'spent':0}
+    #     #
+    #     # for period in [period_0, period_1, period_2]:
+    #     #     if period['end'] > self.first_contract_date_start:
+    #     #         payslip_ids = self.env['hr.payslip'].sudo().search([
+    #     #             ('employee_id', '=', self.employee_id.id),
+    #     #             ('date_from', '>=', period['start']),
+    #     #             ('date_to', '<=', period['end']),
+    #     #             ('state', 'in', ['done', 'paid'])
+    #     #         ], order='date_from')
+    #     #
+    #     #         for payslip in payslip_ids:
+    #     #             for line in payslip.line_ids:
+    #     #                 if line.code == 'PROV_VACA':
+    #     #                     period['accumulated'][payslip.date_from.month] += line.total
+    #     #                 if line.code == 'VACACIONES_TOMADAS' or line.code == 'VACACIONES_PAGADAS':
+    #     #                     period['spent'] += line.total
+    #     # print(sum(period_0['accumulated'].values())-period_0['spent'])
+    #     #
+    #     # return [period_0, period_1, period_2]
+    #
+    #     return accumulated - spent
+    #
+    # # @api.onchange('employee_id', 'date_from', 'date_to')
+    # # def onchange_employee(self):
+    # #     res = super(HrAssetsLiquidation, self).onchange_employee()
+    # #     if self.employee_id.id:
+    # #         self.name = _('Assets liquidation for %s') % (self.employee_id.name)
+    # #     return res
+    #
+    # @api.model
+    # def get_contract(self, employee, date_from, date_to):
+    #     """
+    #     Se sobrescribe el metodo get_contract pues ahora queremos aplicar otros criterios en el filtrado de contratos
+    #     """
+    #     contract_ids = self.env['hr.contract'].search([
+    #         ('employee_id', '=', employee.id), ('date_start', '<=', date_from), ('date_end', '>=', date_from),
+    #         ('state', 'in', ['open', 'close'])])
+    #     if not contract_ids:
+    #         # Para el caso que la ultima version del contrato este en ejecucion y no tenga seteada la fecha de vigencia
+    #         contract_ids = self.env['hr.contract'].search([
+    #             ('employee_id', '=', employee.id), ('date_start', '<=', date_from), ('date_end', '=', False),
+    #             ('state', 'in', ['open', 'close'])])
+    #         if not contract_ids:
+    #             contract_ids = self.env['hr.contract'].search([
+    #                 ('employee_id', '=', employee.id), ('date_start', '<=', date_to), ('date_end', '=', False),
+    #                 ('state', 'in', ['open', 'close'])], order='date_start DESC')
+    #             if not contract_ids:
+    #                 contract_ids = self.env['hr.contract'].search([
+    #                     ('employee_id', '=', employee.id), ('date_start', '>=', date_from), ('date_end', '<=', date_to),
+    #                     ('state', 'in', ['open', 'close'])])
+    #     return contract_ids.mapped('id')
+    #
+    # @api.model
+    # def _get_worked_days(self, date_from, date_to, contract_id, disease=0):
+    #     '''
+    #     Metodo devuelve los valores del date_from para los contratos que comienzan luego del comienzo del mes que se esta procesando,
+    #     devuelve el date_to para los contratos que finalizan en el mes, y los dias trabajados segun estos parametros tomando
+    #     siempre como valor mayor 30 dias para los meses.
+    #     :return:
+    #     '''
+    #
+    #     contract = self.env['hr.contract']
+    #     if contract_id:
+    #         contract = contract.browse(contract_id)
+    #         if not contract.contract_date_start:
+    #             raise UserError(_('Please enter the contract start date to continue.'))
+    #         else:
+    #             contract_date_start = contract.contract_date_start
+    #     else:
+    #         contract_date_start = date_from.replace(day=1)
+    #
+    #     date_start_contract = contract_date_start
+    #
+    #     date_end_contract = False
+    #     if contract.date_end:
+    #         date_end_contract = contract.date_end
+    #     if date_start_contract > date_from:
+    #         date_from = date_start_contract
+    #     if date_end_contract:
+    #         if date_end_contract < date_to:
+    #             date_to = date_end_contract
+    #
+    #     worked_days = date_to.day - date_from.day + 1 - disease
+    #
+    #     return {'worked_days': worked_days,
+    #             'date_from': date_from,
+    #             'date_to': date_to,
+    #             }
+    #
+    # @api.model
+    # def get_inputs(self, contracts, date_from, date_to):
+    #     """
+    #     Invocamos el metodo get_inputs para agregar nuevas entradas a la nómina
+    #     """
+    #
+    #     # Convirtiendo el listado de id de contratos en objetos
+    #     contracts = self.env['hr.contract'].browse(contracts)
+    #
+    #     res = []
+    #
+    #     structure_ids = contracts.get_all_structures()
+    #     rule_ids = self.env['hr.payroll.structure'].browse(structure_ids).get_all_rules()
+    #     sorted_rule_ids = [id for id, sequence in sorted(rule_ids, key=lambda x: x[1])]
+    #     inputs = self.env['hr.salary.rule'].browse(sorted_rule_ids).mapped('input_ids')
+    #
+    #     for contract in contracts:
+    #         for input in inputs:
+    #             # Condición para el módulo de préstamos
+    #             if input.code == 'PREST_EMP':
+    #                 amount = 0
+    #                 # loan_line_id = 0
+    #                 lon_obj = self.env['hr.loan'].search([
+    #                     ('employee_id', '=', contract.employee_id.id), ('state', '=', 'approved')
+    #                 ])
+    #                 for loan in lon_obj:
+    #                     # if loan_line_id != 0:
+    #                     #     break
+    #                     for loan_line in loan.loan_lines:
+    #                         # if date_from <= loan_line.date <= date_to and not loan_line.paid:
+    #                         if not loan_line.paid:
+    #                             amount += loan_line.amount
+    #                             # loan_line_id = loan_line.id
+    #                             # break
+    #
+    #                 input_data = {
+    #                     'name': input.name,
+    #                     'code': input.code,
+    #                     'contract_id': contract.id,
+    #                     'amount': amount,
+    #                     # 'loan_line_id':loan_line_id,
+    #                     'type': input.type,
+    #                 }
+    #                 res += [input_data]
+    #             # Condición para el módulo de créditos a empleados
+    #             elif input.code == 'CRED_EMP_PROF':
+    #                 amount = 0
+    #                 # ec_line_id = 0
+    #                 employee_credit = self.env['hr.employee.credit'].search(
+    #                     [('employee_id', '=', contract.employee_id.id), ('state', '=', 'in_payroll')])
+    #
+    #                 for ec in employee_credit:
+    #                     # if ec_line_id != 0:
+    #                     #     break
+    #                     for ecl in ec.credit_lines:
+    #                         # if date_from <= ecl.date <= date_to and not ecl.paid:
+    #                         if not ecl.paid:
+    #                             amount += ecl.amount
+    #                             # ec_line_id = ecl.id
+    #                             # break
+    #
+    #                 input_data = {
+    #                     'name': input.name,
+    #                     'code': input.code,
+    #                     'contract_id': contract.id,
+    #                     'amount': amount,
+    #                     # 'employee_credit_line_id': ec_line_id,
+    #                     'type': input.type,
+    #                 }
+    #                 res += [input_data]
+    #             # Comportamiento por defecto
+    #             else:
+    #                 input_data = {
+    #                     'name': input.name,
+    #                     'code': input.code,
+    #                     'type': input.type,
+    #                     'contract_id': contract.id,
+    #                 }
+    #                 res += [input_data]
+    #
+    #     for contract in contracts:
+    #         if hasattr(contract, 'income_ids'):
+    #             for input in contract.income_ids:
+    #                 # Removemos reglas salariales que ya existen en el contrato
+    #                 res = list(filter(lambda x: x.get('code') != input.rule_id.code, res))
+    #                 line = {
+    #                     'name': input.rule_id.name,
+    #                     'code': input.rule_id.code,
+    #                     'amount': input.amount,
+    #                     'partner_id': input.partner_id.id,
+    #                     'type': input.type,
+    #                     'contract_id': contract.id
+    #                 }
+    #                 res += [line]
+    #
+    #         if hasattr(contract, 'expense_ids'):
+    #             for input in contract.expense_ids:
+    #                 # Removemos reglas salariales que ya existen en el contrato
+    #                 res = list(filter(lambda x: x.get('code') != input.rule_id.code, res))
+    #                 line = {
+    #                     'name': input.rule_id.name,
+    #                     'code': input.rule_id.code,
+    #                     'amount': input.amount,
+    #                     'partner_id': input.partner_id.id,
+    #                     'type': input.type,
+    #                     'contract_id': contract.id
+    #                 }
+    #                 res += [line]
+    #
+    #         if hasattr(contract, 'other_expense_ids'):
+    #             for input in contract.other_expense_ids:
+    #                 # Removemos reglas salariales que ya existe en el contrato
+    #                 res = list(filter(lambda x: x.get('code') != input.rule_id.code, res))
+    #                 line = {
+    #                     'name': input.rule_id.name,
+    #                     'code': input.rule_id.code,
+    #                     'amount': input.amount,
+    #                     'partner_id': input.partner_id.id,
+    #                     'type': input.type,
+    #                     'contract_id': contract.id
+    #                 }
+    #                 res += [line]
+    #
+    #     return res
+    #
+    # @api.model
+    # def _get_assets_liquidation_lines(self, contract_ids, assets_liquidation_id, add_liquidation_rules=False,
+    #                                   liquidation_amounts={}):
+    #     def _sum_salary_rule_category(localdict, category, amount):
+    #         if category.parent_id:
+    #             localdict = _sum_salary_rule_category(localdict, category.parent_id, amount)
+    #
+    #         if category.code in localdict['categories'].dict:
+    #             localdict['categories'].dict[category.code] += amount
+    #         else:
+    #             localdict['categories'].dict[category.code] = amount
+    #
+    #         return localdict
+    #
+    #     class BrowsableObject(object):
+    #         def __init__(self, employee_id, dict, env):
+    #             self.employee_id = employee_id
+    #             self.dict = dict
+    #             self.env = env
+    #
+    #         def __getattr__(self, attr):
+    #             return attr in self.dict and self.dict.__getitem__(attr) or 0.0
+    #
+    #     class InputLine(BrowsableObject):
+    #         """a class that will be used into the python code, mainly for usability purposes"""
+    #
+    #         def sum(self, code, from_date, to_date=None):
+    #             if to_date is None:
+    #                 to_date = fields.Date.today()
+    #             self.env.cr.execute("""
+    #                         SELECT sum(amount) as sum
+    #                         FROM hr_assets_liquidation as hp, hr_assets_liquidation_input as pi
+    #                         WHERE hp.employee_id = %s AND hp.state = 'done'
+    #                         AND hp.date_from >= %s AND hp.date_to <= %s AND hp.id = pi.assets_liquidation_id AND pi.code = %s""",
+    #                                 (self.employee_id, from_date, to_date, code))
+    #             return self.env.cr.fetchone()[0] or 0.0
+    #
+    #     class WorkedDays(BrowsableObject):
+    #         """a class that will be used into the python code, mainly for usability purposes"""
+    #
+    #         def _sum(self, code, from_date, to_date=None):
+    #             if to_date is None:
+    #                 to_date = fields.Date.today()
+    #             self.env.cr.execute("""
+    #                         SELECT sum(number_of_days) as number_of_days, sum(number_of_hours) as number_of_hours
+    #                         FROM hr_assets_liquidation as hp, hr_assets_liquidation_worked_days as pi
+    #                         WHERE hp.employee_id = %s AND hp.state = 'done'
+    #                         AND hp.date_from >= %s AND hp.date_to <= %s AND hp.id = pi.assets_liquidation_id
+    #                         AND pi.code = %s""",
+    #                                 (self.employee_id, from_date, to_date, code))
+    #             return self.env.cr.fetchone()
+    #
+    #         def sum(self, code, from_date, to_date=None):
+    #             res = self._sum(code, from_date, to_date)
+    #             return res and res[0] or 0.0
+    #
+    #         def sum_hours(self, code, from_date, to_date=None):
+    #             res = self._sum(code, from_date, to_date)
+    #             return res and res[1] or 0.0
+    #
+    #     class AssetLiquidation(BrowsableObject):
+    #         """a class that will be used into the python code, mainly for usability purposes"""
+    #
+    #         def sum(self, code, from_date, to_date=None):
+    #             if to_date is None:
+    #                 to_date = fields.Date.today()
+    #             self.env.cr.execute("""SELECT sum(case when hp.credit_note = False then (pl.total) else (-pl.total) end)
+    #                                 FROM hr_assets_liquidation as hp, hr_assets_liquidation_line as pl
+    #                                 WHERE hp.employee_id = %s AND hp.state = 'done'
+    #                                 AND hp.date_from >= %s AND hp.date_to <= %s AND hp.id = pl.slip_id AND pl.code = %s""",
+    #                                 (self.employee_id, from_date, to_date, code))
+    #             res = self.env.cr.fetchone()
+    #             return res and res[0] or 0.0
+    #
+    #     def _get_rules_by_move(localdict, sorted_rules):
+    #         """Buscamos los moves en las reglas de tipo move, y retornamos la permutacion de reglas y moves"""
+    #         rules_by_move = []
+    #         aml_obj = self.sudo().env['account.move.line']  # usamos sudo para poder acceder a los registros contables
+    #         for rule in sorted_rules:
+    #             move_ids = []
+    #             if rule.amount_select in ['account_move']:
+    #                 # si es del nuevo tipo, basado en movimientos contables, buscamos los movimientos
+    #                 payslip = self.search([('id', '=', localdict['payslip'].id)])
+    #                 partner = payslip.employee_id.address_home_id.commercial_partner_id
+    #                 if not partner:
+    #                     raise UserError(u'El colaborador %s no tiene una empresa configurada' % payslip.employee_id.name)
+    #                 account = rule.account_credit
+    #                 if not account:
+    #                     raise UserError(
+    #                         u'La regla salarial %s es de tipo Neteo Saldo Contable, solo debe tener una cuenta acreedora configurada' % rule.name)
+    #                 if rule.account_debit or rule.condition_acc:
+    #                     raise UserError(
+    #                         u'La regla salarial %s es de tipo Neteo Saldo Contable, solo debe tener una cuenta acreedora configurada' % rule.name)
+    #                 move_ids = aml_obj.search(_get_domain_rules_by_move(partner, payslip, account, rule))
+    #             if move_ids:
+    #                 for move in move_ids:
+    #                     rules_by_move.append((rule, move))
+    #             else:
+    #                 # se retorna el objeto vacío aml_obj para facilitar la programacion
+    #                 rules_by_move.append((rule, aml_obj))
+    #         return rules_by_move
+    #
+    #     def _get_domain_rules_by_move(partner, payslip, account, rule):
+    #         """
+    #         Hook para modificar criterio de busqueda account_move_line.
+    #         @return: Domain
+    #         """
+    #
+    #         return [
+    #             ('partner_id', '=', partner.id),
+    #             ('date_maturity', '>=', payslip.date_from),
+    #             ('date_maturity', '<=', payslip.date_to),
+    #             ('account_id', '=', account.id),
+    #             ('debit', '>', 0.0),  # escuchamos en el debe
+    #             ('full_reconcile_id', '=', False),
+    #         ]
+    #
+    #     # we keep a dict with the result because a value can be overwritten by another rule with the same code
+    #     result_dict = {}
+    #     rules_dict = {}
+    #     worked_days_dict = {}
+    #     inputs_dict = {}
+    #     blacklist = []
+    #     assets_liquidation = self.env['hr.assets.liquidation'].browse(assets_liquidation_id)
+    #     for worked_days_line in assets_liquidation.worked_days_line_ids:
+    #         worked_days_dict[worked_days_line.code] = worked_days_line
+    #     for input_line in assets_liquidation.input_line_ids:
+    #         inputs_dict[input_line.code] = input_line
+    #
+    #     categories = BrowsableObject(assets_liquidation.employee_id.id, {}, self.env)
+    #     inputs = InputLine(assets_liquidation.employee_id.id, inputs_dict, self.env)
+    #     worked_days = WorkedDays(assets_liquidation.employee_id.id, worked_days_dict, self.env)
+    #     assets_liquidations = AssetLiquidation(assets_liquidation.employee_id.id, assets_liquidation, self.env)
+    #     rules = BrowsableObject(assets_liquidation.employee_id.id, rules_dict, self.env)
+    #     baselocaldict = {'float_round': float_round, 'categories': categories, 'rules': rules,
+    #                      'payslip': assets_liquidations, 'worked_days': worked_days, 'inputs': inputs}
+    #     # get the ids of the structures on the contracts and their parent id as well
+    #     contracts = self.env['hr.contract'].browse(contract_ids)
+    #     if len(contracts) == 1 and assets_liquidation.employee_id.contract_id.struct_id:
+    #         structure_ids = list(set(assets_liquidation.employee_id.contract_id.struct_id._get_parent_structure().ids))
+    #     else:
+    #         structure_ids = contracts.get_all_structures()
+    #     # get the rules of the structure and thier children
+    #     rule_ids = self.env['hr.payroll.structure'].browse(structure_ids).get_all_rules()
+    #
+    #     # Adicionando las reglas salariales para la liquidación de haberes
+    #     if add_liquidation_rules:
+    #         # Adicionando reglas para liquidaciones
+    #         fourteenth_rule = self.env.ref('hr_dr_payroll.salary_rule_36', False)
+    #         thirteenth_rule = self.env.ref('hr_dr_payroll.salary_rule_35', False)
+    #         vacations_rule = self.env.ref('hr_dr_payroll.salary_rule_37', False)
+    #         if fourteenth_rule:
+    #             fourteenth_rule.amount_fix = liquidation_amounts.get(fourteenth_rule.id, 0.0)
+    #             rule_ids.append((fourteenth_rule.id, fourteenth_rule.sequence))
+    #         if thirteenth_rule:
+    #             thirteenth_rule.amount_fix = liquidation_amounts.get(thirteenth_rule.id, 0.0)
+    #             rule_ids.append((thirteenth_rule.id, thirteenth_rule.sequence))
+    #         if vacations_rule:
+    #             vacations_rule.amount_fix = liquidation_amounts.get(vacations_rule.id, 0.0)
+    #             rule_ids.append((vacations_rule.id, vacations_rule.sequence))
+    #
+    #         if self.causes in ['C02', 'C07', 'C08']:
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_39', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #         if self.causes == 'C09':
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_38', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #             # Adicionando reglas para indemnizaciones
+    #             # if self.pregnant_woman:
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_40', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #             # if self.union_leader:
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_41', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #             # if self.non_occupational_disease:
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_43', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #             # if self.disability_deduction:
+    #             rule = self.env.ref('hr_dr_payroll.salary_rule_42', False)
+    #             if rule:
+    #                 rule_ids.append((rule.id, rule.sequence))
+    #             if self.discrimination:
+    #                 rule = self.env.ref('hr_dr_payroll.salary_rule_44', False)
+    #                 if rule:
+    #                     rule_ids.append((rule.id, rule.sequence))
+    #             if self.eviction:
+    #                 rule = self.env.ref('hr_dr_payroll.salary_rule_39', False)
+    #                 if rule:
+    #                     rule_ids.append((rule.id, rule.sequence))
+    #         # Adicionando reglas para bonos
+    #         # if self.retirement_bonus:
+    #         rule = self.env.ref('hr_dr_payroll.salary_rule_45', False)
+    #         if rule:
+    #             rule_ids.append((rule.id, rule.sequence))
+    #     # run the rules by sequence
+    #     sorted_rule_ids = self.get_sorted_rules(rule_ids)
+    #     sorted_rules = self.env['hr.salary.rule'].browse(sorted_rule_ids)
+    #     for contract in contracts:
+    #         employee = contract.employee_id
+    #         localdict = dict(baselocaldict, employee=employee, contract=contract)
+    #         sequence = 0
+    #         sorted_rules_and_moves = _get_rules_by_move(localdict, sorted_rules)
+    #         for rule, move in sorted_rules_and_moves:
+    #             sequence += 1
+    #             key = rule.code + '-' + str(contract.id) + '-' + str(move.id)
+    #             localdict['force_amount'] = 0.0
+    #             if move.amount_residual:
+    #                 localdict['force_amount'] = move.amount_residual  # todo en validar regla en satisfy_condition
+    #             elif not move.full_reconcile_id:
+    #                 # cuando la cuenta no es de tipo por pagar no tiene amount_Residual
+    #                 # en este caso tomamos el valor de debito
+    #                 localdict['force_amount'] = abs(move.debit)
+    #             # check if the rule can be applied
+    #             if rule._satisfy_condition(localdict) and rule.id not in blacklist:
+    #                 # compute the amount of the rule
+    #                 amount, qty, rate = rule._compute_rule(localdict)
+    #                 # check if there is already a rule computed with that code
+    #                 previous_amount = rule.code in localdict and localdict[rule.code] or 0.0
+    #                 # set/overwrite the amount computed for this rule in the localdict
+    #                 tot_rule = amount * qty * rate / 100.0
+    #
+    #                 if localdict.get(rule.code):
+    #                     localdict[rule.code] += tot_rule
+    #                 else:
+    #                     localdict[rule.code] = tot_rule
+    #                 rules_dict[rule.code] = rule
+    #                 # sum the amount for its salary category
+    #                 localdict = _sum_salary_rule_category(localdict, rule.category_id,
+    #                                                       localdict[rule.code] - previous_amount)
+    #                 result_dict[key] = {
+    #                     'salary_rule_id': rule.id,
+    #                     'contract_id': contract.id,
+    #                     'name': assets_liquidation.get_name_rule(rule),
+    #                     'code': rule.code,
+    #                     'category_id': rule.category_id.id,
+    #                     'sequence': sequence,
+    #                     'appears_on_payslip': rule.appears_on_payslip,
+    #                     'condition_select': rule.condition_select,
+    #                     'condition_python': rule.condition_python,
+    #                     'condition_range': rule.condition_range,
+    #                     'condition_range_min': rule.condition_range_min,
+    #                     'condition_range_max': rule.condition_range_max,
+    #                     'amount_select': rule.amount_select,
+    #                     'amount_fix': rule.amount_fix,
+    #                     'amount_python_compute': rule.amount_python_compute,
+    #                     'amount_percentage': rule.amount_percentage,
+    #                     'amount_percentage_base': rule.amount_percentage_base,
+    #                     'register_id': rule.register_id.id,
+    #                     'amount': amount,
+    #                     'employee_id': contract.employee_id.id,
+    #                     'quantity': qty,
+    #                     'rate': rate,
+    #                     'receivable_move_line_id': move.id,
+    #                 }
+    #             else:
+    #                 # blacklist this rule and its children
+    #                 blacklist += [id for id, seq in rule._recursive_search_of_rules()]
+    #
+    #     return list(result_dict.values())
+    #
+    # @api.model
+    # def get_name_rule(self, rule):
+    #     """
+    #     Este metodo concatena la cantidad de horas extras al 50 y 100 porciento para que salga en el calculo
+    #     de la nómina y en el reporte impreso
+    #     """
+    #     res = rule.name
+    #     if rule.code in ('HORA_EXTRA_REGULAR', 'HORA_EXTRA_EXTRAORDINARIA'):
+    #         input_ids = self.env['hr.assets.liquidation.input'].search([('assets_liquidation_id', 'in', [self.id]), ('code', '=', rule.code)])
+    #         if input_ids:
+    #             res = res + ' (' + str(input_ids[0].amount) + ')'
+    #     return res
+    #
+    # @api.model
+    # def get_sorted_rules(self, rule_ids):
+    #     """
+    #     Este metodo ordena las reglas salariales en base a la categoria y luego a la secuencia de la regla
+    #     """
+    #     sorted_rule_ids = [id for id, sequence in sorted(rule_ids, key=lambda x: x[1])]
+    #     # sorted_rule_ids = super(HrPayslip, self).get_sorted_rules(rule_ids)
+    #     sorted_rules = self.env['hr.salary.rule'].browse(sorted_rule_ids)
+    #     incomes = []
+    #     others = []
+    #     expenses = []
+    #     contributions = []
+    #     subtotals = []
+    #     for rule in sorted_rules:
+    #         # Ingresos (Genera beneficios sociales)
+    #         if rule.category_id.code == 'INGRESOS':
+    #             incomes += [rule.id]
+    #         # Otros Ingresos (No genera beneficios sociales)
+    #         elif rule.category_id.code == 'OINGRESOS':
+    #             others += [rule.id]
+    #         # Egresos
+    #         elif rule.category_id.code == 'EGRESOS':
+    #             expenses += [rule.id]
+    #         # Contribución de la Compañía
+    #         elif rule.category_id.code == 'COMPANIA':
+    #             contributions += [rule.id]
+    #         # Subtotales
+    #         elif rule.category_id.code == 'SUBTOTALES':
+    #             subtotals += [rule.id]
+    #         else:
+    #             raise UserError(u'La regla %s no pertenece a ninguna categoría.' % rule.name)
+    #     sorted_rule_ids = incomes + others + expenses + contributions + subtotals
+    #     return sorted_rule_ids
+    #
+    # @api.model
+    # def get_name_rule(self, rule):
+    #     '''
+    #     Este metodo concatena la cantidad de horas extras al 50 y 100 porciento para que salga en el calculo
+    #     de la nómina y en el reporte impreso
+    #     '''
+    #     # res = super(HrPayslip, self).get_name_rule(rule)
+    #     res = rule.name
+    #     if rule.code in ('HORA_EXTRA_REGULAR', 'HORA_EXTRA_EXTRAORDINARIA'):
+    #         input_ids = self.env['hr.assets.liquidation.input'].search([('assets_liquidation_id', 'in', [self.id]), ('code', '=', rule.code)])
+    #         if input_ids:
+    #             res = res + ' (' + str(input_ids[0].amount) + ')'
+    #     return res
+    #
+    #
+    # def _get_employee_information(self):
+    #     """
+    #     Este metodo relaciona la nómina con la información del colaborador para el calculo del impuesto a la renta
+    #     """
+    #     for liquidation in self:
+    #         employee_information = None
+    #         employee_information_ids = self.env['hr.personal.expense'].search([
+    #             ('employee_id', '=', liquidation.employee_id.id),
+    #             ('rent_tax_table_id.fiscal_year', '=', liquidation.date_from.year),
+    #             ('state', '=', 'done')
+    #         ])
+    #         if employee_information_ids:
+    #             employee_information = employee_information_ids[0].id
+    #         liquidation.employee_information = employee_information
+    #     return True
+    #
+    # def make_move_payslip(self):
+    #     """
+    #     Crea el movimiento contable para los registros visibles en la nómina impresa
+    #     """
+    #     name = _('Assets liquidation of %s') % (self.employee_id.name)
+    #     date = self.date_to
+    #     number = "LIQ/{}".format(self.id)
+    #
+    #     move_header = {
+    #         'narration': name,
+    #         'ref': number,
+    #         'journal_id': self.journal_id.id,
+    #         'date': date,
+    #         'partner_id': self.employee_id.address_home_id.commercial_partner_id.id,
+    #     }
+    #     move_lines = self._compute_move_lines(self.line_ids)
+    #     move = self._create_account_moves(move_header, move_lines)
+    #     self.move_id = move.id
+    #     # toca volver a poner, a pesar que ya esta en el move_header no coge
+    #     move.partner_id = self.employee_id.address_home_id.commercial_partner_id.id
+    #
+    # def make_move_payslip_provision(self):
+    #     """
+    #     Realizamos el asiento de las provisiones
+    #     """
+    #     name = _('Provision of %s') % (self.employee_id.name)
+    #     date = self.date_to
+    #     number = "LIQ/{}".format(self.id)
+    #
+    #     move_header = {
+    #         'narration': name,
+    #         'ref': number,
+    #         'journal_id': self.journal_id.id,
+    #         'date': date,
+    #         'partner_id': self.employee_id.address_home_id.commercial_partner_id.id,
+    #     }
+    #     move_lines = self._compute_move_lines(self.details_by_salary_rule_category - self.line_ids)
+    #     move = self._create_account_moves(move_header, move_lines)
+    #     self.provision_move_id = move.id
+    #     # toca volver a poner, a pesar que ya esta en el move_header no coge
+    #     move.partner_id = self.employee_id.address_home_id.commercial_partner_id.id
+    #
+    #
+    # def _reconcile_receivables_vs_payslip(self):
+    #     """
+    #     Concilia la nomina contra las facturas a cobrar al colaborador
+    #     Lo hace línea por línea de nómina, en base a los campos receivable_move_line_id y move_line_ids
+    #     """
+    #     # tomamos todas las nóminas a la vez, considerando las líneas visibles y no visibles en la nómina
+    #     lines = self.details_by_salary_rule_category.filtered(lambda r: r.amount_select == 'account_move')
+    #     # conciliamos las receivables
+    #     for line in lines:
+    #         # solo conciilamos si la cuenta es CxC y el valor esta en el credito
+    #         counterpart_moves = line.move_line_ids.filtered(
+    #             lambda r: r.account_id.internal_type == 'receivable').filtered(lambda r: r.credit > 0.0)
+    #         satisfy_reconcile_conditions = True
+    #         if satisfy_reconcile_conditions and line.receivable_move_line_id and counterpart_moves:
+    #             moves_to_reconcile = line.receivable_move_line_id + counterpart_moves
+    #             moves_to_reconcile.reconcile()
+    #
+    #
+    # def _compute_move_lines(self, lines):
+    #     """
+    #     Computa las lineas de asiento contable en base a las líneas de la nomina pasadas como argumento
+    #     @lines payslip.lines, en base a las cuales se crea el asiento contable
+    #     """
+    #     self.ensure_one()  # usamos api.multi a pesar de estar implementado para una sola nomina
+    #     precision = self.env['decimal.precision'].precision_get('Payroll')
+    #     date = self.date_to
+    #     debit_sum = 0.0
+    #     credit_sum = 0.0
+    #     move_ids = []  # los vals de los asientos a crear
+    #     for line in lines:
+    #         amount = self.credit_note and -line.total or line.total
+    #         if float_is_zero(amount, precision_digits=precision):
+    #             continue
+    #         debit_account_id = self.get_debit_account_id(line)
+    #         credit_account_id = self.get_credit_account_id(line)
+    #         if debit_account_id:
+    #             debit_line = (0, 0, self.get_split_debit_lines(self, line, date, amount, debit_account_id))
+    #             # damos otra vuelta agregando plazos de pago
+    #             # TODO v11 unificar los plazos de pago en el core
+    #             # TODO v11 replicar lo del debe en el haber
+    #             if line.salary_rule_id.payment_term_days:
+    #                 date_maturity = datetime.strptime(debit_line[2]['date'], '%Y-%m-%d') + \
+    #                                 timedelta(days=line.salary_rule_id.payment_term_days)
+    #                 debit_line[2].update({'date_maturity': date_maturity})
+    #             move_ids.append(debit_line)
+    #             debit_sum += debit_line[2]['debit'] - debit_line[2]['credit']
+    #         if credit_account_id:
+    #             for credit_line in self.get_split_credit_lines(self, line, date, amount, credit_account_id):
+    #                 move_ids.append(credit_line)
+    #                 credit_sum += credit_line[2]['credit'] - credit_line[2]['debit']
+    #         if not debit_account_id and not credit_account_id and line.salary_rule_id.category_id.code != 'SUBTOTALES':
+    #             raise ValidationError(
+    #                 _('To continue you must set up a debit or credit account in the salary rule "%s"')
+    #                 % line.salary_rule_id.name)
+    #     # El core ya valida que el asiento este cuadrado
+    #     # TODO Implementar un metodo que valide que el asiento este cuadrado pero
+    #     # que muestre en pantalla (aunque sea en texto formateado como tabla) los valores para que se pueda
+    #     # identificar con facilidad la causa del descuadre
+    #     return move_ids
+    #
+    #
+    # def _compute_details_by_salary_rule_category(self):
+    #     for liquidation in self:
+    #         liquidation.details_by_salary_rule_category = liquidation.mapped('line_ids').filtered(lambda line: line.category_id)
+    #
+    # def _compute_unfair_dismissal(self):
+    #     for rec in self:
+    #         if rec.causes == 'C09':
+    #             rec.unfair_dismissal = True
+    #         else:
+    #             rec.unfair_dismissal = False
+    #
+    # @api.depends('days_in_service', 'months_in_service', 'years_in_service')
+    # def _compute_first_contract_date_start(self):
+    #     for rec in self:
+    #         # Resto aquí el día que se adicionó de más en days_in_service
+    #         rec.first_contract_date_start = rec.date_to - relativedelta(
+    #             days=rec.days_in_service - 1, months=rec.months_in_service, years=rec.years_in_service)
+    #
+    # @api.depends('days_in_service', 'months_in_service', 'years_in_service', 'employee_age')
+    # def _compute_show_bonus(self):
+    #     for rec in self:
+    #         rec.show_bonus =  rec.employee_age >= 55
+    #
+    # @api.depends('line_ids.amount')
+    # def _get_net_salary(self):
+    #     net_salary = 0.0
+    #     if self.line_ids:
+    #         for line in self.line_ids:
+    #             if line.salary_rule_id.code == 'SUBT_NET':
+    #                 net_salary = line.amount
+    #     self.net_salary = net_salary
+    #
+    # @api.model
+    # def _create_account_moves(self, move_dict, line_ids):
+    #     """
+    #     Método auxiliar para crear el asiento contable
+    #     """
+    #     move_dict['line_ids'] = line_ids
+    #     move = self.env['account.move'].create(move_dict)
+    #     move.post()
+    #     return move
+    #
+    # @api.model
+    # def get_debit_account_id(self, line):
+    #     '''
+    #     Invocamos el get_debit_account_id para setear la cuenta deudora cuando este activo el check de cuentas contables
+    #     por tipo de contrato en la regla salarial
+    #     '''
+    #     account_id = line.salary_rule_id.account_debit.id
+    #     if line.salary_rule_id.condition_acc:
+    #         # Mano de obra directa
+    #         hr_contract_type_mdi = self.env.ref('hr_dr_payroll.hr_contract_type_mdi')
+    #         # Mano de obra indirecta
+    #         hr_contract_type_min = self.env.ref('hr_dr_payroll.hr_contract_type_min')
+    #         # Administrativo
+    #         hr_contract_type_wrkr = self.env.ref('hr_dr_payroll.hr_contract_type_wrkr')
+    #         # Ventas
+    #         hr_contract_type_sub = self.env.ref('hr_dr_payroll.hr_contract_type_sub')
+    #         contract_type = line.slip_id.employee_id.contract_id.type_id
+    #         if contract_type == hr_contract_type_mdi:
+    #             account_id = line.salary_rule_id.debit_acc_manu_di.id
+    #         elif contract_type == hr_contract_type_min:
+    #             account_id = line.salary_rule_id.debit_acc_manu_in.id
+    #         elif contract_type == hr_contract_type_wrkr:
+    #             account_id = line.salary_rule_id.debit_acc_administrative.id
+    #         elif contract_type == hr_contract_type_sub:
+    #             account_id = line.salary_rule_id.debit_acc_sales.id
+    #     return account_id
+    #
+    # @api.model
+    # def get_credit_account_id(self, line):
+    #     """
+    #     Invocamos el get_credit_account_id para setear la cuenta acreedora cuando este activo el check de cuentas
+    #     contables por tipo de contrato en la regla salarial. Adicionalmente seteamos la cuenta acreedora del salario
+    #     neto a recibir, tiene mas peso la configurada en el contrato
+    #     """
+    #     account_id = line.salary_rule_id.account_credit.id
+    #     if line.salary_rule_id.condition_acc:
+    #         # Mano de obra directa
+    #         hr_contract_type_mdi = self.env.ref('hr_dr_payroll.hr_contract_type_mdi')
+    #         # Mano de obra indirecta
+    #         hr_contract_type_min = self.env.ref('hr_dr_payroll.hr_contract_type_min')
+    #         # Administrativo
+    #         hr_contract_type_wrkr = self.env.ref('hr_dr_payroll.hr_contract_type_wrkr')
+    #         # Ventas
+    #         hr_contract_type_sub = self.env.ref('hr_dr_payroll.hr_contract_type_sub')
+    #         contract_type = line.slip_id.employee_id.contract_id.type_id
+    #         if contract_type == hr_contract_type_mdi:
+    #             if line.salary_rule_id.credit_acc_manu_di:
+    #                 account_id = line.salary_rule_id.credit_acc_manu_di.id
+    #         elif contract_type == hr_contract_type_min:
+    #             if line.salary_rule_id.credit_acc_manu_in:
+    #                 account_id = line.salary_rule_id.credit_acc_manu_in.id
+    #         elif contract_type == hr_contract_type_wrkr:
+    #             if line.salary_rule_id.credit_acc_administrative:
+    #                 account_id = line.salary_rule_id.credit_acc_administrative.id
+    #         elif contract_type == hr_contract_type_sub:
+    #             if line.salary_rule_id.credit_acc_sales:
+    #                 account_id = line.salary_rule_id.credit_acc_sales.id
+    #     if line.salary_rule_id.code == 'SUBT_NET':
+    #         if line.contract_id.account_payable_payroll:
+    #             account_id = line.contract_id.account_payable_payroll.id
+    #         if not account_id:
+    #             account_id = self.employee_id.company_id.account_payable_payslip_id.id
+    #         if not account_id:
+    #             raise ValidationError(_('You must configure the "Account payable" in the contract or the '
+    #                                     '"Creditor account" in the salary rule "Subtotal: Net salary to receive".'))
+    #     return account_id
+    #
+    # @api.model
+    # def get_account_analytic(self, account_id):
+    #     """
+    #     Obtenemos la cuenta analitica para cada linea del asiento contable.
+    #     cuando el codigo de la cuenta este en 4,5,6,7,8,9
+    #     """
+    #     # TODO: Se deberia implementar el campo analytic_policy in ['always_plan']
+    #     account = self.env['account.account'].browse(account_id)
+    #     if re.match(r'^[4,5,6,7,8,9].', account.code):
+    #         ctx = self._context.copy()
+    #         return ctx.get('analytic_account_id', False)
+    #     else:
+    #         return False
+    #
+    # @api.model
+    # def get_split_debit_lines(self, slip, line, date, amount, debit_account_id):
+    #     """
+    #     Invocamos el método get_split_debit_lines para agregarle la cuenta analitica a las lineas del asiento contable.
+    #     el contexto solo llega si el campo cuenta analitica del contrato del colaborador cuenta con un valor.
+    #     """
+    #     ctx = self.env.context.copy()
+    #
+    #     analytic_account_id = line.salary_rule_id.analytic_account_id.id or line.employee_id.department_id.analytic_account_id.id
+    #
+    #     debit_line = {
+    #         'name': line.name + ', ' + line.employee_id.name,
+    #         'partner_id': line._get_partner_id(credit_account=False),
+    #         'account_id': debit_account_id,
+    #         'journal_id': slip.journal_id.id,
+    #         'date': date,
+    #         'debit': amount > 0.0 and amount or 0.0,
+    #         'credit': amount < 0.0 and -amount or 0.0,
+    #         'analytic_account_id': analytic_account_id,
+    #         'tax_line_id': line.salary_rule_id.account_tax_id.id,
+    #     }
+    #
+    #     debit_line.update({'assets_liquidation_line_id': line.id})
+    #     if ctx.get('analytic_account_id', False):
+    #         analytic_account_id = self.get_account_analytic(debit_account_id)
+    #         if analytic_account_id:
+    #             debit_line.update({
+    #                 'analytic_account_id': analytic_account_id
+    #             })
+    #     return debit_line
+    #
+    # @api.model
+    # def get_split_credit_lines(self, slip, line, date, amount, credit_account_id):
+    #     """
+    #     Invocamos el get_split_credit_lines para modificar las líneas de apuntes contables cuando la regla analizada
+    #     sea reflejada una o mas veces en el tree de egresos adicionales con beneficiario, se quiere que el asiento
+    #     se haga en base a los beneficiarios
+    #     """
+    #
+    #     credit_line = [(0, 0, {
+    #         'name': line.name + ', ' + line.employee_id.name,
+    #         'partner_id': line._get_partner_id(credit_account=True),
+    #         'account_id': credit_account_id,
+    #         'journal_id': slip.journal_id.id,
+    #         'date': date,
+    #         'debit': amount < 0.0 and -amount or 0.0,
+    #         'credit': amount > 0.0 and amount or 0.0,
+    #         'analytic_account_id': line.salary_rule_id.analytic_account_id.id
+    #                                or line.employee_id.department_id.analytic_account_id.id,
+    #         'tax_line_id': line.salary_rule_id.account_tax_id.id,
+    #     })]
+    #
+    #     credit_line[0][2].update({'assets_liquidation_line_id': line.id})
+    #     other_expense_ids = self.env['hr.assets.liquidation.input'].search([
+    #         ('assets_liquidation_id', '=', slip.id),
+    #         ('code', '=', line.code),
+    #         ('type', '=', 'other_expense'),
+    #     ])
+    #     if len(other_expense_ids) >= 1:
+    #         credit_line = []
+    #         for input in other_expense_ids:
+    #             analytic_account_id = self.get_account_analytic(
+    #                 credit_account_id) or line.salary_rule_id.analytic_account_id.id or line.employee_id.department_id.analytic_account_id.id
+    #             credit_line.append((0, 0, {
+    #                 'name': input.name,
+    #                 'partner_id': input.partner_id.id,
+    #                 'account_id': credit_account_id,
+    #                 'journal_id': slip.journal_id.id,
+    #                 'date': date,
+    #                 'debit': input.amount < 0.0 and -input.amount or 0.0,
+    #                 'credit': input.amount > 0.0 and input.amount or 0.0,
+    #                 'analytic_account_id': analytic_account_id,
+    #                 'tax_line_id': line.salary_rule_id.account_tax_id.id,
+    #                 'assets_liquidation_line_id': line.id,
+    #             }))
+    #     return credit_line
+    #
+    # def _compute_age(self):
+    #     for rec in self:
+    #         if rec.employee_id.birthday:
+    #             rec.employee_age = relativedelta(date.today(), rec.employee_id.birthday).years
+    #         else:
+    #             rec.employee_age = 0
+    #
+    # @api.depends('employee_id', 'date_to')
+    # def _get_time_in_service(self):
+    #     """
+    #     Computa por los años, meses y días que un colaborador ha trabajando para la empresa
+    #     a la fecha de corte de la nomina.
+    #     """
+    #     for liquidation in self:
+    #
+    #         # Obtengo el tiempo transcurrido entre la última entrada a la compañía y la fecha de salida
+    #         entry_date = liquidation.employee_id.last_company_entry_date
+    #         exit_date = liquidation.date_to
+    #         liquidation.years_in_service = relativedelta(exit_date, entry_date).years
+    #         liquidation.months_in_service = relativedelta(exit_date, entry_date).months
+    #         liquidation.days_in_service = relativedelta(exit_date, entry_date).days
+    #
+    #         # years = 0
+    #         # months = 0
+    #         # days = 0
+    #         # # Se añade el tiempo antes del uso de Odoo
+    #         # years += liquidation.employee_id.total_time_in_company_years or 0.0
+    #         # months += liquidation.employee_id.total_time_in_company_months or 0.0
+    #         # days += liquidation.employee_id.total_time_in_company_days or 0.0
+    #         # # Se añade el tiempo de los contratos viejos (las versiones de contratos se consideran como contratos viejos)
+    #         # # Se obtienen todos los contratos anteriores a la fecha seleccionada
+    #         # previous_contract_ids = self.env['hr.contract'].search([('employee_id', '=', self.employee_id.id),
+    #         #                                                         ('date_end', '<=', liquidation.employee_id.contract_id.date_start),
+    #         #                                                         ('state', 'in', APROVED_STATES),
+    #         #                                                         ('id', '!=', liquidation.employee_id.contract_id.id),
+    #         #                                                         ],
+    #         #                                                        order='date_end')
+    #         # for previous in previous_contract_ids:
+    #         #     years_previous, months_previous, days_previous = self.get_legal_years_months_days(
+    #         #         previous.date_start,
+    #         #         previous.date_end)
+    #         #     years += years_previous
+    #         #     months += months_previous
+    #         #     days += days_previous
+    #         # # se añade el tiempo del contrato vigente (el que esta en la nomina)
+    #         # # en este caso no validamos que el contrato este aprobado pues es posible que el usuario haga
+    #         # # la nomina y luego anule el contrato para pruebas por ejemplo, en este caso es deseable que
+    #         # # si se lo considere para el tiempo
+    #         # years_current, months_current, days_current = self.get_legal_years_months_days(
+    #         #     liquidation.employee_id.contract_id.date_start, liquidation.date_to)
+    #         # years += years_current
+    #         # months += months_current
+    #         # days += days_current
+    #         # # normalizamos el computo, por ejemplo 13 meses se convierten a 1 anio y 1 mes
+    #         # years, months, days = self.normalize_years_months_days(years, months, days)
+    #         # liquidation.years_in_service = years
+    #         # liquidation.months_in_service = months
+    #         # liquidation.days_in_service = days
+    #
+    #
+    # def get_legal_years_months_days(self, date_start, date_end):
+    #     """
+    #     Metodo auxiliar para centralizar el computo de deltas de tiempo
+    #     @self objeto payslip, no se usa! (lo dejamos para instanciar la clase e invocar el metodo)
+    #     @date_start fecha inicio
+    #     @date_end fecha final
+    #     """
+    #     if not date_start or not date_end:
+    #         return 0, 0, 0
+    #
+    #     # a la fecha final se sumamos 1 dia, de esta forma:
+    #     # - Cuando el colaborador trabajó del 1ene2017 al 1ene2017 le dará 1 dia
+    #     # - Cuando el colaborador trabajó del 1ene2017 al 31ene2017 le dará 1 mes, 0 días
+    #     date_end = date_end + timedelta(days=1)
+    #
+    #     rd = relativedelta(date_end, date_start)
+    #     return rd.years, rd.months, rd.days
+    #
+    #
+    # def normalize_years_months_days(self, years, months, legal_days):
+    #     """
+    #     Normalizamos el computo, por ejemplo 13 meses se convierten a 1 anio y 1 mes
+    #     """
+    #     if legal_days > 30:
+    #         months += int(legal_days / 30)
+    #         legal_days = legal_days % 30  # el saldo de la division
+    #     if months > 12:
+    #         years += int(months / 12)
+    #         months = months % 12  # el saldo de la division
+    #     if months == 12:
+    #         years += int(months / 12)
+    #         months = months % 12  # el saldo de la division
+    #     return years, months, legal_days
+    #
+    # def generate_archive(self):
+    #     """
+    #     Genera un fichero comprimido con los documentos de pago para los bancos. Por cada banco se genera un fichero
+    #     diferente.
+    #     """
+    #
+    #     class Line(object):
+    #         """Clase auxiliar para la generación de ficheros"""
+    #
+    #         def __init__(self, dict):
+    #             self.__dict__ = dict
+    #
+    #     exportFile = self.env['hr.dr.export.file']
+    #
+    #     lines = []
+    #     for rec in self:
+    #         lines.append(Line({"employee_id": rec.employee_id, "value": rec.net_salary,
+    #                            "reference":"LIQ/{}".format(rec.id)}))
+    #
+    #     messages = exportFile._create_text_files(lines, _('Assets Liquidation'))
+    #     if len(messages) > 0:
+    #         raise ValidationError(_("The documents couldn't be generated. Check errors below: \n-\t{}")
+    #                               .format("\n-\t".join(messages)))
+    #
+    #     return exportFile._compress_and_show('Assets Liquidation.zip')
+
+    def goto_payslip(self):
+        self.create_liquidation_payslip()
+        self.payslip_id.compute_sheet()
+
+        return {
+            'name': 'Liquidation payslip',
+            'res_model': 'hr.payslip',
+            'res_id': self.payslip_id.id,
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            # 'view_id': self.env.ref('hr_payroll.view_hr_payslip_form').id,
+            # 'target': 'new', # or 'self'
+        }
+
+    @api.onchange('employee_id')
+    def onchange_employee(self):
+        if self.employee_id.id:
+            contract_obj = self.env['hr.contract']
+            # TODO: Revisar si empleado tiene algún método implementado para obtener primer y último contrato, de no ser
+            #  así, crear las funcionalidades pues deberían obtenerse desde el objeto employee_id.
+            first_contract_id = contract_obj.search(
+                [('employee_id', '=', self.employee_id.id), ('state', '!=', 'draft')], order='id asc', limit=1
+            )
+            if first_contract_id.id:
+                self.date_from = first_contract_id.date_start
+            last_contract_id = contract_obj.search(
+                [('employee_id', '=', self.employee_id.id), ('state', '!=', 'draft')], order='id desc', limit=1
+            )
+            if last_contract_id.id:
+                self.contract_id = last_contract_id.id
+                if last_contract_id.date_end:
+                    self.date_to = last_contract_id.date_end
+                else:
+                    self.date_to = date.today()
+                    # self.contract_id.date_end = date.today()
+
+            self.last_wage = self.get_last_wage()
+            self.best_wage = self.get_best_wage()
+        else:
+            self.date_from = False
+            self.date_to = False
+            self.last_wage = 0.0
+            self.best_wage = 0.0
+
+    def create_liquidation_payslip(self):
+        if not self.payslip_id.id:
+            payslip_obj = self.env['hr.payslip']
+            # TODO: Revisar el tema de la cantidad de días en la nómina, si no debe tomar más de 30 días en el caso de
+            #  los meses largos.
+
+            self.payslip_id = payslip_obj.create({
+                'employee_id': self.employee_id.id,
+                'contract_id': self.contract_id.id,
+                'date_from': self.date_to.replace(day=1),
+                'date_to': self.date_to,
+                'is_liquidation_payslip': True,
+                'state': 'draft',
+                'name': _('Liquidation payslip for {}').format(self.employee_id.name),
+                'struct_id': self.get_structure_id(),
+                'input_line_ids': self.get_compensation_lines(),
+                'active': False
+            })
+
+            self.payslip_id.onchange_fields_affect_days_worked()
+            self.payslip_id.compute_sheet()
+            self.payslip_id.update({
+                'xiii_liquidation': self.get_xiii_amount(),
+                'xiv_liquidation': self.get_xiv_amount(),
+                'vacations_liquidation': self.get_vacations_amount()
+            })
+
+
+
+    def get_structure_id(self):
+        return self.contract_id.struct_id.id
+
+    def get_last_wage(self):
+        """Obtiene el último salario percibido entre las nóminas pagadas"""
+        last_payslip_id = self.env['hr.payslip'].search([
+            ('employee_id', '=', self.employee_id.id), ('state', '=', 'paid'), ('is_liquidation_payslip', '=', False)
+        ], order='date_to desc', limit=1)
+        taxable_income = self._get_taxable_incomes(last_payslip_id) if last_payslip_id.id else 0.00
+        return max(taxable_income, self.contract_id.wage)
+
+    def get_best_wage(self):
+        """Obtiene el mejor salario percibido entre las nóminas pagadas."""
+        payslip_ids = self.env['hr.payslip'].search([
+            ('employee_id', '=', self.employee_id.id), ('state', '=', 'paid'), ('is_liquidation_payslip', '=', False)
+        ])
+        value = 0.00
+        for payslip in payslip_ids:
+            taxable_income = self._get_taxable_incomes(payslip)
+            if value < taxable_income:
+                value = taxable_income
+        return max(value, self.get_last_wage())
+
+    def _get_taxable_incomes(self, payslip):
+        """Obtiene el valor total de ingresos aportables de una nómina."""
+        taxable_income = 0.00
+        for line in payslip.line_ids:
+            if line.category_id.code == 'INGRESOS':
+                taxable_income += line.total
+        return taxable_income
+
+    def get_compensation_lines(self):
+        lines = []
+
+        if self.amount > 0:  # Mutuo acuerdo
+            type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_compensation')
+            lines.append(self._prepare_input_line(type_id, self.amount))
+
+        if self.cause_id.code == 'C09':  # Despido intempestivo
+            years_started = self.years_started()
+            years = years_started if years_started > 3 else 3
+            amount = (min(years, 25) * self.last_wage)
+            if amount > 0:
+                type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_untimely_termination_compensation')
+                lines.append(self._prepare_input_line(type_id, amount))
+
+            if self.disability_deduction:  # Discapacidad
+                amount = (self.best_wage * 18)
+                if amount > 0:
+                    type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_disability_compensation')
+                    lines.append(self._prepare_input_line(type_id, amount))
+
+            if self.pregnant_woman:  # Embarazo
+                amount = (self.best_wage * 18)
+                if amount:
+                    if amount > 0:
+                        type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_pregnancy_compensation')
+                        lines.append(self._prepare_input_line(type_id, amount))
+
+            if self.union_leader:  # Líder sindical
+                amount = (self.last_wage * 12)
+                if amount:
+                    if amount > 0:
+                        type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_union_leader_compensation')
+                        lines.append(self._prepare_input_line(type_id, amount))
+
+        amount = (self.years_completed() * self.last_wage * 0.25)
+        if amount:
+            type_id = self.env.ref('hr_dr_payroll_enterprise.hr_payslip_input_type_eviction_compensation')
+            lines.append(self._prepare_input_line(type_id, amount))
+        return lines
+
+    def _prepare_input_line(self, type_id, amount):
+        """Prepara una input line para la nómina de liquidación."""
+
+        return (0, 0, {
+            'name': type_id.name,
+            'amount': amount,
+            'input_type_id': type_id.id,
+            'contract_id': self.contract_id.id,
+            'input_ids': [(0, 0, {
+                'name': type_id.name,
+                'date': self.date_to,
+                'payslip_input_type_id': type_id.id,
+                'employee_id': self.employee_id.id,
+                'amount': amount
+            })]
+        })
+
+    def years_started(self):
+        return ceil((self.date_to - self.date_from).days/365.2425)
+
+    def years_completed(self):
+        return floor((self.date_to - self.date_from).days/365.2425)
+
+    def get_xiv_period(self):
+        year = self.date_to.year
+        if self.region == 'sierra_oriente_fourteenth_salary':
+            if self.date_to.month > 6:
+                date_start = date(year, 7, 1)
+                date_end = date(year + 1, 6, 30)
+            else:
+                date_start = date(year - 1, 7, 1)
+                date_end = date(year, 6, 30)
+        if self.region == 'costa_fourteenth_salary':
+            if self.date_to.month > 2:
+                date_start = date(year, 3, 1)
+                date_end = self.date_to.replace(day=monthrange(year, self.date_to.month)[1])
+            else:
+                date_start = date(year - 1, 3, 1)
+                date_end = date(year, 2, 29) if isleap(year) else date(year, 2, 28)
+        return date_start, date_end
+
+    def get_xiii_period(self):
+        if self.date_to.month == 12:
+            year = self.date_to.year
+            date_start = date(year, 12, 1)
+            date_end = date(year, 12, 31)
+        else:
+            year = self.date_to.year
+            date_start = date(year - 1, 12, 1)
+            date_end = self.date_to.replace(day=monthrange(year, self.date_to.month)[1])
+        return date_start, date_end
+
+    def get_total_expenses(self):
+        return sum([abs(l.total) for l in self.payslip_id.line_ids if l.category_id.code == 'EGRESOS'
+                    or l.category_id.code == 'EGRESOS_PASIVOS'])
+
+    def get_total_incomes(self):
+        amount = sum([l.total for l in self.payslip_id.line_ids if l.category_id.code in ('INGRESOS', 'INGRESOS_NGBS')])
+        # amount -= self.calcule_sayings('ProvDec13')
+        # amount -= self.calcule_sayings('ProvDec14')
+        # amount -= self.calcule_sayings('VACACIONES')
+        return amount
+
+    def get_xiii_amount(self):
+        obj_payslip = self.env['hr.payslip']
+        date_start, date_end = self.get_xiii_period()
+        payslip_ids = obj_payslip.search([('employee_id', '=', self.employee_id.id), ('date_from', '>=', date_start),
+                                          ('date_to', '<=', date_end), ('state', '=', 'paid')])
+        total_amount = 0.00
+
+        # Calculando los valores acumulados hasta la fecha
+        for payslip in payslip_ids:
+            for line in payslip.line_ids:
+                if line.code == 'PROV_DTERCERO_ACUMULADO':
+                    total_amount += line.total
+        # Calculando el valor proporcional de la nómina generada
+        if self.payslip_id.id:
+
+            for l in self.payslip_id.line_ids:
+                print(l.category_id.code)
+
+            amount = sum(l.total for l in self.payslip_id.line_ids if l.category_id.code == 'INGRESOS') / 12
+            days = (self.date_to - self.date_to.replace(day=1)).days
+
+            # TODO: Tengo dudas si el proporcional aplica de esta forma o no es necesario ya que el total de ingresos ya
+            #  es proporcional
+            total_amount += amount * days / 30
+        print(total_amount)
+        return total_amount
+
+    def get_xiv_amount(self):
+        obj_payslip = self.env['hr.payslip']
+        date_start, date_end = self.get_xiv_period()
+        payslip_ids = obj_payslip.search([('employee_id', '=', self.employee_id.id), ('date_from', '>=', date_start),
+                                          ('date_to', '<=', date_end), ('state', '=', 'paid')])
+        total_amount = 0.00
+        # Calculando los valores acumulados hasta la fecha
+        for payslip in payslip_ids:
+            for line in payslip.line_ids:
+                if line.code == 'PROV_DCUARTO_ACUMULADO':
+                    total_amount += line.total
+
+        # Calculando el valor proporcional de la nómina generada
+        if self.payslip_id.id:
+            amount = (self.payslip_id.unified_basic_salary / 12.0) * (self.contract_id.daily_hours / self.contract_id.standard_daily_hours) * (self.payslip_id.worked_days / 30)
+            days = (self.date_to - self.date_to.replace(day=1)).days
+            total_amount += amount * days / 30
+        return total_amount
+
+    def get_vacations_amount(self):
+        obj_payslip = self.env['hr.payslip']
+        payslip_ids = obj_payslip.search([('employee_id', '=', self.employee_id.id), ('date_from', '>=', self.date_from),
+                                          ('date_to', '<=', self.date_to), ('state', '=', 'paid')])
+        total_amount = 0.00
+        for payslip in payslip_ids:
+            total_amount += self._get_vacation_amount_by_payslip(payslip)
+
+        # TODO: No estoy seguro si en la nómina actual hay que multiplicar el total por la proporción de días o no para
+        #    la provisión de vacaciones
+        if self.payslip_id.id:
+            total_amount += self._get_vacation_amount_by_payslip(self.payslip_id)
+        return total_amount
+
+    def _get_vacation_amount_by_payslip(self, payslip):
+        total_amount = 0.0
+        for line in payslip.line_ids:
+            if line.code == 'PROV_VACA':
+                total_amount += line.total
+            elif line.code in ['PAY_VACATIONS', 'VACATIONS_TAKEN']:
+                total_amount -= line.total
+        return total_amount
+
+    def get_rule(self, code):
+        obj_payslip = self.env['hr.payslip']
+        value = 0.00
+        if code == 'PROV_DTERCERO_ACUMULADO':
+            date_start, date_end = self.get_xiii_period()
+        elif code == 'PROV_DCUARTO_ACUMULADO':
+            date_start, date_end = self.get_xiv_period()
+        else:
+            if self.date_from.month <= self.date_to.month:
+                year = self.date_to.year
+            else:
+                year = self.date_to.year - 1
+
+            date_start = date(year, self.date_from.month, 1)
+            date_end = self.date_to.replace(day=monthrange(year, self.date_to.month)[1])
+
+        payslip_ids = obj_payslip.search([('employee_id', '=', self.employee_id.id), ('date_from', '>=', date_start),
+                                          ('date_to', '<=', date_end), ('state', '=', 'paid')])
+        for payslip in payslip_ids:
+            if code == 'PROV_VACA':
+                total = [line.total for line in payslip.line_ids if line.code == code][0]
+                date_start = date(date_start.year, date_start.month, self.date_from.day)
+                if payslip.date_from < date_start and int(31 - self.date_from.day) < payslip.worked_days_line_ids[0].number_of_days:
+                    value += (total / payslip.worked_days_line_ids[0].number_of_days) * int(31 - self.date_from.day)
+                else:
+                    value += total
+            else:
+                value += sum([line.total for line in payslip.line_ids if line.code in code])
+        return value
+
+# class HrAssetsLiquidationInput(models.Model):
+#     _name = 'hr.assets.liquidation.input'
+#     _description = 'Assets Liquidation Input'
+#     _order = 'assets_liquidation_id, sequence'
+#
+#     _TYPE = [
+#         ('income', _('Income')),
+#         ('expense', _('Expense')),
+#         ('other_expense', _('Expense with beneficiary')),
+#     ]
+#
+#     name = fields.Char(string='Description', required=True)
+#     assets_liquidation_id = fields.Many2one('hr.assets.liquidation', string='Assets Liquidation', required=True,
+#                                             ondelete='cascade', index=True)
+#     sequence = fields.Integer(required=True, index=True, default=10)
+#     code = fields.Char(required=True, help="The code that can be used in the salary rules")
+#     amount = fields.Float(help="It is used in computation. For e.g. A rule for sales having "
+#                                "1% commission of basic salary for per product can defined in expression "
+#                                "like result = inputs.SALEURO.amount * contract.wage*0.01.")
+#     contract_id = fields.Many2one('hr.contract', string='Contract', required=True,
+#         help="The contract for which applied this input")
+#     partner_id = fields.Many2one('res.partner', string='Beneficiary',
+#                                  help='')
+#     type = fields.Selection(_TYPE, string='Type',
+#                             help='')
+#
+#
+# class HrAssetsLiquidationWorkedDays(models.Model):
+#     _name = 'hr.assets.liquidation.worked_days'
+#     _description = 'Payslip Worked Days'
+#     _order = 'assets_liquidation_id, sequence'
+#
+#     name = fields.Char(string='Description', required=True)
+#     assets_liquidation_id = fields.Many2one('hr.assets.liquidation', string='Assets Liquidation', required=True,
+#                                             ondelete='cascade', index=True)
+#     sequence = fields.Integer(required=True, index=True, default=10)
+#     code = fields.Char(required=True, help="The code that can be used in the salary rules")
+#     number_of_days = fields.Float(string='Number of Days')
+#     number_of_hours = fields.Float(string='Number of Hours')
+#     contract_id = fields.Many2one('hr.contract', string='Contract', required=True,
+#         help="The contract for which applied this input")
+#
+#
+# class HrAssetsLiquidationLine(models.Model):
+#     _name = 'hr.assets.liquidation.line'
+#     _inherit = 'hr.salary.rule'
+#     _description = 'Assets Liquidation Line'
+#     _order = 'contract_id, sequence'
+#
+#     slip_id = fields.Many2one('hr.assets.liquidation', string='Assets Liquidation', required=True, ondelete='cascade')
+#     salary_rule_id = fields.Many2one('hr.salary.rule', string='Rule', required=True)
+#     employee_id = fields.Many2one('hr.employee', string='Collaborator', required=True, ondelete='cascade')
+#     contract_id = fields.Many2one('hr.contract', string='Contract', required=True, index=True)
+#     rate = fields.Float(string='Rate (%)', digits='Payroll Rate', default=100.0)
+#     amount = fields.Float(digits='Payroll')
+#     quantity = fields.Float(digits='Payroll', default=1.0)
+#     total = fields.Float(compute='_compute_total', string='Total', digits='Payroll', store=True)
+#     partner_id = fields.Many2one('res.partner', string='Beneficiary',
+#         help='Indica a favor de quien se realizará el asiento contable, util para retenciones legales')
+#     receivable_move_line_id = fields.Many2one( 'account.move.line', string='Asiento a pagar',
+#         help='''Cuando la regla salarial es de tipo "Movimientos Contables a Netear", indica el
+#             asiento contable que se pagaria con esta nomina, permitiendo su conciliación ''')
+#     move_line_ids = fields.One2many('account.move.line', 'assets_liquidation_line_id', string='Asientos vinculados',
+#         help='''Los asientos contables asociados a la línea del rol de pagos, útil para
+#             conciliar este asiento con el "Asiento a Pagar" cuando aplique''',
+#     )
+#
+#     @api.depends('quantity', 'amount', 'rate')
+#     def _compute_total(self):
+#         for line in self:
+#             line.total = float(line.quantity) * line.amount * line.rate / 100
+#
+#     @api.model_create_multi
+#     def create(self, vals_list):
+#         for values in vals_list:
+#             if 'employee_id' not in values or 'contract_id' not in values:
+#                 assets_liquidation = self.env['hr.assets.liquidation'].browse(values.get('slip_id'))
+#                 values['employee_id'] = values.get('employee_id') or assets_liquidation.employee_id.id
+#                 values['contract_id'] = values.get('contract_id') \
+#                                         or assets_liquidation.contract_id and assets_liquidation.contract_id.id
+#                 if not values['contract_id']:
+#                     raise UserError(_('You must set a contract to create an assets liquidation line.'))
+#         return super(HrAssetsLiquidationLine, self).create(vals_list)
+#
+#     def _get_partner_id(self, credit_account):
+#         """
+#         Get partner_id of slip line to use in account_move_line
+#         """
+#         # use partner of salary rule or fallback on employee's address
+#         register_partner_id = self.salary_rule_id.register_id.partner_id
+#         partner_id = register_partner_id.id or self.slip_id.employee_id.address_home_id.id
+#         if credit_account:
+#             if register_partner_id or self.salary_rule_id.account_credit.internal_type in ('receivable', 'payable'):
+#                 return partner_id
+#         else:
+#             if register_partner_id or self.salary_rule_id.account_debit.internal_type in ('receivable', 'payable'):
+#                 return partner_id
+#
+#         return self.slip_id.employee_id.address_home_id.id
+#
+#
+# class AccountMoveLine(models.Model):
+#     _inherit = 'account.move.line'
+#
+#     # Columns
+#     assets_liquidation_line_id = fields.Many2one(
+#         'hr.assets.liquidation.line',
+#         string='Detalle Rol Pagos',
+#         index=True,  # performance
+#         help='Vincula los lineas de asiento contable con las lineas de rol de pagos,\n'
+#              'Util para cruzar los asientos de rol de pagos con sus facturas a empleados',
+#     )
+#     assets_liquidation_id = fields.Many2one(
+#         string='Rol Pagos',
+#         related='assets_liquidation_line_id.slip_id',
+#         help='Vincula los lineas de asiento contable con su rol de pagos',
+#     )
