@@ -16,7 +16,7 @@ from . import hr_payment_utility
 from . import hr_tenths
 from . import retired_employees
 from . import hr_pay_living_wage
-from . import hr_personal_expense
 from . import hr_payslip_run
 from . import hr_payslip_line
 from . import hr_assets_liquidation
+from . import hr_salary_rule
