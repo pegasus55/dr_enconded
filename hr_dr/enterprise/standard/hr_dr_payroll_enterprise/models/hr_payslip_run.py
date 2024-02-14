@@ -182,23 +182,19 @@ class HrPayslipRun(models.Model):
         sheet.merge_range(row, col + 1, row + 1, col + 1, 'Localidad', bold_title)
         sheet.merge_range(row, col + 2, row + 1, col + 2, 'Área', bold_title)
         sheet.merge_range(row, col + 3, row + 1, col + 3, 'Departamento', bold_title)
-        sheet.merge_range(row, col + 4, row + 1, col + 4, 'Empleado', bold_title)
+        sheet.merge_range(row, col + 4, row + 1, col + 4, 'Colaborador', bold_title)
         sheet.merge_range(row, col + 5, row + 1, col + 5, 'Cédula', bold_title)
         sheet.merge_range(row, col + 6, row + 1, col + 6, 'Días Trabajados', bold_title)
         # sheet.merge_range(row, col + 7, row + 1, col + 7, 'Sueldo', bold_title)
 
         rules = Rules()
 
-        show_qty_codes = ['HORA_NOCTURNA', 'HORA_EXTRA_SUPLEMENTARIA', 'HORA_EXTRA_EXTRAORDINARIA',
-                          'HORA_NOCTURNA_PREVIOUS_YEAR', 'HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR',
-                          'HORA_EXTRA_EXTRAORDINARIA_PREVIOUS_YEAR']
         for slip_id in self.slip_ids:
             inputs = slip_id.input_line_ids
             for line_id in slip_id.line_ids:
-                if line_id.appears_on_payslip:
+                if line_id.salary_rule_id.appears_on_payroll_report:
                     qty = line_id.quantity
                     show_qty = False
-                    # if line_id.code in show_qty_codes:
                     if line_id.salary_rule_id.show_input_value:
                         show_qty = True
                         for input in inputs:
