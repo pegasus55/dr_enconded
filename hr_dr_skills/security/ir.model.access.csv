@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
-access_hr_dr_skills_hr_skill_category_bu,hr_dr_skills.hr_skill_category,model_hr_skill_category,base.group_user,1,0,0,0
-access_hr_dr_skills_hr_skill_category_hru,hr_dr_skills.hr_skill_category,model_hr_skill_category,hr.group_hr_user,1,0,0,0
-access_hr_dr_skills_hr_skill_category_hrm,hr_dr_skills.hr_skill_category,model_hr_skill_category,hr.group_hr_manager,1,1,1,1
-
-access_hr_dr_skills_hr_minimal_skill_bu,hr_dr_skills.hr_minimal_skill,model_hr_minimal_skill,base.group_user,1,0,0,0
-access_hr_dr_skills_hr_minimal_skill_hru,hr_dr_skills.hr_minimal_skill,model_hr_minimal_skill,hr.group_hr_user,1,0,0,0
-access_hr_dr_skills_hr_minimal_skill_hrm,hr_dr_skills.hr_minimal_skill,model_hr_minimal_skill,hr.group_hr_manager,1,1,1,1

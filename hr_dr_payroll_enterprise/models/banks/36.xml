@@ -1,2 +1,0 @@
-{% for employee in employees %}PA	{{employee.bank_account}}	{{loop.index}}	{{employee.vat}}	{{employee.vat}}	USD	{{employee.amount.replace('.','')}}	CTA	{{employee.code}}	{{employee.account_type}}	{{employee.account_number}}	{{employee.id_type}}	{{employee.vat}}	{{employee.name}}	{{employee.street}}	{{employee.city}}	{{employee.phone}}		{{employee.reference}}	{{employee.email}}
-{% endfor %}

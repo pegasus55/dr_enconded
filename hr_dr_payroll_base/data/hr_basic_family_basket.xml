@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <data noupdate="1">
-        <record id="hr_basic_family_basket_01" model="hr.basic.family.basket">
-            <field name="fiscal_year">2023</field>
-            <field name="value">764.71</field>
-        </record>
-    </data>
-</odoo>
