@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_dr_contract_public_hr_pay_scale_losep,hr_dr_contract_public.hr_pay_scale_losep,model_hr_pay_scale_losep,hr_contract.group_hr_contract_manager,1,1,1,1

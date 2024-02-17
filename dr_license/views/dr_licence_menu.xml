@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <menuitem id="menu_dr_licence" name="Licenses" sequence="0" groups="dr_license.dr_license_group_user" web_icon="dr_license,static/description/icon.png"/>
+
+            <menuitem id="menu_license" name="Licenses" parent="menu_dr_licence" sequence="10" groups="dr_license.dr_license_group_user"/>
+                <menuitem id="menu_license_licenses" name="Licenses" parent="menu_license" action="dr_license.license_list_action" groups="dr_license.dr_license_group_user" sequence="10"/>
+                <menuitem id="menu_license_devices" name="Devices" parent="menu_license" action="dr_license.license_device_list_action" groups="dr_license.dr_license_group_user" sequence="20"/>
+
+            <record id="license_configuration_settings_action" model="ir.actions.act_window">
+                <field name="name">Settings</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">res.config.settings</field>
+                <field name="view_mode">form</field>
+                <field name="target">inline</field>
+                <field name="context">{'module' : 'dr_license'}</field>
+            </record>
+
+            <menuitem id="menu_configuration" name="Configuration" parent="menu_dr_licence" sequence="20" groups="dr_license.dr_license_group_manager"/>
+                <menuitem id="menu_configuration_settings" name="Settings" parent="menu_configuration" sequence="10" groups="dr_license.dr_license_group_manager" action="license_configuration_settings_action"/>
+                <menuitem id="menu_configuration_device_brand" name="Device brands" parent="menu_configuration" action="dr_license.device_brand_list_action" sequence="20" groups="dr_license.dr_license_group_manager"/>
+                <menuitem id="menu_configuration_device_brand_model" name="Device models" parent="menu_configuration" action="dr_license.device_brand_model_list_action" sequence="30" groups="dr_license.dr_license_group_manager"/>
+                <menuitem id="menu_configuration_normative_license" name="Normative licenses" parent="menu_configuration" action="dr_license.normative_license_list_action" sequence="35" groups="dr_license.dr_license_group_manager"/>
+                <menuitem id="menu_configuration_salable_module" name="Salable modules" parent="menu_configuration" action="dr_license.salable_module_list_action" sequence="40" groups="dr_license.dr_license_group_manager"/>
+
+    </data>
+</odoo>

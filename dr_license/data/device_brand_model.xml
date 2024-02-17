@@ -1,0 +1,272 @@
+<odoo>
+    <data noupdate="1">
+        <record model="dr.device.brand.model" id="dr_device_brand_model_1">
+            <field name="name">D1</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_2">
+            <field name="name">D2</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_3">
+            <field name="name">G1</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_4">
+            <field name="name">G2</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_5">
+            <field name="name">G3</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_6">
+            <field name="name">G3Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_7">
+            <field name="name">G3Pro</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_8">
+            <field name="name">G3-H</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_9">
+            <field name="name">G4</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_10">
+            <field name="name">G4L</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_11">
+            <field name="name">Horus E1</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_12">
+            <field name="name">Horus E1-FP</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_13">
+            <field name="name">Horus E1-RFID</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_14">
+            <field name="name">Horus TL1</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_15">
+            <field name="name">iClock 660</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_16">
+            <field name="name">iClock 880</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_17">
+            <field name="name">iClock 990</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_18">
+            <field name="name">IN05 / IN05A</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_19">
+            <field name="name">K14</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_20">
+            <field name="name">K20</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_21">
+            <field name="name">K30</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_22">
+            <field name="name">K40</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_k50">
+            <field name="name">K50</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_23">
+            <field name="name">KF160</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_24">
+            <field name="name">KF460</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_25">
+            <field name="name">LP400</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_26">
+            <field name="name">LX14</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_27">
+            <field name="name">LX50</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_28">
+            <field name="name">MB10-VL</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_29">
+            <field name="name">MB160</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_30">
+            <field name="name">MB20</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_31">
+            <field name="name">MB360</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_32">
+            <field name="name">MB460</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_33">
+            <field name="name">P160</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_34">
+            <field name="name">P200</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_35">
+            <field name="name">P260</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_36">
+            <field name="name">PFace 202</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_37">
+            <field name="name">S1000</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_38">
+            <field name="name">S922</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_39">
+            <field name="name">SFace 900</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_40">
+            <field name="name">SilkBio-100TC</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_41">
+            <field name="name">SilkBio-101TC</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_42">
+            <field name="name">SilkFP-101TA</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_43">
+            <field name="name">TDM95</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_44">
+            <field name="name">TDM95E</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_45">
+            <field name="name">UA300</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_46">
+            <field name="name">UA400</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_47">
+            <field name="name">UA500</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_48">
+            <field name="name">UA760</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_49">
+            <field name="name">UA860</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_50">
+            <field name="name">uFace 202</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_51">
+            <field name="name">uFace 202 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_52">
+            <field name="name">uFace 302</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_53">
+            <field name="name">uFace 302 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_54">
+            <field name="name">uFace 401</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_55">
+            <field name="name">uFace 401 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_56">
+            <field name="name">uFace 402</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_57">
+            <field name="name">uFace 402 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_58">
+            <field name="name">uFace 602</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_59">
+            <field name="name">uFace 602 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_60">
+            <field name="name">uFace 800</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_61">
+            <field name="name">uFace 800 Plus</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_62">
+            <field name="name">WL10</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_63">
+            <field name="name">WL20</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_64">
+            <field name="name">WL30</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_65">
+            <field name="name">X628-C</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+        <record model="dr.device.brand.model" id="dr_device_brand_model_66">
+            <field name="name">X628-TC</field>
+            <field name="brand_id" ref = "dr_license.dr_device_brand_zkteco"/>
+        </record>
+    </data>
+</odoo>

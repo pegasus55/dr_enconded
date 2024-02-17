@@ -1,0 +1,586 @@
+<odoo>
+    <data>
+        <!--Staff requirement request-->
+        <record id="hr_staff_requirement_request_view_tree" model="ir.ui.view">
+            <field name="name">hr.staff.requirement.request.view.tree</field>
+            <field name="model">hr.staff.requirement.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'rejected'" decoration-success="state == 'approved'"
+                      decoration-muted="state in ['cancelled','draft']" decoration-primary="state == 'pending'">
+                    <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)"/>
+                    <field name="department_employee_requests_id"/>
+                    <field name="type"/>
+                    <field name="quantity"/>
+                    <field name="employee_to_replace_id"/>
+                    <field name="date_incorporation"/>
+                    <field name="job_id"/>
+                    <field name="process_duration" />
+                    <field name="anticipation_days" />
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_staff_requirement_request_view_form" model="ir.ui.view">
+            <field name="name">hr.staff.requirement.request.view.form</field>
+            <field name="model">hr.staff.requirement.request</field>
+            <field name="arch" type="xml">
+                <form string="Staff requirement request">
+                    <header>
+                        <button string="Confirm request" type="object"
+                                name="confirm_request"
+                                confirm="Are you sure you want to confirm this staff requirement request?"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button string="Register request" type="object"
+                                name="confirm_request_direct"
+                                groups="hr_recruitment.group_hr_recruitment_manager"
+                                confirm="Are you sure you want to register this staff requirement request?"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button string="Cancel request" type="object"
+                                name="cancel_request"
+                                confirm="Are you sure you want to cancel this staff requirement request?"
+                                attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="department_employee_requests_id"/>
+                                <field name="type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="quantity" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="employee_to_replace_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="date_incorporation" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="reason_reject" attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                            </group>
+                            <group>
+                                <field name="job_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="position_id"/>
+                                <field name="department_id"/>
+                                <field name="address_id" />
+                                <field name="process_duration" />
+                                <field name="anticipation_days" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="commentary" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="reason_anticipation_days" />
+                        </group>
+                        <notebook>
+                            <page string="Tracing">
+                                <field name="notification_ids" nolabel="1">
+                                    <tree>
+                                        <field name="level"/>
+                                        <field name="employee_approve_id"/>
+                                        <field name="commentary"/>
+                                        <field name="state"/>
+                                        <field name="send"/>
+                                        <field name="processed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="user_confirmation"/>
+                                        <field name="user_cancellation"/>
+                                    </group>
+                                    <group>
+                                        <field name="date_confirmation"/>
+                                        <field name="date_cancellation"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="hr_staff_requirement_request_view_search" model="ir.ui.view">
+          <field name="name">hr.staff.requirement.request.view.search</field>
+          <field name="model">hr.staff.requirement.request</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="employee_requests_id"/>
+                  <field name="department_employee_requests_id"/>
+                  <field name="type"/>
+                  <field name="job_id"/>
+                  <field name="position_id"/>
+                  <field name="department_id"/>
+                  <field name="state"/>
+
+                  <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                  <filter name="filter_state_pending" string="Pending" domain="[('state', '=', 'pending')]"/>
+                  <filter name="filter_state_cancelled" string="Cancelled" domain="[('state', '=', 'cancelled')]"/>
+                  <filter name="filter_state_approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                  <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_employee_requests_id" string="Collaborator"
+                                context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_department_employee_requests_id" string="Department collaborator"
+                                context="{'group_by' : 'department_employee_requests_id'}"/>
+                        <filter name="group_type" string="Type" context="{'group_by' : 'type'}"/>
+                        <filter name="group_job_id" string="Job" context="{'group_by' : 'job_id'}"/>
+                        <filter name="group_position_id" string="Position" context="{'group_by' : 'position_id'}"/>
+                        <filter name="group_department_id" string="Department"
+                                context="{'group_by' : 'department_id'}"/>
+                        <filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+                    </group>
+
+              </search>
+          </field>
+        </record>
+        <record model="ir.actions.act_window" id="staff_requirement_request_action_my">
+            <field name="name">My staff requirement request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.staff.requirement.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+            <field name="context">{
+                    'invisible_employee_requests_id': True,
+                    "create_edit_without_restrictions": False,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">My staff requirement request.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="staff_requirement_request_action_all">
+            <field name="name">All staff requirement request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.staff.requirement.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{
+                    'invisible_employee_requests_id': False,
+                    "create_edit_without_restrictions": True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">All staff requirement request.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="staff_requirement_request_action_notifications_to_process">
+            <field name="name">Notifications to process for staff requirement request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'hr.staff.requirement.request'),
+                ('user_employee_approve_id', '=',uid),
+                ('send', '=',True),
+                ('state', '=','pending'),
+                ('processed', '=',False)
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Notifications to process for staff requirement request.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="staff_requirement_request_action_notifications_all">
+            <field name="name">All notifications for staff requirement request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'hr.staff.requirement.request')
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">All notifications for staff requirement request.
+                </p>
+            </field>
+        </record>
+        <!--Staff requirement request-->
+
+        <!--Process staff requirement-->
+        <record id="hr_process_staff_requirement_view_tree" model="ir.ui.view">
+            <field name="name">hr.process.staff.requirement.view.tree</field>
+            <field name="model">hr.process.staff.requirement</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'finalized'" decoration-success="state == 'in_progress'"
+                      decoration-muted="state in ['cancelled','draft']">
+                    <field name="name"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_process_staff_requirement_view_form" model="ir.ui.view">
+            <field name="name">hr.process.staff.requirement.view.form</field>
+            <field name="model">hr.process.staff.requirement</field>
+            <field name="arch" type="xml">
+                <form string="Process staff requirement">
+                    <header>
+                        <button string="Start" type="object"
+                            name="start" attrs="{'invisible': [('state', '!=', 'draft')]}"
+                                groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+                        <button string="Mark as draft" type="object"
+                            name="mark_as_draft" attrs="{'invisible': [('state', 'in', ['draft','finalized'])]}"
+                                groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+                        <button string="Mark as cancelled" type="object"
+                            name="mark_as_cancelled" attrs="{'invisible': [('state', '!=', 'in_progress')]}"
+                                groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+                        <button string="Finalize" type="object"
+                            name="finalize" attrs="{'invisible': [('state', '!=', 'in_progress')]}"
+                                groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+                        <button string="Create schedule details" type="object"
+                            name="create_schedule_details" groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,in_progress,cancelled,finalized"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="staff_requirement_request"/>
+                                <field name="employee_requests_id"/>
+                                <field name="department_employee_requests_id"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="quantity"/>
+                                <field name="job_id"/>
+                                <field name="position_id"/>
+                                <field name="department_id"/>
+                                <field name="address_id"/>
+                                <field name="employee_to_replace_id"/>
+                                <field name="date_incorporation"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Schedule">
+                                <field
+                                        name="schedule_process_staff_requirement_ids"
+                                        nolabel="1">
+                                    <tree>
+                                        <field name="sequence"/>
+                                        <field name="stage_id"/>
+                                        <field name="date_from"/>
+                                        <field name="date_to"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="sequence"/>
+                                                    <field name="stage_id"/>
+                                                </group>
+                                                <group>
+                                                    <field name="date_from"/>
+                                                    <field name="date_to"/>
+                                                </group>
+                                            </group>
+                                            <notebook>
+                                                <page string="Details">
+                                                    <field
+                                                            name="detail_ids"
+                                                            nolabel="1">
+                                                        <tree>
+                                                            <field name="day_global"/>
+                                                            <field name="day_stage"/>
+                                                            <field name="calendar_day"/>
+                                                            <field name="is_holiday"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                                <page string="Involved">
+                                                    <field
+                                                            name="employee_ids"
+                                                            nolabel="1">
+                                                        <tree>
+                                                            <field name="name"/>
+                                                            <field name="department_id"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+
+                                </field>
+                            </page>
+                            <page string="Schedule details">
+                                <field
+                                        name="schedule_detail_ids"
+                                        nolabel="1">
+                                    <tree>
+                                        <field name="day_global"/>
+                                        <field name="day_stage"/>
+                                        <field name="calendar_day"/>
+                                        <field name="is_holiday"/>
+                                    </tree>
+
+                                </field>
+                            </page>
+                            <page string="Applicant">
+                                <field name="applicant_ids" nolabel="1">
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="hr_process_staff_requirement_view_search" model="ir.ui.view">
+          <field name="name">hr.process.staff.requirement.view.search</field>
+          <field name="model">hr.process.staff.requirement</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <field name="employee_requests_id"/>
+                  <field name="department_employee_requests_id"/>
+                  <field name="type"/>
+                  <field name="job_id"/>
+                  <field name="position_id"/>
+                  <field name="department_id"/>
+                  <field name="state"/>
+
+                  <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                  <filter name="filter_state_pending" string="Pending" domain="[('state', '=', 'pending')]"/>
+                  <filter name="filter_state_cancelled" string="Cancelled" domain="[('state', '=', 'cancelled')]"/>
+                  <filter name="filter_state_approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                  <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_employee_requests_id" string="Collaborator"
+                                context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_department_employee_requests_id" string="Department collaborator"
+                                context="{'group_by' : 'department_employee_requests_id'}"/>
+                        <filter name="group_type" string="Type" context="{'group_by' : 'type'}"/>
+                        <filter name="group_job_id" string="Job" context="{'group_by' : 'job_id'}"/>
+                        <filter name="group_position_id" string="Position" context="{'group_by' : 'position_id'}"/>
+                        <filter name="group_department_id" string="Department"
+                                context="{'group_by' : 'department_id'}"/>
+                        <filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+                    </group>
+
+              </search>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_process_staff_requirement_action_my">
+            <field name="name">My process staff requirement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.process.staff.requirement</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">My process staff requirement.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_process_staff_requirement_action_all">
+            <field name="name">All process staff requirement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.process.staff.requirement</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">All process staff requirement.
+                </p>
+            </field>
+        </record>
+        <!--Process staff requirement-->
+
+        <!--Job-->
+        <record model="ir.ui.view" id="view_hr_job_form_inherit">
+            <field name="name">view_hr_job_form_inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='no_of_recruitment']" position="before">
+                    <field name="total" required="True"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_job_simple_form_inherit">
+            <field name="name">hr_job_simple_form_inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_job_simple_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="company_id" invisible="1"/>
+                    <field name="position_id"/>
+                    <field name="department_id"/>
+                </xpath>
+            </field>
+        </record>
+        <!--Job-->
+
+        <!--Applicant-->
+        <record model="ir.ui.view" id="crm_case_form_view_job_inherit">
+            <field name="name">crm_case_form_view_job_inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="process_staff_requirement_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='description']" position="after">
+                    <notebook>
+                        <page string="Stage Score">
+                            <div class="oe_edit_only" attrs="{'invisible':[('stage_id', '=', False)]}">
+                                <label for="score"/>
+                                <field name="score" widget="priority"/>
+                            </div>
+                            <div class="oe_read_only">
+                                <field name="applicant_stage_score_ids">
+                                    <tree decoration-info="is_applicant_current_stage_score">
+                                        <field name="is_applicant_current_stage_score" invisible="1"/>
+                                        <field name="stage_id"/>
+                                        <field name="score" widget="priority"/>
+                                    </tree>
+                                </field>
+                            </div>
+                        </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+        <!--Applicant-->
+
+        <!--Scheme schedule process staff requirement-->
+        <record id="hr_scheme_schedule_process_staff_requirement_view_tree" model="ir.ui.view">
+            <field name="name">hr.scheme.schedule.process.staff.requirement.view.tree</field>
+            <field name="model">hr.scheme.schedule.process.staff.requirement</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="mode"/>
+                    <field name="position_id"/>
+                    <field name="job_id"/>
+                    <field name="sequence"/>
+                    <field name="stage_id"/>
+                    <field name="working_days"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_scheme_schedule_process_staff_requirement_view_form" model="ir.ui.view">
+            <field name="name">hr.scheme.schedule.process.staff.requirement.view.form</field>
+            <field name="model">hr.scheme.schedule.process.staff.requirement</field>
+            <field name="arch" type="xml">
+                <form string="Scheme schedule process staff requirement">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="mode"/>
+                                <field name="position_id" attrs="{'invisible': [('mode','=','by_job')], 'required': [('mode','=','by_position')]}"/>
+                                <field name="job_id" attrs="{'invisible': [('mode','=','by_position')], 'required': [('mode','=','by_job')]}"/>
+                                <field name="sequence"/>
+                            </group>
+                            <group>
+                                <field name="stage_id"/>
+                                <field name="working_days"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Involved">
+                                <field name="employee_ids" nolabel="1">
+                                    <tree>
+                                        <field name="name" string="Collaborator name"/>
+                                        <field name="department_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="hr_scheme_schedule_process_staff_requirement_view_search" model="ir.ui.view">
+          <field name="name">hr.scheme.schedule.process.staff.requirement.view.search</field>
+          <field name="model">hr.scheme.schedule.process.staff.requirement</field>
+          <field name="arch" type="xml">
+              <search>
+                    <field name="mode"/>
+                    <field name="position_id"/>
+                    <field name="job_id"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_mode" string="Mode" context="{'group_by' : 'mode'}"/>
+                        <filter name="group_position_id" string="Position" context="{'group_by' : 'position_id'}"/>
+                        <filter name="group_job_id" string="Job" context="{'group_by' : 'job_id'}"/>
+                    </group>
+
+              </search>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_scheme_schedule_process_staff_requirement_action">
+            <field name="name">Scheme schedule process staff requirement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.scheme.schedule.process.staff.requirement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Scheme schedule process staff requirement.
+                </p>
+            </field>
+        </record>
+        <record id="hr_scheme_schedule_process_staff_requirement_action_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="hr_scheme_schedule_process_staff_requirement_action"/>
+            <field name="view_id" ref="hr_scheme_schedule_process_staff_requirement_view_tree"/>
+        </record>
+        <record id="hr_scheme_schedule_process_staff_requirement_action_view_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="act_window_id" ref="hr_scheme_schedule_process_staff_requirement_action"/>
+            <field name="view_id" ref="hr_scheme_schedule_process_staff_requirement_view_form"/>
+        </record>
+        <!--Scheme schedule process staff requirement-->
+
+        <!--Degree-->
+        <record model="ir.ui.view" id="hr_recruitment_degree_tree_inherit">
+            <field name="name">hr_recruitment_degree_tree_inherit</field>
+            <field name="model">hr.recruitment.degree</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_recruitment_degree_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="active" widget="boolean_toggle"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_recruitment_degree_form_inherit">
+            <field name="name">hr_recruitment_degree_form_inherit</field>
+            <field name="model">hr.recruitment.degree</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_recruitment_degree_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="active" widget="boolean_toggle"/>
+                </xpath>
+            </field>
+        </record>
+        <!--Degree-->
+    </data>
+</odoo>

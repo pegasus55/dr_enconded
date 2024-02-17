@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <menuitem id="menu_hr_dr_personal_action_root" name="Personal action" sequence="5" groups="hr_dr_personal_action.hr_dr_personal_action_group_employee" web_icon="hr_dr_personal_action,static/description/icon.png"/>
+
+
+
+            <record id="personal_action_settings_action" model="ir.actions.act_window">
+                <field name="name">Settings</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">res.config.settings</field>
+                <field name="view_mode">form</field>
+                <field name="target">inline</field>
+                <field name="context">{'module' : 'hr_dr_personal_action'}</field>
+            </record>
+
+            <menuitem id="menu_hr_dr_personal_action_configuration" name="Configuration" parent="menu_hr_dr_personal_action_root" sequence="100" groups="hr_dr_personal_action.hr_dr_personal_action_group_manager"/>
+                <menuitem id="menu_hr_dr_personal_action_configuration_settings" name="Settings" parent="menu_hr_dr_personal_action_configuration" action="personal_action_settings_action" sequence="10" groups="hr_dr_personal_action.hr_dr_personal_action_group_manager"/>
+                <menuitem id="menu_hr_dr_personal_action_personal_action_type" name="Personal action type" parent="menu_hr_dr_personal_action_configuration" action="personal_action_type_list_action" sequence="20" groups="hr_dr_personal_action.hr_dr_personal_action_group_manager"/>
+                <menuitem id="menu_hr_dr_personal_action_personal_action_subtype" name="Personal action subtype" parent="menu_hr_dr_personal_action_configuration" action="personal_action_subtype_list_action" sequence="30" groups="hr_dr_personal_action.hr_dr_personal_action_group_manager"/>
+    </data>
+</odoo>

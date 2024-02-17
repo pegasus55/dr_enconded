@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <!--Branch economic activity-->
+        <record model="ir.actions.act_window" id="branch_economic_activity_list_action">
+            <field name="name">Branch economic activity</field>
+            <field name="res_model">hr.branch.economic.activity</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the branch economic activity.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="branch_economic_activity_list">
+            <field name="name">Branch economic activity list</field>
+            <field name="model">hr.branch.economic.activity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="number"/>
+                    <field name="name"/>
+                    <field name="sector_commission_id"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="branch_economic_activity_search">
+            <field name="name">Branch economic activity search</field>
+            <field name="model">hr.branch.economic.activity</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="sector_commission_id"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="sector_commission_id" string="Sector commission"
+                                context="{'group_by' : 'sector_commission_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="branch_economic_activity_form">
+            <field name="name">Branch economic activity form</field>
+            <field name="model">hr.branch.economic.activity</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="sector_commission_id"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <menuitem
+            id="menu_hr_branch_economic_activity"
+            action="branch_economic_activity_list_action"
+            parent="menu_hr_sector_table_root"
+            sequence="30"/>
+        <!--Branch economic activity-->
+    </data>
+</odoo>

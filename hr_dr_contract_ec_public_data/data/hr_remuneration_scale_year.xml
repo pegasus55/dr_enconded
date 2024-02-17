@@ -1,0 +1,106 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPS1">
+            <field name="remuneration_scale_id" ref = "SPS1"/>
+            <field name="year">2024</field>
+            <field name="remuneration">527</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPS2">
+            <field name="remuneration_scale_id" ref = "SPS2"/>
+            <field name="year">2024</field>
+            <field name="remuneration">553</field>
+        </record>
+
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPA1">
+            <field name="remuneration_scale_id" ref = "SPA1"/>
+            <field name="year">2024</field>
+            <field name="remuneration">585</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPA2">
+            <field name="remuneration_scale_id" ref = "SPA2"/>
+            <field name="year">2024</field>
+            <field name="remuneration">622</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPA3">
+            <field name="remuneration_scale_id" ref = "SPA3"/>
+            <field name="year">2024</field>
+            <field name="remuneration">675</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SPA4">
+            <field name="remuneration_scale_id" ref = "SPA4"/>
+            <field name="year">2024</field>
+            <field name="remuneration">733</field>
+        </record>
+
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP1">
+            <field name="remuneration_scale_id" ref = "SP1"/>
+            <field name="year">2024</field>
+            <field name="remuneration">817</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP2">
+            <field name="remuneration_scale_id" ref = "SP2"/>
+            <field name="year">2024</field>
+            <field name="remuneration">901</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP3">
+            <field name="remuneration_scale_id" ref = "SP3"/>
+            <field name="year">2024</field>
+            <field name="remuneration">986</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP4">
+            <field name="remuneration_scale_id" ref = "SP4"/>
+            <field name="year">2024</field>
+            <field name="remuneration">1086</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP5">
+            <field name="remuneration_scale_id" ref = "SP5"/>
+            <field name="year">2024</field>
+            <field name="remuneration">1212</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP6">
+            <field name="remuneration_scale_id" ref = "SP6"/>
+            <field name="year">2024</field>
+            <field name="remuneration">1412</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP7">
+            <field name="remuneration_scale_id" ref = "SP7"/>
+            <field name="year">2024</field>
+            <field name="remuneration">1676</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP8">
+            <field name="remuneration_scale_id" ref = "SP8"/>
+            <field name="year">2024</field>
+            <field name="remuneration">1760</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP9">
+            <field name="remuneration_scale_id" ref = "SP9"/>
+            <field name="year">2024</field>
+            <field name="remuneration">2034</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP10">
+            <field name="remuneration_scale_id" ref = "SP10"/>
+            <field name="year">2024</field>
+            <field name="remuneration">2308</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP11">
+            <field name="remuneration_scale_id" ref = "SP11"/>
+            <field name="year">2024</field>
+            <field name="remuneration">2472</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP12">
+            <field name="remuneration_scale_id" ref = "SP12"/>
+            <field name="year">2024</field>
+            <field name="remuneration">2641</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP13">
+            <field name="remuneration_scale_id" ref = "SP13"/>
+            <field name="year">2024</field>
+            <field name="remuneration">2967</field>
+        </record>
+        <record model="hr.remuneration.scale.year" id="remuneration_scale_year_SP14">
+            <field name="remuneration_scale_id" ref = "SP14"/>
+            <field name="year">2024</field>
+            <field name="remuneration">3542</field>
+        </record>
+    </data>
+</odoo>

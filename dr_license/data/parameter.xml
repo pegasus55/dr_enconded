@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="license_anticipation_days" model="ir.config_parameter">
+            <field name="key">license.anticipation.days</field>
+            <field name="value">15</field>
+        </record>
+        <record id="license_email_for_notification" model="ir.config_parameter">
+            <field name="key">license.email.for.notification</field>
+            <field name="value">drodriguez@nukleosolutions.com,dainovy.rodriguez@gmail.com</field>
+        </record>
+    </data>
+</odoo>

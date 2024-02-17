@@ -1,0 +1,1123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dr_license
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-03 13:48+0000\n"
+"PO-Revision-Date: 2023-06-03 13:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__1
+msgid "1 Month"
+msgstr "1 Mes"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__12
+msgid "12 Months"
+msgstr "12 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__15
+msgid "15 Months"
+msgstr "15 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__18
+msgid "18 Months"
+msgstr "18 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__24
+msgid "24 Months"
+msgstr "24 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__3
+msgid "3 Months"
+msgstr "3 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__6
+msgid "6 Months"
+msgstr "6 Meses"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_renew_license__period__9
+msgid "9 Months"
+msgstr "9 Meses"
+
+#. module: dr_license
+#: model:mail.template,body_html:dr_license.email_template_notify_approach_to_license_expiration_date_admin
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear(s),<br><br>\n"
+"                        It is reported that the <strong>Nukleo</strong> license of the <span style=\"font-weight:bold;\" t-out=\"object.name\"></span> client will expire on <span style=\"font-weight:bold;\" t-out=\"object.expiration_date.strftime('%d/%m/%Y')\"></span>.<br><br>\n"
+"                        <strong>Client data</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Name:</strong> <span t-out=\"object.name\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.vat\">\n"
+"                            <strong>Identification:</strong> <span t-out=\"object.vat\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.email\">\n"
+"                            <strong>Email:</strong> <span t-out=\"object.customer_id.email\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.mobile\">\n"
+"                            <strong>Mobile:</strong> <span t-out=\"object.customer_id.mobile\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.phone\">\n"
+"                            <strong>Phone:</strong> <span t-out=\"object.customer_id.phone\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, contact technical support.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que la licencia de <strong>Nukleo</strong> del cliente <span style=\"font-weight:bold;\" t-out=\"object.name\"></span> expirará el <span style=\"font-weight:bold;\" t-out=\"object.expiration_date.strftime('%d/%m/%Y')\"></span>.<br><br>\n"
+"                        <strong>Datos del cliente</strong><br>\n"
+"                        <t t-if=\"object.name\">\n"
+"                            <strong>Nombre:</strong> <span t-out=\"object.name\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.vat\">\n"
+"                            <strong>Identificación:</strong> <span t-out=\"object.vat\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.email\">\n"
+"                            <strong>Correo:</strong> <span t-out=\"object.customer_id.email\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.mobile\">\n"
+"                            <strong>Móvil:</strong> <span t-out=\"object.customer_id.mobile\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.customer_id.phone\">\n"
+"                            <strong>Teléfono:</strong> <span t-out=\"object.customer_id.phone\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo electrónico es automático, por favor no lo responda. Si tiene alguna inquietud, póngase en contacto con soporte técnico.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: dr_license
+#: model:mail.template,body_html:dr_license.email_template_notify_approach_to_license_expiration_date_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear(s),<br><br>\n"
+"                        It is reported that the <strong>Nukleo</strong> license will expire on <span style=\"font-weight:bold;\" t-out=\"object.expiration_date.strftime('%d/%m/%Y')\"></span>. If you wish to renew it, please contact your provider.<br><br>\n"
+"                        <strong>Provider data</strong><br>\n"
+"                        <t t-if=\"object.company_id.name\">\n"
+"                            <strong>Name:</strong> <span t-out=\"object.company_id.name\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.email\">\n"
+"                            <strong>Email:</strong> <span t-out=\"object.company_id.email\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.phone\">\n"
+"                            <strong>Phone:</strong> <span t-out=\"object.company_id.phone\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns contact your provider.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        Se informa que la licencia de <strong>Nukleo</strong> expirará el <span style=\"font-weight:bold;\" t-out=\"object.expiration_date.strftime('%d/%m/%Y')\"></span>. Si desea renovarla, póngase en contacto con su proveedor.<br><br>\n"
+"                        <strong>Datos del proveedor</strong><br>\n"
+"                        <t t-if=\"object.company_id.name\">\n"
+"                            <strong>Nombre:</strong> <span t-out=\"object.company_id.name\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.email\">\n"
+"                            <strong>Correo:</strong> <span t-out=\"object.company_id.email\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.phone\">\n"
+"                            <strong>Teléfono:</strong> <span t-out=\"object.company_id.phone\"></span>.\n"
+"                            <br>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>El envío de este correo electrónico es automático, por favor no lo responda. Si tiene alguna inquietud, comuníquese con su proveedor.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__acronym
+msgid "Acronym"
+msgstr "Siglas"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_needaction
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__active
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__active
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__active
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__active
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__active
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__state__active
+msgid "Active license"
+msgstr "Activa"
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.salable_module_list_action
+msgid "Add salable module."
+msgstr "Adicionar módulo comercializable."
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_res_config_settings__license_anticipation_days
+msgid "Anticipation days"
+msgstr "Días de anticipación"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__applications
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license_file_location__file__apps_file
+msgid "Applications file"
+msgstr "Archivo de aplicaciones"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__module_ids
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Apps"
+msgstr "Aplicaciones"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Are you sure you want to cancel this license?"
+msgstr "¿Está seguro que desea cancelar esta licencia?"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_attachment_count
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nº de archivos adjuntos"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__plan__4
+msgid "Big companies (200-699 Collaborators)"
+msgstr "Grandes empresas (200-699 Colaboradores)"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__odoo__both
+msgid "Both"
+msgstr "Ambas"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__brand_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__brand_id
+msgid "Brand"
+msgstr "Marca"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.view_renew_license
+#: model_terms:ir.ui.view,arch_db:dr_license.view_start_license
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Cancel license"
+msgstr "Cancelar licencia"
+
+#. module: dr_license
+#: model:ir.actions.server,name:dr_license.ir_cron_check_license_ir_actions_server
+#: model:ir.cron,cron_name:dr_license.ir_cron_check_license
+msgid "Check license"
+msgstr "Verificar licencia"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_res_config_settings__license_emails_for_notification
+msgid "Comma separated mailing list"
+msgstr "Direcciones de correo electrónico"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.res_config_settings_view_form_license
+msgid ""
+"Comma separated mailing list that will receive the license expiration "
+"notification."
+msgstr ""
+"Direcciones de correo electrónico separadas por coma que recibirán la "
+"notificación de expiración de licencia."
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__type__commercial
+msgid "Commercial"
+msgstr "Comercial"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__odoo__community
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__odoo__community
+msgid "Community"
+msgstr "Community"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: dr_license
+#: model:ir.model,name:dr_license.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__confirmed
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__country_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__country_id
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Country"
+msgstr "País"
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.device_brand_model_list_action
+msgid "Create device brand model."
+msgstr "Cree aquí los modelos de dispositivo."
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.device_brand_list_action
+msgid "Create device brand."
+msgstr "Cree aquí las marcas de dispositivo."
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.license_device_list_action
+msgid "Create license device."
+msgstr "Cree aquí los dispositivos."
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.license_renew_detail_list_action
+msgid "Create license renew detail."
+msgstr "Cree aquí los detalles de renovación de su licencia."
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.license_list_action
+msgid "Create license."
+msgstr "Cree aquí las licencias."
+
+#. module: dr_license
+#: model_terms:ir.actions.act_window,help:dr_license.normative_license_list_action
+msgid "Create the regulations license."
+msgstr "Cree aquí las regulaciones."
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__create_uid
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__create_uid
+msgid "Created by"
+msgstr "Creado por:"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__create_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__create_date
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__create_date
+msgid "Created on"
+msgstr "Creado"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__customer_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__databases
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Databases"
+msgstr "Bases de datos"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__description
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__description
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__description
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__description
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__description
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: dr_license
+#: model:ir.model,name:dr_license.model_dr_device
+msgid "Device"
+msgstr "Dispositivo"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.device_brand_list_action
+#: model:ir.model,name:dr_license.model_dr_device_brand
+msgid "Device brand"
+msgstr "Marca de dispositivo"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.device_brand_model_list_action
+#: model:ir.model,name:dr_license.model_dr_device_brand_model
+msgid "Device brand model"
+msgstr "Modelo de dispositivo"
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_configuration_device_brand
+msgid "Device brands"
+msgstr "Marcas de dispositivo"
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_configuration_device_brand_model
+msgid "Device models"
+msgstr "Modelos de dispositivo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__device_ids
+#: model:ir.ui.menu,name:dr_license.menu_license_devices
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Devices"
+msgstr "Dispositivos"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license_file_location__file__dev_file
+msgid "Devices file"
+msgstr "Archivo de dispositivos"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__display_name
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__display_name
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: dr_license
+#: model:mail.template,name:dr_license.email_template_notify_approach_to_license_expiration_date_admin
+msgid "Email template notify approach to license expiration date admin"
+msgstr "Plantilla de correo electrónico para notificar al administrador de la fecha de vencimiento de la licencia"
+
+#. module: dr_license
+#: model:mail.template,name:dr_license.email_template_notify_approach_to_license_expiration_date_user
+msgid "Email template notify approach to license expiration date user"
+msgstr "Plantilla de correo electrónico para notificar al usuario de la fecha de vencimiento de la licencia"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__odoo__enterprise
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__odoo__enterprise
+msgid "Enterprise"
+msgstr "Enterprise"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__environment
+msgid "Environment"
+msgstr "Ambiente"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__evidences
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+#: model_terms:ir.ui.view,arch_db:dr_license.license_renew_detail_form
+msgid "Evidences"
+msgstr "Evidencias"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license_file_location__file__dat_file
+msgid "Execution dates file"
+msgstr "Archivo de fechas de ejecución"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license_file_location__file__exe_file
+msgid "Executions file"
+msgstr "Archivo de ejecuciones"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__expiration_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__expiration_date
+msgid "Expiration date"
+msgstr "Fecha de expiración"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__next_expiration_date
+msgid "Expiration date after renovation"
+msgstr "Fecha de expiración después de la renovación"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__actual_expiration_date
+msgid "Expiration date before renovation"
+msgstr "Fecha de expiración antes de la renovación"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__state__expired
+msgid "Expired license"
+msgstr "Expirada"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__file
+msgid "File"
+msgstr "Archivo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__path
+msgid "File path"
+msgstr "Ruta del archivo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_follower_ids
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_partner_ids
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.device_search
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__has_message
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__has_message
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__id
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__id
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__id
+msgid "ID"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__vat
+msgid "Identification"
+msgstr "Identificación"
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_device__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand_model__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_license__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_license_file_location__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_license_renew_detail__message_needaction
+#: model:ir.model.fields,help:dr_license.field_dr_salable_module__message_needaction
+#: model:ir.model.fields,help:dr_license.field_normative_license__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_device__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand_model__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_license__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_license_file_location__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_license_renew_detail__message_has_error
+#: model:ir.model.fields,help:dr_license.field_dr_salable_module__message_has_error
+#: model:ir.model.fields,help:dr_license.field_normative_license__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_license__databases
+msgid ""
+"Insert all database names allowed to this license separated by comma. "
+"Remember database names are case sensitive. If no database name is inserted,"
+" any will be accepted."
+msgstr ""
+"Introduzca todos los nombres de las bases de datos autorizadas para esta "
+"licencia separados por coma. Recuerde que los nombres de las bases de datos "
+"diferencian letras mayúsculas y minúsculas. Si no inserta algún nombre de "
+"base de datos se aceptará cualquiera."
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__type__internal
+msgid "Internal"
+msgstr "Interno"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_is_follower
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_license____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module____last_update
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license____last_update
+#: model:ir.model.fields,field_description:dr_license.field_normative_license____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__write_uid
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__write_date
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__write_date
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.license_device_list_action
+msgid "Licence device"
+msgstr "Dispositivo"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.license_renew_detail_list_action
+msgid "Licence renew detail"
+msgstr "Detalle de renovación de licencia"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.license_list_action
+#: model:ir.model,name:dr_license.model_dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__license_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__license_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__license_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__license_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_start_license__license_id
+#: model:ir.module.category,description:dr_license.module_category_dr_license
+#: model:ir.module.category,name:dr_license.module_category_dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.device_search
+#: model_terms:ir.ui.view,arch_db:dr_license.res_config_settings_view_form_license
+msgid "License"
+msgstr "Licencia"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__state__cancelled
+msgid "License canceled"
+msgstr "Cancelada"
+
+#. module: dr_license
+#: model:mail.template,subject:dr_license.email_template_notify_approach_to_license_expiration_date_admin
+#: model:mail.template,subject:dr_license.email_template_notify_approach_to_license_expiration_date_user
+msgid "License expiration"
+msgstr "Expiración de licencia"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license_file_location__file__lic_file
+msgid "License file"
+msgstr "Archivo de licencia"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__path_ids
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "License file locations"
+msgstr "Ubicación de archivo de licencia"
+
+#. module: dr_license
+#: model:ir.model,name:dr_license.model_dr_license_file_location
+msgid "License files location"
+msgstr "Ubicación de archivos de licencia"
+
+#. module: dr_license
+#: model:ir.model,name:dr_license.model_dr_license_renew_detail
+msgid "License renew detail"
+msgstr "Detalle de renovación de licencia"
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_dr_licence
+#: model:ir.ui.menu,name:dr_license.menu_license
+#: model:ir.ui.menu,name:dr_license.menu_license_licenses
+msgid "Licenses"
+msgstr "Licencias"
+
+#. module: dr_license
+#. odoo-python
+#: code:addons/dr_license/models/models.py:0
+#, python-format
+msgid "Licenses can only be removed in canceled status."
+msgstr "Las licencias solo se pueden eliminar en estado cancelado."
+
+#. module: dr_license
+#: model:ir.model,name:dr_license.model_dr_salable_module
+msgid "List of salable modules"
+msgstr "Lista de módulos comercializables"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_main_attachment_id
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: dr_license
+#: model:res.groups,name:dr_license.dr_license_group_manager
+msgid "Manager"
+msgstr "Administrador"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__active_collaborators
+msgid "Maximum number of active collaborators"
+msgstr "Máximo número de colaboradores activos"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__plan__3
+msgid "Medium companies (50-199 Collaborators)"
+msgstr "Medianas empresas (50-199 Colaboradores)"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_has_error
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_ids
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__plan__1
+msgid "Micro company (1-9 Collaborators)"
+msgstr "Micro empresas (1-9 Colaboradores)"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__model_ids
+#: model_terms:ir.ui.view,arch_db:dr_license.device_brand_form
+msgid "Models"
+msgstr "Modelos"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__name
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__name
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__name
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__name
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__name
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__name
+msgid "Name"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_configuration_normative_license
+msgid "Normative licenses"
+msgstr "Regulaciones"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__package
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__package
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Nukleo version"
+msgstr "Versión de Nukleo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_needaction_counter
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_res_config_settings__license_anticipation_days
+#: model_terms:ir.ui.view,arch_db:dr_license.res_config_settings_view_form_license
+msgid "Number of days in advance to send the license expiration notification."
+msgstr ""
+"Número de días de anticipación para enviar la notificación de expiración de "
+"licencia."
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_device_brand_model__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_file_location__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_license_renew_detail__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__message_has_error_counter
+#: model:ir.model.fields,field_description:dr_license.field_normative_license__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_device__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand_model__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license_file_location__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license_renew_detail__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_dr_salable_module__message_needaction_counter
+#: model:ir.model.fields,help:dr_license.field_normative_license__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_device__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_device_brand_model__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license_file_location__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_license_renew_detail__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_dr_salable_module__message_has_error_counter
+#: model:ir.model.fields,help:dr_license.field_normative_license__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__odoo
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__odoo
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__os
+msgid "Operating system"
+msgstr "Sistema operativo"
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_license__os
+msgid "Operating system of the server where this license will be activated."
+msgstr "Sistema operativo del servidor donde esta licencia será activada."
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_renew_license__period
+msgid "Period"
+msgstr "Período"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__plan
+msgid "Plan"
+msgstr "Plan"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__package__premium
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__package__premium
+msgid "Premium"
+msgstr "Premium"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__environment__production
+msgid "Production"
+msgstr "Producción"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__python_version
+msgid "Python version"
+msgstr "Versión de Python"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__regulation
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__regulation
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Regulation"
+msgstr "Regulación"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.normative_license_list_action
+#: model:ir.model,name:dr_license.model_normative_license
+msgid "Regulations license"
+msgstr "Regulaciones"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__renew_detail_ids
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Renew details"
+msgstr "Renovaciones"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.action_renew_license
+#: model:ir.model,name:dr_license.model_dr_renew_license
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+#: model_terms:ir.ui.view,arch_db:dr_license.view_renew_license
+msgid "Renew license"
+msgstr "Renovar licencia"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.salable_module_list_action
+msgid "Salable module"
+msgstr "Módulo comercializable"
+
+#. module: dr_license
+#: model:ir.ui.menu,name:dr_license.menu_configuration_salable_module
+msgid "Salable modules"
+msgstr "Módulos comercializables"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_device__serial_number
+msgid "Serial number"
+msgstr "Número de serie"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.license_configuration_settings_action
+#: model:ir.ui.menu,name:dr_license.menu_configuration_settings
+#: model_terms:ir.ui.view,arch_db:dr_license.res_config_settings_view_form_license
+msgid "Settings"
+msgstr "Ajustes"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__shortdesc
+msgid "Short description"
+msgstr "Breve descripción"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__plan__2
+msgid "Small companies (10-49 Collaborators)"
+msgstr "Pequeñas empresas (10-49 Colaboradores)"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__package__standard
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_salable_module__package__standard
+msgid "Standard"
+msgstr "Standard"
+
+#. module: dr_license
+#: model:ir.actions.act_window,name:dr_license.action_start_license
+#: model:ir.model,name:dr_license.model_dr_start_license
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+#: model_terms:ir.ui.view,arch_db:dr_license.view_start_license
+msgid "Start license"
+msgstr "Iniciar licencia"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__state
+msgid "State"
+msgstr "Estado"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__summary
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: dr_license
+#: model_terms:ir.ui.view,arch_db:dr_license.license_form
+msgid "Technical"
+msgstr "Técnico"
+
+#. module: dr_license
+#: model:ir.model.fields.selection,name:dr_license.selection__dr_license__environment__test
+msgid "Test"
+msgstr "Prueba"
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_license__vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+"El número de identificación de impuesto. Complételo si el contacto está "
+"sujeto a los impuestos del gobierno. Utilizado en algunas declaraciones "
+"legales."
+
+#. module: dr_license
+#: model:ir.model.constraint,message:dr_license.constraint_dr_license_file_location_license_file_uniq
+msgid "This file type has already been defined for this license!"
+msgstr "¡Este tipo de archivo ya ha sido definido para esta licencia!"
+
+#. module: dr_license
+#: model:ir.model.fields,help:dr_license.field_dr_license__confirmed
+msgid "This license has been delivered to the solicitor."
+msgstr "Esta licencia ya ha sido entregada al cliente."
+
+#. module: dr_license
+#: model:ir.model.constraint,message:dr_license.constraint_dr_license_file_location_license_path_uniq
+msgid ""
+"This path has already been defined for another file type in this license!"
+msgstr ""
+"¡Esta dirección ya ha sido definida para otro tipo de fichero en esta "
+"licencia!"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__tradename
+msgid "Tradename"
+msgstr "Nombre comercial"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_salable_module__type
+#: model_terms:ir.ui.view,arch_db:dr_license.salable_module_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: dr_license
+#: model:res.groups,name:dr_license.dr_license_group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: dr_license
+#: model:ir.model.fields,field_description:dr_license.field_dr_license__odoo_version
+msgid "Version"
+msgstr "Versión"
+
+#. module: dr_license
+#: model:ir.model.constraint,message:dr_license.constraint_dr_salable_module_name_uniq
+msgid "You can only add a module to the list once."
+msgstr "Usted solo puede adicionar un módulo al listado una vez."
+
+#. module: dr_license
+#. odoo-python
+#: code:addons/dr_license/models/models.py:0
+#: code:addons/dr_license/models/models.py:0
+#, python-format
+msgid "You must specify at least the name and identification of the client."
+msgstr "Debe especificar al menos el nombre e identificación del cliente."

@@ -1,0 +1,173 @@
+<odoo>
+    <data>
+        <!--Hr sector table-->
+        <record model="ir.actions.act_window" id="sector_table_list_action">
+            <field name="name">Sector table</field>
+            <field name="res_model">hr.sector.table</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the sector table.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_table_list">
+            <field name="name">Sector table list</field>
+            <field name="model">hr.sector.table</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sector_commission_id"/>
+                    <field name="branch_economic_activity_ids" widget="many2many_tags"/>
+                    <field name="subbranch_economic_activity_ids" widget="many2many_tags"/>
+                    <field name="position_id"/>
+                    <field name="occupational_structure_id"/>
+                    <field name="comment"/>
+                    <field name="IESS_code"/>
+                    <field name="mode"/>
+                    <field name="last_year"/>
+                    <field name="last_minimum_salary" widget='monetary'/>
+                    <field name="last_minimum_fee"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                    <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_table_search">
+            <field name="name">Sector table search</field>
+            <field name="model">hr.sector.table</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="IESS_code"/>
+                    <field name="sector_commission_id"/>
+                    <field name="branch_economic_activity_ids"/>
+                    <field name="subbranch_economic_activity_ids"/>
+                    <field name="position_id"/>
+                    <field name="occupational_structure_id"/>
+
+                    <filter name="filter_level_inactive" string="Inactive" domain="[('active', '=', False)]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_sector_commission_id" string="Sector commission" context="{'group_by' : 'sector_commission_id'}"/>
+                        <filter name="group_branch_economic_activity_ids" string="Branch economic activity" context="{'group_by' : 'branch_economic_activity_ids'}"/>
+                        <filter name="group_subbranch_economic_activity_ids" string="Subbranch economic activity" context="{'group_by' : 'subbranch_economic_activity_ids'}"/>
+                        <filter name="group_mode" string="Mode" context="{'group_by' : 'mode'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sector_table_form">
+            <field name="name">Sector table form</field>
+            <field name="model">hr.sector.table</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="sector_commission_id"/>
+                                <field name="position_id"/>
+                                <field name="occupational_structure_id"/>
+                                <field name="comment"/>
+                                <field name="IESS_code"/>
+                            </group>
+                            <group>
+                                <field name="mode"/>
+                                <field name="last_year"/>
+                                <field name="last_minimum_salary" widget='monetary'/>
+                                <field name="last_minimum_fee"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name = "branch_economic_activity" string="Branch economic activities">
+                                <field name="branch_economic_activity_ids" domain="[('sector_commission_id','=',sector_commission_id)]">
+                                    <tree>
+                                        <field name="number"/>
+                                        <field name="name"/>
+                                        <field name="sector_commission_id"/>
+                                        <field name="active" widget="boolean_toggle"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="number"/>
+                                                    <field name="name"/>
+                                                </group>
+                                                <group>
+                                                    <field name="sector_commission_id"/>
+                                                    <field name="active"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name = "subbranch_economic_activity_ids" string="Subbranch economic activities">
+                                <field name="subbranch_economic_activity_ids" domain="[('branch_economic_activity_id','in',branch_economic_activity_ids)]">
+                                    <tree>
+                                        <field name="number"/>
+                                        <field name="name"/>
+                                        <field name="branch_economic_activity_id"/>
+                                        <field name="active"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="number"/>
+                                                    <field name="name"/>
+                                                </group>
+                                                <group>
+                                                    <field name="branch_economic_activity_id"/>
+                                                    <field name="active"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name = "sector_table_year_ids" string="Sector table by year">
+                                <field name="sector_table_year_ids">
+                                    <tree>
+                                        <field name="sector_table_id" invisible="1"/>
+                                        <field name="year"/>
+                                        <field name="minimum_salary" widget='monetary'/>
+                                        <field name="minimum_fee"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="sector_table_id" invisible="1"/>
+                                                    <field name="mode" invisible="1"/>
+                                                    <field name="year"/>
+                                                </group>
+                                                <group>
+                                                    <field name="minimum_salary" widget='monetary' attrs="{'invisible': [('mode','=','minimum_fee')], 'required': [('mode','=','minimum_salary')]}"/>
+                                                    <field name="minimum_fee" attrs="{'invisible': [('mode','=','minimum_salary')], 'required': [('mode','=','minimum_fee')]}"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <menuitem
+            id="menu_hr_sector_table"
+            action="sector_table_list_action"
+            parent="menu_hr_sector_table_root"
+            sequence="35"/>
+        <!--Hr sector table-->
+    </data>
+</odoo>
