@@ -1,0 +1,751 @@
+<odoo>
+    <data noupdate="1">
+        <record model="dr.salable.module" id="dr_salable_module_appraisal_community">
+            <field name="name">hr_dr_appraisal_community</field>
+            <field name="shortdesc">Módulo para gestionar las evaluaciones de los colaboradores para odoo community.</field>
+            <field name="summary">Módulo para gestionar las evaluaciones de los colaboradores para odoo community.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Evaluación para odoo community</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_appraisal_enterprise">
+            <field name="name">hr_dr_appraisal_enterprise</field>
+            <field name="shortdesc">Módulo para gestionar las evaluaciones de los colaboradores para odoo enterprise.</field>
+            <field name="summary">Módulo para gestionar las evaluaciones de los colaboradores para odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Evaluación para odoo enterprise</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contract">
+            <field name="name">hr_dr_contract</field>
+            <field name="shortdesc">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contratos</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contract_private">
+            <field name="name">hr_dr_contract_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de contratación de los colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contratos para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contract_private_data">
+            <field name="name">hr_dr_contract_ec_private_data</field>
+            <field name="shortdesc">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de contratación de los colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contratos para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contract_public">
+            <field name="name">hr_dr_contract_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de contratación de los colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contratos para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contract_public_data">
+            <field name="name">hr_dr_contract_ec_public_data</field>
+            <field name="shortdesc">Módulo para gestionar la información de contratación de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de contratación de los colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contratos para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_credit">
+            <field name="name">hr_dr_credit</field>
+            <field name="shortdesc">Módulo para gestionar los créditos de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los créditos de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Créditos</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_credit_accounting_community">
+            <field name="name">hr_dr_credit_accounting_community</field>
+            <field name="shortdesc">Asientos contables para los créditos de los colaboradores en odoo community.</field>
+            <field name="summary">Módulo para incorporar los asientos contables a los créditos de los colaboradores en odoo community.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Contabilidad de créditos en odoo community</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_credit_accounting_enterprise">
+            <field name="name">hr_dr_credit_accounting_enterprise</field>
+            <field name="shortdesc">Asientos contables para los créditos de los colaboradores en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar los asientos contables a los créditos de los colaboradores en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Contabilidad de créditos en odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_credit_payroll_community">
+            <field name="name">hr_dr_credit_payroll_community</field>
+            <field name="shortdesc">Entradas en nómina para los créditos de los colaboradores en odoo community.</field>
+            <field name="summary">Entradas en nómina para los créditos de los colaboradores en odoo community.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Entradas en nómina para los créditos de los colaboradores en odoo community</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_credit_payroll_enterprise">
+            <field name="name">hr_dr_credit_payroll_enterprise</field>
+            <field name="shortdesc">Entradas en nómina para los créditos de los colaboradores en odoo enterprise.</field>
+            <field name="summary">Entradas en nómina para los créditos de los colaboradores en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Entradas en nómina para los créditos de los colaboradores en odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_department">
+            <field name="name">hr_dr_department</field>
+            <field name="shortdesc">Módulo para gestionar los departamentos de la empresa.</field>
+            <field name="summary">Módulo para gestionar los departamentos de la empresa.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Departamentos</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_department_additional_manager">
+            <field name="name">hr_dr_department_additional_manager</field>
+            <field name="shortdesc">Le permite configurar administradores adicionales para cada departamento.</field>
+            <field name="summary">Le permite configurar administradores adicionales para cada departamento.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Administradores adicionales</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_employee">
+            <field name="name">hr_dr_employee</field>
+            <field name="shortdesc">Módulo para gestionar la información de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar la información de los colaboradores.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Colaboradores</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_employee_certificates">
+            <field name="name">hr_dr_employee_certificates</field>
+            <field name="shortdesc">Módulo para generar los certificados de trabajo de los colaboradores.</field>
+            <field name="summary">Módulo para generar los certificados de trabajo de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Certificados laborales</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_employee_notifications">
+            <field name="name">hr_dr_employee_notifications</field>
+            <field name="shortdesc">Módulo para enviar notificaciones.</field>
+            <field name="summary">Módulo para enviar notificaciones de cumpleaños, notificaciones de aniversario, notificaciones de ingreso de personal, notificaciones de salida de personal y fecha de celebración de profesión.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Notificaciones automáticas</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_loan">
+            <field name="name">hr_dr_loan</field>
+            <field name="shortdesc">Módulo para gestionar los préstamos de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los préstamos de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Préstamos</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_loan_accounting_community">
+            <field name="name">hr_dr_loan_accounting_community</field>
+            <field name="shortdesc">Asientos contables para los préstamos de los colaboradores en odoo community.</field>
+            <field name="summary">Módulo para incorporar los asientos contables a los préstamos de los colaboradores en odoo community.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Contabilidad de préstamos en odoo community</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_loan_accounting_enterprise">
+            <field name="name">hr_dr_loan_accounting_enterprise</field>
+            <field name="shortdesc">Asientos contables para los préstamos de los colaboradores en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar los asientos contables a los préstamos de los colaboradores en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Contabilidad de préstamos en odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_loan_payroll_community">
+            <field name="name">hr_dr_loan_payroll_community</field>
+            <field name="shortdesc">Entradas en nómina para los préstamos de los colaboradores en odoo community.</field>
+            <field name="summary">Entradas en nómina para los préstamos de los colaboradores en odoo community.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Entradas en nómina para los préstamos de los colaboradores en odoo community</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_loan_payroll_enterprise">
+            <field name="name">hr_dr_loan_payroll_enterprise</field>
+            <field name="shortdesc">Entradas en nómina para los préstamos de los colaboradores en odoo enterprise.</field>
+            <field name="summary">Entradas en nómina para los préstamos de los colaboradores en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Entradas en nómina para los préstamos de los colaboradores en odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_management">
+            <field name="name">hr_dr_management</field>
+            <field name="shortdesc">Módulo para gestionar las configuraciones generales del talento humano.</field>
+            <field name="summary">Módulo para gestionar las configuraciones generales del talento humano.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Administración</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_management_ec_private">
+            <field name="name">hr_dr_management_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar las configuraciones generales del talento humano.</field>
+            <field name="summary">Módulo para gestionar las configuraciones generales del talento humano. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Datos administrativos para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_management_ec_public">
+            <field name="name">hr_dr_management_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar las configuraciones generales del talento humano.</field>
+            <field name="summary">Módulo para gestionar las configuraciones generales del talento humano. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Datos administrativos para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_mobile_app">
+            <field name="name">hr_dr_mobile_app</field>
+            <field name="shortdesc">Módulo para gestionar la aplicación móvil.</field>
+            <field name="summary">Módulo para gestionar la aplicación móvil.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Aplicación móvil</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_base">
+            <field name="name">hr_dr_payroll_base</field>
+            <field name="shortdesc">Módulo base para gestionar la nómina de los colaboradores.</field>
+            <field name="summary">Módulo base para gestionar la nómina de los colaboradores.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Nómina base</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_income_tax">
+            <field name="name">hr_dr_payroll_income_tax</field>
+            <field name="shortdesc">Módulo para incorporar el cálculo del impuesto a la renta a la nómina.</field>
+            <field name="summary">Módulo para incorporar el cálculo del impuesto a la renta a la nómina para la localización ecuatoriana.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Impuesto a la renta en nóminas</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_income_tax">
+            <field name="name">hr_dr_payroll_enterprise_income_tax</field>
+            <field name="shortdesc">Módulo para incorporar el cálculo del impuesto a la renta a la nómina para odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar el cálculo del impuesto a la renta a la nómina para odoo enterprise a la localización ecuatoriana.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Impuesto a la renta en nóminas para odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_income_tax_ec_private">
+            <field name="name">hr_dr_payroll_enterprise_income_tax_ec_private</field>
+            <field name="shortdesc">Módulo para incorporar el cálculo del impuesto a la renta a la nómina para odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar el cálculo del impuesto a la renta a la nómina para odoo enterprise a la localización ecuatoriana. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Impuesto a la renta en nóminas para odoo enterprise (EC Private)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_community">
+            <field name="name">hr_dr_payroll_community</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo community.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo community.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">community</field>
+            <field name="tradename">Nómina para odoo community</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_community_ec_private">
+            <field name="name">hr_dr_payroll_community_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo community.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo community. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de nómina community para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_community_ec_public">
+            <field name="name">hr_dr_payroll_community_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo community.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo community. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de nómina community para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise">
+            <field name="name">hr_dr_payroll_enterprise</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo enterprise.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo enterprise.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Nómina para odoo enterprise</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_ec_private">
+            <field name="name">hr_dr_payroll_enterprise_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo enterprise.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo enterprise. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de nómina enterprise para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_ec_public">
+            <field name="name">hr_dr_payroll_enterprise_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar la nómina de los colaboradores para odoo enterprise.</field>
+            <field name="summary">Módulo para gestionar la nómina de los colaboradores para odoo enterprise. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de nómina enterprise para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_hr_dr_payroll_project">
+            <field name="name">hr_dr_payroll_project</field>
+            <field name="shortdesc">Módulo para incorporar cuentas analíticas a la nómina en función del tiempo trabajado por proyecto.</field>
+            <field name="summary">Módulo para incorporar cuentas analíticas a la nómina en función del tiempo trabajado por proyecto.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Cuentas analíticas en la nómina en función del tiempo trabajado por proyecto.</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_permissions">
+            <field name="name">hr_dr_permissions</field>
+            <field name="shortdesc">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Permisos</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_permissions_ec_private">
+            <field name="name">hr_dr_permissions_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de permisos para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_permissions_ec_public">
+            <field name="name">hr_dr_permissions_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los permisos, licencias y comisiones de servicios de los colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de permisos para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_personal_action">
+            <field name="name">hr_dr_personal_action</field>
+            <field name="shortdesc">Módulo para gestionar las acciones de personal de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar las acciones de personal de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Acción de personal</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_premium_community_ec_private">
+            <field name="name">hr_dr_premium_community_ec_private</field>
+            <field name="shortdesc">Versión premium de Nukleo sobre odoo community para el sector privado de Ecuador.</field>
+            <field name="summary">Versión premium de Nukleo sobre odoo community para el sector privado de Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión premium de Nukleo sobre odoo community para el sector privado del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_premium_community_ec_public">
+            <field name="name">hr_dr_premium_community_ec_public</field>
+            <field name="shortdesc">Versión premium de Nukleo sobre odoo community para el sector público de Ecuador.</field>
+            <field name="summary">Versión premium de Nukleo sobre odoo community para el sector público de Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión premium de Nukleo sobre odoo community para el sector público del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_premium_enterprise_ec_private">
+            <field name="name">hr_dr_premium_enterprise_ec_private</field>
+            <field name="shortdesc">Versión premium de Nukleo sobre odoo enterprise para el sector privado de Ecuador.</field>
+            <field name="summary">Versión premium de Nukleo sobre odoo enterprise para el sector privado de Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión premium de Nukleo sobre odoo enterprise para el sector privado del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_premium_enterprise_ec_public">
+            <field name="name">hr_dr_premium_enterprise_ec_public</field>
+            <field name="shortdesc">Versión premium de Nukleo sobre odoo enterprise para el sector público de Ecuador.</field>
+            <field name="summary">Versión premium de Nukleo sobre odoo enterprise para el sector público de Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión premium de Nukleo sobre odoo enterprise para el sector público del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_recruitment">
+            <field name="name">hr_dr_recruitment</field>
+            <field name="shortdesc">Módulo para gestionar el proceso de selección de colaboradores.</field>
+            <field name="summary">Módulo para gestionar el proceso de selección de colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Selección de personal</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_recruitment_ec_private">
+            <field name="name">hr_dr_recruitment_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar el proceso de selección de colaboradores.</field>
+            <field name="summary">Módulo para gestionar el proceso de selección de colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos del proceso de selección de colaboradores para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_recruitment_ec_public">
+            <field name="name">hr_dr_recruitment_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar el proceso de selección de colaboradores.</field>
+            <field name="summary">Módulo para gestionar el proceso de selección de colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos del proceso de selección de colaboradores para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_schedule">
+            <field name="name">hr_dr_schedule</field>
+            <field name="shortdesc">Módulo para gestionar los horarios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los horarios de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Horarios</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_schedule_ec_private">
+            <field name="name">hr_dr_schedule_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar los horarios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los horarios de los colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de horarios para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_schedule_ec_public">
+            <field name="name">hr_dr_schedule_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar los horarios de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar los horarios de los colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de horarios para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_skills">
+            <field name="name">hr_dr_skills</field>
+            <field name="shortdesc">Módulo para gestionar las habilidades de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar las habilidades de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Habilidades</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_standard_community_ec_private">
+            <field name="name">hr_dr_standard_community_ec_private</field>
+            <field name="shortdesc">Versión estándar de Nukleo sobre odoo community para el sector privado del Ecuador.</field>
+            <field name="summary">Versión estándar de Nukleo sobre odoo community para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión estándar de Nukleo sobre odoo community para el sector privado del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_standard_community_ec_public">
+            <field name="name">hr_dr_standard_community_ec_public</field>
+            <field name="shortdesc">Versión estándar de Nukleo sobre odoo community para el sector público del Ecuador.</field>
+            <field name="summary">Versión estándar de Nukleo sobre odoo community para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">community</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión estándar de Nukleo sobre odoo community para el sector público del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_standard_enterprise_ec_private">
+            <field name="name">hr_dr_standard_enterprise_ec_private</field>
+            <field name="shortdesc">Versión estándar de Nukleo sobre odoo enterprise para el sector privado del Ecuador.</field>
+            <field name="summary">Versión estándar de Nukleo sobre odoo enterprise para el sector privado del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión estándar de Nukleo sobre odoo enterprise para el sector privado del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_standard_enterprise_ec_public">
+            <field name="name">hr_dr_standard_enterprise_ec_public</field>
+            <field name="shortdesc">Versión estándar de Nukleo sobre odoo enterprise para el sector público del Ecuador.</field>
+            <field name="summary">Versión estándar de Nukleo sobre odoo enterprise para el sector público del Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Versión estándar de Nukleo sobre odoo enterprise para el sector público del Ecuador (Módulo contenedor)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_vacations">
+            <field name="name">hr_dr_vacations</field>
+            <field name="shortdesc">Módulo para gestionar las vacaciones de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar las vacaciones de los colaboradores.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Vacaciones</field>
+            <field name="type">commercial</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_vacations">
+            <field name="name">hr_dr_payroll_vacations</field>
+            <field name="shortdesc">Módulo para incorporar la lógica de nómina para vacaciones.</field>
+            <field name="summary">Módulo para incorporar la lógica de nómina para vacaciones.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Lógica de nómina para vacaciones</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_vacations">
+            <field name="name">hr_dr_payroll_enterprise_vacations</field>
+            <field name="shortdesc">Módulo para incorporar la lógica de nómina para vacaciones en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar la lógica de nómina para vacaciones en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Lógica de nómina para vacaciones (Enterprise)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_vacations_ec_private">
+            <field name="name">hr_dr_payroll_enterprise_vacations_ec_private</field>
+            <field name="shortdesc">Módulo para incorporar la lógica de nómina para vacaciones en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar la lógica de nómina para vacaciones en odoo enterprise. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="country_id" ref="base.ec"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Lógica de nómina para vacaciones en odoo enterprise (EC Private)</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_vacations_ec_private">
+            <field name="name">hr_dr_vacations_ec_private</field>
+            <field name="shortdesc">Módulo para gestionar las vacaciones de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar las vacaciones de los colaboradores. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de vacaciones para el sector privado del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_vacations_ec_public">
+            <field name="name">hr_dr_vacations_ec_public</field>
+            <field name="shortdesc">Módulo para gestionar las vacaciones de los colaboradores.</field>
+            <field name="summary">Módulo para gestionar las vacaciones de los colaboradores. Incorpora la información para el sector público del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative1"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de vacaciones para el sector público del Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_holidays">
+            <field name="name">hr_dr_payroll_enterprise_holidays</field>
+            <field name="shortdesc">Módulo para incorporar la lógica de nómina para permisos en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar la lógica de nómina para permisos en odoo enterprise.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="tradename">Lógica de nómina para permisos en odoo enterprise</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_payroll_enterprise_holidays_ec_private">
+            <field name="name">hr_dr_payroll_enterprise_holidays_ec_private</field>
+            <field name="shortdesc">Módulo para incorporar la lógica de nómina para permisos en odoo enterprise.</field>
+            <field name="summary">Módulo para incorporar la lógica de nómina para permisos en odoo enterprise. Incorpora la información para el sector privado del Ecuador.</field>
+            <field name="package">Premium</field>
+            <field name="regulation" ref = "dr_license.Normative2"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Lógica de nómina para permisos en odoo enterprise (EC Private)</field>
+            <field name="type">internal</field>
+        </record>
+
+        <record model="dr.salable.module" id="dr_salable_module_base">
+            <field name="name">dr_base</field>
+            <field name="shortdesc">Módulo para incorporar funcionalidades transversales a todos los módulos.</field>
+            <field name="summary">Módulo para incorporar funcionalidades transversales a todos los módulos.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Base</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contacts">
+            <field name="name">dr_contacts</field>
+            <field name="shortdesc">Módulo para gestionar los contactos.</field>
+            <field name="summary">Módulo para gestionar los contactos. Incorpora filtros, el concepto de región por provincia y el concepto de parroquia.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Contactos</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_contacts_ec">
+            <field name="name">dr_contacts_ec</field>
+            <field name="shortdesc">Módulo para gestionar los contactos.</field>
+            <field name="summary">Módulo para gestionar los contactos. Incorpora los datos de Ecuador.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Datos de contactos para Ecuador</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_license_customer">
+            <field name="name">dr_license_customer</field>
+            <field name="shortdesc">Módulo para activar la licencia en los clientes.</field>
+            <field name="summary">Módulo para activar la licencia en los clientes.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Licencias de clientes</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_start_system">
+            <field name="name">dr_start_system</field>
+            <field name="shortdesc">Módulo para controlar el arranque del sistema.</field>
+            <field name="summary">Módulo para controlar el arranque del sistema.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="tradename">Control al iniciar el sistema</field>
+            <field name="type">internal</field>
+        </record>
+
+        <record model="dr.salable.module" id="dr_salable_module_l10n_ec_nk">
+            <field name="name">l10n_ec_nk</field>
+            <field name="shortdesc">Localización ecuatoriana.</field>
+            <field name="summary">Localización ecuatoriana.</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">both</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Localización ecuatoriana.</field>
+            <field name="type">internal</field>
+        </record>
+        <record model="dr.salable.module" id="dr_salable_module_l10n_ec_account_batch_payment_en_nk">
+            <field name="name">l10n_ec_account_batch_payment_en_nk</field>
+            <field name="shortdesc">Localización ecuatoriana (Pago por lotes).</field>
+            <field name="summary">Localización ecuatoriana (Pago por lotes).</field>
+            <field name="package">Standard</field>
+            <field name="regulation" ref = "dr_license.Normative0"/>
+            <field name="odoo">enterprise</field>
+            <field name="country_id" ref="base.ec"/>
+            <field name="tradename">Localización ecuatoriana (Pago por lotes).</field>
+            <field name="type">internal</field>
+        </record>
+    </data>
+</odoo>
