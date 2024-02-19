@@ -1,0 +1,610 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dr_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-27 17:43+0000\n"
+"PO-Revision-Date: 2023-10-27 17:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dr_contract
+#: model:mail.template,body_html:hr_dr_contract.email_template_notify_trial_date_end
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear(s),<br><br>\n"
+"                        The end date of the collaborator <span style=\"font-weight:bold;\" t-out=\"object.employee_id.name\"></span> trial period is <span style=\"font-weight:bold;\" t-out=\"object.trial_date_end.strftime('%d/%m/%Y')\"></span>.\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p t-out=\"object.employee_id.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.employee_id.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.employee_id.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact <t t-out=\"ctx['department'] or ''\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado(s),<br><br>\n"
+"                        La fecha de finalización del período de prueba del colaborador <span style=\"font-weight:bold;\" t-out=\"object.employee_id.name\"></span> es <span style=\"font-weight:bold;\" t-out=\"object.trial_date_end.strftime('%d/%m/%Y')\"></span>.\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p t-out=\"object.employee_id.company_id.name\"></p>\n"
+"                    <img t-attf-src=\"/logo.png?company={{object.employee_id.company_id.id}}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.employee_id.company_id.name\">\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo electrónico es automático, por favor no lo responda. Si tiene alguna inquietud, comuníquese con <t t-out=\"ctx['department'] or ''\"></t>.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Accessories"
+msgstr "Accesorios"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_fourteenth_salary__accumulated
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_reserve_fund__accumulated
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_thirteenth_salary__accumulated
+msgid "Accumulated"
+msgstr "Acumulado"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__active
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract_type__active
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__application_reserve_fund__always_force
+msgid "Always force"
+msgstr "Forzar siempre"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_res_config_settings__trial_period_end_anticipation_days
+msgid "Anticipation days"
+msgstr "Días de anticipación"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__application_reserve_fund
+msgid "Application of reserve fund"
+msgstr "Aplicación de fondos de reserva"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__IESS_input_document
+msgid "Attach IESS input document"
+msgstr "Adjuntar documento de entrada al IESS"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__IESS_output_document
+msgid "Attach IESS output document"
+msgstr "Adjuntar documento de salida al IESS"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__application_reserve_fund__automatic
+msgid "Automatic (After 1 year)"
+msgstr "Automático (después de 1 año)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__budget_item
+msgid "Budget item"
+msgstr "Partida presupuestaria"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__calculation_period_fourteenth
+msgid "Calculation period"
+msgstr "Período de cálculo"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_period_fourteenth__costa_fourteenth_salary
+msgid "Coast - Island (Fourteenth salary)"
+msgstr "Costa - Galápagos (Decimocuarto salario)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__mrl_code
+msgid "Code assigned to the contract at the ministry of labor relations."
+msgstr "Código asignado al contrato en el ministerio de relaciones laborales."
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Collaborator"
+msgstr "Colaborador"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.res_config_settings_hr_dr_contract
+msgid "Collaborator name"
+msgstr "Nombre del colaborador"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: hr_dr_contract
+#: model:ir.model,name:hr_dr_contract.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: hr_dr_contract
+#: model:ir.ui.menu,name:hr_dr_contract.hr_menu_contract_settings_root
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__name
+msgid "Contract Reference"
+msgstr "Referencia de contrato"
+
+#. module: hr_dr_contract
+#: model:ir.model,name:hr_dr_contract.model_hr_contract_type
+msgid "Contract Type"
+msgstr "Tipo de contrato"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_res_config_settings__contract_administrators_ids
+msgid "Contract administrators"
+msgstr "Administradores de contratos"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Contract end date"
+msgstr "Fecha de fin del contrato"
+
+#. module: hr_dr_contract
+#: model_terms:ir.actions.act_window,help:hr_dr_contract.hr_payroll_structure_type_list_action
+msgid "Create payroll structure type."
+msgstr "Crear tipo de estructura salarial."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__daily_hours
+msgid "Daily hours"
+msgstr "Horas diarias"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_res_config_settings__trial_period_end_anticipation_days
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.res_config_settings_hr_dr_contract
+msgid "Days in advance for notification of the end of the trial period."
+msgstr "Días de antelación para la notificación del fin del período de prueba."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__days_in_service
+msgid "Days in service"
+msgstr "Días en servicio"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__department_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract_type__description
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_dr_contract
+#: model:mail.template,name:hr_dr_contract.email_template_notify_trial_date_end
+msgid "Email template notify trial date end"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model,name:hr_dr_contract.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrato del colaborador"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__resource_calendar_id
+msgid "Employee's working schedule."
+msgstr "Horario de trabajo del colaborador."
+
+#. module: hr_dr_contract
+#: model:ir.ui.menu,name:hr_dr_contract.hr_menu_contract_type
+msgid "Employment Types"
+msgstr "Tipos de colaboradores"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__date_end
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__date_end
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr ""
+"Fecha de finalización del contrato (si es un contrato por tiempo "
+"determinado)."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__trial_date_end
+msgid "End date of the trial period (if there is one)."
+msgstr "Fecha de finalización del período de prueba (si existe)."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__trial_date_end
+msgid "End of Trial Period"
+msgstr "Fin del período de prueba"
+
+#. module: hr_dr_contract
+#: model:mail.template,subject:hr_dr_contract.email_template_notify_trial_date_end
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.res_config_settings_hr_dr_contract
+msgid "End of trial period"
+msgstr "Fin del período de prueba"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__fortnight
+msgid "Fortnight"
+msgstr "Quincena"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__fortnight_percentage
+msgid "Fortnight percentage"
+msgstr "Porcentaje de quincena"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Fourteenth salary"
+msgstr "Decimocuarto salario"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__IESS_affiliation_number
+msgid "IESS affiliation number"
+msgstr "Número de afiliación al IESS"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "IESS document"
+msgstr "Documentos"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__IESS_extra_spouse
+msgid "IESS extra spouse"
+msgstr "Aporte al IESS (Cónyuge)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__message_has_error
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__job_id
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.res_config_settings_hr_dr_contract
+msgid ""
+"List of administrators who will receive the notification of the end of the "
+"trial period."
+msgstr ""
+"Lista de administradores que recibirán la notificación del fin del período "
+"de prueba."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__mrl_code
+msgid "MRL code"
+msgstr "Código en el Ministerio de Trabajo"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__max_date_payment_period_fourteenth
+msgid "Maximum date of payment"
+msgstr "Fecha máxima de pago"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_fourteenth_salary__monthly
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_reserve_fund__monthly
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_thirteenth_salary__monthly
+msgid "Monthly"
+msgstr "Mensual"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__monthly_hours
+msgid "Monthly hours"
+msgstr "Horas mensuales"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__months_in_service
+msgid "Months in service"
+msgstr "Meses en servicio"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__notification_send_trial_date_end
+msgid "Notification send trial date end"
+msgstr "Notificación de fin del período de prueba enviada"
+
+#. module: hr_dr_contract
+#: model:ir.actions.server,name:hr_dr_contract.ir_cron_notify_trial_period_end_ir_actions_server
+#: model:ir.cron,cron_name:hr_dr_contract.ir_cron_notify_trial_period_end
+msgid "Notify trial period end"
+msgstr "Notificar el fin del período de prueba"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__payment_fourteenth_salary
+msgid "Payment fourteenth salary"
+msgstr "Pago del decimocuarto salario"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__payment_reserve_fund
+msgid "Payment of reserve funds"
+msgstr "Pago de fondos de reserva"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__payment_thirteenth_salary
+msgid "Payment thirteenth salary"
+msgstr "Pago del decimotercer salario"
+
+#. module: hr_dr_contract
+#: model:ir.actions.act_window,name:hr_dr_contract.hr_payroll_structure_type_list_action
+#: model:ir.ui.menu,name:hr_dr_contract.hr_menu_hr_payroll_structure_type
+msgid "Payroll structure type"
+msgstr "Tipo de estructura salarial"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__percentage_reduction_of_working_hours
+msgid "Percentage reduction"
+msgstr "Porcentaje de reducción"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__receive_fortnight
+msgid "Receive fortnight"
+msgstr "Recibe quincena"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__receives_profits
+msgid "Receive profits"
+msgstr "Recibe utilidades"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__receives_hours_extraordinary
+msgid "Receives extra hours extraordinary (100%)"
+msgstr "Recibe horas extras extraordinarias (100%)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__receives_hours_supplementary
+msgid "Receives extra hours supplementary (50%)"
+msgstr "Recibe horas extras suplementarias (50%)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__receives_night_hours
+msgid "Receives night hours (25%)"
+msgstr "Recibe horas nocturnas (25%)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__reduction_of_working_hours
+msgid "Reduction of working hours"
+msgstr "Reducción de jornada"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__payment_period_fourteenth
+msgid "Region"
+msgstr "Región"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__normative_id
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract_type__normative_id
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__normative_id
+msgid "Regulation"
+msgstr "Regulación"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Reserve funds"
+msgstr "Fondos de reserva"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Salary"
+msgstr "Salario"
+
+#. module: hr_dr_contract
+#: model:ir.model,name:hr_dr_contract.model_hr_payroll_structure_type
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__structure_type_id
+msgid "Salary Structure Type"
+msgstr "Tipo de Estructura Salarial"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Salary structure type"
+msgstr "Tipo de estructura de nómina"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Service time"
+msgstr "Tiempo de servicio"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__settlement
+msgid "Settlement"
+msgstr "Finiquito"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields.selection,name:hr_dr_contract.selection__hr_contract__payment_period_fourteenth__sierra_oriente_fourteenth_salary
+msgid "Sierra - Eastern (Fourteenth salary)"
+msgstr "Sierra - Oriente (Decimocuarto salario)"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__standard_daily_hours
+msgid "Standard daily hours"
+msgstr "Horas diarias estándar"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__date_start
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Tenths"
+msgstr "Décimos"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__payment_thirteenth_salary
+msgid ""
+"The calculation is made from December 1 of the previous year to November 30 "
+"of the payment year. It must be paid until December 24 of each year."
+msgstr ""
+"El cálculo se realiza desde el 1 de diciembre del año anterior hasta el 30 "
+"de noviembredel año de pago. Deberá pagarse hasta el 24 de diciembre de cada"
+" año."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__max_date_payment_period_fourteenth
+msgid "The date before which the fourteenth salary is due by region."
+msgstr ""
+"La fecha antes de la cual se debe pagar el decimocuarto salario por región."
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Thirteenth salary"
+msgstr "Decimotercer salario"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_dr_contract_view_search_inherit
+msgid "Valid"
+msgstr "Válido"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_payroll_structure_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_payroll_structure_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__weekly_hours
+msgid "Weekly hours"
+msgstr "Horas semanales"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__resource_calendar_id
+msgid "Working Schedule"
+msgstr "Programa de trabajo"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "Working hours"
+msgstr "Horario"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,field_description:hr_dr_contract.field_hr_contract__years_in_service
+msgid "Years in service"
+msgstr "Años en servicio"
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__IESS_input_document
+msgid "You can attach your IESS input documents."
+msgstr "Puedes adjuntar tus documentos de ingreso al IESS."
+
+#. module: hr_dr_contract
+#: model:ir.model.fields,help:hr_dr_contract.field_hr_contract__IESS_output_document
+msgid "You can attach your IESS output documents."
+msgstr "Puedes adjuntar tus documentos de salida del IESS."
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "day(s)"
+msgstr "día(s)"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "month(s)"
+msgstr "mes(s)"
+
+#. module: hr_dr_contract
+#: model_terms:ir.ui.view,arch_db:hr_dr_contract.hr_contract_hr_contract_view_form_inherit
+msgid "year(s)"
+msgstr "año(s)"

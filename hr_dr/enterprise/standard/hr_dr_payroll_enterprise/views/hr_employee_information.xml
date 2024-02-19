@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="employee_information_view_form" model="ir.ui.view">
+		<field name="name">employee.information.view.form</field>
+		<field name="model">hr.personal.expense</field>
+		<field name="arch" type="xml">
+			<form string="Personal expenses">
+				<header>
+					<button name="action_validate" type="object" states="draft" string="Validate" class="oe_highlight" groups="hr_payroll.group_hr_payroll_manager"/>
+					<button name="action_draft" type="object" states="done" string="Send to Draft" class="oe_highlight" groups="hr_payroll.group_hr_payroll_manager"/>
+					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,done"/>
+				</header>
+				<sheet>
+					<group col="4" colspan="4">
+						<group col="2" colspan="2">
+							<field name="employee_id" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+							<field name="user_id" invisible="1"/>
+							<field name="rent_tax_table_id" string="Tabla de impuesto a la renta" attrs="{'required': True, 'readonly': [('state','!=','draft')]}"/>
+							<field name="is_manager" invisible="1"/>
+						</group>
+						<group col="2" colspan="2">
+							<field name="calculation_method" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}" groups="hr_payroll.group_hr_payroll_manager"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Incomes">
+							<group col="4" colspan="4">
+								<group col="2" colspan="2">
+									<label for="wage" style="width: 400px;"/>
+									<field name="wage" attrs="{'required': True, 'readonly': True}" nolabel="1"/>
+									<field name="commission" string='Sobresueldos, bonos, comisiones y otros ingresos gravables' attrs="{'required': True, 'readonly': True}"/>
+									<field name="utility" string='Utilidades' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="income_other_employers" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="profit_tax_employer" string='Impuesto sobre ingresos gravados asumidos por este empleador' attrs="{'required': True, 'readonly': ['|', ('calculation_method','in',['withhold_employee', 'assumption_total']), ('state','!=','draft')]}"/>
+									<field name="thirteenth_salary" string='Decimotercer salario' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="fourteenth_salary" string='Decimocuarto salario' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="reserve_fund" string='Fondos de reserva' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="compensation" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="other_income" string='Otros ingresos en relación de dependencia que no constituyen ingresos gravables' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									<field name="taxable_income" attrs="{'required': True, 'readonly': True}"/>
+									<field name="max_deductible" attrs="{'required': True, 'readonly': True}"/>
+								</group>
+								<group col="2" colspan="2">
+								</group>								
+							</group>
+						</page>
+						<page string="Expenses, Deductions and Exonerations">
+							<group>
+								<group>
+									<group string="IESS">
+										<field name="iess_this_employer" string='Contribución personal al IESS con este empleador' attrs="{'required': True, 'readonly': True}"/>
+										<field name="iess_other_employer" string='Contribución personal al IESS con otros empleadores' attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									</group>
+									<group string="Deducción de gastos personales">
+										<label for="living_place" style="width: 280px;"/>
+										<div>
+											<field name="living_place" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max = 
+											<field name="max_living_place" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="education"/>
+										<div>
+											<field name="education" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max = 
+											<field name="max_education" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="feeding"/>
+										<div>
+											<field name="feeding" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max = 
+											<field name="max_feeding" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="clothing"/>
+										<div>
+											<field name="clothing" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max = 
+											<field name="max_clothing" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="sightseeing"/>
+										<div>
+											<field name="sightseeing" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max =
+											<field name="max_sightseeing" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="health"/>
+										<div>
+											<field name="health" attrs="{'required': True, 'readonly': [('state','!=','draft')]}" class="oe_inline"/> max = 
+											<field name="max_health" readonly="1" class="oe_inline"/>
+										</div>
+										<label for="total_expenses"/>
+										<div>
+											<field name="total_expenses" class="oe_inline"/>
+										</div>
+									</group>
+									<group string="Exonerations">
+										<label for="disability_deduction" style="width: 280px;"/>
+										<field name="disability_deduction" attrs="{'required': True, 'readonly': True}" nolabel="1"/>
+										<field name="third_age_deduction" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}"/>
+									</group>
+								</group>
+							</group>
+						</page>
+						<page string="Summary Tax">
+							<table>
+								<tbody>
+									<tr>
+										<td style="width: 400px;"></td>
+										<td style="width: 200px;"><h3>First Calculation</h3></td>
+										<td style="width: 200px;"><h3>Calculated Value</h3></td>
+										<td style="width: 200px;"><h3>Posted Value</h3></td>
+										<td style="width: 200px;"><h3>Discount Value</h3></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="tax_base"/></td>
+										<td style="width: 200px;"><field name="tax_base_firt_calculation" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="tax_base" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="profit_tax"/></td>
+										<td style="width: 200px;"><field name="profit_tax_firt_calculation" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="profit_tax" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="amount_other_employer"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"><field name="amount_other_employer" attrs="{'required': True, 'readonly': ['|', ('is_manager','=',False), ('state','!=','draft')]}" nolabel="1"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="amount_this_employer"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"><field name="amount_this_employer" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="amount_this_employer_posted" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="amount_this_employer_discount" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="second_amount_this_employer" attrs="{'invisible': [('calculation_method','!=','assumption_total')]}"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"><field name="second_amount_this_employer" attrs="{'required': True, 'readonly': True, 'invisible': [('calculation_method','!=','assumption_total')]}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="second_amount_this_employer_posted" attrs="{'required': True, 'readonly': True, 'invisible': [('calculation_method','!=','assumption_total')]}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="second_amount_this_employer_discount" attrs="{'required': True, 'readonly': True, 'invisible': [('calculation_method','!=','assumption_total')]}" nolabel="1"/></td>
+									</tr>
+									<tr>
+										<td style="width: 400px;"><label for="amount_detained_employee"/></td>
+										<td style="width: 200px;"></td>
+										<td style="width: 200px;"><field name="amount_detained_employee" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="amount_detained_employee_posted" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+										<td style="width: 200px;"><field name="amount_detained_employee_discount" attrs="{'required': True, 'readonly': True}" nolabel="1"/></td>
+									</tr>
+								</tbody>
+							</table>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="employee_information_view_tree" model='ir.ui.view'>
+		<field name="name">employee.information.view.tree</field>
+		<field name="model">hr.personal.expense</field>
+		<field name="arch" type="xml">
+			<tree string="Personal expenses">
+				<field name="employee_id"/>
+				<field name="rent_tax_table_id"/>
+				<field name="calculation_method" />
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_employee_information_kanban" model="ir.ui.view">
+		<field name="name">view.hr.personal.expense.kanban</field>
+		<field name="model">hr.personal.expense</field>
+		<field name="arch" type="xml">
+			<kanban class="o_kanban_mobile">
+				<field name="employee_id" />
+				<field name="rent_tax_table_id" />
+				<field name="calculation_method" />
+				<field name="state" />
+				<templates>
+					<t t-name="kanban-box">
+						<div t-attf-class="oe_kanban_card oe_kanban_global_click">
+							<div class="row">
+								<div class="col-xs-6">
+									<strong>
+										<span>
+											<field name="employee_id" />
+										</span>
+									</strong>
+								</div>
+								<div class="col-xs-6 pull-right text-right">
+									<strong>
+										<field name="rent_tax_table_id" />
+									</strong>
+								</div>
+							</div>
+                            <div class="row">
+                                <div class="col-xs-12 text-muted">
+                                    <field name="calculation_method" />
+                                </div>
+                            </div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record id="action_employee_information" model="ir.actions.act_window">
+		<field name="name">Personal expenses</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.personal.expense</field>
+		<field name="view_mode">tree,kanban,form</field>
+	</record>
+
+	<menuitem id="menu_income_tax" name="Income tax" parent="om_hr_payroll.menu_hr_payroll_root" sequence="20" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_employee_information" action="action_employee_information" parent="menu_income_tax" sequence="10" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<!-- TODO: Implementar la generación del RDEP -->
+	<menuitem id="menu_generation_rdep" action="" parent="menu_income_tax" sequence="20" groups="hr_payroll.group_hr_payroll_manager"/>
+
+
+</odoo>

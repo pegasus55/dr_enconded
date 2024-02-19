@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<odoo>
+  <template id="report_employee_credit_request_document">
+    <t t-call="web.external_layout">
+      <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
+      <div class="page"
+      >
+        <div class="oe_structure" />
+        <br/>
+        <br/>
+        <div class="container-fluid">
+          <h3 class="text-center mb-5">
+            <span t-field="doc._get_last_approver().department_employee_requests_id.name"/><br/>
+            <span>FORMULARIO DE SOLICITUD DE CRÉDITO DIRECTO</span><br/>
+          </h3>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Estado de la solicitud: </span>
+              <span class="pl-3 text-muted flex-grow-1">APROBADA</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <span>Fecha de la solicitud: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.date" t-options='{"widget": "date"}'/>
+            </div>
+            <div class="col-6 d-flex">
+              <span>Fecha inicial de pago: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.payment_date" t-options='{"widget": "date"}'/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Colaborador: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.name"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <span>Cantidad solicitada: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.credit_amount" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"></span>
+            </div>
+            <div class="col-6 d-flex">
+              <span>Cantidad de cuotas: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.installment"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <span>Cargo: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"></span>
+            </div>
+            <div class="col-6 d-flex">
+              <span>Departamento: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Motivo: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.commentary"/>
+            </div>
+          </div>
+          <h5 class="text-center mb-5">
+            <span class="small">DETALLE DE CUOTAS</span>
+          </h5>
+          <table class="table table-sm table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center">Cuota</th>
+                <th class="text-center">Fecha de pago</th>
+                <th class="text-center">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="doc.credit_lines" t-as="line">
+                  <tr>
+                    <td class="text-lefth">
+                      <strong><span t-field="line.installment"/></strong>
+                    </td>
+                    <td class="text-lefth">
+                      <strong> <span t-field="line.date" t-options='{"widget": "date"}'/> </strong>
+                    </td>
+                    <td class="text-right">
+                      <strong><span t-field="line.amount" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></strong>
+                    </td>
+                  </tr>
+                </t>
+            </tbody>
+          </table>
+          <br/>
+          <div class="row mt-5">
+            <div class="col-4 text-center border-top border-dark">
+              <span t-field="doc.employee_requests_id.name"/><br/>
+              Colaborador
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 text-center border-top border-dark">
+              <t t-if="doc.employee_requests_id.department_employee_requests_id">
+                <t t-if="doc.employee_requests_id != doc.employee_requests_id.department_employee_requests_id.manager_id">
+                  <span t-field="doc.employee_requests_id.department_employee_requests_id.manager_id"/><br/>
+                </t>
+                <t t-else="">
+                  <t t-if="doc.employee_requests_id.department_employee_requests_id.parent_id">
+                    <span t-field="doc.employee_requests_id.department_employee_requests_id.parent_id.manager_id"/><br/>
+                  </t>
+                </t>
+
+              </t>
+              Jefe Inmediato
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <img t-if="doc._get_last_approver().signature" t-att-src="image_data_uri(doc._get_last_approver().signature)" style="max-height:80pt;max-width:100%" alt="Signature"/>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div class="col-4 text-center border-top border-dark">
+              <span t-field="doc._get_last_approver().name"/>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <span t-field="doc._get_last_approver().job_id.position_id.name"/>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <span t-field="doc._get_last_approver().department_employee_requests_id.name"/>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <span t-field="res_company.name"/>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="oe_structure"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="report_employee_credit_request">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_credit.report_employee_credit_request_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+  <report id="action_employee_credit_request_report"
+    string="Employee credit request"
+    model="hr.credit"
+    report_type="qweb-html"
+    name="hr_dr_credit.report_employee_credit_request"
+    file="hr_dr_credit.report_employee_credit_request"
+    print_report_name="'Employee credit request %s' % (object.employee_requests_id.name)"
+    groups="hr_dr_credit.hr_dr_credit_group_employee"
+    menu="False"
+  />
+
+
+
+  <template id="report_discount_authorization_ec_document">
+    <t t-call="web.external_layout">
+      <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
+      <div class="page"
+      >
+        <t t-set="complete_address" t-value="doc._get_complete_address()"/>
+        <div class="oe_structure" />
+        <br/>
+        <br/>
+        <div class="container-fluid">
+          <h3 class="text-center mb-5">
+            <span t-field="doc._get_last_approver().department_employee_requests_id.name"/><br/>
+            <span>AUTORIZACIÓN DE DESCUENTO POR ROL DE PAGOS Y LIQUIDACIÓN DE HABERES</span><br/>
+          </h3>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <span>Fecha: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.date" t-options='{"widget": "date"}'/>
+            </div>
+            <div class="col-6 d-flex">
+              <span>Identificación: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.sudo().identification_id"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Colaborador: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.sudo().name"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <span>Cargo: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.job_position.position_id.name"></span>
+            </div>
+            <div class="col-6 d-flex">
+              <span>Departamento: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.department_employee_requests_id.name"></span>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <p align="justify">
+                Por medio del presente documento autorizo a la compañía <strong><t t-esc="res_company.partner_id.name"/></strong> a descontar de mi rol de pagos la cantidad total de: <strong><span t-field="doc.credit_amount" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"></span></strong> en <strong><span t-field="doc.installment"></span></strong> cuota(s) por concepto de <strong>CRÉDITO DIRECTO</strong>. En caso de desvinculación de la empresa autorizo que el saldo o valor total se descuente de mi liquidación de haberes.
+              </p>
+            </div>
+          </div>
+          <h5 class="text-center mb-5">
+            <span class="small">DETALLE DE CUOTAS</span>
+          </h5>
+          <table class="table table-sm table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center">Cuota</th>
+                <th class="text-center">Fecha de pago</th>
+                <th class="text-center">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="doc.credit_lines" t-as="line">
+                  <tr>
+                    <td class="text-lefth">
+                      <strong><span t-field="line.installment"/></strong>
+                    </td>
+                    <td class="text-lefth">
+                      <strong> <span t-field="line.date" t-options='{"widget": "date"}'/> </strong>
+                    </td>
+                    <td class="text-right">
+                      <strong><span t-field="line.amount" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></strong>
+                    </td>
+                  </tr>
+                </t>
+            </tbody>
+          </table>
+          <br/>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Firma del colaborador: </span>
+              <span class="pl-3 text-muted flex-grow-1">______________________________</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Identificación: </span>
+              <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.sudo().identification_id"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Dirección: </span>
+              <span class="pl-3 text-muted flex-grow-1">
+                <t t-esc="complete_address"></t>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Teléfono: </span>
+              <t t-if="doc.employee_requests_id.personal_mobile_phone != ''">
+                <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.personal_mobile_phone"/><br/>
+              </t>
+              <t t-else="">
+                <t t-if="doc.employee_requests_id.personal_phone != ''">
+                  <span class="pl-3 text-muted flex-grow-1" t-field="doc.employee_requests_id.personal_phone"/><br/>
+                </t>
+              </t>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span>Autorizado por: </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <img t-if="doc._get_last_approver().signature" t-att-src="image_data_uri(doc._get_last_approver().signature)" style="max-height:80pt;max-width:100%" alt="Signature"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span t-field="doc._get_last_approver().name"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span t-field="doc._get_last_approver().job_id.position_id.name"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex">
+              <span t-field="res_company.name"/>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="oe_structure"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="report_discount_authorization_ec">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_credit.report_discount_authorization_ec_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+  <report id="action_discount_authorization_ec_report"
+    string="Discount authorization"
+    model="hr.credit"
+    report_type="qweb-html"
+    name="hr_dr_credit.report_discount_authorization_ec"
+    file="hr_dr_credit.report_discount_authorization_ec"
+    print_report_name="'Discount authorization %s' % (object.employee_requests_id.name)"
+    groups="hr_dr_credit.hr_dr_credit_group_employee"
+    menu="False"
+  />
+
+</odoo>

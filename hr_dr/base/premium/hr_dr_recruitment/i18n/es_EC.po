@@ -1,0 +1,1845 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dr_recruitment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-01 20:37+0000\n"
+"PO-Revision-Date: 2022-10-01 20:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+" It is increased by 1 day because in the configuration it is specified that "
+"the schedule of the selection process begins the day after the approval of "
+"the staff requirement request."
+msgstr "Se incrementa en un día porque en la configuración se especifica que el "
+"cronograma del proceso de selección comienza el día después de la aprobación de la "
+"solicitud de personal."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+" {} day(s) dedicated to the approval process of the staff requirement "
+"request are increased."
+msgstr ""
+" {} día(s) dedicados al proceso de aprobación de la solicitud de personal "
+"son incrementados."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid " {} day(s) dedicated to the hiring process are increased."
+msgstr "{} día(s) dedicados al proceso de contratación son incrementados."
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.report,print_report_name:hr_dr_recruitment.action_job_profile_report
+msgid "'%s profile' % (object.name)"
+msgstr "'Perfil de %s' % (object.name)"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.report,print_report_name:hr_dr_recruitment.action_schedule_process_staff_requirement_report
+msgid "'Schedule - %s' % (object.name)"
+msgstr "'Cronograma - %s' % (object.name)"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,body_html:hr_dr_recruitment.email_template_confirm_direct_staff_requirement_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        A staff requirement request has been registered for you.<br/><br/>\n"
+"                        <strong>Request data</strong><br/>\n"
+"                        <strong>Request date:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Quantity:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Type:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Job:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Position:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Department:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Job location:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Collaborator to replace:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comment:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Una solicitud de requerimiento de personal ha sido registrada para usted.<br/><br/>\n"
+"                        <strong>Datos de la solicitud</strong><br/>\n"
+"                        <strong>Fecha de la solicitud:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Cantidad:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Tipo:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Puesto:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Cargo:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Departamento:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Dirección:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Fecha de incorporación:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Reemplaza a:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comentario:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: hr_dr_recruitment
+#: model:mail.template,body_html:hr_dr_recruitment.email_template_confirm_staff_requirement_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Your staff requirement request is being processed.<br/><br/>\n"
+"                        <strong>Request data</strong><br/>\n"
+"                        <strong>Request date:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Quantity:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Type:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Job:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Position:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Department:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Job location:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Collaborator to replace:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comment:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Su solicitud de requerimiento de personal está siendo procesada.<br/><br/>\n"
+"                        <strong>Datos de la solicitud</strong><br/>\n"
+"                        <strong>Fecha de la solicitud:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Cantidad:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Tipo:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Puesto:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Cargo:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Departamento:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Dirección:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Fecha de incorporación:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Remplaza a:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comentario:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,body_html:hr_dr_recruitment.email_template_confirm_approve_staff_requirement_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Your staff requirement request was approved.<br/><br/>\n"
+"                        <strong>Request data</strong><br/>\n"
+"                        <strong>Request date:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Quantity:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Type:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Job:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Position:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Department:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Job location:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Collaborator to replace:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comment:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Su solicitud de requerimiento de personal ha sido aprobada.<br/><br/>\n"
+"                        <strong>Datos de la solicitud</strong><br/>\n"
+"                        <strong>Fecha de la solicitud:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Cantidad:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Tipo:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Puesto:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Cargo:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Departamento:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Dirección:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Fecha de incorporación:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Remplaza a:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comentario:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,body_html:hr_dr_recruitment.email_template_confirm_cancel_staff_requirement_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Your staff requirement request was cancelled.<br/><br/>\n"
+"                        <strong>Request data</strong><br/>\n"
+"                        <strong>Request date:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Quantity:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Type:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Job:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Position:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Department:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Job location:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Collaborator to replace:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comment:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Su solicitud de requerimiento de personal fue cancelada.<br/><br/>\n"
+"                        <strong>Datos de la solicitud</strong><br/>\n"
+"                        <strong>Fecha de la solicitud:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Cantidad:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Tipo:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Puesto:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Cargo:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Departamento:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Dirección:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Fecha de incorporación:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Remplaza a:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comentario:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,body_html:hr_dr_recruitment.email_template_confirm_reject_staff_requirement_request
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Your staff requirement request was rejected.<br/><br/>\n"
+"                        %if object.reason_reject:\n"
+"                        <strong>Reason:</strong> ${(object.reason_reject)}<br/><br/>\n"
+"                        %endif\n"
+"                        <strong>Request data</strong><br/>\n"
+"                        <strong>Request date:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Quantity:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Type:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Job:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Position:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Department:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Job location:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Incorporation date:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Collaborator to replace:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comment:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Sincerely,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Note: Sending this email is automatic, please do not reply. If you have any concerns, please contact ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Estimado <strong>${(object.employee_requests_id.name)}</strong>,<br/><br/>\n"
+"                        Su solicitud de requerimiento de personal fue rechazada.<br/><br/>\n"
+"                        %if object.reason_reject:\n"
+"                        <strong>Motivo:</strong> ${(object.reason_reject)}<br/><br/>\n"
+"                        %endif\n"
+"                        <strong>Datos de la solicitud</strong><br/>\n"
+"                        <strong>Fecha de la solicitud:</strong> ${(object.create_date.strftime(\"%d/%m/%Y %H:%M:%S\"))}<br/>\n"
+"                        <strong>Cantidad:</strong> ${(object.quantity)}<br/>\n"
+"                        <strong>Tipo:</strong> ${ctx['type']}<br/>\n"
+"                        <strong>Puesto:</strong> ${(object.job_id.name)}<br/>\n"
+"                        <strong>Cargo:</strong> ${(object.position_id.name)}<br/>\n"
+"                        <strong>Departamento:</strong> ${(object.department_id.name)}<br/>\n"
+"                        <strong>Dirección:</strong> ${(object.address_id.display_name)}<br/>\n"
+"                        <strong>Fecha de incorporación:</strong> ${(object.date_incorporation.strftime(\"%d/%m/%Y\"))}<br/>\n"
+"                        %if object.employee_to_replace_id:\n"
+"                        <strong>Remplaza a:</strong> ${(object.employee_to_replace_id)}<br/>\n"
+"                        %endif\n"
+"                        %if object.commentary:\n"
+"                        <strong>Comentario:</strong> ${(object.commentary)}<br/>\n"
+"                        %endif\n"
+"                    </p>\n"
+"                    <p>Atentamente,</p>\n"
+"                    <p>${object.employee_requests_id.company_id.name|safe} | ${ctx['department']}.</p>\n"
+"                    <img src=\"${'/logo.png?company=%s' % object.employee_requests_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.employee_requests_id.company_id.name}\"/>\n"
+"                    <p>\n"
+"                        <i>Nota: El envío de este correo es automático, por favor no lo responda. Si tiene alguna inquietud comuníquese con ${ctx['department']}.</i>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Dirección:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Day Calendar</strong>"
+msgstr "Día (Calendario)"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Day Global</strong>"
+msgstr "Día (Global)"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Day Stage</strong>"
+msgstr "Día (Etapa)"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Department:</strong>"
+msgstr "<strong>Departamento:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Employee requesting:</strong>"
+msgstr "<strong>Empleado que solicita:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Employee to replace:</strong>"
+msgstr "<strong>Empleado a reemplazar:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Incorporation date</strong>"
+msgstr "<strong>Fecha de incorporación</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Involved</strong>"
+msgstr "Involucrado(s)"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>Puesto de trabajo:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Position:</strong>"
+msgstr "<strong>Cargo:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Quantity:</strong>"
+msgstr "<strong>Cantidad:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Stage - Detail</strong>"
+msgstr "<strong>Etapa - Detalle</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "<strong>Type:</strong>"
+msgstr "<strong>Tipo:</strong>"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.generate_scheme_schedule_process_staff_requirement_form
+msgid "Accept"
+msgstr "Aceptar"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_needaction
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_recruitment_degree__active
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__active
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__address_id
+msgid "Address where collaborators are working"
+msgstr "Dirección donde los colaboradores están trabajando"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_process_staff_requirement__address_id
+msgid "Address where employees are working"
+msgstr "Dirección donde los empleados están trabajando"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__administrator
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_process_staff_requirement_all
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_all
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_notifications_all
+msgid "All"
+msgstr "Todo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__all_levels_bd
+msgid "All levels based on department"
+msgstr "Todos los niveles basado en departamento"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__all_levels_bd_and_administrator
+msgid "All levels based on department and administrator"
+msgstr "Todos los niveles basado en departamento y administrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.staff_requirement_request_action_notifications_all
+msgid "All notifications for staff requirement request"
+msgstr "Todas las notificaciones de solicitud de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.staff_requirement_request_action_notifications_all
+msgid "All notifications for staff requirement request."
+msgstr "Todas las notificaciones de solicitud de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.hr_process_staff_requirement_action_all
+msgid "All process staff requirement"
+msgstr "Todos los procesos de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.hr_process_staff_requirement_action_all
+msgid "All process staff requirement."
+msgstr "Todos los procesos de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.staff_requirement_request_action_all
+msgid "All staff requirement request"
+msgstr "Todas las solicitudes de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.staff_requirement_request_action_all
+msgid "All staff requirement request."
+msgstr "Todas las solicitudes de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__anticipation_days
+msgid "Anticipation days to comply with the process"
+msgstr "Días de anticipación para cumplir con el proceso"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model,name:hr_dr_recruitment.model_hr_applicant
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__applicant_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+#, python-format
+msgid "Applicant"
+msgstr "Candidato"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_recruitment_degree
+msgid "Applicant Degree"
+msgstr "Titulo de solicitante"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model,name:hr_dr_recruitment.model_hr_applicant_stage_score
+#, python-format
+msgid "Applicant score by stage"
+msgstr "Puntuación del solicitante por etapa"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__applicant_ids
+msgid "Applicants"
+msgstr "Solicitantes"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__approval_date
+msgid "Approval date"
+msgstr "Fecha de aprobación"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Are you sure you want to cancel this staff requirement request?"
+msgstr "¿Está seguro de que desea cancelar esta solicitud de requerimiento de personal?"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Are you sure you want to confirm this staff requirement request?"
+msgstr "¿Está seguro de que desea confirmar esta solicitud de requerimiento de personal?"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Are you sure you want to register this staff requirement request?"
+msgstr "¿Está seguro que desea registrar esta solicitud de requerimiento de personal?"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Behavioral skills"
+msgstr "Habilidades conductuales"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__generate_scheme_schedule_process_staff_requirement__generate_mode__by_job
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_scheme_schedule_process_staff_requirement__mode__by_job
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__mode__by_job
+msgid "By job"
+msgstr "Por puesto de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__generate_scheme_schedule_process_staff_requirement__generate_mode__by_position
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_scheme_schedule_process_staff_requirement__mode__by_position
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__mode__by_position
+msgid "By position"
+msgstr "Por posición"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__calendar_day
+msgid "Calendar day"
+msgstr "Día calendario"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.generate_scheme_schedule_process_staff_requirement_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Cancel request"
+msgstr "Cancelar solicitud"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__date_cancellation
+msgid "Cancellation date"
+msgstr "Fecha de cancelación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__user_cancellation
+msgid "Cancellation user"
+msgstr "Usuario que canceló"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__state__cancelled
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__employee_requests_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Collaborator"
+msgstr "Colaborador"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_form
+msgid "Collaborator name"
+msgstr "Nombre del colaborador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__employee_requests_id
+msgid "Collaborator requesting"
+msgstr "Colaborador solicitante"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__employee_to_replace_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__employee_to_replace_id
+msgid "Collaborator to replace"
+msgstr "Colaborador a remplazar"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__employee_ids
+msgid "Collaborators"
+msgstr "Colaboradores"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__commentary
+msgid "Commentary"
+msgstr "Comentario"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__company_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Company"
+msgstr "Compañía"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Confirm request"
+msgstr "Confirmar solicitud"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__date_confirmation
+msgid "Confirmation date"
+msgstr "Fecha de confirmación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__user_confirmation
+msgid "Confirmation user"
+msgstr "Usuario que confirmó"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Create schedule details"
+msgstr "Crear detalle del cronograma"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__create_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__create_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__create_date
+msgid "Created on"
+msgstr "Creado"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant__score
+#, python-format
+msgid "Current score"
+msgstr "Puntuación actual"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__is_applicant_current_stage_score
+#, python-format
+msgid "Current stage"
+msgstr "Etapa actual"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__date_from
+msgid "Date from"
+msgstr "Fecha desde"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__date_to
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__day_global
+msgid "Day global"
+msgstr "Día global"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__day_stage
+msgid "Day stage"
+msgstr "Día de la etapa"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.hr_normative_nomenclator_list_action_recruitment
+msgid "Define the value of the nomenclators by regulations."
+msgstr "Defina los valores de los nomencladores por regulaciones."
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_department
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__department_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__department_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__department_employee_requests_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__department_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Department"
+msgstr "Departamento"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Department collaborator"
+msgstr "Colaborador del departamento"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__department_employee_requests_id
+msgid "Department employee requesting"
+msgstr "Empleado del departamante solicitante"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__department_employee_requests_id
+msgid ""
+"Department to which the collaborator belonged at the time of making the "
+"request."
+msgstr "Departamento al que pertenecía el colaborador al realizar la solicitud."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__detail_ids
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Details"
+msgstr "Detalles"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_department__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_recruitment_degree__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__display_name
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__state__draft
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__process_duration
+msgid "Duration process"
+msgstr "Duración del proceso"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__type__03
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_staff_requirement_request__type__03
+msgid "Eventual Staff"
+msgstr "Personal eventual"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant__score__excellent
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant_stage_score__score__excellent
+#, python-format
+msgid "Excellent"
+msgstr "Excelente"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__no_of_recruitment
+msgid "Expected new collaborators"
+msgstr "Nuevos colaboradores esperados"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant__score__fair
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant_stage_score__score__fair
+#, python-format
+msgid "Fair"
+msgstr "Justo"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Finalize"
+msgstr "Finalizar"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__state__finalized
+msgid "Finalized"
+msgstr "Finalizado"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid ""
+"First administrator for approval / rejection of staff requirement request "
+"notifications."
+msgstr "Primer administrador para aprobación / rechazo de solicitudes de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__type__01
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_staff_requirement_request__type__01
+msgid "Fixed Personnel"
+msgstr "Personal fijo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_channel_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Functions"
+msgstr "Funciones"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "General skills"
+msgstr "Habilidades genereales"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__generate_mode
+msgid "Generate mode"
+msgstr "Generar modo"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.generate_scheme_schedule_process_staff_requirement_action
+#: model:ir.model,name:hr_dr_recruitment.model_generate_scheme_schedule_process_staff_requirement
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_generate_scheme_schedule_process_staff_requirement
+msgid "Generate scheme schedule process staff requirement"
+msgstr "Generar esquema para el cronograma del proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_generate_scheme_schedule_process_staff_requirement_line
+msgid "Generate scheme schedule process staff requirement detail"
+msgstr "Generar detalles del esquema para el cronograma del proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.generate_scheme_schedule_process_staff_requirement_action
+msgid "Generate scheme schedule process staff requirement."
+msgstr "Generar esquema para el cronograma del proceso de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant__score__good
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant_stage_score__score__good
+#, python-format
+msgid "Good"
+msgstr "Bueno"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__hr_responsible_id
+msgid "HR Responsible"
+msgstr "Responsable de RRHH"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_department__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_recruitment_degree__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_needaction
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_unread
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_needaction
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_error
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_sms_error
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_error
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__state__in_progress
+msgid "In Progress"
+msgstr "En progreso"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__include_holidays_in_working_days_of_scheme_schedule
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Include holidays in working days of scheme schedule"
+msgstr "Incluir feriados en los días de trabajo del esquema del cronograma"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__date_incorporation
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__date_incorporation
+msgid "Incorporation date"
+msgstr "Fecha de incorporación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__employee_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_form
+msgid "Involved"
+msgstr "Involucrados"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_is_follower
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__is_holiday
+msgid "Is holiday"
+msgstr "Es feriado"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid ""
+"It is used to define if the process staff requirement starts the day the "
+"request is approved or the next day. If it is marked as true, it means that "
+"the process starts the day it is approved, otherwise it starts the next day."
+msgstr "Se utiliza para definier si el proceso de requerimiento de personal comienza el "
+"día en que se aprueba la solicitud o al día siguiente. Si está marcado, significa que "
+"el proceso comienza el día en que se aprueba, de lo contrario comienza al día siguiente."
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid ""
+"It is used to define whether Saturdays, Sundays, and holidays are counted as"
+" working days within the staffing process schedule. If it is marked as true "
+"it means yes, otherwise no."
+msgstr "Se utiliza para definir si los sábados, domingos y feriados se cuentan como "
+"días hábiles dentro del cronograma del proceso de requerimiento de personal. Si está "
+"marcado como verdadero, significa que sí, de lo contrario no."
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid ""
+"It is used to define whether the number of days in advance with which a "
+"staff requirement request is made is dynamic or fixed based on the duration "
+"of the stages defined for the position or job."
+msgstr "Se utiliza para definir si la cantidad de días de anticipación con la que se "
+"realiza una solicitud de un requerimiento de personal es dinámica o es en base a la "
+"duración de las etapas definidas para el puesto."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__job_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__job_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__job_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Job"
+msgstr "Puesto de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_job
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__address_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__address_id
+msgid "Job location"
+msgstr "Ubicación del puesto de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__job_position
+msgid "Job position"
+msgstr "Puesto de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__job_position
+msgid ""
+"Job position assigned to the collaborator at the time of making the request."
+msgstr "Puesto de trabajo asignado al colaborador en el momento de realizar la solicitud."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__job_ids
+msgid "Jobs"
+msgstr "Puestos de trabajo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_department____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_recruitment_degree____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request____last_update
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Fecha de modificación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__write_uid
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__write_date
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+"License customer [dr_license_customer] module must be installed in the "
+"system."
+msgstr "El módulo de licencia para cliente [dr_license_customer] debe estar instalado en el sistema."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__user_manager_department_employee_requests_id
+msgid "Manager"
+msgstr "Administrador"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Mark as cancelled"
+msgstr "Marcar como cancelado"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Mark as draft"
+msgstr "Marcar como borrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_error
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__mode
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_search
+msgid "Mode"
+msgstr "Modo"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+"Module installation control [dr_module_installation_control] module must be "
+"installed in the system."
+msgstr "El módulo 'Control de instalación' [dr_module_installation_control] debe estar "
+"instalado en el sistema."
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_process_staff_requirement_my
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_my
+msgid "My"
+msgstr "Mío"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.hr_process_staff_requirement_action_my
+msgid "My process staff requirement"
+msgstr "Mis procesos de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.hr_process_staff_requirement_action_my
+msgid "My process staff requirement."
+msgstr "Mis procesos de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.staff_requirement_request_action_my
+msgid "My staff requirement request"
+msgstr "Mis solicitudes de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.staff_requirement_request_action_my
+msgid "My staff requirement request."
+msgstr "Mis solicitudes de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant__score__
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant_stage_score__score__
+msgid "Ninguno"
+msgstr ""
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.hr_normative_nomenclator_list_action_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_configuration_normative_nomenclator_recruitment
+msgid "Nomenclatures by regulations"
+msgstr "Nomencladores por regulaciones"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "None"
+msgstr "Ninguno"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__notification_ids
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_notifications
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.staff_requirement_request_action_notifications_to_process
+msgid "Notifications to process for staff requirement request"
+msgstr "Notificaciones por procesar para las solicitudes de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.staff_requirement_request_action_notifications_to_process
+msgid "Notifications to process for staff requirement request."
+msgstr "Notificaciones por procesar para las solicitudes de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__name
+msgid "Number"
+msgstr "Número"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_needaction_counter
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_error_counter
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_job__no_of_recruitment
+msgid "Number of new collaborators you expect to recruit."
+msgstr "Número de nuevos colaboradores que espera contratar."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_unread_counter
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__working_days
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__working_days
+msgid "Number of working days"
+msgstr "Número de días laborables"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_bc
+msgid "One level based on coach"
+msgstr "Un nivel basado en coach"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_bc_and_administrator
+msgid "One level based on coach and administrator"
+msgstr "Un nivel basado en coach y administrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_bd
+msgid "One level based on department"
+msgstr "Un nivel basado en departamento"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_bd_and_administrator
+msgid "One level based on department and administrator"
+msgstr "Un nivel basado en departamento y administrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_bd_and_two_administrator
+msgid "One level based on department and two administrator"
+msgstr "Un nivel basado en departamento y dos administradores"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_br
+msgid "One level based on responsible"
+msgstr "Un nivel basado en responsable"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__one_level_br_and_administrator
+msgid "One level based on responsible and administrator"
+msgstr "Un nivel basado en responsable y administrador"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "PROFILE"
+msgstr "PERFIL"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__type__04
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_staff_requirement_request__type__04
+msgid "Passant"
+msgstr "Pasante"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_job__hr_responsible_id
+msgid "Person responsible of validating the collaborator's contracts."
+msgstr "Persona responsable de formalizar los contratos laborales."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__personalized
+msgid "Personalized"
+msgstr "Personalizado"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant__score__poor
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_applicant_stage_score__score__poor
+#, python-format
+msgid "Poor"
+msgstr "Pobre"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__position_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__position_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__position_id
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_position
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_position_root
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Position"
+msgstr "Cargo"
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_position_function
+msgid "Position function"
+msgstr "Funciones del cargo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__position_ids
+msgid "Positions"
+msgstr "Cargos"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_process_staff_requirement
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant__process_staff_requirement_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__process_staff_requirement_id
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_process_staff_requirement
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Process staff requirement"
+msgstr "Proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.report,name:hr_dr_recruitment.action_job_profile_report
+msgid "Profile"
+msgstr "Perfil"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__quantity
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__readonly_values
+msgid "Readonly values"
+msgstr "Valores de solo lectura"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__reason_anticipation_days
+msgid "Reason of anticipation days"
+msgstr "Razón de los días de anticipación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__reason_reject
+msgid "Reason reject"
+msgstr "Razón de rechazo"
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_recruitment_root
+msgid "Recruitment"
+msgstr "Selección"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__user_id
+msgid "Recruitment responsible"
+msgstr "Responsable de selección"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Register request"
+msgstr "Registrar solicitud"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,subject:hr_dr_recruitment.email_template_confirm_direct_staff_requirement_request
+msgid "Registered staff requirement request"
+msgstr "Solicitud de requerimiento de personal registrada"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_process_staff_requirement__user_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_process_staff_requirement__user_manager_department_employee_requests_id
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__user_employee_requests_id
+msgid "Related user name for the resource to manage its access."
+msgstr "Usuario relacionado con el recurso para gestionar su acceso."
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request
+msgid "Requests"
+msgstr "Solicitudes"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_schedule_process_staff_requirement_document
+msgid "SCHEDULE"
+msgstr "CRONOGRAMA"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.report,name:hr_dr_recruitment.action_schedule_process_staff_requirement_report
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__schedule_process_staff_requirement_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement_detail__schedule_id
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Schedule"
+msgstr "Cronograma"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__schedule_detail_ids
+msgid "Schedule detail"
+msgstr "Detalle del cronograma"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Schedule details"
+msgstr "Detalles del cronograma"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_schedule_process_staff_requirement
+msgid "Schedule process staff requirement"
+msgstr "Cronograma del proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:ir.model,name:hr_dr_recruitment.model_hr_schedule_process_staff_requirement_detail
+msgid "Schedule process staff requirement detail"
+msgstr "Detalle del cronograma del proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:ir.actions.act_window,name:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_action
+#: model:ir.model,name:hr_dr_recruitment.model_hr_scheme_schedule_process_staff_requirement
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_scheme_schedule_process_staff_requirement
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_view_form
+msgid "Scheme schedule process staff requirement"
+msgstr "Esquema para el cronograma del proceso de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.actions.act_window,help:hr_dr_recruitment.hr_scheme_schedule_process_staff_requirement_action
+msgid "Scheme schedule process staff requirement."
+msgstr "Esquema para el cronograma del proceso de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__score
+#, python-format
+msgid "Score"
+msgstr "Puntuación"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant__applicant_stage_score_ids
+#, python-format
+msgid "Score by stage"
+msgstr "Puntuación por etapa"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_process_staff_requirement__type__02
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__hr_staff_requirement_request__type__02
+msgid "Seasonal Staff"
+msgstr "Personal de temporada"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid ""
+"Second administrator for approval / rejection of staff requirement request "
+"notifications."
+msgstr "Segundo administrador para aprobación / rechazo de notificaciones de solicitudes "
+"de requerimiento de perosnal."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__sequence
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__sequence
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement
+msgid "Staff requirement"
+msgstr "Requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model,name:hr_dr_recruitment.model_hr_staff_requirement_request
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__staff_requirement_request
+#: model:mail.template,subject:hr_dr_recruitment.email_template_confirm_staff_requirement_request
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+#, python-format
+msgid "Staff requirement request"
+msgstr "Solicitud de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__staff_requirement_request_administrator_id
+msgid "Staff requirement request administrator"
+msgstr "Administrador de solicitudes de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,subject:hr_dr_recruitment.email_template_confirm_approve_staff_requirement_request
+msgid "Staff requirement request approved"
+msgstr "Solicitud de requerimiento de personal aprobada"
+
+#. module: hr_dr_recruitment
+#: model:mail.template,subject:hr_dr_recruitment.email_template_confirm_cancel_staff_requirement_request
+msgid "Staff requirement request cancelled"
+msgstr "Solicitud de requerimiento de personal cancelada"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+"Staff requirement request must be made at least with {} anticipation days."
+msgstr "Las solicitudes de requerimiento de personal deben realizarse al menos con "
+"{} días de anticipación."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__staff_requirement_request_notifications
+msgid "Staff requirement request notifications mode"
+msgstr "Modo de notificaciones para las solicitudes de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Staff requirement request notifications mode."
+msgstr "Modo de notificaciones para las solicitudes de requerimiento de personal."
+
+#. module: hr_dr_recruitment
+#: model:mail.template,subject:hr_dr_recruitment.email_template_confirm_reject_staff_requirement_request
+msgid "Staff requirement request rejected"
+msgstr "Solicitud de requerimiento de personal rechazada"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__staff_requirement_request_second_administrator_id
+msgid "Staff requirement request second administrator"
+msgstr "Segundo administrador de solicitud de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__stage_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_applicant_stage_score__stage_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_schedule_process_staff_requirement__stage_id
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__stage_id
+#, python-format
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.crm_case_form_view_job_inherit
+msgid "Stage Score"
+msgstr "Puntuación de la etapa"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement__line_ids
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.generate_scheme_schedule_process_staff_requirement_form
+msgid "Stages"
+msgstr "Etapas"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_form
+msgid "Start"
+msgstr "Inicio"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__start_schedule_approval_day_of_staff_requirement_request
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Start schedule approval day of staff requirement request"
+msgstr "Inicio del cronograma el día de aprobación de la solicitud de requerimiento de personal"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "Start system [dr_start_system] module must be installed in the system."
+msgstr "El módulo 'Inicio de sistema' [dr_start_system] debe estar instalado en su sistema."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__state
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__state
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Technical skills"
+msgstr "Habilidades técnicas"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "The process staff requirement lasts {} days."
+msgstr "El proceso de selección se extiende por {} días."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid ""
+"The staff requirement request must be made {} days prior to the date of "
+"incorporation. This value was defined by the administrator in the "
+"configuration."
+msgstr ""
+"La solicitud de requerimiento de personal debe ser realizada {} días antes de la fecha "
+"de incorporación. Este valor fue definido por el administrador en la configuración."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "There can only be one active process staff requirement per job."
+msgstr "Solo puede haber un proceso requerimiento de personal activo por puesto de trabajo."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_applicant_stage_score__is_applicant_current_stage_score
+#, python-format
+msgid "This is the current state of the applicant"
+msgstr "Este es el estado actual del solicitante"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_applicant__score
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_applicant_stage_score__score
+#, python-format
+msgid "This is the score for the current stage of the application"
+msgstr "Este es el puntaje para la etapa actual del solicitante"
+
+#. module: hr_dr_recruitment
+#: model:ir.ui.menu,name:hr_dr_recruitment.menu_hr_staff_requirement_request_notifications_to_process
+msgid "To process"
+msgstr "Por procesar"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_job__total
+msgid "Total expected collaborators"
+msgstr "Total de colaboradores esperados"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_form
+msgid "Tracing"
+msgstr "Seguimiento"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__two_levels_bd
+msgid "Two levels based on department"
+msgstr "Dos niveles basado en departamento"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__two_levels_bd_and_administrator
+msgid "Two levels based on department and administrator"
+msgstr "Dos niveles basado en departamento y administrador"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__type
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__type
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_process_staff_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.hr_staff_requirement_request_view_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_unread
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes por leer"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__message_unread_counter
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Used to define validation mode."
+msgstr "Utilizado para definir el modo de validación."
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__user_employee_requests_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__user_manager_department_employee_requests_id
+msgid "User manager department collaborator requesting"
+msgstr "Usuario empleado del departamento de colaborador que solicita"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__user_manager_department_employee_requests_id
+msgid "User manager department employee requesting"
+msgstr "Usuario administrador del departamento del empleado que solicita"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_process_staff_requirement__user_employee_requests_id
+msgid "User requesting"
+msgstr "Usuario que solicita"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__validate_anticipation_dynamically
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.res_config_settings_hr_dr_recruitment_view_form
+msgid "Validate anticipation dynamically"
+msgstr "Validar la anticipación de forma dinámica"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_res_config_settings__mode
+msgid "Validation mode"
+msgstr "Modo de validación"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__website_message_ids
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_hr_staff_requirement_request__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_scheme_schedule_process_staff_requirement__website_message_ids
+#: model:ir.model.fields,help:hr_dr_recruitment.field_hr_staff_requirement_request__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields.selection,name:hr_dr_recruitment.selection__res_config_settings__staff_requirement_request_notifications__without_notifications
+msgid "Without notifications"
+msgstr "Sin notificaciones"
+
+#. module: hr_dr_recruitment
+#: model:ir.model.fields,field_description:hr_dr_recruitment.field_generate_scheme_schedule_process_staff_requirement_line__wizard_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: hr_dr_recruitment
+#: model_terms:ir.ui.view,arch_db:hr_dr_recruitment.report_job_profile_document
+msgid "Workplace"
+msgstr "Lugar de trabajo"
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "You can only delete staff requirement requests in draft status."
+msgstr "Solo puede eliminar solicitudes de requerimiento de personal en estado borrador."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/wizard/generate_scheme_schedule_process_staff_requirement.py:0
+#, python-format
+msgid "You must select at least one job."
+msgstr "Debe seleccionar al menos un puesto de trabajo."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/wizard/generate_scheme_schedule_process_staff_requirement.py:0
+#, python-format
+msgid "You must select at least one position."
+msgstr "Debe seleccionar al menos un puesto."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/wizard/generate_scheme_schedule_process_staff_requirement.py:0
+#, python-format
+msgid "You must select at least one stage."
+msgstr "Debe seleccionar al menos una etapa."
+
+#. module: hr_dr_recruitment
+#: code:addons/hr_dr_recruitment/models/models.py:0
+#, python-format
+msgid "has made a staff requirement request."
+msgstr "ha realizado una solicitud de requerimiento de personal."

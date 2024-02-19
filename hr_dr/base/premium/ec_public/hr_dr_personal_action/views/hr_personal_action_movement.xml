@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <!--Personal action movement-->
+        <record model="ir.actions.act_window" id="personal_action_movement_list_action">
+            <field name="name">Personal action movement</field>
+            <field name="res_model">hr.personal.action.movement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the personal action movement.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="personal_action_movement_list">
+            <field name="name">Personal action movement list</field>
+            <field name="model">hr.personal.action.movement</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="sequence"/>
+                    <field name="code"/>
+                    <field name="parent_id"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="personal_action_movement_form">
+            <field name="name">Personal action movement form</field>
+            <field name="model">hr.personal.action.movement</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="sequence"/>
+                            </group>
+                            <group>
+                                <field name="code"/>
+                                <field name="parent_id"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Personal action movement-->
+    </data>
+</odoo>

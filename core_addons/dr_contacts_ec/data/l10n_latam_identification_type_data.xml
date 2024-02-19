@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id='l10n_latam_base.it_vat' model='l10n_latam.identification.type'>
+            <field name='code'>V</field>
+        </record>
+        <record id='l10n_latam_base.it_pass' model='l10n_latam.identification.type'>
+            <field name='code'>P</field>
+        </record>
+        <record id='l10n_latam_base.it_fid' model='l10n_latam.identification.type'>
+            <field name='code'>E</field>
+        </record>
+        <record id='l10n_ec.ec_ruc' model='l10n_latam.identification.type'>
+            <field name='code'>R</field>
+        </record>
+        <record id='l10n_ec.ec_dni' model='l10n_latam.identification.type'>
+            <field name='code'>C</field>
+        </record>
+        <record id='l10n_ec.ec_passport' model='l10n_latam.identification.type'>
+            <field name='code'>P</field>
+        </record>
+        <record id='l10n_ec.ec_unknown' model='l10n_latam.identification.type'>
+            <field name='code'>U</field>
+        </record>
+    </data>
+</odoo>

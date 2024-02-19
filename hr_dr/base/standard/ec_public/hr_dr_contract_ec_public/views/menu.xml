@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <menuitem
+            id="menu_hr_remuneration_scale_root"
+            name="Remuneration scale"
+            parent="hr.menu_human_resources_configuration"
+            sequence="4"/>
+    </data>
+</odoo>

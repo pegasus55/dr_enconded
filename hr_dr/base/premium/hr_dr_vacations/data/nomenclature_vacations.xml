@@ -1,0 +1,158 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.nomenclature" id="NomenclatureVacation1">
+            <field name="name">FECHA DE INICIO PARA PLANIFICACIÓN DE VACACIONES</field>
+            <field name="acronym">FIPV</field>
+            <field name="data_type">date</field>
+            <field name="description">Se utiliza para establecer la fecha a partir de la cual los colaboradores pueden comenzar a planificar las vacaciones del próximo año.
+            </field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation2">
+            <field name="name">FECHA DE FIN PARA PLANIFICACIÓN DE VACACIONES</field>
+            <field name="acronym">FFPV</field>
+            <field name="data_type">date</field>
+            <field name="description">Se utiliza para establecer la fecha hasta la cual los colaboradores pueden planificar las vacaciones del próximo año.
+            </field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation3">
+            <field name="name">CANTIDAD MÍNIMA DE DÍAS PARA PLANIFICACIÓN Y SOLICITUD DE VACACIONES</field>
+            <field name="acronym">CMIDPSV</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para establecer la cantidad mínima de días de vacaciones que se pueden planear y solicitar.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation4">
+            <field name="name">CANTIDAD MÁXIMA DE DÍAS PARA PLANIFICACIÓN Y SOLICITUD DE VACACIONES</field>
+            <field name="acronym">CMADPSV</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para establecer la cantidad máxima de días de vacaciones que se pueden planear y solicitar.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation5">
+            <field name="name">CANTIDAD DE DÍAS DE ANTICIPACIÓN PARA SOLICITUDES DE VACACIONES</field>
+            <field name="acronym">CDAPSV</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad de días de anticipación con los que se debe realizar una solicitud de vacaciones.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation6">
+            <field name="name">SOLICITUD DE VACACIONES SIN PREVIA PLANIFICACIÓN</field>
+            <field name="acronym">SVSPP</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si es posible solicitar vacaciones sin su previa planificación.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation7">
+            <field name="name">INICIO DE PLANIFICACIÓN DE VACACIONES OBLIGATORIAMENTE EN EL SIGUIENTE AÑO</field>
+            <field name="acronym">IPVOSA</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si al menos el inicio de la planificación de vacaciones es obligatoriamente dentro del siguiente año respecto al momento en que se está creando.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation8">
+            <field name="name">ADELANTAR VACACIONES</field>
+            <field name="acronym">AV</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si es posible adelantar vacaciones o no.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation9">
+            <field name="name">TENER EN CUENTA REEMPLAZOS PARA PLANIFICACIÓN Y SOLICITUD DE VACACIONES</field>
+            <field name="acronym">TCRPPYSV</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si los reemplazos de un colaborador se deben tener en cuenta para la planificación y solicitud de vacaciones del mismo.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation10">
+            <field name="name">CANTIDAD BASE DE DÍAS PARA EL CÁLCULO DE VACACIONES</field>
+            <field name="acronym">CBDPCV</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad base de días para el cálculo de vacaciones.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation11">
+            <field name="name">CANTIDAD DE DÍAS DE VACACIONES ACUMULADOS ANUALMENTE</field>
+            <field name="acronym">CDVAA</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad de días de vacaciones acumulados anualmente.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation12">
+            <field name="name">CANTIDAD DE DÍAS LABORABLES DEL TOTAL ACUMULADO ANUALMENTE</field>
+            <field name="acronym">CDLTAA</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad de días laborables de vacaciones acumulados anualmente.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation13">
+            <field name="name">CANTIDAD DE DÍAS NO LABORABLES DEL TOTAL ACUMULADO ANUALMENTE</field>
+            <field name="acronym">CDNLTAA</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad de días no laborables de vacaciones acumulados anualmente.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation14">
+            <field name="name">TENER EN CUENTA LA ANTIGÜEDAD PARA EL CÁLCULO DE VACACIONES</field>
+            <field name="acronym">TCLAPECV</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si se tiene en cuenta la antigüedad para el cálculo de vacaciones.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation15">
+            <field name="name">TENER EN CUENTA PERÍODOS ANTERIORES DE TRABAJO CON EL EMPLEADOR ACTUAL PARA ANTIGÜEDAD EN VACACIONES</field>
+            <field name="acronym">TCPATEAPAV</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si los períodos anteriores de trabajo con el empleador actual se tienen en cuenta para la antigüedad del colaborador.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation16">
+            <field name="name">CANTIDAD DE AÑOS DE ANTIGÜEDAD A PARTIR DE LA CUAL SE INCREMENTAN DÍAS ADICIONALES DE VACACIONES</field>
+            <field name="acronym">CAAPCIDAV</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad de años de antigüedad a partir de la cual se incrementan días adicionales de vacaciones.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation17">
+            <field name="name">CANTIDAD MÁXIMA DE DÍAS ADICIONALES QUE SE INCREMENTAN POR ANTIGÜEDAD</field>
+            <field name="acronym">CMDAQSIPA</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad máxima de días adicionales que se incrementan por antigüedad.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation18">
+            <field name="name">CANTIDAD MÁXIMA DE PERÍODOS COMPLETOS DE VACACIONES QUE SE PUEDEN ACUMULAR</field>
+            <field name="acronym">CMPCVPA</field>
+            <field name="data_type">integer</field>
+            <field name="description">Se utiliza para definir la cantidad máxima de períodos completos de vacaciones que se pueden acumular sin perder las mismas.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+        <record model="hr.nomenclature" id="NomenclatureVacation19">
+            <field name="name">TENER EN CUENTA LA EDAD PARA EL CÁLCULO DE VACACIONES</field>
+            <field name="acronym">TCLEPECV</field>
+            <field name="data_type">boolean</field>
+            <field name="description">Se utiliza para definir si se tiene en cuenta la edad para el cálculo de vacaciones.</field>
+            <field name="active">True</field>
+            <field name="module_id" eval="ref('base.module_hr_dr_vacations')"/>
+        </record>
+    </data>
+</odoo>

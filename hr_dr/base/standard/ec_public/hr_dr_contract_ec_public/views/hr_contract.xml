@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_contract_hr_contract_view_form_inherit">
+            <field name="name">hr_contract_hr_contract_view_form_inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='hr_responsible_id']" position="before">
+                    <field name="budget_item" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="remuneration_scale" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                    <label for="remuneration_scale" string="Detail"/>
+                    <div>
+                        <field name="remuneration_scale_last_year" class="oe_inline" style="width: 50%"/> -
+                        <field name="remuneration_scale_last_salary" class="oe_inline" style="width: 50%"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <!--hr.employee.public-->
+        <record model="ir.ui.view" id="hr_employee_public_view_form_inherit">
+            <field name="name">hr_employee_public_view_form_inherit</field>
+            <field name="model">hr.employee.public</field>
+            <field name="inherit_id" ref="hr.hr_employee_public_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="placeholder">Surnames and names</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="string">Work phone</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="string">Work email</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <group>
+                        <group>
+                            <field name="surnames" required="1" placeholder="Surnames" nolabel="1"/>
+                        </group>
+                        <group>
+                            <field name="names" required="1" placeholder="Names" nolabel="1"/>
+                        </group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//div[@id='o_work_employee_main']//group[last()]" position="attributes">
+                    <attribute name="string">Schedule</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='resource_calendar_id']" position="attributes">
+                    <attribute name="string">Working hours</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='public']" position="attributes">
+                    <attribute name="string">Work Information</attribute>
+                </xpath>
+
+            </field>
+        </record>
+        <!--hr.employee.public-->
+    </data>
+</odoo>

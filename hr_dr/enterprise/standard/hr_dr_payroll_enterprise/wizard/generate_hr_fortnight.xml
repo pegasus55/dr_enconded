@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="generate_hr_fortnight_view_form_inherit" model="ir.ui.view">
+            <field name="name">generate_hr_fortnight_view_form_inherit</field>
+            <field name="model">generate.hr.fortnight</field>
+            <field name="inherit_id" ref="hr_dr_payroll_base.generate_hr_fortnight_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="before">
+                    <field name="account_journal" domain="[('type', '=', 'bank')]" options="{'no_open':true, 'no_create':true}"/>
+                </xpath>
+<!--                <field name="employee_id" position="after">-->
+<!--                    <field name="payslip_input_type_id"/>-->
+<!--                    <field name="type"/>-->
+<!--                </field>-->
+            </field>
+        </record>
+    </data>
+</odoo>

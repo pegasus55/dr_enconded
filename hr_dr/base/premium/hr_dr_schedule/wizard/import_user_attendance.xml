@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_import_user_attendance_form" model="ir.ui.view">
+    	<field name="name">view.import.user.attendance.form</field>
+        <field name="model">import.user.attendance</field>
+        <field name="arch" type="xml">
+        	<form string="Importar marcaciones">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="get_template" string="Download template" type="object" icon="fa-download" class="oe_stat_button"/>
+                    </div>
+					<group>
+						<group>
+							<field type="binary" name="data" class="required" autofocus="autofocus"/>
+						</group>
+						<group>
+							<field type="binary" name="template" invisible="1" readonly="1"/>
+						</group>
+					</group>
+
+					<footer>
+						<button name="action_import_user_attendance" string="Importar" type="object" class="oe_highlight"/>
+						<button string="Cancelar" special="cancel"/>
+					</footer>
+				</sheet>
+        	</form>
+    	</field>
+    </record>
+    
+     <record id="action_import_user_attendance" model="ir.actions.act_window">
+		<field name="name">Importar marcaciones</field>
+		<field name="res_model">import.user.attendance</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="view_import_user_attendance_form"/>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="menu_import_user_attendance" name="Importar marcaciones" parent="menu_attendance" action="hr_dr_schedule.action_import_user_attendance" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="60"/>
+        
+</odoo>

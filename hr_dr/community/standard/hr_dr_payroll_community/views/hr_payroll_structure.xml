@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_hr_employee_grade_form_inherit" model="ir.ui.view">
+		<field name="name">view.hr.employee.grade.form.inherit</field>
+	    <field name="model">hr.payroll.structure</field>
+	    <field name="inherit_id" ref="om_hr_payroll.view_hr_employee_grade_form"/>
+	    <field name="arch" type="xml">
+	    	<xpath expr="//field[@name='parent_id']" position="after">
+				<field name="active"/>
+			</xpath>
+	    </field>
+	</record>
+
+	<record id="view_hr_payroll_structure_list_view_inherit" model="ir.ui.view">
+		<field name="name">view.hr.payroll.structure.list.view.inherit</field>
+	    <field name="model">hr.payroll.structure</field>
+	    <field name="inherit_id" ref="om_hr_payroll.view_hr_payroll_structure_list_view"/>
+	    <field name="arch" type="xml">
+	    	<xpath expr="//field[@name='code']" position="after">
+				<field name="active"/>
+			</xpath>
+	    </field>
+	</record>
+
+	<record id="view_hr_payroll_structure_tree_inherit" model="ir.ui.view">
+		<field name="name">view.hr.payroll.structure.tree.inherit</field>
+	    <field name="model">hr.payroll.structure</field>
+	    <field name="inherit_id" ref="om_hr_payroll.view_hr_payroll_structure_tree"/>
+	    <field name="arch" type="xml">
+	    	<xpath expr="//field[@name='code']" position="after">
+				<field name="active"/>
+			</xpath>
+	    </field>
+	</record>
+</odoo>

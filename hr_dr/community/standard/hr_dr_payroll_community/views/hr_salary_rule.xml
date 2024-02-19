@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_salary_rule_list_inherit" model="ir.ui.view">
+        <field name="name">hr.salary.rule.list.inherit</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="string">Salary rules</attribute>
+	        </xpath>
+        </field>
+    </record>
+
+    <record id="hr_salary_rule_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.salary.rule.tree.inherit</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="string">Salary rules</attribute>
+	        </xpath>
+        </field>
+    </record>
+
+    <record id="hr_salary_rule_form_inherit" model="ir.ui.view">
+        <field name="name">hr.salary.rule.form.inherit</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="string">Salary rules</attribute>
+	        </xpath>
+        </field>
+    </record>
+
+    <record id="om_hr_payroll_account_hr_salary_rule_form_inherit_inherit" model="ir.ui.view">
+        <field name="name">om_hr_payroll_account_hr_salary_rule_form_inherit_inherit</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="om_hr_payroll_account.hr_salary_rule_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[last()]" position="after">
+                <page name="contract_type_account_account" string="Accounting accounts by type of contract">
+                    <group>
+                        <field name="condition_acc"/>
+                    </group>
+                    <field name="contract_type_account_account_ids" nolabel="1" attrs="{'invisible': [('condition_acc', '=', False)]}">
+                        <tree editable="bottom">
+                            <field name="contract_type_id"/>
+                            <field name="debit_account"/>
+                            <field name="credit_account"/>
+                            <field name="account_analytic_account_id"/>
+                            <field name="account_tax_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

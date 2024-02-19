@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+    <!--hr.place.attendance-->
+    <record id="view_hr_place_attendance_form" model="ir.ui.view">
+        <field name="name">hr.place.attendance.form</field>
+        <field name="model">hr.place.attendance</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Place attendance">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="latitude"/>
+                        </group>
+                        <group>
+                            <field name="range_radius"/>
+                            <field name="longitude"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="view_hr_place_attendance_tree" model="ir.ui.view">
+        <field name="name">hr.place.attendance.tree</field>
+        <field name="model">hr.place.attendance</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Place attendance">
+                <field name="name"/>
+                <field name="latitude"/>
+                <field name="longitude"/>
+                <field name="range_radius"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hr_place_attendance_action" model="ir.actions.act_window">
+        <field name="name">Place attendance</field>
+        <field name="res_model">hr.place.attendance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hr_place_attendance_tree"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to define a new place attendance.
+            </p>
+            <p>
+            </p>
+        </field>
+    </record>
+    <menuitem id="hr_place_attendance_menu" action="hr_place_attendance_action" parent="hr.menu_config_employee" sequence="16"/>
+    <!--hr.place.attendance-->
+
+    <!--Formulario Colaborador-->
+      <record model="ir.ui.view" id="view_employee_form_hr_dr_mobile_app_inherit">
+        <field name="name">view_employee_form_hr_dr_mobile_app_inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_dr_employee.view_employee_form_inherit"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='attendance_web']" position="after">
+                <group string="Attendance mobile" name="attendance_mobile">
+                    <field name="allow_attendance_mobile"/>
+                    <field name="attendance_mobile_without_place_restriction" attrs="{'invisible': [('allow_attendance_mobile', '=', False)]}"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//page[@name='food_preferences']" position="after">
+                <page name="place_attendance_ids" string="Place Attendance" attrs="{'invisible': [('allow_attendance_mobile','=',False)]}">
+                    <field name="place_attendance_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="latitude"/>
+                            <field name="longitude"/>
+                            <field name="range_radius"/>
+                            <field name="active"/>
+                        </tree>
+                        <form string="Place attendance">
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="latitude"/>
+                                    </group>
+                                    <group>
+                                        <field name="range_radius"/>
+                                        <field name="longitude"/>
+                                        <field name="active"/>
+                                    </group>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+    <!--Formulario Colaborador-->
+  </data>
+</odoo>

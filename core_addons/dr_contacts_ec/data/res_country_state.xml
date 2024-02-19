@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="base.state_ec_01" model="res.country.state">
+            <field name="name">(A)Azuay</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_02" model="res.country.state">
+            <field name="name">(B)Bolívar</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_03" model="res.country.state">
+            <field name="name">(F)Cañar</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_04" model="res.country.state">
+            <field name="name">(C)Carchi</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_05" model="res.country.state">
+            <field name="name">(X)Cotopaxi</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_06" model="res.country.state">
+            <field name="name">(H)Chimborazo</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_07" model="res.country.state">
+            <field name="name">(O)El Oro</field>
+            <field name="region">coast</field>
+        </record>
+        <record id="base.state_ec_08" model="res.country.state">
+            <field name="name">(E)Esmeraldas</field>
+            <field name="region">coast</field>
+        </record>
+        <record id="base.state_ec_09" model="res.country.state">
+            <field name="name">(G)Guayas</field>
+            <field name="region">coast</field>
+        </record>
+        <record id="base.state_ec_10" model="res.country.state">
+            <field name="name">(I)Imbabura</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_11" model="res.country.state">
+            <field name="name">(L)Loja</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_12" model="res.country.state">
+            <field name="name">(R)Los Ríos</field>
+            <field name="region">coast</field>
+        </record>
+        <record id="base.state_ec_13" model="res.country.state">
+            <field name="name">(M)Manabí</field>
+            <field name="region">coast</field>
+        </record>
+        <record id="base.state_ec_14" model="res.country.state">
+            <field name="name">(S)Morona-Santiago</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_15" model="res.country.state">
+            <field name="name">(N)Napo</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_16" model="res.country.state">
+            <field name="name">(Y)Pastaza</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_17" model="res.country.state">
+            <field name="name">(P)Pichincha</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_18" model="res.country.state">
+            <field name="name">(T)Tungurahua</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_19" model="res.country.state">
+            <field name="name">(Z)Zamora-Chinchipe</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_20" model="res.country.state">
+            <field name="name">(W)Galapagos</field>
+            <field name="region">island</field>
+        </record>
+        <record id="base.state_ec_21" model="res.country.state">
+            <field name="name">(U)Sucumbíos</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_22" model="res.country.state">
+            <field name="name">(D)Orellana</field>
+            <field name="region">eastern</field>
+        </record>
+        <record id="base.state_ec_23" model="res.country.state">
+            <field name="name">(SD)Santo Domingo de los Tsáchilas</field>
+            <field name="region">sierra</field>
+        </record>
+        <record id="base.state_ec_24" model="res.country.state">
+            <field name="name">(SE)Santa Elena</field>
+            <field name="region">coast</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+    	<record id="payroll_structure_01" model="hr.payroll.structure">
+            <field name="name">ADMINISTRATIVO</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_02" model="hr.payroll.structure">
+            <field name="name">VENTA</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_03" model="hr.payroll.structure">
+            <field name="name">MANO DE OBRA DIRECTA</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_04" model="hr.payroll.structure">
+            <field name="name">MANO DE OBRA INDIRECTA</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_05" model="hr.payroll.structure">
+            <field name="name">PASANTE (ADMINISTRATIVO)</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_06" model="hr.payroll.structure">
+            <field name="name">PASANTE (VENTA)</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_07" model="hr.payroll.structure">
+            <field name="name">PASANTE (MANO DE OBRA DIRECTA)</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_08" model="hr.payroll.structure">
+            <field name="name">PASANTE (MANO DE OBRA INDIRECTA)</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+        <record id="payroll_structure_assets_liquidation" model="hr.payroll.structure">
+            <field name="name">LIQUIDACIÓN DE HABERES</field>
+            <field name="country_id" eval="ref('base.ec')"/>
+            <field name="type_id" ref = "hr_dr_payroll_enterprise_ec_private.hr_payroll_structure_type_01"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+    </data>
+</odoo>

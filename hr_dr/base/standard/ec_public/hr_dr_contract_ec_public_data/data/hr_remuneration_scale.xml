@@ -1,0 +1,86 @@
+<odoo>
+    <data noupdate="1">
+        <record model="hr.remuneration.scale" id="SPS1">
+            <field name="name">Servidor Público de Servicios 1</field>
+            <field name="level">1</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SPS2">
+            <field name="name">Servidor Público de Servicios 2</field>
+            <field name="level">2</field>
+        </record>
+
+        <record model="hr.remuneration.scale" id="SPA1">
+            <field name="name">Servidor Público de Apoyo 1</field>
+            <field name="level">3</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SPA2">
+            <field name="name">Servidor Público de Apoyo 2</field>
+            <field name="level">4</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SPA3">
+            <field name="name">Servidor Público de Apoyo 3</field>
+            <field name="level">5</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SPA4">
+            <field name="name">Servidor Público de Apoyo 4</field>
+            <field name="level">6</field>
+        </record>
+
+        <record model="hr.remuneration.scale" id="SP1">
+            <field name="name">Servidor Público 1</field>
+            <field name="level">7</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP2">
+            <field name="name">Servidor Público 2</field>
+            <field name="level">8</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP3">
+            <field name="name">Servidor Público 3</field>
+            <field name="level">9</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP4">
+            <field name="name">Servidor Público 4</field>
+            <field name="level">10</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP5">
+            <field name="name">Servidor Público 5</field>
+            <field name="level">11</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP6">
+            <field name="name">Servidor Público 6</field>
+            <field name="level">12</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP7">
+            <field name="name">Servidor Público 7</field>
+            <field name="level">13</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP8">
+            <field name="name">Servidor Público 8</field>
+            <field name="level">14</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP9">
+            <field name="name">Servidor Público 9</field>
+            <field name="level">15</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP10">
+            <field name="name">Servidor Público 10</field>
+            <field name="level">16</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP11">
+            <field name="name">Servidor Público 11</field>
+            <field name="level">17</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP12">
+            <field name="name">Servidor Público 12</field>
+            <field name="level">18</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP13">
+            <field name="name">Servidor Público 13</field>
+            <field name="level">19</field>
+        </record>
+        <record model="hr.remuneration.scale" id="SP14">
+            <field name="name">Servidor Público 14</field>
+            <field name="level">20</field>
+        </record>
+    </data>
+</odoo>

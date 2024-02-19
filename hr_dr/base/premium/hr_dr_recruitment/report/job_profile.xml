@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<odoo>
+  <template id="report_job_profile_document">
+
+    <t t-call="web.external_layout">
+      <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
+      <div class="page">
+        <div class="oe_structure" />
+
+        <div class="container text-center">
+              <h2>
+                  <strong>
+                      PROFILE
+                      <span t-field="doc.name"/>
+                  </strong>
+              </h2>
+        </div>
+
+        <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+        <tr>
+        <th class="text-center">Company</th>
+        <th class="text-center">Position</th>
+        <th class="text-center">Department</th>
+        <th class="text-center">Workplace</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="text-center">
+            <span t-field="doc.company_id.name"/>
+        </td>
+        <td class="text-center">
+            <span t-field="doc.position_id.name"/>
+        </td>
+        <td class="text-center">
+            <span t-field="doc.department_id.name"/>
+        </td>
+        <td class="text-center">
+            <span t-field="doc.address_id.name"/>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <p t-field="doc.description"/>
+
+        <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+        <tr>
+        <th class="text-center">Functions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="text-left">
+        <ol>
+        <t t-foreach="doc.position_id.function_ids" t-as="function">
+        <li>
+        <strong><span t-field="function.name"/></strong>:
+        <span t-field="function.description"/>
+        </li>
+        </t>
+        </ol>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+        <tr>
+        <th class="text-center">General skills</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="text-left">
+        <ol>
+        <t t-foreach="doc.position_id.general_skill_ids" t-as="gs">
+        <li>
+        <strong><span t-field="gs.name"/></strong>:
+        <span t-field="gs.description"/>
+        </li>
+        </t>
+        </ol>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+        <tr>
+        <th class="text-center">Technical skills</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="text-left">
+        <ol>
+        <t t-foreach="doc.position_id.technical_skill_ids" t-as="ts">
+        <li>
+        <strong><span t-field="ts.name"/></strong>:
+        <span t-field="ts.description"/>
+        </li>
+        </t>
+        </ol>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+        <tr>
+        <th class="text-center">Behavioral skills</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="text-left">
+        <ol>
+        <t t-foreach="doc.position_id.behavioral_skill_ids" t-as="bs">
+        <li>
+        <strong><span t-field="bs.name"/></strong>:
+        <span t-field="bs.description"/>
+        </li>
+        </t>
+        </ol>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <div class="oe_structure"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="report_job_profile">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_recruitment.report_job_profile_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+  <report id="action_job_profile_report"
+    string="Profile"
+    model="hr.job"
+    report_type="qweb-html"
+    name="hr_dr_recruitment.report_job_profile"
+    file="hr_dr_recruitment.report_job_profile"
+    print_report_name="'%s profile' % (object.name)"
+  />
+
+</odoo>

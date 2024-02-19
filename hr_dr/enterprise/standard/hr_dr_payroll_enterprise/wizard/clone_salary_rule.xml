@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="clone_salary_rule_form_hr_dr_payroll_enterprise" model="ir.ui.view">
+    	<field name="name">clone.salary.rule.form.hr_dr_payroll_enterprise</field>
+        <field name="model">clone.salary.rule</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.clone_salary_rule_form"/>
+        <field name="arch" type="xml">
+			<xpath expr="//group[@name='column_1']" position="inside">
+				<field name="payroll_structure_id"/>
+			</xpath>
+			<xpath expr="//group[@name='column_2']" position="inside">
+				<field name="payroll_structure_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+			</xpath>
+    	</field>
+    </record>
+</odoo>

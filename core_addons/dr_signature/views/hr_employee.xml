@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="view_employee_form">
+      <field name="name">employee_inherit_form</field>
+      <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr_dr_employee.view_employee_form_inherit"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='signature']" position="inside">
+          <field name="signature_cert"
+                 attrs="{'invisible': [('signature_mode','!=','electronic_signature')],'required': [('signature_mode','=','electronic_signature')]}"/>
+          <field name="has_passphrase"
+                 attrs="{'invisible': [('signature_mode','!=','electronic_signature')]}"/>
+          <field name="store_passphrase"
+                 attrs="{'invisible': [('has_passphrase', '=', False)]}"/>
+          <field name="passphrase" password="True" placeholder="************"
+                 attrs="{'invisible': ['|', ('has_passphrase', '=', False), ('store_passphrase', '=', False)],'required': [('store_passphrase','=',True)]}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

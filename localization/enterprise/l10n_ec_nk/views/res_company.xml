@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record id="view_company_form_inherit" model="ir.ui.view">
+            <field name="name">view_company_form_inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page[last()]" position="after">
+                    <page string="Additional information">
+                        <groups>
+                            <group>
+                                <field name="accountant_id"/>
+                                <field name="identity_legal_representative"/>
+                            </group>
+                            <group>
+                                <field name="special_taxpayer"/>
+                                <field name="withholding_agent"/>
+                            </group>
+                        </groups>
+                    </page>
+                    <page string="Electronic documents">
+                        <groups>
+                            <group>
+                                <field name="electronic_signature_file" required="1"/>
+                                <field name="electronic_signature_password" password="1" required="1"/>
+                                <field name="issue_type"/>
+                                <field name="environment"/>
+                            </group>
+                            <group>
+                                <field name="electronic_signature_issue_date" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_issue_date', '=', False)]}"/>
+                                <field name="electronic_signature_due_date" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_due_date', '=', False)]}"/>
+                                <field name="electronic_signature_serial_number" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_serial_number', '=', False)]}"/>
+                                <field name="electronic_signature_owner" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_owner', '=', False)]}"/>
+                                <field name="electronic_signature_issuer" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_issuer', '=', False)]}"/>
+                                <field name="electronic_signature_serial_number_certificate" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_serial_number_certificate', '=', False)]}"/>
+                                <field name="electronic_signature_version_certificate" force_save="1"
+                                attrs="{'invisible': [('electronic_signature_version_certificate', '=', False)]}"/>
+                            </group>
+                        </groups>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
