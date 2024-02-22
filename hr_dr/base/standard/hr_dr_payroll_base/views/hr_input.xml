@@ -67,7 +67,15 @@
             </field>
         </record>
 
-        <act_window id="hr_input_action" name="Inputs" res_model="hr.input" view_mode="tree,form"/>
+        <record model="ir.actions.act_window" id="hr_input_action">
+            <field name="name">Inputs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.input</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face"/>
+            </field>
+        </record>
 
         <record model="ir.actions.act_window" id="hr_processed_inputs_action">
             <field name="name">Processed inputs</field>

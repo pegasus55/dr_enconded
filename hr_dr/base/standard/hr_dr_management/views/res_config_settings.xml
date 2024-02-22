@@ -19,7 +19,7 @@
                                     </div>
                                     <div class="content-group">
                                         <div class="mt16">
-                                            <field name="cutoff_day_reports"
+                                            <field name="cutoff_day_reports" required="True"
                                                 class="o_light_label"/>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="content-group">
                                         <div class="mt16">
-                                            <field name="hr_responsible_id"
+                                            <field name="hr_responsible_id" required="True"
                                                 class="o_light_label"/>
                                         </div>
                                     </div>

@@ -2220,13 +2220,11 @@ result = round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / c
             <field name="appears_on_payslip">False</field>
             <field name="appears_on_payroll_report">True</field>
             <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
-            <field name="condition_select">python</field>
-            <field name="condition_python">
-if inputs.PROV_VACA: result = sum([line.amount for line in inputs.PROV_VACA]) > 0
-            </field>
+            <field name="condition_select">none</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PROV_VACA]) , 2)
+result = round(categories.INGRESOS * 15 / 30 / 12, 2)
+if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + payslip.years_in_service - 5) / 30 / 12, 2)
             </field>
         </record>
         <!--Provisiones 161-180 -->

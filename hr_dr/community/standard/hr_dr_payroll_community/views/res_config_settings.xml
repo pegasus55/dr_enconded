@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="payment_tenth_notifications_mode"
+                                        <field name="payment_tenth_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="payment_utility_notifications_mode"
+                                        <field name="payment_utility_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="pay_living_wage_notifications_mode"
+                                        <field name="pay_living_wage_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>
@@ -320,7 +320,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="retired_employee_salary_notifications_mode"
+                                        <field name="retired_employee_salary_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>
@@ -436,7 +436,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="retired_employee_thirteenth_salary_notifications_mode"
+                                        <field name="retired_employee_thirteenth_salary_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>
@@ -552,7 +552,7 @@
                                 </div>
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <field name="retired_employee_fourteenth_salary_notifications_mode"
+                                        <field name="retired_employee_fourteenth_salary_notifications_mode" required="True"
                                             class="o_light_label"/>
                                     </div>
                                 </div>

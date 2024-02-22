@@ -33,15 +33,9 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-
-        'data/hr_salary_rule.xml',
-
-        'views/views.xml',
-        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
     ],
     'license': 'AGPL-3',
     'installable': True,

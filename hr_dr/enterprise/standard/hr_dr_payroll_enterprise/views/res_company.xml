@@ -12,7 +12,7 @@
                                 <field name="payroll_mode"/>
                             </group>
                             <group>
-                                <field name="main_account_journal" domain="[('type', '=', 'bank')]"/>
+                                <field name="main_account_journal" required="True" domain="[('type', '=', 'bank')]"/>
                             </group>
                             <field name="account_journal_ids" nolabel="1" domain="[('type', '=', 'bank')]" class="o_light_label">
                                 <tree>

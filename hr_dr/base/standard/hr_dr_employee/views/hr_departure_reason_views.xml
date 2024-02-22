@@ -6,7 +6,7 @@
             <field name="inherit_id" ref="hr.hr_departure_reason_view_list"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="code" />
+                    <field name="code"/>
                 </xpath>
             </field>
         </record>
@@ -16,7 +16,7 @@
             <field name="inherit_id" ref="hr.hr_departure_reason_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="code" />
+                    <field name="code" required="True"/>
                 </xpath>
             </field>
         </record>
