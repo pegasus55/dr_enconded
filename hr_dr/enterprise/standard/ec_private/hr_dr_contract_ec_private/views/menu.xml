@@ -1,9 +1,0 @@
-<odoo>
-    <data>
-        <menuitem
-            id="menu_hr_sector_table_root"
-            name="Sector table"
-            parent="hr.menu_human_resources_configuration"
-            sequence="3"/>
-    </data>
-</odoo>
