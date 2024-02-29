@@ -2140,7 +2140,7 @@ msgstr "Imprimir"
 #. module: hr_dr_payroll_enterprise
 #: model:ir.ui.menu,name:hr_dr_payroll_enterprise.hr_processed_inputs_menu
 msgid "Processed inputs"
-msgstr "Entradas procesadas"
+msgstr "Novedades procesadas"
 
 #. module: hr_dr_payroll_enterprise
 #: model:ir.model.fields,field_description:hr_dr_payroll_enterprise.field_res_config_settings__profit_calculation_based_on

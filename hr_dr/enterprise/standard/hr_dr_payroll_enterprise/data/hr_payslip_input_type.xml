@@ -412,12 +412,6 @@
         <!--Egresos-->
 
         <!--Provisiones-->
-        <record id="hr_payslip_input_type_PROV_VACA" model="hr.payslip.input.type">
-            <field name="name">Provisión de vacaciones</field>
-            <field name="code">PROV_VACA</field>
-            <field name="country_id" ref="base.ec"/>
-            <field name="type">provision</field>
-        </record>
         <!--Provisiones-->
 
         <!--Cruce de provisiones-->

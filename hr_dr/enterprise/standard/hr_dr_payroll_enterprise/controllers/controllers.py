@@ -1,21 +1,3 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
-
-
-# class HrDrPayroll(http.Controller):
-#     @http.route('/hr_dr_payroll/hr_dr_payroll/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
-
-#     @http.route('/hr_dr_payroll/hr_dr_payroll/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('hr_dr_payroll.listing', {
-#             'root': '/hr_dr_payroll/hr_dr_payroll',
-#             'objects': http.request.env['hr_dr_payroll.hr_dr_payroll'].search([]),
-#         })
-
-#     @http.route('/hr_dr_payroll/hr_dr_payroll/objects/<model("hr_dr_payroll.hr_dr_payroll"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('hr_dr_payroll.object', {
-#             'object': obj
-#         })
+# Pyarmor 8.4.7 (trial), 000000, non-profits, 2024-02-28T22:19:18.779240
+from ..pyarmor_runtime_000000 import __pyarmor__
+__pyarmor__(__name__, __file__, b'PY000000\x00\x03\n\x00o\r\r\n\x80\x00\x01\x00\x08\x00\x00\x00\x04\x00\x00\x00@\x00\x00\x00\xa6\x00\x00\x00\x12\t\x04\x00;\xc8\x8c\x9b\x8a\xaa>\x81o;fo\xe84`\x94\x00\x00\x00\x00\x00\x00\x00\x00c\xcc\x9f\x9dP\x06c\xb4R\x19\x96\x07_\xb6\x0f\xcd/N@\xc3\x95\x87\x94\t1l\x9e\x17\xb7\'=\x86\xad\xe1m\x8b\xf5\xbf\xf3\x1e\xaa\xc1\x0e\xc2(\xa2FS\xda\xb2\x99)zM\xe3\x82\xebd{\x8fH<7Q\x8aKI<,2\xfe\xfatK\x895z\x08zOrt\xb7\xcc5\x91!~\x0e\xb5ri^\x9d?\x1c\xc6S\xfa\x0c\x8e[\xc9\x19H@T>\xf0\xf9~d\xd3K\x92 \xb0L\x11\xe9?\x94\x95\xad!\r\xb8&\xbdpY\x92\xf5\xc5\xff\xea\x81\x92l\xef\x0c\xcahm{\xeaX\xed\x7f\xef\xc3\x96Y".\xf1Kq\x15\xe6,^\xd0\xa5m\xca')

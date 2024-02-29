@@ -71,6 +71,7 @@
             <field name="name">Inputs</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.input</field>
+            <field name="domain">[('state','=','available')]</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_smiling_face"/>

@@ -1,21 +1,3 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
-
-
-# class HrDrContractPrivate(http.Controller):
-#     @http.route('/hr_dr_contract_private/hr_dr_contract_private/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
-
-#     @http.route('/hr_dr_contract_private/hr_dr_contract_private/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('hr_dr_contract_private.listing', {
-#             'root': '/hr_dr_contract_private/hr_dr_contract_private',
-#             'objects': http.request.env['hr_dr_contract_private.hr_dr_contract_private'].search([]),
-#         })
-
-#     @http.route('/hr_dr_contract_private/hr_dr_contract_private/objects/<model("hr_dr_contract_private.hr_dr_contract_private"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('hr_dr_contract_private.object', {
-#             'object': obj
-#         })
+# Pyarmor 8.4.7 (trial), 000000, non-profits, 2024-02-28T22:17:27.127497
+from ..pyarmor_runtime_000000 import __pyarmor__
+__pyarmor__(__name__, __file__, b"PY000000\x00\x03\n\x00o\r\r\n\x80\x00\x01\x00\x08\x00\x00\x00\x04\x00\x00\x00@\x00\x00\x00\xa7\x00\x00\x00\x12\t\x04\x00\xc1O\x9a\x83\x05\x86;\xa2\x9f@pkk\xb6\xe5I\x00\x00\x00\x00\x00\x00\x00\x00\xe7\xaf9(fc\xd4V\x9cd\xf2*\xcb e\xb4\xd2r\x9c\xc4\xe3\x19\x05;S\xc7\x03\xce\xe8\xa1\xb7\xe2\xaaY\xf4\xb3KR\x00\xe1\xacj\xcc\xd3\xa2\x1a\xb5\x8f\xb3^\x8b\x1e\xe2\xea\xc9\x88{\xc8t {\xcbqF\xe6\x02~\xc3\x12\xb9u\x8c\x18\xac\xd7C\t\\\x10(\xee1\x8f\x1bed\xaa$6p\xf8\r\x9edz\xcb\xbaMM\x9b\xe1\xa4\x1a\x05\xd6\x1dOkI\x8fQ\x9dM\xfc\x80\x93\n\x95\xb9\xb1\xe6\xc6\xc6\x8e'\xc1\x16u\xe39\xbd5\xa60\x80\xe0\x86\x84.\xe4v\x95r\x85>\xd0\x19\xf6\xd3E\xdb\xea<h\x1a\x14\x1e\nkY\x98\x03\xd8j\x19`\xd3")

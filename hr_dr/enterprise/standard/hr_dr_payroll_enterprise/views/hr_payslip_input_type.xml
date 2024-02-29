@@ -8,7 +8,8 @@
                 <field name="code" position="after">
                     <field name="type"/>
                     <field name="associated_rules"/>
-                    <field name="active"/>
+                    <field name="available_for_users" widget="boolean_toggle"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </field>
             </field>
         </record>
@@ -19,8 +20,10 @@
             <field name="inherit_id" ref="hr_payroll.hr_payslip_input_type_view_tree"/>
             <field name="arch" type="xml">
                 <field name="code" position="after">
-                    <field name="associated_rules"/>
                     <field name="type"/>
+                    <field name="associated_rules"/>
+                    <field name="available_for_users" widget="boolean_toggle"/>
+                    <field name="active" widget="boolean_toggle"/>
                 </field>
             </field>
         </record>
