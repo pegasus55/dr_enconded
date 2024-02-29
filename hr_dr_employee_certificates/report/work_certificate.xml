@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<odoo>
+  <template id="report_work_certificate_document">
+    <t t-call="web.external_layout">
+      <t t-set="doc" t-value="doc.with_context(lang=user.lang)" />
+      <div class="page">
+        <div class="oe_structure" />
+        <br/>
+        <br/>
+        <div class="container-fluid">
+          <t t-set="employee_title" t-value="'el señor(a)'"/>
+          <t t-if="doc.gender=='male'" t-set="employee_title" t-value="'el señor'"/>
+          <t t-if="doc.gender=='female'" t-set="employee_title" t-value="'la señora'"/>
+
+            <t t-set="carrier" t-value="'portador(a)'"/>
+            <t t-if="doc.gender=='male'" t-set="carrier" t-value="'portador'"/>
+            <t t-if="doc.gender=='female'" t-set="carrier" t-value="'portadora'"/>
+
+          <h3 class="text-center mb-5">
+            <span>CERTIFICADO DE TRABAJO</span><br/>
+          </h3>
+          <div class="row">
+              <t t-if="doc.active">
+                <div class="col-12">
+                  <p id="first_paragraph_active">A petición del interesado: <span t-esc="employee_title"/> <span t-field="doc.name"/>,
+                      <span t-esc="carrier"/> de la cédula de ciudadanía No. <span t-field="doc.identification_id"/>, certifico que labora en la Empresa <span t-esc="res_company.name"/> desde
+                    <span t-esc="doc.last_company_entry_date.strftime(doc.get_date_format())"/> desempeñando actualmente el cargo de
+
+                    <t t-if="doc.job_id.position_id.name">
+                      <span t-field="doc.job_id.position_id.name"/>.
+                    </t>
+                    <t t-else="">
+                        __________________________________________________________________.
+                    </t>
+                  </p><br/>
+                  <p>El interesado podrá hacer uso del presente certificado cuando así lo considere conveniente.</p><br/>
+                </div>
+              </t>
+              <t t-if="not doc.active">
+                <div class="col-12">
+                  <p id="first_paragraph_not_active">A petición del interesado: <span t-esc="employee_title"/> <span t-field="doc.name"/>,
+                      <span t-esc="carrier"/> de la cédula de ciudadanía No. <span t-field="doc.identification_id"/>, laboró en <span t-esc="res_company.name"/> desde
+                    <span t-esc="doc.last_company_entry_date.strftime(doc.get_date_format())"/> hasta <span t-esc="doc.departure_date.strftime(doc.get_date_format())"/> desempeñando el cargo de
+                    <span t-field="doc.job_id.position_id.name"/>.
+                  </p><br/>
+                  <p>El interesado podrá hacer uso del presente certificado cuando así lo considere conveniente.</p><br/>
+                </div>
+              </t>
+          </div>
+
+            <t t-if="doc.company_id.city">
+                <span t-esc="doc.company_id.city"/>,
+            </t>
+            <span t-esc="doc.format_long_date_sp(datetime.date.today())"/><br/>
+
+          <t t-set="hr_responsible" t-value="doc.get_hr_dr_management_responsible()"/>
+          <t t-set="has_hr_responsible" t-value="hr_responsible != False"/>
+
+            <t t-if="has_hr_responsible">
+              <div class="mt-5 pt-5 row">
+                <div class="col-8 offset-1 text-center">
+                  <div t-if="doc.get_signature_mode()=='uploaded_image'" class="row">
+                    <div class="col-12">
+                        <img t-if="hr_responsible.signature" t-att-src="image_data_uri(hr_responsible.signature)" style="max-height:80pt;max-width:100%" alt="Signature" class="mx-auto d-block"/>
+                    </div>
+                  </div>
+                    <hr/>
+                    <span t-esc="hr_responsible.name"/><br/>
+                    <t t-if="hr_responsible.job_id.position_id.name">
+                        <span t-esc="hr_responsible.job_id.position_id.name"/><br/>
+                    </t>
+                    <t t-else="">
+                        _________________________________________<br/>
+                    </t>
+                    <span t-esc="hr_responsible.work_email"/><br/>
+                    <t t-if="hr_responsible.mobile_phone and hr_responsible.work_phone">
+                        <span t-esc="hr_responsible.mobile_phone"/> - <span t-esc="hr_responsible.work_phone"/><br/>
+                    </t>
+                    <t t-else="">
+                        <t t-if="hr_responsible.mobile_phone">
+                            <span t-esc="hr_responsible.mobile_phone"/><br/>
+                        </t>
+                        <t t-else="">
+                            <span t-esc="hr_responsible.work_phone"/><br/>
+                        </t>
+                    </t>
+                </div>
+              </div>
+            </t>
+            <t t-else="">
+              <div class="mt-5 pt-5 row">
+                Dirección de Talento Humano
+              </div>
+            </t>
+
+
+        </div>
+
+        <div class="oe_structure"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="report_work_certificate">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_employee_certificates.report_work_certificate_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+    <record id="action_work_certificate_report" model="ir.actions.report">
+        <field name="name">Work certificate</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hr_dr_employee_certificates.report_work_certificate</field>
+        <field name="report_file">hr_dr_employee_certificates.report_work_certificate</field>
+        <field name="print_report_name">'Certificado laboral %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+    </record>
+
+    <record id="action_work_certificate_report_public" model="ir.actions.report">
+        <field name="name">Work certificate public</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hr_dr_employee_certificates.report_work_certificate</field>
+        <field name="report_file">hr_dr_employee_certificates.report_work_certificate</field>
+        <field name="print_report_name">'Certificado laboral %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+    </record>
+
+  <template id="report_work_certificate_with_income_document"
+            inherit_id="hr_dr_employee_certificates.report_work_certificate_document" primary="True">
+
+    <xpath expr="//p[@id='first_paragraph_active']" position="after">
+      <br/>
+      <p>
+        <t t-set="last_wage" t-value="doc.get_wage()"/>
+        <t t-set="income_based_on" t-value="doc.get_certificate_with_income_based_on()"/>
+        <t t-set="payroll_to_analyze" t-value="doc.get_payroll_to_analyze()"/>
+
+        <t t-if="income_based_on == 'salary'">
+            Certifico también que su salario mensual es de
+            <span t-esc="last_wage"/>
+            <span t-esc="doc.company_id.currency_id.name"/> además de los beneficios de Ley.
+        </t>
+        <t t-else="">
+            Certifico también, que en promedio el salario mensual neto recibido es de
+            <span t-esc="last_wage"/>
+            <span t-esc="doc.company_id.currency_id.name"/>.
+        </t>
+<!--        Certifico también que su remuneración mensual es de-->
+<!--        <span t-if="doc.company_id.currency_id.position == 'before'" t-field="doc.company_id.currency_id.symbol"/>-->
+<!--        <span t-esc="last_wage"/>-->
+<!--        <span t-field="doc.contract_id.wage"/>-->
+<!--        <span t-if="doc.company_id.currency_id.position == 'after'" t-field="doc.company_id.currency_id.symbol"/>-->
+<!--        <span t-esc="doc.company_id.currency_id.currency_unit_label.lower()"/>.-->
+<!--        <span t-esc="doc.company_id.currency_id.name"/> además de los beneficios de Ley.-->
+      </p>
+    </xpath>
+    <xpath expr="//p[@id='first_paragraph_not_active']" position="after">
+        <br/>
+        <p>
+            <t t-set="last_wage" t-value="doc.get_wage()"/>
+            Certifico también que su remuneración mensual era de
+            <span t-esc="last_wage"/>
+            <span t-esc="doc.company_id.currency_id.name"/>.
+        </p>
+    </xpath>
+  </template>
+
+  <template id="report_work_certificate_with_income">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="hr_dr_employee_certificates.report_work_certificate_with_income_document" t-lang="user.lang"/>
+        </t>
+    </t>
+  </template>
+
+    <record id="action_work_certificate_with_income_report" model="ir.actions.report">
+        <field name="name">Work certificate with income</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_dr_employee_certificates.report_work_certificate_with_income</field>
+        <field name="report_file">hr_dr_employee_certificates.report_work_certificate_with_income</field>
+        <field name="print_report_name">'Certificado laboral con ingreso %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+        <field name="y_coordinate">300</field>
+    </record>
+
+    <record id="action_work_certificate_with_income_report_public" model="ir.actions.report">
+        <field name="name">Work certificate with income public</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_dr_employee_certificates.report_work_certificate_with_income</field>
+        <field name="report_file">hr_dr_employee_certificates.report_work_certificate_with_income</field>
+        <field name="print_report_name">'Certificado laboral con ingreso %s' % (object.name)</field>
+        <field name="add_signature">True</field>
+        <field name="y_coordinate">300</field>
+    </record>
+
+</odoo>

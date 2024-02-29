@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="hr_retired_employee_salary_view_form_inherit" model="ir.ui.view">
+		<field name="name">retired.employee.salary.form.inherit</field>
+		<field name="model">retired.employee.salary</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.hr_retired_employee_salary_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form//header" position="inside">
+
+				<button string="Calculate" type="object"
+					name="action_create_update_lines"
+					states="draft,calculated" class="oe_highlight"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="mark_as_reviewed"
+					string="Mark as reviewed" type="object"
+					states="calculated"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the retired collaborator salary request as reviewed?"/>
+
+				<button name="mark_as_draft" string="Mark as draft" type="object"
+					confirm="Are you sure you want to mark the retired collaborator salary request as draft?"
+					states="calculated,reviewed,cancelled,approved,rejected" groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Confirm request" type="object"
+					name="confirm_request"
+					confirm="Are you sure you want to confirm this retired collaborator salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					states="reviewed"/>
+
+				<button name="confirm_request_direct"
+					string="Register request" type="object"
+					states="reviewed"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to register this retired collaborator salary request?"/>
+
+				<button string="Cancel request" type="object"
+					name="cancel_request"
+					confirm="Are you sure you want to cancel this retired collaborator salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+				<button name="action_done" string="Mark as done"
+					confirm="Are you sure you want to mark the retired collaborator salary as done?"
+					type="object" states="approved" class="btn-primary"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="%(hr_dr_payroll_enterprise.action_register_retired_collaborator_salary_payment)d"
+					string="Register payment" type="action"
+					states="done"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Notify treasury" type="object"
+					confirm="Are you sure you want to notify treasury the retired collaborator salary?"
+					name="notify_treasury" groups="hr_payroll.group_hr_payroll_manager"
+					states="done"/>
+
+				<button name="action_cancel" string="Cancel" type="object" states="done"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="When canceling the system will try to eliminate the accounting entries. do you wish to continue?"/>
+
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_retired_employee_thirteenth_salary_view_form_inherit" model="ir.ui.view">
+		<field name="name">retired.employee.thirteenth.salary.form.inherit</field>
+		<field name="model">retired.employee.thirteenth.salary</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.hr_retired_employee_thirteenth_salary_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form//header" position="inside">
+
+				<button string="Calculate" type="object"
+					name="action_create_update_lines"
+					states="draft,calculated" class="oe_highlight"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="mark_as_reviewed"
+					string="Mark as reviewed" type="object"
+					states="calculated"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the retired collaborator thirteenth salary request as reviewed?"/>
+
+				<button name="mark_as_draft" string="Mark as draft" type="object"
+					confirm="Are you sure you want to mark the retired collaborator thirteenth salary request as draft?"
+					states="calculated,reviewed,cancelled,approved,rejected" groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Confirm request" type="object"
+					name="confirm_request"
+					confirm="Are you sure you want to confirm this retired collaborator thirteenth salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					states="reviewed"/>
+
+				<button name="confirm_request_direct"
+					string="Register request" type="object"
+					states="reviewed"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to register this retired collaborator thirteenth salary request?"/>
+
+				<button string="Cancel request" type="object"
+					name="cancel_request"
+					confirm="Are you sure you want to cancel this retired collaborator thirteenth salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+				<button name="action_done" string="Mark as done"
+					confirm="Are you sure you want to mark the retired collaborator thirteenth salary as done?"
+					type="object" states="approved" class="btn-primary"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="%(hr_dr_payroll_enterprise.action_register_retired_collaborator_thirteenth_salary_payment)d"
+					string="Register payment" type="action"
+					states="done"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Notify treasury" type="object"
+					confirm="Are you sure you want to notify treasury the retired collaborator thirteenth salary?"
+					name="notify_treasury" groups="hr_payroll.group_hr_payroll_manager"
+					states="done"/>
+
+				<button name="action_cancel" string="Cancel" type="object" states="done"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="When canceling the system will try to eliminate the accounting entries. do you wish to continue?"/>
+
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_retired_employee_fourteenth_salary_view_form_inherit" model="ir.ui.view">
+		<field name="name">retired.employee.fourteenth.salary.form.inherit</field>
+		<field name="model">retired.employee.fourteenth.salary</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.hr_retired_employee_fourteenth_salary_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form//header" position="inside">
+
+				<button string="Calculate" type="object"
+					name="action_create_update_lines"
+					states="draft,calculated" class="oe_highlight"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="mark_as_reviewed"
+					string="Mark as reviewed" type="object"
+					states="calculated"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to mark the retired collaborator fourteenth salary request as reviewed?"/>
+
+				<button name="mark_as_draft" string="Mark as draft" type="object"
+					confirm="Are you sure you want to mark the retired collaborator fourteenth salary request as draft?"
+					states="calculated,reviewed,cancelled,approved,rejected" groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Confirm request" type="object"
+					name="confirm_request"
+					confirm="Are you sure you want to confirm this retired collaborator fourteenth salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					states="reviewed"/>
+
+				<button name="confirm_request_direct"
+					string="Register request" type="object"
+					states="reviewed"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="Are you sure you want to register this retired collaborator fourteenth salary request?"/>
+
+				<button string="Cancel request" type="object"
+					name="cancel_request"
+					confirm="Are you sure you want to cancel this retired collaborator fourteenth salary request?"
+					groups="hr_payroll.group_hr_payroll_manager"
+					attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+
+				<button name="action_done" string="Mark as done"
+					confirm="Are you sure you want to mark the retired collaborator fourteenth salary as done?"
+					type="object" states="approved" class="btn-primary"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button name="%(hr_dr_payroll_enterprise.action_retired_collaborator_fourteenth_salary_payment)d"
+					string="Register payment" type="action"
+					states="done"
+					groups="hr_payroll.group_hr_payroll_manager"/>
+
+				<button string="Notify treasury" type="object"
+					confirm="Are you sure you want to notify treasury the retired collaborator fourteenth salary?"
+					name="notify_treasury" groups="hr_payroll.group_hr_payroll_manager"
+					states="done"/>
+
+				<button name="action_cancel" string="Cancel" type="object" states="done"
+					groups="hr_payroll.group_hr_payroll_manager"
+					confirm="When canceling the system will try to eliminate the accounting entries. do you wish to continue?"/>
+
+			</xpath>
+		</field>
+	</record>
+</odoo>

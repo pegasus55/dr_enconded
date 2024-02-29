@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="trial_period_end_anticipation_days" model="ir.config_parameter">
+            <field name="key">trial.period.end.anticipation.days</field>
+            <field name="value">30</field>
+        </record>
+        <record id="contract_administrators_ids" model="ir.config_parameter">
+            <field name="key">contract.administrators.ids</field>
+            <field name="value"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_res_zone_form" model="ir.ui.view">
+		<field name="name">res.zone.form</field>
+	    <field name="model">res.zone</field>
+	    <field name="type">form</field>
+	    <field name="arch" type="xml">
+	    	<form string="Zone">
+				<header>
+                </header>
+                <sheet>
+					<group>
+						<group>
+							<field name="name" required="True"/>
+						</group>
+						<group>
+							<field name="code" required="True"/>
+							<field name="active"/>
+						</group>
+					</group>
+				</sheet>
+                <div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+	    	</form>
+	    </field>
+	</record>
+	<record id="view_res_zone_tree" model="ir.ui.view">
+    	<field name="name">res.zone.tree</field>
+        <field name="model">res.zone</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+        	<tree string="Zone">
+				<field name="name"/>
+				<field name="code"/>
+				<field name="active"/>
+            </tree>
+        </field>
+	</record>
+	<record id="view_res_zone_search" model="ir.ui.view">
+        <field name="name">res.zone.search</field>
+        <field name="model">res.zone</field>
+        <field name="arch" type="xml">
+            <search string="Zone">
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+    <record id="res_zone_action" model="ir.actions.act_window">
+        <field name="name">Zones</field>
+        <field name="res_model">res.zone</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_res_zone_tree"/>
+        <field name="help" type="html">
+	   		<p class="oe_view_nocontent_create">
+	        	Click to define a new zone.
+	       	</p>
+	    </field>
+    </record>
+    <menuitem id="res_zone_menu" action="res_zone_action" parent="contacts.menu_localisation" sequence="2"/>
+</odoo>

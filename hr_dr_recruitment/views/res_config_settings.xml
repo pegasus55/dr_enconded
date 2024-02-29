@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="res_config_settings_hr_dr_recruitment_view_form" model="ir.ui.view">
+        <field name="name">Recruitment Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_recruitment.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('app_settings_block')]/div[@name='recruitment_process_div']" position="after">
+                <h2>Notifications</h2>
+                <div class="row mt16 o_settings_container">
+
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="staff_requirement_request_notifications"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Staff requirement request notifications mode.
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="staff_requirement_request_notifications"
+                                        class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         attrs="{'invisible': [('staff_requirement_request_notifications', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                        <div class="o_setting_right_pane">
+                            <label for="staff_requirement_request_administrator_id"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    First administrator for approval / rejection of staff requirement request notifications.
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="staff_requirement_request_administrator_id"
+                                           attrs="{'required': [('staff_requirement_request_notifications', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                           class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         attrs="{'invisible': [('staff_requirement_request_notifications', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                        <div class="o_setting_right_pane">
+                            <label for="staff_requirement_request_second_administrator_id"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Second administrator for approval / rejection of staff requirement request notifications.
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="staff_requirement_request_second_administrator_id"
+                                           attrs="{'required': [('staff_requirement_request_notifications', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                           class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Staff requirement request</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="Validate anticipation dynamically">
+                        <div class="o_setting_left_pane">
+                            <field name="validate_anticipation_dynamically"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="validate_anticipation_dynamically"/>
+                            <div class="text-muted">
+                                It is used to define whether the number of days in advance with which a staff requirement request is made is dynamic or fixed based on the duration of the stages defined for the position or job.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="mode"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Used to define validation mode.
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="mode"
+                                        class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Process staff requirement</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="Start schedule approval day of staff requirement request">
+                        <div class="o_setting_left_pane">
+                            <field name="start_schedule_approval_day_of_staff_requirement_request"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="start_schedule_approval_day_of_staff_requirement_request"/>
+                            <div class="text-muted">
+                                It is used to define if the process staff requirement starts the day the request is approved or the next day. If it is marked as true, it means that the process starts the day it is approved, otherwise it starts the next day.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         title="Include holidays in working days of scheme schedule">
+                        <div class="o_setting_left_pane">
+                            <field name="include_holidays_in_working_days_of_scheme_schedule"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="include_holidays_in_working_days_of_scheme_schedule"/>
+                            <div class="text-muted">
+                                It is used to define whether Saturdays, Sundays, and holidays are counted as working days within the staffing process schedule. If it is marked as true it means yes, otherwise no.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

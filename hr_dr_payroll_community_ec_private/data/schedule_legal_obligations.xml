@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="schedule_legal_obligations_01" model="schedule.legal.obligations">
+            <field name="name">Decimotercera remuneración</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="start_date_calculation_period" eval="(DateTime.today() + relativedelta(years=-1,month=12,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="end_date_calculation_period" eval="(DateTime.today() + relativedelta(month=11,day=30)).strftime('%Y-%m-%d')"/>
+            <field name="max_payment_date" eval="(DateTime.today() + relativedelta(month=12,day=24)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_01_1" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_01"/>
+            <field name="ninth_digit_RUC">1,2,3,4,5</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(years=1,month=1,day=17)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(years=1,month=2,day=10)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_01_2" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_01"/>
+            <field name="ninth_digit_RUC">6,7,8,9,0</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(years=1,month=2,day=11)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(years=1,month=3,day=7)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="schedule_legal_obligations_02" model="schedule.legal.obligations">
+            <field name="name">Decimocuarta remuneración (Región Costa e Insular)</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="start_date_calculation_period" eval="(DateTime.today() + relativedelta(years=-1,month=3,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="end_date_calculation_period" eval="(DateTime.today() + relativedelta(month=2,day=28)).strftime('%Y-%m-%d')"/>
+            <field name="max_payment_date" eval="(DateTime.today() + relativedelta(month=3,day=15)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_02_1" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_02"/>
+            <field name="ninth_digit_RUC">1,2,3,4,5</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=3,day=16)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=4,day=9)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_02_2" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_02"/>
+            <field name="ninth_digit_RUC">6,7,8,9,0</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=4,day=11)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=5,day=5)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="schedule_legal_obligations_03" model="schedule.legal.obligations">
+            <field name="name">Decimocuarta remuneración (Región Sierra y Amazonía)</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="start_date_calculation_period" eval="(DateTime.today() + relativedelta(years=-1,month=8,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="end_date_calculation_period" eval="(DateTime.today() + relativedelta(month=7,day=31)).strftime('%Y-%m-%d')"/>
+            <field name="max_payment_date" eval="(DateTime.today() + relativedelta(month=8,day=15)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_03_1" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_03"/>
+            <field name="ninth_digit_RUC">1,2,3,4,5</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=8,day=16)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=9,day=9)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_03_2" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_03"/>
+            <field name="ninth_digit_RUC">6,7,8,9,0</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=9,day=12)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=10,day=6)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="schedule_legal_obligations_04" model="schedule.legal.obligations">
+            <field name="name">Participación de utilidades</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+            <field name="start_date_calculation_period" eval="(DateTime.today() + relativedelta(years=-1,month=1,day=1)).strftime('%Y-%m-%d')"/>
+            <field name="end_date_calculation_period" eval="(DateTime.today() + relativedelta(years=-1,month=12,day=31)).strftime('%Y-%m-%d')"/>
+            <field name="max_payment_date" eval="(DateTime.today() + relativedelta(month=4,day=15)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_04_1" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_04"/>
+            <field name="ninth_digit_RUC">1,2,3,4,5</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=5,day=16)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=6,day=9)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="schedule_legal_obligations_detail_04_2" model="schedule.legal.obligations.detail">
+            <field name="schedule_legal_obligations_id" ref = "schedule_legal_obligations_04"/>
+            <field name="ninth_digit_RUC">6,7,8,9,0</field>
+            <field name="registration_period_start_date" eval="(DateTime.today() + relativedelta(month=6,day=10)).strftime('%Y-%m-%d')"/>
+            <field name="registration_period_end_date" eval="(DateTime.today() + relativedelta(month=7,day=4)).strftime('%Y-%m-%d')"/>
+        </record>
+
+    </data>
+</odoo>

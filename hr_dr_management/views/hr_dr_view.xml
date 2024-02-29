@@ -1,0 +1,963 @@
+<odoo>
+    <data>
+        <!--Company-->
+        <record model="ir.ui.view" id="view_company_form_inherit">
+            <field name="name">company_form_inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook//page[last()]" position="after">
+                    <page name = "human_resources" string="Human Talent">
+                        <group>
+                            <group>
+                                <field name="normative_default_id" required="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+        <!--Company-->
+
+        <!--Regulation-->
+        <record model="ir.actions.act_window" id="normative_list_action">
+            <field name="name">Regulations</field>
+            <field name="res_model">hr.normative</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the regulations.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_list">
+            <field name="name">Regulations list</field>
+            <field name="model">hr.normative</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="country_id"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_search">
+            <field name="name">Regulations search</field>
+            <field name="model">hr.normative</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="country_id"/>
+                    <field name="description"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_country_id" string="Country" context="{'group_by' : 'country_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_form">
+            <field name="name">Regulations form</field>
+            <field name="model">hr.normative</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="country_id"/>
+                            </group>
+                            <group>
+                                <field name="acronym"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <page name = "links" string="Links">
+                                <field name="link_ids">
+<!--                                    <tree>-->
+<!--                                        <field name="name" widget="url"/>-->
+<!--                                        <field name="description"/>-->
+<!--                                        <field name="active"/>-->
+<!--                                    </tree>-->
+<!--                                    <form>-->
+<!--                                        <sheet>-->
+<!--                                            <group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="name" widget="url"/>-->
+<!--                                                    <field name="description"/>-->
+<!--                                                </group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="normative_id"/>-->
+<!--                                                    <field name="active"/>-->
+<!--                                                </group>-->
+<!--                                            </group>-->
+<!--                                        </sheet>-->
+<!--                                    </form>-->
+                                </field>
+                            </page>
+                            <page name = "hour_night" string="Hours Night">
+                                <field name="hour_night_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                        <field name="start"/>
+                                        <field name="end"/>
+                                        <field name="active"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <label for="name" class="oe_edit_only"/>
+                                            <field name="name"/>
+                                            <group>
+                                                    <field name="description"/>
+                                                    <field name="start"/>
+                                                    <field name="end"/>
+                                                    <field name="active"/>
+                                                    <field name="normative_ids"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name = "hour_extra" string="Hours Extra">
+                                <field name="hour_extra_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                        <field name="start"/>
+                                        <field name="end"/>
+                                        <field name="active"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <label for="name" class="oe_edit_only"/>
+                                            <field name="name"/>
+                                            <group>
+                                                    <field name="description"/>
+                                                    <field name="start"/>
+                                                    <field name="end"/>
+                                                    <field name="active"/>
+                                                    <field name="normative_ids"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Regulation-->
+
+        <!--Link-->
+        <record model="ir.actions.act_window" id="normative_link_list_action">
+            <field name="name">Links</field>
+            <field name="res_model">hr.link</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">
+                    Create the links.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_link_list">
+            <field name="name">Link list</field>
+            <field name="model">hr.link</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" widget="url"/>
+                    <field name="description"/>
+<!--                    <field name="normative_id"/>-->
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_link_search">
+            <field name="name">Link search</field>
+            <field name="model">hr.link</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="normative_link_form">
+            <field name="name">Link form</field>
+            <field name="model">hr.link</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" widget="url"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+<!--                                <field name="normative_id" required="1"/>-->
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Link-->
+
+        <!--Hour Night-->
+        <record model="ir.actions.act_window" id="hour_night_list_action">
+            <field name="name">Night hours</field>
+            <field name="res_model">hr.hour.night</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create the night hours.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_night_list">
+            <field name="name">Night hours list</field>
+            <field name="model">hr.hour.night</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start" widget="float_time"/>
+                    <field name="end" widget="float_time"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_night_search">
+            <field name="name">Night hours search</field>
+            <field name="model">hr.hour.night</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start"/>
+                    <field name="end"/>
+                    <field name="active"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_night_form">
+            <field name="name">Night hours form</field>
+            <field name="model">hr.hour.night</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="start" widget="float_time"/>
+                                <field name="end" widget="float_time"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Regulations">
+                                <field
+                                    name="normative_ids"
+                                    nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="acronym"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Hour Night-->
+
+        <!--Hour Extra-->
+        <record model="ir.actions.act_window" id="hour_extra_list_action">
+            <field name="name">Extra hours</field>
+            <field name="res_model">hr.hour.extra</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create the extra hours.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_extra_list">
+            <field name="name">Extra hours list</field>
+            <field name="model">hr.hour.extra</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start" widget="float_time"/>
+                    <field name="end" widget="float_time"/>
+                    <field name="assigned_schedule"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_extra_search">
+            <field name="name">Extra hours search</field>
+            <field name="model">hr.hour.extra</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start"/>
+                    <field name="end"/>
+                    <field name="assigned_schedule"/>
+                    <field name="active"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hour_extra_form">
+            <field name="name">Extra hours form</field>
+            <field name="model">hr.hour.extra</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="start" widget="float_time"/>
+                                <field name="end" widget="float_time"/>
+                                <field name="assigned_schedule"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Regulations">
+                                <field
+                                    name="normative_ids"
+                                    nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="acronym"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Hour Extra-->
+
+        <!--Nomenclature-->
+        <record model="ir.actions.act_window" id="nomenclature_list_action">
+              <field name="name">Nomenclatures</field>
+              <field name="res_model">hr.nomenclature</field>
+              <field name="view_mode">tree,form</field>
+              <field name="help" type="html">
+                  <p class="oe_view_nocontent_smiling_face">Create the nomenclators.
+                  </p>
+              </field>
+          </record>
+        <record model="ir.ui.view" id="nomenclature_list">
+          <field name="name">Nomenclatures list</field>
+          <field name="model">hr.nomenclature</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="module_id"/>
+                  <field name="module_name"/>
+                  <field name="name"/>
+                  <field name="acronym"/>
+                  <field name="description"/>
+                  <field name="data_type"/>
+                  <field name="level"/>
+                  <field name="active"/>
+              </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="nomenclature_search">
+          <field name="name">Nomenclatures search</field>
+          <field name="model">hr.nomenclature</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <field name="acronym"/>
+                  <field name="description"/>
+                  <field name="module_id"/>
+                  <field name="data_type"/>
+                  <field name="level"/>
+                  <field name="active"/>
+
+                  <filter name="filter_level_for_module" string="For module" domain="[('level', '=', 'for_module')]"/>
+                  <filter name="filter_level_for_model" string="For model" domain="[('level', '=', 'for_model')]"/>
+                  <filter name="filter_active" string="Active" domain="[('active', '=', True)]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_module_id" string="Module" context="{'group_by' : 'module_id'}"/>
+                        <filter name="group_level" string="Level" context="{'group_by' : 'level'}"/>
+                    </group>
+
+              </search>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="nomenclature_form">
+            <field name="name">Nomenclatures form</field>
+            <field name="model">hr.nomenclature</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="module_id" options="{'no_create': True}"/>
+                                <field name="module_name"/>
+                                <field name="acronym"/>
+                                <field name="level"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="data_type"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Nomenclature-->
+
+        <!--Nomenclatures by regulations-->
+        <record model="ir.ui.view" id="hr_normative_nomenclature_search">
+            <field name="name">Nomenclatures by regulations search</field>
+            <field name="model">hr.normative.nomenclature</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="normative_id"/>
+                    <field name="nomenclature_id"/>
+                    <field name="level"/>
+                    <field name="module_id"/>
+                    <field name="res_model_id"/>
+                    <field name="valid_from"/>
+                    <field name="valid_to"/>
+                    <field name="current"/>
+
+                    <filter name="filter_level_for_module" string="For module" domain="[('level', '=', 'for_module')]"/>
+                    <filter name="filter_level_for_model" string="For model" domain="[('level', '=', 'for_model')]"/>
+                    <filter name="filter_current" string="Active" domain="[('current', '=', True)]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_normative_id" string="Regulation" context="{'group_by' : 'normative_id'}"/>
+                        <filter name="group_nomenclature_id" string="Nomenclature"
+                                context="{'group_by' : 'nomenclature_id'}"/>
+                        <filter name="group_level" string="Level" context="{'group_by' : 'level'}"/>
+                        <filter name="group_module_id" string="Module" context="{'group_by' : 'module_id'}"/>
+                        <filter name="group_res_model_id" string="Model" context="{'group_by' : 'res_model_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_normative_nomenclature_list_action">
+            <field name="name">Nomenclatures by regulations</field>
+            <field name="res_model">hr.normative.nomenclature</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Define the value of the nomenclators by regulations.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_normative_nomenclature_list">
+            <field name="name">Nomenclatures by regulations list</field>
+            <field name="model">hr.normative.nomenclature</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="normative_id"/>
+                    <field name="nomenclature_id"/>
+                    <field name="level"/>
+                    <field name="nomenclature_id_data_type"/>
+                    <field name="module_id"/>
+                    <field name="valid_from"/>
+                    <field name="valid_to"/>
+                    <field name="current" readonly='1'/>
+                    <field name="res_model_id"/>
+                    <field name="res_id"/>
+                    <field name="boolean_value"/>
+                    <field name="integer_value"/>
+                    <field name="float_value"/>
+                    <field name="char_value"/>
+                    <field name="date_value"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_normative_nomenclature_form">
+            <field name="name">Nomenclatures by regulations form</field>
+            <field name="model">hr.normative.nomenclature</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="normative_id" domain="[('active', '=', True)]"/>
+                                <field name="nomenclature_id" domain="[('active', '=', True)]"/>
+                                <field name="nomenclature_id_data_type"/>
+                                <field name="module_id"/>
+                                <field name="level"/>
+                                <field name="res_model_id" attrs="{'invisible': [('level','=','for_module')], 'required': [('level','=','for_model')]}"/>
+                                <field name="res_id" attrs="{'invisible': [('level','=','for_module')]}"/>
+                                <field name="current" readonly='1'/>
+                            </group>
+                            <group>
+                                <field name="valid_from"/>
+                                <field name="valid_to"/>
+                                <field name="nomenclature_id_data_type" invisible="1"/>
+                                <field name="boolean_value"
+                                       attrs="{'invisible': [('nomenclature_id_data_type','!=','boolean')], 'required': [('nomenclature_id_data_type','=','boolean')]}"/>
+                                <field name="integer_value"
+                                       attrs="{'invisible': [('nomenclature_id_data_type','!=','integer')], 'required': [('nomenclature_id_data_type','=','integer')]}"/>
+                                <field name="float_value"
+                                       attrs="{'invisible': [('nomenclature_id_data_type','!=','float')], 'required': [('nomenclature_id_data_type','=','float')]}"/>
+                                <field name="char_value"
+                                       attrs="{'invisible': [('nomenclature_id_data_type','!=','char')], 'required': [('nomenclature_id_data_type','=','char')]}"/>
+                                <field name="date_value"
+                                       attrs="{'invisible': [('nomenclature_id_data_type','!=','date')], 'required': [('nomenclature_id_data_type','=','date')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Nomenclatures by regulations-->
+
+        <!--Scheme Notifications-->
+        <record model="ir.actions.act_window" id="scheme_notifications_list_action">
+            <field name="name">Scheme notifications</field>
+            <field name="res_model">hr.scheme.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create the scheme notifications by model, sub model and collaborator.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="scheme_notifications_search">
+            <field name="name">Scheme notifications search</field>
+            <field name="model">hr.scheme.notifications</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="model_id"/>
+                    <field name="sub_model_id"/>
+                    <field name="employee_requests_id"/>
+                    <field name="employee_approve_id"/>
+                    <field name="level"/>
+                    <field name="active"/>
+
+                    <filter name="filter_active" string="Active" domain="[('active', '=', True)]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_model_id" string="Model" context="{'group_by' : 'model_id'}"/>
+                        <filter name="group_sub_model_id" string="Sub model" context="{'group_by' : 'sub_model_id'}"/>
+                        <filter name="group_employee_requests_id" string="Collaborator requesting" context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_employee_approve_id" string="Approving collaborator" context="{'group_by' : 'employee_approve_id'}"/>
+                        <filter name="group_level" string="Level" context="{'group_by' : 'level'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="scheme_notifications_list">
+            <field name="name">Scheme notifications list</field>
+            <field name="model">hr.scheme.notifications</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="model_id"/>
+                    <field name="sub_model_id"/>
+                    <field name="res_id"/>
+                    <field name="employee_requests_id"/>
+                    <field name="employee_approve_id"/>
+                    <field name="level"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="scheme_notifications_form">
+            <field name="name">Scheme notifications form</field>
+            <field name="model">hr.scheme.notifications</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="model_id"/>
+                                <field name="sub_model_id"/>
+                                <field name="res_id"/>
+                                <field name="employee_requests_id"/>
+                            </group>
+                            <group>
+                                <field name="level"/>
+                                <field name="employee_approve_id"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Scheme Notifications-->
+
+        <!--Notifications-->
+        <record id="view_reject_notification" model="ir.ui.view">
+            <field name="name">reject.hr.notification.form</field>
+            <field name="model">reject.hr.notification</field>
+            <field name="arch" type="xml">
+                <form string="Reject notification">
+                    <group>
+                        <field name="actual_notification" invisible="1"/>
+                        <field name="commentary"/>
+                    </group>
+                    <footer>
+                        <button name="action_reject" string="Reject" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_reject_notification" model="ir.actions.act_window">
+            <field name="name">Reject notification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reject.hr.notification</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_reject_notification"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_reassign_notification" model="ir.ui.view">
+            <field name="name">hr.reassign.notification.form</field>
+            <field name="model">hr.reassign.notification</field>
+            <field name="arch" type="xml">
+                <form string="Reassign notification">
+                    <group>
+                        <group string="Current approver">
+                            <field name="actual_notification" invisible="1"/>
+                            <field name="current_approver_id"/>
+                        </group>
+                        <group string="New approver">
+                            <field name="new_approver_id"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_reassign_notification" string="Reassign" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_reassign_notification" model="ir.actions.act_window">
+            <field name="name">Reassign notification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.reassign.notification</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_reassign_notification"/>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="notifications_list_action">
+            <field name="name">All notifications</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Notifications by model, sub model and collaborator.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_notifications_to_process">
+            <field name="name">Notifications to process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('user_employee_approve_id', '=',uid),
+                ('send', '=',True),
+                ('state', '=','pending'),
+                ('processed', '=',False)
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Notifications to process.
+                </p>
+            </field>
+        </record>
+        <record id="hr_notifications_view_search" model="ir.ui.view" >
+            <field name="name">hr.notifications.search</field>
+            <field name="model">hr.notifications</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="res_model_id"/>
+                    <field name="employee_requests_id"/>
+                    <field name="employee_approve_id"/>
+                    <field name="level"/>
+                    <field name="send"/>
+                    <field name="processed"/>
+                    <field name="state"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_res_model_id" string="Model" context="{'group_by' : 'res_model_id'}"/>
+                        <filter name="group_employee_requests_id" string="Collaborator requesting" context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_employee_approve_id" string="Approving collaborator" context="{'group_by' : 'employee_approve_id'}"/>
+                        <filter name="group_level" string="Level" context="{'group_by' : 'level'}"/>
+                        <filter name="group_send" string="Send" context="{'group_by' : 'send'}"/>
+                        <filter name="group_processed" string="Processed" context="{'group_by' : 'processed'}"/>
+                        <filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr_notifications_view_tree" model="ir.ui.view">
+            <field name="name">hr.notifications.tree</field>
+            <field name="model">hr.notifications</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false" decoration-danger="state == 'rejected'" decoration-success="state == 'approved'" decoration-muted="state in ['cancelled','reassigned']" decoration-primary="state == 'pending'">
+                    <field name="res_model_id" invisible="context.get('invisible_res_model_id',False)"/>
+                    <field name="res_id" invisible="context.get('invisible_res_id',False)"/>
+                    <field name="employee_requests_id"/>
+                    <field name="employee_approve_id"/>
+                    <field name="level"/>
+                    <field name="send"/>
+                    <field name="processed"/>
+                    <field name="state"/>
+                    <field name="commentary"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_notifications_view_form" model="ir.ui.view">
+            <field name="name">hr.notifications.form</field>
+            <field name="model">hr.notifications</field>
+            <field name="arch" type="xml">
+                <form string="Notifications" create="false" edit="false" delete="false">
+                    <header>
+                        <field name="is_user_manageable" invisible="1"/>
+                        <button string="Approve" type="object"
+                                name="approve"
+                                confirm="Are you sure you want to approve this notification?"
+                                attrs="{'invisible': [('is_user_manageable', '!=', True)]}"/>
+                        <button name="%(hr_dr_management.action_reject_notification)d"
+                                string="Reject"
+                                type="action"
+                                attrs="{'invisible': [('is_user_manageable', '!=', True)]}"/>
+                        <button name="%(hr_dr_management.action_reassign_notification)d"
+                                string="Reasign"
+                                type="action"
+                                attrs="{'invisible': [('is_user_manageable', '!=', True)]}"
+                                groups="hr_dr_management.hr_dr_management_group_supervisor"/>
+                        <field name="state" widget="statusbar" statusbar_visible="pending,reassigned,cancelled,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <field name="res_model" invisible="1"/>
+                        <button string="Details" class="oe_stat_button float-right" icon="fa-bars" type="object" name="action_open" attrs="{'invisible': ['|', ('res_model', '=', False), ('res_id', '=', False)]}"/>
+                        <group>
+                            <group>
+                                <field name="res_model_id" invisible="context.get('invisible_res_model_id',False)"/>
+                                <field name="res_id" invisible="context.get('invisible_res_id',False)"/>
+
+                                <field name="employee_requests_id"/>
+                                <field name="employee_approve_id"/>
+                            </group>
+                            <group>
+                                <field name="level"/>
+                                <field name="send"/>
+                                <field name="processed"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="commentary"/>
+                        </group>
+                        <notebook>
+                            <page string="Tracing">
+                                <field
+                                        name="notifications_ids"
+                                        nolabel="1">
+                                    <tree>
+                                        <field name="employee_requests_id"/>
+                                        <field name="level"/>
+                                        <field name="employee_approve_id"/>
+                                        <field name="commentary"/>
+                                        <field name="state"/>
+                                        <field name="send"/>
+                                        <field name="processed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Notifications-->
+
+        <!--Holiday-->
+        <record model="ir.actions.act_window" id="holiday_list_action">
+            <field name="name">Holidays</field>
+            <field name="res_model">hr.holiday</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create the holiday.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="holiday_list">
+            <field name="name">Holidays list</field>
+            <field name="model">hr.holiday</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="holiday_form">
+            <field name="name">Holidays form</field>
+            <field name="model">hr.holiday</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Holiday-->
+
+        <!--Attendance Period-->
+        <record model="ir.actions.act_window" id="attendance_period_list_action">
+            <field name="name">Attendance periods</field>
+            <field name="res_model">hr.attendance.period</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create the attendance periods.
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="attendance_period_list">
+            <field name="name">Attendance periods list</field>
+            <field name="model">hr.attendance.period</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="start"/>
+                    <field name="end"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="attendance_period_search">
+            <field name="name">Attendance periods search</field>
+            <field name="model">hr.attendance.period</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="start"/>
+                    <field name="end"/>
+                    <field name="state"/>
+
+                    <filter name="filter_state_open" string="Open" domain="[('state', '=', 'open')]"/>
+                    <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_state" string="Status" context="{'group_by' : 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="attendance_period_form">
+            <field name="name">Attendance periods form</field>
+            <field name="model">hr.attendance.period</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Close period" type="object"
+                            name="action_close_period" groups="hr_dr_management.hr_dr_management_group_supervisor"
+                            confirm="Are you sure you want to close period?"
+                            attrs="{'invisible': [('state', 'in', ['closed'])]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="open,closed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="start"/>
+                            </group>
+                            <group>
+                                <field name="end"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Attendance Period-->
+  </data>
+</odoo>

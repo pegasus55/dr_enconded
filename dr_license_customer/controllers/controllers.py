@@ -1,21 +1,3 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
-
-
-# class DrLicenseCustomer(http.Controller):
-#     @http.route('/dr_license_customer/dr_license_customer/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
-
-#     @http.route('/dr_license_customer/dr_license_customer/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('dr_license_customer.listing', {
-#             'root': '/dr_license_customer/dr_license_customer',
-#             'objects': http.request.env['dr_license_customer.dr_license_customer'].search([]),
-#         })
-
-#     @http.route('/dr_license_customer/dr_license_customer/objects/<model("dr_license_customer.dr_license_customer"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('dr_license_customer.object', {
-#             'object': obj
-#         })
+# Pyarmor 8.4.7 (trial), 000000, non-profits, 2024-02-29T09:50:17.473927
+from ..pyarmor_runtime_000000 import __pyarmor__
+__pyarmor__(__name__, __file__, b"PY000000\x00\x03\n\x00o\r\r\n\x80\x00\x01\x00\x08\x00\x00\x00\x04\x00\x00\x00@\x00\x00\x00\xa1\x00\x00\x00\x12\t\x04\x00\x12R\xc2\x1a\xaco\xb5(\x7f\xeaR\xceI\xde\xfd\x8e\x00\x00\x00\x00\x00\x00\x00\x00\x0b\xec-*TO\x87[\xd7\xcf\xf5\xf0\xd2\x8e\xbd\x8c\x86\xd4Q\xb5Cm\xf8\xa3\xb0v=4\x8e\xf3\x14\xdf\xe3y:wp\x08\x16\xeel\xf2H3\xc0\xd0\x11\xf6\xcdB-cH\xea\x11bar\xc3\xf0o\x17\x98\xf2\xf5\x0b\xc1(\xbd\xf9q\xf3\xbc0\xa8&\xee\xc4\xf09;\xf2\xb7\xd2?\xfe\xab\xed\xf3m\x13-\xd8\xb9Xi!\x19\x916K\x8b\xb6w\x9a\x1b(T\xd6\xc1\xa1\x03Xu/\xd5\xd3Z\xa2\xac'\x14\xaa\xbd\xfdMw\x7f\xc4\xec\xa7\x8bs\xfd1.~\tXv\xf2\xa9\xef\x00\x80.\x8a\xf8\x96\xd0\xfcX\xcdF\x8d\xcb;I\xd3\xc5\x90")

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="hr_dr_vacations">
+            <field name="parent_id" ref="base.module_category_human_resources"/>
+            <field name="name">Vacaciones</field>
+            <field name="description">Vacaciones</field>
+            <field name="sequence">3</field>
+        </record>
+    </data>
+</odoo>

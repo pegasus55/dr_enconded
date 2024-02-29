@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_department_form_view_inherit">
+            <field name="name">department_inherit_form</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='manager_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="address_id" context="{'show_address': 1,'default_type':'hr_department_address','default_parent_id':company_id,'default_company_type':'person'}"/>
+                </xpath>
+                <xpath expr="//field[@name='total_employee']" position="attributes">
+                    <attribute name="string">Collaborators</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_department_tree_inherit">
+            <field name="name">view_department_tree_inherit</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="name"/>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="address_id"/>
+                </xpath>
+                <xpath expr="//field[@name='display_name']" position="attributes">
+                    <attribute name="string">Display name</attribute>
+                </xpath>
+                <xpath expr="//field[@name='total_employee']" position="attributes">
+                    <attribute name="string">Collaborators</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

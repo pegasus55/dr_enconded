@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <template id="vacations_planning_aprove" name="Planificacion Aprobada">
+
+            <div id="wrap">
+                <div class="container">
+                    PLANIFICACION DE VACACIONES APROBADA
+                </div>
+            </div>
+
+        </template>
+        <template id="vacations_planning_rejected" name="Planificacion Rechazada">
+
+            <div id="wrap">
+                <div class="container">
+                    PLANIFICACION DE VACACIONES RECHAZADA
+                </div>
+            </div>
+
+        </template>
+
+        <template id="vacations_request_aprove" name="Solicitud Aprobada">
+
+            <div id="wrap">
+                <div class="container">
+                    SOLICITUD DE VACACIONES APROBADA
+                </div>
+            </div>
+
+        </template>
+        <template id="vacations_request_rejected" name="Solicitud Rechazada">
+
+            <div id="wrap">
+                <div class="container">
+                    SOLICITUD DE VACACIONES RECHAZADA
+                </div>
+            </div>
+
+        </template>
+
+         <template id="vacations_planning_error" name="vacations_planning_error">
+            <div id="wrap">
+                <div class="container">
+                    <t t-esc="error"/>
+                </div>
+            </div>
+        </template>
+        <template id="vacations_execution_error" name="vacations_execution_error">
+            <div id="wrap">
+                <div class="container">
+                    <t t-esc="error"/>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_credit_tree_view" model="ir.ui.view">
+        <field name="name">hr.credit.tree</field>
+        <field name="model">hr.credit</field>
+        <field name="arch" type="xml">
+            <tree string="Credit requests">
+                <field name="name"/>
+                <field name="employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)"/>
+                <field name="credit_amount" widget='monetary'/>
+                <field name="installment"/>
+                <field name="date"/>
+                <field name="payment_date"/>
+                <field name="state"/>
+                <field name="company_id" options="{'no_open': True, 'no_create_edit': True}" groups="base.group_multi_company"/>
+                <field name="currency_id" options="{'no_open': True, 'no_create_edit': True}" groups="base.group_multi_currency"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hr_credit_form_view" model="ir.ui.view">
+        <field name="name">hr.credit.form</field>
+        <field name="model">hr.credit</field>
+        <field name="arch" type="xml">
+            <form string="Credit request">
+                <header>
+                    <button string="Confirm request" type="object"
+                        name="confirm_request"
+                        groups="hr_dr_credit.hr_dr_credit_group_employee"
+                        confirm="Are you sure you want to confirm this credit request?"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button string="Register request" type="object"
+                        name="confirm_request_direct"
+                        groups="hr_dr_credit.hr_dr_credit_group_supervisor"
+                        confirm="Are you sure you want to register this credit request?"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button string="Cancel request" type="object"
+                        name="cancel_request"
+                        groups="hr_dr_credit.hr_dr_credit_group_employee"
+                        confirm="Are you sure you want to cancel this credit request?"
+                        attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+                    <button string="Print request" type="object"
+                        name="print_employee_credit_request" class="btn-primary oe_read_only"
+                        groups="hr_dr_credit.hr_dr_credit_group_employee"
+                        attrs="{'invisible': [('state', 'not in', ['approved','in_payroll'])]}"/>
+                    <button string="Print discount authorization" type="object"
+                        name="print_discount_authorization" class="btn-primary oe_read_only"
+                        groups="hr_dr_credit.hr_dr_credit_group_employee"
+                        attrs="{'invisible': [('state', 'not in', ['approved','in_payroll'])]}"/>
+                    <button string="Go to payroll" type="object"
+                        name="go_to_payroll"
+                        groups="hr_dr_credit.hr_dr_credit_group_supervisor"
+                        confirm="Are you sure you want to transfer this credit request to payroll?"
+                        attrs="{'invisible': [('state', '!=', 'approved')]}"/>
+                    <button string="Cancel request" type="object"
+                        name="cancel_request_by_admin" groups="hr_dr_credit.hr_dr_credit_group_supervisor"
+                        confirm="Are you sure you want to cancel this credit request?"
+                        attrs="{'invisible': [('state', 'not in', ['approved', 'in_payroll'])]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,in_payroll,rejected" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="readonly_values" invisible="1"/>
+                            <field name="name" readonly="1"/>
+                            <field name="employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)" attrs="{'readonly':[('state','!=','draft')]}"
+                                   domain="[('employee_admin', '=', False), ('company_id', '=', company_id), ('state', 'in', ['affiliate'])]"/>
+                            <field name="department_employee_requests_id" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                            <field name="job_position" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                            <field name="contract_id" invisible = "context.get('invisible_employee_requests_id',False)" force_save="1"/>
+                            <field name="user_manager_department_employee_requests_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="credit_amount" widget='monetary' attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                            <field name="percentage_of_salary" force_save="1"/>
+                            <field name="date"/>
+                            <field name="payment_date" force_save="1"/>
+                            <field name="installment" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                            <field name="consider" groups="hr_dr_loan.hr_dr_loan_group_supervisor" readonly="1" force_save="1"/>
+                            <field name="company_id" options="{'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="currency_id" options="{'no_open': True, 'no_create_edit': True}" groups="base.group_multi_currency"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <group>
+                            <field name="evidences" widget="many2many_binary" groups="hr_dr_credit.hr_dr_credit_group_supervisor" attrs="{'readonly': [('state', 'in',['in_payroll'])]}"/>
+                        </group>
+                        <group>
+                            <field name="files" widget="many2many_binary" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                        </group>
+                    </group>
+
+                    <group id="commentary">
+                        <field name="commentary" attrs="{'readonly': [('readonly_values', '=', True)]}"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Installments">
+                            <field name="credit_lines">
+                                <tree string="Installments" create="false" delete="false">
+                                    <field name="installment"/>
+                                    <field name="date"/>
+                                    <field name="amount" widget='monetary'/>
+                                    <field name="paid" readonly="1"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" >
+                                <field name="total_amount" widget="monetary"/>
+                                <field name="total_paid_amount" widget="monetary"/>
+                                <field name="balance_amount" class="oe_subtotal_footer_separator" widget="monetary"/>
+                            </group>
+                            <button type="object" name="compute_installment" string="Compute installment"  colspan="2" attrs="{'invisible': [('readonly_values', '=', True)]}"
+                            groups="hr_dr_credit.hr_dr_credit_group_employee" class="oe_stat_button"
+                            icon="fa-clock-o"/>
+                            <div class="oe_clear"/>
+                        </page>
+                        <page string="Tracing">
+                            <field name="notification_ids" nolabel="1">
+                                <tree>
+                                    <field name="level"/>
+                                    <field name="employee_approve_id"/>
+                                    <field name="commentary"/>
+                                    <field name="state"/>
+                                    <field name="send"/>
+                                    <field name="processed"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other information">
+                            <group>
+                                <group string="Confirmation">
+                                    <field name="date_confirmation"/>
+                                    <field name="user_confirmation"/>
+                                </group>
+                                <group string="Cancellation">
+                                    <field name="date_cancellation"/>
+                                    <field name="user_cancellation"/>
+                                </group>
+                                <group string="Go to payroll">
+                                    <field name="date_go_to_payroll"/>
+                                    <field name="user_go_to_payroll"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="hr_credit_search_view" model="ir.ui.view">
+        <field name="name">hr.credit.search.form</field>
+        <field name="model">hr.credit</field>
+        <field name="arch" type="xml">
+           <search string="Credit">
+                <field name="employee_requests_id" string="Collaborator"/>
+                <field name="department_employee_requests_id" string="Department"/>
+                    <filter string="Collaborator" name="employee_requests_id" context="{'group_by':'employee_requests_id'}"/>
+                    <filter string="Department" name="department_employee_requests_id" context="{'group_by':'department_employee_requests_id'}"/>
+                    <filter string="Status" name="status" context="{'group_by':'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="my_credit_request_action">
+        <field name="name">My credit requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+                'invisible_employee_requests_id': True,
+                'readonly_employee_requests_id': True,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": False,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">My credit requests.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="credit_request_from_my_department_action">
+        <field name="name">Credit requests from my department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('user_manager_department_employee_requests_id', '=',uid)]</field>
+        <field name="context">{
+                'invisible_employee_requests_id': False,
+                'readonly_employee_requests_id': True,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": False,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">Credit requests from my department.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="all_credit_request_action">
+        <field name="name">All credit requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{
+            'invisible_employee_requests_id': False,
+            'readonly_employee_requests_id': False,
+            "search_default_group_department_employee_requests_id": 1,
+            "search_default_group_employee_requests_id": 1,
+            "search_default_group_state": 1,
+            "create_edit_without_restrictions": True,
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">All credit requests.
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="credit_request_action_notifications_to_process">
+        <field name="name">Notifications to process for credit requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.notifications</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('res_model', '=', 'hr.credit'),
+            ('user_employee_approve_id', '=',uid),
+            ('send', '=',True),
+            ('state', '=','pending'),
+            ('processed', '=',False)
+            ]
+        </field>
+        <field name="context">{
+                'invisible_res_model_id': True,
+                'invisible_res_id': True,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">Notifications to process for credit requests.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="credit_request_action_notifications_all">
+        <field name="name">All notifications for credit requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.notifications</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('res_model', '=', 'hr.credit')
+            ]
+        </field>
+        <field name="context">{
+                'invisible_res_model_id': True,
+                'invisible_res_id': True,
+        }</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">All notifications for credit requests.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="check_passphrase_wizard">
+      <field name="name">Request passphrase form</field>
+      <field name="model">dr_signature.check.passphrase.wizard</field>
+      <field name="mode">primary</field>
+      <field name="priority">50</field>
+      <field name="arch" type="xml">
+        <form string="Request passphrase">
+          <field name="has_error" invisible="1"/>
+          <field name="error_msg" attrs="{'invisible': [('has_error', '=', False)]}"/>
+          <field name="has_passphrase" invisible="1"/>
+
+          <sheet>
+            <group>
+              <field name="sign_document"/>
+              <field name="employee_id"
+                     attrs="{'invisible': [('sign_document', '=', False)], 'required': [('sign_document', '=', True)]}"/>
+              <field name="passphrase" password="True" placeholder="*******"
+                     attrs="{'invisible': ['|', ('sign_document', '=', False), ('has_passphrase', '=', False)], 'required': [('has_passphrase', '=', True)]}"/>
+              <field name="reason"
+                     attrs="{'invisible': [('sign_document', '=', False)]}"/>
+            </group>
+            <footer>
+              <button name="action_check" string="Check" class="btn-primary" type="object"/>
+              <button string="Cancel" class="btn-secondary" special="cancel"/>
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!--    <record model="ir.actions.act_window" id="check_passphrase_wizard_action">-->
+<!--      <field name="name">Passphrase</field>-->
+<!--      <field name="res_model">dr_signature.check.passphrase.wizard</field>-->
+<!--      <field name="view_mode">form</field>-->
+<!--      <field name="target">new</field>-->
+<!--&lt;!&ndash;      <field name="context">{'default_sale_order_id': active_id}</field>&ndash;&gt;-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="view_order_form">-->
+<!--      <field name="name">sale.order.form.inherit</field>-->
+<!--      <field name="model">res.users</field>-->
+<!--      <field name="inherit_id" ref="sale.view_order_form"/>-->
+<!--      <field name="arch" type="xml">-->
+<!--        <xpath expr="//header" position="inside">-->
+<!--          <button icon="fa-arrow-right" type="action" name="%(ab_sale_management.check_passphrase_wizard_action)d"-->
+<!--                  string="Test report"/>-->
+<!--        </xpath>-->
+<!--      </field>-->
+<!--    </record>-->
+
+
+  </data>
+</odoo>

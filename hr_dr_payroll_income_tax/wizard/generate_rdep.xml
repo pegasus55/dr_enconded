@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="generate_rdep_form" model="ir.ui.view">
+            <field name="name">Generate RDEP</field>
+            <field name="model">generate.rdep</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Generate RDEP">
+                    <group>
+                        <separator string="The information of the collaborators who belong to the selected company will be exported."/>
+                        <group>
+                            <field name="status" invisible="1"/>
+                            <field name="company_id" required="1" options="{'no_open': True}" groups="base.group_multi_company"/>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                            <field name="establishment_number"/>
+                            <field name="validate"/>
+                        </group>
+                    </group>
+
+                    <group states="ready">
+                        <group>
+                            <separator string="File generated successfully."/>
+                            <field name="xml_file_name" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="xml_file" filename="xml_file_name" widget="download_link" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group states="error">
+                        <group>
+                            <separator string="File generated with errors."/>
+                            <field name="error_file_name" invisible="1"/>
+                            <field name="error_file" filename="error_file_name" widget="download_link" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="xml_file_name" invisible="1"/>
+                            <field name="xml_file" filename="xml_file_name" widget="download_link" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <footer class="oe_right">
+                        <button name="action_generate_rdep" string="Generate REDP" type="object"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_generate_rdep" model="ir.actions.act_window">
+            <field name="name">Generate RDEP</field>
+            <field name="res_model">generate.rdep</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

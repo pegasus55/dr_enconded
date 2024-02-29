@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <record id="hr_fortnight_view_form" model="ir.ui.view">
+		<field name="name">hr.fortnight.view.form</field>
+		<field name="model">hr.fortnight</field>
+		<field name="arch" type="xml">
+			<form string="Fortnight" create="false" edit="false" delete="false">
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+                            <field name="amount" widget="monetary"/>
+                            <field name="date_from"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+						</group>
+						<group>
+                            <field name="employee_id" widget="many2one_avatar_employee"/>
+                            <field name="date"/>
+                            <field name="date_to"/>
+                            <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+				    <field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+        <record id="hr_fortnight_view_tree" model="ir.ui.view">
+            <field name="name">hr.fortnight.view.tree</field>
+            <field name="model">hr.fortnight</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="name"/>
+                    <field name="employee_id" widget="many2one_avatar_employee"/>
+                    <field name="amount" widget="monetary"/>
+                    <field name="date"/>
+                    <field name="date_from" optional="hide"/>
+                    <field name="date_to" optional="hide"/>
+                    <field name="company_id" optional="hide" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                    <field name="currency_id" optional="hide" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_fortnight_view_search" model="ir.ui.view">
+            <field name="name">hr.fortnight.view.search</field>
+            <field name="model">hr.fortnight</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_employee_id" string="Collaborator" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter name="group_by_date" string="Date" domain="[]" context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="action_hr_fortnight" model="ir.actions.act_window">
+            <field name="name">Fortnight</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.fortnight</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{
+                "search_default_group_by_date": 1,
+                }
+            </field>
+        </record>
+    </data>
+</odoo>

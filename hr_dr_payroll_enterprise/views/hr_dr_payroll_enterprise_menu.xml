@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="menu_fortnight_root" name="Fortnight" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="51" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_fortnight" action="hr_dr_payroll_base.action_hr_fortnight" parent="menu_fortnight_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_generate_fortnight" action="hr_dr_payroll_base.action_generate_hr_fortnight" parent="menu_fortnight_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+
+	<menuitem id="hr_input_menu" action="hr_dr_payroll_base.hr_input_action" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_work_entries_root" sequence="2"/>
+	<menuitem id="hr_processed_inputs_menu" action="hr_dr_payroll_base.hr_processed_inputs_action" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_work_entries_root" sequence="2"/>
+	<menuitem id="hr_import_input_menu" action="hr_dr_payroll_base.action_import_input" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_work_entries_root" sequence="2"/>
+
+	<menuitem id="menu_payment_payroll_root" sequence="79" name="Payment" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" groups="hr_payroll.group_hr_payroll_user"/>
+    	<menuitem id="menu_payment_payroll" action="action_account_payment_payroll" sequence="10" parent="menu_payment_payroll_root" groups="hr_payroll.group_hr_payroll_user"/>
+    	<menuitem id="menu_payment_payroll_batch" action="action_account_batch_payment_payroll" sequence="20" parent="menu_payment_payroll_root" groups="hr_payroll.group_hr_payroll_user"/>
+
+	<menuitem id="menu_tenths_hr_dr_payroll_enterprise_root" name="Tenths" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="80" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_action_tenths_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_tenths" parent="menu_tenths_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_action_tenths_hr_dr_payroll_enterprise_line" action="hr_dr_payroll_base.action_tenths_line" parent="menu_tenths_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_tenths_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_tenths_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_tenths_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_tenths_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.hr_tenth_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+			<menuitem id="menu_tenths_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_tenths_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.hr_tenth_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+	<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise_root" name="Pay living wage" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" groups="hr_payroll.group_hr_payroll_user" sequence="90"/>
+		<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_pay_living_wage" parent="menu_pay_living_wage_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise_line" action="hr_dr_payroll_base.action_pay_living_wage_line" parent="menu_pay_living_wage_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_pay_living_wage_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_pay_living_wage_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.pay_living_wage_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+			<menuitem id="menu_pay_living_wage_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_pay_living_wage_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.pay_living_wage_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+	<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_root" name="Payment utility" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="100" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_payment_utility" parent="menu_payment_utility_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_line" action="hr_dr_payroll_base.action_payment_utility_line" parent="menu_payment_utility_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_external_service" action="hr_dr_payroll_base.action_hr_payment_utility_external_service" parent="menu_payment_utility_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_payment_utility_external_service_personnel" action="hr_dr_payroll_base.action_payment_utility_external_service_personnel" parent="menu_payment_utility_hr_dr_payroll_enterprise_root" sequence="40" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_payment_utility_hr_dr_payroll_enterprise_root" sequence="50" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_payment_utility_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.payment_utility_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+			<menuitem id="menu_payment_utility_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_payment_utility_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.payment_utility_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+	<menuitem id="menu_retired_employees_hr_dr_payroll_enterprise_root" name="Retired collaborators" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="130" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" name="Salary" parent="menu_retired_employees_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise" name="Salary" action="hr_dr_payroll_base.action_retired_employees_salary" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_line" name="Details" action="hr_dr_payroll_base.action_retired_employees_salary_line" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+				<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+				<menuitem id="menu_retired_employees_salary_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_retired_employees_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+		<menuitem id="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise_root" name="Thirteenth salary" parent="menu_retired_employees_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise" name="Thirteenth salary" action="hr_dr_payroll_base.action_retired_employees_thirteenth_salary" parent="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise_line" name="Details" action="hr_dr_payroll_base.action_retired_employees_thirteenth_salary_line" parent="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_d13_salary_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_retired_employees_thirteenth_salary_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+				<menuitem id="menu_retired_employees_d13_salary_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_retired_employees_d13_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+				<menuitem id="menu_retired_employees_d13_salary_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_retired_employees_d13_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+		<menuitem id="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise_root" name="Fourteenth salary" parent="menu_retired_employees_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise" name="Fourteenth salary" action="hr_dr_payroll_base.action_retired_employees_fourteenth_salary" parent="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise_line" name="Details" action="hr_dr_payroll_base.action_retired_employees_fourteenth_salary_line" parent="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+			<menuitem id="menu_retired_employees_d14_salary_hr_dr_payroll_enterprise_notifications" name="Notifications" parent="menu_retired_employees_fourteenth_salary_hr_dr_payroll_enterprise_root" sequence="30" groups="hr_payroll.group_hr_payroll_user"/>
+				<menuitem id="menu_retired_employees_d14_salary_hr_dr_payroll_enterprise_notifications_to_process" name="To process" parent="menu_retired_employees_d14_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_to_process" groups="hr_payroll.group_hr_payroll_user" sequence="10"/>
+				<menuitem id="menu_retired_employees_d14_salary_hr_dr_payroll_enterprise_notifications_all" name="All" parent="menu_retired_employees_d14_salary_hr_dr_payroll_enterprise_notifications" action="hr_dr_payroll_base.retired_employee_salary_action_notifications_all" groups="hr_payroll.group_hr_payroll_user" sequence="20"/>
+
+	<menuitem id="hr_payroll.menu_hr_payroll_report" name="Reporting" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="140" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" name="Configuration" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="150" groups="hr.group_hr_user"/>
+
+	<menuitem id="menu_hr_contribution_register" action="hr_dr_payroll_base.action_contribution_register_form" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="14" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_sbu_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_sbu" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="25" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_living_wage_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_living_wage" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="30" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_schedule_legal_obligations_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_schedule_legal_obligations" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="45" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_hr_historical_provisions" action="hr_dr_payroll_base.action_historical_provision" parent="hr_payroll.menu_hr_salary_configuration" name="Historical provisions" sequence="60" groups="hr_payroll.group_hr_payroll_manager"/>
+
+	<menuitem id="menu_clone_salary_rule" action="hr_dr_payroll_base.action_clone_salary_rule" parent="hr_payroll.menu_hr_salary_configuration" sequence="21"/>
+
+</odoo>

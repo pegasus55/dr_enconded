@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_compute_period_summary_form">
+            <field name="name">Compute period summary form</field>
+            <field name="model">hr.compute.period.summary</field>
+            <field name="arch" type="xml">
+                <form id="hr.compute.period.summary">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="attendance_period_id" options="{'no_create_edit': True}" domain="[('state','in',['open'])]"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_compute_period_summary" string="Aceptar" type="object"
+                                    class="btn-primary"/>
+                            <button special="cancel" string="Cancelar"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="compute_period_summary_action">
+            <field name="name">Resumir período</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.compute.period.summary</field>
+
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Resumir período.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_compute_period_summary" name="Resumir período" parent="menu_hr_employee_period_summary_root" action="hr_dr_schedule.compute_period_summary_action" groups="hr_dr_schedule.hr_dr_schedule_group_supervisor" sequence="20"/>
+
+    </data>
+</odoo>

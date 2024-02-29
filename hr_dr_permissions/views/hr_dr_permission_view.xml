@@ -1,0 +1,1558 @@
+<odoo>
+    <data>
+        <!--hr.permission.type-->
+        <record model="ir.ui.view" id="permission_type_list">
+            <field name="name">Permission type list</field>
+            <field name="model">hr.permission.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="type"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="permission_type_search">
+            <field name="name">Permission type search</field>
+            <field name="model">hr.permission.type</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="acronym"/>
+                    <field name="type"/>
+                    <field name="description"/>
+                    <field name="active"/>
+
+                    <filter name="filter_active" string="Active" domain="[('active', '=',True)]" />
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="permission_type_form">
+              <field name="name">Permission type form</field>
+              <field name="model">hr.permission.type</field>
+              <field name="arch" type="xml">
+                  <form>
+                      <sheet>
+                          <label for="name" class="oe_edit_only"/>
+                          <h1>
+                              <field name="name"/>
+                          </h1>
+                          <group>
+                              <group>
+                                  <field name="acronym"/>
+                                  <field name="type"/>
+                              </group>
+                              <group>
+                                  <field name="active"/>
+                              </group>
+                          </group>
+                          <group>
+                              <field name="description"/>
+                          </group>
+
+                          <notebook>
+                              <page string="Normatives">
+                                  <field name="normative_ids" nolabel="1">
+                                      <tree>
+                                          <field name="name"/>
+                                          <field name="acronym"/>
+                                      </tree>
+                                  </field>
+                              </page>
+                              <page string="Legal details">
+                                  <field name="legal_detail_ids">
+                                      <tree>
+                                          <field name="normative_id"/>
+                                          <field name="legal_detail"/>
+                                      </tree>
+                                      <form>
+                                          <sheet>
+                                              <group>
+                                                  <group>
+                                                      <field name="normative_id"/>
+                                                  </group>
+                                                  <group>
+                                                      <field name="legal_detail"/>
+                                                  </group>
+                                              </group>
+                                          </sheet>
+                                      </form>
+                                  </field>
+                              </page>
+                          </notebook>
+
+                      </sheet>
+                  </form>
+              </field>
+          </record>
+        <record model="ir.actions.act_window" id="permission_type_list_action">
+            <field name="name">Permission type</field>
+            <field name="res_model">hr.permission.type</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="permission_type_search"/>
+            <field name="context">{
+                "search_default_filter_active": 1
+                }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Create permission type.
+                </p>
+            </field>
+        </record>
+        <!--hr.permission.type-->
+
+        <!--hr.normative-->
+        <record model="ir.ui.view" id="normative_form_inherit">
+            <field name="name">Normative form inherit</field>
+            <field name="model">hr.normative</field>
+            <field name="inherit_id" ref="hr_dr_management.normative_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//notebook//page[last()]" position="after">
+                    <page name = "permissions_type" string="Permission Type">
+                        <field name="permission_type_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="acronym"/>
+                                <field name="type"/>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <label for="name" class="oe_edit_only"/>
+                                    <h1>
+                                        <field name="name"/>
+                                    </h1>
+                                    <group>
+                                        <field name="acronym"/>
+                                        <field name="type"/>
+                                        <field name="description"/>
+                                        <field name="active"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <!--hr.normative-->
+
+        <!--hr.permission.request-->
+        <record id="hr_permission_request_view_calendar" model="ir.ui.view">
+            <field name="name">hr.permission.request.view.calendar</field>
+            <field name="model">hr.permission.request</field>
+            <field name="arch" type="xml">
+                <calendar string="Permission request" date_start="date_from" date_stop="date_to" mode="month"
+                          quick_add="False" color="state">
+                    <field name="display_name"/>
+                </calendar>
+            </field>
+        </record>
+        <record id="hr_permission_request_view_kanban" model="ir.ui.view">
+            <field name="name">hr.permission.request.view.kanban</field>
+            <field name="model">hr.permission.request</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="employee_requests_id"/>
+                    <field name="permission_type_id"/>
+                    <field name="date_from"/>
+                    <field name="start"/>
+                    <field name="date_to"/>
+                    <field name="end"/>
+                    <field name="state"/>
+                    <field name="commentary"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click container">
+                                <div class="row no-gutters">
+                                    <div class="col-2">
+                                        <img t-att-src="kanban_image('hr.employee', 'image_small', record.employee_requests_id.raw_value)"
+                                            t-att-title="record.employee_requests_id.value"
+                                            t-att-alt="record.employee_requests_id.value"
+                                            width="40" height="40"
+                                            class="oe_kanban_avatar float-left mr4 col-md-"/>
+                                    </div>
+                                    <div class="col-10">
+                                        <strong class="o_kanban_record_title"><t t-esc="record.employee_requests_id.value"/></strong>
+                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                            <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Options">
+                                                <span class="fa fa-ellipsis-v"/>
+                                            </a>
+                                            <div class="dropdown-menu" role="menu">
+
+                                                <a t-if="record.state.raw_value == 'draft'" role="menuitem" type="edit" class="dropdown-item">Edit request</a>
+
+                                                <a t-if="record.state.raw_value == 'draft'" role="menuitem" type="delete" class="dropdown-item">Delete request</a>
+
+                                                <a t-if="record.state.raw_value == 'draft'" name="confirm_request" type="object"
+                                                    role="menuitem" class="dropdown-item">Confirm request</a>
+
+                                                <a t-if="record.state.raw_value == 'pending'" name="cancel_request" type="object"
+                                                    role="menuitem" class="dropdown-item">Cancel request</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters justify-content-end">
+                                    <div class="col-4"><span class="text-muted">Type:</span></div>
+                                    <div class="col-8"><t t-esc="record.permission_type_id.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">Start date:</span></div>
+                                    <div class="col-8"><t t-esc="record.date_from.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">End date:</span></div>
+                                    <div class="col-8"><t t-esc="record.date_to.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">Start time:</span></div>
+                                    <div class="col-8"><t t-esc="record.start.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">End time:</span></div>
+                                    <div class="col-8"><t t-esc="record.end.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">Status:</span></div>
+                                    <div class="col-8"><t t-esc="record.state.value"/></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-4"><span class="text-muted">Commentary:</span></div>
+                                    <div class="col-8"><t t-esc="record.commentary.value"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+         </record>
+        <record id="hr_permission_request_view_tree" model="ir.ui.view">
+            <field name="name">hr.permission.request.view.tree</field>
+            <field name="model">hr.permission.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'rejected'" decoration-success="state == 'approved'" decoration-muted="state in ['cancelled','draft']" decoration-primary="state == 'pending'">
+                    <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)"/>
+                    <field name="permission_type_id"/>
+                    <field name="date_from"/>
+                    <field name="start" widget="float_time"/>
+                    <field name="date_to"/>
+                    <field name="end" widget="float_time"/>
+                    <field name="state"/>
+                    <field name="commentary"/>
+<!--                    <button string="Confirm Request" icon="fa-check" type="object"
+                        name="confirm_permission_request"
+                        confirm="¿Está seguro que desea confirmar esta solicitud de permiso?"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"></button>
+
+                    <button string="Cancel Request" icon="fa-ban" type="object"
+                        name="cancel_permission_request"
+                        confirm="¿Está seguro que desea cancelar esta solicitud de permiso?"
+                        attrs="{'invisible': [('state', '!=', 'pending')]}"></button>-->
+
+                </tree>
+            </field>
+        </record>
+        <record id="hr_permission_request_view_form" model="ir.ui.view">
+            <field name="name">hr.permission.request.view.form</field>
+            <field name="model">hr.permission.request</field>
+            <field name="arch" type="xml">
+                <form string="Permission request">
+                    <header>
+                        <button string="Confirm request" type="object"
+                            name="confirm_request"
+                            confirm="Do you really wish to confirm this permission request?"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button string="Cancel request" type="object"
+                            name="cancel_request"
+                            confirm="Do you really wish to cancel this permission request?"
+                            attrs="{'invisible': [('state', '!=', 'pending')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,cancelled,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date_from" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="date_to" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="datetime_from"/>
+                                <field name="employee_requests_id" invisible="context.get('invisible_employee_requests_id',False)" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="start" widget="float_time" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="end" widget="float_time" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="datetime_to"/>
+                                <field name="permission_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="commentary" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="allow_attach" invisible="1"/>
+                            <field name="justification_attachment_id" attrs="{'readonly': [('allow_attach', '!=', True)]}" widget="many2many_binary" class="oe_inline"/>
+                        </group>
+                        <group>
+                            <field name="reason_reject" attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                        </group>
+                        <field name="is_head" invisible="1"/>
+                        <group attrs="{'invisible': [('parent_id', '=', False)]}">
+                            <field name="parent_id" string="Parent request"/>
+                        </group>
+                        <field name="recovers_time" invisible="1"/>
+                        <notebook>
+                            <page string="Tracing">
+                                <field
+                                    name="notification_ids"
+                                    nolabel="1">
+                                    <tree>
+                                        <field name="level"/>
+                                        <field name="employee_approve_id"/>
+                                        <field name="commentary"/>
+                                        <field name="state"/>
+                                        <field name="send"/>
+                                        <field name="processed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="user_confirmation"/>
+                                        <field name="user_cancellation"/>
+                                    </group>
+                                    <group>
+                                        <field name="date_confirmation"/>
+                                        <field name="date_cancellation"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Child requests" attrs="{'invisible': [('is_head', '=', False)]}">
+                                <field name="children_id" nolabel="1">
+                                    <tree>
+                                        <field name="date_from" string="Date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Time recovery" attrs="{'invisible': [('recovers_time','=', False)]}">
+                                <field name="permission_shift_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="shift_id"
+                                               domain="[('user_employee_id', '=', uid),
+                                                        ('planned_end', '>', datetime.datetime.now())]"/>
+                                        <field name="recovery_time" widget="float_time"/>
+                                        <field name="permission_request_id" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="shift_id"/>
+                                            </group>
+                                            <group>
+                                                <field name="recovery_time" widget="float_time"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group>
+                                    <group>
+                                        <field name="time_to_recover" widget="float_time"/>
+                                    </group>
+                                    <group>
+                                        <field name="planned_time_to_recover" widget="float_time"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="hr_permission_request_view_search" model="ir.ui.view">
+            <field name="name">hr.permission.request.view.search</field>
+            <field name="name">hr.permission.request.view.search</field>
+            <field name="model">hr.permission.request</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="state" />
+
+                    <filter name="filter_draft" string="Draft" domain="[('state', '=','draft')]" />
+                    <filter name="filter_pending" string="Pending" domain="[('state', '=','pending')]" />
+                    <filter name="filter_cancelled" string="Cancelled" domain="[('state', '=','cancelled')]" />
+                    <filter name="filter_approved" string="Approved" domain="[('state', '=','approved')]" />
+                    <filter name="filter_rejected" string="Rejected" domain="[('state', '=','rejected')]" />
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="group_type" string="Type" context="{'group_by' : 'permission_type_id'}" />
+                        <filter name="group_state" string="State" context="{'group_by' : 'state'}" />
+                        <filter name="group_employee_requests_id" string="Employee"
+                                context="{'group_by' : 'employee_requests_id'}"/>
+                        <filter name="group_department_employee_requests_id" string="Department"
+                                context="{'group_by' : 'department_employee_requests_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="permission_request_action_my">
+            <field name="name">My permission request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.permission.request</field>
+
+            <field name="view_mode">calendar,kanban,tree,form</field>
+            <field name="domain">[('user_employee_requests_id', '=',uid),('is_head', '=', False)]</field>
+            <field name="context">{
+                    'invisible_employee_requests_id': True,
+                    "search_default_group_state": 1,
+                    "create_edit_without_restrictions": False,
+            }</field>
+
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">My permission request.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="permission_request_action_from_my_department">
+            <field name="name">Permission request from my department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.permission.request</field>
+
+            <field name="view_mode">calendar,kanban,tree,form</field>
+            <field name="domain">[('user_manager_department_employee_requests_id', '=',uid),('is_head', '=', False)]</field>
+            <field name="context">{
+                "search_default_group_employee_requests_id": 1,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": False,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Permission request from my department.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="permission_request_action_all">
+            <field name="name">All permission request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.permission.request</field>
+
+            <field name="view_mode">calendar,kanban,tree,form</field>
+            <field name="domain">[('is_head', '=', False)]</field>
+            <field name="context">{
+                "search_default_group_department_employee_requests_id": 1,
+                "search_default_group_employee_requests_id": 1,
+                "search_default_group_state": 1,
+                "create_edit_without_restrictions": True,
+                }
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">All permission request.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="permission_request_action_notifications_to_process">
+            <field name="name">Notifications to process for permission request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'hr.permission.request'),
+                ('user_employee_approve_id', '=',uid),
+                ('send', '=',True),
+                ('state', '=','pending'),
+                ('processed', '=',False)
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Notifications to process for permission request.
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="permission_request_action_notifications_all">
+            <field name="name">All notifications for permission request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.notifications</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[
+                ('res_model', '=', 'hr.permission.request')
+                ]
+            </field>
+            <field name="context">{
+                    'invisible_res_model_id': True,
+                    'invisible_res_id': True,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">All notifications for permission request to process.
+                </p>
+            </field>
+        </record>
+        <!--hr.permission.request-->
+
+
+
+
+
+
+
+
+
+
+
+        <!--My Permission Request-->
+<!--        <record model="ir.actions.act_window" id="permission_request_action_my">-->
+<!--            <field name="name">My Permission Request</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.permission.request</field>-->
+<!--            -->
+<!--            <field name="view_mode">calendar,kanban,tree,form</field>-->
+<!--            <field name="domain">[('user_employee_requests_id', '=',uid)]</field>-->
+<!--            <field name="search_view_id" ref="hr_permission_request_base_view_search"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_group_type": 1,-->
+<!--                "search_default_group_state": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_smiling_face">My Permission Request.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_my_view_calendar" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="1"/>-->
+<!--            <field name="view_mode">calendar</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_my"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_base_view_calendar"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_my_view_kanban" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="hr_permission_request_base_view_kanban"/>-->
+<!--            <field name="act_window_id" ref="permission_request_action_my"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_my_view_tree" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="3"/>-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_my"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_base_view_tree"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_my_view_form" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="4"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_my"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_base_view_form"/>-->
+<!--        </record>-->
+        <!--My Permission Request-->
+
+        <!--Permission Request from my department-->
+<!--        <record id="hr_permission_request_from_my_department_view_calendar" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.request_from_my_department.view.calendar</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <calendar string="Permission Request from my department" date_start="date_from" date_stop="date_to" mode="month" quick_add="False" color="employee_requests_id">-->
+<!--                    <field name="display_name"/>-->
+<!--                </calendar>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_request_from_my_department_view_kanban" model="ir.ui.view">-->
+<!--        <field name="name">hr.permission.request_from_my_department.view.kanban</field>-->
+<!--        <field name="model">hr.permission.request</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <kanban class="o_kanban_mobile" create="false">-->
+<!--                <field name="employee_requests_id"/>-->
+<!--                <field name="permission_type_id"/>-->
+<!--                <field name="date_from"/>-->
+<!--                <field name="date_to"/>-->
+<!--                <field name="state"/>-->
+<!--                <field name="commentary"/>-->
+<!--                <templates>-->
+<!--                    <t t-name="kanban-box">-->
+<!--                        <div class="oe_kanban_global_click container">-->
+<!--                            <div class="row no-gutters">-->
+<!--                                <div class="col-2">-->
+<!--                                    <img t-att-src="kanban_image('hr.employee', 'image_small', record.employee_requests_id.raw_value)"-->
+<!--                                        t-att-title="record.employee_requests_id.value"-->
+<!--                                        t-att-alt="record.employee_requests_id.value"-->
+<!--                                        width="40" height="40"-->
+<!--                                        class="oe_kanban_avatar float-left mr4 col-md-"/>-->
+<!--                                </div>-->
+<!--                                <div class="col-10">-->
+<!--                                    <strong class="o_kanban_record_title"><t t-esc="record.employee_requests_id.value"/></strong>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row no-gutters justify-content-end">-->
+<!--                                <div class="col-4"><span class="text-muted">Tipo:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.permission_type_id.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Inicio:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.date_from.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Fin:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.date_to.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Estado:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.state.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Comentario:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.commentary.value"/></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </templates>-->
+<!--            </kanban>-->
+<!--        </field>-->
+<!--     </record>-->
+<!--        <record id="hr_permission_request_from_my_department_view_tree" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.request_from_my_department.view.tree</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree create="false" delete="false">-->
+<!--                    <field name="employee_requests_id"/>-->
+<!--                    <field name="permission_type_id"/>-->
+<!--                    <field name="date_from"/>-->
+<!--                    <field name="date_to"/>-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_request_from_my_department_view_form" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.request_from_my_department.view.form</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Permission Request from my department" create="false" edit="false" delete="false">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="employee_requests_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="permission_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="date_from" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="date_to" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="state"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="commentary"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="justification_attachment_id" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="many2many_binary" class="oe_inline"/>-->
+<!--                        </group>-->
+<!--                        <notebook>-->
+<!--                            <page string="Tracing">-->
+<!--                                <field-->
+<!--                                    name="notification_ids"-->
+<!--                                    nolabel="1">-->
+<!--                                    <tree>-->
+<!--                                        <field name="level"/>-->
+<!--                                        <field name="employee_approve_id"/>-->
+<!--                                        <field name="state"/>-->
+<!--                                        <field name="commentary"/>-->
+<!--                                    </tree>-->
+<!--                                </field>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_request_from_my_department_view_search" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.request_from_my_department.view.search</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <field name="employee_requests_id"/>-->
+<!--                    <field name="permission_type_id"/>-->
+<!--                    <field name="state" />-->
+
+<!--                    <filter name="filter_draft" string="Draft" domain="[('state', '=','draft')]" />-->
+<!--                    <filter name="filter_pending" string="Pendiente" domain="[('state', '=','pending')]" />-->
+<!--                    <filter name="filter_cancelled" string="Cancelled" domain="[('state', '=','cancelled')]" />-->
+<!--                    <filter name="filter_approved" string="Aprabado" domain="[('state', '=','approved')]" />-->
+<!--                    <filter name="filter_rejected" string="Rechazado" domain="[('state', '=','rejected')]" />-->
+
+<!--                    <group expand="0" name="group_by" string="Group By">-->
+<!--                        <filter name="group_employee_requests_id" string="Employee" context="{'group_by' : 'employee_requests_id'}" />-->
+<!--                        <filter name="group_permission_type_id" string="Type" context="{'group_by' : 'permission_type_id'}" />-->
+<!--                        <filter name="group_state" string="State" context="{'group_by' : 'state'}" />-->
+<!--                      </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record model="ir.actions.act_window" id="permission_request_action_from_my_department">-->
+<!--            <field name="name">Permission Request from my department</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.permission.request</field>-->
+<!--            -->
+<!--            <field name="view_mode">calendar,kanban,tree,form</field>-->
+<!--            <field name="domain">[('user_manager_department_employee_requests_id', '=',uid)]</field>-->
+<!--            <field name="search_view_id" ref="hr_permission_request_from_my_department_view_search"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_group_employee_requests_id": 1,-->
+<!--                "search_default_group_permission_type_id": 1,-->
+<!--                "search_default_group_state": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_smiling_face">Permission Request from my department.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="permission_request_from_my_department_action_view_calendar" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="1"/>-->
+<!--            <field name="view_mode">calendar</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_from_my_department"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_from_my_department_view_calendar"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_from_my_department_action_view_kanban" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="hr_permission_request_from_my_department_view_kanban"/>-->
+<!--            <field name="act_window_id" ref="permission_request_action_from_my_department"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_from_my_department_action_view_tree" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="3"/>-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_from_my_department"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_from_my_department_view_tree"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_from_my_department_action_view_form" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="4"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_from_my_department"/>-->
+<!--            <field name="view_id" ref="hr_permission_request_from_my_department_view_form"/>-->
+<!--        </record>-->
+        <!--Permission Request from my department-->
+
+        <!--All Permission Request-->
+<!--        <record id="all_hr_permission_request_view_calendar" model="ir.ui.view">-->
+<!--            <field name="name">all.hr.permission.request.calendar</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="priority">20</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <calendar string="Permission Request from my department" date_start="date_from" date_stop="date_to" mode="month" quick_add="False" color="department_employee_requests_id">-->
+<!--                    <field name="display_name"/>-->
+<!--                </calendar>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_request_view_kanban" model="ir.ui.view">-->
+<!--        <field name="name">all.hr.permission.request.kanban</field>-->
+<!--        <field name="model">hr.permission.request</field>-->
+<!--        <field name="priority">20</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <kanban class="o_kanban_mobile">-->
+<!--                <field name="employee_requests_id"/>-->
+<!--                <field name="permission_type_id"/>-->
+<!--                <field name="date_from"/>-->
+<!--                <field name="date_to"/>-->
+<!--                <field name="state"/>-->
+<!--                <field name="commentary"/>-->
+<!--                <templates>-->
+<!--                    <t t-name="kanban-box">-->
+<!--                        <div class="oe_kanban_global_click container">-->
+<!--                            <div class="row no-gutters">-->
+<!--                                <div class="col-2">-->
+<!--                                    <img t-att-src="kanban_image('hr.employee', 'image_small', record.employee_requests_id.raw_value)"-->
+<!--                                        t-att-title="record.employee_requests_id.value"-->
+<!--                                        t-att-alt="record.employee_requests_id.value"-->
+<!--                                        width="40" height="40"-->
+<!--                                        class="oe_kanban_avatar float-left mr4 col-md-"/>-->
+<!--                                </div>-->
+<!--                                <div class="col-10">-->
+<!--                                    <strong class="o_kanban_record_title"><t t-esc="record.employee_requests_id.value"/></strong>-->
+<!--                                    <div class="o_dropdown_kanban dropdown" groups="base.group_user">-->
+<!--                                        <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Opciones">-->
+<!--                                            <span class="fa fa-ellipsis-v"/>-->
+<!--                                        </a>-->
+<!--                                        <div class="dropdown-menu" role="menu">-->
+
+<!--                                            <a t-if="record.state.raw_value == 'draft'" role="menuitem" type="edit" class="dropdown-item">Edit Request</a>-->
+
+<!--                                            <a t-if="record.state.raw_value == 'draft'" role="menuitem" type="delete" class="dropdown-item">Delete Request</a>-->
+
+<!--                                            <a t-if="record.state.raw_value == 'draft'" name="confirm_permission_request" type="object"-->
+<!--                                                role="menuitem" class="dropdown-item">Confirm Request</a>-->
+
+<!--                                            <a t-if="record.state.raw_value == 'pending'" name="cancel_permission_request" type="object"-->
+<!--                                                role="menuitem" class="dropdown-item">Cancel Request</a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row no-gutters justify-content-end">-->
+<!--                                <div class="col-4"><span class="text-muted">Tipo:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.permission_type_id.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Inicio:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.date_from.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Fin:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.date_to.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Estado:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.state.value"/></div>-->
+<!--                                <div class="w-100"></div>-->
+<!--                                <div class="col-4"><span class="text-muted">Comentario:</span></div>-->
+<!--                                <div class="col-8"><t t-esc="record.commentary.value"/></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </templates>-->
+<!--            </kanban>-->
+<!--        </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_request_view_tree" model="ir.ui.view">-->
+<!--            <field name="name">all.hr.permission.request.tree</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="priority">20</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <field name="employee_requests_id"/>-->
+<!--                    <field name="permission_type_id"/>-->
+<!--                    <field name="date_from"/>-->
+<!--                    <field name="date_to"/>-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_request_view_form" model="ir.ui.view">-->
+<!--            <field name="name">all.hr.permission.request.form</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="priority">20</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="All Permission Request">-->
+<!--                    <header>-->
+<!--                        <button string="Confirm Request" type="object"-->
+<!--                            name="confirm_permission_request"-->
+<!--                            confirm="¿Está seguro que desea confirmar esta solicitud de permiso?"-->
+<!--                            attrs="{'invisible': [('state', '!=', 'draft')]}"/>-->
+<!--                        <button string="Cancel Request" type="object"-->
+<!--                            name="cancel_permission_request"-->
+<!--                            confirm="¿Está seguro que desea cancelar esta solicitud de permiso?"-->
+<!--                            attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="employee_requests_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="permission_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="date_from" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="date_to" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+<!--                                <field name="state"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="commentary"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="justification_attachment_id" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="many2many_binary" class="oe_inline"/>-->
+<!--                        </group>-->
+<!--                        <notebook>-->
+<!--                            <page string="Tracing">-->
+<!--                                <field-->
+<!--                                    name="notification_ids"-->
+<!--                                    nolabel="1">-->
+<!--                                    <tree>-->
+<!--                                        <field name="level"/>-->
+<!--                                        <field name="employee_approve_id"/>-->
+<!--                                        <field name="state"/>-->
+<!--                                        <field name="commentary"/>-->
+<!--                                    </tree>-->
+<!--                                </field>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_request_view_search" model="ir.ui.view">-->
+<!--            <field name="name">all.hr.permission.request.search</field>-->
+<!--            <field name="model">hr.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <field name="department_employee_requests_id"/>-->
+<!--                    <field name="employee_requests_id"/>-->
+<!--                    <field name="permission_type_id"/>-->
+<!--                    <field name="state" />-->
+
+<!--                    <filter name="filter_draft" string="Draft" domain="[('state', '=','draft')]" />-->
+<!--                    <filter name="filter_pending" string="Pendiente" domain="[('state', '=','pending')]" />-->
+<!--                    <filter name="filter_cancelled" string="Cancelled" domain="[('state', '=','cancelled')]" />-->
+<!--                    <filter name="filter_approved" string="Aprabado" domain="[('state', '=','approved')]" />-->
+<!--                    <filter name="filter_rejected" string="Rechazado" domain="[('state', '=','rejected')]" />-->
+
+<!--                    <group expand="0" name="group_by" string="Group By">-->
+<!--                        <filter name="group_department_employee_requests_id" string="Department" context="{'group_by' : 'department_employee_requests_id'}" />-->
+<!--                        <filter name="group_employee_requests_id" string="Employee" context="{'group_by' : 'employee_requests_id'}" />-->
+<!--                        <filter name="group_permission_type_id" string="Type" context="{'group_by' : 'permission_type_id'}" />-->
+<!--                        <filter name="group_state" string="State" context="{'group_by' : 'state'}" />-->
+<!--                      </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record model="ir.actions.act_window" id="permission_request_action_all">-->
+<!--            <field name="name">All Permission Request</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.permission.request</field>-->
+<!--            -->
+<!--            <field name="view_mode">calendar,kanban,tree,form</field>-->
+<!--            <field name="domain">[]</field>-->
+<!--            <field name="search_view_id" ref="all_hr_permission_request_view_search"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_group_department_employee_requests_id": 1,-->
+<!--                "search_default_group_employee_requests_id": 1,-->
+<!--                "search_default_group_permission_type_id": 1,-->
+<!--                "search_default_group_state": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_smiling_face">All Permission Request.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_all_view_calendar" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="1"/>-->
+<!--            <field name="view_mode">calendar</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_all"/>-->
+<!--            <field name="view_id" ref="all_hr_permission_request_view_calendar"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_all_view_kanban" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="all_hr_permission_request_view_kanban"/>-->
+<!--            <field name="act_window_id" ref="permission_request_action_all"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_all_view_tree" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="3"/>-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_all"/>-->
+<!--            <field name="view_id" ref="all_hr_permission_request_view_tree"/>-->
+<!--        </record>-->
+<!--        <record id="permission_request_action_all_view_form" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="4"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="act_window_id" ref="permission_request_action_all"/>-->
+<!--            <field name="view_id" ref="all_hr_permission_request_view_form"/>-->
+<!--        </record>-->
+        <!--All Permission Request-->
+
+        <!--Notification Employee-->
+<!--        <record id="view_reject_notification_permission_request" model="ir.ui.view">-->
+<!--            <field name="name">hr.reject.notification.permission.request.form</field>-->
+<!--            <field name="model">hr.reject.notification.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Reject Notification Permission Request">-->
+<!--                    <group>-->
+<!--                        <field name="actual_notification" invisible="1"/>-->
+<!--                        <field name="commentary"/>-->
+<!--                    </group>-->
+<!--                    <footer>-->
+<!--                        <button name="action_reject" string="Reject" type="object" class="btn-primary"/>-->
+<!--                        <button string="Cancel" class="btn-secondary" special="cancel"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="action_reject_notification_permission_request" model="ir.actions.act_window">-->
+<!--            <field name="name">Reject Notification Permission Request</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.reject.notification.permission.request</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_reject_notification_permission_request"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+<!--        <record id="hr_permission_notification_employee_search_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.notification.employee.execution.search</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <field name="state" />-->
+<!--                    <field name="employee_permission_request_id" />-->
+
+<!--                    <filter name="filter_pending" string="Pendiente" domain="[('state', '=','pending')]" />-->
+<!--                    <filter name="filter_cancelled" string="Cancelled" domain="[('state', '=','cancelled')]" />-->
+<!--                    <filter name="filter_reassigned" string="Reasignado" domain="[('state', '=','reassigned')]" />-->
+<!--                    <filter name="filter_approved" string="Aprabado" domain="[('state', '=','approved')]" />-->
+<!--                    <filter name="filter_rejected" string="Rechazado" domain="[('state', '=','rejected')]" />-->
+
+<!--                    <group expand="0" name="group_by" string="Group By">-->
+<!--                        <filter name="group_employee_permission_request" string="Employee Permission Request" context="{'group_by' : 'employee_permission_request_id'}" />-->
+<!--                      </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_calendar_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.calendar</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <calendar string="Permission Request" date_start="date_from_permission_request" date_stop="date_to_permission_request" mode="month" quick_add="False" color="employee_permission_request_id">-->
+<!--                    <field name="display_name"/>-->
+<!--                </calendar>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_kanban_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.kanban</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <kanban class="o_kanban_mobile">-->
+<!--                    <field name="employee_permission_request_id"/>-->
+<!--                    <field name="date_from_permission_request"/>-->
+<!--                    <field name="date_to_permission_request"/>-->
+<!--                    <field name="level" />-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                    <templates>-->
+<!--                        <t t-name="kanban-box">-->
+<!--                            <div class="oe_kanban_global_click container">-->
+<!--                                <div class="row no-gutters">-->
+<!--                                    <div class="col-2">-->
+<!--                                        <img t-att-src="kanban_image('hr.employee', 'image_small', record.employee_permission_request_id.raw_value)"-->
+<!--                                            t-att-title="record.employee_permission_request_id.value"-->
+<!--                                            t-att-alt="record.employee_permission_request_id.value"-->
+<!--                                            width="40" height="40"-->
+<!--                                            class="oe_kanban_avatar float-left mr4 col-md-"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-10">-->
+<!--                                        <strong class="o_kanban_record_title"><t t-esc="record.employee_permission_request_id.value"/></strong>-->
+<!--                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">-->
+<!--                                            <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Opciones">-->
+<!--                                                <span class="fa fa-ellipsis-v"/>-->
+<!--                                            </a>-->
+<!--                                            <div class="dropdown-menu" role="menu">-->
+
+<!--                                                <a t-if="record.state.raw_value == 'pending'" name="approve_permission" type="object"-->
+<!--                                                    role="menuitem" class="dropdown-item">Approve</a>-->
+
+<!--                                                <a t-if="record.state.raw_value == 'pending'" name="reject_permission" type="object"-->
+<!--                                                    role="menuitem" class="dropdown-item">Reject</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="row no-gutters justify-content-end">-->
+<!--                                    <div class="col-4"><span class="text-muted">Inicio:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.date_from_permission_request.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Fin:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.date_to_permission_request.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Nivel:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.level.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Estado:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.state.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Comentario:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.commentary.value"/></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </templates>-->
+<!--                </kanban>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.tree</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree create="false" delete="false">-->
+<!--                    <field name="employee_permission_request_id"/>-->
+<!--                    <field name="date_from_permission_request"/>-->
+<!--                    <field name="date_to_permission_request"/>-->
+<!--                    <field name="level" />-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_notification_employee_execution_form_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.form</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Notification by Employee." create="false" edit="false" delete="false">-->
+<!--                    <header>-->
+<!--                        <button string="Approve" type="object"-->
+<!--                                name="approve_permission"-->
+<!--                                confirm="¿Está seguro que desea aprobar esta solicitud de permiso?"-->
+<!--                                attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                        <button name="%(hr_dr_permissions.action_reject_notification_permission_request)d" string="Reject"-->
+<!--                            type="action"-->
+<!--                            attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group string="Datos del Permiso">-->
+<!--                                <field name="employee_permission_request_id"/>-->
+<!--                                <field name="date_from_permission_request"/>-->
+<!--                                <field name="date_to_permission_request"/>-->
+<!--                                <field name="type"/>-->
+<!--                            </group>-->
+<!--                            <group string="Datos de la Notificación">-->
+<!--                                <field name="parent_id" attrs="{'invisible': [('parent_id', '=', False)]}"/>-->
+<!--                                <field name="level" />-->
+<!--                                <field name="send" />-->
+<!--                                <field name="state"/>-->
+<!--                                <field name="commentary"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="request_for_approve_permission_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Notification Employee</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.permission.notification.employee</field>-->
+<!--            <field name="view_mode">calendar,kanban,tree,form</field>-->
+<!--            -->
+<!--            <field name="domain">[('send', '=',True),('user_employee_approve_id', '=',uid)]</field>-->
+<!--            <field name="search_view_id" ref="hr_permission_notification_employee_search_view"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_filter_pending": 1,-->
+<!--                "search_default_group_employee_permission_request": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="o_view_nocontent_smiling_face">-->
+<!--                    Notification by Employee.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    Notification by Employee.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_view_calendar" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="1"/>-->
+<!--            <field name="view_mode">calendar</field>-->
+<!--            <field name="view_id" ref="hr_permission_notification_employee_calendar_view"/>-->
+<!--            <field name="act_window_id" ref="request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_view_kanban" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="hr_permission_notification_employee_kanban_view"/>-->
+<!--            <field name="act_window_id" ref="request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_view_tree" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="3"/>-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="view_id" ref="hr_permission_notification_employee_tree_view"/>-->
+<!--            <field name="act_window_id" ref="request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="hr_permission_notification_employee_view_form" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="4"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="hr_notification_employee_execution_form_view"/>-->
+<!--            <field name="act_window_id" ref="request_for_approve_permission_action"/>-->
+<!--        </record>-->
+        <!--Notification Employee-->
+
+        <!--All Notification-->
+<!--        <record id="view_reasign_notification_permission_request" model="ir.ui.view">-->
+<!--            <field name="name">hr.reasign.notification.permission.request.form</field>-->
+<!--            <field name="model">hr.reasign.notification.permission.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Reasign Notification Permission Request">-->
+<!--                    <group>-->
+<!--                        <group string="Current Approving Employee">-->
+<!--                            <field name="actual_notification" invisible="1"/>-->
+<!--                            <field name="employee_approve_id"/>-->
+<!--                        </group>-->
+<!--                        <group string="New Approving Employee">-->
+<!--                            <field name="new_employee_approve_id" />-->
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                    <footer>-->
+<!--                        <button name="action_reasign" string="Reasign" type="object" class="btn-primary"/>-->
+<!--                        <button string="Cancel" class="btn-secondary" special="cancel"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="action_reasign_notification_permission_request" model="ir.actions.act_window">-->
+<!--            <field name="name">Reassigned Notification Permission Request</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.reasign.notification.permission.request</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_reasign_notification_permission_request"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+<!--        <record id="all_hr_permission_notification_employee_search_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.notification.employee.execution.search</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <field name="employee_approve_id" />-->
+<!--                    <field name="state" />-->
+<!--                    <field name="employee_permission_request_id" />-->
+
+<!--                    <filter name="filter_pending" string="Pendiente" domain="[('state', '=','pending')]" />-->
+<!--                    <filter name="filter_cancelled" string="Cancelled" domain="[('state', '=','cancelled')]" />-->
+<!--                    <filter name="filter_reassigned" string="Reasignado" domain="[('state', '=','reassigned')]" />-->
+<!--                    <filter name="filter_approved" string="Aprabado" domain="[('state', '=','approved')]" />-->
+<!--                    <filter name="filter_rejected" string="Rechazado" domain="[('state', '=','rejected')]" />-->
+
+<!--                    <group expand="0" name="group_by" string="Group By">-->
+<!--                        <filter name="group_employee_approve_permission_request" string="Employee Approve Permission Request" context="{'group_by' : 'employee_approve_id'}" />-->
+<!--                        <filter name="group_state" string="State" context="{'group_by' : 'state'}" />-->
+<!--                        <filter name="group_employee_permission_request" string="Employee Permission Request" context="{'group_by' : 'employee_permission_request_id'}" />-->
+<!--                      </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_calendar_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.calendar</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <calendar string="Permission Request" date_start="date_from_permission_request" date_stop="date_to_permission_request" mode="month" quick_add="False" color="employee_permission_request_id">-->
+<!--                    <field name="display_name"/>-->
+<!--                </calendar>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_kanban_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.kanban</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <kanban class="o_kanban_mobile">-->
+<!--                    <field name="employee_permission_request_id"/>-->
+<!--                    <field name="date_from_permission_request"/>-->
+<!--                    <field name="date_to_permission_request"/>-->
+<!--                    <field name="employee_approve_id"/>-->
+<!--                    <field name="level" />-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                    <templates>-->
+<!--                        <t t-name="kanban-box">-->
+<!--                            <div class="oe_kanban_global_click container">-->
+<!--                                <div class="row no-gutters">-->
+<!--                                    <div class="col-2">-->
+<!--                                        <img t-att-src="kanban_image('hr.employee', 'image_small', record.employee_permission_request_id.raw_value)"-->
+<!--                                            t-att-title="record.employee_permission_request_id.value"-->
+<!--                                            t-att-alt="record.employee_permission_request_id.value"-->
+<!--                                            width="40" height="40"-->
+<!--                                            class="oe_kanban_avatar float-left mr4 col-md-"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-10">-->
+<!--                                        <strong class="o_kanban_record_title"><t t-esc="record.employee_permission_request_id.value"/></strong>-->
+<!--                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">-->
+<!--                                            <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Opciones">-->
+<!--                                                <span class="fa fa-ellipsis-v"/>-->
+<!--                                            </a>-->
+<!--                                            <div class="dropdown-menu" role="menu">-->
+
+<!--                                                <a t-if="record.state.raw_value == 'pending'" name="approve_permission" type="object"-->
+<!--                                                    role="menuitem" class="dropdown-item">Approve</a>-->
+
+<!--                                                <a t-if="record.state.raw_value == 'pending'" name="reject_permission" type="object"-->
+<!--                                                    role="menuitem" class="dropdown-item">Reject</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="row no-gutters justify-content-end">-->
+<!--                                    <div class="col-4"><span class="text-muted">Inicio:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.date_from_permission_request.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Fin:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.date_to_permission_request.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Responsable:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.employee_approve_id.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Nivel:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.level.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Estado:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.state.value"/></div>-->
+<!--                                    <div class="w-100"></div>-->
+<!--                                    <div class="col-4"><span class="text-muted">Comentario:</span></div>-->
+<!--                                    <div class="col-8"><t t-esc="record.commentary.value"/></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </templates>-->
+<!--                </kanban>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.tree</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree create="false" delete="false">-->
+<!--                    <field name="employee_permission_request_id"/>-->
+<!--                    <field name="date_from_permission_request"/>-->
+<!--                    <field name="date_to_permission_request"/>-->
+<!--                    <field name="employee_approve_id"/>-->
+<!--                    <field name="level" />-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="commentary"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_notification_employee_execution_form_view" model="ir.ui.view">-->
+<!--            <field name="name">hr.permission.notification.employee.form</field>-->
+<!--            <field name="model">hr.permission.notification.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="All Notification." create="false" edit="false" delete="false">-->
+<!--                    <header>-->
+<!--                        <button string="Approve" type="object"-->
+<!--                            name="approve_permission"-->
+<!--                            confirm="¿Está seguro que desea aprobar esta solicitud de permiso?"-->
+<!--                            attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                        <button name="%(hr_dr_permissions.action_reject_notification_permission_request)d" string="Reject"-->
+<!--                        type="action"-->
+<!--                        attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                        <button name="%(hr_dr_permissions.action_reasign_notification_permission_request)d" string="Reasign"-->
+<!--                            type="action"-->
+<!--                            help="Reasign notification permission request."-->
+<!--                            attrs="{'invisible': [('state', '!=', 'pending')]}"/>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group string="Datos del Permiso">-->
+<!--                                <field name="employee_permission_request_id"/>-->
+<!--                                <field name="date_from_permission_request"/>-->
+<!--                                <field name="date_to_permission_request"/>-->
+<!--                                <field name="type"/>-->
+<!--                            </group>-->
+<!--                            <group string="Datos de la Notificación">-->
+<!--                                <field name="parent_id" attrs="{'invisible': [('parent_id', '=', False)]}"/>-->
+<!--                                <field name="employee_approve_id"/>-->
+<!--                                <field name="level" />-->
+<!--                                <field name="send"/>-->
+<!--                                <field name="state"/>-->
+<!--                                <field name="commentary"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="all_request_for_approve_permission_action" model="ir.actions.act_window">-->
+<!--            <field name="name">All Notification</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">hr.permission.notification.employee</field>-->
+<!--            <field name="view_mode">calendar,kanban,tree,form</field>-->
+<!--            -->
+<!--            <field name="domain">[]</field>-->
+<!--            <field name="search_view_id" ref="all_hr_permission_notification_employee_search_view"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_group_employee_approve_permission_request": 1,-->
+<!--                "search_default_group_state": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="o_view_nocontent_smiling_face">-->
+<!--                    All Notification.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    All Notification.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_view_calendar" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="1"/>-->
+<!--            <field name="view_mode">calendar</field>-->
+<!--            <field name="view_id" ref="all_hr_permission_notification_employee_calendar_view"/>-->
+<!--            <field name="act_window_id" ref="all_request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_view_kanban" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="all_hr_permission_notification_employee_kanban_view"/>-->
+<!--            <field name="act_window_id" ref="all_request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_view_tree" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="3"/>-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="view_id" ref="all_hr_permission_notification_employee_tree_view"/>-->
+<!--            <field name="act_window_id" ref="all_request_for_approve_permission_action"/>-->
+<!--        </record>-->
+<!--        <record id="all_hr_permission_notification_employee_view_form" model="ir.actions.act_window.view">-->
+<!--            <field name="sequence" eval="4"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="all_hr_notification_employee_execution_form_view"/>-->
+<!--            <field name="act_window_id" ref="all_request_for_approve_permission_action"/>-->
+<!--        </record>-->
+        <!--All Notification-->
+
+
+
+
+
+        <!--Nomenclador por Tipo de Permiso y Normativa-->
+<!--        <record model="ir.ui.view" id="nomenclature_by_type_of_permission_and_normative_list">-->
+<!--              <field name="name">Nomenclador por Tipo de Permiso y Normativa List</field>-->
+<!--              <field name="model">hr.normative.nomenclature.permission.type</field>-->
+<!--              <field name="arch" type="xml">-->
+<!--                  <tree>-->
+<!--                      <field name="normative_id"/>-->
+<!--                      <field name="permission_type_id"/>-->
+<!--                      <field name="nomenclature_id"/>-->
+<!--                      <field name="valid_from"/>-->
+<!--                      <field name="valid_to"/>-->
+<!--                      <field name="current" readonly = '1'/>-->
+<!--                      <field name="boolean_value1"/>-->
+<!--                      <field name="integer_value2"/>-->
+<!--                      <field name="float_value3"/>-->
+<!--                      <field name="char_value4"/>-->
+<!--                      <field name="date_value5"/>-->
+<!--                  </tree>-->
+<!--              </field>-->
+<!--        </record>-->
+<!--        <record model="ir.ui.view" id="nomenclature_by_type_of_permission_and_normative_search">-->
+<!--            <field name="name">Nomenclador por Tipo de Permiso y Normativa Search</field>-->
+<!--            <field name="model">hr.normative.nomenclature.permission.type</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="normative_id"/>-->
+<!--                <field name="permission_type_id"/>-->
+<!--                <field name="nomenclature_id"/>-->
+<!--                <field name="boolean_value1"/>-->
+<!--                <field name="integer_value2"/>-->
+<!--                <field name="float_value3"/>-->
+<!--                <field name="char_value4"/>-->
+<!--                <field name="date_value5"/>-->
+<!--                <field name="valid_from"/>-->
+<!--                <field name="valid_to"/>-->
+<!--                <field name="current"/>-->
+
+<!--                <filter name="filter_current" string="current" domain="[('current', '=',True)]" />-->
+
+<!--                <group expand="0" name="group_by" string="Group By">-->
+<!--                    <filter name="group_normative_id" string="Normative" context="{'group_by' : 'normative_id'}" />-->
+<!--                    <filter name="group_permission_type_id" string="Permission Type" context="{'group_by' : 'permission_type_id'}" />-->
+<!--                    <filter name="group_nomenclature_id" string="Nomenclature" context="{'group_by' : 'nomenclature_id'}" />-->
+<!--                    <filter name="group_current" string="Active" context="{'group_by' : 'current'}" />-->
+<!--                </group>-->
+<!--            </search>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.ui.view" id="nomenclature_by_type_of_permission_and_normative_form">-->
+<!--            <field name="name">Nomenclador por Tipo de Permiso y Normativa Form</field>-->
+<!--            <field name="model">hr.normative.nomenclature.permission.type</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="normative_id" domain = "[('active', '=', True)]"/>-->
+<!--                                <field name="permission_type_id" domain = "[('normative_ids', 'in', [normative_id]),('active', '=', True)]"/>-->
+<!--                                <field name="nomenclature_id" domain = "[('active', '=', True)]"/>-->
+<!--                                <field name="current" readonly = '1'/>-->
+<!--                            </group>-->
+
+<!--                            <group>-->
+<!--                                <field name="valid_from"/>-->
+<!--                                <field name="valid_to"/>-->
+<!--                                <field name="nomenclature_id_data_type" invisible = "1"/>-->
+
+<!--                                <field name="boolean_value1" attrs="{'invisible': [('nomenclature_id_data_type','!=','1')], 'required': [('nomenclature_id_data_type','=','1')]}"/>-->
+<!--                                <field name="integer_value2" attrs="{'invisible': [('nomenclature_id_data_type','!=','2')], 'required': [('nomenclature_id_data_type','=','2')]}"/>-->
+<!--                                <field name="float_value3" attrs="{'invisible': [('nomenclature_id_data_type','!=','3')], 'required': [('nomenclature_id_data_type','=','3')]}"/>-->
+<!--                                <field name="char_value4" attrs="{'invisible': [('nomenclature_id_data_type','!=','4')], 'required': [('nomenclature_id_data_type','=','4')]}"/>-->
+<!--                                <field name="date_value5" attrs="{'invisible': [('nomenclature_id_data_type','!=','5')], 'required': [('nomenclature_id_data_type','=','5')]}"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.actions.act_window" id="nomenclature_by_type_of_permission_and_normative_list_action">-->
+<!--            <field name="name">Nomenclador por Tipo de Permiso y Normativa</field>-->
+<!--            <field name="res_model">hr.normative.nomenclature.permission.type</field>-->
+<!--            -->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="search_view_id" ref="nomenclature_by_type_of_permission_and_normative_search"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_filter_current": 1,-->
+<!--                "search_default_group_normative_id": 1,-->
+<!--                "search_default_group_permission_type_id": 1,-->
+<!--                "search_default_group_nomenclature_id": 1,-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_smiling_face">Vincula los tipos de permisos con las normativas y establece el valor del nomenclador.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+        <!--Nomenclador por Tipo de Permiso y Normativa-->
+
+        <!--Orden de Notificaciones por Tipo de Permiso y Colaborador-->
+<!--        <record model="ir.ui.view" id="order_of_notifications_by_type_of_permission_and_employee_list">-->
+<!--              <field name="name">Orden de Notificaciones por Tipo de Permiso y Colaborador List</field>-->
+<!--              <field name="model">hr.n.permission.type.employee</field>-->
+<!--              <field name="arch" type="xml">-->
+<!--                  <tree>-->
+<!--                      <field name="employee_requests_id"/>-->
+<!--                      <field name="permission_type_id"/>-->
+<!--                      <field name="employee_approve_id"/>-->
+<!--                      <field name="level"/>-->
+<!--                  </tree>-->
+<!--              </field>-->
+<!--          </record>-->
+<!--        <record model="ir.ui.view" id="order_of_notifications_by_type_of_permission_and_employee_search">-->
+<!--            <field name="name">Orden de Notificaciones por Tipo de Permiso y Colaborador Search</field>-->
+<!--            <field name="model">hr.n.permission.type.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <field name="employee_requests_id"/>-->
+<!--                    <field name="permission_type_id"/>-->
+<!--                    <field name="employee_approve_id"/>-->
+
+<!--                    <group expand="0" name="group_by" string="Group By">-->
+<!--                        <filter name="group_permission_type_id" string="Type" context="{'group_by' : 'permission_type_id'}" />-->
+<!--                        <filter name="group_employee_requests_id" string="Employee Requests" context="{'group_by' : 'employee_requests_id'}" />-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.ui.view" id="notifications_by_type_of_permission_and_employee_form">-->
+<!--            <field name="name">Orden de Notificaciones por Tipo de Permiso y Colaborador Form</field>-->
+<!--            <field name="model">hr.n.permission.type.employee</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            <field name="employee_requests_id"/>-->
+<!--                            <field name="permission_type_id"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="employee_approve_id"/>-->
+<!--                            <field name="level"/>-->
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.actions.act_window" id="order_of_notifications_by_type_of_permission_and_employee_list_action">-->
+<!--            <field name="name">Orden de Notificaciones por Tipo de Permiso y Colaborador</field>-->
+<!--            <field name="res_model">hr.n.permission.type.employee</field>-->
+<!--            -->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="search_view_id" ref="order_of_notifications_by_type_of_permission_and_employee_search"/>-->
+<!--            <field name="context">{-->
+<!--                "search_default_group_permission_type_id": 1,-->
+<!--                "search_default_group_employee_requests_id": 1-->
+<!--                }</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_smiling_face">Crea el orden de aprobación por tipo de permiso y colaborador.-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+        <!--Orden de Notificaciones por Tipo de Permiso y Colaborador-->
+
+
+
+
+    </data>
+</odoo>

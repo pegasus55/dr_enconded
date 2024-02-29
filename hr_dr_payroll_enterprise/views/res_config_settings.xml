@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_config_settings_view_form_inherit">
+            <field name="name">res.config.settings.view.form.payroll</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr_payroll.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='hr_payroll_accountant']" position="after">
+
+                    <h2>Payment tenths</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_tenth_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Payment tenth notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_tenth_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('payment_tenth_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_tenth_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of payment tenth.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_tenth_administrator" attrs="{'required': [('payment_tenth_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('payment_tenth_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_tenth_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of payment tenth.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_tenth_second_administrator" attrs="{'required': [('payment_tenth_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Payment utility</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_utility_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Payment utility notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_utility_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('payment_utility_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_utility_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of payment utility.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_utility_administrator" attrs="{'required': [('payment_utility_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('payment_utility_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="payment_utility_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of payment utility.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="payment_utility_second_administrator" attrs="{'required': [('payment_utility_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="profit_calculation_based_on"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Profit calculation based on.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="profit_calculation_based_on"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="include_external_services_in_csv_file"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Include external services personnel in the utility legalization file.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="include_external_services_in_csv_file"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Pay living wage</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="pay_living_wage_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Pay living wage notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="pay_living_wage_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pay_living_wage_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="pay_living_wage_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of pay living wage.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="pay_living_wage_administrator" attrs="{'required': [('pay_living_wage_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pay_living_wage_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="pay_living_wage_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of pay living wage.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="pay_living_wage_second_administrator" attrs="{'required': [('pay_living_wage_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Retired collaborator salary</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_salary_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Retired collaborator salary notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_salary_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_salary_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_salary_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of retired collaborator salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_salary_administrator" attrs="{'required': [('retired_employee_salary_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_salary_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_salary_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of retired collaborator salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_salary_second_administrator" attrs="{'required': [('retired_employee_salary_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Retired collaborator thirteenth salary</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_thirteenth_salary_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Retired collaborator thirteenth salary notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_thirteenth_salary_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_thirteenth_salary_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_thirteenth_salary_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of retired collaborator thirteenth salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_thirteenth_salary_administrator" attrs="{'required': [('retired_employee_thirteenth_salary_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_thirteenth_salary_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_thirteenth_salary_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of retired collaborator thirteenth salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_thirteenth_salary_second_administrator" attrs="{'required': [('retired_employee_thirteenth_salary_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Retired collaborator fourteenth salary</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_fourteenth_salary_notifications_mode"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Retired collaborator fourteenth salary notifications mode.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_fourteenth_salary_notifications_mode" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_fourteenth_salary_notifications_mode', 'in', ['Without_notifications','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_fourteenth_salary_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        First administrator for approval / rejection of retired collaborator fourteenth salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_fourteenth_salary_administrator" attrs="{'required': [('retired_employee_fourteenth_salary_notifications_mode', 'in', ['Administrator','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator','One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('retired_employee_fourteenth_salary_notifications_mode', 'in', ['Without_notifications','Administrator','One_level_bd','One_level_br','One_level_bc','Two_levels_bd','All_levels_bd','Personalized','One_level_bd_and_administrator','One_level_br_and_administrator','One_level_bc_and_administrator','Two_levels_bd_and_administrator','All_levels_bd_and_administrator'])]}">
+                            <div class="o_setting_right_pane">
+                                <label for="retired_employee_fourteenth_salary_second_administrator"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Second administrator for approval / rejection of retired collaborator fourteenth salary.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="retired_employee_fourteenth_salary_second_administrator" attrs="{'required': [('retired_employee_fourteenth_salary_notifications_mode', 'in', ['One_level_bd_and_two_administrator'])]}"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Income tax</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="percentage_for_personal_expenses"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Discount percentage for personal expenses.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="percentage_for_personal_expenses" required="True"
+                                            class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

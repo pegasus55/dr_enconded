@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_country_state_tree_inherit" model="ir.ui.view">
+            <field name="name">view_country_state_tree_inherit</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="editable"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Country state name</attribute>
+                </xpath>
+                <xpath expr="//field[@name='code']" position="attributes">
+                    <attribute name="string">Country state code</attribute>
+                </xpath>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="region"/>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="active"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_country_state_form_inherit" model="ir.ui.view">
+            <field name="name">view_country_state_form_inherit</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Country state name</attribute>
+                </xpath>
+                <xpath expr="//field[@name='code']" position="attributes">
+                    <attribute name="string">Country state code</attribute>
+                </xpath>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="region" required="1"/>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="active"/>
+                </xpath>
+                <xpath expr="//form//sheet//group" position="after">
+                    <notebook>
+                        <page string="Cities">
+                            <field name="city_ids" nolabel="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_country_state_search" model="ir.ui.view">
+            <field name="name">view_country_state_search_inherit</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="region"/>
+                </xpath>
+                <xpath expr="//filter[@name='groupby_country']" position="after">
+                    <filter name="groupby_region" string="Region" context="{'group_by': 'region'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

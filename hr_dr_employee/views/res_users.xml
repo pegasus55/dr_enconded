@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_users_view_form_profile_hr_dr_employee" model="ir.ui.view">
+            <field name="name">res_users_view_form_profile.hr_dr_employee</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="hr.res_users_view_form_profile"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page[@name='hr_settings']" position="after">
+                    <page name="health" string="Health">
+                        <group>
+                            <group string="Health" name="health">
+                                <field name="blood_type" string="Blood type"/>
+<!--                                <field name="donor" string="Donor"/>-->
+<!--                                <field name="presents_catastrophic_disease"/>-->
+                            </group>
+                            <group string="Disability" name="disability">
+<!--                                <field name="disability"/>-->
+<!--                                <field name="disability_type" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>-->
+<!--                                <field name="disability_conadis" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>-->
+<!--                                <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>-->
+<!--                                <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>-->
+                            </group>
+                        </group>
+<!--                        <notebook>-->
+<!--                            <page string="Medical Exams" name="medical_exam">-->
+<!--                                <field name="medical_exam_ids" nolabel="1">-->
+<!--                                    <tree>-->
+<!--                                        <field name="type"/>-->
+<!--                                        <field name="date"/>-->
+<!--                                        <field name="height"/>-->
+<!--                                        <field name="weight"/>-->
+<!--                                        <field name="temperature"/>-->
+<!--                                        <field name="pulse"/>-->
+<!--                                        <field name="breathing_frequency"/>-->
+<!--                                        <field name="minimum_blood_pressure"/>-->
+<!--                                        <field name="maximum_blood_pressure"/>-->
+<!--                                    </tree>-->
+<!--                                    <form>-->
+<!--                                        <sheet>-->
+<!--                                            <group>-->
+<!--                                                <field name="type"/>-->
+<!--                                                <field name="date"/>-->
+<!--                                            </group>-->
+<!--                                            <group>-->
+<!--                                                <group string='General'>-->
+<!--                                                    <field name="height"/>-->
+<!--                                                    <field name="weight"/>-->
+<!--                                                </group>-->
+<!--                                                <group string='Vital signs'>-->
+<!--                                                    <field name="temperature"/>-->
+<!--                                                    <field name="pulse"/>-->
+<!--                                                    <field name="breathing_frequency"/>-->
+<!--                                                </group>-->
+<!--                                                <group string='Blood pressure'>-->
+<!--                                                    <field name="minimum_blood_pressure"/>-->
+<!--                                                    <field name="maximum_blood_pressure"/>-->
+<!--                                                </group>-->
+<!--                                            </group>-->
+<!--                                            <notebook>-->
+<!--                                                <page string="Results">-->
+<!--                                                    <field name="backup_document" widget="many2many_binary" class="oe_inline"/>-->
+<!--                                                </page>-->
+<!--                                            </notebook>-->
+<!--                                        </sheet>-->
+<!--                                    </form>-->
+<!--                                </field>-->
+<!--                            </page>-->
+<!--                            <page string="Catastrophic Diseases" name="catastrophic_disease" attrs="{'invisible': [('presents_catastrophic_disease','=',False)]}">-->
+<!--                                <field name="catastrophic_disease_ids" nolabel="1">-->
+<!--                                    <tree>-->
+<!--                                        <field name="name"/>-->
+<!--                                        <field name="code"/>-->
+<!--                                        <field name="description"/>-->
+<!--                                    </tree>-->
+<!--                                    <form>-->
+<!--                                        <sheet>-->
+<!--                                            <group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="name"/>-->
+<!--                                                </group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="code"/>-->
+<!--                                                </group>-->
+<!--                                            </group>-->
+<!--                                            <group>-->
+<!--                                                <field name="description"/>-->
+<!--                                            </group>-->
+<!--                                        </sheet>-->
+<!--                                    </form>-->
+<!--                                </field>-->
+<!--                            </page>-->
+<!--                            <page string="Allergies" name="allergies">-->
+<!--                                <field name="allergies_ids" nolabel="1">-->
+<!--                                    <tree>-->
+<!--                                        <field name="name"/>-->
+<!--                                        <field name="description"/>-->
+<!--                                    </tree>-->
+<!--                                    <form>-->
+<!--                                        <sheet>-->
+<!--                                            <group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="name"/>-->
+<!--                                                </group>-->
+<!--                                                <group>-->
+<!--                                                    <field name="description"/>-->
+<!--                                                </group>-->
+<!--                                            </group>-->
+<!--                                        </sheet>-->
+<!--                                    </form>-->
+<!--                                </field>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+                    </page>
+                    <page name="family_load" string="Family Loads">
+                        <separator string="Family loads"/>
+                        <field name="family_load_ids" attrs="{'readonly': [('can_edit', '=', False)]}">
+                            <tree>
+                                <field name="employee_id" invisible="1"/>
+                                <field name="address_home_id_country_id" invisible="1"/>
+                                <field name="name"/>
+                                <field name="id_type"/>
+                                <field name="identification"/>
+                                <field name="relationship"/>
+                                <field name="date_of_birth"/>
+                                <field name="age"/>
+                                <field name="disability"/>
+                                <field name="insured"/>
+                                <field name="receive_taxed_income"/>
+                                <field name="employee_dependent"/>
+                                <field name="presents_catastrophic_diseases"/>
+                            </tree>
+                            <form string="Family load">
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="employee_id" invisible="1" readonly="1"/>
+                                            <field name="address_home_id_country_id" invisible="1"/>
+                                            <field name="name"/>
+                                            <field name="id_type"/>
+                                            <field name="identification"/>
+                                            <field name="relationship"/>
+                                            <field name="date_of_birth" attrs="{'required': [('relationship','in',['children','daughter','son'])]}"/>
+                                            <field name="age"/>
+                                            <field name="phone"/>
+                                            <field name="address"/>
+                                        </group>
+                                        <group>
+                                            <field name="disability"/>
+                                            <field name="disability_conadis" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                            <field name="disability_percentage" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                            <field name="disability_description" attrs="{'invisible': [('disability','=',False)],'required': [('disability','=',True)]}"/>
+                                            <field name="insured"/>
+                                            <field name="receive_taxed_income"/>
+                                            <field name="employee_dependent"/>
+                                            <field name="presents_catastrophic_diseases"/>
+                                            <field name="active"/>
+                                        </group>
+                                    </group>
+                                    <notebook>
+                                        <page name="backup_document" string="Backup Documents">
+                                            <field name="backup_document" widget="many2many_binary"/>
+                                        </page>
+                                    </notebook>
+                                </sheet>
+                            </form>
+                        </field>
+
+                        <separator string="Judicial withholdings"/>
+                        <field name="judicial_withholding_ids" attrs="{'readonly': [('can_edit', '=', False)]}" context="{'default_employee_id': active_id}">
+                            <tree>
+                                <field name="employee_id" invisible="1"/>
+                                <field name="family_load_id"/>
+                                <field name="card_code"/>
+                                <field name="judicial_process_number"/>
+                                <field name="approval_identifier"/>
+                                <field name="value" widget='monetary'/>
+                                <field name="partner_id"/>
+                                <field name="representative_name"/>
+                                <field name="representative_identification"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                                <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                            </tree>
+                            <form string="Judicial withholding">
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="employee_id" invisible="1" readonly="1"/>
+                                            <field name="family_load_id"/>
+                                            <field name="card_code"/>
+                                            <field name="judicial_process_number"/>
+                                            <field name="approval_identifier"/>
+                                            <field name="value" widget='monetary'/>
+                                        </group>
+                                        <group>
+                                            <field name="partner_id"/>
+                                            <field name="representative_name"/>
+                                            <field name="representative_identification"/>
+                                            <field name="backup_document"/>
+                                            <field name="active"/>
+                                            <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create_edit': True}"/>
+                                            <field name="currency_id" groups="base.group_multi_currency" options="{'no_open': True, 'no_create_edit': True}"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

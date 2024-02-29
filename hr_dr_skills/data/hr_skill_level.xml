@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_skill_level_a1" model="hr.skill.level">
+            <field name="name">A1 - Principiante</field>
+            <field name="level_progress">10</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_a2" model="hr.skill.level">
+            <field name="name">A2 - Elemental</field>
+            <field name="level_progress">40</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_b1" model="hr.skill.level">
+            <field name="name">B1 - Intermedio básico</field>
+            <field name="level_progress">60</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_b2" model="hr.skill.level">
+            <field name="name">B2 - Intermedio</field>
+            <field name="level_progress">75</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_c1" model="hr.skill.level">
+            <field name="name">C1 - Intermedio avanzado</field>
+            <field name="level_progress">85</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_c2" model="hr.skill.level">
+            <field name="name">C2 - Profesional</field>
+            <field name="level_progress">100</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+    </data>
+</odoo>

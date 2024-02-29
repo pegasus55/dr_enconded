@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <record id="view_hr_employee_company_history_form" model="ir.ui.view">
+            <field name="name">hr.employee.company.history.form</field>
+            <field name="model">hr.employee.company.history</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Company history">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="time_worked"/>
+                            </group>
+                            <group>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_employee_company_history_tree" model="ir.ui.view">
+            <field name="name">hr.employee.company.history.tree</field>
+            <field name="model">hr.employee.company.history</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Company history">
+                    <field name="employee_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="time_worked"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_hr_employee_company_history_search" model="ir.ui.view">
+            <field name="name">hr.employee.company.history.search</field>
+            <field name="model">hr.employee.company.history</field>
+            <field name="arch" type="xml">
+                <search string="Company history">
+                    <field name="employee_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <group string="Group By">
+                        <filter name="groupby_employee_id" string="Collaborator" context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr_employee_company_history_action" model="ir.actions.act_window">
+            <field name="name">Company history</field>
+            <field name="res_model">hr.employee.company.history</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_hr_employee_company_history_tree"/>
+            <field name="context">{
+                "search_default_groupby_employee_id": 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a new record to the employee's history based on their return to the company.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

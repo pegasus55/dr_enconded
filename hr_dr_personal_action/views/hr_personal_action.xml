@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+        <!--Personal action-->
+        <record model="ir.actions.act_window" id="personal_action_list_action">
+            <field name="name">Personal action</field>
+            <field name="res_model">hr.personal.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p
+                    class="oe_view_nocontent_smiling_face">Create the personal action.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="personal_action_list">
+            <field name="name">Personal action list</field>
+            <field name="model">hr.personal.action</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="number"/>
+                    <field name="date"/>
+                    <field name="personal_action_type_id"/>
+                    <field name="personal_action_subtype_id"/>
+                    <field name="employee_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="personal_action_form">
+            <field name="name">Personal action form</field>
+            <field name="model">hr.personal.action</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                                <field name="date"/>
+                                <field name="personal_action_type_id"/>
+                                <field name="personal_action_subtype_id"/>
+                                <field name="explanation"/>
+                            </group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="identification_id"/>
+                                <field name="IESS_affiliation_number"/>
+                                <field name="apply_since"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group string="Current situation">
+                                <field name="movement_c_s"/>
+                                <field name="sub_movement_c_s"/>
+                                <field name="workplace_c_s"/>
+                                <field name="job_c_s"/>
+                                <field name="remuneration_c_s"/>
+                                <field name="budget_item_c_s"/>
+                            </group>
+                            <group string="Proposed situation">
+                                <field name="movement_p_s"/>
+                                <field name="sub_movement_p_s"/>
+                                <field name="workplace_p_s"/>
+                                <field name="job_p_s"/>
+                                <field name="remuneration_p_s"/>
+                                <field name="budget_item_p_s"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--Personal action-->
+    </data>
+</odoo>

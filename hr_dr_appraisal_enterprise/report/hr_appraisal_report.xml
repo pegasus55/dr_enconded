@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_scores">
+            <t t-set="data_report_landscape" t-value="False"/>
+            <t t-set="full_width" t-value="False"/>
+            <t t-call="web.html_container">
+                <div class="header" t-att-style="report_header_style">
+                    <div class="row">
+                        <div class="col-3 mb4">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
+                        </div>
+                        <div class="col-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+                    </div>
+                    <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                        <div class="col-12">
+                            <div style="border-bottom: 1px solid black;"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" name="company_address">
+                            <div t-field="company.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <t t-foreach="docs" t-as="o">
+                    <div class="article">
+                        <div class="page mt-5">
+                            <div class="row mb-3">
+                                <h2>Appraisal Scores</h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4 text-right">Employee</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].display_name"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Department</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].department_id.name"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Position</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].job_id.name"/></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4 text-right">Date start</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['from'].strftime('%Y-%m-%d')"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Date end</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['deadline'].strftime('%Y-%m-%d')"/></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="mt-3 row"><div class="col"><h5>Scores</h5></div></div>-->
+                            <table class="mt-4 table table-sm table-borderless table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Score</th>
+                                        <th scope="col">Max score</th>
+                                    </tr>
+                                </thead>
+                                <t t-if="o['managers']['present'] or o['employee']['present'] or o['colleagues']['present'] or o['collaborators']['present']">
+                                    <t t-if="o['managers']['present']">
+                                        <tr>
+                                            <th scope="row">Managers</th>
+                                            <td></td>
+                                            <td class="text-muted"><span t-esc="o['managers']['avg']"/></td>
+                                            <td class="text-muted"><span t-esc="o['managers']['max_score']"/></td>
+                                        </tr>
+                                        <tr t-foreach="o['managers']['answers']" t-as="answer">
+                                            <td></td>
+                                            <td><span t-esc="answer['name']"/></td>
+                                            <td><span t-esc="answer['score']"/></td>
+                                            <td></td>
+
+                                            <t t-foreach="answer['eval_groups']" t-as="group">
+                                            <tr>
+                                            <t t-if="group is not None">
+                                                <td></td>
+                                                <td><small t-esc="group.name"/></td>
+                                                <td><small t-esc="round(answer['eval_groups'][group]*group.weight,2)"/></td>
+                                                <td><small t-esc="round(o['managers']['max_eval_groups'][group] * group.weight,2)"/></td>
+                                            </t>
+                                            <t t-else="">
+                                                <td></td>
+                                                <td>...</td>
+                                                <td><small t-esc="round(answer['eval_groups'][group],2)"/></td>
+                                                <td><small t-esc="round(o['managers']['max_eval_groups'][group],2)"/></td>
+                                            </t>
+                                            </tr>
+                                        </t>
+                                        </tr>
+                                    </t>
+
+                                    <t t-if="o['employee']['present']">
+                                        <tr>
+                                            <th scope="row">Employee</th>
+                                            <td></td>
+                                            <td class="text-muted"><span t-esc="o['employee']['avg']"/></td>
+                                            <td class="text-muted"><span t-esc="o['employee']['max_score']"/></td>
+                                        </tr>
+                                        <t t-foreach="o['employee']['answers']" t-as="answer">
+                                            <tr>
+                                                <td></td>
+                                                <td><span t-esc="answer['name']"/></td>
+                                                <td><span t-esc="answer['score']"/></td>
+                                                <td></td>
+                                            </tr>
+                                            <t t-foreach="answer['eval_groups']" t-as="group">
+                                                <tr>
+                                                <t t-if="group is not None">
+                                                    <td></td>
+                                                    <td><small t-esc="group.name"/></td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group]*group.weight,2)"/></td>
+                                                    <td><small t-esc="round(o['employee']['max_eval_groups'][group]*group.weight,2)"/></td>
+                                                </t>
+                                                <t t-else="">
+                                                    <td></td>
+                                                    <td>...</td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group],2)"/></td>
+                                                    <td><small t-esc="round(o['employee']['max_eval_groups'][group],2)"/></td>
+                                                </t>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </t>
+
+                                    <t t-if="o['collaborators']['present']">
+                                        <tr>
+                                            <th scope="row">Collaborators</th>
+                                            <td></td>
+                                            <td class="text-muted"><span t-esc="o['collaborators']['avg']"/></td>
+                                            <td class="text-muted"><span t-esc="o['collaborators']['max_score']"/></td>
+                                        </tr>
+                                        <tr t-foreach="o['collaborators']['answers']" t-as="answer">
+                                            <td></td>
+                                            <td><span t-esc="answer['name']"/></td>
+                                            <td><span t-esc="answer['score']"/></td>
+                                            <td></td>
+
+                                            <t t-foreach="answer['eval_groups']" t-as="group">
+                                                <tr>
+                                                <t t-if="group is not None">
+                                                    <td></td>
+                                                    <td><small t-esc="group.name"/></td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group]*group.weight,2)"/></td>
+                                                    <td><small t-esc="round(o['collaborators']['max_eval_groups'][group]*group.weight,2)"/></td>
+                                                </t>
+                                                <t t-else="">
+                                                    <td></td>
+                                                    <td>...</td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group],2)"/></td>
+                                                    <td><small t-esc="round(o['collaborators']['max_eval_groups'][group],2)"/></td>
+                                                </t>
+                                                </tr>
+                                            </t>
+                                        </tr>
+                                    </t>
+
+                                    <t t-if="o['colleagues']['present']">
+                                        <tr>
+                                            <th scope="row">Compañeros</th>
+                                            <td></td>
+                                            <td class="text-muted"><span t-esc="o['colleagues']['avg']"/></td>
+                                            <td class="text-muted"><span t-esc="o['colleagues']['max_score']"/></td>
+                                        </tr>
+                                        <tr t-foreach="o['colleagues']['answers']" t-as="answer">
+                                            <td></td>
+                                            <td><span t-esc="answer['name']"/></td>
+                                            <td><span t-esc="answer['score']"/></td>
+                                            <td></td>
+                                            <t t-foreach="answer['eval_groups']" t-as="group">
+                                                <tr>
+                                                <t t-if="group is not None">
+                                                    <td></td>
+                                                    <td><small t-esc="group.name"/></td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group]*group.weight,2)"/></td>
+                                                    <td><small t-esc="round(o['colleagues']['max_eval_groups'][group]*group.weight,2)"/></td>
+                                                </t>
+                                                <t t-else="">
+                                                    <td></td>
+                                                    <td>...</td>
+                                                    <td><small t-esc="round(answer['eval_groups'][group],2)"/></td>
+                                                    <td><small t-esc="round(o['colleagues']['max_eval_groups'][group],2)"/></td>
+                                                </t>
+                                                </tr>
+                                            </t>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <td colspan="4" class="p-4 text-center text-muted lead">There are no evaluations for this employee.</td>
+                                </t>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt32 row footer text-muted" style="page-break-inside:avoid;">
+                        <div class="col-4 offset-1 text-center">
+                            <hr/>
+                            <span t-esc="o['emp_id'].display_name"/><br/>
+                            <span>(Collaborator)</span>
+                        </div>
+                        <div class="col-4 offset-2 text-center">
+                            <hr/>
+                            <span t-esc="o['emp_id'].parent_id.display_name"/><br/>
+                            <span>(Manager)</span>
+                        </div>
+                    </div>
+                </t>
+
+                <div class="footer o_standard_footer">
+                    <div class="text-center" style="border-top: 1px solid black;">
+                        <ul class="list-inline mb4">
+                            <li t-if="company.phone" class="list-inline-item">Phone: <span t-field="company.phone"/></li>
+                            <li t-if="company.email" class="list-inline-item">Email: <span t-field="company.email"/></li>
+                            <li t-if="company.website" class="list-inline-item">Web: <span t-field="company.website"/></li>
+                            <li t-if="company.vat" class="list-inline-item"><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                        </ul>
+
+                        <div name="financial_infos">
+                            <span t-field="company.report_footer"/>
+                        </div>
+
+                        <div t-if="report_type == 'pdf'" class="text-muted">
+                            Page: <span class="page"/> / <span class="topage"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <report
+                id="action_report_scores"
+                model="hr.appraisal"
+                string="Scores"
+                report_type="qweb-html"
+                name="hr_dr_appraisal.report_scores"
+                file="hr_dr_appraisal.report_scores"
+                menu="False"
+            />
+
+        <template id="report_answers">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="oe_structure"/>
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2><span t-field="o.survey_id"/></h2>
+                                </div>
+                            </div>
+
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Page</th>
+                                        <th>Question</th>
+                                        <th>Question Line</th>
+                                        <th>Evaluation Group</th>
+                                        <th>Given Answer</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.user_input_line_ids" t-as="line">
+                                        <t t-set="has_evaluation_group" t-value="line.question_id.evaluation_group.id"/>
+                                        <t t-if="has_evaluation_group">
+                                            <t t-set="score" t-value="round(line.quizz_mark * line.question_id.evaluation_group.weight,2)"/>
+                                            <t t-set="eval_group" t-value="line.question_id.evaluation_group"/>
+                                        </t>
+                                        <t t-else="">
+                                            <t t-set="score" t-value="round(line.quizz_mark,2)"/>
+                                        </t>
+
+                                        <tr>
+                                            <td><span t-field="line.page_id"/></td>
+                                            <td><span t-field="line.question_id"/></td>
+                                            <td><span t-field="line.value_suggested_row"/></td>
+                                            <td><span t-if="has_evaluation_group" t-esc="eval_group.name"/></td>
+                                            <td><span t-field="line.value_suggested"/></td>
+                                            <td><span t-esc="score"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="5" class="text-right">Total</th>
+                                        <th><span t-field="o.quizz_score"/></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                            <t t-set="has_commitments" t-value="len(o.appraisal_id.commitment_ids) > 0"/>
+                            <t t-if="has_commitments">
+
+                                <div class="mt32 row">
+                                    <h3>Action plan</h3>
+                                </div>
+
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Accomplished</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th>End of term</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.appraisal_id.commitment_ids" t-as="commitment">
+                                            <td class="text-center">
+                                                <p t-if="commitment.accomplished" class="fa fa-check-square"/>
+                                                <p t-else="" class="fa fa-square"/>
+                                            </td>
+                                            <td><span t-field="commitment.name"/></td>
+                                            <td><span t-field="commitment.type_id"/></td>
+                                            <td><span t-field="commitment.description"/></td>
+                                            <td><span t-field="commitment.end_of_term"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </t>
+
+                            <div class="mt32 row footer text-muted" style="page-break-inside:avoid;">
+                                <div class="col-4 offset-1 text-center">
+                                    <hr/>
+                                    <span t-field="o.appraisal_id.emp_id"/><br/>
+                                    <span>(Collaborator)</span>
+                                </div>
+                                <div class="col-4 offset-2 text-center">
+                                    <hr/>
+                                    <span t-field="o.appraisal_id.emp_id.parent_id.display_name"/><br/>
+                                    <span>(Manager)</span>
+                                </div>
+                            </div>
+                            <div class="oe_structure"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <report
+                id="action_report_answers"
+                model="survey.user_input"
+                string="Answers"
+                report_type="qweb-html"
+                name="hr_dr_appraisal.report_answers"
+                file="hr_dr_appraisal.report_answers"
+                menu="False"
+            />
+
+        <template id="report_scores_by_answer">
+            <t t-set="data_report_landscape" t-value="False"/>
+            <t t-set="full_width" t-value="False"/>
+            <t t-call="web.html_container">
+                <div class="header" t-att-style="report_header_style">
+                    <div class="row">
+                        <div class="col-3 mb4">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
+                        </div>
+                        <div class="col-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+                    </div>
+                    <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                        <div class="col-12">
+                            <div style="border-bottom: 1px solid black;"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" name="company_address">
+                            <div t-field="company.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+                            />
+                        </div>
+                    </div>
+                </div>
+            <!--<t t-call="web.basic_layout">-->
+                <t t-foreach="docs" t-as="o">
+                    <div class="article">
+                        <div class="page mt-5">
+                            <div class="row mb-3">
+                                <h2>Appraisal Scores by Question</h2>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4 text-right">Employee</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].display_name"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Department</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].department_id.name"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Position</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['emp_id'].job_id.name"/></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4 text-right">Date start</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['from'].strftime('%Y-%m-%d')"/></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 text-right">Date end</div>
+                                        <div class="col-8 font-weight-light"><t t-esc="o['deadline'].strftime('%Y-%m-%d')"/></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="mt-4 table table-sm table-hover table-borderless">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th rowspan="2" class="text-center align-middle">Page</th>
+                                        <th rowspan="2" class="text-center align-middle">Question</th>
+                                        <th rowspan="2" class="text-center align-middle">Question Line</th>
+                                        <th rowspan="2" class="text-center align-middle">Evaluation Group</th>
+                                        <th colspan="6" class="text-center align-middle">Scores</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center align-middle">Managers</th>
+                                        <th class="text-center align-middle">Employee</th>
+                                        <th class="text-center align-middle">Collaborators</th>
+                                        <th class="text-center align-middle">Colleagues</th>
+                                        <th class="text-center align-middle">Average</th>
+                                        <th class="text-center align-middle">Final</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="total_score" t-value="0"/>
+                                    <t t-foreach="o['surveys'].values()" t-as="survey">
+                                        <tr><th colspan="10" class="table-active pl-4">Survey: <t t-esc="survey['title']"/></th></tr>
+                                        <t t-foreach="survey['lines'].values()" t-as="line">
+                                            <t t-set="has_evaluation_group" t-value="line['line'].question_id.evaluation_group.id"/>
+                                            <t t-set="has_manager" t-value="len(line['manager'])>0"/>
+                                            <t t-set="has_employee" t-value="len(line['employee'])>0"/>
+                                            <t t-set="has_collaborators" t-value="len(line['collaborators'])>0"/>
+                                            <t t-set="has_colleagues" t-value="len(line['colleagues'])>0"/>
+
+                                            <tr>
+                                                <td><t t-esc="line['line'].page_id.title"/></td>
+                                                <td><t t-esc="line['line'].question_id.question"/></td>
+                                                <td><t t-esc="line['line'].value_suggested_row.value"/></td>
+                                                <td class="text-center"><t t-if="has_evaluation_group" t-esc="line['line'].question_id.evaluation_group.name"/></td>
+                                                <td class="text-right"><t t-if="has_manager" t-esc="round(sum(line['manager'])/len(line['manager']),2)"/></td>
+                                                <td class="text-right"><t t-if="has_employee" t-esc="round(sum(line['employee'])/len(line['employee']),2)"/></td>
+                                                <td class="text-right"><t t-if="has_collaborators" t-esc="round(sum(line['collaborators'])/len(line['collaborators']),2)"/></td>
+                                                <td class="text-right"><t t-if="has_colleagues" t-esc="round(sum(line['colleagues'])/len(line['colleagues']),2)"/></td>
+                                                <td class="text-right"><t t-esc="round(line['total'],2)"/></td>
+                                                <td class="text-right"><t t-esc="round(line['weighted'],2)"/></td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <th colspan="9" class="text-right">Survey Score</th>
+                                            <th class="text-right"><t t-esc="round(survey['total'],2)"/></th>
+                                        </tr>
+                                        <t t-set="total_score" t-value="total_score + survey['total']"/>
+                                    </t>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="9" class="text-right">Total</th>
+                                        <th class="text-right"><t t-if="len(o['surveys'].values()) > 0" t-esc="round(total_score/len(o['surveys'].values()),2)"/></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt32 row footer text-muted" style="page-break-inside:avoid;">
+                        <div class="col-4 offset-1 text-center">
+                            <hr/>
+                            <span t-esc="o['emp_id'].display_name"/><br/>
+                            <span>(Collaborator)</span>
+                        </div>
+                        <div class="col-4 offset-2 text-center">
+                            <hr/>
+                            <span t-esc="o['emp_id'].parent_id.display_name"/><br/>
+                            <span>(Manager)</span>
+                        </div>
+                    </div>
+                </t>
+
+                <div class="footer o_standard_footer">
+                    <div class="text-center" style="border-top: 1px solid black;">
+                        <ul class="list-inline mb4">
+                            <li t-if="company.phone" class="list-inline-item">Phone: <span t-field="company.phone"/></li>
+                            <li t-if="company.email" class="list-inline-item">Email: <span t-field="company.email"/></li>
+                            <li t-if="company.website" class="list-inline-item">Web: <span t-field="company.website"/></li>
+                            <li t-if="company.vat" class="list-inline-item"><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                        </ul>
+
+                        <div name="financial_infos">
+                            <span t-field="company.report_footer"/>
+                        </div>
+
+                        <div t-if="report_type == 'pdf'" class="text-muted">
+                            Page: <span class="page"/> / <span class="topage"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <report
+                id="action_report_scores_by_answer"
+                model="hr.appraisal"
+                string="Scores by answer"
+                report_type="qweb-html"
+                name="hr_dr_appraisal.report_scores_by_answer"
+                file="hr_dr_appraisal.report_scores_by_answer"
+                menu="False"
+            />
+    </data>
+</odoo>

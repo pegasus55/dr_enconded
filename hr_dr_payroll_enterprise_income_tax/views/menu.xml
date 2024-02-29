@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem id="menu_income_tax" name="Income tax" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="120" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_basic_family_basket_hr_dr_payroll_enterprise" action="hr_dr_payroll_base.action_basic_family_basket" parent="menu_income_tax" sequence="10" groups="hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_bfb_per_fl" action="hr_dr_payroll_income_tax.action_bfb_per_fl" parent="menu_income_tax" sequence="20" groups="hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_personal_expenses_category" action="hr_dr_payroll_income_tax.action_personal_expenses_category" parent="menu_income_tax" sequence="30" groups="hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_rent_tax_table_hr_dr_payroll_enterprise" action="hr_dr_payroll_income_tax.action_rent_tax_table" parent="menu_income_tax" sequence="40" groups="hr_payroll.group_hr_payroll_manager"/>
+		<menuitem id="menu_personal_expense" action="hr_dr_payroll_income_tax.action_personal_expense" parent="menu_income_tax" sequence="50" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_generate_form_107" action="" parent="menu_income_tax" sequence="60" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_generate_rdep" action="hr_dr_payroll_income_tax.action_generate_rdep" parent="menu_income_tax" sequence="70" groups="hr_payroll.group_hr_payroll_user"/>
+</odoo>
