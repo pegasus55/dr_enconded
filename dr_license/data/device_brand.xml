@@ -1,7 +1,0 @@
-<odoo>
-    <data noupdate="1">
-        <record model="dr.device.brand" id="dr_device_brand_zkteco">
-            <field name="name">ZkTeco</field>
-        </record>
-    </data>
-</odoo>
