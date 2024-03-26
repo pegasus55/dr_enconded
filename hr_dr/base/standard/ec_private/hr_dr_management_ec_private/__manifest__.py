@@ -37,6 +37,7 @@
         'data/normative.xml',
         'data/hour_extra.xml',
         'data/hour_night.xml',
+        'data/hr_salary_rule_process.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

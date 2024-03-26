@@ -43,7 +43,6 @@
         'data/hr_payroll_structure_inactive.xml',
         'data/hr_payslip_input_type_inactive.xml',
         'data/hr_payslip_input_type.xml',
-        'data/hr_assets_liquidation_cause.xml',
 
         'wizard/register_account_payment.xml',
         'wizard/register_res_payment.xml',
@@ -75,7 +74,7 @@
         'wizard/clone_salary_rule.xml',
 
         'views/hr_dr_payroll_enterprise_menu.xml',
-        'views/hr_assets_liquidation_view.xml',
+        'views/hr_assets_liquidation.xml',
 
     ],
 

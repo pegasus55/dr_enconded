@@ -32,7 +32,7 @@
         'data/hr_payroll_structure.xml',
         'data/hr_salary_rule.xml',
         'data/hr_salary_rule_intern.xml',
-        'data/hr_salary_rule_liquidation.xml',
+        'data/hr_assets_liquidation_cause.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

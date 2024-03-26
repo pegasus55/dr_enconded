@@ -9,6 +9,7 @@
 					<group>
 						<group>
 							<field name="code" attrs="{'readonly' : [('code', '!=', False)]}"/>
+							<field name="normative_id"/>
 							<field name="process"/>
 							<field name="subprocess"/>
 						</group>
@@ -34,6 +35,7 @@
 		<field name="arch" type="xml">
 			<tree string="Salary rule by process">
 				<field name="code"/>
+				<field name="normative_id"/>
 				<field name="process"/>
 				<field name="subprocess"/>
 				<field name="description"/>

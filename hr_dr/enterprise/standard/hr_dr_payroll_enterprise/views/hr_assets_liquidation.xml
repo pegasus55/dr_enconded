@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<record id="hr_assets_liquidation_enterprise_view_tree" model='ir.ui.view'>
+		<field name="name">hr.assets.liquidation.enterprise.view.tree</field>
+		<field name="model">hr.assets.liquidation</field>
+		<field name="inherit_id" ref="hr_dr_payroll_base.hr_assets_liquidation_view_tree"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='cause_id']" position="after">
+                <field name="payslip_id"/>
+            </xpath>
+		</field>
+	</record>
+
+	<record id="action_assets_liquidation_payslip" model="ir.actions.act_window">
+		<field name="name">Assets liquidation payslips</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.payslip</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('is_liquidation_payslip', '=', True)]</field>
+		<field name="context">{'active_test': False}</field>
+	</record>
+
+	<menuitem id="menu_assets_liquidation_root" name="Assets liquidation"
+			  parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"
+			  sequence="130" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_assets_liquidation" action="hr_dr_payroll_base.action_assets_liquidation"
+			parent="menu_assets_liquidation_root" sequence="10" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_assets_liquidation_payslip" action="action_assets_liquidation_payslip"
+			parent="menu_assets_liquidation_root" sequence="20" groups="hr_payroll.group_hr_payroll_user"/>
+		<menuitem id="menu_assets_liquidation_cause" action="hr_dr_payroll_base.action_assets_liquidation_cause"
+			parent="menu_assets_liquidation_root" sequence="100" groups="hr_payroll.group_hr_payroll_manager"/>
+</odoo>

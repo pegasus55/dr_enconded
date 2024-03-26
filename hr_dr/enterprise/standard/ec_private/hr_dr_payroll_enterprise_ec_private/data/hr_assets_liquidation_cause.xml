@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="assets_liquidation_cause_01" model="hr.assets.liquidation.cause">
+            <field name="code">C01</field>
+            <field name="name">Por las causas legalmente previstas en el contrato</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_02" model="hr.assets.liquidation.cause">
+            <field name="code">C02</field>
+            <field name="name">Por acuerdo de las partes</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_03" model="hr.assets.liquidation.cause">
+            <field name="code">C03</field>
+            <field name="name">Por la conclusión de la obra, período de labor o servicios objeto del contrato</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_04" model="hr.assets.liquidation.cause">
+            <field name="code">C04</field>
+            <field name="name">Por muerte o incapacidad del empleador o extinción de la persona jurídica contratante, si no hubiere representante legal o sucesor que continúe la empresa o negocio</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_05" model="hr.assets.liquidation.cause">
+            <field name="code">C05</field>
+            <field name="name">Por muerte del trabajador o incapacidad permanente y total para el trabajo</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_06" model="hr.assets.liquidation.cause">
+            <field name="code">C06</field>
+            <field name="name">Por caso fortuito o fuerza mayor que imposibiliten el trabajo, como incendio, terremoto, tempestad, explosión, plagas del campo, guerra y, en general, cualquier otro acontecimiento extraordinario que los contratantes no pudieron prever o que previsto, no lo pudieron evitar</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_07" model="hr.assets.liquidation.cause">
+            <field name="code">C07</field>
+            <field name="name">Por voluntad del empleador en los casos del artículo 172 de este Código</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_08" model="hr.assets.liquidation.cause">
+            <field name="code">C08</field>
+            <field name="name">Por voluntad del trabajador según el artículo 173 de este Código</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_09" model="hr.assets.liquidation.cause">
+            <field name="code">C09</field>
+            <field name="name">Por desahucio presentado por el trabajador</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_10" model="hr.assets.liquidation.cause">
+            <field name="code">C10</field>
+            <field name="name">Por despido intempestivo</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_11" model="hr.assets.liquidation.cause">
+            <field name="code">C11</field>
+            <field name="name">Por terminación dentro del periodo de prueba</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_12" model="hr.assets.liquidation.cause">
+            <field name="code">C12</field>
+            <field name="name">Por disposición general quinta del Acuerdo MDT-2018-0073</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_13" model="hr.assets.liquidation.cause">
+            <field name="code">C13</field>
+            <field name="name">Por disposición general quinta del Acuerdo MDT-2018-0074</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_14" model="hr.assets.liquidation.cause">
+            <field name="code">C14</field>
+            <field name="name">Por disposición general quinta del Acuerdo MDT-2018-0075</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_15" model="hr.assets.liquidation.cause">
+            <field name="code">C15</field>
+            <field name="name">Por disposición general quinta del Acuerdo MDT-2018-0096</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+        <record id="assets_liquidation_cause_16" model="hr.assets.liquidation.cause">
+            <field name="code">C16</field>
+            <field name="name">Por disposición general quinta del Acuerdo MDT-2018-0097</field>
+            <field name="normative_id" ref = "hr_dr_management_ec_private.Normative2"/>
+        </record>
+    </data>
+</odoo>

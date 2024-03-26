@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--Salario digno-->
+        <record id="hr_salary_rule_process_SD_01" model="hr.salary.rule.process">
+            <field name="code">SD-S</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Salario</field>
+            <field name="description">El sueldo o salario mensual del ejercicio fiscal anterior.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_02" model="hr.salary.rule.process">
+            <field name="code">SD-D13</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Décimo tercer sueldo</field>
+            <field name="description">
+La decimotercera remuneración correspondiente al valor proporcional del tiempo laborado en el ejercicio fiscal anterior, cuyo período de cálculo y pago estará acorde a lo establecido en el artículo 111 del Código del Trabajo.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_TERCERO_MENSUAL,PROV_DTERCERO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_03" model="hr.salary.rule.process">
+            <field name="code">SD-D14</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Décimo cuarto sueldo</field>
+            <field name="description">
+La decimocuarta remuneración correspondiente al valor proporcional del tiempo laborado en el ejercicio fiscal anterior, cuyo período de cálculo y pago estará acorde a lo establecido en el artículo 113 del Código del Trabajo.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL,PROV_DCUARTO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_04" model="hr.salary.rule.process">
+            <field name="code">SD-C</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Comisiones</field>
+            <field name="description">
+Las comisiones variables que hubiere pagado el empleador a la persona trabajadora o ex-trabajadora que obedezcan a prácticas mercantiles legítimas y usuales en el ejercicio fiscal anterior.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">COMISIONES</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_05" model="hr.salary.rule.process">
+            <field name="code">SD-U</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Utilidades</field>
+            <field name="description">
+La participación de utilidades a personas trabajadoras o ex-trabajadoras del ejercicio fiscal anterior.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">N/A</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_06" model="hr.salary.rule.process">
+            <field name="code">SD-BA</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Beneficios adicionales</field>
+            <field name="description">
+Los beneficios adicionales percibidos en dinero por el trabajador por contratos colectivos, que no constituyan obligaciones legales, y las contribuciones voluntarias periódicas hechas en dinero por el empleador a sus trabajadores en el ejercicio fiscal anterior.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">BONIFICACIONES_POR_CUMPLIMIENTO,BONOS,BONO_DE_VENTAS,BONO_VARIABLE_RENTABILIDAD</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_SD_07" model="hr.salary.rule.process">
+            <field name="code">SD-FR</field>
+            <field name="process">Salario digno</field>
+            <field name="subprocess">Fondos de reserva</field>
+            <field name="description">
+Los fondos de reserva correspondientes al ejercicio fiscal anterior.</field>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">FONDO_RESERVA_MENSUAL,PROV_FOND_RESERV_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--Salario digno-->
+
+        <!--RDEP-->
+        <record id="hr_salary_rule_process_RDEP_01" model="hr.salary.rule.process">
+            <field name="code">RDEP-S</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Sueldos y salarios.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_02" model="hr.salary.rule.process">
+            <field name="code">RDEP-SCB_OIG</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Sobresueldos, comisiones, bonos y otros ingresos gravados.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">COMISIONES,BONIFICACIONES_POR_CUMPLIMIENTO,BONOS,BONO_DE_VENTAS,BONO_VARIABLE_RENTABILIDAD</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_03" model="hr.salary.rule.process">
+            <field name="code">RDEP-U</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Participación de utilidades.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">N/A</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_04" model="hr.salary.rule.process">
+            <field name="code">RDEP-IGGOE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Ingresos gravados generados con otros empleadores.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">N/A</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_05" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRAPEE-1</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Impuesto a la Renta asumido por este empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">N/A</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_06" model="hr.salary.rule.process">
+            <field name="code">RDEP-D13</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Décimo tercer sueldo.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_TERCERO_MENSUAL,PROV_DTERCERO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_07" model="hr.salary.rule.process">
+            <field name="code">RDEP-D14</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Décimo cuarto sueldo.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL,PROV_DCUARTO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_08" model="hr.salary.rule.process">
+            <field name="code">RDEP-FR</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Fondo de reserva.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">FONDO_RESERVA_MENSUAL,PROV_FOND_RESERV_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_09" model="hr.salary.rule.process">
+            <field name="code">RDEP-SD</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Compensación económica salario digno.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">N/A</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_10" model="hr.salary.rule.process">
+            <field name="code">RDEP-OIRDNCRG</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Otros ingresos en relación de dependencia que no constituyen renta gravada.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">ALIMENTACION,SUBSIDIO_GUARDERIA,DEVOLUCION_VARIOS,DEV_IMP_RENTA_PREVIOUS_YEAR,INGRESO_NO_GRAVABLE,REINTEGRO_IESS,DEV_IMP_RENTA_PREVIOUS_YEAR</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_11" model="hr.salary.rule.process">
+            <field name="code">RDEP-IGCEE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Ingresos gravados con el empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SUBT_INGRESOS_GBS</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_12" model="hr.salary.rule.process">
+            <field name="code">RDEP-APIESSEE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Aporte personal al IESS con este empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_13" model="hr.salary.rule.process">
+            <field name="code">RDEP-APIESSOE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Aporte personal al IESS con otros empleadores.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_14" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPVI</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por vivienda.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_15" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPSA</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por salud.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_16" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPEAC</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por educación arte y cultura.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_17" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPAL</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por alimentación.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_18" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPVE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por vestimenta.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_19" model="hr.salary.rule.process">
+            <field name="code">RDEP-GPTU</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Gastos personales por turismo.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_20" model="hr.salary.rule.process">
+            <field name="code">RDEP-ED</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Exoneración por discapacidad.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_21" model="hr.salary.rule.process">
+            <field name="code">RDEP-ETE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Exoneración por tercera edad.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_22" model="hr.salary.rule.process">
+            <field name="code">RDEP-BIG</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Base imponible gravada.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_23" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRC</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Impuesto a la Renta causado.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_24" model="hr.salary.rule.process">
+            <field name="code">RDEP-RGP</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Rebaja por gastos personales.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_25" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRDRGP</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">Impuesto a la renta despues de la rebaja de gastos personales.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_26" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRRAOE</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta retenido y asumido por otros empleadores.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_27" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRAPEE-2</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta asumido por este empleador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_RDEP_28" model="hr.salary.rule.process">
+            <field name="code">RDEP-IRRT</field>
+            <field name="process">RDEP</field>
+            <field name="subprocess">I. Renta retenido al trabajador.</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--RDEP-->
+
+        <!--Utilidades-->
+        <record id="hr_salary_rule_process_U_01" model="hr.salary.rule.process">
+            <field name="code">U-D13</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Décimo tercer sueldo</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_TERCERO_MENSUAL,PROV_DTERCERO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_02" model="hr.salary.rule.process">
+            <field name="code">U-D14</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Décimo cuarto sueldo</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL,PROV_DCUARTO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_03" model="hr.salary.rule.process">
+            <field name="code">U-S</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Salario</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_04" model="hr.salary.rule.process">
+            <field name="code">U-FR</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Fondos de reserva</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">FONDO_RESERVA_MENSUAL,PROV_FOND_RESERV_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_05" model="hr.salary.rule.process">
+            <field name="code">U-C</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Comisiones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">COMISIONES</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_06" model="hr.salary.rule.process">
+            <field name="code">U-BAE</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Beneficios adicionales en efectivo</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">BONIFICACIONES_POR_CUMPLIMIENTO,BONOS,BONO_DE_VENTAS,BONO_VARIABLE_RENTABILIDAD,OTROS_INGRESOS_APORTABLES</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_07" model="hr.salary.rule.process">
+            <field name="code">U-SG</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Sobresueldo / Gratificaciones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code"></field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_08" model="hr.salary.rule.process">
+            <field name="code">U-IGBS</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Ingresos que generan beneficios sociales</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS</field>
+            <field name="salary_rule_code_excluded">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_U_09" model="hr.salary.rule.process">
+            <field name="code">U-INGBS</field>
+            <field name="process">Utilidades</field>
+            <field name="subprocess">Ingresos que no generan beneficios sociales</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS_NGBS</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--Utilidades-->
+
+        <!--Décimos-->
+        <record id="hr_salary_rule_process_D_01" model="hr.salary.rule.process">
+            <field name="code">D-D13M</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Décimo tercer sueldo mensual</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_TERCERO_MENSUAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_02" model="hr.salary.rule.process">
+            <field name="code">D-D13A</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Décimo tercer sueldo acumulado</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_DTERCERO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_03" model="hr.salary.rule.process">
+            <field name="code">D-D14M</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Décimo cuarto sueldo mensual</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DECIMO_CUARTO_MENSUAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_04" model="hr.salary.rule.process">
+            <field name="code">D-D14A</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Décimo cuarto sueldo acumulado</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_DCUARTO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_05" model="hr.salary.rule.process">
+            <field name="code">D-IGBS</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Ingresos que generan beneficios sociales</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_06" model="hr.salary.rule.process">
+            <field name="code">D-D_D13_M_PALIMENTOS</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Descuento D13 mensual por pensión alimenticia</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">D_D13_M_PALIMENTOS_1,D_D13_M_PALIMENTOS_2,D_D13_M_PALIMENTOS_3,D_D13_M_PALIMENTOS_4,D_D13_M_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_07" model="hr.salary.rule.process">
+            <field name="code">D-D_D14_M_PALIMENTOS</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Descuento D14 mensual por pensión alimenticia</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">D_D14_M_PALIMENTOS_1,D_D14_M_PALIMENTOS_2,D_D14_M_PALIMENTOS_3,D_D14_M_PALIMENTOS_4,D_D14_M_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_08" model="hr.salary.rule.process">
+            <field name="code">D-DP_D13_A_PALIMENTOS</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Descuento pasivo D13 acumulado por pensión alimenticia</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DP_D13_A_PALIMENTOS_1,DP_D13_A_PALIMENTOS_2,DP_D13_A_PALIMENTOS_3,DP_D13_A_PALIMENTOS_4,DP_D13_A_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_D_09" model="hr.salary.rule.process">
+            <field name="code">D-DP_D14_A_PALIMENTOS</field>
+            <field name="process">Décimos</field>
+            <field name="subprocess">Descuento pasivo D14 acumulado por pensión alimenticia</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DP_D14_A_PALIMENTOS_1,DP_D14_A_PALIMENTOS_2,DP_D14_A_PALIMENTOS_3,DP_D14_A_PALIMENTOS_4,DP_D14_A_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--Décimos-->
+
+        <!--Impuesto a la renta-->
+        <record id="hr_salary_rule_process_IT_01" model="hr.salary.rule.process">
+            <field name="code">IT-S</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">Salario</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_IT_05" model="hr.salary.rule.process">
+            <field name="code">IT-IESS-P</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">IESS Personal</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">IESSPERSONAL945</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_IT_06" model="hr.salary.rule.process">
+            <field name="code">IT-IGBS</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">Ingresos que generan beneficios sociales exceptuando el salario</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS</field>
+            <field name="salary_rule_code_excluded">SALARIO_NOMINAL</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_IT_07" model="hr.salary.rule.process">
+            <field name="code">IT-IT_ABE</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">Impuesto a la renta asumido por el empleador</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">IMPUESTO_RENTA_ASUMIDO_EMPLEADOR</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_IT_08" model="hr.salary.rule.process">
+            <field name="code">IT-SIT_ABE</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">Segundo impuesto a la renta asumido por el empleador</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">SEGUNDO_IMPUESTO_RENTA_ASUMIDO_EMPLEADOR</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_IT_09" model="hr.salary.rule.process">
+            <field name="code">IT-ITW</field>
+            <field name="process">Impuesto a la renta</field>
+            <field name="subprocess">Retención del impuesto a la renta</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">RETENCION_IMPUESTO_RENTA</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--Impuesto a la renta-->
+
+        <!--Liquidación de haberes-->
+        <record id="hr_salary_rule_process_LH_01" model="hr.salary.rule.process">
+            <field name="code">LH-US</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Último salario</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_02" model="hr.salary.rule.process">
+            <field name="code">LH-MS</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Mejor salario</field>
+            <field name="description"/>
+            <field name="mode">by_categories</field>
+            <field name="category_code">INGRESOS</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_03" model="hr.salary.rule.process">
+            <field name="code">LH-D13</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Décimo tercer sueldo acumulado</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_DTERCERO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_04" model="hr.salary.rule.process">
+            <field name="code">LH-D14</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Décimo cuarto sueldo acumulado</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_DCUARTO_ACUMULADO</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_05" model="hr.salary.rule.process">
+            <field name="code">LH-DP_D13_A_PALIMENTOS</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Descuento pasivo D13 acumulado por pensión alimenticia para el decimotercer salario</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DP_D13_A_PALIMENTOS_1,DP_D13_A_PALIMENTOS_2,DP_D13_A_PALIMENTOS_3,DP_D13_A_PALIMENTOS_4,DP_D13_A_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_06" model="hr.salary.rule.process">
+            <field name="code">LH-DP_D14_A_PALIMENTOS</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Descuento pasivo D14 acumulado por pensión alimenticia para el decimocuarto salario</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">DP_D14_A_PALIMENTOS_1,DP_D14_A_PALIMENTOS_2,DP_D14_A_PALIMENTOS_3,DP_D14_A_PALIMENTOS_4,DP_D14_A_PALIMENTOS_5</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_07" model="hr.salary.rule.process">
+            <field name="code">LH-PROV_VACA</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Provisión de vacaciones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_VACA</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <record id="hr_salary_rule_process_LH_08" model="hr.salary.rule.process">
+            <field name="code">LH-PROV_VACA</field>
+            <field name="process">Liquidación de haberes</field>
+            <field name="subprocess">Provisión de vacaciones</field>
+            <field name="description"/>
+            <field name="mode">by_rules</field>
+            <field name="salary_rule_code">PROV_VACA</field>
+            <field name="normative_id" eval="ref('hr_dr_management_ec_private.Normative2')"/>
+        </record>
+        <!--Liquidación de haberes-->
+
+    </data>
+</odoo>

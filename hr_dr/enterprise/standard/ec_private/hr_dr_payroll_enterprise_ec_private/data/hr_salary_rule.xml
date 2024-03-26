@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="1">
-		<!--Ingresos que generan beneficios sociales 1-40 -->
-        <!--Salario nominal -->
+		<!--Ingresos que generan beneficios sociales 1-40-->
+        <!--Salario nominal-->
         <record id="salary_rule_SALARIO_NOMINAL" model="hr.salary.rule">
             <field name="name">Salario nominal</field>
             <field name="note">
@@ -19,12 +19,12 @@ En caso de que el colaborador presente reducción de jornada se incorpora a la f
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(contract.wage * payslip.worked_days / 30.0 * ((100 - contract.percentage_reduction_of_working_hours) / 100), 2)
+    result = float_round(contract.wage * payslip.worked_days / 30.0 * ((100 - contract.percentage_reduction_of_working_hours) / 100), 2)
 else:
-    result = round(contract.wage * payslip.worked_days / 30.0, 2)
+    result = float_round(contract.wage * payslip.worked_days / 30.0, 2)
             </field>
         </record>
-        <!--Horas nocturnas (25%) -->
+        <!--Horas nocturnas (25%)-->
         <record id="salary_rule_HORA_NOCTURNA" model="hr.salary.rule">
             <field name="name">Horas nocturnas (25%)</field>
             <field name="note">
@@ -47,12 +47,12 @@ if inputs.HORA_NOCTURNA: result = contract.receives_night_hours and sum([line.am
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 0.25), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 0.25), 2)
 else:
-    result = round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * 0.25), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_NOCTURNA]) * (contract.wage / contract.monthly_hours * 0.25), 2)
             </field>
         </record>
-        <!--Horas nocturnas (25%) [Año anterior] -->
+        <!--Horas nocturnas (25%) [Año anterior]-->
         <record id="salary_rule_HORA_NOCTURNA_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Horas nocturnas (25%) [Año anterior]</field>
             <field name="note">
@@ -71,10 +71,10 @@ if inputs.HORA_NOCTURNA_PREVIOUS_YEAR: result = contract.receives_night_hours an
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.HORA_NOCTURNA_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.HORA_NOCTURNA_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Horas extras suplementarias (50%) -->
+        <!--Horas extras suplementarias (50%)-->
         <record id="salary_rule_HORA_EXTRA_SUPLEMENTARIA" model="hr.salary.rule">
             <field name="name">Horas extras suplementarias (50%)</field>
             <field name="note">
@@ -96,12 +96,12 @@ if inputs.HORA_EXTRA_SUPLEMENTARIA: result = contract.receives_hours_supplementa
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 1.5), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 1.5), 2)
 else:
-    result = round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * 1.5), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA]) * (contract.wage / contract.monthly_hours * 1.5), 2)
             </field>
         </record>
-        <!--Horas extras suplementarias (50%) [Año anterior] -->
+        <!--Horas extras suplementarias (50%) [Año anterior]-->
         <record id="salary_rule_HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Horas extras suplementarias (50%) [Año anterior]</field>
             <field name="note">
@@ -119,10 +119,10 @@ Recibe un valor monetario.
 if inputs.HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR: result = contract.receives_hours_supplementary and sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR]) > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_SUPLEMENTARIA_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Horas extras extraordinarias (100%) -->
+        <!--Horas extras extraordinarias (100%)-->
         <record id="salary_rule_HORA_EXTRA_EXTRAORDINARIA" model="hr.salary.rule">
             <field name="name">Horas extras extraordinarias (100%)</field>
             <field name="note">
@@ -145,12 +145,12 @@ if inputs.HORA_EXTRA_EXTRAORDINARIA: result = contract.receives_hours_extraordin
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 2), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * (100 - contract.percentage_reduction_of_working_hours) / 100 * 2), 2)
 else:
-    result = round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * 2), 2)
+    result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA]) * (contract.wage / contract.monthly_hours * 2), 2)
             </field>
         </record>
-        <!--Horas extras extraordinarias (100%) [Año anterior] -->
+        <!--Horas extras extraordinarias (100%) [Año anterior]-->
         <record id="salary_rule_HORA_EXTRA_EXTRAORDINARIA_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Horas extras extraordinarias (100%) [Año anterior]</field>
             <field name="note">
@@ -169,10 +169,10 @@ if inputs.HORA_EXTRA_EXTRAORDINARIA_PREVIOUS_YEAR: result = contract.receives_ho
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.HORA_EXTRA_EXTRAORDINARIA_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Bonificaciones por cumplimiento -->
+        <!--Bonificaciones por cumplimiento-->
         <record id="salary_rule_BONIFICACIONES_POR_CUMPLIMIENTO" model="hr.salary.rule">
             <field name="name">Bonificaciones por cumplimiento</field>
             <field name="note">
@@ -190,10 +190,10 @@ if inputs.BONIFICACIONES_POR_CUMPLIMIENTO: result = sum([line.amount for line in
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.BONIFICACIONES_POR_CUMPLIMIENTO]) , 2)
+result = float_round(sum([line.amount for line in inputs.BONIFICACIONES_POR_CUMPLIMIENTO]) , 2)
             </field>
         </record>
-        <!--Bonos -->
+        <!--Bonos-->
         <record id="salary_rule_BONOS" model="hr.salary.rule">
             <field name="name">Bonos</field>
             <field name="note">
@@ -209,10 +209,10 @@ Recibe un valor monetario.
             <field name="condition_python">if inputs.BONOS: result = sum([line.amount for line in inputs.BONOS]) > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.BONOS]) , 2)
+result = float_round(sum([line.amount for line in inputs.BONOS]) , 2)
             </field>
         </record>
-        <!--Bono de ventas -->
+        <!--Bono de ventas-->
         <record id="salary_rule_BONO_DE_VENTAS" model="hr.salary.rule">
             <field name="name">Bono de ventas</field>
             <field name="note">
@@ -230,10 +230,10 @@ if inputs.BONO_DE_VENTAS: result = sum([line.amount for line in inputs.BONO_DE_V
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.BONO_DE_VENTAS]) , 2)
+result = float_round(sum([line.amount for line in inputs.BONO_DE_VENTAS]) , 2)
             </field>
         </record>
-        <!--Bono variable de rentabilidad -->
+        <!--Bono variable de rentabilidad-->
         <record id="salary_rule_BONO_VARIABLE_RENTABILIDAD" model="hr.salary.rule">
             <field name="name">Bono variable de rentabilidad</field>
             <field name="note">
@@ -251,10 +251,10 @@ if inputs.BONO_VARIABLE_RENTABILIDAD: result = sum([line.amount for line in inpu
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.BONO_VARIABLE_RENTABILIDAD]) , 2)
+result = float_round(sum([line.amount for line in inputs.BONO_VARIABLE_RENTABILIDAD]) , 2)
             </field>
         </record>
-        <!--Comisiones -->
+        <!--Comisiones-->
         <record id="salary_rule_COMISIONES" model="hr.salary.rule">
             <field name="name">Comisiones</field>
             <field name="note">
@@ -272,10 +272,10 @@ if inputs.COMISIONES: result = sum([line.amount for line in inputs.COMISIONES]) 
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.COMISIONES]) , 2)
+result = float_round(sum([line.amount for line in inputs.COMISIONES]) , 2)
             </field>
         </record>
-        <!--Otros ingresos aportables -->
+        <!--Otros ingresos aportables-->
         <record id="salary_rule_OTROS_INGRESOS_APORTABLES" model="hr.salary.rule">
             <field name="name">Otros ingresos aportables</field>
             <field name="note">
@@ -293,10 +293,10 @@ if inputs.OTROS_INGRESOS_APORTABLES: result = sum([line.amount for line in input
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.OTROS_INGRESOS_APORTABLES]) , 2)
+result = float_round(sum([line.amount for line in inputs.OTROS_INGRESOS_APORTABLES]) , 2)
             </field>
         </record>
-        <!--Reemplazos -->
+        <!--Reemplazos-->
         <record id="salary_rule_REEMPLAZOS" model="hr.salary.rule">
             <field name="name">Reemplazos</field>
             <field name="note">
@@ -318,12 +318,12 @@ if inputs.REEMPLAZOS: result = sum([line.amount for line in inputs.REEMPLAZOS]) 
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(sum([line.amount for line in inputs.REEMPLAZOS]) * ((contract.wage * ((100 - contract.percentage_reduction_of_working_hours) / 100)) / 30 * 0.20) , 2)
+    result = float_round(sum([line.amount for line in inputs.REEMPLAZOS]) * ((contract.wage * ((100 - contract.percentage_reduction_of_working_hours) / 100)) / 30 * 0.20) , 2)
 else:
-    result = round(sum([line.amount for line in inputs.REEMPLAZOS]) * (contract.wage / 30 * 0.20) , 2)
+    result = float_round(sum([line.amount for line in inputs.REEMPLAZOS]) * (contract.wage / 30 * 0.20) , 2)
             </field>
         </record>
-        <!--Reemplazos [Año anterior] -->
+        <!--Reemplazos [Año anterior]-->
         <record id="salary_rule_REEMPLAZOS_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Reemplazos [Año anterior]</field>
             <field name="note">
@@ -341,10 +341,10 @@ if inputs.REEMPLAZOS_PREVIOUS_YEAR: result = sum([line.amount for line in inputs
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.REEMPLAZOS_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.REEMPLAZOS_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Retroactivo -->
+        <!--Retroactivo-->
         <record id="salary_rule_RETROACTIVO" model="hr.salary.rule">
             <field name="name">Retroactivo</field>
             <field name="note">
@@ -362,10 +362,10 @@ if inputs.RETROACTIVO: result = sum([line.amount for line in inputs.RETROACTIVO]
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.RETROACTIVO]) , 2)
+result = float_round(sum([line.amount for line in inputs.RETROACTIVO]) , 2)
             </field>
         </record>
-        <!--Ingreso gravable -->
+        <!--Ingreso gravable-->
         <record id="salary_rule_INGRESO_GRAVABLE" model="hr.salary.rule">
             <field name="name">Ingreso gravable</field>
             <field name="note">
@@ -383,10 +383,10 @@ if inputs.INGRESO_GRAVABLE: result = sum([line.amount for line in inputs.INGRESO
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.INGRESO_GRAVABLE]) , 2)
+result = float_round(sum([line.amount for line in inputs.INGRESO_GRAVABLE]) , 2)
             </field>
         </record>
-        <!--Vacaciones pagadas -->
+        <!--Vacaciones pagadas-->
         <record id="salary_rule_PAY_VACATIONS" model="hr.salary.rule">
             <field name="name">Vacaciones pagadas</field>
             <field name="note">
@@ -404,10 +404,10 @@ if inputs.PAY_VACATIONS: result = sum([line.amount for line in inputs.PAY_VACATI
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PAY_VACATIONS]) , 2)
+result = float_round(sum([line.amount for line in inputs.PAY_VACATIONS]) , 2)
             </field>
         </record>
-        <!--Extra por vacaciones -->
+        <!--Extra por vacaciones-->
         <record id="salary_rule_EXTRA_FOR_VACATIONS" model="hr.salary.rule">
             <field name="name">Extra por vacaciones</field>
             <field name="note">
@@ -425,14 +425,14 @@ if inputs.EXTRA_FOR_VACATIONS: result = sum([line.amount for line in inputs.EXTR
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.EXTRA_FOR_VACATIONS]) , 2)
+result = float_round(sum([line.amount for line in inputs.EXTRA_FOR_VACATIONS]) , 2)
             </field>
         </record>
-        <!--Ingresos que generan beneficios sociales 1-40 -->
+        <!--Ingresos que generan beneficios sociales 1-40-->
 
 
-        <!--Ingresos que no generan beneficios sociales 41-80 -->
-        <!--Alimentación -->
+        <!--Ingresos que no generan beneficios sociales 41-80-->
+        <!--Alimentación-->
         <record id="salary_rule_ALIMENTACION" model="hr.salary.rule">
             <field name="name">Alimentación</field>
             <field name="note">
@@ -447,9 +447,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.ALIMENTACION: result = sum([line.amount for line in inputs.ALIMENTACION]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.ALIMENTACION]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.ALIMENTACION]) , 2)</field>
         </record>
-        <!--Subsidio guardería -->
+        <!--Subsidio guardería-->
         <record id="salary_rule_SUBSIDIO_GUARDERIA" model="hr.salary.rule">
             <field name="name">Subsidio guardería</field>
             <field name="note">
@@ -464,9 +464,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SUBSIDIO_GUARDERIA: result = sum([line.amount for line in inputs.SUBSIDIO_GUARDERIA]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SUBSIDIO_GUARDERIA]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SUBSIDIO_GUARDERIA]) , 2)</field>
         </record>
-        <!--Devolución varios -->
+        <!--Devolución varios-->
         <record id="salary_rule_DEVOLUCION_VARIOS" model="hr.salary.rule">
             <field name="name">Devolución varios</field>
             <field name="note">
@@ -481,9 +481,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.DEVOLUCION_VARIOS: result = sum([line.amount for line in inputs.DEVOLUCION_VARIOS]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.DEVOLUCION_VARIOS]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.DEVOLUCION_VARIOS]) , 2)</field>
         </record>
-        <!--Devolución del impuesto a la renta (Año anterior) -->
+        <!--Devolución del impuesto a la renta (Año anterior)-->
         <record id="salary_rule_DEV_IMP_RENTA_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Devolución del impuesto a la renta (Año anterior)</field>
             <field name="note">
@@ -498,9 +498,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.DEV_IMP_RENTA_PREVIOUS_YEAR: result = sum([line.amount for line in inputs.DEV_IMP_RENTA_PREVIOUS_YEAR]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.DEV_IMP_RENTA_PREVIOUS_YEAR]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.DEV_IMP_RENTA_PREVIOUS_YEAR]) , 2)</field>
         </record>
-        <!--Ingreso no gravable -->
+        <!--Ingreso no gravable-->
         <record id="salary_rule_INGRESO_NO_GRAVABLE" model="hr.salary.rule">
             <field name="name">Ingreso no gravable</field>
             <field name="note">
@@ -515,9 +515,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.INGRESO_NO_GRAVABLE: result = sum([line.amount for line in inputs.INGRESO_NO_GRAVABLE]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.INGRESO_NO_GRAVABLE]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.INGRESO_NO_GRAVABLE]) , 2)</field>
         </record>
-        <!--Reintegro IESS -->
+        <!--Reintegro IESS-->
         <record id="salary_rule_REINTEGRO_IESS" model="hr.salary.rule">
             <field name="name">Reintegro IESS</field>
             <field name="note">
@@ -532,9 +532,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.REINTEGRO_IESS: result = sum([line.amount for line in inputs.REINTEGRO_IESS]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.REINTEGRO_IESS]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.REINTEGRO_IESS]) , 2)</field>
         </record>
-        <!--Fondos de reserva (Mensual) -->
+        <!--Fondos de reserva (Mensual)-->
         <record id="salary_rule_FONDO_RESERVA_MENSUAL" model="hr.salary.rule">
             <field name="name">Fondos de reserva (Mensual)</field>
             <field name="note">
@@ -562,14 +562,14 @@ else:
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.application_reserve_fund == 'always_force':
-    result = round(categories.INGRESOS * 0.0833, 2)
+    result = float_round(categories.INGRESOS * 0.0833, 2)
 elif payslip.number_service_months == 13:
-    result = round((categories.INGRESOS * payslip.days_to_pay_reserve_fund / 30) * 0.0833, 2)
+    result = float_round((categories.INGRESOS * payslip.days_to_pay_reserve_fund / 30) * 0.0833, 2)
 else:
-    result = round(categories.INGRESOS * 0.0833, 2)
+    result = float_round(categories.INGRESOS * 0.0833, 2)
             </field>
         </record>
-        <!--Décimo tercer sueldo (Mensual) -->
+        <!--Décimo tercer sueldo (Mensual)-->
         <record id="salary_rule_DECIMO_TERCERO_MENSUAL" model="hr.salary.rule">
             <field name="name">Décimo tercer sueldo (Mensual)</field>
             <field name="note">
@@ -590,9 +590,9 @@ else:
     result = False
             </field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS / 12.0, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS / 12.0, 2)</field>
         </record>
-        <!--Décimo cuarto sueldo (Mensual) -->
+        <!--Décimo cuarto sueldo (Mensual)-->
         <record id="salary_rule_DECIMO_CUARTO_MENSUAL" model="hr.salary.rule">
             <field name="name">Décimo cuarto sueldo (Mensual)</field>
             <field name="note">
@@ -616,7 +616,7 @@ else:
             </field>
             <field name="amount_select">code</field>
            <field name="amount_python_compute">
-result = round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / contract.standard_daily_hours) * (payslip.worked_days / 30), 2)
+result = float_round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / contract.standard_daily_hours) * (payslip.worked_days / 30), 2)
            </field>
         </record>
         <!--Sobregiro rol-->
@@ -640,7 +640,7 @@ result = (categories.INGRESOS + categories.INGRESOS_NGBS - categories.EGRESOS) *
 result = (categories.INGRESOS + categories.INGRESOS_NGBS - categories.EGRESOS) * (-1)
             </field>
         </record>
-        <!--Transporte -->
+        <!--Transporte-->
         <record id="salary_rule_TRANSPORTE" model="hr.salary.rule">
             <field name="name">Transporte</field>
             <field name="note">
@@ -658,10 +658,10 @@ if inputs.TRANSPORTE: result = sum([line.amount for line in inputs.TRANSPORTE]) 
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.TRANSPORTE]) , 2)
+result = float_round(sum([line.amount for line in inputs.TRANSPORTE]) , 2)
             </field>
         </record>
-        <!--Impuesto a la renta asumido por el empleador -->
+        <!--Impuesto a la renta asumido por el empleador-->
         <record id="salary_rule_IT_ABE" model="hr.salary.rule">
             <field name="name">Impuesto a la renta asumido por el empleador</field>
             <field name="note">
@@ -679,10 +679,10 @@ if inputs.IT_ABE: result = sum([line.amount for line in inputs.IT_ABE]) > 0
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.IT_ABE]) , 2)
+result = float_round(sum([line.amount for line in inputs.IT_ABE]) , 2)
             </field>
         </record>
-        <!--Fondos de reserva retroactivo -->
+        <!--Fondos de reserva retroactivo-->
         <record id="salary_rule_FONDO_RESERVA_RETROACTIVO" model="hr.salary.rule">
             <field name="name">Fondos de reserva (Retroactivo)</field>
             <field name="note">
@@ -700,10 +700,10 @@ if inputs.FONDO_RESERVA_RETROACTIVO: result = sum([line.amount for line in input
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.FONDO_RESERVA_RETROACTIVO]) , 2)
+result = float_round(sum([line.amount for line in inputs.FONDO_RESERVA_RETROACTIVO]) , 2)
             </field>
         </record>
-        <!--Viáticos a pagar -->
+        <!--Viáticos a pagar-->
         <record id="salary_rule_VIATICOS_A_PAGAR" model="hr.salary.rule">
             <field name="name">Viáticos a pagar</field>
             <field name="note">
@@ -721,10 +721,10 @@ if inputs.VIATICOS_A_PAGAR: result = sum([line.amount for line in inputs.VIATICO
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.VIATICOS_A_PAGAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.VIATICOS_A_PAGAR]) , 2)
             </field>
         </record>
-        <!--Devolución del aporte al IESS -->
+        <!--Devolución del aporte al IESS-->
         <record id="salary_rule_IESSREFUNDCONTRIBUTION" model="hr.salary.rule">
             <field name="name">Devolución del aporte al IESS</field>
             <field name="note">
@@ -743,12 +743,12 @@ else:
     result = False
             </field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS * 0.0945, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS * 0.0945, 2)</field>
         </record>
-        <!--Ingresos que no generan beneficios sociales 41-80 -->
+        <!--Ingresos que no generan beneficios sociales 41-80-->
 
 
-        <!--Egresos 81-130 -->
+        <!--Egresos 81-130-->
         <!--Anticipo quincenal-->
         <record id="salary_rule_ANTICIPO_QUINCENAL" model="hr.salary.rule">
             <field name="name">Anticipo quincenal</field>
@@ -766,7 +766,7 @@ result = self.have_fortnight()
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = self._get_fortnight()</field>
         </record>
-        <!--IESS personal (9.45%) -->
+        <!--IESS personal (9.45%)-->
         <record id="salary_rule_IESSPERSONAL945" model="hr.salary.rule">
             <field name="name">IESS personal (9.45%)</field>
             <field name="note">
@@ -780,10 +780,10 @@ Es el 9.45 porciento de todos los rubros o reglas que pertenecen a la categoría
             <field name="appears_on_payroll_report">True</field>
             <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS * 0.0945, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS * 0.0945, 2)</field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--IESS extra cónyuge (3.41%) -->
+        <!--IESS extra cónyuge (3.41%)-->
         <record id="salary_rule_IESSEXTCONYUGE" model="hr.salary.rule">
             <field name="name">IESS extra cónyuge (3.41%)</field>
             <field name="note">
@@ -804,10 +804,10 @@ else:
     result = False
             </field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS * 0.0341, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS * 0.0341, 2)</field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--Ayudas -->
+        <!--Ayudas-->
         <record id="salary_rule_AYUDAS" model="hr.salary.rule">
             <field name="name">Ayudas</field>
             <field name="note">
@@ -822,9 +822,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.AYUDAS: result = sum([line.amount for line in inputs.AYUDAS]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.AYUDAS]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.AYUDAS]) , 2)</field>
         </record>
-        <!--Capacitación -->
+        <!--Capacitación-->
         <record id="salary_rule_CAPACITACION" model="hr.salary.rule">
             <field name="name">Capacitación</field>
             <field name="note">
@@ -839,9 +839,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.CAPACITACION: result = sum([line.amount for line in inputs.CAPACITACION]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.CAPACITACION]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.CAPACITACION]) , 2)</field>
         </record>
-        <!--Plan celular -->
+        <!--Plan celular-->
         <record id="salary_rule_PLAN_CELULAR" model="hr.salary.rule">
             <field name="name">Plan celular</field>
             <field name="note">
@@ -856,9 +856,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.PLAN_CELULAR: result = sum([line.amount for line in inputs.PLAN_CELULAR]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.PLAN_CELULAR]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.PLAN_CELULAR]) , 2)</field>
         </record>
-        <!--Compra celular -->
+        <!--Compra celular-->
         <record id="salary_rule_COMPRA_CELULAR" model="hr.salary.rule">
             <field name="name">Compra celular</field>
             <field name="note">
@@ -873,9 +873,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.COMPRA_CELULAR: result = sum([line.amount for line in inputs.COMPRA_CELULAR]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.COMPRA_CELULAR]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.COMPRA_CELULAR]) , 2)</field>
         </record>
-        <!--Comisariato -->
+        <!--Comisariato-->
         <record id="salary_rule_COMISARIATO" model="hr.salary.rule">
             <field name="name">Comisariato</field>
             <field name="note">
@@ -890,9 +890,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.COMISARIATO: result = sum([line.amount for line in inputs.COMISARIATO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.COMISARIATO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.COMISARIATO]) , 2)</field>
         </record>
-        <!--Supermaxi -->
+        <!--Supermaxi-->
         <record id="salary_rule_SUPERMAXI" model="hr.salary.rule">
             <field name="name">Supermaxi</field>
             <field name="note">
@@ -907,9 +907,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SUPERMAXI: result = sum([line.amount for line in inputs.SUPERMAXI]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SUPERMAXI]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SUPERMAXI]) , 2)</field>
         </record>
-        <!--Akí -->
+        <!--Akí-->
         <record id="salary_rule_AKI" model="hr.salary.rule">
             <field name="name">Akí</field>
             <field name="note">
@@ -924,9 +924,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.AKI: result = sum([line.amount for line in inputs.AKI]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.AKI]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.AKI]) , 2)</field>
         </record>
-        <!--Santa María -->
+        <!--Santa María-->
         <record id="salary_rule_SANTA_MARIA" model="hr.salary.rule">
             <field name="name">Santa María</field>
             <field name="note">
@@ -941,9 +941,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SANTA_MARIA: result = sum([line.amount for line in inputs.SANTA_MARIA]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SANTA_MARIA]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SANTA_MARIA]) , 2)</field>
         </record>
-        <!--Crédito hospitalario -->
+        <!--Crédito hospitalario-->
         <record id="salary_rule_CREDITO_HOSPITALARIO" model="hr.salary.rule">
             <field name="name">Crédito hospitalario</field>
             <field name="note">
@@ -958,9 +958,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.CREDITO_HOSPITALARIO: result = sum([line.amount for line in inputs.CREDITO_HOSPITALARIO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.CREDITO_HOSPITALARIO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.CREDITO_HOSPITALARIO]) , 2)</field>
         </record>
-        <!--Descuento ABEFARM -->
+        <!--Descuento ABEFARM-->
         <record id="salary_rule_DESCUENTO_ABEFARM" model="hr.salary.rule">
             <field name="name">Descuento ABEFARM</field>
             <field name="note">
@@ -975,9 +975,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.DESCUENTO_ABEFARM: result = sum([line.amount for line in inputs.DESCUENTO_ABEFARM]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.DESCUENTO_ABEFARM]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.DESCUENTO_ABEFARM]) , 2)</field>
         </record>
-        <!--Descuento inventarios -->
+        <!--Descuento inventarios-->
         <record id="salary_rule_DESCUENTO_INVENTARIOS" model="hr.salary.rule">
             <field name="name">Descuento inventarios</field>
             <field name="note">
@@ -992,9 +992,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.DESCUENTO_INVENTARIOS: result = sum([line.amount for line in inputs.DESCUENTO_INVENTARIOS]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.DESCUENTO_INVENTARIOS]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.DESCUENTO_INVENTARIOS]) , 2)</field>
         </record>
-        <!--Descuento multas -->
+        <!--Descuento multas-->
         <record id="salary_rule_DESCUENTO_MULTAS" model="hr.salary.rule">
             <field name="name">Descuento multas</field>
             <field name="note">
@@ -1012,10 +1012,10 @@ Recibe el porcentaje a aplicar sobre el salario.
 if inputs.DESCUENTO_MULTAS: result = sum([line.amount for line in inputs.DESCUENTO_MULTAS]) > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.DESCUENTO_MULTAS]) / 100 * contract.wage , 2)
+result = float_round(sum([line.amount for line in inputs.DESCUENTO_MULTAS]) / 100 * contract.wage , 2)
             </field>
         </record>
-        <!--Descuento multas [Año anterior] -->
+        <!--Descuento multas [Año anterior]-->
         <record id="salary_rule_DESCUENTO_MULTAS_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Descuento multas [Año anterior]</field>
             <field name="note">
@@ -1032,10 +1032,10 @@ Recibe un valor monetario.
 if inputs.DESCUENTO_MULTAS_PREVIOUS_YEAR: result = sum([line.amount for line in inputs.DESCUENTO_MULTAS_PREVIOUS_YEAR]) > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.DESCUENTO_MULTAS_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.DESCUENTO_MULTAS_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Otros descuentos -->
+        <!--Otros descuentos-->
         <record id="salary_rule_OTROS_DESCUENTOS" model="hr.salary.rule">
             <field name="name">Otros descuentos</field>
             <field name="note">
@@ -1050,9 +1050,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.OTROS_DESCUENTO: result = sum([line.amount for line in inputs.OTROS_DESCUENTO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.OTROS_DESCUENTO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.OTROS_DESCUENTO]) , 2)</field>
         </record>
-        <!--Seguro autos -->
+        <!--Seguro autos-->
         <record id="salary_rule_SEGURO_AUTOS" model="hr.salary.rule">
             <field name="name">Seguro auto</field>
             <field name="note">
@@ -1067,9 +1067,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SEGURO_AUTOS: result = sum([line.amount for line in inputs.SEGURO_AUTOS]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SEGURO_AUTOS]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SEGURO_AUTOS]) , 2)</field>
         </record>
-        <!--Seguro de vida -->
+        <!--Seguro de vida-->
         <record id="salary_rule_SEGURO_VIDA" model="hr.salary.rule">
             <field name="name">Seguro de vida</field>
             <field name="note">
@@ -1084,9 +1084,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SEGURO_VIDA: result = sum([line.amount for line in inputs.SEGURO_VIDA]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SEGURO_VIDA]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SEGURO_VIDA]) , 2)</field>
         </record>
-        <!--Seguro médico privado -->
+        <!--Seguro médico privado-->
         <record id="salary_rule_SEGURO_MEDICO_PRIVADO" model="hr.salary.rule">
             <field name="name">Seguro médico privado</field>
             <field name="note">
@@ -1101,9 +1101,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SEGURO_MEDICO_PRIVADO: result = sum([line.amount for line in inputs.SEGURO_MEDICO_PRIVADO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SEGURO_MEDICO_PRIVADO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SEGURO_MEDICO_PRIVADO]) , 2)</field>
         </record>
-        <!--Faltas injustificadas -->
+        <!--Faltas injustificadas-->
         <record id="salary_rule_FALTAS_INJUSTIFICADAS" model="hr.salary.rule">
             <field name="name">Faltas injustificadas</field>
             <field name="note">
@@ -1127,10 +1127,10 @@ if inputs.FALTAS_INJUSTIFICADAS: result = sum([line.amount for line in inputs.FA
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.FALTAS_INJUSTIFICADAS]) * 2 * (contract.wage / 30 * 7 / 7) , 2)
+result = float_round(sum([line.amount for line in inputs.FALTAS_INJUSTIFICADAS]) * 2 * (contract.wage / 30 * 7 / 7) , 2)
             </field>
         </record>
-        <!--Faltas injustificadas [Año anterior] -->
+        <!--Faltas injustificadas [Año anterior]-->
         <record id="salary_rule_FALTAS_INJUSTIFICADAS_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Faltas injustificadas [Año anterior]</field>
             <field name="note">
@@ -1148,10 +1148,10 @@ if inputs.FALTAS_INJUSTIFICADAS_PREVIOUS_YEAR: result = sum([line.amount for lin
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.FALTAS_INJUSTIFICADAS_PREVIOUS_YEAR]) , 2)
+result = float_round(sum([line.amount for line in inputs.FALTAS_INJUSTIFICADAS_PREVIOUS_YEAR]) , 2)
             </field>
         </record>
-        <!--Retención del impuesto a la renta -->
+        <!--Retención del impuesto a la renta-->
         <record id="salary_rule_RETENCION_IMPUESTO_RENTA" model="hr.salary.rule">
             <field name="name">Retención del impuesto a la renta</field>
             <field name="note">
@@ -1169,11 +1169,11 @@ if inputs.RETENCION_IMPUESTO_RENTA: result = sum([line.amount for line in inputs
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.RETENCION_IMPUESTO_RENTA]) , 2)
+result = float_round(sum([line.amount for line in inputs.RETENCION_IMPUESTO_RENTA]) , 2)
             </field>
             <field name="partner_id" search="[('vat','=','1760013210001')]"/>
         </record>
-        <!--Impuesto a la renta (Año anterior) -->
+        <!--Impuesto a la renta (Año anterior)-->
         <record id="salary_rule_IMP_RENTA_PREVIOUS_YEAR" model="hr.salary.rule">
             <field name="name">Impuesto a la renta (Año anterior)</field>
             <field name="note">
@@ -1196,9 +1196,9 @@ else:
 	result = False
             </field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.IMP_RENTA_PREVIOUS_YEAR]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.IMP_RENTA_PREVIOUS_YEAR]) , 2)</field>
         </record>
-        <!--Préstamo quirografario (Reembolsar al IESS) -->
+        <!--Préstamo quirografario (Reembolsar al IESS)-->
         <record id="salary_rule_QUIROGRAFARIO" model="hr.salary.rule">
             <field name="name">Préstamo quirografario (Reembolsar al IESS)</field>
             <field name="note">
@@ -1213,10 +1213,10 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.QUIROGRAFARIO: result = sum([line.amount for line in inputs.QUIROGRAFARIO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.QUIROGRAFARIO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.QUIROGRAFARIO]) , 2)</field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--Préstamo hipotecario (Reembolsar al IESS) -->
+        <!--Préstamo hipotecario (Reembolsar al IESS)-->
         <record id="salary_rule_HIPOTECARIO" model="hr.salary.rule">
             <field name="name">Préstamo hipotecario (Reembolsar al IESS)</field>
             <field name="note">
@@ -1231,10 +1231,10 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.HIPOTECARIO: result = sum([line.amount for line in inputs.HIPOTECARIO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.HIPOTECARIO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.HIPOTECARIO]) , 2)</field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--Pensión alimenticia -->
+        <!--Pensión alimenticia-->
         <record id="salary_rule_PALIMENTOS_1" model="hr.salary.rule">
             <field name="name">Pensión alimenticia</field>
             <field name="note">
@@ -1315,7 +1315,7 @@ Recibe un valor monetario.
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = sum([line.amount for line in inputs.PALIMENTOS_5])</field>
         </record>
-        <!--Descuento D13 mensual por pensión alimenticia -->
+        <!--Descuento D13 mensual por pensión alimenticia-->
         <record id="salary_rule_D_D13_M_PALIMENTOS_1" model="hr.salary.rule">
             <field name="name">Descuento D13 mensual por pensión alimenticia</field>
             <field name="note">
@@ -1342,7 +1342,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D13_M_PALIMENTOS_2" model="hr.salary.rule">
@@ -1371,7 +1371,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D13_M_PALIMENTOS_3" model="hr.salary.rule">
@@ -1400,7 +1400,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D13_M_PALIMENTOS_4" model="hr.salary.rule">
@@ -1429,7 +1429,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D13_M_PALIMENTOS_5" model="hr.salary.rule">
@@ -1458,10 +1458,10 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
             </field>
         </record>
-        <!--Décimo tercer salario contra pensión alimenticia -->
+        <!--Décimo tercer salario contra pensión alimenticia-->
         <record id="salary_rule_D13_VS_PALIMENTOS" model="hr.salary.rule">
             <field name="name">Décimo tercer salario contra pensión alimenticia</field>
             <field name="note">
@@ -1479,10 +1479,10 @@ if inputs.D13_VS_PALIMENTOS: result = sum([line.amount for line in inputs.D13_VS
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.D13_VS_PALIMENTOS]) , 2)
+result = float_round(sum([line.amount for line in inputs.D13_VS_PALIMENTOS]) , 2)
             </field>
         </record>
-        <!--Descuento D14 mensual por pensión alimenticia -->
+        <!--Descuento D14 mensual por pensión alimenticia-->
         <record id="salary_rule_D_D14_M_PALIMENTOS_1" model="hr.salary.rule">
             <field name="name">Descuento D14 mensual por pensión alimenticia</field>
             <field name="note">
@@ -1509,7 +1509,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D14_M_PALIMENTOS_2" model="hr.salary.rule">
@@ -1538,7 +1538,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D14_M_PALIMENTOS_3" model="hr.salary.rule">
@@ -1567,7 +1567,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D14_M_PALIMENTOS_4" model="hr.salary.rule">
@@ -1596,7 +1596,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_D_D14_M_PALIMENTOS_5" model="hr.salary.rule">
@@ -1625,10 +1625,10 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
             </field>
         </record>
-        <!--Décimo cuarto salario contra pensión alimenticia -->
+        <!--Décimo cuarto salario contra pensión alimenticia-->
         <record id="salary_rule_D14_VS_PALIMENTOS" model="hr.salary.rule">
             <field name="name">Décimo cuarto salario contra pensión alimenticia</field>
             <field name="note">
@@ -1646,10 +1646,10 @@ if inputs.D14_VS_PALIMENTOS: result = sum([line.amount for line in inputs.D14_VS
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.D14_VS_PALIMENTOS]) , 2)
+result = float_round(sum([line.amount for line in inputs.D14_VS_PALIMENTOS]) , 2)
             </field>
         </record>
-        <!--Intereses por cuotas atrasadas (Pensión alimenticia) -->
+        <!--Intereses por cuotas atrasadas (Pensión alimenticia)-->
         <record id="salary_rule_PALIMENTOS_I" model="hr.salary.rule">
             <field name="name">Intereses por cuotas atrasadas (Pensión alimenticia)</field>
             <field name="note">
@@ -1665,9 +1665,9 @@ Se utiliza para colaboradores que tienen cuotas atrasadas en el SUPA y por ello 
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.PALIMENTOS_I: result = sum([line.amount for line in inputs.PALIMENTOS_I]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.PALIMENTOS_I]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.PALIMENTOS_I]) , 2)</field>
         </record>
-        <!--Plan de pago (Pensión alimenticia) -->
+        <!--Plan de pago (Pensión alimenticia)-->
         <record id="salary_rule_PALIMENTOS_PP" model="hr.salary.rule">
             <field name="name">Plan de pago / Convenio (Pensión alimenticia)</field>
             <field name="note">
@@ -1704,7 +1704,7 @@ result = self.have_overdraft_in_last_payslip()
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = self._get_last_overdraft()</field>
         </record>
-        <!--Dilipa -->
+        <!--Dilipa-->
         <record id="salary_rule_DILIPA" model="hr.salary.rule">
             <field name="name">Dilipa</field>
             <field name="note">
@@ -1719,9 +1719,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.DILIPA: result = sum([line.amount for line in inputs.DILIPA]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.DILIPA]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.DILIPA]) , 2)</field>
         </record>
-        <!--Catering -->
+        <!--Catering-->
         <record id="salary_rule_CATERING" model="hr.salary.rule">
             <field name="name">Catering</field>
             <field name="note">
@@ -1736,9 +1736,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.CATERING: result = sum([line.amount for line in inputs.CATERING]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.CATERING]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.CATERING]) , 2)</field>
         </record>
-        <!--Refrigerio -->
+        <!--Refrigerio-->
         <record id="salary_rule_REFRIGERIO" model="hr.salary.rule">
             <field name="name">Refrigerio</field>
             <field name="note">
@@ -1753,9 +1753,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.REFRIGERIO: result = sum([line.amount for line in inputs.REFRIGERIO]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.REFRIGERIO]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.REFRIGERIO]) , 2)</field>
         </record>
-        <!--Subsidio enfermedad (Cobrar IESS) -->
+        <!--Subsidio enfermedad (Cobrar IESS)-->
         <record id="salary_rule_SUBSIDIO_ENFERMEDAD" model="hr.salary.rule">
             <field name="name">Subsidio enfermedad (Cobrar IESS)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_03"/>
@@ -1767,9 +1767,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">result = self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD') > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD') * (contract.wage / 30 * 0.75) , 2)</field>
+            <field name="amount_python_compute">result = float_round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD') * (contract.wage / 30 * 0.75) , 2)</field>
         </record>
-        <!--Subsidio maternidad (Cobrar IESS) -->
+        <!--Subsidio maternidad (Cobrar IESS)-->
         <record id="salary_rule_SUBSIDIO_MATERNIDAD" model="hr.salary.rule">
             <field name="name">Subsidio maternidad (Cobrar IESS)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_03"/>
@@ -1781,9 +1781,9 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SUBSIDIO_MATERNIDAD: result = sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) * ((contract.wage / 30) * 0.75) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) * ((contract.wage / 30) * 0.75) , 2)</field>
         </record>
-        <!--Viáticos a descontar -->
+        <!--Viáticos a descontar-->
         <record id="salary_rule_VIATICOS_A_DESCONTAR" model="hr.salary.rule">
             <field name="name">Viáticos a descontar</field>
             <field name="note">
@@ -1798,13 +1798,13 @@ Recibe un valor monetario.
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.VIATICOS_A_DESCONTAR: result = sum([line.amount for line in inputs.VIATICOS_A_DESCONTAR]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.VIATICOS_A_DESCONTAR]) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.VIATICOS_A_DESCONTAR]) , 2)</field>
         </record>
-        <!--Egresos 81-140 -->
+        <!--Egresos 81-140-->
 
 
-        <!--Egresos pasivos 141-150 -->
-        <!--Descuento pasivo D13 acumulado por pensión alimenticia -->
+        <!--Egresos pasivos 141-150-->
+        <!--Descuento pasivo D13 acumulado por pensión alimenticia-->
         <record id="salary_rule_DP_D13_A_PALIMENTOS_1" model="hr.salary.rule">
             <field name="name">Descuento pasivo D13 acumulado por pensión alimenticia</field>
             <field name="note">
@@ -1831,7 +1831,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D13_A_PALIMENTOS_2" model="hr.salary.rule">
@@ -1860,7 +1860,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D13_A_PALIMENTOS_3" model="hr.salary.rule">
@@ -1889,7 +1889,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D13_A_PALIMENTOS_4" model="hr.salary.rule">
@@ -1918,7 +1918,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D13_A_PALIMENTOS_5" model="hr.salary.rule">
@@ -1947,11 +1947,11 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
             </field>
         </record>
 
-        <!--Descuento pasivo D14 acumulado por pensión alimenticia -->
+        <!--Descuento pasivo D14 acumulado por pensión alimenticia-->
         <record id="salary_rule_DP_D14_A_PALIMENTOS_1" model="hr.salary.rule">
             <field name="name">Descuento pasivo D14 acumulado por pensión alimenticia</field>
             <field name="note">
@@ -1978,7 +1978,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_1]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D14_A_PALIMENTOS_2" model="hr.salary.rule">
@@ -2007,7 +2007,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_2]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D14_A_PALIMENTOS_3" model="hr.salary.rule">
@@ -2036,7 +2036,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_3]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D14_A_PALIMENTOS_4" model="hr.salary.rule">
@@ -2065,7 +2065,7 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_4]) / 12.0, 2)
             </field>
         </record>
         <record id="salary_rule_DP_D14_A_PALIMENTOS_5" model="hr.salary.rule">
@@ -2094,14 +2094,14 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
+result = float_round(sum([line.amount for line in inputs.PALIMENTOS_5]) / 12.0, 2)
             </field>
         </record>
-        <!--Egresos pasivos 141-150 -->
+        <!--Egresos pasivos 141-150-->
 
 
-        <!--Contribución de la compañía 151-160 -->
-        <!--IESS patronal (12.15%) -->
+        <!--Contribución de la compañía 151-160-->
+        <!--IESS patronal (12.15%)-->
         <record id="salary_rule_IESSPATRONAL_1215" model="hr.salary.rule">
             <field name="name">IESS patronal (12.15%)</field>
             <field name="note">
@@ -2115,10 +2115,10 @@ Es el 12.15 porciento de todos los rubros o reglas que pertenecen a la categorí
             <field name="appears_on_payroll_report">True</field>
             <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_01"/>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS * 0.1215, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS * 0.1215, 2)</field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--Fondos de reserva acumulados -->
+        <!--Fondos de reserva acumulados-->
         <record id="salary_rule_PROV_FOND_RESERV_ACUMULADO" model="hr.salary.rule">
             <field name="name">Fondos de reserva (Acumulado)</field>
             <field name="note">
@@ -2147,19 +2147,19 @@ else:
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.application_reserve_fund == 'always_force':
-    result = round(categories.INGRESOS * 0.0833, 2)
+    result = float_round(categories.INGRESOS * 0.0833, 2)
 elif payslip.number_service_months == 13: #del treceavo mes en adelante
-    result = round((categories.INGRESOS * payslip.days_to_pay_reserve_fund / 30) * 0.0833, 2)
+    result = float_round((categories.INGRESOS * payslip.days_to_pay_reserve_fund / 30) * 0.0833, 2)
 else:
-    result = round(categories.INGRESOS * 0.0833, 2)
+    result = float_round(categories.INGRESOS * 0.0833, 2)
             </field>
     		<field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>
-        <!--Contribución de la Compañía 151-160 -->
+        <!--Contribución de la Compañía 151-160-->
 
 
-        <!--Provisiones 161-180 -->
-        <!--Décimo tercer sueldo (Acumulado) -->
+        <!--Provisiones 161-180-->
+        <!--Décimo tercer sueldo (Acumulado)-->
         <record id="salary_rule_PROV_DTERCERO_ACUMULADO" model="hr.salary.rule">
             <field name="name">Décimo tercer sueldo (Acumulado)</field>
             <field name="note">
@@ -2181,9 +2181,9 @@ else:
     result = False
             </field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(categories.INGRESOS / 12.0, 2)</field>
+            <field name="amount_python_compute">result = float_round(categories.INGRESOS / 12.0, 2)</field>
         </record>
-        <!--Décimo cuarto sueldo (Acumulado) -->
+        <!--Décimo cuarto sueldo (Acumulado)-->
         <record id="salary_rule_PROV_DCUARTO_ACUMULADO" model="hr.salary.rule">
             <field name="name">Décimo cuarto sueldo (Acumulado)</field>
             <field name="note">
@@ -2208,10 +2208,10 @@ else:
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / contract.standard_daily_hours) * (payslip.worked_days / 30), 2)
+result = float_round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / contract.standard_daily_hours) * (payslip.worked_days / 30), 2)
             </field>
         </record>
-        <!--Provisión de vacaciones -->
+        <!--Provisión de vacaciones-->
         <record id="salary_rule_PROV_VACA" model="hr.salary.rule">
             <field name="name">Provisión de vacaciones</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_06"/>
@@ -2223,15 +2223,15 @@ result = round((payslip.unified_basic_salary / 12.0) * (contract.daily_hours / c
             <field name="condition_select">none</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(categories.INGRESOS * 15 / 30 / 12, 2)
-if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + payslip.years_in_service - 5) / 30 / 12, 2)
+result = float_round(categories.INGRESOS * 15 / 30 / 12, 2)
+if payslip.years_in_service > 5.00: result = float_round(categories.INGRESOS * (15 + payslip.years_in_service - 5) / 30 / 12, 2)
             </field>
         </record>
-        <!--Provisiones 161-180 -->
+        <!--Provisiones 161-180-->
 
 
         <!--Subtotales-->
-        <!--Subtotal: Subtotal: Ingresos (Generan beneficios sociales) -->
+        <!--Subtotal: Subtotal: Ingresos (Generan beneficios sociales)-->
         <record id="salary_rule_SUBT_INGRESOS_GBS" model="hr.salary.rule">
             <field name="name">Subtotal (Ingresos que generan beneficios sociales)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2243,7 +2243,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.INGRESOS</field>
         </record>
-        <!--Subtotal: Ingresos (No generan beneficios sociales) -->
+        <!--Subtotal: Ingresos (No generan beneficios sociales)-->
         <record id="salary_rule_SUBT_INGRESOS_NGBS" model="hr.salary.rule">
             <field name="name">Subtotal (Ingresos que no generan beneficios sociales)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2255,7 +2255,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.INGRESOS_NGBS</field>
         </record>
-        <!--Subtotal: Total ingresos -->
+        <!--Subtotal: Total ingresos-->
         <record id="salary_rule_SUBT_TOTAL_INGRESOS" model="hr.salary.rule">
             <field name="name">Subtotal (Total ingresos)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2267,7 +2267,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS</field>
         </record>
-        <!--Subtotal: Egresos -->
+        <!--Subtotal: Egresos-->
         <record id="salary_rule_SUBT_EGRESOS" model="hr.salary.rule">
         	<field name="name">Subtotal (Egresos)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2279,7 +2279,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.EGRESOS</field>
         </record>
-        <!--Subtotal: Egresos pasivos -->
+        <!--Subtotal: Egresos pasivos-->
         <record id="salary_rule_SUBT_EGRESOS_PASIVOS" model="hr.salary.rule">
         	<field name="name">Subtotal (Egresos pasivos)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2291,7 +2291,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.EGRESOS_PASIVOS</field>
         </record>
-        <!--Subtotal: Contribución de la compañía -->
+        <!--Subtotal: Contribución de la compañía-->
         <record id="salary_rule_SUBT_C_COMPANY" model="hr.salary.rule">
         	<field name="name">Subtotal (Contribución de la compañía)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2303,7 +2303,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.C_COMPANY</field>
         </record>
-        <!--Subtotal: Provisiones -->
+        <!--Subtotal: Provisiones-->
         <record id="salary_rule_SUBT_PROVISIONES" model="hr.salary.rule">
         	<field name="name">Subtotal (Provisiones)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2315,7 +2315,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.PROVISIONES</field>
         </record>
-        <!--Subtotal: Salario neto a recibir -->
+        <!--Subtotal: Salario neto a recibir-->
         <record id="salary_rule_SUBT_NETO" model="hr.salary.rule">
         	<field name="name">Subtotal (Salario neto a recibir)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2328,7 +2328,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS - categories.EGRESOS</field>
         </record>
-        <!--Subtotal: Costo total interno del colaborador -->
+        <!--Subtotal: Costo total interno del colaborador-->
         <record id="salary_rule_SUBT_COSTO_TOTAL" model="hr.salary.rule">
         	<field name="name">Subtotal (Costo total interno del colaborador)</field>
             <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
@@ -2344,7 +2344,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
         <!--Subtotales-->
 
 
-        <!--Informativo 190-200 -->
+        <!--Informativo 190-200-->
         <!--Subsidio enfermedad que paga la empresa al 25%-->
         <record id="salary_rule_SUBSIDIO_ENFERMEDAD_INFO_25" model="hr.salary.rule">
             <field name="name">Subsidio enfermedad que paga la empresa al 25%</field>
@@ -2357,7 +2357,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="condition_select">python</field>
             <field name="condition_python">result = self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_25') > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_25') * (contract.wage / 30 * 0.25) , 2)</field>
+            <field name="amount_python_compute">result = float_round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_25') * (contract.wage / 30 * 0.25) , 2)</field>
         </record>
         <!--Subsidio enfermedad que paga la empresa al 100%-->
         <record id="salary_rule_SUBSIDIO_ENFERMEDAD_INFO_100" model="hr.salary.rule">
@@ -2371,7 +2371,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="condition_select">python</field>
             <field name="condition_python">result = self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_100') > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_100') * (contract.wage / 30) , 2)</field>
+            <field name="amount_python_compute">result = float_round(self._get_sick_subsidy_days('SUBSIDIO_ENFERMEDAD_INFO_100') * (contract.wage / 30) , 2)</field>
         </record>
         <!--Subsidio maternidad que paga la empresa (25%)-->
         <record id="salary_rule_SUBSIDIO_MATERNIDAD_INFO_25" model="hr.salary.rule">
@@ -2385,7 +2385,7 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="condition_select">python</field>
             <field name="condition_python">if inputs.SUBSIDIO_MATERNIDAD: result = sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">result = round(sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) * ((contract.wage / 30) * 0.25) , 2)</field>
+            <field name="amount_python_compute">result = float_round(sum([line.amount for line in inputs.SUBSIDIO_MATERNIDAD]) * ((contract.wage / 30) * 0.25) , 2)</field>
         </record>
         <!--Base anual impuesto a la renta-->
         <record id="salary_rule_BASE_ANUAL_IMP_RENTA" model="hr.salary.rule">
@@ -2401,10 +2401,10 @@ if payslip.years_in_service > 5.00: result = round(categories.INGRESOS * (15 + p
             <field name="amount_select">code</field>
             <field name="amount_python_compute"/>
         </record>
-        <!--Informativo 190-200 -->
+        <!--Informativo 190-200-->
 
-        <!--Cruce de provisiones 201-210 -->
-        <!--Vacaciones tomadas -->
+        <!--Cruce de provisiones 201-210-->
+        <!--Vacaciones tomadas-->
         <record id="salary_rule_VACATIONS_TAKEN" model="hr.salary.rule">
             <field name="name">Vacaciones tomadas</field>
             <field name="note">
@@ -2422,9 +2422,269 @@ if inputs.VACATIONS_TAKEN: result = sum([line.amount for line in inputs.VACATION
             </field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-result = round(sum([line.amount for line in inputs.VACATIONS_TAKEN]) , 2)
+result = float_round(sum([line.amount for line in inputs.VACATIONS_TAKEN]) , 2)
             </field>
         </record>
-        <!--Cruce de provisiones 201-210 -->
+        <!--Cruce de provisiones 201-220-->
+
+        <!--Liquidación de haberes 221-250-->
+        <record id="salary_rule_liq_VACATIONS" model="hr.salary.rule">
+            <field name="name">Vacaciones (Proporcional))</field>
+            <field name="note">
+Recibe un valor monetario.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_01"/>
+            <field name="code">PAY_VACATIONS</field>
+            <field name="sequence">17</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = round(payslip.vacations_liquidation, 2)</field>
+        </record>
+
+        <!--Ingresos que no generan beneficios sociales 41-80 -->
+        <!--Décimo tercer sueldo (Mensual) -->
+        <record id="salary_rule_liq_DECIMO_TERCERO" model="hr.salary.rule">
+            <field name="name">Décimo tercer sueldo (Proporcional)</field>
+            <field name="note">
+Esta regla solo se aplica cuando el pago del décimo tercer sueldo está establecido como mensual en la configuración del contrato.
+Es la suma de todos los rubros o reglas que pertenecen a la categoría: Ingresos que generan beneficios sociales dividido para 12.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">DECIMO_TERCERO_MENSUAL</field>
+            <field name="sequence">48</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = round(payslip.xiii_liquidation, 2)</field>
+        </record>
+
+        <!--Décimo cuarto sueldo (Mensual) -->
+        <record id="salary_rule_liq_DECIMO_CUARTO" model="hr.salary.rule">
+            <field name="name">Décimo cuarto sueldo (Proporcional)</field>
+            <field name="note">
+Esta regla solo se aplica cuando el pago del décimo cuarto sueldo está establecido como mensual en la configuración
+del contrato del colaborador. Es el resultado de dividir el salario básico unificado vigente para 12,
+multiplicado por la división de las horas diarias para las horas diarias estándar (ambas definidas en el contrato),
+multiplicado por la división de la cantidad de días trabajados en la nómina en curso para 30.
+            </field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">DECIMO_CUARTO_MENSUAL</field>
+            <field name="sequence">49</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+			      <field name="condition_select">python</field>
+            <field name="condition_python">result = True if payslip.is_liquidation_payslip else False</field>
+            <field name="amount_select">code</field>
+           <field name="amount_python_compute">result = round(payslip.xiii_liquidation, 2)</field>
+        </record>
+
+        <!--Indemnización de mutuo acuerdo-->
+        <record id="salary_rule_inde_01" model="hr.salary.rule">
+            <field name="name">Indemnización de mutuo acuerdo</field>
+            <field name="note">Indemnizaciones de mutuo acuerdo entre el empleador y el colaborador</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE]) if inputs.INDE else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE]) if inputs.INDE else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización por desahucio-->
+        <record id="salary_rule_inde_02" model="hr.salary.rule">
+            <field name="name">Indemnización por desahucio</field>
+            <field name="note">Indemnización por desahucio</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DESAHUCIO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_EVICTION]) if inputs.INDE_EVICTION else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_EVICTION]) if inputs.INDE_EVICTION else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización por despido intempestivo-->
+        <record id="salary_rule_inde_03" model="hr.salary.rule">
+            <field name="name">Indemnización despido intempestivo</field>
+            <field name="note">Indemnización por despido intempestivo</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DESPIDO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_TERMINATION]) if inputs.INDE_TERMINATION else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_TERMINATION]) if inputs.INDE_TERMINATION else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización líder sindical-->
+        <record id="salary_rule_inde_04" model="hr.salary.rule">
+            <field name="name">Indemnización líder sindical</field>
+            <field name="note">Indemnización por despido intempestivo a líder sindical</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_LIDER</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_LEADER]) if inputs.INDE_LEADER else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_LEADER]) if inputs.INDE_LEADER else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización mujer embarazada-->
+        <record id="salary_rule_inde_05" model="hr.salary.rule">
+            <field name="name">Indemnización mujer embarazada</field>
+            <field name="note">Indemnización por despido intempestivo a mujer embarazada</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_EMBARAZO</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_PREGNANCY]) if inputs.INDE_PREGNANCY else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_PREGNANCY]) if inputs.INDE_PREGNANCY else 0, 2)
+            </field>
+        </record>
+
+        <!--Indemnización discapacidad-->
+        <record id="salary_rule_inde_06" model="hr.salary.rule">
+            <field name="name">Indemnización por discapacidad</field>
+            <field name="note">Indemnizaciones por despido intempestivo a discapacitado</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_02"/>
+            <field name="code">INDEMNIZACION_DISCAPACIDAD</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = (sum([line.amount for line in inputs.INDE_DISABILITY]) if inputs.INDE_DISABILITY else 0) > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = round(sum([line.amount for line in inputs.INDE_DISABILITY]) if inputs.INDE_DISABILITY else 0, 2)
+            </field>
+        </record>
+
+      <!--Subtotales-->
+        <!--Subtotal: Subtotal: Ingresos (Generan beneficios sociales) -->
+        <record id="salary_rule_liq_SUBT_INGRESOS_GBS" model="hr.salary.rule">
+            <field name="name">Subtotal (Ingresos que generan beneficios sociales)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_INGRESOS_GBS</field>
+            <field name="sequence">40</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS</field>
+        </record>
+
+        <!--Subtotal: Ingresos (No generan beneficios sociales) -->
+        <record id="salary_rule_liq_SUBT_INGRESOS_NGBS" model="hr.salary.rule">
+            <field name="name">Subtotal (Ingresos que no generan beneficios sociales)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_INGRESOS_NGBS</field>
+            <field name="sequence">79</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS_NGBS</field>
+        </record>
+
+        <!--Subtotal: Total ingresos -->
+        <record id="salary_rule_liq_SUBT_TOTAL_INGRESOS" model="hr.salary.rule">
+            <field name="name">Subtotal (Total ingresos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_TOTAL_INGRESOS</field>
+            <field name="sequence">80</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS</field>
+        </record>
+
+        <!--Subtotal: Egresos -->
+        <record id="salary_rule_liq_SUBT_EGRESOS" model="hr.salary.rule">
+        	<field name="name">Subtotal (Egresos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_EGRESOS</field>
+            <field name="sequence">140</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.EGRESOS</field>
+        </record>
+
+        <!--Subtotal: Egresos pasivos -->
+        <record id="salary_rule_liq_SUBT_EGRESOS_PASIVOS" model="hr.salary.rule">
+        	<field name="name">Subtotal (Egresos pasivos)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_EGRESOS_PASIVOS</field>
+            <field name="sequence">150</field>
+            <field name="appears_on_payslip">False</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.EGRESOS_PASIVOS</field>
+        </record>
+
+        <!--Subtotal: Salario neto a recibir -->
+        <record id="salary_rule_liq_SUBT_NETO" model="hr.salary.rule">
+        	<field name="name">Subtotal (Salario neto a recibir)</field>
+            <field name="category_id" ref="hr_dr_payroll_enterprise.salary_rule_category_07"/>
+            <field name="code">SUBT_NETO</field>
+            <field name="sequence">181</field>
+            <field name="appears_on_payslip">True</field>
+            <field name="appears_on_payroll_report">True</field>
+            <field name="appears_on_employee_cost_dashboard">True</field>
+            <field name="struct_id" ref="hr_dr_payroll_enterprise_ec_private.payroll_structure_assets_liquidation"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.INGRESOS + categories.INGRESOS_NGBS - categories.EGRESOS</field>
+        </record>
+        <!--Liquidación de haberes 221-250-->
     </data>
 </odoo>

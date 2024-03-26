@@ -19,9 +19,9 @@ En caso de que el colaborador presente reducción de jornada se incorpora a la f
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.reduction_of_working_hours:
-    result = round(contract.wage * payslip.worked_days / 30 * ((100 - contract.percentage_reduction_of_working_hours) / 100), 2)
+    result = float_round(contract.wage * payslip.worked_days / 30 * ((100 - contract.percentage_reduction_of_working_hours) / 100), 2)
 else:
-    result = round(contract.wage * payslip.worked_days / 30, 2)
+    result = float_round(contract.wage * payslip.worked_days / 30, 2)
             </field>
         </record>
         <!--Ingresos que generan beneficios sociales 1-40 -->
@@ -43,9 +43,9 @@ Es el 17.6 porciento del mayor valor entre el salario basico unificado vigente y
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 if contract.wage > payslip.unified_basic_salary:
-    result = round( contract.wage / 30.0 * payslip.worked_days * 0.176 , 2)
+    result = float_round( contract.wage / 30.0 * payslip.worked_days * 0.176 , 2)
 else:
-    result = round( payslip.unified_basic_salary / 30.0 * payslip.worked_days * 0.176 , 2)
+    result = float_round( payslip.unified_basic_salary / 30.0 * payslip.worked_days * 0.176 , 2)
             </field>
             <field name="partner_id" search="[('vat','=','1760004650001')]"/>
         </record>

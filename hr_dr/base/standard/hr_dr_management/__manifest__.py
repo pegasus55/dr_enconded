@@ -40,7 +40,6 @@
 
         'data/hour_extra.xml',
         'data/hour_night.xml',
-        'data/hr_salary_rule_process.xml',
         'data/tz.xml',
         'data/parameter.xml',
         'data/cron_data.xml',

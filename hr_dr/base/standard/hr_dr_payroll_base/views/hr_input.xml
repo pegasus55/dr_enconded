@@ -10,11 +10,10 @@
                             <group>
                                 <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
                                 <field name="identification" attrs="{'readonly':[('state','=',False)]}"/>
-                                <field name="employee_id" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"
+                                <field name="employee_id" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}" context="{'active_test': False}"
                                     domain="[
                                        ('company_id','=',company_id),
-                                       ('state','in',['affiliate', 'temporary', 'intern']),
-                                       ('active','=',True),
+                                       ('state','in',['affiliate', 'temporary', 'intern', 'unemployed', 'retired']),
                                        ('employee_admin','=',False)]"/>
                             </group>
                             <group>
@@ -38,11 +37,10 @@
             <field name="arch" type="xml">
                 <tree sample="1" editable="top" decoration-muted="state == False" decoration-info="state == True">
                     <field name="date" attrs="{'readonly':[('state','=',False)]}"/>
-                    <field name="employee_id" widget="many2one_avatar_employee" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}"
+                    <field name="employee_id" widget="many2one_avatar_employee" options="{'no_create':True}" attrs="{'readonly':[('state','=',False)]}" context="{'active_test': False}"
                         domain="[
                            ('company_id','=',company_id),
-                           ('state','in',['affiliate', 'temporary', 'intern']),
-                           ('active','=',True),
+                           ('state','in',['affiliate', 'temporary', 'intern', 'unemployed', 'retired']),
                            ('employee_admin','=',False)]"/>
                     <field name="amount" widget='monetary' attrs="{'readonly':[('state','=',False)]}"/>
                     <field name="company_id" attrs="{'readonly':[('state','=',False)]}" options="{'no_create': True}"/>

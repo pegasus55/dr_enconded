@@ -55,6 +55,7 @@
         'views/hr_contribution_register.xml',
         'views/hr_basic_family_basket.xml',
         'views/base_file_report_view.xml',
+        'views/hr_assets_liquidation.xml',
 
         'wizard/generate_hr_fortnight.xml',
 

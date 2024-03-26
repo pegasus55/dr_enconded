@@ -16,3 +16,4 @@ from . import hr_contribution_register
 from . import hr_contract_input
 from . import hr_basic_family_basket
 from . import base_file_report
+from . import hr_assets_liquidation
